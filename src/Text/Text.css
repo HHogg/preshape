@@ -1,0 +1,63 @@
+:root {
+  --text-size--small: 0.8125rem;
+  --text-size--body: 1rem;
+  --text-size--heading: 1.375rem;
+  --text-size--title: 1.75rem;
+
+  --text-height--small: 1rem;
+  --text-height--body: 1.375rem;
+  --text-height--heading: 1.625rem;
+  --text-height--title: 2rem;
+
+  --text-weight--weak: 400;
+  --text-weight--strong: 700;
+}
+
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: var(--text-size--body);
+  -webkit-font-smoothing: antialiased;
+  line-height: var(--text-height--body);
+}
+
+.Text {
+  font-weight: inherit;
+}
+
+.Text--monospace {
+  font-family: Courier, 'Ubuntu Mono', monospace;
+}
+
+.Text--align-start  { text-align: left; }
+.Text--align-middle { text-align: center; }
+.Text--align-end    { text-align: right; }
+
+.Text--break-all  { word-break: break-all; }
+.Text--break-none { white-space: nowrap; }
+.Text--break-word { word-wrap: break-word; }
+
+.Text--size-small   { font-size: var(--text-size--small); line-height: var(--text-height--small); }
+.Text--size-body    { font-size: var(--text-size--body); line-height: var(--text-height--body); }
+.Text--size-heading { font-size: var(--text-size--heading); line-height: var(--text-height--heading); }
+.Text--size-title   { font-size: var(--text-size--title); line-height: var(--text-height--title); }
+
+.Text--strong { font-weight: var(--text-weight--strong); }
+.Text--weak   { font-weight: var(--text-weight--weak); }
+
+.Text--empahsis { font-style: italic; }
+
+.Text--superscript,
+.Text--subscript {
+  position: relative;
+  font-size: var(--text-size--small);
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+/* stylelint-disable */
+.Text--subscript   { bottom: -0.25em; }
+.Text--superscript { top: -0.5em; }
+/* stylelint-enable */
+
+.Text--titlecase { text-transform: capitalize; }
+.Text--uppercase { text-transform: uppercase; }

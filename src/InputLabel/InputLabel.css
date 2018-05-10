@@ -1,0 +1,27 @@
+.InputLabel {
+  width: 100%;
+  border: var(--border-size--x2) solid var(--color-text--shade-1);
+  background-color: var(--color-text--shade-1);
+  color: var(--color-background--shade-1);
+  transition-property: background-color, border-color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover {
+    border-color: var(--color-accent--shade-1);
+    background-color: var(--color-accent--shade-1);
+    color: var(--color-light--shade-1);
+  }
+
+  &:focus-within {
+    border-color: var(--color-accent--shade-3);
+    background-color: var(--color-accent--shade-3);
+    color: var(--color-light--shade-1);
+  }
+
+  &[disabled] {
+    border-color: var(--color-text--shade-3);
+    background-color: var(--color-text--shade-3);
+    color: var(--color-text--shade-3);
+  }
+}

@@ -1,0 +1,26 @@
+.Table {
+  width: 100%;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.Table__row--clickable {
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.Table__row--clickable:hover {
+  background-color: var(--color-background--shade-2);
+}
+
+.Table__header-cell {
+  padding: var(--size--x2) var(--size--x3);
+  border-bottom: var(--border-size--x2) solid var(--color-text--shade-1);
+}
+
+.Table__cell {
+  padding: var(--size--x2) var(--size--x3);
+  border-bottom: var(--border-size--x1) solid var(--color-text--shade-1);
+}

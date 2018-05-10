@@ -1,0 +1,17 @@
+.Grid {
+  display: grid;
+}
+
+.Grid--gutter-x1  { grid-gap: var(--size--x1); }
+.Grid--gutter-x2  { grid-gap: var(--size--x2); }
+.Grid--gutter-x3  { grid-gap: var(--size--x3); }
+.Grid--gutter-x4  { grid-gap: var(--size--x4); }
+.Grid--gutter-x6  { grid-gap: var(--size--x6); }
+.Grid--gutter-x8  { grid-gap: var(--size--x8); }
+.Grid--gutter-x10 { grid-gap: var(--size--x10); }
+.Grid--gutter-x12 { grid-gap: var(--size--x12); }
+.Grid--gutter-x16 { grid-gap: var(--size--x16); }
+
+.Grid--align-start  { justify-content: start; }
+.Grid--align-middle { justify-content: center; }
+.Grid--align-end    { justify-content: end; }

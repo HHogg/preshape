@@ -1,0 +1,22 @@
+@keyframes IconSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Icon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.Icon--spin-slow,
+.Icon--spin-base,
+.Icon--spin-fast {
+  animation-name: IconSpin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.Icon--spin-slow { animation-duration: var(--transition-time--slow); }
+.Icon--spin-base { animation-duration: var(--transition-time--base); }
+.Icon--spin-fast { animation-duration: var(--transition-time--fast); }

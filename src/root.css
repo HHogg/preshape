@@ -1,0 +1,41 @@
+/* stylelint-disable selector-max-universal, selector-max-id, selector-max-type */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*::selection {
+  background-color: var(--color-accent--shade-1);
+  color: var(--color-light--shade-1);
+}
+
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#Root {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--color-background--shade-1);
+  color: var(--color-text--shade-1);
+  transition-property: background-color, color;
+  transition-duration: var(--transition-time--fast);
+  transition-timing-function: var(--transition-function);
+}
+
+canvas {
+  display: block;
+}
+
+svg:not(:root) {
+  overflow: visible;
+}

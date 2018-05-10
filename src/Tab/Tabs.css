@@ -1,0 +1,47 @@
+:root {
+  --Tabs--space: var(--size--x2);
+  --Tabs--border: calc(var(--size--x1) * 0.5);
+}
+
+.Tabs {
+  display: flex;
+}
+
+.Tabs::after {
+  content: '';
+  flex: 1 0 var(--Tabs--space);
+  border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
+}
+
+.Tab {
+  position: relative;
+  border: var(--Tabs--border) solid var(--color-text--shade-1);
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.Tab:not(:last-child) {
+  margin-right: var(--Tabs--space);
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: var(--Tabs--space);
+    transform: translateX(calc(var(--Tabs--space) + var(--Tabs--border)));
+    border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
+  }
+}
+
+.Tab__background {
+  transition-property: background-color;
+  transition-duration: var(--transition-time--fast);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.TabContent {
+  border-right: var(--Tabs--border) solid var(--color-text--shade-1);
+  border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
+  border-left: var(--Tabs--border) solid var(--color-text--shade-1);
+}

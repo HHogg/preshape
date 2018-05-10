@@ -1,0 +1,15 @@
+.babelrc
+.eslintrc
+.firebaserc
+.jest.json
+.stylelintrc
+.travis.yml
+firebase.json
+jest-setup.js
+node_modules
+postcss.config.js
+Preshape.sketch
+Preshape.svg
+site
+webpack.config.js
+webpack.static.config.js

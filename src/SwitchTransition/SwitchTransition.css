@@ -1,0 +1,14 @@
+.SwitchTransition--Fade--enter {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-function);
+}
+
+.SwitchTransition--Fade--enter-active {
+  opacity: 1;
+}
+
+.SwitchTransition--Fade--exit {
+  display: none;
+}

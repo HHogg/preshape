@@ -1,0 +1,30 @@
+.TextArea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background-color: var(--color-background--shade-1);
+  color: var(--color-text--shade-1);
+  resize: none;
+  transition-property: border-color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
+  appearance: none;
+
+  &::placeholder {
+    color: var(--color-text--shade-3);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    background-color: var(--color-background--shade-3);
+  }
+}

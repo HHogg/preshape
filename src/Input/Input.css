@@ -1,0 +1,26 @@
+.Input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background-color: var(--color-background--shade-1);
+  color: var(--color-text--shade-1);
+  text-overflow: ellipsis;
+  appearance: none;
+
+  &::placeholder {
+    color: var(--color-text--shade-3);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    background-color: var(--color-background--shade-3);
+  }
+}

@@ -1,0 +1,24 @@
+.Link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: var(--transition-time--fast);
+  transition-timing-function: var(--transition-function);
+
+  &:hover {
+    color: var(--color-accent--shade-1);
+  }
+
+  &.Link--active {
+    color: var(--color-accent--shade-2);
+  }
+
+  &:active {
+    color: var(--color-accent--shade-3);
+  }
+}
+
+.Link--inline-block {
+  display: inline-block;
+}

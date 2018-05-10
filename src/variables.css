@@ -1,0 +1,75 @@
+:root {
+  --size--x1: 0.25rem;
+  --size--x2: calc(var(--size--x1) * 2);
+  --size--x3: calc(var(--size--x1) * 3);
+  --size--x4: calc(var(--size--x1) * 4);
+  --size--x6: calc(var(--size--x1) * 6);
+  --size--x8: calc(var(--size--x1) * 8);
+  --size--x10: calc(var(--size--x1) * 10);
+  --size--x12: calc(var(--size--x1) * 12);
+  --size--x16: calc(var(--size--x1) * 16);
+
+  --border-size--x1: calc(var(--size--x1) * 0.25);
+  --border-size--x2: calc(var(--size--x1) * 0.5);
+
+  --color-dark--shade-1: var(--oc-gray-9);
+  --color-dark--shade-2: var(--oc-gray-8);
+  --color-dark--shade-3: var(--oc-gray-7);
+
+  --color-light--shade-1: var(--oc-gray-0);
+  --color-light--shade-2: var(--oc-gray-1);
+  --color-light--shade-3: var(--oc-gray-2);
+
+  --color-accent-1--shade-1: var(--oc-blue-4);
+  --color-accent-1--shade-2: var(--oc-blue-5);
+  --color-accent-1--shade-3: var(--oc-blue-6);
+
+  --color-accent-2--shade-1: var(--oc-violet-4);
+  --color-accent-2--shade-2: var(--oc-violet-5);
+  --color-accent-2--shade-3: var(--oc-violet-6);
+
+  --color-positive--shade-1: var(--oc-green-4);
+  --color-positive--shade-2: var(--oc-green-5);
+  --color-positive--shade-3: var(--oc-green-6);
+
+  --color-negative--shade-1: var(--oc-red-4);
+  --color-negative--shade-2: var(--oc-red-5);
+  --color-negative--shade-3: var(--oc-red-6);
+
+  --transition-time--fast: 200ms;
+  --transition-time--base: 400ms;
+  --transition-time--slow: 800ms;
+  --transition-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.Theme--day {
+  --color-background--shade-1: var(--color-light--shade-1);
+  --color-background--shade-2: var(--color-light--shade-2);
+  --color-background--shade-3: var(--color-light--shade-3);
+
+  --color-text--shade-1: var(--color-dark--shade-1);
+  --color-text--shade-2: var(--color-dark--shade-2);
+  --color-text--shade-3: var(--color-dark--shade-3);
+}
+
+.Theme--night {
+  --color-background--shade-1: var(--color-dark--shade-1);
+  --color-background--shade-2: var(--color-dark--shade-2);
+  --color-background--shade-3: var(--color-dark--shade-3);
+
+  --color-text--shade-1: var(--color-light--shade-1);
+  --color-text--shade-2: var(--color-light--shade-2);
+  --color-text--shade-3: var(--color-light--shade-3);
+}
+
+html.Theme--day {
+  --color-accent--shade-1: var(--color-accent-1--shade-1);
+  --color-accent--shade-2: var(--color-accent-1--shade-2);
+  --color-accent--shade-3: var(--color-accent-1--shade-3);
+}
+
+html.Theme--night {
+  --color-accent--shade-1: var(--color-accent-2--shade-1);
+  --color-accent--shade-2: var(--color-accent-2--shade-2);
+  --color-accent--shade-3: var(--color-accent-2--shade-3);
+}

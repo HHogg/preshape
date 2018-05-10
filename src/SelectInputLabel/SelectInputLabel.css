@@ -1,0 +1,26 @@
+.SelectInputLabel {
+  border: var(--border-size--x2) solid var(--color-text--shade-1);
+  cursor: pointer;
+  transition-property: border-color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover {
+    border-color: var(--color-accent--shade-1);
+  }
+
+  &:focus-within {
+    border-color: var(--color-accent--shade-3);
+  }
+
+  &[checked] {
+    color: var(--color-text-accent--shade-2);
+  }
+
+  &[disabled] {
+    border-color: var(--color-text--shade-3);
+    background-color: var(--color-background--shade-3);
+    color: var(--color-text--shade-3);
+    cursor: default;
+  }
+}

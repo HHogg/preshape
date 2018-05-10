@@ -1,0 +1,22 @@
+.Logo {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: visible;
+}
+
+.Logo__shape--fill,
+.Logo__shape--stroke {
+  transform-origin: center;
+  transition-property: color, transform, stroke, fill;
+  transition-duration: var(--transition-time--slow);
+  transition-timing-function: ease-in-out;
+
+  @nest .Theme--day & { transform: rotate(0deg); }
+  @nest .Theme--night & { transform: rotate(720deg); }
+}
+
+.Logo__shape--stroke-text { stroke: var(--color-text--shade-1); }
+.Logo__shape--stroke-accent { stroke: var(--color-accent--shade-2); }
+.Logo__shape--fill-text { fill: var(--color-text--shade-1); }
+.Logo__shape--fill-accent { fill: var(--color-accent--shade-2); }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Preshape" transform="translate(0.000000, 10.000000)">
+            <polygon id="Triangle-Fill" fill="#339AF0" points="110 148.747609 204.922284 54 230.279362 130.484275 252 196"></polygon>
+            <polygon id="Triangle-Stroke" stroke="#212529" stroke-width="10" points="118 94.7476093 212.922284 -7.10542736e-15 238.279362 76.4842753 260 142"></polygon>
+            <rect id="Square-Fill" fill="#339AF0" x="276.289719" y="235.666667" width="123.710281" height="123.914894"></rect>
+            <rect id="Square-Stroke" stroke="#212529" stroke-width="10" x="239.515405" y="261.085106" width="124.712892" height="123.914894"></rect>
+            <ellipse id="Circle-Fill" fill="#212529" cx="70.1398887" cy="269.125614" rx="70.1398887" ry="69.6589474"></ellipse>
+            <ellipse id="Circle-Stroke" stroke="#339AF0" stroke-width="10" cx="98.8334795" cy="281.207719" rx="70.1398887" ry="69.6589474"></ellipse>
+        </g>
+    </g>
+</svg>

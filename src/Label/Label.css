@@ -1,0 +1,8 @@
+.Label {
+  display: inline-flex;
+  margin: 0 var(--size--x2) var(--size--x2) 0;
+  padding: var(--size--x1) var(--size--x3);
+  border-radius: var(--size--x3);
+  background-color: var(--color-text--shade-1);
+  color: var(--color-background--shade-1);
+}
