@@ -50,7 +50,11 @@ export default class Appear extends Component {
 
   render() {
     const { animation, className, delay, time, visible, ...rest } = this.props;
-    const classes = classnames(className, 'Appear', `Appear--${animation}`, `Appear--${time}`);
+
+    const classes = classnames(className, 'Appear', `Appear--${animation}`, `Appear--${time}`, {
+      [`Appear--${animation}-appear`]: !isClient && visible,
+    });
+
     const transition = {
       appear: `Appear--${animation}-appear`,
       appearActive: `Appear--${animation}-appear-active`,
