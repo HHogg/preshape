@@ -3,11 +3,10 @@ cache: yarn
 branches:
   only:
     - master
-before_script:
-  - yarn global add firebase-tools
 script:
   - yarn lint
   - yarn test
-  - yarn build:static
+  - yarn build:package
+  - yarn build:site
 after_success:
-  - firebase deploy --token=${FIREBASE_TOKEN}
+  - npm run travis-deploy-once "npm run semantic-release"
