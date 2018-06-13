@@ -4,6 +4,7 @@
   min-width: 0;
   height: 100%;
   border: 0;
+  border-radius: 0;
   background-color: var(--color-background--shade-1);
   color: var(--color-text--shade-1);
   resize: none;
