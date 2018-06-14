@@ -2,11 +2,16 @@ language: node_js
 cache: yarn
 branches:
   only:
-    - master
+  - master
 script:
-  - yarn lint
-  - yarn test
-  - yarn build:package
-  - yarn build:site
+- yarn lint
+- yarn test
+- yarn build:package
+- yarn build:site
 after_success:
-  - npm run travis-deploy-once "npm run semantic-release"
+- npm run travis-deploy-once "npm run semantic-release"
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  token:
+    secure: UbBbz1pg0l3fvVdd2m0hLu3GN3tLqci3u9pxZin5BM4MufR3lcbByS36++D1ApT7OqmIrylP9Ae657nTbId9iZfFI2ZhNFz0X7OdFifY3ItQPaCB3wnyMFvU3Jyr3poD8HARvoLfBtmYXoTCQD7vJGsBPC1B3b3x5wEIs9IB+ogCWaUc48wrbwGCtwP2ocxdtiOw59t5i+FZZh2tnFF7oxfoIbXri+gV2hSwNm6DuRpBiIpVYpn6qq1AeplmjBvqXtWkzKQXx3zwqnNbayB5DROy84eaWfTuMk8yXtO/ZBZyqtd3wJW4xhlqYeiIFj/KZ/K6DbP9zKXiN123T3YJBURar5y4IWCzkeYKKqBeYHoKeMC4eLafwh2ObDDSr9tKVWe3SESCvYtBvGCVdvWeBHQ5lojKHv1zhS40huw9bU/b4t5eRfPdoewFQhtnphEVdEUnbrFI2Hal0LzBOoI5OmsxViAmai06JkOkPgUcTDDpKtfu9kcMQwyAFH3rtpNzR1+mOE/zyJGVuHAX05g50B6gzppTk43J+ohbyBcxuCfXsS/sc3ViQiLThJXK0VxVADzHNQ4S4vVEu3HQWXVVEo+am1TzmN4RYwEQoMoTNzP7GgwLokVV4ZThKw49Y3ejGCYks+sdo72PzOEkCNZkPTbSa5aXCxu+H8hjJh1k6GM=
