@@ -59,7 +59,7 @@
 .Appear--FadeSlideDown-enter,
 .Appear--FadeSlideDown-exit-active,
 .Appear--FadeSlideDown-exit-done {
-  transform: translateY(calc(var(--size--x4) * -1));
+  transform: translateY(- var(--size--x4));
   opacity: 0;
 }
 
@@ -94,7 +94,7 @@
 .Appear--FadeSlideRight-enter,
 .Appear--FadeSlideRight-exit-active,
 .Appear--FadeSlideRight-exit-done {
-  transform: translateX(calc(var(--size--x4) * -1));
+  transform: translateX(- var(--size--x4));
   opacity: 0;
 }
 

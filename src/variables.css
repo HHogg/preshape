@@ -1,16 +1,16 @@
 :root {
   --size--x1: 0.25rem;
-  --size--x2: calc(var(--size--x1) * 2);
-  --size--x3: calc(var(--size--x1) * 3);
-  --size--x4: calc(var(--size--x1) * 4);
-  --size--x6: calc(var(--size--x1) * 6);
-  --size--x8: calc(var(--size--x1) * 8);
-  --size--x10: calc(var(--size--x1) * 10);
-  --size--x12: calc(var(--size--x1) * 12);
-  --size--x16: calc(var(--size--x1) * 16);
+  --size--x2: 0.5rem;
+  --size--x3: 0.75rem;
+  --size--x4: 1rem;
+  --size--x6: 1.5rem;
+  --size--x8: 2rem;
+  --size--x10: 2.5rem;
+  --size--x12: 3rem;
+  --size--x16: 4rem;
 
-  --border-size--x1: calc(var(--size--x1) * 0.25);
-  --border-size--x2: calc(var(--size--x1) * 0.5);
+  --border-size--x1: 0.0625rem;
+  --border-size--x2: 0.125rem;
 
   --color-dark--shade-1: var(--oc-gray-9);
   --color-dark--shade-2: var(--oc-gray-8);

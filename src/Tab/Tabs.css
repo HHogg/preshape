@@ -1,6 +1,6 @@
 :root {
   --Tabs--space: var(--size--x2);
-  --Tabs--border: calc(var(--size--x1) * 0.5);
+  --Tabs--border: var(--border-size--x2);
 }
 
 .Tabs {
