@@ -5,7 +5,6 @@
 }
 
 .CubicBezier__svg-container {
-  position: relative;
   height: 0;
   padding-bottom: 100%;
 }
@@ -22,15 +21,13 @@
   fill: none;
   stroke: var(--color-text--shade-1);
   stroke-width: 2;
-  vector-effect: non-scaling-stroke;
 }
 
 .CubicBezier__path,
 .CubicBezier__path--accent {
   fill: none;
   stroke: var(--color-text--shade-1);
-  stroke-width: 3;
-  vector-effect: non-scaling-stroke;
+  stroke-width: 2;
 }
 
 .CubicBezier__path--accent {

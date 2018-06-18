@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { transitionTimeSlow, Flex, Responsive, Text } from 'preshape';
+import {
+  transitionTimeSlow,
+  transitionTimingFunction,
+  Bounds,
+  Code,
+  Flex,
+  Responsive,
+  Text,
+  ThemeContext,
+} from 'preshape';
 import { widthMedium, widthSmall } from '../Root';
 import AnimationsControls from './AnimationsControls';
 import AnimationsCurve from './AnimationsCurve';
@@ -22,8 +31,45 @@ export default class Animations extends Component {
           <LandingSection { ...this.props }>
             <Flex direction="vertical" gutter="x4" margin="x4">
               <Flex direction="horizontal" gutter="x4">
-                <Flex grow>
-                  <AnimationsCurve time={ this.state.time } />
+                <Flex
+                    borderColor
+                    borderSize="x2"
+                    direction="vertical"
+                    grow
+                    gutter="x4"
+                    padding="x4">
+                  <Flex
+                      borderColor
+                      borderSize="x2"
+                      className="CubicBezier__svg-container"
+                      container
+                      grow>
+                    <Bounds absolute="fullscreen">
+                      { ({ width, height }) => (
+                        width && height && (
+                          <ThemeContext.Consumer>
+                            { ({ theme }) => (
+                              <AnimationsCurve
+                                  height={ height }
+                                  theme={ theme }
+                                  time={ this.state.time }
+                                  width={ width } />
+                            ) }
+                          </ThemeContext.Consumer>
+                        )
+                      ) }
+                    </Bounds>
+                  </Flex>
+
+                  <Flex alignChildren="middle">
+                    <Text align="middle" margin="x1" size="small" strong>
+                      cubic-bezier({ transitionTimingFunction.join(', ') })
+                    </Text>
+
+                    <Text align="middle" size="small">
+                      <Code inline>var(--transition-timing-function)</Code>
+                    </Text>
+                  </Flex>
                 </Flex>
 
                 { match(widthSmall) && (
