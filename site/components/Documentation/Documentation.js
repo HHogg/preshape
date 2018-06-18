@@ -5,7 +5,6 @@ import {
   Appear,
   ApplicationThemeControls,
   ApplicationTitle,
-  Base,
   Flex,
   Icon,
   Link,
@@ -50,7 +49,7 @@ export default class Documentation extends Component {
     } = this.props;
 
     return (
-      <Flex grow>
+      <Flex grow initial="none">
         <ApplicationTitle
             backgroundColor="shade-2"
             padding="x4">
@@ -90,24 +89,22 @@ export default class Documentation extends Component {
             ) }
           </Flex>
 
-          <Flex grow initial="none">
-            <Appear
-                Component={ Flex }
-                animation="FadeSlideLeft">
-              <Base
-                  maxWidth={ widthLarge }
-                  paddingHorizontal="x12"
-                  paddingVertical="x16">
-                <Switch>
-                  { documentation.map(({ Component, to, ...rest }) => (
-                    <Route key={ to } path={ to } render={ () => (
-                      <Component { ...rest } />
-                    ) } />
-                  )) }
-                </Switch>
-              </Base>
-            </Appear>
-          </Flex>
+          <Appear
+              Component={ Flex }
+              animation="FadeSlideLeft"
+              grow
+              initial="none"
+              maxWidth={ widthLarge }
+              paddingHorizontal="x12"
+              paddingVertical="x16">
+            <Switch>
+              { documentation.map(({ Component, to, ...rest }) => (
+                <Route key={ to } path={ to } render={ () => (
+                  <Component { ...rest } />
+                ) } />
+              )) }
+            </Switch>
+          </Appear>
         </Flex>
       </Flex>
     );
