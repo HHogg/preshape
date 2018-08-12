@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import CheckBoxIndicator from './CheckBoxIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';
 
@@ -43,13 +44,7 @@ export default class CheckBox extends Component {
           padding={ padding }
           paddingHorizontal={ paddingHorizontal }
           paddingVertical={ paddingVertical }>
-        <div className="CheckBox">
-          <input { ...rest }
-              className="CheckBox__input"
-              disabled={ disabled }
-              type="checkbox" />
-          <div className="CheckBox__indicator" />
-        </div>
+        <CheckBoxIndicator { ...rest } disabled={ disabled } />
       </SelectInputLabel>
     );
   }

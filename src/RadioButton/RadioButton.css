@@ -1,3 +1,7 @@
+:root {
+  --RadioButton--size: var(--size--x4);
+}
+
 .RadioButton__input {
   position: absolute;
   opacity: 0;
@@ -5,10 +9,11 @@
 }
 
 .RadioButton__indicator {
-  width: var(--size--x4);
-  height: var(--size--x4);
+  width: var(--RadioButton--size);
+  height: var(--RadioButton--size);
   border: var(--border-size--x2) solid var(--color-text--shade-1);
   border-radius: 50%;
+  background-color: inherit;
   transition-property: border-color;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);

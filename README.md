@@ -1,7 +1,3 @@
-<h1 align="center">
-  <a href="https://preshape.hogg.io"><img src="./PreshapeBackground.svg" alt="Preshape"></a>
-</h1>
-
 <h4 align="center">A minimal design system and library of composable React components, primarily for  <a href="https://hogg.io" target="_blank">my personal projects</a>.</h4>
 
 <p align="center">

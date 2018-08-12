@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import RadioButtonIndicator from './RadioButtonIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './RadioButton.css';
 
@@ -43,13 +44,7 @@ export default class RadioButton extends Component {
           padding={ padding }
           paddingHorizontal={ paddingHorizontal }
           paddingVertical={ paddingVertical }>
-        <div className="RadioButton">
-          <input { ...rest }
-              className="RadioButton__input"
-              disabled={ disabled }
-              type="checkbox" />
-          <div className="RadioButton__indicator" />
-        </div>
+        <RadioButtonIndicator { ...rest } disabled={ disabled } />
       </SelectInputLabel>
     );
   }

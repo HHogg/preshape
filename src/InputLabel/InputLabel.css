@@ -22,6 +22,6 @@
   &[disabled] {
     border-color: var(--color-text--shade-3);
     background-color: var(--color-text--shade-3);
-    color: var(--color-text--shade-3);
+    color: var(--color-background--shade-3);
   }
 }

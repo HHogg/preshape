@@ -24,8 +24,7 @@ export default class InputLabel extends Component {
     } = this.props;
 
     return (
-      <Flex { ...rest }
-          Component="label"
+      <Flex Component="label" { ...rest }
           className="InputLabel"
           direction="vertical"
           disabled={ disabled }>
