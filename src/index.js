@@ -36,6 +36,7 @@ export { default as Menu } from './Menu/Menu';
 export { default as MenuItem } from './Menu/MenuItem';
 export { default as RadioButton } from './RadioButton/RadioButton';
 export { default as Responsive } from './Responsive/Responsive';
+export { default as Separator } from './Separator/Separator';
 export { default as SwitchTransition } from './SwitchTransition/SwitchTransition';
 export { default as Tab } from './Tab/Tab';
 export { default as Tabs } from './Tab/Tabs';
