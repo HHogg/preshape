@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Base, Buttons, Button, Flex, Link, List, ListItem, Responsive, Text } from 'preshape';
+import { version } from '../../../package.json';
 import { widthMedium, widthSmall } from '../Root';
 import componentsList from '../Components';
 import landingSections from '../LandingSections';
@@ -62,6 +63,21 @@ export default class Landing extends Component {
                             target="">{ name }</Link>
                       </ListItem>
                     )) }
+                  </List>
+
+                  <List alignChildren="middle" margin="x6">
+                    <ListItem separator="|">
+                      <Text
+                          color="shade-3"
+                          size="small">v{ version }</Text>
+                    </ListItem>
+
+                    <ListItem separator="|">
+                      <Link
+                          color="shade-3"
+                          size="small"
+                          to="/changelog">CHANGELOG</Link>
+                    </ListItem>
                   </List>
                 </Base>
               </Base>

@@ -21,11 +21,11 @@ export default class DocumentationSidebar extends Component {
           side="left"
           title="Documentation"
           width="15rem">
-        { /*<SidebarMenu title={ `Version: ${version}` }>
+        <SidebarMenu title={ `v${version}` }>
           <SidebarMenuItem onClick={ onClose } to="/changelog">
             What's changed?
           </SidebarMenuItem>
-        </SidebarMenu>*/ }
+        </SidebarMenu>
 
         <SidebarMenu title="Guides">
           { guidesList.map(({ name, to }) => (

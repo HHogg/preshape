@@ -7,9 +7,9 @@ script:
 - yarn lint
 - yarn test
 - yarn build:package
-- yarn build:site
 after_success:
 - npm run travis-deploy-once "npm run semantic-release"
+- yarn build:site
 deploy:
   provider: firebase
   skip_cleanup: true
