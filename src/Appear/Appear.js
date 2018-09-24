@@ -33,6 +33,10 @@ export default class Appear extends Component {
      * Time (in milliseconds) that the appearance/disappearance animation is delayed for.
      */
     delay: PropTypes.number,
+    /** Called back for after appearance */
+    onEntered: PropTypes.func,
+    /** Called back for after disappearance */
+    onExited: PropTypes.func,
     /** SKIP */
     style: PropTypes.object,
     /** One of the global timing speeds, for how long the animations takes to complete */
@@ -49,7 +53,16 @@ export default class Appear extends Component {
   };
 
   render() {
-    const { animation, className, delay, time, visible, ...rest } = this.props;
+    const {
+      animation,
+      className,
+      delay,
+      onEntered,
+      onExited,
+      time,
+      visible,
+      ...rest
+    } = this.props;
 
     const classes = classnames(className, 'Appear', `Appear--${animation}`, `Appear--${time}`, {
       [`Appear--${animation}-appear`]: !isClient && visible,
@@ -77,6 +90,8 @@ export default class Appear extends Component {
           appear={ isClient && visible }
           classNames={ transition }
           in={ isClient && visible }
+          onEntered={ onEntered }
+          onExited={ onExited }
           timeout={ times[time] }>
         <Base { ...rest } className={ classes } style={ style } />
       </CSSTransition>
