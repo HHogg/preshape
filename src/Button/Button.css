@@ -2,17 +2,18 @@
   padding: var(--size--x2) var(--size--x3);
   border-width: var(--border-size--x2);
   border-style: solid;
-  border-color: var(--color-text--shade-1);
-  background-color: var(--color-background--shade-1);
+  border-color: transparent;
   font-size: var(--text-size--small);
   font-weight: var(--text-weight--strong);
   text-transform: uppercase;
   line-height: var(--text-height--small);
-  transition-property: border-color, color, opacity;
+  transition-property: border-color, background-color, color, opacity;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
 
-  &:hover { cursor: pointer; }
+  &:hover {
+    cursor: pointer;
+  }
 
   &:focus {
     outline: 0;
@@ -21,9 +22,6 @@
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
-    border-color: var(--color-text--shade-3);
-    background-color: var(--color-background--shade-3);
-    color: var(--color-text--shade-3);
     cursor: default;
   }
 
@@ -34,50 +32,65 @@
   }
 }
 
-.Button--accent {
+.Button--outline {
+  border-color: currentColor;
+  background-color: transparent;
+  color: var(--color-text--shade-1);
+
   &:hover {
-    border-color: var(--color-accent--shade-1);
-    color: var(--color-accent--shade-1);
+    &.Button--accent { color: var(--color-accent--shade-1); }
+    &.Button--positive { color: var(--color-positive--shade-1); }
+    &.Button--negative { color: var(--color-negative--shade-1); }
   }
 
+  &.Button--active,
   &:active {
-    border-color: var(--color-accent--shade-3);
-    color: var(--color-accent--shade-3);
+    &.Button--accent { color: var(--color-accent--shade-3); }
+    &.Button--positive { color: var(--color-positive--shade-3); }
+    &.Button--negative { color: var(--color-negative--shade-3); }
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    color: var(--color-text--shade-2);
   }
 }
 
-.Button--positive {
+.Button--fill {
+  background-color: var(--color-text--shade-1);
+  color: var(--color-background--shade-1);
+
   &:hover {
-    border-color: var(--color-positive--shade-1);
-    color: var(--color-positive--shade-1);
+    &.Button--accent { background-color: var(--color-accent--shade-1); }
+    &.Button--positive { background-color: var(--color-positive--shade-1); }
+    &.Button--negative { background-color: var(--color-negative--shade-1); }
   }
 
+  &.Button--active,
   &:active {
-    border-color: var(--color-positive--shade-3);
-    color: var(--color-positive--shade-3);
+    &.Button--accent { background-color: var(--color-accent--shade-3); }
+    &.Button--positive { background-color: var(--color-positive--shade-3); }
+    &.Button--negative { background-color: var(--color-negative--shade-3); }
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    background-color: var(--color-text--shade-2);
+    color: var(--color-background--shade-3);
   }
 }
 
-.Button--negative {
-  &:hover {
-    border-color: var(--color-negative--shade-1);
-    color: var(--color-negative--shade-1);
-  }
-
-  &:active {
-    border-color: var(--color-negative--shade-3);
-    color: var(--color-negative--shade-3);
-  }
-}
-
-.Buttons > .Button:not(:last-child) {
+.Buttons > .Button--outline:not(:last-child) {
   border-right-width: 0;
 
+  &.Button--active,
   &:not(:disabled):hover,
   &:not(:disabled):active {
     border-right-width: var(--border-size--x2);
 
-    & + .Button {
+    & + .Button--outline {
       border-left-width: 0;
     }
   }
