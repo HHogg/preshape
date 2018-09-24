@@ -13,7 +13,7 @@ describe('Responsive', () => {
 
     const setMatches = (...matches) => {
       instance.listeners = queries.map((query, index) =>
-        ({ query, matches: matches[index] }));
+        ({ query: query, matches: matches[index] }));
       instance.update();
     };
 

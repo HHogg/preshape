@@ -61,7 +61,7 @@ class Application extends Component {
 
     const themeProviderValue = {
       onChangeTheme: (theme) => this.handleChangeTheme(theme),
-      theme,
+      theme: theme,
     };
 
     return (
