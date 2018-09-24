@@ -50,4 +50,6 @@ export { default as TabContent } from './Tab/TabContent';
 export { default as Text } from './Text/Text';
 export { default as TextArea } from './TextArea/TextArea';
 export { default as ThemeContext } from './Theme/ThemeContext';
-
+export { default as Toolbar } from './Toolbar/Toolbar';
+export { default as ToolbarAction } from './Toolbar/ToolbarAction';
+export { default as ToolbarActionGroup } from './Toolbar/ToolbarActionGroup';

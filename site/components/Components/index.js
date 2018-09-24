@@ -22,6 +22,7 @@ import Tab from './Tab';
 import Table from './Table';
 import Text from './Text';
 import TextArea from './TextArea';
+import Toolbar from './Toolbar';
 
 export default [{
   Component: Alert,
@@ -143,4 +144,9 @@ export default [{
   name: 'TextArea',
   to: '/components/text-area',
   description: 'Standard multiple line text area input for collection user feedback data.',
+}, {
+  Component: Toolbar,
+  name: 'Toolbar',
+  to: '/components/toolbar',
+  description: 'A contextual multi-purpose toolbar. Useful for editors that require inline actions.',
 }];

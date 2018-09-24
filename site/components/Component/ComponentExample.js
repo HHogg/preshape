@@ -8,8 +8,7 @@ export default class ComponentExample extends Component {
           backgroundColor="shade-2"
           container
           margin="x6"
-          padding="x6"
-          scrollable />
+          padding="x6" />
     );
   }
 }
