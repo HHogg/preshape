@@ -16,8 +16,10 @@ export default class Base extends Component {
     /** Quick way of absolutely position to common places */
     absolute: PropTypes.oneOf([
       'fullscreen',
+      'top',
       'top-left',
       'top-right',
+      'bottom',
       'bottom-left',
       'bottom-right',
     ]),
