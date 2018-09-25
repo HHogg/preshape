@@ -14,6 +14,11 @@ export default class Toolbar extends Component {
     /** Toolbar action components. */
     children: PropTypes.node.isRequired,
     /**
+     * An HTML element to insert the toolbar into. Defaults
+     * to the document.body.
+     */
+    container: PropTypes.object,
+    /**
      * Target is a function that is provided with a ref. Used for
      * situations where the Toolbar is to be positioned around a
      * DOM node.
@@ -125,7 +130,7 @@ export default class Toolbar extends Component {
   }
 
   render() {
-    const { children, target, ...rest } = this.props;
+    const { children, container = document.body, target, ...rest } = this.props;
     const { render, visible } = this.state;
     const props = omit(rest, [
       'targetBox',
@@ -160,7 +165,7 @@ export default class Toolbar extends Component {
               </Base>
             </Appear>
           </div>,
-          document.body
+          container,
         ) }
       </Fragment>
     );
