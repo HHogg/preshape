@@ -150,8 +150,7 @@ export default class Toolbar extends Component {
                 className="Toolbar"
                 onExited={ () => this.handleExited() }
                 visible={ visible }>
-              <Base
-                  backgroundColor="text-shade-2"
+              <div
                   className="Toolbar__tip"
                   ref={ (el) => this.elArrow = ReactDOM.findDOMNode(el) } />
               <Base
