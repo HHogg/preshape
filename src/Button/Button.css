@@ -22,6 +22,7 @@
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
+    opacity: 0.75;
     cursor: default;
   }
 
@@ -43,8 +44,8 @@
     &.Button--negative { color: var(--color-negative--shade-1); }
   }
 
-  &.Button--active,
-  &:active {
+  &:active,
+  &.Button--active {
     &.Button--accent { color: var(--color-accent--shade-3); }
     &.Button--positive { color: var(--color-positive--shade-3); }
     &.Button--negative { color: var(--color-negative--shade-3); }
@@ -52,8 +53,9 @@
 
   &[disabled],
   &[disabled]:hover,
-  &[disabled]:active {
-    color: var(--color-text--shade-2);
+  &[disabled]:active,
+  &[disabled].Button--active {
+    color: var(--color-text--shade-3);
   }
 }
 
@@ -67,8 +69,8 @@
     &.Button--negative { background-color: var(--color-negative--shade-1); }
   }
 
-  &.Button--active,
-  &:active {
+  &:active,
+  &.Button--active {
     &.Button--accent { background-color: var(--color-accent--shade-3); }
     &.Button--positive { background-color: var(--color-positive--shade-3); }
     &.Button--negative { background-color: var(--color-negative--shade-3); }
@@ -76,8 +78,9 @@
 
   &[disabled],
   &[disabled]:hover,
-  &[disabled]:active {
-    background-color: var(--color-text--shade-2);
+  &[disabled]:active,
+  &[disabled].Button--active {
+    background-color: var(--color-text--shade-3);
     color: var(--color-background--shade-3);
   }
 }
