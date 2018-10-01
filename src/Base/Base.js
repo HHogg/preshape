@@ -75,6 +75,8 @@ export default class Base extends Component {
     container: PropTypes.bool,
     /** Applies display styling */
     display: PropTypes.oneOf(['block', 'inline-block']),
+    /** Forwarded React ref function */
+    fRef: PropTypes.func,
     /** Fixed height applied through inline styling */
     height: PropTypes.string,
     /** Margins applied for the global spacing variables */
@@ -122,6 +124,7 @@ export default class Base extends Component {
       color,
       container,
       display,
+      fRef,
       height,
       maxWidth,
       minWidth,
@@ -158,6 +161,7 @@ export default class Base extends Component {
     return (
       <Component { ...rest }
           className={ classes }
+          ref={ fRef }
           style={ { height, minHeight, maxWidth, minWidth, width, zIndex, ...style } } />
     );
   }
