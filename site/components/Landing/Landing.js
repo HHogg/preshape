@@ -43,7 +43,7 @@ export default class Landing extends Component {
                 </Flex>
 
                 <Base margin="x16">
-                  <Buttons margin="x3">
+                  <Buttons joined margin="x3">
                     <Button onClick={ () => push('/guides/getting-started') }>
                       Getting Started
                     </Button>

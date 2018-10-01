@@ -85,7 +85,7 @@
   }
 }
 
-.Buttons > .Button--outline:not(:last-child) {
+.Buttons--joined > .Button--outline:not(:last-child) {
   border-right-width: 0;
 
   &.Button--active,

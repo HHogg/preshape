@@ -8,7 +8,11 @@ import ComponentPropsTable from '../Component/ComponentPropsTable';
 export default class ComponentButton extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      Buttons: {
+        joined: true,
+      },
+    };
   }
 
   render() {
