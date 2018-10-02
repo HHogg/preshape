@@ -1,3 +1,25 @@
+# [2.0.0](https://github.com/HHogg/preshape/compare/v1.3.0...v2.0.0) (2018-10-02)
+
+
+### Bug Fixes
+
+* **Button:** Make disabled style a bit more obvious ([8cd731c](https://github.com/HHogg/preshape/commit/8cd731c))
+* **Separator:** Default props typo ([e443905](https://github.com/HHogg/preshape/commit/e443905))
+
+
+### Features
+
+* **Base:** Added fRef for forwarding refs onto the Base component ([26ace79](https://github.com/HHogg/preshape/commit/26ace79))
+* **Button:** Adds joined prop to allow Button within Buttons to not be joined ([cb89a3c](https://github.com/HHogg/preshape/commit/cb89a3c))
+* **Placement:** Added React Popper ([91400c5](https://github.com/HHogg/preshape/commit/91400c5))
+* **Toolbar:** Swapper over Toolbar to use Placement ([417ed2a](https://github.com/HHogg/preshape/commit/417ed2a))
+
+
+### BREAKING CHANGES
+
+* **Toolbar:** Toolbar now doesn't require a targetRef but does require to be wrapped in Placement components. See example.
+* **Button:** Buttons - to retain same joined behaviour, add the "joined" prop.
+
 # [1.3.0](https://github.com/HHogg/preshape/compare/v1.2.0...v1.3.0) (2018-09-25)
 
 
