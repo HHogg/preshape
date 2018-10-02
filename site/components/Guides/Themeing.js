@@ -11,7 +11,7 @@ export default class Themeing extends Component {
       <DocumentationPage { ...this.props }>
         <GuideSection title="Custom Properties and the `theme` prop">
           <GuideText>
-            Themes is achieved by using <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS Custom Properties</Link> (CSS Variables),
+            Themeing is achieved by using <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS Custom Properties</Link> (CSS Variables),
             and are applied by adding the relevant HTML class to an element. All
             descendants elements will also start using that theme.
           </GuideText>

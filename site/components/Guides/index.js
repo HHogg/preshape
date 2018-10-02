@@ -11,13 +11,16 @@ export default [{
 }, {
   Component: ResponsiveDesign,
   name: 'Responsive Design',
+  description: 'Guidance around Preshapes Responsive component, and responsive design with the Javascript matchMedia API.',
   to: '/guides/responsive-design',
 }, {
   Component: Composition,
   name: 'Composition',
+  description: 'Guidance around composing multiple Preshape components and the underlying behaviour of the Base component.',
   to: '/guides/composition',
 }, {
   Component: Themeing,
   name: 'Themeing',
+  description: 'Guidance around Preshapes themeing requirements and capabilities with CSS Custom properties and accompanying Components.',
   to: '/guides/theming',
 }];

@@ -2,6 +2,7 @@ import Animations from './Animations';
 import BuiltWith from './BuiltWith';
 import Colors from './Colors';
 import Components from './Components';
+import Guides from './Guides';
 import Sizing from './Sizing';
 import Themes from './Themes';
 
@@ -25,6 +26,10 @@ export default [{
   id: 'Components',
   name: 'Components',
   Component: Components,
+}, {
+  id: 'Guides',
+  name: 'Guides',
+  Component: Guides,
 }, {
   id: 'BuiltWith',
   name: 'Built With Preshape',
