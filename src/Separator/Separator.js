@@ -19,7 +19,7 @@ export default class Separator extends Component {
     borderSize: PropTypes.oneOf(['x1', 'x2']),
   };
 
-  static defualtProps = {
+  static defaultProps = {
     borderColor: true,
     borderSize: 'x1',
   };
