@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Icon, Flex, Toolbar, ToolbarAction, ToolbarActionGroup } from 'preshape';
+import {
+  Icon,
+  Flex,
+  Placement,
+  PlacementManager,
+  PlacementReference,
+  Toolbar,
+  ToolbarAction,
+  ToolbarActionGroup,
+} from 'preshape';
 import onEdit from '../Component/onEdit';
 import DocumentationPage from '../Documentation/DocumentationPage';
 import ComponentExample from '../Component/ComponentExample';
@@ -23,33 +32,41 @@ export default class ComponentToggle extends Component {
               alignChildren="middle"
               direction="horizontal">
             <Flex>
-              <Toolbar { ...this.state.Toolbar } target={ (ref) => (
-                <Icon name="Star" ref={ ref } size="2rem" />
-              ) }>
-                <ToolbarActionGroup>
-                  <ToolbarAction>
-                    <Icon name="Pencil" size="1rem" />
-                  </ToolbarAction>
+              <PlacementManager>
+                <PlacementReference>
+                  { ({ ref }) => (
+                    <Icon fRef={ ref } name="Star" size="2rem" />
+                  ) }
+                </PlacementReference>
 
-                  <ToolbarAction>
-                    <Icon name="Copy" size="1rem" />
-                  </ToolbarAction>
+                <Placement placement="top">
+                  <Toolbar { ...this.state.Toolbar }>
+                    <ToolbarActionGroup>
+                      <ToolbarAction>
+                        <Icon name="Pencil" size="1rem" />
+                      </ToolbarAction>
 
-                  <ToolbarAction>
-                    <Icon name="Water" size="1rem" />
-                  </ToolbarAction>
-                </ToolbarActionGroup>
+                      <ToolbarAction>
+                        <Icon name="Copy" size="1rem" />
+                      </ToolbarAction>
 
-                <ToolbarActionGroup>
-                  <ToolbarAction>
-                    <Icon name="Delete" size="1rem" />
-                  </ToolbarAction>
+                      <ToolbarAction>
+                        <Icon name="Water" size="1rem" />
+                      </ToolbarAction>
+                    </ToolbarActionGroup>
 
-                  <ToolbarAction>
-                    <Icon name="Eye" size="1rem" />
-                  </ToolbarAction>
-                </ToolbarActionGroup>
-              </Toolbar>
+                    <ToolbarActionGroup>
+                      <ToolbarAction>
+                        <Icon name="Delete" size="1rem" />
+                      </ToolbarAction>
+
+                      <ToolbarAction>
+                        <Icon name="Eye" size="1rem" />
+                      </ToolbarAction>
+                    </ToolbarActionGroup>
+                  </Toolbar>
+                </Placement>
+              </PlacementManager>
             </Flex>
           </Flex>
         </ComponentExample>

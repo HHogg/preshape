@@ -11,7 +11,7 @@ export default class ToolbarActionGroup extends Component {
     const { children, ...rest } = this.props;
 
     return (
-      <Buttons { ...rest }>
+      <Buttons { ...rest } joined>
         { children }
       </Buttons>
     );

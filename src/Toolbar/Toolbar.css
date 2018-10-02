@@ -2,24 +2,8 @@
   --Toolbar-tip-size: var(--size--x4);
 }
 
-.Toolbar__popper {
-  position: absolute;
-  margin: var(--Toolbar-tip-size);
-}
-
 .Toolbar__content {
   position: relative;
   border-radius: var(--border-size--x2);
   overflow: hidden;
-}
-
-.Toolbar__tip {
-  position: absolute;
-  top: 100%;
-  width: var(--Toolbar-tip-size);
-  height: var(--Toolbar-tip-size);
-  margin: var(--Toolbar-tip-size);
-  transform: translateY(calc(-50% + var(--Toolbar-tip-size) * -1)) rotate(45deg);
-  background-color: var(--color-text--shade-2);
-  pointer-events: none;
 }
