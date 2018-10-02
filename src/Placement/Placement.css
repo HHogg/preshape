@@ -1,0 +1,49 @@
+:root {
+  --Placement-arrow-size: var(--size--x4);
+}
+
+.Placement {
+  position: absolute;
+  margin: var(--Placement-arrow-size);
+}
+
+.Placement__arrow {
+  position: absolute;
+  width: var(--Placement-arrow-size);
+  height: var(--Placement-arrow-size);
+  pointer-events: none;
+}
+
+.Placement__arrow,
+.Placement__arrow:first-child,
+.Placement__arrow:last-child {
+  margin: var(--Placement-arrow-size);
+}
+
+.Placement--top .Placement__arrow {
+  top: 100%;
+  transform:
+    translateY(calc(-50% + var(--Placement-arrow-size) * -1))
+    rotate(45deg);
+}
+
+.Placement--right .Placement__arrow {
+  right: 100%;
+  transform:
+    translateX(calc(50% - var(--Placement-arrow-size) * -1))
+    rotate(45deg);
+}
+
+.Placement--bottom .Placement__arrow {
+  bottom: 100%;
+  transform:
+    translateY(calc(50% - var(--Placement-arrow-size) * -1))
+    rotate(45deg);
+}
+
+.Placement--left .Placement__arrow {
+  left: 100%;
+  transform:
+    translateX(calc(-50% + var(--Placement-arrow-size) * -1))
+    rotate(45deg);
+}
