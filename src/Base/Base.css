@@ -84,6 +84,8 @@
 .Base--text-color-background-shade-1 { color: var(--color-background--shade-1); }
 .Base--text-color-background-shade-2 { color: var(--color-background--shade-2); }
 .Base--text-color-background-shade-3 { color: var(--color-background--shade-3); }
+.Base--text-color-negative { color: var(--color-negative--shade-2); }
+.Base--text-color-postive { color: var(--color-postive--shade-2); }
 
 .Base--absolute-fullscreen,
 .Base--absolute-top,
