@@ -30,6 +30,7 @@ export default class InputLabel extends Component {
           disabled={ disabled }>
         { label && (
           <Text
+              ellipsis
               paddingHorizontal={ paddingHorizontal }
               paddingVertical={ paddingVertical }
               size="small"

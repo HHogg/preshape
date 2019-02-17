@@ -28,10 +28,13 @@ export default class SelectInputLabel extends Component {
           { children }
         </Flex>
 
-        <Flex grow>
-          <Text size="small" strong>
-            { label }
-          </Text>
+        <Flex Component={ Text }
+            ellipsis
+            grow
+            shrink
+            size="small"
+            strong>
+          { label }
         </Flex>
       </Flex>
     );
