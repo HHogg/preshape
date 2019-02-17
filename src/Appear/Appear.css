@@ -18,6 +18,7 @@
 }
 
 .Appear--Fade {
+  opacity: 0;
   transition-property: opacity;
 }
 
@@ -38,8 +39,12 @@
 
 .Appear--FadeSlideDown,
 .Appear--FadeSlideUp {
+  opacity: 0;
   transition-property: transform, opacity;
 }
+
+.Appear--FadeSlideUp { transform: translateY(var(--size--x4)); }
+.Appear--FadeSlideDown { transform: translateY(- var(--size--x4)); }
 
 .Appear--FadeSlideDown-appear-active,
 .Appear--FadeSlideDown-appear-done,
@@ -73,8 +78,12 @@
 
 .Appear--FadeSlideRight,
 .Appear--FadeSlideLeft {
+  opacity: 0;
   transition-property: transform, opacity;
 }
+
+.Appear--FadeSlideRight { transform: translateX(-var(--size--x4)); }
+.Appear--FadeSlideLeft { transform: translateX(var(--size--x4)); }
 
 .Appear--FadeSlideRight-appear-active,
 .Appear--FadeSlideRight-appear-done,
