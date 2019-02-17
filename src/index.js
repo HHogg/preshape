@@ -29,6 +29,7 @@ export { default as GridItem } from './Grid/GridItem';
 export { default as Icon } from './Icon/Icon';
 export { default as Image } from './Image/Image';
 export { default as Input } from './Input/Input';
+export { default as InView } from './InView/InView';
 export { default as Label } from './Label/Label';
 export { default as Labels } from './Label/Labels';
 export { default as Link } from './Link/Link';
