@@ -15,6 +15,8 @@ export { default as ApplicationTitle } from './Application/ApplicationTitle';
 export { default as Base } from './Base/Base';
 export { default as BlockQuote } from './BlockQuote/BlockQuote';
 export { default as Bounds } from './Bounds/Bounds';
+export { default as BulletPoint } from './BulletPoints/BulletPoint';
+export { default as BulletPoints } from './BulletPoints/BulletPoints';
 export { default as Button } from './Button/Button';
 export { default as Buttons } from './Button/Buttons';
 export { default as CheckBox } from './CheckBox/CheckBox';

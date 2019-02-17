@@ -4,6 +4,7 @@ import Application from './Application';
 import Base from './Base';
 import BlockQuote from './BlockQuote';
 import Bounds from './Bounds';
+import BulletPoints from './BulletPoints';
 import Button from './Button';
 import CheckBox from './CheckBox';
 import CodeBlock from './CodeBlock';
@@ -54,6 +55,11 @@ export default [{
   name: 'Bounds',
   to: '/components/bounds',
   description: 'A behaviour component that uses the Resize Observer API to observe width and height of an element.',
+}, {
+  Component: BulletPoints,
+  name: 'BulletPoints',
+  to: '/components/bullet-points',
+  description: 'A vertical list component for listing your todos.'
 }, {
   Component: Button,
   name: 'Button',
