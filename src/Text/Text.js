@@ -37,6 +37,8 @@ export default class Text extends Component {
     breakOn: PropTypes.oneOf(['all', 'none', 'word']),
     /** SKIP */
     className: PropTypes.string,
+    /** Replaces the overflow of text with the ellipsis character */
+    ellipsis: PropTypes.bool,
     /** Applies emphasis styling */
     emphasis: PropTypes.bool,
     /** Text default to block display, this will apply inline display. */
@@ -70,6 +72,7 @@ export default class Text extends Component {
       align,
       breakOn,
       className,
+      ellipsis,
       emphasis,
       inline,
       monospace,
@@ -84,6 +87,7 @@ export default class Text extends Component {
     } = this.props;
 
     const classes = classnames(className, 'Text', {
+      'Text--ellipsis': ellipsis,
       'Text--emphasis': emphasis,
       'Text--monospace': monospace,
       'Text--subscript': subscript,
