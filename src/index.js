@@ -23,6 +23,7 @@ export { default as CheckBox } from './CheckBox/CheckBox';
 export { default as Code } from './Code/Code';
 export { default as CodeBlock } from './Code/CodeBlock';
 export { default as Flex } from './Flex/Flex';
+export { default as Form } from './Form/Form';
 export { default as Grid } from './Grid/Grid';
 export { default as GridItem } from './Grid/GridItem';
 export { default as Icon } from './Icon/Icon';
