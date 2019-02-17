@@ -77,10 +77,10 @@ export default class Base extends Component {
     container: PropTypes.bool,
     /** Applies display styling */
     display: PropTypes.oneOf(['block', 'inline-block']),
-    /** Forwarded React ref function */
-    fRef: PropTypes.func,
     /** Fixed height applied through inline styling */
     height: PropTypes.string,
+    /** Forwarded React ref function */
+    innerRef: PropTypes.func,
     /** Margins applied for the global spacing variables */
     margin: PropTypes.oneOf(['x0', 'x1', 'x2', 'x3', 'x4', 'x6', 'x8', 'x10', 'x12', 'x16']),
     /** Max width applied through inline styling */
@@ -126,7 +126,7 @@ export default class Base extends Component {
       color,
       container,
       display,
-      fRef,
+      innerRef,
       height,
       maxWidth,
       minWidth,
@@ -160,10 +160,13 @@ export default class Base extends Component {
       [`Theme--${theme}`]: theme,
     }, className);
 
+    // Work around for findDOMNode area causing constant renders. Forwards
+    // refs for component compositions.
+    rest[typeof Component === 'string' ? 'ref' : 'innerRef'] = innerRef;
+
     return (
       <Component { ...rest }
           className={ classes }
-          ref={ fRef }
           style={ { height, minHeight, maxWidth, minWidth, width, zIndex, ...style } } />
     );
   }

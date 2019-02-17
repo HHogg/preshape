@@ -35,7 +35,7 @@ export default class ComponentToggle extends Component {
               <PlacementManager>
                 <PlacementReference>
                   { ({ ref }) => (
-                    <Icon fRef={ ref } name="Star" size="2rem" />
+                    <Icon innerRef={ ref } name="Star" size="2rem" />
                   ) }
                 </PlacementReference>
 

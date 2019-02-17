@@ -9,7 +9,7 @@ export default class PlacementArrow extends Component {
         { ({ ref, style }) => (
           <Base { ...this.props }
               className="Placement__arrow"
-              fRef={ ref }
+              innerRef={ ref }
               style={ style } />
         ) }
       </PlacementArrowPropsContext.Consumer>

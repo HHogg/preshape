@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
 import ResizeObserver from 'resize-observer-polyfill';
 import debounce from 'lodash.debounce';
 import omit from 'lodash.omit';
@@ -19,6 +18,7 @@ export default class Bounds extends Component {
 
   constructor(props) {
     super(props);
+    this.setRef = this.setRef.bind(this);
     this.state = {};
   }
 
@@ -66,13 +66,17 @@ export default class Bounds extends Component {
     }
   }
 
+  setRef(el) {
+    this.bounds = el;
+  }
+
   render() {
     const { children, ...rest } = this.props;
     const { height, width } = this.state;
 
     return (
       <Base { ...omit(rest, ['debounce', 'onChange']) }
-          ref={ (el) => this.bounds = findDOMNode(el) }>
+          innerRef={ this.setRef }>
         { children({ height, width }) }
       </Base>
     );
