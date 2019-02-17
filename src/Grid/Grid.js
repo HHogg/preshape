@@ -1,56 +1,46 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import classnames from 'classnames';
-import Base from '../Base/Base';
+import Flex from '../Flex/Flex';
 import './Grid.css';
 
-export default class Grid extends Component {
+export default class Grid extends PureComponent {
   static propTypes = {
-    /**  */
     alignChildren: PropTypes.oneOf(['start', 'middle', 'end']),
-    /**
-     * Automatically try to fit as many columns on a row as possible. This
-     * must be used with `columnWidth` and cannot be used with `columnCount`.
-     */
-    columnAutoFit: PropTypes.bool,
-    /** An explicit number of columns to place on each row. This can be used
-     * with `columnWidth`, otherwise the minimum content size is used. This cannot
-     * be used with columnAutoFit.
-     */
-    columnCount: PropTypes.number,
-    /** An explicit width of the columns. */
+    autoFitWidthMax: PropTypes.string,
+    autoFitWidthMin: PropTypes.string,
+    className: PropTypes.string,
+    columnCount: PropTypes.string,
     columnWidth: PropTypes.string,
-    /** Spacing applied between child grid items, values are global spacing variables. */
-    gutter: PropTypes.oneOf(['x1', 'x2', 'x3', 'x4', 'x6', 'x8', 'x10', 'x12', 'x16']),
-  };
-
-  static defaultProps = {
-    alignChildren: 'middle',
+    gap: PropTypes.oneOf(['x1', 'x2', 'x3', 'x4', 'x6', 'x8', 'x10', 'x12']),
   };
 
   render() {
     const {
       alignChildren,
-      columnAutoFit,
+      autoFitWidthMax,
+      autoFitWidthMin,
+      className,
       columnCount,
       columnWidth,
-      gutter,
+      gap,
       ...rest
     } = this.props;
 
+    const classes = classnames('Grid', {
+      [`Grid--align-${alignChildren}`]: alignChildren,
+      [`Grid--gap-${gap}`]: gap,
+    }, className);
+
     const style = {
       gridTemplateColumns:
-        (Number.isInteger(columnCount) && `repeat(${columnCount}, ${columnWidth || 'min-content'})`) ||
-        (columnAutoFit && columnWidth && `repeat(auto-fit, ${columnWidth}`) || null,
+        (columnCount && `repeat(${columnCount}, ${columnWidth || 'max-content'})`) ||
+        ((autoFitWidthMin && `repeat(auto-fit, minmax(${autoFitWidthMin}, ${autoFitWidthMax || '1fr'})`) || null),
     };
 
-    const classes = classnames('Grid', {
-      [`Grid--gutter-${gutter}`]: gutter,
-      [`Grid--align-${alignChildren}`]: alignChildren,
-    });
-
     return (
-      <Base { ...rest } className={ classes } style={ style } />
+      <Flex { ...rest } className={ classes } style={ style } />
     );
   }
+
 }

@@ -17,11 +17,11 @@ export default class Components extends Component {
           { (match) => (
             <Grid
                 columnCount={ match({
-                  [widthMedium]: 3,
-                  [widthSmall]: 2,
-                }) || 1 }
+                  [widthMedium]: '3',
+                  [widthSmall]: '2',
+                }) || '1' }
                 columnWidth="1fr"
-                gutter="x4"
+                gap="x4"
                 margin="x6">
               { componentsList.map(({ name, description, to }) => (
                 <GridItem

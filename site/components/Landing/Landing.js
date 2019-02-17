@@ -48,7 +48,7 @@ export default class Landing extends Component {
                       Getting Started
                     </Button>
 
-                    <Button onClick={ () => push(componentsList[0].to) }>
+                    <Button onClick={ () => push('/#Components') }>
                       Components
                     </Button>
                   </Buttons>

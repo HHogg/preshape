@@ -12,8 +12,9 @@ export default class ComponentGrid extends Component {
     super(props);
     this.state = {
       Grid: {
-        columnCount: 3,
-        gutter: 'x1',
+        alignChildren: 'middle',
+        columnCount: '3',
+        gap: 'x1',
       },
     };
   }
