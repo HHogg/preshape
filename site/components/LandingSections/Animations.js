@@ -62,11 +62,11 @@ export default class Animations extends Component {
                   </Flex>
 
                   <Flex alignChildren="middle">
-                    <Text align="middle" margin="x1" size="small" strong>
+                    <Text align="middle" margin="x1" size="x1" strong>
                       cubic-bezier({ transitionTimingFunction.join(', ') })
                     </Text>
 
-                    <Text align="middle" size="small">
+                    <Text align="middle" size="x1">
                       <Code inline>var(--transition-timing-function)</Code>
                     </Text>
                   </Flex>

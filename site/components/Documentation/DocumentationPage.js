@@ -51,7 +51,7 @@ export default class DocumentationPage extends Component {
         ) }
 
         <Base margin="x6">
-          <Text margin="x2" size="title">{ name }</Text>
+          <Text margin="x2" size="x5">{ name }</Text>
           { description && (
             <Text color="shade-3" margin="x1">
               <Markdown>{ description }</Markdown>

@@ -6,10 +6,11 @@ import Base from '../Base/Base';
 import './Text.css';
 
 const ComponentMap = {
-  small: 'p',
-  body: 'p',
-  heading: 'h2',
-  title: 'h1',
+  x1: 'p',
+  x2: 'p',
+  x3: 'h3',
+  x4: 'h2',
+  x5: 'h1',
 };
 
 const InlineComponentMap = (props) =>
@@ -41,17 +42,14 @@ export default class Text extends Component {
     ellipsis: PropTypes.bool,
     /** Applies emphasis styling */
     emphasis: PropTypes.bool,
+    /** Applies a heading font family style */
+    heading: PropTypes.bool,
     /** Text default to block display, this will apply inline display. */
     inline: PropTypes.bool,
     /** Applies a monospace font family style */
     monospace: PropTypes.bool,
     /** Size of the text */
-    size: PropTypes.oneOf([
-      'small',
-      'body',
-      'heading',
-      'title',
-    ]),
+    size: PropTypes.oneOf(['x1', 'x2', 'x3', 'x4', 'x5']),
     /** Applies strong weight styling */
     strong: PropTypes.bool,
     /** Applies subscript baseline styling */
@@ -74,6 +72,7 @@ export default class Text extends Component {
       className,
       ellipsis,
       emphasis,
+      heading,
       inline,
       monospace,
       size,
@@ -89,6 +88,7 @@ export default class Text extends Component {
     const classes = classnames(className, 'Text', {
       'Text--ellipsis': ellipsis,
       'Text--emphasis': emphasis,
+      'Text--heading': heading,
       'Text--monospace': monospace,
       'Text--subscript': subscript,
       'Text--superscript': superscript,

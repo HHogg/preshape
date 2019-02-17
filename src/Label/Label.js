@@ -8,7 +8,7 @@ export default class Label extends Component {
     return (
       <Base className="Label">
         <Text { ...this.props }
-            size="small"
+            size="x1"
             strong />
       </Base>
     );

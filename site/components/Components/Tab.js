@@ -53,7 +53,7 @@ export default class ComponentTab extends Component {
           </Tabs>
 
           <TabContent padding="x3">
-            <Text size="heading">Lorem Ipsum ({ this.state.activeTab })</Text>
+            <Text size="x3">Lorem Ipsum ({ this.state.activeTab })</Text>
             <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Aenean sed risus ex. Aliquam blandit vitae enim at vestibulum.
               Quisque aliquam, nibh eu euismod pharetra, turpis mi varius

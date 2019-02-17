@@ -11,7 +11,7 @@ export default class ComponentCodeBlock extends Component {
               color
               padding="x6"
               scrollable
-              size="small"
+              size="x1"
               theme="night" />
         ) }
       </ThemeContext.Consumer>

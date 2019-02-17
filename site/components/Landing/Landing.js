@@ -34,7 +34,7 @@ export default class Landing extends Component {
                     gutter="x8">
                   <Flex shrink><Logo height="6rem" width="6rem" /></Flex>
                   <Flex shrink>
-                    <Text align={ match(widthMedium) ? null : 'middle' } margin="x2" size="title">Preshape</Text>
+                    <Text align={ match(widthMedium) ? null : 'middle' } margin="x2" size="x5">Preshape</Text>
                     <Text align={ match(widthMedium) ? null : 'middle' } color="shade-3">
                       A minimal design system and library of composable React components,
                       primarily for <Link href="https://hogg.io">my personal projects</Link>.
@@ -59,7 +59,7 @@ export default class Landing extends Component {
                         <Link
                             color="shade-3"
                             href={ `#${id}` }
-                            size="small"
+                            size="x1"
                             target="">{ name }</Link>
                       </ListItem>
                     )) }
@@ -69,13 +69,13 @@ export default class Landing extends Component {
                     <ListItem separator="|">
                       <Text
                           color="shade-3"
-                          size="small">v{ version }</Text>
+                          size="x1">v{ version }</Text>
                     </ListItem>
 
                     <ListItem separator="|">
                       <Link
                           color="shade-3"
-                          size="small"
+                          size="x1"
                           to="/changelog">CHANGELOG</Link>
                     </ListItem>
                   </List>

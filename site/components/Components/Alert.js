@@ -22,7 +22,7 @@ export default class ComponentAlert extends Component {
       <DocumentationPage { ...this.props }>
         <ComponentExample>
           <Alert padding="x4" { ...this.state.Alert }>
-            <Text size="small" strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            <Text size="x1" strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               laoreet faucibus quam et fringilla. Maecenas vitae pulvinar augue.
               Suspendisse mollis bibendum leo, ac porta nisi convallis eget.</Text>
           </Alert>

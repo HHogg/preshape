@@ -14,7 +14,7 @@ export default class LandingSection extends Component {
 
     return (
       <Base { ...rest } id={ id } paddingVertical="x8">
-        { title && <Text margin="x4" size="title">{ title }</Text> }
+        { title && <Text margin="x4" size="x4">{ title }</Text> }
         { children }
       </Base>
     );

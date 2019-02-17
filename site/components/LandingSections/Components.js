@@ -32,7 +32,7 @@ export default class Components extends Component {
                     key={ name }>
                   <Flex grow paddingHorizontal="x3" paddingVertical="x4">
                     <Text margin="x1" strong>{ name }</Text>
-                    <Text Component="div" color="shade-3" margin="x1" size="small">
+                    <Text Component="div" color="shade-3" margin="x1" size="x1">
                       <Markdown>{ description }</Markdown>
                     </Text>
                   </Flex>
@@ -45,7 +45,7 @@ export default class Components extends Component {
                         display="block"
                         paddingHorizontal="x3"
                         paddingVertical="x2"
-                        size="small"
+                        size="x1"
                         strong
                         to={ to }
                         uppercase>View Component</Link>

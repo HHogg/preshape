@@ -19,7 +19,7 @@ export default class ComponentPropsEditorOneOf extends Component {
             <Link
                 active={ value === v }
                 onClick={ () => onEdit(v) }
-                size="small">
+                size="x1">
               <Code>
                 { typeof v === 'string' ? v : JSON.stringify(v) }
               </Code>

@@ -19,9 +19,9 @@ const renderer = new RemarkableReactRenderer({
   components: {
     a: ({ children, href }) => <Link href={ href }>{ children }</Link>,
     blockquote: ({ children }) => <BlockQuote margin="x3">{ children }</BlockQuote>,
-    h1: ({ children }) => <Text margin="x3" size="title">{ children }</Text>,
-    h2: ({ children }) => <Text margin="x3" size="heading">{ children }</Text>,
-    h3: ({ children }) => <Text margin="x3" strong>{ children }</Text>,
+    h1: ({ children }) => <Text margin="x3" size="x5">{ children }</Text>,
+    h2: ({ children }) => <Text margin="x3" size="x4">{ children }</Text>,
+    h3: ({ children }) => <Text margin="x3" size="x3">{ children }</Text>,
     h4: ({ children }) => <Text margin="x3" strong>{ children }</Text>,
     h5: ({ children }) => <Text margin="x3" strong>{ children }</Text>,
     h6: ({ children }) => <Text margin="x3" strong>{ children }</Text>,
@@ -34,7 +34,7 @@ const renderer = new RemarkableReactRenderer({
           margin="x4"
           padding="x4"
           scrollable
-          size="small"
+          size="x1"
           theme="night">
         { content }
       </CodeBlock>,

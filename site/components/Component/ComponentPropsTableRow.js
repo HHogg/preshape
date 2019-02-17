@@ -74,13 +74,13 @@ export default class ComponentPropsTableRow extends Component {
     return (
       <TableRow>
         <TableCell>
-          <Text><Code>{ name }</Code> { required && <Text inline size="small" strong>[Required]</Text> }</Text>
-          <Text color="shade-3" size="small">{ description }</Text>
+          <Text><Code>{ name }</Code> { required && <Text inline size="x1" strong>[Required]</Text> }</Text>
+          <Text color="shade-3" size="x1">{ description }</Text>
 
           { (!hasTypeColumn || !hasEditorColumn) && (
             <Base margin="x2">
               { !hasTypeColumn && (
-                <Text margin="x1" size="small">
+                <Text margin="x1" size="x1">
                   <Text inline strong>Type:</Text> { typeNameMap[type.name] }
                 </Text>
               ) }

@@ -42,10 +42,10 @@ class MyComponent extends Component {
           <Flex direction={ match('10rem') ? 'horizontal' : 'vertical' }>
             {
               match({
-                '10rem': <Text size="body">Viewport is bigger than 10rem but less than 20rem</Text>,
-                '20rem': <Text size="heading">Viewport is bigger than 20rem</Text>
+                '10rem': <Text size="x2">Viewport is bigger than 10rem but less than 20rem</Text>,
+                '20rem': <Text size="x3">Viewport is bigger than 20rem</Text>
               }) || (
-                <Text size="small">Viewport is less than 10rem</Text>
+                <Text size="x1">Viewport is less than 10rem</Text>
               )
             }
           </Flex>

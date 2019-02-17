@@ -47,7 +47,7 @@ export default class BuiltWithGrid extends Component {
 
                 <Flex grow paddingHorizontal="x3" paddingVertical="x4">
                   <Text margin="x1" strong>{ name }</Text>
-                  <Text color="shade-3" margin="x1" size="small">{ description }</Text>
+                  <Text color="shade-3" margin="x1" size="x1">{ description }</Text>
                 </Flex>
 
                 <Flex
@@ -59,7 +59,7 @@ export default class BuiltWithGrid extends Component {
                       href={ href }
                       paddingHorizontal="x3"
                       paddingVertical="x2"
-                      size="small"
+                      size="x1"
                       strong
                       uppercase>Check it out</Link>
                 </Flex>

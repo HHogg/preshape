@@ -49,7 +49,7 @@ export default class Input extends Component {
             disabled={ disabled }
             paddingHorizontal={ padding || paddingHorizontal }
             paddingVertical={ padding || paddingVertical }
-            size="small"
+            size="x1"
             strong />
       </InputLabel>
     );

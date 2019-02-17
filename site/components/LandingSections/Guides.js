@@ -24,7 +24,7 @@ export default class Guides extends Component {
 
                 <Flex grow shrink>
                   <Text margin="x1" strong>{ name }</Text>
-                  <Text Component="div" margin="x1" size="small" weak>
+                  <Text Component="div" margin="x1" size="x1" weak>
                     <Markdown>{ description }</Markdown>
                   </Text>
                 </Flex>

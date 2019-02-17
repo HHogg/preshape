@@ -20,7 +20,7 @@ export default class TableHeaderCell extends Component {
       <Text { ...rest }
           Component="th"
           className="Table__header-cell"
-          size="small"
+          size="x1"
           strong
           uppercase>
         { sortable ? (

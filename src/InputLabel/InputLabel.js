@@ -33,7 +33,7 @@ export default class InputLabel extends Component {
               ellipsis
               paddingHorizontal={ paddingHorizontal }
               paddingVertical={ paddingVertical }
-              size="small"
+              size="x1"
               strong>
             { label }
           </Text>

@@ -1,20 +1,5 @@
-:root {
-  --text-size--small: 0.8125rem;
-  --text-size--body: 1rem;
-  --text-size--heading: 1.375rem;
-  --text-size--title: 1.75rem;
-
-  --text-height--small: 1.2;
-  --text-height--body: 1.375;
-  --text-height--heading: 1.35;
-  --text-height--title: 1.2;
-
-  --text-weight--weak: 400;
-  --text-weight--strong: 700;
-}
-
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-family: var(--text-family--content);
   font-size: var(--text-size--body);
   -webkit-font-smoothing: antialiased;
   line-height: var(--text-height--body);
@@ -24,9 +9,8 @@ body {
   font-weight: inherit;
 }
 
-.Text--monospace {
-  font-family: Courier, 'Ubuntu Mono', monospace;
-}
+.Text--heading { font-family: var(--text-family--heading); }
+.Text--monospace { font-family: var(--text-family--monospace); }
 
 .Text--align-start  { text-align: left; }
 .Text--align-middle { text-align: center; }
@@ -36,10 +20,11 @@ body {
 .Text--break-none { white-space: nowrap; }
 .Text--break-word { word-wrap: break-word; }
 
-.Text--size-small   { font-size: var(--text-size--small); line-height: var(--text-height--small); }
-.Text--size-body    { font-size: var(--text-size--body); line-height: var(--text-height--body); }
-.Text--size-heading { font-size: var(--text-size--heading); line-height: var(--text-height--heading); }
-.Text--size-title   { font-size: var(--text-size--title); line-height: var(--text-height--title); }
+.Text--size-x1 { font-size: var(--text-size--x1); line-height: var(--text-height--x1); }
+.Text--size-x2 { font-size: var(--text-size--x2); line-height: var(--text-height--x2); }
+.Text--size-x3 { font-size: var(--text-size--x3); line-height: var(--text-height--x3); }
+.Text--size-x4 { font-size: var(--text-size--x4); line-height: var(--text-height--x4); }
+.Text--size-x5 { font-size: var(--text-size--x5); line-height: var(--text-height--x5); }
 
 .Text--strong { font-weight: var(--text-weight--strong); }
 .Text--weak   { font-weight: var(--text-weight--weak); }
@@ -56,7 +41,7 @@ body {
 .Text--superscript,
 .Text--subscript {
   position: relative;
-  font-size: var(--text-size--small);
+  font-size: var(--text-size--x1);
   line-height: 0;
   vertical-align: baseline;
 }

@@ -27,7 +27,7 @@ export default class Tab extends Component {
           <Link
               display="block"
               padding="x3"
-              size="small">
+              size="x1">
             { children }
           </Link>
         </Base>

@@ -14,7 +14,7 @@ export default class GuideSection extends Component {
     return (
       <Base { ...rest } id={ title } paddingVertical="x8">
         { title && (
-          <Text size="heading"><Markdown>{ title }</Markdown></Text>
+          <Text size="x3"><Markdown>{ title }</Markdown></Text>
         ) }
 
         { children }

@@ -20,7 +20,7 @@ export default class SidebarMenuItem extends Component {
             display="block"
             paddingHorizontal="x4"
             paddingVertical="x2"
-            size="small"
+            size="x1"
             to={ to }>
           { children }
         </Link>

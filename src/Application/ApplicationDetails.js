@@ -22,7 +22,7 @@ export default class ApplicationDetails extends Component {
       <List { ...rest } gutter="x2">
         { github && (
           <ListItem separator="|">
-            <Text size="small">
+            <Text size="x1">
               Check out this project on <Link href={ github }>Github</Link>
             </Text>
           </ListItem>

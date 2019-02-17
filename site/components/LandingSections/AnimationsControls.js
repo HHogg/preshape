@@ -38,7 +38,7 @@ export default class AnimationsControls extends Component {
           onClick={ () => this.props.onChange(time) }
           padding="x2">
         <Text>{ name } ({ time }ms)</Text>
-        <Code size="small" weak>var({ variable })</Code>
+        <Code size="x1" weak>var({ variable })</Code>
       </LinkBox>
     ));
   }

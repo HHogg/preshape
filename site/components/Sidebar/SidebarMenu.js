@@ -17,7 +17,7 @@ export default class SidebarMenu extends Component {
           <Text
               margin="x3"
               paddingHorizontal="x4"
-              size="small"
+              size="x1"
               strong
               uppercase>
             { title }

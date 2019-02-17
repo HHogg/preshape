@@ -38,7 +38,7 @@ export default class ComponentResponsive extends Component {
             values={ this.state } />
 
         <Base margin="x12">
-          <Text margin="x2" size="heading">The <Code>match</Code> callback</Text>
+          <Text margin="x2" size="x3">The <Code>match</Code> callback</Text>
           <Text>The Responsive component uses the render callback pattern, and
             is provided with a single argument, a matching function, which
             matches against the queries given in the props.</Text>

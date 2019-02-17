@@ -22,7 +22,7 @@ export default class MenuItem extends Component {
         <Link
             active={ active }
             display="block"
-            size="small"
+            size="x1"
             to={ to }>
           <div className="MenuItemElement">{ children }</div>
         </Link>

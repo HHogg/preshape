@@ -29,7 +29,7 @@ export default class ComponentPropsTable extends Component {
       <Responsive queries={ [widthSmall, widthMedium, widthLarge] }>
         { (match) => components.map(({ name, props }) => (
           <Base key={ name } margin="x6">
-            <Text margin="x2" size="heading"><Code>{ `<${name}>` }</Code></Text>
+            <Text margin="x2" size="x3"><Code>{ `<${name}>` }</Code></Text>
             <Table margin="x2">
               <TableHeader>
                 <TableRow>
@@ -64,7 +64,7 @@ export default class ComponentPropsTable extends Component {
                 { Object.entries(props).length === 0 && (
                   <TableRow>
                     <TableCell colSpan="4">
-                      <Text align="middle" size="small">
+                      <Text align="middle" size="x1">
                         This component has no specific props.
                       </Text>
                     </TableCell>

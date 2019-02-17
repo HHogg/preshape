@@ -10,7 +10,7 @@ export default class GuideCodeBlock extends Component {
           paddingHorizontal="x6"
           paddingVertical="x4"
           scrollable
-          size="small"
+          size="x1"
           theme="night" />
     );
   }

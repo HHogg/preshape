@@ -16,7 +16,7 @@ export default class Sizing extends Component {
                   showCellCSS
                   showCellJS={ match(widthSmall) }
                   showCellValue={ match(widthMedium) }
-                  size="small" />
+                  size="x1" />
             </Base>
 
             <Base margin="x8">
@@ -24,7 +24,7 @@ export default class Sizing extends Component {
                   showCellCSS
                   showCellJS={ match(widthSmall) }
                   showCellValue={ match(widthMedium) }
-                  size="small" />
+                  size="x1" />
             </Base>
           </GuideSection>
         ) }

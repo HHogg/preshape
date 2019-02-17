@@ -17,7 +17,7 @@ export default class Colors extends Component {
                 showCellCSS
                 showCellJS={ match(widthLarge) }
                 showCellValue={ match(widthMedium) }
-                size="small" />
+                size="x1" />
           </GuideSection>
         ) }
       </Responsive>

@@ -32,7 +32,7 @@ export default class SelectInputLabel extends Component {
             ellipsis
             grow
             shrink
-            size="small"
+            size="x1"
             strong>
           { label }
         </Flex>
