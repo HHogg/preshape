@@ -15,32 +15,16 @@ export default class ApplicationDetails extends Component {
   render() {
     const {
       github,
-      license,
-      licenseUrl,
       ...rest
     } = this.props;
 
     return (
       <List { ...rest } gutter="x2">
-        <ListItem separator="|">
-          <Text size="small">
-            Made with <Link href="https://preshape.hogg.io">Preshape</Link>
-          </Text>
-        </ListItem>
-
         { github && (
           <ListItem separator="|">
             <Text size="small">
               Check out this project on <Link href={ github }>Github</Link>
             </Text>
-          </ListItem>
-        ) }
-
-        { license && (
-          <ListItem>
-            <Link href={ licenseUrl }>
-              <Text size="small">License { license }</Text>
-            </Link>
           </ListItem>
         ) }
       </List>

@@ -38,9 +38,7 @@ export default class Root extends Component {
         <ApplicationFooter backgroundColor="shade-2">
           <ApplicationDetails
               alignChildrenHorizontal="middle"
-              github="https://github.com/HHogg/preshape"
-              license="MIT"
-              licenseUrl="https://github.com/HHogg/preshape/LICENSE.md" />
+              github="https://github.com/HHogg/preshape" />
         </ApplicationFooter>
       </Application>
     );
