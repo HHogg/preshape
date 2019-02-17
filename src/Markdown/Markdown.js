@@ -17,7 +17,7 @@ import Text from '../Text/Text';
 const remarkable = new Remarkable();
 const renderer = new RemarkableReactRenderer({
   components: {
-    a: ({ children, href }) => <Link href={ href }>{ children }</Link>,
+    a: ({ children, href }) => <Link href={ href } underline>{ children }</Link>,
     blockquote: ({ children }) => <BlockQuote margin="x3">{ children }</BlockQuote>,
     h1: ({ children }) => <Text margin="x3" size="x5">{ children }</Text>,
     h2: ({ children }) => <Text margin="x3" size="x4">{ children }</Text>,

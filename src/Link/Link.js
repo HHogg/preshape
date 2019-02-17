@@ -15,19 +15,21 @@ export default class Link extends Component {
      * anchor tag is used.
      */
     to: PropTypes.string,
+    /** Applies and underlines style, perfect for within a block of text */
+    underline: PropTypes.bool,
   };
 
   render() {
-    const { active, to, ...rest } = this.props;
+    const { active, to, underline, ...rest } = this.props;
     const classes = classnames('Link', {
       'Link--active': active,
+      'Link--underline': underline,
     });
 
     return (
       <Text color target={ to ? undefined : '_blank' } { ...rest }
           Component={ to ? RouterLink : 'a' }
           className={ classes }
-          strong
           to={ to } />
     );
   }
