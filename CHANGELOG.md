@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/HHogg/preshape/compare/v3.0.0...v3.0.1) (2019-02-18)
+
+
+### Bug Fixes
+
+* **Button:** Corrected CSS variable for text sizing ([8ad4cb8](https://github.com/HHogg/preshape/commit/8ad4cb8))
+
 # [3.0.0](https://github.com/HHogg/preshape/compare/v2.0.0...v3.0.0) (2019-02-18)
 
 
