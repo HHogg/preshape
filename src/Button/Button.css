@@ -3,10 +3,10 @@
   border-width: var(--border-size--x2);
   border-style: solid;
   border-color: transparent;
-  font-size: var(--text-size--small);
+  font-size: var(--text-size--x1);
   font-weight: var(--text-weight--strong);
   text-transform: uppercase;
-  line-height: var(--text-height--small);
+  line-height: var(--text-height--x1);
   transition-property: border-color, background-color, color, opacity;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
