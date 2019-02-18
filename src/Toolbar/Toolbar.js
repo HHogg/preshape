@@ -28,7 +28,7 @@ export default class Toolbar extends Component {
             backgroundColor="text-shade-2"
             className="Toolbar__content"
             direction="horizontal"
-            gutter="x1"
+            gap="x1"
             padding="x1">
           { children }
         </Flex>

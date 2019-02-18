@@ -38,7 +38,7 @@ export default class DocumentationPage extends Component {
             <Flex
                 alignChildrenVertical="middle"
                 direction="horizontal"
-                gutter="x1">
+                gap="x1">
               <Flex>
                 <Icon name="ChevronLeft" size="1rem" />
               </Flex>
@@ -76,7 +76,7 @@ export default class DocumentationPage extends Component {
                       <Flex
                           alignChildrenVertical="middle"
                           direction="horizontal"
-                          gutter="x1">
+                          gap="x1">
                         <Flex>
                           <Icon name="ChevronLeft" size="1rem" />
                         </Flex>
@@ -97,7 +97,7 @@ export default class DocumentationPage extends Component {
                       <Flex
                           alignChildrenVertical="middle"
                           direction="horizontal"
-                          gutter="x1">
+                          gap="x1">
                         <Flex>
                           { next.name }
                         </Flex>

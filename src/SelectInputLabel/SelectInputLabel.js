@@ -23,7 +23,7 @@ export default class SelectInputLabel extends Component {
           alignChildrenVertical="middle"
           className="SelectInputLabel"
           direction="horizontal"
-          gutter="x2">
+          gap="x2">
         <Flex>
           { children }
         </Flex>

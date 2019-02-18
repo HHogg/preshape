@@ -21,10 +21,10 @@ export default class Flex extends Component {
     className: PropTypes.string,
     /** Direction on which way to flex items. */
     direction: PropTypes.oneOf(['horizontal', 'vertical']),
+    /** Spacing applied between child flex items, values are global spacing variables. */
+    gap: PropTypes.oneOf(['x1', 'x2', 'x3', 'x4', 'x6', 'x8', 'x10', 'x12', 'x16']),
     /** Flex item property if it should grow with available space. */
     grow: PropTypes.bool,
-    /** Spacing applied between child flex items, values are global spacing variables. */
-    gutter: PropTypes.oneOf(['x1', 'x2', 'x3', 'x4', 'x6', 'x8', 'x10', 'x12', 'x16']),
     /** Initial width to flex from for a child item. */
     initial: PropTypes.oneOf(['content', 'container', 'none']),
     /** Flex item property if it should shrink. */
@@ -42,7 +42,7 @@ export default class Flex extends Component {
       className,
       direction,
       grow,
-      gutter,
+      gap,
       initial,
       shrink,
       wrap,
@@ -55,7 +55,7 @@ export default class Flex extends Component {
       [`Flex--align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
       [`Flex--${direction}`]: direction,
       [`Flex--initial-${initial}`]: initial,
-      [`Flex--gutter-${gutter}`]: gutter,
+      [`Flex--gap-${gap}`]: gap,
       'Flex--grow': grow,
       'Flex--shrink': shrink,
       'Flex--wrap': wrap,

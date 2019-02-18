@@ -23,7 +23,7 @@ export default class ComponentAppear extends Component {
       <DocumentationPage { ...this.props }>
         <ComponentExample>
           <Appear { ...this.state.Appear }>
-            <Flex direction="horizontal" gutter="x3">
+            <Flex direction="horizontal" gap="x3">
               <RenderRepeat count={ 3 }>
                 { (n) => (
                   <Flex

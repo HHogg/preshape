@@ -24,7 +24,7 @@ export default class Themes extends Component {
               <LandingSection { ...this.props }>
                 <Flex { ...this.props }
                     direction={ match(widthMedium) ? 'horizontal' : 'vertical' }
-                    gutter="x4"
+                    gap="x4"
                     margin="x4">
                   { themes.map(({ name, icon, theme }) => (
                     <Flex grow key={ theme }>
@@ -36,7 +36,7 @@ export default class Themes extends Component {
                         <Flex
                             alignChildren="middle"
                             direction="horizontal"
-                            gutter="x3">
+                            gap="x3">
                           <Flex>
                             <Icon name={ icon } size="2rem" />
                           </Flex>
@@ -56,7 +56,7 @@ export default class Themes extends Component {
                   focal point, the target audience or what time the majority of activty occurs.
                 </Text>
 
-                <Flex direction={ match(widthMedium) ? 'horizontal' : 'vertical' } gutter="x4">
+                <Flex direction={ match(widthMedium) ? 'horizontal' : 'vertical' } gap="x4">
                   <Flex grow initial={ match(widthMedium) ? 'none' : null } shrink>
                     <Text>
                       The <Link onClick={ () => onChangeTheme('day') }>Day</Link> theme may be better

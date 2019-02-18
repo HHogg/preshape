@@ -19,7 +19,7 @@ export default class ApplicationDetails extends Component {
     } = this.props;
 
     return (
-      <List { ...rest } gutter="x2">
+      <List { ...rest } gap="x2">
         { github && (
           <ListItem separator="|">
             <Text size="x1">

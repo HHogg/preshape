@@ -29,14 +29,14 @@ export default class Animations extends Component {
       <Responsive queries={ [widthSmall, widthMedium] }>
         { (match) => (
           <LandingSection { ...this.props }>
-            <Flex direction="vertical" gutter="x4" margin="x4">
-              <Flex direction="horizontal" gutter="x4">
+            <Flex direction="vertical" gap="x4" margin="x4">
+              <Flex direction="horizontal" gap="x4">
                 <Flex
                     borderColor
                     borderSize="x2"
                     direction="vertical"
+                    gap="x4"
                     grow
-                    gutter="x4"
                     padding="x4">
                   <Flex
                       borderColor
@@ -73,8 +73,8 @@ export default class Animations extends Component {
                 </Flex>
 
                 { match(widthSmall) && (
-                  <Flex direction="vertical" grow gutter="x4">
-                    <Flex direction={ match(widthMedium) ? 'horizontal' : 'vertical' } grow gutter="x2">
+                  <Flex direction="vertical" gap="x4" grow>
+                    <Flex direction={ match(widthMedium) ? 'horizontal' : 'vertical' } grow gap="x2">
                       <AnimationsIcons time={ this.state.time } />
                     </Flex>
 
@@ -90,7 +90,7 @@ export default class Animations extends Component {
               </Flex>
 
               { !match(widthSmall) && (
-                <Flex direction="horizontal" gutter="x2">
+                <Flex direction="horizontal" gap="x2">
                   <AnimationsIcons time={ this.state.time } />
                 </Flex>
               ) }

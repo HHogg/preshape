@@ -23,7 +23,7 @@ export default class Documentation extends Component {
               alignChildrenHorizontal="between"
               alignChildrenVertical="middle"
               direction="horizontal"
-              gutter="x2">
+              gap="x2">
             <Flex>
               <Link to="/">
                 <LogoWithText />

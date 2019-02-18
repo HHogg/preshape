@@ -15,7 +15,7 @@ export default class ComponentFlex extends Component {
       Flex: {
         alignChildren: 'middle',
         direction: 'horizontal',
-        gutter: 'x3',
+        gap: 'x3',
         initial: 'content',
       },
     };
@@ -28,7 +28,7 @@ export default class ComponentFlex extends Component {
       'alignChildrenHorizontal',
       'alignChildrenVertical',
       'direction',
-      'gutter',
+      'gap',
     ];
 
     const childProps = [

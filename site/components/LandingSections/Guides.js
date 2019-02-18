@@ -17,7 +17,7 @@ export default class Guides extends Component {
               <Flex
                   alignChildrenVertical="middle"
                   direction="horizontal"
-                  gutter="x4">
+                  gap="x4">
                 <Flex>
                   <Icon name="File" size="1.5rem" />
                 </Flex>

@@ -24,7 +24,7 @@ export default class Sizing extends Component {
 
             <Flex
                 direction={ match(widthMedium) ? 'horizontal' : 'vertical' }
-                gutter="x4"
+                gap="x4"
                 margin="x4">
               <Flex
                   grow

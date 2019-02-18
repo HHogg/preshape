@@ -8,7 +8,7 @@ export default class Menu extends Component {
       <Flex { ...this.props }
           className="Menu"
           direction="horizontal"
-          gutter="x3" />
+          gap="x3" />
     );
   }
 }

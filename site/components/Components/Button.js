@@ -19,7 +19,7 @@ export default class ComponentButton extends Component {
     return (
       <DocumentationPage { ...this.props }>
         <ComponentExample>
-          <Flex direction="horizontal" gutter="x4">
+          <Flex direction="horizontal" gap="x4">
             <Flex direction="horizontal" grow>
               <Buttons { ...this.state.Buttons } grow>
                 <Button { ...this.state.Button }>Lorem ipsum</Button>

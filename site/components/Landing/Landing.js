@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Base, Buttons, Button, Flex, Link, List, ListItem, Responsive, Text } from 'preshape';
 import { version } from '../../../package.json';
 import { widthMedium, widthSmall } from '../Root';
-import componentsList from '../Components';
 import landingSections from '../LandingSections';
 import LandingSection from './LandingSection';
 import Logo from '../Logo/Logo';
@@ -31,7 +30,7 @@ export default class Landing extends Component {
                     alignChildrenHorizontal="middle"
                     alignChildrenVertical="end"
                     direction={ match(widthMedium) ? 'horizontal' : 'vertical' }
-                    gutter="x8">
+                    gap="x8">
                   <Flex shrink><Logo height="6rem" width="6rem" /></Flex>
                   <Flex shrink>
                     <Text align={ match(widthMedium) ? null : 'middle' } margin="x2" size="x5">Preshape</Text>

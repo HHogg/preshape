@@ -16,7 +16,7 @@ const css = `@keyframes AnimationExampleSpin {
   animation-timing-function: linear;
 }`;
 
-const html = `<div class="Base Flex Flex--align-horz-middle Flex--align-vert-middle Flex--horizontal Flex--gutter-x4">
+const html = `<div class="Base Flex Flex--align-horz-middle Flex--align-vert-middle Flex--horizontal Flex--gap-x4">
   <div class="Base Flex">
     <div class="Base Text Text--strong">Lorem</div>
   </div>
@@ -44,7 +44,7 @@ import { Flex, Text } from 'preshape';
 export default class MyPage extends Component {
   render() {
     return (
-      <Flex alignChildren="middle" direction="horizontal" gutter="x4">
+      <Flex alignChildren="middle" direction="horizontal" gap="x4">
         <Flex><Text strong>Lorem</Text></Flex>
         <Flex><Text strong>Ipsum</Text></Flex>
       </Flex>
@@ -62,12 +62,12 @@ const json = `[
 ]`;
 
 const languageExamples = {
-  css,
-  html,
-  js,
+  css: css,
+  html: html,
+  js: js,
   javascript: js,
-  jsx,
-  json,
+  jsx: jsx,
+  json: json,
 };
 
 export default class ComponentCodeBlock extends Component {
