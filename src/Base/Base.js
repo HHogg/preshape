@@ -78,7 +78,10 @@ export default class Base extends Component {
     /** Applies display styling */
     display: PropTypes.oneOf(['block', 'inline-block']),
     /** Fixed height applied through inline styling */
-    height: PropTypes.string,
+    height: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
     /** Forwarded React ref function */
     innerRef: PropTypes.func,
     /** Margins applied for the global spacing variables */
@@ -105,7 +108,10 @@ export default class Base extends Component {
      */
     theme: PropTypes.oneOf(['day', 'night']),
     /** Fixed width applied through inline styling */
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
     /** z-index number for layering elements.  */
     zIndex: PropTypes.string,
   };
@@ -163,6 +169,11 @@ export default class Base extends Component {
     // Work around for findDOMNode area causing constant renders. Forwards
     // refs for component compositions.
     rest[typeof Component === 'string' ? 'ref' : 'innerRef'] = innerRef;
+
+    if (typeof Component === 'string' && Component === 'canvas') {
+      if (height) rest.height = height;
+      if (width) rest.width = width;
+    }
 
     return (
       <Component { ...rest }
