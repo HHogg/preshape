@@ -84,6 +84,18 @@ export const themesOpposite = {
   night: 'day',
 };
 
+export const themePropNameCSSMap = {
+  colorBackgroundShade1: 'color-background--shade-1',
+  colorBackgroundShade2: 'color-background--shade-2',
+  colorBackgroundShade3: 'color-background--shade-3',
+  colorTextShade1: 'color-text--shade-1',
+  colorTextShade2: 'color-text--shade-1',
+  colorTextShade3: 'color-text--shade-1',
+  colorAccentShade1: 'color-accent--shade-1',
+  colorAccentShade2: 'color-accent--shade-1',
+  colorAccentShade3: 'color-accent--shade-1',
+};
+
 export const transitionTimeFast = 200;
 export const transitionTimeBase = 400;
 export const transitionTimeSlow = 800;
