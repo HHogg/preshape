@@ -1,3 +1,15 @@
+# [3.1.0](https://github.com/HHogg/preshape/compare/v3.0.1...v3.1.0) (2019-02-19)
+
+
+### Bug Fixes
+
+* **SelectInputLabel:** Inheriting color from nearest applied theme ([168e01a](https://github.com/HHogg/preshape/commit/168e01a))
+
+
+### Features
+
+* **Varaibles:** Add JS mapping to CSS variable names for themese ([3afcd76](https://github.com/HHogg/preshape/commit/3afcd76))
+
 ## [3.0.1](https://github.com/HHogg/preshape/compare/v3.0.0...v3.0.1) (2019-02-18)
 
 
