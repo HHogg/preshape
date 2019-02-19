@@ -29,6 +29,7 @@ export default class SelectInputLabel extends Component {
         </Flex>
 
         <Flex Component={ Text }
+            color
             ellipsis
             grow
             shrink
