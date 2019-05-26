@@ -29,7 +29,7 @@ export default class ComponentAlert extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Alert/Alert') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Alert/Alert') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

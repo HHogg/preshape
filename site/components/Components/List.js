@@ -29,8 +29,8 @@ export default class ComponentList extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/List/List'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/List/ListItem'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/List/List'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/List/ListItem'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

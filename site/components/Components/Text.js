@@ -54,7 +54,7 @@ export default class ComponentText extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Text/Text') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Text/Text') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

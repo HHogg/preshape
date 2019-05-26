@@ -44,7 +44,7 @@ export default class ComponentAppear extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Appear/Appear') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Appear/Appear') */ ] }
             onEdit={ (...args) => this.setState(onEdit(this.state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

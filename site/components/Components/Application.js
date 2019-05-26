@@ -62,11 +62,11 @@ export default class ComponentApplication extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/Application'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationDetails'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationFooter'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationThemeControls'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationTitle'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/Application'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationDetails'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationFooter'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationThemeControls'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Application/ApplicationTitle'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

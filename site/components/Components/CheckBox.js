@@ -37,7 +37,7 @@ export default class ComponentCheckBox extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/CheckBox/CheckBox') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/CheckBox/CheckBox') */ ] }
             onEdit={ (...args) => this.setState(onEdit(this.state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

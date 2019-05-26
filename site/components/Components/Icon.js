@@ -26,7 +26,7 @@ export default class ComponentIcon extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Icon/Icon') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Icon/Icon') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

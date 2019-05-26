@@ -32,7 +32,7 @@ export default class ComponentResponsive extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Responsive/Responsive'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Responsive/Responsive'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

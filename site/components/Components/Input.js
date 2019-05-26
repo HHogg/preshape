@@ -25,7 +25,7 @@ export default class ComponentInput extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Input/Input') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Input/Input') */ ] }
             onEdit={ (...args) => this.setState(onEdit(this.state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

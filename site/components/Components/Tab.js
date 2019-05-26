@@ -63,9 +63,9 @@ export default class ComponentTab extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Tab/Tabs'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Tab/Tab'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Tab/TabContent'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Tab/Tabs'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Tab/Tab'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Tab/TabContent'), */
             ] }
             onEdit={ (...args) => this.handleEdit(...args) }
             values={ this.state } />

@@ -114,12 +114,12 @@ export default class ComponentTable extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/Table'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableBody'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableCell'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableHeader'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableHeaderCell'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableRow'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/Table'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableBody'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableCell'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableHeader'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableHeaderCell'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Table/TableRow'), */
             ] }
             onEdit={ (...args) => this.handleEdit(...args) }
             values={ this.state } />

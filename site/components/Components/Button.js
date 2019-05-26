@@ -53,8 +53,8 @@ export default class ComponentButton extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Button/Button'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Button/Buttons'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Button/Button'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Button/Buttons'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

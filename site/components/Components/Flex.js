@@ -59,7 +59,7 @@ export default class ComponentFlex extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Flex/Flex') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Flex/Flex') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

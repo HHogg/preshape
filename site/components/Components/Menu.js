@@ -55,8 +55,8 @@ export default class ComponentMenu extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Menu/Menu'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Menu/MenuItem'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Menu/Menu'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Menu/MenuItem'), */
             ] }
             onEdit={ (...args) => this.handleEdit(...args) }
             values={ this.state } />

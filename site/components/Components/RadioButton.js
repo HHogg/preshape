@@ -35,7 +35,7 @@ export default class ComponentRadioButton extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/RadioButton/RadioButton') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/RadioButton/RadioButton') */ ] }
             onEdit={ (...args) => this.setState(onEdit(this.state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

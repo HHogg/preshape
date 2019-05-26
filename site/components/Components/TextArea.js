@@ -25,7 +25,7 @@ export default class ComponentTextArea extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/TextArea/TextArea') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/TextArea/TextArea') */ ] }
             onEdit={ (...args) => this.setState(onEdit(this.state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

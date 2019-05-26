@@ -44,8 +44,8 @@ export default class ComponentGrid extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Grid/Grid'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Grid/GridItem'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Grid/Grid'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Grid/GridItem'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

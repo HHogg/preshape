@@ -72,7 +72,7 @@ export default class ComponentToggle extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Toolbar/Toolbar') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Toolbar/Toolbar') */ ] }
             onEdit={ (...args) => this.setState(onEdit(this.state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

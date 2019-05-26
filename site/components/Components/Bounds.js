@@ -28,7 +28,7 @@ export default class ComponentBounds extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Bounds/Bounds') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Bounds/Bounds') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

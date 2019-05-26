@@ -29,8 +29,8 @@ export default class ComponentLabel extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Label/Labels'),
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Label/Label'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Label/Labels'), */
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Label/Label'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

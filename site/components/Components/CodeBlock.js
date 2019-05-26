@@ -90,7 +90,7 @@ export default class ComponentCodeBlock extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Code/CodeBlock') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Code/CodeBlock') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

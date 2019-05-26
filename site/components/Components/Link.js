@@ -20,7 +20,7 @@ export default class ComponentLink extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/Link/Link'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Link/Link'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

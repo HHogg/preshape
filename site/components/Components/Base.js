@@ -30,7 +30,7 @@ export default class ComponentBase extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/Base/Base') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/Base/Base') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

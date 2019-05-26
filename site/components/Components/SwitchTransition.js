@@ -69,7 +69,7 @@ export default class ComponentSwitchTransition extends Component {
 
         <ComponentPropsTable
             components={ [
-              require('!!@brandwatch/axiom-documentation-loader!../../../src/SwitchTransition/SwitchTransition'),
+              /* require('!!@brandwatch/axiom-documentation-loader!../../../src/SwitchTransition/SwitchTransition'), */
             ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />

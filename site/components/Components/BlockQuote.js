@@ -29,7 +29,7 @@ export default class ComponentBlockQuote extends Component {
         </ComponentExample>
 
         <ComponentPropsTable
-            components={ [ require('!!@brandwatch/axiom-documentation-loader!../../../src/BlockQuote/BlockQuote') ] }
+            components={ [ /* require('!!@brandwatch/axiom-documentation-loader!../../../src/BlockQuote/BlockQuote') */ ] }
             onEdit={ (...args) => this.setState((state) => onEdit(state, ...args)) }
             values={ this.state } />
       </DocumentationPage>

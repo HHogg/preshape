@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import {
   Application,
-  ApplicationDetails,
-  ApplicationFooter,
   Flex,
   SwitchTransition,
 } from 'preshape';
@@ -27,20 +25,16 @@ export default class Root extends Component {
     const { theme } = this.state;
 
     return (
-      <Application
-          onChangeTheme={ (theme) => this.setState({ theme }) }
-          theme={ theme }>
-        <SwitchTransition Component={ Flex } direction="horizontal" grow>
-          <Route component={ Landing } exact path="/" />
-          <Route component={ Documentation } path="/" />
-        </SwitchTransition>
-
-        <ApplicationFooter backgroundColor="shade-2">
-          <ApplicationDetails
-              alignChildrenHorizontal="middle"
-              github="https://github.com/HHogg/preshape" />
-        </ApplicationFooter>
-      </Application>
+      <BrowserRouter>
+        <Application
+            onChangeTheme={ (theme) => this.setState({ theme }) }
+            theme={ theme }>
+          <SwitchTransition Component={ Flex } direction="horizontal" grow>
+            <Route component={ Landing } exact path="/" />
+            <Route component={ Documentation } path="/" />
+          </SwitchTransition>
+        </Application>
+      </BrowserRouter>
     );
   }
 }
