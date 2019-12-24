@@ -40,7 +40,6 @@ export { default as Labels } from './Label/Labels';
 export { default as Link, Props as LinkProps } from './Link/Link';
 export { default as List } from './List/List';
 export { default as ListItem } from './List/ListItem';
-export { default as Markdown } from './Markdown/Markdown';
 export { default as Menu } from './Menu/Menu';
 export { default as MenuItem } from './Menu/MenuItem';
 export { default as Placement } from './Placement/Placement';
