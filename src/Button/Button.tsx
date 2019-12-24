@@ -15,7 +15,7 @@ export interface Props extends FlexProps {
 }
 
 const Button: React.FunctionComponent<Props> = (props: Props) => {
-  const { active, color, fill, ...rest } = props;
+  const { active, color = 'accent', fill, ...rest } = props;
   const classes = classnames('Button', {
     'Button--active': active,
     'Button--fill': fill,
@@ -31,10 +31,6 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
         grow
         textColor />
   );
-};
-
-Button.defaultProps = {
-  color: 'accent',
 };
 
 export default Button;

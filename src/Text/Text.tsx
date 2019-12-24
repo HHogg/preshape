@@ -18,8 +18,6 @@ export interface Props extends BaseProps {
   align?: 'start' | 'middle' | 'end';
   /** How the block of text should break onto new lines. */
   breakOn?: 'all' | 'none' | 'word';
-  /** @Ignore */
-  className?: string;
   /** Replaces the overflow of text with the ellipsis character */
   ellipsis?: boolean;
   /** Applies emphasis styling */
@@ -106,8 +104,8 @@ const Text: React.FunctionComponent<Props> = (props: Props) => {
 
   return (
     <Base { ...rest }
-        Component={ FinalComponent }
-        className={ classes } />
+        className={ classes }
+        Component={ FinalComponent } />
   );
 };
 

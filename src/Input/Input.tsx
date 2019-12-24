@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { TypeBaseSize } from '../Base/Base';
 import InputLabel from '../InputLabel/InputLabel';
 import Text, { Props as TextProps } from '../Text/Text';
 import './Input.css';
@@ -9,14 +8,6 @@ interface Props extends TextProps {
   disabled?: boolean;
   /** A label that gives describes what the input is for */
   label?: string;
-  /** @Ignore */
-  margin?: TypeBaseSize;
-  /** @Ignore */
-  padding?: TypeBaseSize;
-  /** @Ignore */
-  paddingHorizontal?: TypeBaseSize;
-  /** @Ignore */
-  paddingVertical?: TypeBaseSize;
 }
 
 const Input: React.FunctionComponent<Props> = (props: Props) => {
@@ -25,8 +16,8 @@ const Input: React.FunctionComponent<Props> = (props: Props) => {
     label,
     margin,
     padding,
-    paddingHorizontal,
-    paddingVertical,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
     ...rest
   } = props;
 
@@ -38,8 +29,8 @@ const Input: React.FunctionComponent<Props> = (props: Props) => {
         paddingHorizontal={ padding || paddingHorizontal }
         paddingVertical={ padding || paddingVertical }>
       <Text { ...rest }
-          Component="input"
           className="Input"
+          Component="input"
           disabled={ disabled }
           paddingHorizontal={ padding || paddingHorizontal }
           paddingVertical={ padding || paddingVertical }
@@ -47,11 +38,6 @@ const Input: React.FunctionComponent<Props> = (props: Props) => {
           strong />
     </InputLabel>
   );
-};
-
-Input.defaultProps = {
-  paddingHorizontal: 'x3',
-  paddingVertical: 'x2',
 };
 
 export default Input;

@@ -11,6 +11,7 @@ import './CodeBlock.css';
 interface Props extends TextProps {
   children?: string;
   language?:
+    string |
     'css' |
     'html' |
     'javascript' |

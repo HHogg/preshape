@@ -6,8 +6,6 @@ import Link from '../Link/Link';
 interface Props extends BaseProps {
   /** Applies the active styling to the Tab */
   active?: boolean;
-  /** @Ignore */
-  children: React.ReactNode;
 }
 
 const Tab: React.FunctionComponent<Props> = (props: Props) => {

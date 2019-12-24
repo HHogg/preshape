@@ -24,8 +24,6 @@ export interface Props extends BaseProps {
     'Pop' |
     'ScaleYDown' |
     'ScaleYUp';
-  /** @Ignore */
-  className: string;
   /**
    * Time (in milliseconds) that the appearance/disappearance animation is delayed for.
    */
@@ -42,13 +40,13 @@ export interface Props extends BaseProps {
 
 const Appear: React.FunctionComponent<Props> = (props: Props) => {
   const {
-    animation,
+    animation = 'FadeSlideUp',
     className,
-    delay,
+    delay = 0,
     onEntered,
     onExited,
-    time,
-    visible,
+    time = 'fast',
+    visible = true,
     ...rest
   } = props;
 
@@ -84,13 +82,6 @@ const Appear: React.FunctionComponent<Props> = (props: Props) => {
       <Base { ...rest } className={ classes } style={ style } />
     </CSSTransition>
   );
-};
-
-Appear.defaultProps = {
-  animation: 'FadeSlideUp',
-  delay: 0,
-  time: 'fast',
-  visible: true,
 };
 
 export default Appear;

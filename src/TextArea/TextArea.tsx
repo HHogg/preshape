@@ -25,8 +25,8 @@ const TextArea: React.FunctionComponent<Props> = (props: Props) => {
     label,
     margin,
     padding,
-    paddingHorizontal,
-    paddingVertical,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
     ...rest
   } = props;
 
@@ -38,8 +38,8 @@ const TextArea: React.FunctionComponent<Props> = (props: Props) => {
         paddingHorizontal={ padding || paddingHorizontal }
         paddingVertical={ padding || paddingVertical }>
       <Text { ...rest }
-          Component="textarea"
           className="TextArea"
+          Component="textarea"
           disabled={ disabled }
           paddingHorizontal={ padding || paddingHorizontal }
           paddingVertical={ padding || paddingVertical }
@@ -47,11 +47,6 @@ const TextArea: React.FunctionComponent<Props> = (props: Props) => {
           strong />
     </InputLabel>
   );
-};
-
-TextArea.defaultProps = {
-  paddingHorizontal: 'x3',
-  paddingVertical: 'x2',
 };
 
 export default TextArea;

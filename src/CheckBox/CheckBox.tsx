@@ -25,8 +25,8 @@ const CheckBox: React.FunctionComponent<Props> = (props: Props) => {
     label,
     margin,
     padding,
-    paddingHorizontal,
-    paddingVertical,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
     ...rest
   } = props;
 
@@ -41,11 +41,6 @@ const CheckBox: React.FunctionComponent<Props> = (props: Props) => {
       <CheckBoxIndicator { ...rest } disabled={ disabled } />
     </SelectInputLabel>
   );
-};
-
-CheckBox.defaultProps = {
-  paddingHorizontal: 'x3',
-  paddingVertical: 'x2',
 };
 
 export default CheckBox;

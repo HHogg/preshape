@@ -194,8 +194,4 @@ const Base: React.FunctionComponent<Props> = (props: Props) => {
   );
 };
 
-Base.defaultProps = {
-  Component: 'div',
-};
-
 export default Base;

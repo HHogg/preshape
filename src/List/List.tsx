@@ -9,22 +9,18 @@ export interface Props extends FlexProps {
 }
 
 const List: React.FunctionComponent<Props> = (props: Props) => {
-  const { gap, ...rest } = props;
+  const { gap = 'x1', ...rest } = props;
   const classes = classnames('List', `List--${gap}`);
 
   return (
     <Flex { ...rest }
-        Component="ul"
         alignChildrenVertical="middle"
         className={ classes }
+        Component="ul"
         direction="horizontal"
         gap={ gap }
         wrap />
   );
-};
-
-List.defaultProps = {
-  gap: 'x1',
 };
 
 export default List;

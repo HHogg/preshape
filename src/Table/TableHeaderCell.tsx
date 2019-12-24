@@ -4,8 +4,6 @@ import Link from '../Link/Link';
 import Text, { Props as TextProps } from '../Text/Text';
 
 interface Props extends TextProps {
-  /** @Ignore */
-  children?: React.ReactNode;
   /** Applies styling indication that this column is sortable */
   sortable?: boolean;
   /** Applies styling indication that this column is currently being sorted */
@@ -17,8 +15,8 @@ const TableHeaderCell: React.FunctionComponent<Props> = (props: Props) => {
 
   return (
     <Text { ...rest }
-        Component="th"
         className="Table__header-cell"
+        Component="th"
         size="x1"
         strong
         uppercase>

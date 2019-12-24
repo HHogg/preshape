@@ -15,8 +15,6 @@ export interface Props extends BaseProps {
   alignChildrenVertical?: 'start' | 'middle' | 'end' | 'around' | 'between';
   /** Flex item alignment property (changes with parent direction). */
   alignSelf?: 'start' | 'middle' | 'end';
-  /** @Ignore */
-  className?: string;
   /** Direction on which way to flex items. */
   direction?: 'horizontal' | 'vertical';
   /** Spacing applied between child flex items, values are global spacing variables. */
@@ -32,7 +30,11 @@ export interface Props extends BaseProps {
 
 }
 
+<<<<<<< HEAD
 const Flex: React.FunctionComponent<Props> = (props: Props) => {
+=======
+const Flex: React.RefForwardingComponent<Element, Attributes<Element, FlexProps>> = (props, ref) => {
+>>>>>>> cab61a5... fixup! chore(Props): Cleared up Component props due to typings
   const {
     alignChildren,
     alignChildrenHorizontal = alignChildren,

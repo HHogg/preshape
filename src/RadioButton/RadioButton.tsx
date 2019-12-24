@@ -26,8 +26,8 @@ const RadioButton: React.FunctionComponent<Props> = (props: Props) => {
     label,
     margin,
     padding,
-    paddingHorizontal,
-    paddingVertical,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
     ...rest
   } = props;
 
@@ -42,11 +42,6 @@ const RadioButton: React.FunctionComponent<Props> = (props: Props) => {
       <RadioButtonIndicator { ...rest } disabled={ disabled } />
     </SelectInputLabel>
   );
-};
-
-RadioButton.defaultProps = {
-  paddingHorizontal: 'x3',
-  paddingVertical: 'x2',
 };
 
 export default RadioButton;
