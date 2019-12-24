@@ -34,23 +34,23 @@
   }
 }
 
-@keyframes AlertSolidAccent {
+@keyframes AlertFillAccent {
   from { background-color: var(--color-accent--shade-3); }
   to { background-color: var(--color-accent--shade-1); }
 }
 
-@keyframes AlertSolidNegative {
+@keyframes AlertFillNegative {
   from { background-color: var(--color-negative--shade-3); }
   to { background-color: var(--color-negative--shade-1); }
 }
 
-@keyframes AlertSolidPositive {
+@keyframes AlertFillPositive {
   from { background-color: var(--color-positive--shade-3); }
   to { background-color: var(--color-positive--shade-1); }
 }
 
 .Alert {
-  color: var(--color-light--shade-2);
+  color: var(--color-light--shade-1);
   animation-direction: alternate;
   animation-duration: var(--transition-time--slow);
   animation-fill-mode: forwards;
@@ -64,10 +64,10 @@
   animation-play-state: running;
 }
 
-.Alert--solid.Alert--accent { animation-name: AlertSolidAccent; }
-.Alert--solid.Alert--negative { animation-name: AlertSolidNegative; }
-.Alert--solid.Alert--positive { animation-name: AlertSolidPositive; }
+.Alert--accent { animation-name: AlertOutlineAccent; }
+.Alert--negative { animation-name: AlertOutlineNegative; }
+.Alert--positive { animation-name: AlertOutlinePositive; }
 
-.Alert--outline.Alert--accent { animation-name: AlertOutlineAccent; }
-.Alert--outline.Alert--negative { animation-name: AlertOutlineNegative; }
-.Alert--outline.Alert--positive { animation-name: AlertOutlinePositive; }
+.Alert--fill.Alert--accent { animation-name: AlertFillAccent; }
+.Alert--fill.Alert--negative { animation-name: AlertFillNegative; }
+.Alert--fill.Alert--positive { animation-name: AlertFillPositive; }
