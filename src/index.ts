@@ -18,9 +18,7 @@ export {
 
 export { default as Alert, Props as AlertProps } from './Alert/Alert';
 export { default as Appear } from './Appear/Appear';
-export { default as Application } from './Application/Application';
-export { default as ApplicationThemeControls } from './Application/ApplicationThemeControls';
-export { default as Base, Props as BaseProps, TypeBaseSize } from './Base/Base';
+export { default as Base, Props as BaseProps } from './Base/Base';
 export { default as BlockQuote } from './BlockQuote/BlockQuote';
 export { default as Bounds } from './Bounds/Bounds';
 export { default as BulletPoint } from './BulletPoints/BulletPoint';
@@ -63,7 +61,7 @@ export { default as TableRow } from './Table/TableRow';
 export { default as TabContent } from './Tab/TabContent';
 export { default as Text, Props as TextProps } from './Text/Text';
 export { default as TextArea } from './TextArea/TextArea';
-export { default as ThemeContext, TypeTheme } from './Theme/ThemeContext';
+export { default as ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';
 export { default as Toolbar } from './Toolbar/Toolbar';
 export { default as ToolbarAction } from './Toolbar/ToolbarAction';
 export { default as ToolbarActionGroup } from './Toolbar/ToolbarActionGroup';

@@ -3,21 +3,23 @@ import debounce from 'lodash.debounce';
 
 const BUFFER = 20;
 
-const isElementInViewport = (el: Element) => {
+
+const isElementInViewport = (el: HTMLElement): boolean => {
   const rect = el.getBoundingClientRect();
-  return rect.bottom > -BUFFER && rect.bottom < window.innerHeight + BUFFER &&
-      rect.right > -BUFFER && rect.right < window.innerWidth + BUFFER &&
-      rect.left > -BUFFER && rect.left < window.innerWidth + BUFFER &&
-      rect.top > -BUFFER && rect.top < window.innerHeight + BUFFER;
+
+  return rect.left < window.innerWidth + BUFFER &&
+    rect.left + rect.width > -BUFFER &&
+    rect.top < window.innerHeight + BUFFER &&
+    rect.top + rect.height > -BUFFER;
 };
 
-export default (enabled: boolean): [boolean, (el: Element) => void] => {
+export default (enabled: boolean = true): [boolean, React.Ref<HTMLElement>] => {
+  const ref = useRef<HTMLElement>(null);
   const [isInView, setIsInView] = useState(false);
-  const element = useRef<Element>();
 
   const updateIsInView = debounce(() => {
-    if (element.current) {
-      const nextIsInView = isElementInViewport(element.current);
+    if (ref.current) {
+      const nextIsInView = isElementInViewport(ref.current);
 
       if (isInView !== nextIsInView) {
         setIsInView(nextIsInView);
@@ -35,10 +37,6 @@ export default (enabled: boolean): [boolean, (el: Element) => void] => {
     document.removeEventListener('resize', updateIsInView);
   };
 
-  const setRef = (el: Element) => {
-    element.current = el;
-  };
-
   useEffect(() => {
     if (enabled) {
       updateIsInView();
@@ -52,5 +50,5 @@ export default (enabled: boolean): [boolean, (el: Element) => void] => {
     };
   }, [enabled]);
 
-  return [isInView, setRef];
+  return [isInView, ref];
 };
