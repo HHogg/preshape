@@ -49,7 +49,6 @@ export { default as PlacementReference } from './Placement/PlacementReference';
 export { default as PlacementReferenceElement } from './Placement/PlacementReferenceElement';
 export { default as RadioButton } from './RadioButton/RadioButton';
 export { default as Separator } from './Separator/Separator';
-export { default as SwitchTransition } from './SwitchTransition/SwitchTransition';
 export { default as Tab } from './Tab/Tab';
 export { default as Tabs } from './Tab/Tabs';
 export { default as Table, Props as TableProps } from './Table/Table';
