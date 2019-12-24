@@ -6,20 +6,20 @@ import './Button.css';
 export interface Props extends FlexProps {
   /** Retains the Button in its active state */
   active?: boolean;
-  /** Colours that is applied to the button to indicate the type of action */
+  /** Colour that is applied to the button to indicate the type of action */
   color?: 'accent' | 'negative' | 'positive';
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
-  /** Visual style of the Button */
-  style?: 'fill' | 'outline';
+  /** Appies a filled in style to the button. */
+  fill?: boolean;
 }
 
 const Button: React.FunctionComponent<Props> = (props: Props) => {
-  const { active, color, style, ...rest } = props;
+  const { active, color, fill, ...rest } = props;
   const classes = classnames('Button', {
     'Button--active': active,
+    'Button--fill': fill,
     [`Button--${color}`]: color,
-    [`Button--${style}`]: style,
   });
 
   return (
@@ -35,7 +35,6 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
 
 Button.defaultProps = {
   color: 'accent',
-  style: 'outline',
 };
 
 export default Button;

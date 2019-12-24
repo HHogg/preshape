@@ -6,7 +6,7 @@ interface Props extends ButtonProps {}
 
 const ToolbarAction: React.FunctionComponent<Props> = (props: Props) => {
   return (
-    <Button { ...props } style="fill" />
+    <Button { ...props } fill />
   );
 };
 

@@ -2,7 +2,9 @@
   padding: var(--size--x2) var(--size--x3);
   border-width: var(--border-size--x2);
   border-style: solid;
-  border-color: transparent;
+  border-color: currentColor;
+  background-color: transparent;
+  color: var(--color-text--shade-1);
   font-size: var(--text-size--x1);
   font-weight: var(--text-weight--strong);
   text-transform: uppercase;
@@ -21,8 +23,10 @@
 
   &[disabled],
   &[disabled]:hover,
-  &[disabled]:active {
+  &[disabled]:active,
+  &[disabled].Button--active {
     opacity: 0.75;
+    color: var(--color-text--shade-3);
     cursor: default;
   }
 
@@ -33,67 +37,98 @@
   }
 }
 
-.Button--outline {
-  border-color: currentColor;
-  background-color: transparent;
-  color: var(--color-text--shade-1);
+.Button--accent {
+  &:hover { color: var(--color-accent--shade-1); }
 
-  &:hover {
-    &.Button--accent { color: var(--color-accent--shade-1); }
-    &.Button--positive { color: var(--color-positive--shade-1); }
-    &.Button--negative { color: var(--color-negative--shade-1); }
-  }
-
-  &:active,
+  &.Button:active,
   &.Button--active {
-    &.Button--accent { color: var(--color-accent--shade-3); }
-    &.Button--positive { color: var(--color-positive--shade-3); }
-    &.Button--negative { color: var(--color-negative--shade-3); }
+    color: var(--color-accent--shade-3);
   }
+}
 
-  &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active,
-  &[disabled].Button--active {
-    color: var(--color-text--shade-3);
+.Button--positive {
+  &:hover { color: var(--color-positive--shade-1); }
+
+  &.Button:active,
+  &.Button--active {
+    color: var(--color-positive--shade-3);
+  }
+}
+
+.Button--negative {
+  &:hover { color: var(--color-negative--shade-1); }
+
+  &.Button:active,
+  &.Button--active {
+    color: var(--color-negative--shade-3);
   }
 }
 
 .Button--fill {
+  border-color: var(--color-text--shade-1);
   background-color: var(--color-text--shade-1);
   color: var(--color-background--shade-1);
 
   &:hover {
-    &.Button--accent { background-color: var(--color-accent--shade-1); }
-    &.Button--positive { background-color: var(--color-positive--shade-1); }
-    &.Button--negative { background-color: var(--color-negative--shade-1); }
+    &.Button--accent {
+      border-color: var(--color-accent--shade-1);
+      background-color: var(--color-accent--shade-1);
+      color: var(--color-background--shade-1);
+    }
+
+    &.Button--positive {
+      border-color: var(--color-positive--shade-1);
+      background-color: var(--color-positive--shade-1);
+      color: var(--color-background--shade-1);
+    }
+
+    &.Button--negative {
+      border-color: var(--color-negative--shade-1);
+      background-color: var(--color-negative--shade-1);
+      color: var(--color-background--shade-1);
+    }
   }
 
   &:active,
   &.Button--active {
-    &.Button--accent { background-color: var(--color-accent--shade-3); }
-    &.Button--positive { background-color: var(--color-positive--shade-3); }
-    &.Button--negative { background-color: var(--color-negative--shade-3); }
+    &.Button--accent {
+      border-color: var(--color-accent--shade-3);
+      background-color: var(--color-accent--shade-3);
+      color: var(--color-background--shade-1);
+    }
+
+    &.Button--positive {
+      border-color: var(--color-positive--shade-3);
+      background-color: var(--color-positive--shade-3);
+      color: var(--color-background--shade-1);
+    }
+
+    &.Button--negative {
+      border-color: var(--color-negative--shade-3);
+      background-color: var(--color-negative--shade-3);
+      color: var(--color-background--shade-1);
+    }
   }
 
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active,
   &[disabled].Button--active {
+    border-color: var(--color-text--shade-3);
     background-color: var(--color-text--shade-3);
     color: var(--color-background--shade-3);
   }
 }
 
-.Buttons--joined > .Button--outline:not(:last-child) {
+.Buttons--joined > .Button:not(:last-child) {
   border-right-width: 0;
 
   &.Button--active,
-  &:not(:disabled):hover,
-  &:not(:disabled):active {
+  &:not([disabled]):hover,
+  &:not([disabled]):active {
     border-right-width: var(--border-size--x2);
 
-    & + .Button--outline {
+    & + .Button {
       border-left-width: 0;
     }
   }
