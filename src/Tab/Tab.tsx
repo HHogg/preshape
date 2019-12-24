@@ -21,7 +21,7 @@ const Tab: React.FunctionComponent<Props> = (props: Props) => {
       <Base
           backgroundColor={ active ? undefined : 'text-shade-1' }
           className="Tab__background"
-          color={ active ? undefined : 'background-shade-1' }>
+          textColor={ active ? undefined : 'background-shade-1' }>
         <Link
             display="block"
             padding="x3"

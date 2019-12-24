@@ -26,12 +26,12 @@ const SelectInputLabel: React.FunctionComponent<Props> = (props: Props) => {
       </Flex>
 
       <Flex Component={ Text }
-          color
           ellipsis
           grow
           shrink
           size="x1"
-          strong>
+          strong
+          textColor>
         { label }
       </Flex>
     </Flex>

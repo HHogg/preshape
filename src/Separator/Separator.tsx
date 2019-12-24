@@ -8,7 +8,7 @@ interface Props extends BaseProps {
    * Border colour to be applied, shades are taken from the current
    * theme. A value of true will reapply the current colour value.
    */
-  borderColor?: true | 'shade-1' | 'shade-2' | 'shade-3';
+  borderColor?: true | 'text-shade-1' | 'text-shade-2' | 'text-shade-3';
   /** Thickness of the border to be applied */
   borderSize?: 'x1' | 'x2';
 }
@@ -16,7 +16,6 @@ interface Props extends BaseProps {
 const Separator: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Base { ...props }
-        Component="div"
         className="Separator" />
   );
 };

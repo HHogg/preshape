@@ -16,7 +16,7 @@ export {
   TypeIcon,
 } from './Icon/Icon';
 
-export { default as Alert, Props as AlertProps } from './Alert/Alert';
+export { default as Alert } from './Alert/Alert';
 export { default as Appear } from './Appear/Appear';
 export { default as Base, Props as BaseProps } from './Base/Base';
 export { default as BlockQuote } from './BlockQuote/BlockQuote';

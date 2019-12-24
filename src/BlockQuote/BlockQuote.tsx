@@ -7,12 +7,12 @@ interface Props extends TextProps {}
 const BlockQuote: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Text
-        color="shade-3"
         paddingHorizontal="x6"
         paddingVertical="x1"
         { ...props }
+        className="BlockQuote"
         Component="blockquote"
-        className="BlockQuote" />
+        textColor="text-shade-3" />
   );
 };
 

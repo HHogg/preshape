@@ -24,12 +24,12 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
 
   return (
     <Flex { ...rest }
-        Component="button"
         alignChildren="middle"
         className={ classes }
-        color
+        Component="button"
         direction="horizontal"
-        grow />
+        grow
+        textColor />
   );
 };
 

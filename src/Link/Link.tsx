@@ -25,9 +25,9 @@ const Link: React.FunctionComponent<Props> = (props: Props) => {
   });
 
   return (
-    <Text color target={ to ? undefined : '_blank' } { ...rest }
-        Component={ to ? RouterLink : 'a' }
+    <Text { ...rest }
         className={ classes }
+        Component={ to ? RouterLink : 'a' }
         to={ to } />
   );
 };

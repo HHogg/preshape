@@ -58,34 +58,71 @@
   margin-left: auto;
 }
 
-.Base--background-color-true,
-.Base--background-color-shade-1 { background-color: var(--color-background--shade-1); }
-.Base--background-color-shade-2 { background-color: var(--color-background--shade-2); }
-.Base--background-color-shade-3 { background-color: var(--color-background--shade-3); }
 .Base--background-color-accent-shade-1 { background-color: var(--color-accent--shade-1); }
 .Base--background-color-accent-shade-2 { background-color: var(--color-accent--shade-2); }
 .Base--background-color-accent-shade-3 { background-color: var(--color-accent--shade-3); }
+.Base--background-color-background-shade-1 { background-color: var(--color-background--shade-1); }
+.Base--background-color-background-shade-2 { background-color: var(--color-background--shade-2); }
+.Base--background-color-background-shade-3 { background-color: var(--color-background--shade-3); }
+.Base--background-color-dark-shade-1 { background-color: var(--color-dark--shade-1); }
+.Base--background-color-dark-shade-2 { background-color: var(--color-dark--shade-2); }
+.Base--background-color-dark-shade-3 { background-color: var(--color-dark--shade-3); }
+.Base--background-color-light-shade-1 { background-color: var(--color-light--shade-1); }
+.Base--background-color-light-shade-2 { background-color: var(--color-light--shade-2); }
+.Base--background-color-light-shade-3 { background-color: var(--color-light--shade-3); }
 .Base--background-color-text-shade-1 { background-color: var(--color-text--shade-1); }
 .Base--background-color-text-shade-2 { background-color: var(--color-text--shade-2); }
 .Base--background-color-text-shade-3 { background-color: var(--color-text--shade-3); }
+.Base--background-color-negative-shade-1 { background-color: var(--color-negative--shade-1); }
+.Base--background-color-negative-shade-2 { background-color: var(--color-negative--shade-2); }
+.Base--background-color-negative-shade-3 { background-color: var(--color-negative--shade-3); }
+.Base--background-color-positive-shade-1 { background-color: var(--color-positive--shade-1); }
+.Base--background-color-positive-shade-2 { background-color: var(--color-positive--shade-2); }
+.Base--background-color-positive-shade-3 { background-color: var(--color-positive--shade-3); }
 
-.Base--border-color-true,
-.Base--border-color-shade-1 { border-color: var(--color-text--shade-1); }
-.Base--border-color-shade-2 { border-color: var(--color-text--shade-2); }
-.Base--border-color-shade-3 { border-color: var(--color-text--shade-3); }
+.Base--border-color-accent-shade-1 { border-color: var(--color-accent--shade-1); }
+.Base--border-color-accent-shade-2 { border-color: var(--color-accent--shade-2); }
+.Base--border-color-accent-shade-3 { border-color: var(--color-accent--shade-3); }
+.Base--border-color-background-shade-1 { border-color: var(--color-background--shade-1); }
+.Base--border-color-background-shade-2 { border-color: var(--color-background--shade-2); }
+.Base--border-color-background-shade-3 { border-color: var(--color-background--shade-3); }
+.Base--border-color-dark-shade-1 { border-color: var(--color-dark--shade-1); }
+.Base--border-color-dark-shade-2 { border-color: var(--color-dark--shade-2); }
+.Base--border-color-dark-shade-3 { border-color: var(--color-dark--shade-3); }
+.Base--border-color-light-shade-1 { border-color: var(--color-light--shade-1); }
+.Base--border-color-light-shade-2 { border-color: var(--color-light--shade-2); }
+.Base--border-color-light-shade-3 { border-color: var(--color-light--shade-3); }
+.Base--border-color-text-shade-1 { border-color: var(--color-text--shade-1); }
+.Base--border-color-text-shade-2 { border-color: var(--color-text--shade-2); }
+.Base--border-color-text-shade-3 { border-color: var(--color-text--shade-3); }
+.Base--border-color-negative-shade-1 { border-color: var(--color-negative--shade-1); }
+.Base--border-color-negative-shade-2 { border-color: var(--color-negative--shade-2); }
+.Base--border-color-negative-shade-3 { border-color: var(--color-negative--shade-3); }
+.Base--border-color-positive-shade-1 { border-color: var(--color-positive--shade-1); }
+.Base--border-color-positive-shade-2 { border-color: var(--color-positive--shade-2); }
+.Base--border-color-positive-shade-3 { border-color: var(--color-positive--shade-3); }
 
-.Base--text-color-true,
-.Base--text-color-shade-1 { color: var(--color-text--shade-1); }
-.Base--text-color-shade-2 { color: var(--color-text--shade-2); }
-.Base--text-color-shade-3 { color: var(--color-text--shade-3); }
 .Base--text-color-accent-shade-1 { color: var(--color-accent--shade-1); }
 .Base--text-color-accent-shade-2 { color: var(--color-accent--shade-2); }
 .Base--text-color-accent-shade-3 { color: var(--color-accent--shade-3); }
 .Base--text-color-background-shade-1 { color: var(--color-background--shade-1); }
 .Base--text-color-background-shade-2 { color: var(--color-background--shade-2); }
 .Base--text-color-background-shade-3 { color: var(--color-background--shade-3); }
-.Base--text-color-negative { color: var(--color-negative--shade-2); }
-.Base--text-color-postive { color: var(--color-postive--shade-2); }
+.Base--text-color-dark-shade-1 { color: var(--color-dark--shade-1); }
+.Base--text-color-dark-shade-2 { color: var(--color-dark--shade-2); }
+.Base--text-color-dark-shade-3 { color: var(--color-dark--shade-3); }
+.Base--text-color-light-shade-1 { color: var(--color-light--shade-1); }
+.Base--text-color-light-shade-2 { color: var(--color-light--shade-2); }
+.Base--text-color-light-shade-3 { color: var(--color-light--shade-3); }
+.Base--text-color-text-shade-1 { color: var(--color-text--shade-1); }
+.Base--text-color-text-shade-2 { color: var(--color-text--shade-2); }
+.Base--text-color-text-shade-3 { color: var(--color-text--shade-3); }
+.Base--text-color-negative-shade-1 { color: var(--color-negative--shade-1); }
+.Base--text-color-negative-shade-2 { color: var(--color-negative--shade-2); }
+.Base--text-color-negative-shade-3 { color: var(--color-negative--shade-3); }
+.Base--text-color-positive-shade-1 { color: var(--color-positive--shade-1); }
+.Base--text-color-positive-shade-2 { color: var(--color-positive--shade-2); }
+.Base--text-color-positive-shade-3 { color: var(--color-positive--shade-3); }
 
 .Base--absolute-fullscreen,
 .Base--absolute-top,
@@ -115,4 +152,3 @@
 .Base--absolute-fullscreen,
 .Base--absolute-bottom,
 .Base--absolute-bottom-right { right: 0; bottom: 0; }
-
