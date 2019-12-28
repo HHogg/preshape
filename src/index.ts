@@ -20,7 +20,6 @@ export { default as Alert } from './Alert/Alert';
 export { default as Appear } from './Appear/Appear';
 export { default as Base, Props as BaseProps } from './Base/Base';
 export { default as BlockQuote } from './BlockQuote/BlockQuote';
-export { default as Bounds } from './Bounds/Bounds';
 export { default as BulletPoint } from './BulletPoints/BulletPoint';
 export { default as BulletPoints } from './BulletPoints/BulletPoints';
 export { default as Button } from './Button/Button';

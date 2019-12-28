@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
-export default (ref: React.MutableRefObject<HTMLElement | null>) => {
+export default (): [{ height: number; width: number }, React.Ref<HTMLElement>] => {
+  const ref = useRef<HTMLElement>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const observer = new ResizeObserver((entries: ResizeObserverEntry[]) => {
-      if (entries && entries.length) {
+    const observer = new ResizeObserver((entries) => {
+      if (entries.length) {
         const { width, height } = entries[0].contentRect;
         setSize({ width, height });
       }
@@ -23,7 +24,7 @@ export default (ref: React.MutableRefObject<HTMLElement | null>) => {
 
       observer.disconnect();
     };
-  }, []);
+  }, [ref.current]);
 
-  return size;
+  return [size, ref];
 };
