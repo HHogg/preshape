@@ -50,6 +50,7 @@ export interface Props {
   Component?: string | React.ComponentType<any>;
   /** Quick way of absolutely position to common places */
   absolute?:
+    'center' |
     'fullscreen' |
     'top' |
     'top-left' |
@@ -77,6 +78,16 @@ export interface Props {
   container?: boolean;
   /** Applies display styling */
   display?: 'block' | 'inline-block';
+  /** Quick way of absolutely position to common places */
+  fixed?:
+    'center' |
+    'fullscreen' |
+    'top' |
+    'top-left' |
+    'top-right' |
+    'bottom' |
+    'bottom-left' |
+    'bottom-right';
   /** Fixed height applied through inline styling */
   height?: number | string;
   /** Forwarded React ref function */
@@ -132,6 +143,7 @@ const Base: React.FunctionComponent<Props> = (props: Props) => {
     clickable,
     container,
     display,
+    fixed,
     maxWidth,
     minWidth,
     minHeight,
@@ -158,6 +170,7 @@ const Base: React.FunctionComponent<Props> = (props: Props) => {
     [`Base--border-color-${borderColor}`]: borderColor,
     [`Base--border-size-${borderSize}`]: borderSize,
     [`Base--display-${display}`]: display,
+    [`Base--fixed-${fixed}`]: fixed,
     [`Base--margin-${margin}`]: margin,
     [`Base--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
     [`Base--padding-vertical-${paddingVertical}`]: paddingVertical,
