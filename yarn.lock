@@ -9067,7 +9067,7 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.12.0:
+react-dom@>=16.6.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
   integrity sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw==
@@ -9165,7 +9165,7 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-"react@0.14.x || ^15.0.0 || ^16.0.0":
+react@>=16.6.0, react@^16.3.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
@@ -9521,6 +9521,13 @@ remark@^10.0.1:
     remark-parse "^6.0.0"
     remark-stringify "^6.0.0"
     unified "^7.0.0"
+
+remarkable-react@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/remarkable-react/-/remarkable-react-1.4.1.tgz#d9d69930ed526a8296861a6649c94355eee7add8"
+  integrity sha512-V5GEcsM1Uw6qghaGJAaH1Od1aV+W8XDq3Bd6w78qfCefncNy3d2zL2UCx2Un4aeXkz2dR5P4wLc0+cPJJ5wvGA==
+  dependencies:
+    react "^16.3.0"
 
 remarkable@^2.0.0:
   version "2.0.0"

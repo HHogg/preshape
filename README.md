@@ -1,20 +1,61 @@
-<h4 align="center">A minimal design system and library of composable React components, primarily for  <a href="https://hogg.io" target="_blank">my personal projects</a>.</h4>
-
 <p align="center">
+  <img src="./site/assets/logo-with-text.svg" width="231" height="170" alt="Framer Motion" />
+</p>
+
+<h3 align="center">
+  A minimal design system and library of React components.
+</h3>
+
+<p align="center" style="margin-top: 50px; margin-bottom: 50px;">
   <a href="https://preshape.hogg.io/#Colors">Colors</a> ~
   <a href="https://preshape.hogg.io/#Themes">Themes</a> ~
   <a href="https://preshape.hogg.io/#Animations">Animations & Transitions</a> ~
   <a href="https://preshape.hogg.io/#Sizing">Sizing</a> ~
-  <a href="https://preshape.hogg.io/#Components">Components</a> ~
-  <a href="https://preshape.hogg.io/#BuiltWith">Built with Preshape</a>
+  <a href="https://preshape.hogg.io/#Icons">Icons</a> ~
+  <a href="https://preshape.hogg.io/#Components">Components</a>
 </p>
 
-## Why?
+_This exists primarially for my own personal projects, hence the lack of supporting documentation, although a basic styleguide and component API docs exist to validate the design system._
 
-I, like many developers, would frequently start side projects and small experiments and abandon them either in the setup or polishing stages. Leaving me with nothing but a directory that I'm never going to open again.
+### Getting Started
 
-I realised this was down to losing interest with repetitive UI tasks and not having an environment set up that was tailored to the way I develop. I also wanted a design that way minimal, flexible for a range of projects, and had it's own identity.
+##### Install with your favourite package manager
 
-## How To Use
+```
+npm i preshape
+```
 
-As mentioned above, this exists primarily for my own use but anybody is welcome to use it. The [Style Guide](https://preshape.hogg.io/) exists to validate and build components but it also has some basic documentation to get started.
+##### Import and start using
+
+```tsx
+import React from 'react';
+import { render } from 'react-dom';
+import { Flex, Text } from 'preshape';
+
+const rootElement = document.getElementById('Root');
+
+if (rootElement) {
+  render((
+    <Flex alignChildren="middle" direction="vertical" grow>
+      <Flex>
+        <Icon name="Preshape" margin="x2" size="24px" />
+        <Text margin="x2" strong>Ready!</Text>
+      </Flex>
+    </Flex>
+  ), rootElement);
+}
+```
+
+### Documentation
+
+Description of the design system and component documentation can be found on the [Preshape site](https://preshape.hogg.io).
+
+### Contribution
+
+Preshape uses a strict commit message structure that follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) spec. This is used to automate publishing the package to NPM and generating the changelog with [Semantic Release](https://github.com/semantic-release/semantic-release).
+
+
+
+
+
+

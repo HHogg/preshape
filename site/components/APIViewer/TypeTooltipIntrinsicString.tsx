@@ -7,8 +7,8 @@ interface Props {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ref: React.Ref<any>;
   }) => React.ReactNode;
-  value?: number;
-  onChange: (value?: number) => void;
+  value?: string;
+  onChange: (value?: string) => void;
 }
 
 export default (props: Props) => {
@@ -17,8 +17,8 @@ export default (props: Props) => {
   const handleOnChange = (value?: string) => {
     if (value === '' || value === undefined) {
       onChange(undefined);
-    } else if (Number.isFinite(parseInt(value))) {
-      onChange(parseInt(value));
+    } else {
+      onChange(value);
     }
   };
 

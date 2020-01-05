@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 .Logo {
   display: block;
   margin-right: auto;
@@ -5,18 +7,26 @@
   overflow: visible;
 }
 
-.Logo__shape--fill,
-.Logo__shape--stroke {
-  transform-origin: center;
-  transition-property: color, transform, stroke, fill;
+.Logo path {
+  fill: currentColor;
+  stroke: currentColor;
+  transition-property: stroke, fill;
   transition-duration: var(--transition-time--slow);
-  transition-timing-function: ease-in-out;
-
-  @nest .Theme--day & { transform: rotate(0deg); }
-  @nest .Theme--night & { transform: rotate(720deg); }
+  transition-timing-function: var(--transition-timing-function);
 }
 
-.Logo__shape--stroke-text { stroke: var(--color-text--shade-1); }
-.Logo__shape--stroke-accent { stroke: var(--color-accent--shade-2); }
-.Logo__shape--fill-text { fill: var(--color-text--shade-1); }
-.Logo__shape--fill-accent { fill: var(--color-accent--shade-2); }
+.Theme--day .Logo {
+  & path:nth-child(1) { color: var(--oc-gray-5); }
+  & path:nth-child(2) { color: var(--oc-gray-6); }
+  & path:nth-child(3) { color: var(--oc-gray-7); }
+  & path:nth-child(4) { color: var(--oc-gray-9); }
+  & path:nth-child(5) { color: var(--oc-gray-8); }
+}
+
+.Theme--night .Logo {
+  & path:nth-child(1) { color: var(--oc-gray-5); }
+  & path:nth-child(2) { color: var(--oc-gray-4); }
+  & path:nth-child(3) { color: var(--oc-gray-3); }
+  & path:nth-child(4) { color: var(--oc-gray-0); }
+  & path:nth-child(5) { color: var(--oc-gray-2); }
+}

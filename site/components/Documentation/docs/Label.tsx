@@ -1,0 +1,38 @@
+import * as React from 'react' ;
+import { Label, LabelProps, Labels, LabelsProps } from 'preshape';
+import { CatalogueItem } from '.';
+
+const Item: CatalogueItem<{
+  Label: LabelProps;
+  Labels: LabelsProps;
+}> = {
+  name: 'Labels',
+  description: 'Keyword highlighting component, useful for giving specific data emphasis.',
+  type: 'component',
+  showcase: {
+    Component: (props) => (
+      <Labels { ...props.Labels }>
+        { Array.from({ length: 5 }).map((_, n) => (
+          <Label { ...props.Label } key={ n }>
+            Lorem ipsum
+          </Label>
+        )) }
+      </Labels>
+    ),
+    state: {
+      Label: {},
+      Labels: {},
+    },
+  },
+  apis: [{
+    module: '"Label/Labels"',
+    name: 'LabelsProps',
+    rename: 'Labels',
+  }, {
+    module: '"Label/Label"',
+    name: 'LabelProps',
+    rename: 'Label',
+  }],
+};
+
+export default Item;
