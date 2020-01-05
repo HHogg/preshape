@@ -1,26 +1,25 @@
-
 import * as React from 'react';
-import Appear, { Props as AppearProps } from '../Appear/Appear';
+import Appear, { AppearProps } from '../Appear/Appear';
+import { Attributes } from '../Base/Base';
 import Flex from '../Flex/Flex';
 import PlacementArrow from '../Placement/PlacementArrow';
 import './Toolbar.css';
 
-interface Props extends AppearProps {
-  /** Toolbar action components. */
-  children: React.ReactNode;
+export interface ToolbarProps extends AppearProps {
   /**
    * Visibility toggle for the Toolbar.
    */
   visible: boolean;
 }
 
-const Toolbar: React.FunctionComponent<Props> = (props: Props) => {
+const Toolbar = React.forwardRef<HTMLElement, Attributes<HTMLElement, ToolbarProps>>((props, ref) => {
   const { children, visible, ...rest } = props;
 
   return (
     <Appear { ...rest }
         animation="Pop"
         className="Toolbar"
+        ref={ ref }
         visible={ visible }>
       <PlacementArrow backgroundColor="text-shade-2" />
       <Flex
@@ -33,6 +32,6 @@ const Toolbar: React.FunctionComponent<Props> = (props: Props) => {
       </Flex>
     </Appear>
   );
-};
+});
 
 export default Toolbar;

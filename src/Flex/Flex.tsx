@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Props as BaseProps, TypeBaseSize } from '../Base/Base';
+import Base, { Attributes, BaseProps, TypeSize } from '../Base/Base';
 import './Flex.css';
 
-export interface Props extends BaseProps {
+export interface FlexProps extends BaseProps {
   /**
    * Short cut child alignment property for both alignChildrenHorizontal and
    * alignChildrenVertical.
@@ -18,7 +18,7 @@ export interface Props extends BaseProps {
   /** Direction on which way to flex items. */
   direction?: 'horizontal' | 'vertical';
   /** Spacing applied between child flex items, values are global spacing variables. */
-  gap?: TypeBaseSize;
+  gap?: TypeSize;
   /** Flex item property if it should grow with available space. */
   grow?: boolean;
   /** Initial width to flex from for a child item. */
@@ -30,11 +30,7 @@ export interface Props extends BaseProps {
 
 }
 
-<<<<<<< HEAD
-const Flex: React.FunctionComponent<Props> = (props: Props) => {
-=======
 const Flex: React.RefForwardingComponent<Element, Attributes<Element, FlexProps>> = (props, ref) => {
->>>>>>> cab61a5... fixup! chore(Props): Cleared up Component props due to typings
   const {
     alignChildren,
     alignChildrenHorizontal = alignChildren,
@@ -63,8 +59,10 @@ const Flex: React.RefForwardingComponent<Element, Attributes<Element, FlexProps>
   }, className);
 
   return (
-    <Base { ...rest } className={ classes } />
+    <Base { ...rest }
+        className={ classes }
+        ref={ ref } />
   );
 };
 
-export default Flex;
+export default React.forwardRef(Flex);

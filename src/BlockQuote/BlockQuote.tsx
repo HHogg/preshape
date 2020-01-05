@@ -1,19 +1,21 @@
 import * as React from 'react';
-import Text, { Props as TextProps } from '../Text/Text';
+import { Attributes } from '../Base/Base';
+import Text, { TextProps } from '../Text/Text';
 import './BlockQuote.css';
 
-interface Props extends TextProps {}
+export interface BlockQuoteProps extends TextProps {}
 
-const BlockQuote: React.FunctionComponent<Props> = (props: Props) => {
+const BlockQuote = React.forwardRef<HTMLQuoteElement, Attributes<HTMLQuoteElement, BlockQuoteProps>>((props, ref) => {
   return (
     <Text
         paddingHorizontal="x6"
         paddingVertical="x1"
         { ...props }
         className="BlockQuote"
-        Component="blockquote"
+        ref={ ref }
+        tag="blockquote"
         textColor="text-shade-3" />
   );
-};
+});
 
 export default BlockQuote;

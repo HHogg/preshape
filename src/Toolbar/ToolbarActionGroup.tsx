@@ -1,13 +1,13 @@
-
 import * as React from 'react';
-import Buttons, { Props as ButtonsProps } from '../Button/Buttons';
+import { Attributes } from '../Base/Base';
+import Buttons, { ButtonsProps } from '../Button/Buttons';
 
-interface Props extends ButtonsProps {}
+export interface ToolbarActionGroupProps extends ButtonsProps {}
 
-const ToolbarActionGroup: React.FunctionComponent<Props> = (props: Props) => {
+const ToolbarActionGroup = React.forwardRef<HTMLDivElement, Attributes<HTMLDivElement, ToolbarActionGroupProps>>((props, ref) => {
   return (
-    <Buttons { ...props } joined />
+    <Buttons { ...props } joined ref={ ref } />
   );
-};
+});
 
 export default ToolbarActionGroup;

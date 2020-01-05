@@ -1,18 +1,18 @@
 import * as React from 'react';
-import { TypeBaseSize } from '../Base/Base';
-import Flex, { Props as FlexProps } from '../Flex/Flex';
+import { Attributes, TypeSize } from '../Base/Base';
+import Flex, { FlexProps } from '../Flex/Flex';
 import Text from '../Text/Text';
 import './InputLabel.css';
 
-interface Props extends FlexProps {
+interface InputLabelProps extends FlexProps {
   children: React.ReactNode;
   disabled?: boolean;
   label?: string;
-  paddingHorizontal?: TypeBaseSize;
-  paddingVertical?: TypeBaseSize;
+  paddingHorizontal?: TypeSize;
+  paddingVertical?: TypeSize;
 }
 
-const InputLabel: React.FunctionComponent<Props> = (props: Props) => {
+const InputLabel = React.forwardRef<HTMLLabelElement, Attributes<HTMLLabelElement, InputLabelProps>>((props, ref) => {
   const {
     children,
     disabled,
@@ -23,10 +23,12 @@ const InputLabel: React.FunctionComponent<Props> = (props: Props) => {
   } = props;
 
   return (
-    <Flex Component="label" { ...rest }
+    <Flex { ...rest }
         className="InputLabel"
         direction="vertical"
-        disabled={ disabled }>
+        disabled={ disabled }
+        ref={ ref }
+        tag="label">
       { label && (
         <Text
             ellipsis
@@ -41,6 +43,6 @@ const InputLabel: React.FunctionComponent<Props> = (props: Props) => {
       { children }
     </Flex>
   );
-};
+});
 
 export default InputLabel;

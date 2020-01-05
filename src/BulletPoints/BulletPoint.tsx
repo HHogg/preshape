@@ -1,12 +1,15 @@
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-interface Props extends BaseProps {}
+export interface BulletPointProps extends BaseProps {}
 
-const BulletPoint: React.FunctionComponent<Props> = (props: Props) => {
+const BulletPoint = React.forwardRef<HTMLLIElement, Attributes<HTMLLIElement, BulletPointProps>>((props, ref) => {
   return (
-    <Base Component="li" { ...props } className="BulletPoints__point" />
+    <Base { ...props }
+        className="BulletPoints__point"
+        ref={ ref }
+        tag="li" />
   );
-};
+});
 
 export default BulletPoint;

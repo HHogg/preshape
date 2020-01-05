@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-interface Props extends BaseProps {}
+export interface TableBodyProps extends BaseProps {}
 
-const TableBody: React.FunctionComponent<Props> = (props: Props) => {
+const TableBody = React.forwardRef<HTMLTableSectionElement, Attributes<HTMLTableSectionElement, TableBodyProps>>((props, ref) => {
   return (
-    <Base { ...props } Component="tbody" className="Table__body" />
+    <Base { ...props } className="Table__body" ref={ ref } tag="tbody" />
   );
-};
+});
 
 export default TableBody;

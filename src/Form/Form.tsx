@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
 interface Props extends BaseProps {}
 
-const Form: React.FunctionComponent<Props> = (props: Props) => {
+const Form = React.forwardRef<HTMLFormElement, Attributes<HTMLFormElement, Props>>((props, ref) => {
   return (
-    <Base { ...props } Component="form" />
+    <Base { ...props } ref={ ref } tag="form" />
   );
-};
+});
 
 export default Form;

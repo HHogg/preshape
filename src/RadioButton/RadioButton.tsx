@@ -1,26 +1,23 @@
-
 import * as React from 'react';
-import { TypeBaseSize } from '../Base/Base';
-import RadioButtonIndicator, { Props as RadioButtonIndicatorProps } from './RadioButtonIndicator';
+import { Attributes, TypeSize } from '../Base/Base';
+import RadioButtonIndicator from './RadioButtonIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './RadioButton.css';
 
-interface Props extends RadioButtonIndicatorProps {
-  /** A styled disabled state that disables all interactions */
-  disabled?: boolean;
+export interface RadioButtonProps {
   /** A label that gives describes what the input is for */
   label: string;
   /** @Ignore */
-  margin?: TypeBaseSize;
+  margin?: TypeSize;
   /** @Ignore */
-  padding?: TypeBaseSize;
+  padding?: TypeSize;
   /** @Ignore */
-  paddingHorizontal?: TypeBaseSize;
+  paddingHorizontal?: TypeSize;
   /** @Ignore */
-  paddingVertical?: TypeBaseSize;
+  paddingVertical?: TypeSize;
 }
 
-const RadioButton: React.FunctionComponent<Props> = (props: Props) => {
+const RadioButton = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement, RadioButtonProps>>((props, ref) => {
   const {
     disabled,
     label,
@@ -39,9 +36,11 @@ const RadioButton: React.FunctionComponent<Props> = (props: Props) => {
         padding={ padding }
         paddingHorizontal={ paddingHorizontal }
         paddingVertical={ paddingVertical }>
-      <RadioButtonIndicator { ...rest } disabled={ disabled } />
+      <RadioButtonIndicator { ...rest }
+          disabled={ disabled }
+          ref={ ref } />
     </SelectInputLabel>
   );
-};
+});
 
 export default RadioButton;

@@ -1,15 +1,16 @@
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Image.css';
 
-interface Props extends BaseProps {}
+export interface ImageProps extends BaseProps {}
 
-const Image: React.FunctionComponent<Props> = (props: Props) => {
+const Image = React.forwardRef<HTMLImageElement, Attributes<HTMLImageElement, ImageProps>>((props, ref) => {
   return (
     <Base { ...props }
-        Component="img"
-        className="Image" />
+        className="Image"
+        ref={ ref }
+        tag="img" />
   );
-};
+});
 
 export default Image;

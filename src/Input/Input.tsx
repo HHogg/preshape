@@ -1,16 +1,15 @@
 import * as React from 'react';
+import { Attributes } from '../Base/Base';
 import InputLabel from '../InputLabel/InputLabel';
-import Text, { Props as TextProps } from '../Text/Text';
+import Text, { TextProps } from '../Text/Text';
 import './Input.css';
 
-interface Props extends TextProps {
-  /** A styled disabled state that disables all interactions */
-  disabled?: boolean;
+export interface InputProps extends TextProps {
   /** A label that gives describes what the input is for */
   label?: string;
 }
 
-const Input: React.FunctionComponent<Props> = (props: Props) => {
+const Input = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement, InputProps>>((props, ref) => {
   const {
     disabled,
     label,
@@ -30,14 +29,15 @@ const Input: React.FunctionComponent<Props> = (props: Props) => {
         paddingVertical={ padding || paddingVertical }>
       <Text { ...rest }
           className="Input"
-          Component="input"
           disabled={ disabled }
           paddingHorizontal={ padding || paddingHorizontal }
           paddingVertical={ padding || paddingVertical }
+          ref={ ref }
           size="x1"
-          strong />
+          strong
+          tag="input" />
     </InputLabel>
   );
-};
+});
 
 export default Input;

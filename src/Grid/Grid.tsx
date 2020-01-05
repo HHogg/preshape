@@ -1,20 +1,20 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import { TypeBaseSize } from '../Base/Base';
-import Flex, { Props as FlexProps } from '../Flex/Flex';
+import { Attributes, TypeSize } from '../Base/Base';
+import Flex, { FlexProps } from '../Flex/Flex';
 import './Grid.css';
 
-export interface Props extends FlexProps {
+export interface GridProps extends FlexProps {
   alignChildren?: 'start' | 'middle' | 'end';
   autoFitWidthMax?: string;
   autoFitWidthMin?: string;
   className?: string;
   columnCount?: string;
   columnWidth?: string;
-  gap?: TypeBaseSize;
+  gap?: TypeSize;
 }
 
-const Grid: React.FunctionComponent<Props> = (props: Props) => {
+const Grid = React.forwardRef<HTMLElement, Attributes<HTMLElement, GridProps>>((props, ref) => {
   const {
     alignChildren,
     autoFitWidthMax,
@@ -38,8 +38,8 @@ const Grid: React.FunctionComponent<Props> = (props: Props) => {
   };
 
   return (
-    <Flex { ...rest } className={ classes } style={ style } />
+    <Flex { ...rest } className={ classes } ref={ ref } style={ style } />
   );
-};
+});
 
 export default Grid;

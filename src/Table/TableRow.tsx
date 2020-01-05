@@ -1,11 +1,10 @@
-
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-interface Props extends BaseProps {}
+export interface TableRowProps extends BaseProps {}
 
-const TableRow: React.FunctionComponent<Props> = (props: Props) => {
+const TableRow = React.forwardRef<HTMLTableRowElement, Attributes<HTMLTableRowElement, TableRowProps>>((props, ref) => {
   const classes = classnames('Table__row', {
     'Table__row--clickable': props.onClick,
   });
@@ -13,8 +12,9 @@ const TableRow: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Base { ...props }
         className={ classes }
-        Component="tr" />
+        ref={ ref }
+        tag="tr" />
   );
-};
+});
 
 export default TableRow;

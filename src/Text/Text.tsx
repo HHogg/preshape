@@ -1,19 +1,33 @@
-
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps, TypeAllElementTags } from '../Base/Base';
 import './Text.css';
 
-export type TypeTextSize = 'x1' | 'x2' | 'x3' | 'x4' | 'x5';
+export type TypeTextSize =
+  'x1' |
+  'x2' |
+  'x3' |
+  'x4' |
+  'x5';
 
-export interface Props extends BaseProps {
-  /**
-   * Component to be used as the final element, can be a custom React
-   * Component or an element string. If none is provided then a suitable
-   * semantic element will be determined from the props.
-   */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Component?: string | React.ComponentType<any>;
+const TagBlockMap: {
+  [K in TypeTextSize]: TypeAllElementTags;
+} = {
+  x1: 'p',
+  x2: 'p',
+  x3: 'h3',
+  x4: 'h2',
+  x5: 'h1',
+};
+
+const TagInlineMap = (props: TextProps): TypeAllElementTags =>
+  (props.strong && 'strong') ||
+  (props.emphasis && 'em') ||
+  (props.subscript && 'sub') ||
+  (props.superscript && 'sup') ||
+  'span';
+
+export interface TextProps extends BaseProps {
   /** Text alignment */
   align?: 'start' | 'middle' | 'end';
   /** How the block of text should break onto new lines. */
@@ -44,26 +58,8 @@ export interface Props extends BaseProps {
   weak?: boolean;
 }
 
-const ComponentMap: {
-  [K in TypeTextSize]: string;
-} = {
-  x1: 'p',
-  x2: 'p',
-  x3: 'h3',
-  x4: 'h2',
-  x5: 'h1',
-};
-
-const InlineComponentMap = (props: Props) =>
-  (props.strong && 'strong') ||
-  (props.emphasis && 'em') ||
-  (props.subscript && 'sub') ||
-  (props.superscript && 'sup') ||
-  'span';
-
-const Text: React.FunctionComponent<Props> = (props: Props) => {
+const Text = React.forwardRef<HTMLElement, Attributes<HTMLElement, TextProps>>((props, ref) => {
   const {
-    Component,
     align,
     breakOn,
     className,
@@ -76,6 +72,7 @@ const Text: React.FunctionComponent<Props> = (props: Props) => {
     strong,
     subscript,
     superscript,
+    tag,
     titlecase,
     uppercase,
     weak,
@@ -98,15 +95,16 @@ const Text: React.FunctionComponent<Props> = (props: Props) => {
     [`Text--size-${size}`]: size,
   });
 
-  const FinalComponent = Component || (inline
-    ? InlineComponentMap(props)
-    : (size && ComponentMap[size]));
+  const finalTag = tag || (inline
+    ? TagInlineMap(props)
+    : (size && TagBlockMap[size])) || 'div';
 
   return (
     <Base { ...rest }
         className={ classes }
-        Component={ FinalComponent } />
+        ref={ ref }
+        tag={ finalTag } />
   );
-};
+});
 
 export default Text;

@@ -1,13 +1,16 @@
 
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-interface Props extends BaseProps {}
+export interface TableHeaderProps extends BaseProps {}
 
-const TableHeader: React.FunctionComponent<Props> = (props: Props) => {
+const TableHeader = React.forwardRef<HTMLTableSectionElement, Attributes<HTMLTableSectionElement, TableHeaderProps>>((props, ref) => {
   return (
-    <Base { ...props } Component="thead" className="Table__header" />
+    <Base { ...props }
+        className="Table__header"
+        ref={ ref }
+        tag="thead" />
   );
-};
+});
 
 export default TableHeader;

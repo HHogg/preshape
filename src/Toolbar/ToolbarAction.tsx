@@ -1,13 +1,13 @@
-
 import * as React from 'react';
-import Button, { Props as ButtonProps } from '../Button/Button';
+import { Attributes } from '../Base/Base';
+import Button, { ButtonProps } from '../Button/Button';
 
-interface Props extends ButtonProps {}
+export interface ToolbarActionProps extends ButtonProps {}
 
-const ToolbarAction: React.FunctionComponent<Props> = (props: Props) => {
+const ToolbarAction = React.forwardRef<HTMLButtonElement, Attributes<HTMLButtonElement, ToolbarActionProps>>((props, ref) => {
   return (
-    <Button { ...props } fill />
+    <Button { ...props } fill ref={ ref } />
   );
-};
+});
 
 export default ToolbarAction;

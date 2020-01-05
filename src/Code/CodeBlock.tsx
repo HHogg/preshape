@@ -1,14 +1,15 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import Prism from 'prismjs';
+import { Attributes } from '../Base/Base';
 import Code from '../Code/Code';
-import Text, { Props as TextProps } from '../Text/Text';
+import Text, { TextProps } from '../Text/Text';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-jsx';
 import './CodeBlock.css';
 
-interface Props extends TextProps {
+export interface CodeBlockProps extends TextProps {
   children?: string;
   language?:
     string |
@@ -21,7 +22,7 @@ interface Props extends TextProps {
   wrap?: boolean;
 }
 
-const CodeBlock: React.FunctionComponent<Props> = (props: Props) => {
+const CodeBlock = React.forwardRef<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>>((props, ref) => {
   const { children, language, wrap, ...rest } = props;
   const classes = classnames('CodeBlock', {
     'CodeBlock--wrap': wrap,
@@ -36,15 +37,16 @@ const CodeBlock: React.FunctionComponent<Props> = (props: Props) => {
 
   return (
     <Text { ...rest }
-        Component="pre"
-        className={ classes }>
+        className={ classes }
+        ref={ ref }
+        tag="pre">
       { language ? (
-        <Code dangerouslySetInnerHTML={ { __html: content } } />
+        <Code dangerouslySetInnerHTML={ { __html: content as string } } />
       ) : (
         <Code>{ content }</Code>
       ) }
     </Text>
   );
-};
+});
 
 export default CodeBlock;

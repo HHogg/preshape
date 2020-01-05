@@ -1,25 +1,25 @@
 import * as React from 'react';
-import { TypeBaseSize } from '../Base/Base';
+import { Attributes, TypeSize } from '../Base/Base';
 import InputLabel from '../InputLabel/InputLabel';
-import Text, { Props as TextProps } from '../Text/Text';
+import Text, { TextProps } from '../Text/Text';
 import './TextArea.css';
 
-interface Props extends TextProps {
+export interface TextAreaProps extends TextProps {
     /** A styled disabled state that disables all interactions */
     disabled?: boolean;
     /** A label that gives describes what the input is for */
     label?: string;
     /** @Ignore */
-    margin?: TypeBaseSize;
+    margin?: TypeSize;
     /** @Ignore */
-    padding?: TypeBaseSize;
+    padding?: TypeSize;
     /** @Ignore */
-    paddingHorizontal?: TypeBaseSize;
+    paddingHorizontal?: TypeSize;
     /** @Ignore */
-    paddingVertical?: TypeBaseSize;
+    paddingVertical?: TypeSize;
 }
 
-const TextArea: React.FunctionComponent<Props> = (props: Props) => {
+const TextArea = React.forwardRef<HTMLTextAreaElement, Attributes<HTMLTextAreaElement, TextAreaProps>>((props, ref) => {
   const {
     disabled,
     label,
@@ -39,14 +39,15 @@ const TextArea: React.FunctionComponent<Props> = (props: Props) => {
         paddingVertical={ padding || paddingVertical }>
       <Text { ...rest }
           className="TextArea"
-          Component="textarea"
           disabled={ disabled }
           paddingHorizontal={ padding || paddingHorizontal }
           paddingVertical={ padding || paddingVertical }
+          ref={ ref }
           size="x1"
-          strong />
+          strong
+          tag="textarea" />
     </InputLabel>
   );
-};
+});
 
 export default TextArea;

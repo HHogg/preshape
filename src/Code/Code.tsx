@@ -1,12 +1,16 @@
 import * as React from 'react';
-import Text, { Props as TextProps } from '../Text/Text';
+import { Attributes } from '../Base/Base';
+import Text, { TextProps } from '../Text/Text';
 
-interface Props extends TextProps {}
+export interface CodeProps extends TextProps {}
 
-const Code: React.FunctionComponent<Props> = (props: Props) => {
+const Code = React.forwardRef<HTMLElement, Attributes<HTMLElement, CodeProps>>((props, ref) => {
   return (
-    <Text { ...props } Component="code" monospace />
+    <Text { ...props }
+        monospace
+        ref={ ref }
+        tag="code" />
   );
-};
+});
 
 export default Code;

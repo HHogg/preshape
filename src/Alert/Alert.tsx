@@ -1,28 +1,33 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Alert.css';
 
-export interface Props extends BaseProps {
+/**
+ * Alert component for bringing attention to a message.
+ */
+export interface AlertProps extends BaseProps {
   /** Colour that is applied to the Alert to indicate the type of action */
   color: 'accent' | 'negative' | 'positive';
+  /** Appies a filled in style to the alert. */
+  fill?: boolean;
   /** Whether the alert is flashing, a great way to give it extra attention. */
   flash?: boolean;
-  /** Style of how the alert is presented */
-  type: 'outline' | 'solid';
 }
 
-const Alert: React.FunctionComponent<Props> = (props: Props) => {
-  const { color, flash, type, ...rest } = props;
-  const classes = classnames('Alert', `Alert--${color}`, `Alert--${type}`, {
+const Alert = React.forwardRef<HTMLDivElement, Attributes<HTMLDivElement, AlertProps>>((props, ref) => {
+  const { color, fill, flash, ...rest } = props;
+  const classes = classnames('Alert', `Alert--${color}`, {
+    'Alert--fill': fill,
     'Alert--flash': flash,
   });
 
   return (
     <Base { ...rest }
-        borderSize={ type === 'outline' ? 'x2' : undefined }
-        className={ classes } />
+        borderSize="x2"
+        className={ classes }
+        ref={ ref } />
   );
-};
+});
 
 export default Alert;

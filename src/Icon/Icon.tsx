@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Icon.css';
 
 export type TypeIcon =
@@ -209,7 +209,7 @@ const IconPathMap = {
   ],
 };
 
-export interface Props extends BaseProps {
+export interface IconProps extends BaseProps {
   /** Name of the icon to be displayed */
   name: TypeIcon;
   /** Size to be used for with and height of the icon */
@@ -218,7 +218,7 @@ export interface Props extends BaseProps {
   spin?: 'slow' | 'base' | 'fast';
 }
 
-const Icon: React.FunctionComponent<Props> = (props: Props) => {
+const Icon = React.forwardRef<SVGSVGElement, Attributes<SVGSVGElement, IconProps>>((props, ref) => {
   const { name, size, spin, ...rest } = props;
   const classes = classnames('Icon', {
     [`Icon--spin-${spin}`]: spin,
@@ -231,13 +231,14 @@ const Icon: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Base { ...rest }
         className={ classes }
-        Component="svg"
         height={ size }
+        ref={ ref }
+        tag="svg"
         viewBox="0 0 1024 1024"
         width={ size }>
       { IconPathMap[name].map((d, i) => <path d={ d } key={ i } />) }
     </Base>
   );
-};
+});
 
 export default Icon;

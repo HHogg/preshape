@@ -7,8 +7,8 @@ export * from './hooks';
 export * from './variables';
 
 export {
-  TypeBaseSize,
   TypeColor,
+  TypeSize,
   TypeTheme,
 } from './Base/Base';
 
@@ -16,49 +16,53 @@ export {
   TypeIcon,
 } from './Icon/Icon';
 
-export { default as Alert } from './Alert/Alert';
-export { default as Appear } from './Appear/Appear';
-export { default as Base, Props as BaseProps } from './Base/Base';
-export { default as BlockQuote } from './BlockQuote/BlockQuote';
-export { default as BulletPoint } from './BulletPoints/BulletPoint';
-export { default as BulletPoints } from './BulletPoints/BulletPoints';
-export { default as Button } from './Button/Button';
-export { default as Buttons } from './Button/Buttons';
-export { default as CheckBox } from './CheckBox/CheckBox';
-export { default as Code } from './Code/Code';
-export { default as CodeBlock } from './Code/CodeBlock';
-export { default as Flex, Props as FlexProps } from './Flex/Flex';
+export {
+  TypeTextSize,
+} from './Text/Text';
+
+
+export { default as Alert, AlertProps } from './Alert/Alert';
+export { default as Appear, AppearProps } from './Appear/Appear';
+export { default as Base, BaseProps } from './Base/Base';
+export { default as BlockQuote, BlockQuoteProps } from './BlockQuote/BlockQuote';
+export { default as BulletPoint, BulletPointProps } from './BulletPoints/BulletPoint';
+export { default as BulletPoints, BulletPointsProps } from './BulletPoints/BulletPoints';
+export { default as Button, ButtonProps } from './Button/Button';
+export { default as Buttons, ButtonsProps } from './Button/Buttons';
+export { default as CheckBox, CheckBoxProps } from './CheckBox/CheckBox';
+export { default as Code, CodeProps } from './Code/Code';
+export { default as CodeBlock, CodeBlockProps } from './Code/CodeBlock';
+export { default as Flex, FlexProps } from './Flex/Flex';
 export { default as Form } from './Form/Form';
-export { default as Grid, Props as GridProps } from './Grid/Grid';
-export { default as GridItem } from './Grid/GridItem';
-export { default as Icon, Props as IconProps } from './Icon/Icon';
-export { default as Image } from './Image/Image';
-export { default as Input } from './Input/Input';
-export { default as Label } from './Label/Label';
-export { default as Labels } from './Label/Labels';
-export { default as Link, Props as LinkProps } from './Link/Link';
-export { default as List } from './List/List';
-export { default as ListItem } from './List/ListItem';
-export { default as Menu } from './Menu/Menu';
-export { default as MenuItem } from './Menu/MenuItem';
-export { default as Placement } from './Placement/Placement';
+export { default as Grid, GridProps } from './Grid/Grid';
+export { default as GridItem, GridItemProps } from './Grid/GridItem';
+export { default as Icon, IconProps } from './Icon/Icon';
+export { default as Image, ImageProps } from './Image/Image';
+export { default as Input, InputProps } from './Input/Input';
+export { default as Label, LabelProps } from './Label/Label';
+export { default as Labels, LabelsProps } from './Label/Labels';
+export { default as Link, LinkProps } from './Link/Link';
+export { default as List, ListProps } from './List/List';
+export { default as ListItem, ListItemProps } from './List/ListItem';
+export { default as Placement, PlacementProps } from './Placement/Placement';
+export { default as PlacementArrow, PlacementArrowProps } from './Placement/PlacementArrow';
 export { default as PlacementManager } from './Placement/PlacementManager';
 export { default as PlacementReference } from './Placement/PlacementReference';
 export { default as PlacementReferenceElement } from './Placement/PlacementReferenceElement';
-export { default as RadioButton } from './RadioButton/RadioButton';
-export { default as Separator } from './Separator/Separator';
-export { default as Tab } from './Tab/Tab';
-export { default as Tabs } from './Tab/Tabs';
-export { default as Table, Props as TableProps } from './Table/Table';
-export { default as TableBody } from './Table/TableBody';
-export { default as TableCell } from './Table/TableCell';
-export { default as TableHeader } from './Table/TableHeader';
-export { default as TableHeaderCell } from './Table/TableHeaderCell';
-export { default as TableRow } from './Table/TableRow';
-export { default as TabContent } from './Tab/TabContent';
-export { default as Text, Props as TextProps } from './Text/Text';
-export { default as TextArea } from './TextArea/TextArea';
-export { default as ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';
-export { default as Toolbar } from './Toolbar/Toolbar';
-export { default as ToolbarAction } from './Toolbar/ToolbarAction';
-export { default as ToolbarActionGroup } from './Toolbar/ToolbarActionGroup';
+export { default as RadioButton, RadioButtonProps } from './RadioButton/RadioButton';
+export { default as Separator, SeparatorProps } from './Separator/Separator';
+export { default as Tab, TabProps } from './Tab/Tab';
+export { default as TabContent, TabContentProps } from './Tab/TabContent';
+export { default as Tabs, TabsProps } from './Tab/Tabs';
+export { default as Table, TableProps } from './Table/Table';
+export { default as TableBody, TableBodyProps } from './Table/TableBody';
+export { default as TableCell, TableCellProps } from './Table/TableCell';
+export { default as TableHeader, TableHeaderProps } from './Table/TableHeader';
+export { default as TableHeaderCell, TableHeaderCellProps } from './Table/TableHeaderCell';
+export { default as TableRow, TableRowProps } from './Table/TableRow';
+export { default as Text, TextProps } from './Text/Text';
+export { default as TextArea, TextAreaProps } from './TextArea/TextArea';
+export { default as ThemeSwitcher, ThemeSwitcherProps } from './ThemeSwitcher/ThemeSwitcher';
+export { default as Toolbar, ToolbarProps } from './Toolbar/Toolbar';
+export { default as ToolbarAction, ToolbarActionProps } from './Toolbar/ToolbarAction';
+export { default as ToolbarActionGroup, ToolbarActionGroupProps } from './Toolbar/ToolbarActionGroup';

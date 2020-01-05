@@ -1,12 +1,14 @@
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-interface Props extends BaseProps {}
+export interface LabelsProps extends BaseProps {}
 
-const Labels: React.FunctionComponent<Props> = (props: Props) => {
+const Labels = React.forwardRef<HTMLElement, Attributes<HTMLElement, LabelsProps>>((props, ref) => {
   return (
-    <Base { ...props } className="Labels" />
+    <Base { ...props }
+        className="Labels"
+        ref={ ref } />
   );
-};
+});
 
 export default Labels;

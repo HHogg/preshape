@@ -1,21 +1,24 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './BulletPoints.css';
 
-interface Props extends BaseProps {
+export interface BulletPointsProps extends BaseProps {
   numbered?: boolean;
 }
 
-const BulletPoints: React.FunctionComponent<Props> = (props: Props) => {
+const BulletPoints = React.forwardRef<HTMLUListElement, Attributes<HTMLUListElement, BulletPointsProps>>((props, ref) => {
   const { numbered, ...rest } = props;
   const classes = classnames('BulletPoints', {
     'BulletPoints--numbered': numbered,
   });
 
   return (
-    <Base Component="ul" { ...rest } className={ classes } />
+    <Base { ...rest }
+        className={ classes }
+        ref={ ref }
+        tag="ul" />
   );
-};
+});
 
 export default BulletPoints;

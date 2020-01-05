@@ -1,16 +1,16 @@
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { BaseProps } from '../Base/Base';
 import { PlacementArrowPropsContext } from './Placement';
 
-interface Props extends BaseProps {}
+export interface PlacementArrowProps extends BaseProps {}
 
-const PlacementArrow: React.FunctionComponent<Props> = (props: Props) => {
+const PlacementArrow: React.FC<PlacementArrowProps> = (props) => {
   return (
     <PlacementArrowPropsContext.Consumer>
       { ({ ref, style }) => (
         <Base { ...props }
             className="Placement__arrow"
-            innerRef={ ref }
+            ref={ ref }
             style={ style } />
       ) }
     </PlacementArrowPropsContext.Consumer>

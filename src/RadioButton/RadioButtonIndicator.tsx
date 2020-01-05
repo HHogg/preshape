@@ -1,16 +1,15 @@
 import * as React from 'react';
 
-export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
-
-const RadioButtonIndicator: React.FunctionComponent<Props> = (props: Props) => {
+const RadioButtonIndicator = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>((props, ref) => {
   return (
     <div className="RadioButton">
       <input { ...props }
           className="RadioButton__input"
+          ref={ ref }
           type="radio" />
       <div className="RadioButton__indicator" />
     </div>
   );
-};
+});
 
 export default RadioButtonIndicator;

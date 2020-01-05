@@ -1,19 +1,11 @@
 
 import * as React from 'react';
-import Base, { Props as BaseProps } from '../Base/Base';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Separator.css';
 
-interface Props extends BaseProps {
-  /**
-   * Border colour to be applied, shades are taken from the current
-   * theme. A value of true will reapply the current colour value.
-   */
-  borderColor?: 'text-shade-1' | 'text-shade-2' | 'text-shade-3';
-  /** Thickness of the border to be applied */
-  borderSize?: 'x1' | 'x2';
-}
+export interface SeparatorProps extends BaseProps {}
 
-const Separator: React.FunctionComponent<Props> = (props: Props) => {
+const Separator = React.forwardRef<HTMLElement, Attributes<HTMLElement, SeparatorProps>>((props, ref) => {
   const {
     borderColor = 'text-shade-1',
     borderSize = 'x1',
@@ -21,11 +13,13 @@ const Separator: React.FunctionComponent<Props> = (props: Props) => {
   } = props;
 
   return (
-    <Base { ...rest }
+    <Base
+        { ...rest }
         borderColor={ borderColor }
         borderSize={ borderSize }
-        className="Separator" />
+        className="Separator"
+        ref={ ref } />
   );
-};
+});
 
 export default Separator;

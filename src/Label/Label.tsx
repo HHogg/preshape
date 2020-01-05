@@ -1,18 +1,27 @@
 import * as React from 'react';
-import Base from '../Base/Base';
-import Text, { Props as TextProps } from '../Text/Text';
+import { Attributes } from '../Base/Base';
+import Text, { TextProps } from '../Text/Text';
 import './Label.css';
 
-interface Props extends TextProps {}
+export interface LabelProps extends TextProps {}
 
-const Label: React.FunctionComponent<Props> = (props: Props) => {
+const Label = React.forwardRef<HTMLDivElement, Attributes<HTMLDivElement, LabelProps>>((props, ref) => {
+  const {
+    backgroundColor = 'text-shade-1',
+    textColor = 'background-shade-1',
+    ...rest
+  } = props;
+
   return (
-    <Base className="Label">
-      <Text { ...props }
-          size="x1"
-          strong />
-    </Base>
+    <Text { ...rest }
+        backgroundColor={ backgroundColor }
+        className="Label"
+        ref={ ref }
+        size="x1"
+        strong
+        tag="div"
+        textColor={ textColor } />
   );
-};
+});
 
 export default Label;

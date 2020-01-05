@@ -1,17 +1,24 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import { TypeBaseSize } from '../Base/Base';
-import Flex, { Props as FlexProps } from '../Flex/Flex';
+import { Attributes, TypeSize } from '../Base/Base';
+import Flex, { FlexProps } from '../Flex/Flex';
 
-export interface Props extends FlexProps {
-  /** Spacing applied between child Button items, values are global spacing variables. */
-  gap?: TypeBaseSize;
+/**
+ * Button container component that joins or separates child components.
+ */
+export interface ButtonsProps extends FlexProps {
+  /**
+   * Spacing applied between child Button items, values are global spacing variables.
+   *
+   * @default "x1"
+   */
+  gap?: TypeSize;
   /** Configures the children Buttons to be joined together. */
   joined?: boolean;
 }
 
-const Buttons: React.FunctionComponent<Props> = (props: Props) => {
-  const { gap, joined, ...rest } = props;
+const Buttons = React.forwardRef<HTMLElement, Attributes<HTMLElement, ButtonsProps>>((props, ref) => {
+  const { gap = 'x1', joined, ...rest } = props;
   const classes = classnames('Buttons', {
     'Buttons--joined': joined,
   });
@@ -20,8 +27,9 @@ const Buttons: React.FunctionComponent<Props> = (props: Props) => {
     <Flex { ...rest }
         className={ classes }
         direction="horizontal"
-        gap={ joined ? undefined : (gap || 'x1') } />
+        gap={ joined ? undefined : gap }
+        ref={ ref } />
   );
-};
+});
 
 export default Buttons;

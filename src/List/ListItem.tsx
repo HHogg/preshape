@@ -1,23 +1,30 @@
 import * as React from 'react';
-import Flex, { Props as FlexProps } from '../Flex/Flex';
+import { Attributes } from '../Base/Base';
+import Flex, { FlexProps } from '../Flex/Flex';
 
-interface Props extends FlexProps {
+export interface ListItemProps extends FlexProps {
+  /**
+   * Seperating string.
+   *
+   * @default "/"
+   */
   separator?: string;
 }
 
-const ListItem: React.FunctionComponent<Props> = (props: Props) => {
+const ListItem = React.forwardRef<HTMLLIElement, Attributes<HTMLLIElement, ListItemProps>>((props, ref) => {
   const { children, separator = '/', ...rest } = props;
 
   return (
     <Flex { ...rest }
         alignChildrenVertical="middle"
         className="ListItem"
-        Component="li"
         data-separator={ separator }
-        direction="horizontal">
+        direction="horizontal"
+        ref={ ref }
+        tag="li">
       <Flex>{ children }</Flex>
     </Flex>
   );
-};
+});
 
 export default ListItem;

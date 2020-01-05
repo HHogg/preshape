@@ -1,21 +1,22 @@
-
 import * as React from 'react';
-import Text, { Props as TextProps } from '../Text/Text';
+import { Attributes } from '../Base/Base';
+import Text, { TextProps } from '../Text/Text';
 
-interface Props extends TextProps {
+export interface TableCellProps extends TextProps {
   /** Applies styling indication that this column is currently being sorted */
   sorted?: boolean;
 }
 
-const TableCell: React.FunctionComponent<Props> = (props: Props) => {
+const TableCell = React.forwardRef<HTMLTableDataCellElement, Attributes<HTMLTableDataCellElement, TableCellProps>>((props, ref) => {
   const { sorted, ...rest } = props;
 
   return (
     <Text { ...rest }
-        Component="td"
         className="Table__cell"
-        strong={ sorted } />
+        ref={ ref }
+        strong={ sorted }
+        tag="td" />
   );
-};
+});
 
 export default TableCell;

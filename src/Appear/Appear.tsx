@@ -2,7 +2,8 @@ import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import classnames from 'classnames';
 import { transitionTimeFast, transitionTimeBase, transitionTimeSlow } from '../variables';
-import Base, { Props as BaseProps } from '../Base/Base';
+import { Attributes } from '../Base/Base';
+import Flex, { FlexProps } from '../Flex/Flex';
 import './Appear.css';
 
 const isClient = typeof window !== 'undefined';
@@ -13,8 +14,12 @@ const times = {
   slow: transitionTimeSlow,
 };
 
-export interface Props extends BaseProps {
-  /** Type of animation that is applied when appearing and disappearing. */
+export interface AppearProps extends FlexProps {
+  /**
+   * Type of animation that is applied when appearing and disappearing.
+   *
+   * @default "FadeSlideUp"
+   */
   animation?:
     'Fade' |
     'FadeSlideUp' |
@@ -26,19 +31,29 @@ export interface Props extends BaseProps {
     'ScaleYUp';
   /**
    * Time (in milliseconds) that the appearance/disappearance animation is delayed for.
+   *
+   * @default 0
    */
   delay?: number;
   /** Called back for after appearance */
   onEntered?: () => void;
   /** Called back for after disappearance */
-  onExited: () => void;
-  /** One of the global timing speeds, for how long the animations takes to complete */
-  time: 'slow' | 'base' | 'fast';
-  /** Trigger for appearance/disappearance animation. */
+  onExited?: () => void;
+  /**
+   * One of the global timing speeds, for how long the animations takes to complete
+   *
+   * @default "fast"
+   * */
+  time?: 'slow' | 'base' | 'fast';
+  /**
+   * Trigger for appearance/disappearance animation.
+   *
+   * @default true
+   * */
   visible?: boolean;
 }
 
-const Appear: React.FunctionComponent<Props> = (props: Props) => {
+const Appear = React.forwardRef<HTMLElement, Attributes<HTMLElement, AppearProps>>((props, ref) => {
   const {
     animation = 'FadeSlideUp',
     className,
@@ -79,9 +94,9 @@ const Appear: React.FunctionComponent<Props> = (props: Props) => {
         onEntered={ onEntered }
         onExited={ onExited }
         timeout={ times[time] }>
-      <Base { ...rest } className={ classes } style={ style } />
+      <Flex { ...rest } className={ classes } ref={ ref } style={ style } />
     </CSSTransition>
   );
-};
+});
 
 export default Appear;

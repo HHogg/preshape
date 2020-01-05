@@ -1,13 +1,14 @@
 import * as React from 'react';
-import Text, { Props as TextProps } from '../Text/Text';
+import { Attributes } from '../Base/Base';
+import Text, { TextProps } from '../Text/Text';
 import './Table.css';
 
-export interface Props extends TextProps {}
+export interface TableProps extends TextProps {}
 
-const Table: React.FunctionComponent<Props> = (props: Props) => {
+const Table = React.forwardRef<HTMLTableElement, Attributes<HTMLTableElement, TableProps>>((props, ref) => {
   return (
-    <Text { ...props } className="Table" Component="table" />
+    <Text { ...props } className="Table" ref={ ref } tag="table" />
   );
-};
+});
 
 export default Table;

@@ -1,25 +1,25 @@
 import * as React from 'react';
-import { TypeBaseSize } from '../Base/Base';
-import CheckBoxIndicator, { Props as CheckboxIndicatorProps } from './CheckBoxIndicator';
+import { Attributes, TypeSize } from '../Base/Base';
+import CheckBoxIndicator from './CheckBoxIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';
 
-interface Props extends CheckboxIndicatorProps {
+export interface CheckBoxProps {
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
   /** A label that gives describes what the input is for */
   label: string;
   /** @Ignore */
-  margin?: TypeBaseSize;
+  margin?: TypeSize;
   /** @Ignore */
-  padding?: TypeBaseSize;
+  padding?: TypeSize;
   /** @Ignore */
-  paddingHorizontal?: TypeBaseSize;
+  paddingHorizontal?: TypeSize;
   /** @Ignore */
-  paddingVertical?: TypeBaseSize;
+  paddingVertical?: TypeSize;
 }
 
-const CheckBox: React.FunctionComponent<Props> = (props: Props) => {
+const CheckBox = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement, CheckBoxProps>>((props, ref) => {
   const {
     disabled,
     label,
@@ -38,9 +38,11 @@ const CheckBox: React.FunctionComponent<Props> = (props: Props) => {
         padding={ padding }
         paddingHorizontal={ paddingHorizontal }
         paddingVertical={ paddingVertical }>
-      <CheckBoxIndicator { ...rest } disabled={ disabled } />
+      <CheckBoxIndicator { ...rest }
+          disabled={ disabled }
+          ref={ ref } />
     </SelectInputLabel>
   );
-};
+});
 
 export default CheckBox;

@@ -1,12 +1,15 @@
 import * as React from 'react';
-import Flex, { Props as FlexProps } from '../Flex/Flex';
+import { Attributes } from '../Base/Base';
+import Flex, { FlexProps } from '../Flex/Flex';
 
-interface Props extends FlexProps {}
+export interface TabContentProps extends FlexProps {}
 
-const TabContent: React.FunctionComponent<Props> = (props: Props) => {
+const TabContent = React.forwardRef<HTMLElement, Attributes<HTMLElement, TabContentProps>>((props, ref) => {
   return (
-    <Flex { ...props } className="TabContent" />
+    <Flex { ...props }
+        className="TabContent"
+        ref={ ref } />
   );
-};
+});
 
 export default TabContent;

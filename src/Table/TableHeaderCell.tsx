@@ -1,24 +1,25 @@
-
 import * as React from 'react';
+import { Attributes } from '../Base/Base';
 import Link from '../Link/Link';
-import Text, { Props as TextProps } from '../Text/Text';
+import Text, { TextProps } from '../Text/Text';
 
-interface Props extends TextProps {
+export interface TableHeaderCellProps extends TextProps {
   /** Applies styling indication that this column is sortable */
   sortable?: boolean;
   /** Applies styling indication that this column is currently being sorted */
   sorted?: boolean;
 }
 
-const TableHeaderCell: React.FunctionComponent<Props> = (props: Props) => {
+const TableHeaderCell = React.forwardRef<HTMLTableHeaderCellElement, Attributes<HTMLTableHeaderCellElement, TableHeaderCellProps>>((props, ref) => {
   const { children, sortable, sorted, ...rest } = props;
 
   return (
     <Text { ...rest }
         className="Table__header-cell"
-        Component="th"
+        ref={ ref }
         size="x1"
         strong
+        tag="th"
         uppercase>
       { sortable ? (
         <Link active={ sorted }>
@@ -29,6 +30,6 @@ const TableHeaderCell: React.FunctionComponent<Props> = (props: Props) => {
       ) }
     </Text>
   );
-};
+});
 
 export default TableHeaderCell;

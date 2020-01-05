@@ -1,20 +1,20 @@
 import * as React from 'react';
-import { TypeTheme } from '../Base/Base';
+import { Attributes, TypeTheme } from '../Base/Base';
 import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
-import List, { Props as ListProps } from '../List/List';
+import List, { ListProps } from '../List/List';
 import ListItem from '../List/ListItem';
 
-interface Props extends ListProps {
+export interface ThemeSwitcherProps extends ListProps {
   onChange?: (theme: TypeTheme) => void;
   theme: TypeTheme;
 }
 
-const ThemeControls: React.FunctionComponent<Props> = (props: Props) => {
+const ThemeControls = React.forwardRef<HTMLUListElement, Attributes<HTMLUListElement, ThemeSwitcherProps>>((props, ref) => {
   const { onChange, theme, ...rest } = props;
 
   return (
-    <List { ...rest }>
+    <List { ...rest } ref={ ref }>
       <ListItem>
         <Link
             active={ theme === 'day' }
@@ -32,6 +32,6 @@ const ThemeControls: React.FunctionComponent<Props> = (props: Props) => {
       </ListItem>
     </List>
   );
-};
+});
 
 export default ThemeControls;
