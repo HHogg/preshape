@@ -40,6 +40,11 @@
 .Base--padding-vertical-x12 { padding-top: var(--size--x12); padding-bottom: var(--size--x12); }
 .Base--padding-vertical-x16 { padding-top: var(--size--x16); padding-bottom: var(--size--x16); }
 
+.Base--border-radius-x1 { border-radius: var(--size--x1); }
+.Base--border-radius-x2 { border-radius: var(--size--x2); }
+.Base--border-radius-x3 { border-radius: var(--size--x3); }
+.Base--border-radius-full { border-radius: 50%; }
+
 .Base--border-size-x1 { border-width: var(--border-size--x1); }
 .Base--border-size-x2 { border-width: var(--border-size--x2); }
 

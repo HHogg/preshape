@@ -71,14 +71,16 @@ export interface BaseProps {
     'bottom-right';
   /**
    * Background colour to be applied, shades are taken from the current
-   * theme. A value of true will reapply the current theme background.
+   * theme.
    */
   backgroundColor?: TypeColor;
   /**
    * Border colour to be applied, shades are taken from the current
-   * theme. A value of true will reapply the current theme value.
+   * theme.
    */
   borderColor?: TypeColor;
+  /** Adds styling of a border radius to one of the size multiples */
+  borderRadius?: 'full' | 'x1' | 'x2' | 'x3';
   /** Thickness of the border to be applied */
   borderSize?: 'x1' | 'x2';
   /** Adds styling to indicate that the element is clickable */
@@ -122,8 +124,7 @@ export interface BaseProps {
    */
   tag?: TypeAllElementTags;
   /**
-   * Text colour to be applied. A value of true will reapply the current
-   * themes text colour.
+   * Text colour to be applied.
    */
   textColor?: TypeColor;
   /**
@@ -142,6 +143,7 @@ const Base = React.forwardRef<Element, Attributes<Element, BaseProps>>((props, r
     absolute,
     backgroundColor,
     borderColor,
+    borderRadius,
     borderSize,
     children,
     className,
@@ -175,6 +177,7 @@ const Base = React.forwardRef<Element, Attributes<Element, BaseProps>>((props, r
     [`Base--absolute-${absolute}`]: absolute,
     [`Base--background-color-${backgroundColor}`]: backgroundColor,
     [`Base--border-color-${borderColor}`]: borderColor,
+    [`Base--border-radius-${borderRadius}`]: borderRadius,
     [`Base--border-size-${borderSize}`]: borderSize,
     [`Base--display-${display}`]: display,
     [`Base--fixed-${fixed}`]: fixed,
