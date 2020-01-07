@@ -5,15 +5,10 @@ import * as React from 'react';
 import classnames from 'classnames';
 import './Base.css';
 
-export type Attributes<E = Element, P = {}> = P & Omit<
-E extends SVGElementTagNameMap[keyof SVGElementTagNameMap]
-  ? React.SVGAttributes<E>
-  : E extends HTMLElementTagNameMap[keyof HTMLElementTagNameMap]
-    ? React.AllHTMLAttributes<E>
-    : HTMLAttributes & SVGAttributes, keyof P>;
-
-export type HTMLAttributes = React.AllHTMLAttributes<any>;
-export type SVGAttributes = React.SVGAttributes<any>;
+export type Attributes<E, P = {}> = P & Omit<
+  E extends SVGElement
+    ? React.SVGAttributes<E>
+    : React.AllHTMLAttributes<E>, keyof P>;
 
 export type TypeColor =
   'accent-shade-1' |
@@ -100,7 +95,7 @@ export interface BaseProps {
     'bottom-left' |
     'bottom-right';
   /** Fixed height applied through inline styling */
-  height?: React.CSSProperties;
+  height?: number | string;
   /** Margins applied for the global spacing variables */
   margin?: TypeSize;
   /** Max width applied through inline styling */
@@ -109,6 +104,8 @@ export interface BaseProps {
   minHeight?: number | string;
   /** Min width applied through inline style */
   minWidth?: number | string;
+  /** Overflow */
+  overflow?: 'hidden';
   /** Padding applied for the global spacing variables */
   padding?: TypeSize;
   /** Horizontal padding applied for the global spacing variables */
@@ -138,7 +135,12 @@ export interface BaseProps {
   zIndex?: number;
 }
 
-const Base = React.forwardRef<Element, Attributes<Element, BaseProps>>((props, ref) => {
+type ReactElemenetProps = Omit<
+  React.AllHTMLAttributes<Element> &
+  React.SVGAttributes<Element>
+, 'crossOrigin'>;
+
+const Base = React.forwardRef<Element, BaseProps & ReactElemenetProps>((props, ref) => {
   const {
     absolute,
     backgroundColor,
@@ -155,6 +157,7 @@ const Base = React.forwardRef<Element, Attributes<Element, BaseProps>>((props, r
     maxWidth,
     minWidth,
     minHeight,
+    overflow,
     padding,
     paddingHorizontal = padding,
     paddingVertical = padding,
@@ -182,6 +185,7 @@ const Base = React.forwardRef<Element, Attributes<Element, BaseProps>>((props, r
     [`Base--display-${display}`]: display,
     [`Base--fixed-${fixed}`]: fixed,
     [`Base--margin-${margin}`]: margin,
+    [`Base--overflow-${overflow}`]: overflow,
     [`Base--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
     [`Base--padding-vertical-${paddingVertical}`]: paddingVertical,
     [`Base--text-color-${textColor}`]: textColor,

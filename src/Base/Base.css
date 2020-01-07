@@ -10,6 +10,8 @@
 .Base--display-block { display: block; }
 .Base--display-inline-block { display: inline-block; }
 
+.Base--overflow-hidden { overflow: hidden; }
+
 .Base--margin-x1 { margin: var(--size--x1) 0; }
 .Base--margin-x2 { margin: var(--size--x2) 0; }
 .Base--margin-x3 { margin: var(--size--x3) 0; }
@@ -191,5 +193,3 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.Base--overflow-hidden { overflow: hidden; }
