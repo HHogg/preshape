@@ -20,7 +20,6 @@ export {
   TypeTextSize,
 } from './Text/Text';
 
-
 export { default as Alert, AlertProps } from './Alert/Alert';
 export { default as Appear, AppearProps } from './Appear/Appear';
 export { default as Base, BaseProps } from './Base/Base';
@@ -46,8 +45,9 @@ export { default as List, ListProps } from './List/List';
 export { default as ListItem, ListItemProps } from './List/ListItem';
 export { default as Placement, PlacementProps } from './Placement/Placement';
 export { default as PlacementArrow, PlacementArrowProps } from './Placement/PlacementArrow';
-export { default as PlacementManager } from './Placement/PlacementManager';
-export { default as PlacementReference } from './Placement/PlacementReference';
+export { default as PlacementContent, PlacementContentProps } from './Placement/PlacementContent';
+export { default as PlacementManager, PlacementManagerProps } from './Placement/PlacementManager';
+export { default as PlacementReference, PlacementReferenceProps } from './Placement/PlacementReference';
 export { default as PlacementReferenceElement } from './Placement/PlacementReferenceElement';
 export { default as RadioButton, RadioButtonProps } from './RadioButton/RadioButton';
 export { default as Separator, SeparatorProps } from './Separator/Separator';
@@ -63,6 +63,3 @@ export { default as TableRow, TableRowProps } from './Table/TableRow';
 export { default as Text, TextProps } from './Text/Text';
 export { default as TextArea, TextAreaProps } from './TextArea/TextArea';
 export { default as ThemeSwitcher, ThemeSwitcherProps } from './ThemeSwitcher/ThemeSwitcher';
-export { default as Toolbar, ToolbarProps } from './Toolbar/Toolbar';
-export { default as ToolbarAction, ToolbarActionProps } from './Toolbar/ToolbarAction';
-export { default as ToolbarActionGroup, ToolbarActionGroupProps } from './Toolbar/ToolbarActionGroup';

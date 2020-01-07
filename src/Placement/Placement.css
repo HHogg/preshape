@@ -1,8 +1,10 @@
 :root {
-  --Placement-arrow-size: var(--size--x4);
+  --Placement-arrow-size: var(--size--x3);
 }
 
-.Placement {
+.Placement,
+.Placement:first-child,
+.Placement:last-child {
   position: absolute;
   margin: var(--Placement-arrow-size);
 }

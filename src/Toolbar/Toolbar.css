@@ -1,9 +1,0 @@
-:root {
-  --Toolbar-tip-size: var(--size--x4);
-}
-
-.Toolbar__content {
-  position: relative;
-  border-radius: var(--border-size--x2);
-  overflow: hidden;
-}
