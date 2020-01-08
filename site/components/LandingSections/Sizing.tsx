@@ -26,8 +26,8 @@ export default (props: Props) => {
           gap="x4"
           margin="x4">
         <Flex
+            basis={ match(widthMedium) ? 'none' : undefined }
             grow
-            initial={ match(widthMedium) ? 'none' : undefined }
             shrink>
           <SizingGeneralTable
               showCellCSS
@@ -35,8 +35,8 @@ export default (props: Props) => {
         </Flex>
 
         <Flex
+            basis={ match(widthMedium) ? 'none' : undefined }
             grow
-            initial={ match(widthMedium) ? 'none' : undefined }
             shrink>
           <SizingBorderTable
               showCellCSS

@@ -59,7 +59,7 @@ export default (props: Props) => {
       </Text>
 
       <Flex direction={ match(widthMedium) ? 'horizontal' : 'vertical' } gap="x4">
-        <Flex grow initial={ match(widthMedium) ? 'none' : undefined } shrink>
+        <Flex basis={ match(widthMedium) ? 'none' : undefined } grow shrink>
           <Text>
             The <Link onClick={ () => onChangeTheme('day') } underline>Day</Link> theme may be better
             used for websites where the main focus is the text, that are being looked
@@ -67,7 +67,7 @@ export default (props: Props) => {
           </Text>
         </Flex>
 
-        <Flex grow initial={ match(widthMedium) ? 'none' : undefined } shrink>
+        <Flex basis={ match(widthMedium) ? 'none' : undefined } grow shrink>
           <Text>
             The <Link onClick={ () => onChangeTheme('night') } underline>Night</Link> theme may be better
             for a UI where users spend long periods of time concentrating on the content.

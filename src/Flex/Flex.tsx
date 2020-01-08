@@ -15,14 +15,14 @@ export interface FlexProps extends BaseProps {
   alignChildrenVertical?: 'start' | 'middle' | 'end' | 'around' | 'between';
   /** Flex item alignment property (changes with parent direction). */
   alignSelf?: 'start' | 'middle' | 'end';
+  /** Initial width to flex from for a child item. */
+  basis?: 'content' | 'container' | 'none';
   /** Direction on which way to flex items. */
   direction?: 'horizontal' | 'vertical';
   /** Spacing applied between child flex items, values are global spacing variables. */
   gap?: TypeSize;
   /** Flex item property if it should grow with available space. */
   grow?: boolean;
-  /** Initial width to flex from for a child item. */
-  initial?: 'content' | 'container' | 'none';
   /** Flex item property if it should shrink. */
   shrink?: boolean;
   /** Flag to allow flex items to wrap over to new lines */
@@ -40,7 +40,7 @@ const Flex: React.RefForwardingComponent<Element, Attributes<Element, FlexProps>
     direction,
     grow,
     gap,
-    initial,
+    basis,
     shrink,
     wrap,
     ...rest
@@ -51,7 +51,7 @@ const Flex: React.RefForwardingComponent<Element, Attributes<Element, FlexProps>
     [`Flex--align-self-${alignSelf}`]: alignSelf,
     [`Flex--align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
     [`Flex--${direction}`]: direction,
-    [`Flex--initial-${initial}`]: initial,
+    [`Flex--basis-${basis}`]: basis,
     [`Flex--gap-${gap}`]: gap,
     'Flex--grow': grow,
     'Flex--shrink': shrink,

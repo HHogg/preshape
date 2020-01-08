@@ -14,8 +14,8 @@ const parentProps = [
 
 const childProps = [
   'alignSelf',
+  'basis',
   'grow',
-  'initial',
   'shrink',
 ];
 
@@ -43,9 +43,9 @@ const Item: CatalogueItem<{
     state: {
       Flex: {
         alignChildren: 'middle',
+        basis: 'content',
         direction: 'horizontal',
         gap: 'x3',
-        initial: 'content',
       },
     },
   },
