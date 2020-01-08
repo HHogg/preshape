@@ -17,9 +17,10 @@ const Item: CatalogueItem<{
           <GridItem { ...props.GridItem } key={ n }>
             <Flex
                 alignChildren="middle"
-                backgroundColor="background-shade-3"
+                backgroundColor="text-shade-1"
                 direction="vertical"
                 height="6rem"
+                textColor="background-shade-1"
                 width="6rem">
               <ThemeIcon size="1.5rem" />
             </Flex>
@@ -30,8 +31,8 @@ const Item: CatalogueItem<{
     state: {
       Grid: {
         alignChildren: 'middle',
-        columnCount: '3',
         gap: 'x1',
+        repeat: 3,
       },
       GridItem: {},
     },

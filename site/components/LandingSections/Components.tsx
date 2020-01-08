@@ -1,12 +1,9 @@
 import * as React from 'react' ;
-import { useMediaQuery, Flex, Grid, GridItem, Link, Text } from 'preshape';
-import { widthMedium, widthSmall } from '../Root';
+import { Flex, Grid, GridItem, Link, Text } from 'preshape';
 import catalogue from '../Documentation/docs';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 export default (props: Props) => {
-  const match = useMediaQuery([widthSmall, widthMedium]);
-
   return (
     <LandingSection { ...props }>
       <Text margin="x3">
@@ -15,13 +12,9 @@ export default (props: Props) => {
       </Text>
 
       <Grid
-          columnCount={ match({
-            [widthMedium]: '3',
-            [widthSmall]: '2',
-          }) || '1' }
-          columnWidth="1fr"
           gap="x4"
-          margin="x6">
+          margin="x6"
+          repeatWidthMin="240px">
         { Object
             .entries(catalogue)
             .filter(([, { type }]) => type === 'component')

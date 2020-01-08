@@ -5,24 +5,32 @@ import Flex, { FlexProps } from '../Flex/Flex';
 import './Grid.css';
 
 export interface GridProps extends FlexProps {
+  /** Controls the horizontal alignment of the items */
   alignChildren?: 'start' | 'middle' | 'end';
-  autoFitWidthMax?: string;
-  autoFitWidthMin?: string;
-  className?: string;
-  columnCount?: string;
-  columnWidth?: string;
+  /** Sets the distances between items to a multiple value. E.g. 'x1'. */
   gap?: TypeSize;
+  /** Sets the primary repeat value */
+  repeat?: number | string | 'auto-fill' | 'auto-fit';
+  /** Sets the explicit width the repeated items will be resized */
+  repeatWidth?: string | 'max-content' | 'min-content';
+  /** Sets the maximum width the repeated items can be resized to */
+  repeatWidthMax?: string;
+  /** Sets the minimum width the repeated items can be resized to */
+  repeatWidthMin?: string;
+  /** Sets the implicit row size */
+  rowSize?: string | 'max-content' | 'min-content';
 }
 
 const Grid = React.forwardRef<HTMLElement, Attributes<HTMLElement, GridProps>>((props, ref) => {
   const {
     alignChildren,
-    autoFitWidthMax,
-    autoFitWidthMin,
     className,
-    columnCount,
-    columnWidth,
     gap,
+    repeat = 'auto-fit',
+    repeatWidth = 'max-content',
+    repeatWidthMax = '1fr',
+    repeatWidthMin,
+    rowSize = 'max-content',
     ...rest
   } = props;
 
@@ -32,9 +40,9 @@ const Grid = React.forwardRef<HTMLElement, Attributes<HTMLElement, GridProps>>((
   }, className);
 
   const style = {
-    gridTemplateColumns:
-      (columnCount && `repeat(${columnCount}, ${columnWidth || 'max-content'})`) ||
-      ((autoFitWidthMin && `repeat(auto-fit, minmax(${autoFitWidthMin}, ${autoFitWidthMax || '1fr'})`) || undefined),
+    ...rest.style,
+    gridTemplateColumns: `repeat(${repeat}, ${repeatWidthMin ? `minmax(${repeatWidthMin}, ${repeatWidthMax})` : repeatWidth})`,
+    gridAutoRows: rowSize,
   };
 
   return (
