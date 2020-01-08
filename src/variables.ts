@@ -1,4 +1,5 @@
 import color from 'open-color';
+import { IconPathMap, TypeIcon } from './Icon/Icon';
 
 export const sizeX1Px = 4;
 export const sizeX2Px = sizeX1Px * 2;
@@ -101,4 +102,5 @@ export const transitionTimeBase = 400;
 export const transitionTimeSlow = 800;
 export const transitionTimingFunction = [0.25, 0.46, 0.45, 0.94];
 
-export const routeTransitionTime = transitionTimeBase;
+export const icons = Object.keys(IconPathMap) as TypeIcon[];
+
