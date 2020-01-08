@@ -27,7 +27,6 @@ export default () => {
         fixed="fullscreen"
         padding="x12"
         scrollable
-        time="fast"
         zIndex={ 1 }>
       <Flex direction="vertical" grow maxWidth={ widthMedium }>
         <Flex direction="horizontal" gap="x3" margin="x6">

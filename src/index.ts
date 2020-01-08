@@ -7,6 +7,7 @@ export * from './hooks';
 export * from './variables';
 
 export {
+  Attributes,
   TypeColor,
   TypeSize,
   TypeTheme,

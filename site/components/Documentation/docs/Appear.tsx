@@ -32,7 +32,6 @@ const Item: CatalogueItem<{
       Appear: {
         animation: 'FadeSlideUp',
         delay: 100,
-        visible: true,
       },
     },
   },
