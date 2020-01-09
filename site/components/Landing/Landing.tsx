@@ -1,41 +1,51 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
+  themesOpposite,
+  transitionTimeSlow,
   Base,
   Flex,
   Link,
   List,
   ListItem,
   Text,
+  Appear,
 } from 'preshape';
 import { version } from '../../../package.json';
-import { widthSmall, widthMedium } from '../Root';
+import { RootContext, widthSmall, widthMedium } from '../Root';
 import Documentation from '../Documentation/Documentation';
 import landingSections from '../LandingSections';
 import LandingSection from './LandingSection';
 import Logo from '../Logo/Logo';
 
 export default () => {
+  const { theme } = React.useContext(RootContext);
+
   return (
-    <Base
-        maxWidth={ widthMedium }
-        paddingHorizontal="x8"
-        paddingVertical="x16">
+    <Base>
       <Switch>
         <Route component={ Documentation } path="/api/:id" />
       </Switch>
 
-      <LandingSection>
-        <Base maxWidth={ widthSmall }>
+      <LandingSection
+          textColor="text-shade-1"
+          theme={ themesOpposite[theme] }>
+        <Base
+            maxWidth={ widthSmall }
+            paddingHorizontal="x8"
+            paddingVertical="x16">
           <Flex alignChildrenHorizontal="middle" direction="vertical" gap="x4">
             <Flex shrink>
               <Logo height="6rem" width="6rem" />
             </Flex>
+
             <Flex shrink>
-              <Text align="middle" margin="x2" size="x5" strong>Preshape</Text>
-              <Text align="middle">
-                A minimal design system and library of composable React components.
-              </Text>
+              <Appear animation="FadeSlideUp" delay={ transitionTimeSlow / 2 } duration={ transitionTimeSlow }>
+                <Text align="middle" margin="x2" size="x5" strong>Preshape</Text>
+                <Text align="middle">
+                  A minimal design system and library of composable React components.
+                </Text>
+              </Appear>
             </Flex>
           </Flex>
 
@@ -70,9 +80,16 @@ export default () => {
         </Base>
       </LandingSection>
 
-      { landingSections.map(({ Component, ...rest }) => (
-        <Component { ...rest } key={ rest.id } />
-      )) }
+      <Base backgroundColor="background-shade-1">
+        <Base
+            maxWidth={ widthMedium }
+            paddingHorizontal="x8"
+            paddingVertical="x16">
+          { landingSections.map(({ Component, ...rest }) => (
+            <Component { ...rest } key={ rest.id } />
+          )) }
+        </Base>
+      </Base>
     </Base>
   );
 };

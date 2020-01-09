@@ -8,6 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'List',
   description: 'Inline listing component, useful for separating out UI actions and a short list of options.',
+  pictogram: require('../../../assets/pictogram-list.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

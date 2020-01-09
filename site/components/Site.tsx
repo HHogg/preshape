@@ -11,7 +11,7 @@ export default () => {
   useWindowScrollTo();
 
   return (
-    <Base backgroundColor="background-shade-1">
+    <Base>
       <Switch>
         <Route component={ Landing } path="/" />
       </Switch>

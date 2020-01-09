@@ -2,28 +2,40 @@ import * as React from 'react' ;
 import { CodeBlock, CodeBlockProps } from 'preshape';
 import { CatalogueItem } from '.';
 
-const css = `@keyframes AnimationExampleSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+const css = `/**
+ * CSS Example
+ **/
 
-.AnimationExample__Spin {
-  animation-name: AnimationExampleSpin;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}`;
+  @charset "utf-8";
 
-const html = `<div class="Base Flex Flex--align-horz-middle Flex--align-vert-middle Flex--horizontal Flex--gap-x4">
-  <div class="Base Flex">
-    <div class="Base Text Text--strong">Lorem</div>
-  </div>
+  .Button {
+    padding: 8px 12px;
+    border: 2px solid currentColor;
+    color: #1E1B18;
+  }
+`;
 
-  <div class="Base Flex">
-    <div class="Base Text Text--strong">Ipsum</div>
-  </div>
-</div>`;
+const html = `<!DOCTYPE html>
+<html>
+  <head>
+    <title>Preshape</title>
+  </head>
+  <body>
+    <div class="Base Flex Flex--align-horz-middle Flex--align-vert-middle Flex--horizontal Flex--gap-x4">
+      <div class="Base Flex">
+        <div class="Base Text Text--strong">Lorem</div>
+      </div>
+
+      <div class="Base Flex">
+        <div class="Base Text Text--strong">Ipsum</div>
+      </div>
+    </div>
+  </body>
+</html>`;
 
 const js = `import Two from 'two.js';
+
+// Javascript example
 
 const two = new Two({
   autostart: true,
@@ -74,6 +86,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Code',
   description: 'A syntax highlighting code block component.',
+  pictogram: require('../../../assets/pictogram-code.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

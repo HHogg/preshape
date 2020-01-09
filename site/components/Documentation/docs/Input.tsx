@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Input',
   description: 'Standard single line text input for collection user feedback data.',
+  pictogram: require('../../../assets/pictogram-input.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

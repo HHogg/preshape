@@ -8,6 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Base',
   description: 'The core component that is the end of the chain for all other components. It provides general utility behaviour and styling.',
+  pictogram: require('../../../assets/pictogram-base.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

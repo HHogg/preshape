@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>pictogram-tabs</title>
+    <desc>Created with Sketch.</desc>
+    <g id="pictogram-tabs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6,24 L174,24 C175.104569,24 176,24.8954305 176,26 L176,72 L4,72 L4,26 C4,24.8954305 4.8954305,24 6,24 Z" id="Rectangle-Copy-7" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M186,24 L248,24 L248,27.9988264 L188.000893,27.9988264 L188.000893,72 L184,72 L184,26 C184,24.8954305 184.895431,24 186,24 Z" id="Rectangle-Copy-8" fill="#000000" fill-rule="nonzero"></path>
+        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="20" y="44" width="140" height="8" rx="1"></rect>
+        <path d="M201,44 L248,44 L248,44 L248,52 L201,52 C200.447715,52 200,51.5522847 200,51 L200,45 C200,44.4477153 200.447715,44 201,44 Z" id="Rectangle-Copy-3" fill="#000000"></path>
+    </g>
+</svg>

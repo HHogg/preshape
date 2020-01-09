@@ -9,6 +9,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Grid',
   description: 'A use case driven grid system (using display: grid;) for auto flowing, flexible and fixed column layouts.',
+  pictogram: require('../../../assets/pictogram-grid.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Icon',
   description: 'Icons to give more visual meaning to text. Icons are selected from the Feather Icon set.',
+  pictogram: require('../../../assets/pictogram-icon.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

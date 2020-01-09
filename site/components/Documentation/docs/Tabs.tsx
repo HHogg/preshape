@@ -8,6 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Tabs',
   description: 'Tab organisational components, useful for laying out related by nonconcurrent parts of the UI.',
+  pictogram: require('../../../assets/pictogram-tabs.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => {

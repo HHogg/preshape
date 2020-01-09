@@ -26,6 +26,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Placement',
   description: '',
+  pictogram: require('../../../assets/pictogram-placement.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'BlockQuote',
   description: 'A visually indented way of representing quoted text.',
+  pictogram: require('../../../assets/pictogram-blockquote.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

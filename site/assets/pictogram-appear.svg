@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>pictogram-appear</title>
+    <desc>Created with Sketch.</desc>
+    <g id="pictogram-appear" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M78,16 L170,16 C171.104569,16 172,16.8954305 172,18 L172,62 C172,63.1045695 171.104569,64 170,64 L78,64 C76.8954305,64 76,63.1045695 76,62 L76,18 C76,16.8954305 76.8954305,16 78,16 Z" id="Rectangle-Copy-11" fill="#000000"></path>
+        <path d="M86,32 L162,32 C163.104569,32 164,32.8954305 164,34 L164,70 C164,71.1045695 163.104569,72 162,72 L86,72 C84.8954305,72 84,71.1045695 84,70 L84,34 C84,32.8954305 84.8954305,32 86,32 Z" id="Rectangle-Copy-11" fill="#000000" opacity="0.5"></path>
+        <path d="M94,48 L154,48 C155.104569,48 156,48.8954305 156,50 L156,78 C156,79.1045695 155.104569,80 154,80 L94,80 C92.8954305,80 92,79.1045695 92,78 L92,50 C92,48.8954305 92.8954305,48 94,48 Z" id="Rectangle-Copy-11" fill="#000000" opacity="0.25"></path>
+    </g>
+</svg>

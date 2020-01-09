@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Link',
   description: 'React Router compatible links (when provided with a "to" destination).',
+  pictogram: require('../../../assets/pictogram-link.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

@@ -1,0 +1,8 @@
+{
+  dimensions: false,
+  replaceAttrValues: {
+    '#000': 'var(--color-text--shade-1)',
+    '#4C6EF5': 'var(--color-accent--shade-2)',
+    '#FFF': 'var(--color-background--shade-2)',
+  }
+}

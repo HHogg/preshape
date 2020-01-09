@@ -48,10 +48,10 @@ export default (props) => {
           value={ state }>
         { (props) => (
           <TypeLabel { ...props }
-              backgroundColor={ state === undefined ? undefined : (
-                (name === 'string' && typeof state === 'string' && 'accent-shade-2') ||
-                (name === 'number' && typeof state === 'number' && 'accent-shade-2') ||
-                undefined
+              active={ state === undefined ? false : (
+                (name === 'string' && typeof state === 'string') ||
+                (name === 'number' && typeof state === 'number') ||
+                false
               ) }
               clickable
               hasInfo>

@@ -1,4 +1,5 @@
 import color from 'open-color';
+import { TypeTheme } from './Base/Base';
 import { IconPathMap, TypeIcon } from './Icon/Icon';
 
 export const sizeX1Px = 4;
@@ -75,12 +76,16 @@ export const themeNight = {
   colorAccentShade3: colorAccent2Shade3,
 };
 
-export const themes = {
+export const themes: {
+  [key in TypeTheme]: { [key: string]: string };
+} = {
   day: themeDay,
   night: themeNight,
 };
 
-export const themesOpposite = {
+export const themesOpposite: {
+  [key in TypeTheme]: TypeTheme;
+} = {
   day: 'night',
   night: 'day',
 };

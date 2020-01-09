@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'TextArea',
   description: 'Standard multiple line text area input for collection user feedback data.',
+  pictogram: require('../../../assets/pictogram-textarea.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

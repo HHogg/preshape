@@ -8,6 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Appear',
   description: 'Adds some subtle animations to the entrance and exit of sections of the UI.',
+  pictogram: require('../../../assets/pictogram-appear.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

@@ -1,6 +1,6 @@
 import * as React from 'react' ;
-import { Flex, Grid, GridItem, Link, Text } from 'preshape';
-import catalogue from '../Documentation/docs';
+import { Grid, Link, Text } from 'preshape';
+import docs from '../Documentation/docs';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 export default (props: Props) => {
@@ -12,36 +12,18 @@ export default (props: Props) => {
       </Text>
 
       <Grid
-          gap="x4"
+          gap="x6"
           margin="x6"
           repeatWidthMin="240px">
         { Object
-            .entries(catalogue)
+            .entries(docs)
             .filter(([, { type }]) => type === 'component')
             .map(([id, item]) => (
-              <GridItem
-                  borderSize="x2"
-                  direction="vertical"
-                  key={ id }>
-                <Flex grow paddingHorizontal="x3" paddingVertical="x4">
-                  <Text margin="x1" strong>{ item.name }</Text>
-                  <Text margin="x1" size="x1" tag="div">{ item.description }</Text>
-                </Flex>
-
-                <Flex
-                    backgroundColor="text-shade-1"
-                    textColor="background-shade-1">
-                  <Link
-                      align="end"
-                      display="block"
-                      paddingHorizontal="x3"
-                      paddingVertical="x2"
-                      size="x1"
-                      strong
-                      to={ `/api/${id}` }
-                      uppercase>View Component</Link>
-                </Flex>
-              </GridItem>
+              <Link borderSize="x2" display="block" key={ id } padding="x3" to={ `/api/${id}` }>
+                { item.pictogram && <item.pictogram /> }
+                <Text margin="x1" strong>{ item.name }</Text>
+                <Text margin="x1" size="x1" tag="div">{ item.description }</Text>
+              </Link>
             ))
         }
       </Grid>

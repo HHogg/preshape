@@ -15,6 +15,10 @@ const landingSections: {
   title: 'Colours',
   Component: Colors,
 }, {
+  id: 'Icons',
+  title: 'Icons',
+  Component: Icons,
+}, {
   id: 'Themes',
   title: 'Themes',
   Component: Themes,
@@ -26,10 +30,6 @@ const landingSections: {
   id: 'Sizing',
   title: 'Sizing',
   Component: Sizing,
-}, {
-  id: 'Icons',
-  title: 'Icons',
-  Component: Icons,
 }, {
   id: 'Components',
   title: 'Components',

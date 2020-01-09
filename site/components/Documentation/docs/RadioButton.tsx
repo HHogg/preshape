@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'RadioButton',
   description: 'Standard input for selecting a single choice.',
+  pictogram: require('../../../assets/pictogram-radiobutton.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

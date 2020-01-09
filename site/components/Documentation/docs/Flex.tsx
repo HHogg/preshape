@@ -24,6 +24,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Flex',
   description: 'Simple, all purpose flexing component to achieve common UI layouts and placements.',
+  pictogram: require('../../../assets/pictogram-flex.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

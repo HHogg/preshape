@@ -44,6 +44,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Table',
   description: 'Standard table layout components. Useful for presenting, comparing and sorting raw tabular data',
+  pictogram: require('../../../assets/pictogram-table.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => {

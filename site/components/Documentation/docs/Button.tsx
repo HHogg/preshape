@@ -13,6 +13,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Button',
   description: 'A standard clickable button to trigger some sort of action.',
+  pictogram: require('../../../assets/pictogram-button.svg').default,
   type: 'component',
   showcase: {
     Component: (props: Props) => (

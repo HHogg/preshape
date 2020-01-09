@@ -1,8 +1,10 @@
 import * as React from 'react' ;
 import {
+  colorBlack,
   colorDarkShade1,
   colorDarkShade2,
   colorDarkShade3,
+  colorWhite,
   colorLightShade1,
   colorLightShade2,
   colorLightShade3,
@@ -22,6 +24,11 @@ import {
 import ColorsTable, { Props, TypeColorVariables } from './ColorsTable';
 
 export const variables: TypeColorVariables = [{
+  name: 'Black',
+  css: '--color-black',
+  js: 'colorBlack',
+  value: colorBlack,
+}, {
   name: 'Dark (Shade 1)',
   css: '--color-dark--shade-1',
   js: 'colorDarkShade1',
@@ -36,6 +43,11 @@ export const variables: TypeColorVariables = [{
   css: '--color-dark--shade-3',
   js: 'colorDarkShade3',
   value: colorDarkShade3,
+}, {
+  name: 'White',
+  css: '--color-white',
+  js: 'colorWhite',
+  value: colorWhite,
 }, {
   name: 'Light (Shade 1)',
   css: '--color-light--shade-1',

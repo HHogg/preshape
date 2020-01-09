@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>pictogram-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="pictogram-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-8" fill="#000000" x="92" y="16" width="64" height="64" rx="2"></rect>
+        <path d="M92,76 L156,76 L156,78 C156,79.1045695 155.104569,80 154,80 L94,80 C92.8954305,80 92,79.1045695 92,78 L92,76 L92,76 Z" id="Rectangle-Copy-8" fill="#4C6EF5"></path>
+        <polygon id="Rectangle" fill="#FFFFFF" points="110 28 131.870075 28 138.8 40.2686567 131.870075 52.5955345 120.44 52.6273736 120.44 64 110 64"></polygon>
+    </g>
+</svg>

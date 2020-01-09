@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>pictogram-labels</title>
+    <desc>Created with Sketch.</desc>
+    <g id="pictogram-labels" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-15" fill="#000000" x="4" y="24" width="56" height="24" rx="8"></rect>
+        <rect id="Rectangle-Copy-17" fill="#4C6EF5" x="144" y="24" width="48" height="24" rx="8"></rect>
+        <rect id="Rectangle-Copy-20" fill="#000000" x="88" y="52" width="56" height="24" rx="8"></rect>
+        <rect id="Rectangle-Copy-18" fill="#000000" x="196" y="24" width="48" height="24" rx="8"></rect>
+        <path d="M72,24 L132,24 C136.418278,24 140,27.581722 140,32 L140,40 C140,44.418278 136.418278,48 132,48 L72,48 C67.581722,48 64,44.418278 64,40 L64,32 C64,27.581722 67.581722,24 72,24 Z" id="Rectangle-Copy-16" fill="#000000"></path>
+        <path d="M12,52 L76,52 C80.418278,52 84,55.581722 84,60 L84,68 C84,72.418278 80.418278,76 76,76 L12,76 C7.581722,76 4,72.418278 4,68 L4,60 C4,55.581722 7.581722,52 12,52 Z" id="Rectangle-Copy-19" fill="#000000"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="12" y="34" width="40" height="4" rx="1"></rect>
+        <path d="M153,34 L183,34 C183.552285,34 184,34.4477153 184,35 L184,37 C184,37.5522847 183.552285,38 183,38 L153,38 C152.447715,38 152,37.5522847 152,37 L152,35 C152,34.4477153 152.447715,34 153,34 Z" id="Rectangle-Copy-2" fill="#FAFCFF"></path>
+        <path d="M97,62 L135,62 C135.552285,62 136,62.4477153 136,63 L136,65 C136,65.5522847 135.552285,66 135,66 L97,66 C96.4477153,66 96,65.5522847 96,65 L96,63 C96,62.4477153 96.4477153,62 97,62 Z" id="Rectangle-Copy-5" fill="#FFFFFF"></path>
+        <path d="M205,34 L235,34 C235.552285,34 236,34.4477153 236,35 L236,37 C236,37.5522847 235.552285,38 235,38 L205,38 C204.447715,38 204,37.5522847 204,37 L204,35 C204,34.4477153 204.447715,34 205,34 Z" id="Rectangle-Copy-3" fill="#FFFFFF"></path>
+        <path d="M73,34 L131,34 C131.552285,34 132,34.4477153 132,35 L132,37 C132,37.5522847 131.552285,38 131,38 L73,38 C72.4477153,38 72,37.5522847 72,37 L72,35 C72,34.4477153 72.4477153,34 73,34 Z" id="Rectangle-Copy" fill="#FFFFFF"></path>
+        <path d="M13,62 L75,62 C75.5522847,62 76,62.4477153 76,63 L76,65 C76,65.5522847 75.5522847,66 75,66 L13,66 C12.4477153,66 12,65.5522847 12,65 L12,63 C12,62.4477153 12.4477153,62 13,62 Z" id="Rectangle-Copy-4" fill="#FFFFFF"></path>
+    </g>
+</svg>

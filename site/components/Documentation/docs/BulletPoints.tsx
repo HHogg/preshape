@@ -8,6 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'BulletPoints',
   description: 'A vertical list component for listing your todos.',
+  pictogram: require('../../../assets/pictogram-bulletpoints.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

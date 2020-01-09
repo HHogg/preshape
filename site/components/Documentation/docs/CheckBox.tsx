@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'CheckBox',
   description: 'Standard input for selecting multiple choices.',
+  pictogram: require('../../../assets/pictogram-checkbox.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

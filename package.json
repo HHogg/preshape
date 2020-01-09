@@ -16,7 +16,7 @@
     "build:lib:cjs": "tsc -p src -m commonjs --outDir lib/cjs && yarn build:css --dir lib/cjs",
     "build:lib:esm": "tsc -p src --outDir lib/esm && yarn build:css --dir lib/esm",
     "build:lib:esn": "tsc -p src -t esnext --outDir lib/esn && yarn build:css --dir lib/esn",
-    "build:site": "rm -rf public && parcel build site/index.html -d public && react-snap",
+    "build:site": "rm -rf public && parcel build site/index.html -d public",
     "lint:css": "stylelint site/**/*.css src/**/*.css",
     "lint:js": "eslint src/**/*.tsx src/**/*.ts",
     "lint": "yarn lint:js && yarn lint:css",
@@ -45,6 +45,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/git": "^5.0.0",
+    "@svgr/parcel-plugin-svgr": "^5.0.1",
     "@types/classnames": "*",
     "@types/lodash.debounce": "*",
     "@types/lodash.omit": "^4.5.6",

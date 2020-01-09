@@ -2,11 +2,13 @@ import * as React from 'react' ;
 import { motion } from 'framer-motion';
 import {
   sizeX12Px,
+  themesOpposite,
   transitionTimingFunction,
   transitionTimeSlow,
   Base,
   BaseProps,
 } from 'preshape';
+import { RootContext } from '../Root';
 import './Logo.css';
 
 const d = sizeX12Px;
@@ -28,8 +30,10 @@ interface Props extends BaseProps {
 }
 
 export default (props: Props) => {
+  const { theme } = React.useContext(RootContext);
+
   return (
-    <Base { ...props } className="Logo" tag="svg" viewBox="0 0 160 201">
+    <Base { ...props } className="Logo" tag="svg" theme={ themesOpposite[theme] } viewBox="0 0 160 201">
       <g fill="none" fillRule="evenodd" stroke="none" strokeLinejoin="bevel" strokeWidth="1" >
         <motion.path
             animate={ animate }

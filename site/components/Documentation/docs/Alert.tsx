@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Alert',
   description: 'Useful for bringing attention to a message.',
+  pictogram:  require('../../../assets/pictogram-alert.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (
@@ -18,7 +19,7 @@ const Item: CatalogueItem<{
     ),
     state: {
       Alert: {
-        color: 'negative',
+        color: 'accent',
         fill: true,
       },
     },

@@ -8,6 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Labels',
   description: 'Keyword highlighting component, useful for giving specific data emphasis.',
+  pictogram: require('../../../assets/pictogram-labels.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (

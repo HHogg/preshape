@@ -3,6 +3,7 @@ import { APIViewerItem } from '../../APIViewer/APIViewer';
 export interface CatalogueItem<S extends {} = {}> {
   name: string;
   description?: string;
+  pictogram?: string;
   type: 'component' | 'utility' | 'type';
   showcase?: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

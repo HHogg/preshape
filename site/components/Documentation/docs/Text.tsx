@@ -7,6 +7,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Text',
   description: 'The core component for styling text. Instead of specifying various elements, a suitable and semantic element will be determined from the props.',
+  pictogram: require('../../../assets/pictogram-text.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (
