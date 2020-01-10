@@ -9,7 +9,7 @@ export interface GridItemProps extends FlexProps {
   row?: number;
 }
 
-const GridItem = React.forwardRef<HTMLElement, Attributes<HTMLElement, GridItemProps>>((props, ref) => {
+const GridItem: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, GridItemProps>> = (props, ref) => {
   const {
     column,
     row,
@@ -24,6 +24,6 @@ const GridItem = React.forwardRef<HTMLElement, Attributes<HTMLElement, GridItemP
   return (
     <Flex { ...rest } className="GridItem" ref={ ref } style={ style } />
   );
-});
+};
 
-export default GridItem;
+export default React.forwardRef(GridItem);

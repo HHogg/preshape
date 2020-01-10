@@ -5,10 +5,10 @@ import './Tabs.css';
 
 export interface TabsProps extends FlexProps {}
 
-const Tabs = React.forwardRef<HTMLElement, Attributes<HTMLElement, TabsProps>>((props, ref) => {
+const Tabs: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TabsProps>> = (props, ref) => {
   return (
     <Flex { ...props } className="Tabs" ref={ ref } />
   );
-});
+};
 
-export default Tabs;
+export default React.forwardRef(Tabs);

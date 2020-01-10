@@ -23,12 +23,13 @@ export interface LinkProps extends TextProps {
   underline?: boolean;
 }
 
-const Link = React.forwardRef<HTMLAnchorElement, Attributes<HTMLAnchorElement, LinkProps>>((props, ref) => {
+const Link: React.FC<Attributes<HTMLAnchorElement, LinkProps>> = (props) => {
   const { active, navigate, target, to, underline, ...rest } = props;
   const classes = classnames('Link', {
     'Link--active': active,
     'Link--underline': underline,
   });
+
 
   if (to) {
     return (
@@ -60,10 +61,9 @@ const Link = React.forwardRef<HTMLAnchorElement, Attributes<HTMLAnchorElement, L
   return (
     <Text { ...rest }
         className={ classes }
-        ref={ ref }
         tag="a"
         target={ target } />
   );
-});
+};
 
 export default Link;

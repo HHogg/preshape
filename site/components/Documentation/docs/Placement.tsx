@@ -16,6 +16,7 @@ import {
   PlacementReferenceProps,
 } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 
 const Item: CatalogueItem<{
   Placement: PlacementProps;
@@ -30,38 +31,40 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Flex alignChildren="middle" direction="horizontal">
-        <PlacementManager { ...props.PlacementManager }>
-          <PlacementReference { ...props.PlacementReference }>
-            { (props) => (
-              <Icon { ...props } name="Star" size="2rem" />
-            ) }
-          </PlacementReference>
+      <Showcase>
+        <Flex alignChildren="middle" direction="horizontal">
+          <PlacementManager { ...props.PlacementManager }>
+            <PlacementReference { ...props.PlacementReference }>
+              { (props) => (
+                <Icon { ...props } name="Star" size="2rem" />
+              ) }
+            </PlacementReference>
 
-          <Placement { ...props.Placement } zIndex={ 1 }>
-            <PlacementArrow backgroundColor="text-shade-1" />
-            <PlacementContent
-                backgroundColor="text-shade-1"
-                borderRadius="x1"
-                padding="x1"
-                textColor="background-shade-1">
-              <Buttons joined>
-                <Button fill>
-                  <Icon name="Pencil" size="1rem" />
-                </Button>
+            <Placement { ...props.Placement } zIndex={ 1 }>
+              <PlacementArrow backgroundColor="text-shade-1" />
+              <PlacementContent
+                  backgroundColor="text-shade-1"
+                  borderRadius="x1"
+                  padding="x1"
+                  textColor="background-shade-1">
+                <Buttons joined>
+                  <Button fill>
+                    <Icon name="Pencil" size="1rem" />
+                  </Button>
 
-                <Button fill>
-                  <Icon name="Copy" size="1rem" />
-                </Button>
+                  <Button fill>
+                    <Icon name="Copy" size="1rem" />
+                  </Button>
 
-                <Button fill>
-                  <Icon name="Water" size="1rem" />
-                </Button>
-              </Buttons>
-            </PlacementContent>
-          </Placement>
-        </PlacementManager>
-      </Flex>
+                  <Button fill>
+                    <Icon name="Water" size="1rem" />
+                  </Button>
+                </Buttons>
+              </PlacementContent>
+            </Placement>
+          </PlacementManager>
+        </Flex>
+      </Showcase>
     ),
     state: {
       Placement: {

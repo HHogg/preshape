@@ -1,5 +1,6 @@
 import * as React from 'react' ;
 import { BulletPoint, BulletPointProps, BulletPoints, BulletPointsProps } from 'preshape';
+import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const Item: CatalogueItem<{
@@ -12,13 +13,15 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <BulletPoints { ...props.BulletPoints }>
-        { Array.from({ length: 5 }).map((_, n) => (
-          <BulletPoint { ...props.BulletPoint } key={ n }>
-            Lorem ipsum
-          </BulletPoint>
-        )) }
-      </BulletPoints>
+      <Showcase>
+        <BulletPoints { ...props.BulletPoints }>
+          { Array.from({ length: 5 }).map((_, n) => (
+            <BulletPoint { ...props.BulletPoint } key={ n }>
+              Lorem ipsum
+            </BulletPoint>
+          )) }
+        </BulletPoints>
+      </Showcase>
     ),
     state: {
       BulletPoint: {},

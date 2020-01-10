@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const CheckboxIndicator = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>((props, ref) => {
+const CheckboxIndicator: React.RefForwardingComponent<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>> = (props, ref) => {
   return (
     <div className="CheckBox">
       <input { ...props }
@@ -10,6 +10,6 @@ const CheckboxIndicator = React.forwardRef<HTMLInputElement, React.InputHTMLAttr
       <div className="CheckBox__indicator" />
     </div>
   );
-});
+};
 
-export default CheckboxIndicator;
+export default React.forwardRef(CheckboxIndicator);

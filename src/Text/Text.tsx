@@ -58,7 +58,7 @@ export interface TextProps extends BaseProps {
   weak?: boolean;
 }
 
-const Text = React.forwardRef<HTMLElement, Attributes<HTMLElement, TextProps>>((props, ref) => {
+const Text: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TextProps>> = (props, ref) => {
   const {
     align,
     breakOn,
@@ -105,6 +105,6 @@ const Text = React.forwardRef<HTMLElement, Attributes<HTMLElement, TextProps>>((
         ref={ ref }
         tag={ finalTag } />
   );
-});
+};
 
-export default Text;
+export default React.forwardRef(Text);

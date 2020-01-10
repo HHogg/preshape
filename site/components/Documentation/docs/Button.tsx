@@ -1,5 +1,7 @@
 import * as React from 'react' ;
 import { Button, ButtonProps, Buttons, ButtonsProps, Flex, Icon } from 'preshape';
+import Showcase from '../Showcase';
+import ShowcaseCode from '../ShowcaseCode';
 import { CatalogueItem } from '.';
 
 interface Props {
@@ -17,36 +19,40 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props: Props) => (
-      <Flex direction="horizontal" gap="x4">
-        <Flex direction="horizontal" grow>
-          <Buttons { ...props.Buttons } grow>
-            <Button { ...props.Button }>Lorem ipsum</Button>
-          </Buttons>
-        </Flex>
+      <Showcase>
+        <Flex direction="horizontal" gap="x4">
+          <Flex direction="horizontal" grow>
+            <Buttons { ...props.Buttons } grow>
+              <Button { ...props.Button }>Lorem ipsum</Button>
+            </Buttons>
+          </Flex>
 
-        <Flex direction="horizontal" grow>
-          <Buttons { ...props.Buttons } grow>
-            <Button { ...props.Button }>
-              <Icon name="Beginning" size="1rem" />
-            </Button>
-            <Button { ...props.Button }>
-              <Icon name="Play" size="1rem" />
-            </Button>
-            <Button { ...props.Button }>
-              <Icon name="Pause" size="1rem" />
-            </Button>
-            <Button { ...props.Button }>
-              <Icon name="End" size="1rem" />
-            </Button>
-          </Buttons>
-        </Flex>
+          <Flex direction="horizontal" grow>
+            <ShowcaseCode>
+              <Buttons { ...props.Buttons } grow>
+                <Button { ...props.Button }>
+                  <Icon name="Beginning" size="1rem" />
+                </Button>
+                <Button { ...props.Button }>
+                  <Icon name="Play" size="1rem" />
+                </Button>
+                <Button { ...props.Button }>
+                  <Icon name="Pause" size="1rem" />
+                </Button>
+                <Button { ...props.Button }>
+                  <Icon name="End" size="1rem" />
+                </Button>
+              </Buttons>
+            </ShowcaseCode>
+          </Flex>
 
-        <Flex direction="horizontal" grow>
-          <Buttons { ...props.Buttons } grow>
-            <Button { ...props.Button }>Lorem ipsum</Button>
-          </Buttons>
+          <Flex direction="horizontal" grow>
+            <Buttons { ...props.Buttons } grow>
+              <Button { ...props.Button }>Lorem ipsum</Button>
+            </Buttons>
+          </Flex>
         </Flex>
-      </Flex>
+      </Showcase>
     ),
     state: {
       Buttons: {

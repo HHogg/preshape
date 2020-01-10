@@ -13,7 +13,7 @@ export interface ListProps extends FlexProps {
   gap?: TypeSize;
 }
 
-const List = React.forwardRef<HTMLUListElement, Attributes<HTMLUListElement, ListProps>>((props, ref) => {
+const List: React.RefForwardingComponent<HTMLUListElement, Attributes<HTMLUListElement, ListProps>> = (props, ref) => {
   const { gap = 'x1', ...rest } = props;
   const classes = classnames('List', `List--${gap}`);
 
@@ -27,6 +27,6 @@ const List = React.forwardRef<HTMLUListElement, Attributes<HTMLUListElement, Lis
         tag="ul"
         wrap />
   );
-});
+};
 
-export default List;
+export default React.forwardRef(List);

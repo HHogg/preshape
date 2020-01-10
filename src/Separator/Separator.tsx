@@ -5,7 +5,7 @@ import './Separator.css';
 
 export interface SeparatorProps extends BaseProps {}
 
-const Separator = React.forwardRef<HTMLElement, Attributes<HTMLElement, SeparatorProps>>((props, ref) => {
+const Separator: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, SeparatorProps>> = (props, ref) => {
   const {
     borderColor = 'text-shade-1',
     borderSize = 'x1',
@@ -20,6 +20,6 @@ const Separator = React.forwardRef<HTMLElement, Attributes<HTMLElement, Separato
         className="Separator"
         ref={ ref } />
   );
-});
+};
 
-export default Separator;
+export default React.forwardRef(Separator);

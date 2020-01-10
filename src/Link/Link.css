@@ -12,5 +12,5 @@
 }
 
 .Link--underline {
-  border-bottom: 0.0625rem dashed var(--color-accent--shade-1);
+  border-bottom: 0.0625rem dashed var(--color-accent--shade-2);
 }

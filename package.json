@@ -69,6 +69,7 @@
     "postcss-preset-env": "^6.6.0",
     "react": ">=16.6.0",
     "react-dom": ">=16.6.0",
+    "react-element-to-jsx-string": "^14.2.0",
     "react-router-dom": "^5.1.2",
     "react-snap": "^1.23.0",
     "react-test-renderer": "^16.3.2",

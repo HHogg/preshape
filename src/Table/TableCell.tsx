@@ -7,7 +7,7 @@ export interface TableCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableCell = React.forwardRef<HTMLTableDataCellElement, Attributes<HTMLTableDataCellElement, TableCellProps>>((props, ref) => {
+const TableCell: React.RefForwardingComponent<HTMLTableDataCellElement, Attributes<HTMLTableDataCellElement, TableCellProps>> = (props, ref) => {
   const { sorted, ...rest } = props;
 
   return (
@@ -17,6 +17,6 @@ const TableCell = React.forwardRef<HTMLTableDataCellElement, Attributes<HTMLTabl
         strong={ sorted }
         tag="td" />
   );
-});
+};
 
-export default TableCell;
+export default React.forwardRef(TableCell);

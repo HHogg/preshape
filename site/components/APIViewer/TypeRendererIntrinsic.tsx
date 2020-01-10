@@ -33,7 +33,7 @@ export default (props) => {
 
     return (
       <TypeLabel
-          backgroundColor={ state === value ? 'accent-shade-2' : undefined }
+          active={ state === value }
           clickable
           onClick={ () => onStateChange(value) }>
         { name }

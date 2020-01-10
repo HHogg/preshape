@@ -12,7 +12,7 @@ interface InputLabelProps extends FlexProps {
   paddingVertical?: TypeSize;
 }
 
-const InputLabel = React.forwardRef<HTMLLabelElement, Attributes<HTMLLabelElement, InputLabelProps>>((props, ref) => {
+const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, InputLabelProps>> = (props, ref) => {
   const {
     children,
     disabled,
@@ -43,6 +43,6 @@ const InputLabel = React.forwardRef<HTMLLabelElement, Attributes<HTMLLabelElemen
       { children }
     </Flex>
   );
-});
+};
 
-export default InputLabel;
+export default React.forwardRef(InputLabel);

@@ -1,6 +1,7 @@
 import * as React from 'react' ;
 import { Flex, Icon, IconProps } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 
 const Item: CatalogueItem<{
   Icon: IconProps;
@@ -11,9 +12,11 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Flex alignChildren="middle" direction="vertical">
-        <Icon { ...props.Icon } />
-      </Flex>
+      <Showcase>
+        <Flex alignChildren="middle" direction="vertical">
+          <Icon { ...props.Icon } />
+        </Flex>
+      </Showcase>
     ),
     state: {
       Icon: {

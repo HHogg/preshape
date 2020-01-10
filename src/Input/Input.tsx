@@ -9,7 +9,7 @@ export interface InputProps extends TextProps {
   label?: string;
 }
 
-const Input = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement, InputProps>>((props, ref) => {
+const Input: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, InputProps>> = (props, ref) => {
   const {
     disabled,
     label,
@@ -38,6 +38,6 @@ const Input = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement, In
           tag="input" />
     </InputLabel>
   );
-});
+};
 
-export default Input;
+export default React.forwardRef(Input);

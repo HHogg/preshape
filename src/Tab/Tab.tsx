@@ -8,7 +8,7 @@ export interface TabProps extends BaseProps {
   active?: boolean;
 }
 
-const Tab = React.forwardRef<HTMLElement, Attributes<HTMLElement, TabProps>>((props, ref) => {
+const Tab: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TabProps>> = (props, ref) => {
   const { active, children, ...rest } = props;
   const classes = classnames('Tab', {
     'Tab--active': active,
@@ -30,6 +30,6 @@ const Tab = React.forwardRef<HTMLElement, Attributes<HTMLElement, TabProps>>((pr
       </Base>
     </Base>
   );
-});
+};
 
-export default Tab;
+export default React.forwardRef(Tab);

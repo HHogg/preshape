@@ -1,5 +1,6 @@
 import * as React from 'react' ;
 import { RadioButton, RadioButtonProps } from 'preshape';
+import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const Item: CatalogueItem<{
@@ -11,7 +12,7 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <React.Fragment>
+      <Showcase>
         <RadioButton { ...props.RadioButton }
             margin="x2"
             name="radio" />
@@ -21,7 +22,7 @@ const Item: CatalogueItem<{
         <RadioButton { ...props.RadioButton }
             margin="x2"
             name="radio" />
-      </React.Fragment>
+      </Showcase>
     ),
     state: {
       RadioButton: {

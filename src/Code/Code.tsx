@@ -4,13 +4,13 @@ import Text, { TextProps } from '../Text/Text';
 
 export interface CodeProps extends TextProps {}
 
-const Code = React.forwardRef<HTMLElement, Attributes<HTMLElement, CodeProps>>((props, ref) => {
+const Code: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, CodeProps>> = (props, ref) => {
   return (
     <Text { ...props }
         monospace
         ref={ ref }
         tag="code" />
   );
-});
+};
 
-export default Code;
+export default React.forwardRef(Code);

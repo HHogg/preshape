@@ -3,13 +3,13 @@ import Base, { Attributes, BaseProps } from '../Base/Base';
 
 export interface BulletPointProps extends BaseProps {}
 
-const BulletPoint = React.forwardRef<HTMLLIElement, Attributes<HTMLLIElement, BulletPointProps>>((props, ref) => {
+const BulletPoint: React.RefForwardingComponent<HTMLLIElement, Attributes<HTMLLIElement, BulletPointProps>> = (props, ref) => {
   return (
     <Base { ...props }
         className="BulletPoints__point"
         ref={ ref }
         tag="li" />
   );
-});
+};
 
-export default BulletPoint;
+export default React.forwardRef(BulletPoint);

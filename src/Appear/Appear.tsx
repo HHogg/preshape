@@ -1,27 +1,13 @@
 import * as React from 'react';
-import { motion, MotionProps } from 'framer-motion';
-import omit from 'lodash.omit';
+import { MotionProps } from 'framer-motion';
 import { transitionTimeFast, transitionTimingFunction } from '../variables';
 import animations from './animations';
 import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
-
-const motionProps: (keyof MotionProps)[] = [
-  'animate',
-  'initial',
-  'onAnimationComplete',
-  'onAnimationStart',
-  'style',
-  'transition',
-  'variants',
-];
-
-const FlexMotion = motion.custom<FlexProps>(
-  React.forwardRef<HTMLElement, FlexProps>((props, ref) =>
-    <Flex { ...omit(props, motionProps) } ref={ ref } />
-  ));
+import { FlexProps } from '../Flex/Flex';
+import Motion from '../Motion/Motion';
 
 export type TypeAnimation =
+  'Expand' |
   'Fade' |
   'FadeSlideUp' |
   'FadeSlideRight' |
@@ -31,27 +17,33 @@ export type TypeAnimation =
   'ScaleYDown' |
   'ScaleYUp';
 
+
+/**
+ * Using framer-motion, the Appear component provides a variety of
+ * ways to make parts of the UI appear in style.
+ */
 export interface AppearProps extends FlexProps, MotionProps {
   /**
-   * Type of animation that is applied when appearing and disappearing.
+   * Name of the animation to play when the visibility state changes.
    *
    * @default "FadeSlideUp"
    */
   animation?: TypeAnimation;
-    // 'ScaleYUp';
   /**
-   * Time (in milliseconds) that the appearance/disappearance animation is delayed for.
+   * Time (in milliseconds) that the animation is delayed for.
    *
    * @default 0
    */
   delay?: number;
   /**
+   * Duration (in milliseconds) of the animation from start to finish.
+   *
    * @default 200
    */
   duration?: number;
-  /** */
+  /** Callback for when the animation has ended */
   onAnimationEnd?: () => void;
-  /** */
+  /** Callback for when the animation has started */
   onAnimationStart?: () => void;
   /**
    * Trigger for appearance/disappearance animation.
@@ -60,12 +52,15 @@ export interface AppearProps extends FlexProps, MotionProps {
    * */
   visible?: boolean;
   /**
+   * The iniital visibility state, which determines the starting
+   * animation state.
+   *
    * @default false
    */
   visibleInitially?: boolean;
 }
 
-const Appear = React.forwardRef<HTMLElement, Attributes<HTMLElement, AppearProps>>((props, ref) => {
+const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, AppearProps>> = (props, ref) => {
   const {
     animation = 'FadeSlideUp',
     delay = 0,
@@ -80,7 +75,7 @@ const Appear = React.forwardRef<HTMLElement, Attributes<HTMLElement, AppearProps
   }
 
   return (
-    <FlexMotion { ...rest }
+    <Motion { ...rest }
         animate={ visible ? 'visible' : 'hidden' }
         initial={ visibleInitially ? 'visible' : 'hidden' }
         ref={ ref }
@@ -91,6 +86,6 @@ const Appear = React.forwardRef<HTMLElement, Attributes<HTMLElement, AppearProps
         } }
         variants={ animations[animation] } />
   );
-});
+};
 
-export default Appear;
+export default React.forwardRef(Appear);

@@ -17,7 +17,7 @@ export interface RadioButtonProps {
   paddingVertical?: TypeSize;
 }
 
-const RadioButton = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement, RadioButtonProps>>((props, ref) => {
+const RadioButton: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, RadioButtonProps>> = (props, ref) => {
   const {
     disabled,
     label,
@@ -41,6 +41,6 @@ const RadioButton = React.forwardRef<HTMLInputElement, Attributes<HTMLInputEleme
           ref={ ref } />
     </SelectInputLabel>
   );
-});
+};
 
-export default RadioButton;
+export default React.forwardRef(RadioButton);

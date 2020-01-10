@@ -1,6 +1,7 @@
 import * as React from 'react' ;
 import pick from 'lodash.pick';
 import { Flex, FlexProps } from 'preshape';
+import Showcase from '../Showcase';
 import ThemeIcon from '../../ThemeIcon/ThemeIcon';
 import { CatalogueItem } from '.';
 
@@ -28,18 +29,21 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Flex { ...pick(props.Flex, parentProps) }>
-        { Array.from({ length: 3 }).map((_, n) => (
-          <Flex { ...pick(props.Flex, childProps) }
-              alignChildren="middle"
-              backgroundColor="background-shade-3"
-              direction="vertical"
-              key={ n }
-              padding="x3">
-            <ThemeIcon size="1.5rem" />
-          </Flex>
-        )) }
-      </Flex>
+      <Showcase>
+        <Flex { ...pick(props.Flex, parentProps) }>
+          { Array.from({ length: 3 }).map((_, n) => (
+            <Flex { ...pick(props.Flex, childProps) }
+                alignChildren="middle"
+                backgroundColor="text-shade-1"
+                direction="vertical"
+                key={ n }
+                padding="x3"
+                textColor="background-shade-1">
+              <ThemeIcon size="1.5rem" />
+            </Flex>
+          )) }
+        </Flex>
+      </Showcase>
     ),
     state: {
       Flex: {

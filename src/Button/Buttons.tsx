@@ -17,7 +17,7 @@ export interface ButtonsProps extends FlexProps {
   joined?: boolean;
 }
 
-const Buttons = React.forwardRef<HTMLElement, Attributes<HTMLElement, ButtonsProps>>((props, ref) => {
+const Buttons: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, ButtonsProps>> = (props, ref) => {
   const { gap = 'x1', joined, ...rest } = props;
   const classes = classnames('Buttons', {
     'Buttons--joined': joined,
@@ -30,6 +30,6 @@ const Buttons = React.forwardRef<HTMLElement, Attributes<HTMLElement, ButtonsPro
         gap={ joined ? undefined : gap }
         ref={ ref } />
   );
-});
+};
 
-export default Buttons;
+export default React.forwardRef(Buttons);

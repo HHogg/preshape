@@ -7,7 +7,7 @@ export interface BulletPointsProps extends BaseProps {
   numbered?: boolean;
 }
 
-const BulletPoints = React.forwardRef<HTMLUListElement, Attributes<HTMLUListElement, BulletPointsProps>>((props, ref) => {
+const BulletPoints: React.RefForwardingComponent<HTMLUListElement, Attributes<HTMLUListElement, BulletPointsProps>> = (props, ref) => {
   const { numbered, ...rest } = props;
   const classes = classnames('BulletPoints', {
     'BulletPoints--numbered': numbered,
@@ -19,6 +19,6 @@ const BulletPoints = React.forwardRef<HTMLUListElement, Attributes<HTMLUListElem
         ref={ ref }
         tag="ul" />
   );
-});
+};
 
-export default BulletPoints;
+export default React.forwardRef(BulletPoints);

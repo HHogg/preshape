@@ -11,7 +11,7 @@ export interface ListItemProps extends FlexProps {
   separator?: string;
 }
 
-const ListItem = React.forwardRef<HTMLLIElement, Attributes<HTMLLIElement, ListItemProps>>((props, ref) => {
+const ListItem: React.RefForwardingComponent<HTMLLIElement, Attributes<HTMLLIElement, ListItemProps>> = (props, ref) => {
   const { children, separator = '/', ...rest } = props;
 
   return (
@@ -25,6 +25,6 @@ const ListItem = React.forwardRef<HTMLLIElement, Attributes<HTMLLIElement, ListI
       <Flex>{ children }</Flex>
     </Flex>
   );
-});
+};
 
-export default ListItem;
+export default React.forwardRef(ListItem);

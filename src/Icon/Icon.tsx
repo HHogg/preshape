@@ -218,7 +218,7 @@ export interface IconProps extends BaseProps {
   spin?: 'slow' | 'base' | 'fast';
 }
 
-const Icon = React.forwardRef<SVGSVGElement, Attributes<SVGSVGElement, IconProps>>((props, ref) => {
+const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<SVGSVGElement, IconProps>> = (props, ref) => {
   const { name, size, spin, ...rest } = props;
   const classes = classnames('Icon', {
     [`Icon--spin-${spin}`]: spin,
@@ -239,6 +239,6 @@ const Icon = React.forwardRef<SVGSVGElement, Attributes<SVGSVGElement, IconProps
       { IconPathMap[name].map((d, i) => <path d={ d } key={ i } />) }
     </Base>
   );
-});
+};
 
-export default Icon;
+export default React.forwardRef(Icon);

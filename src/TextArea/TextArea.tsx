@@ -19,7 +19,7 @@ export interface TextAreaProps extends TextProps {
     paddingVertical?: TypeSize;
 }
 
-const TextArea = React.forwardRef<HTMLTextAreaElement, Attributes<HTMLTextAreaElement, TextAreaProps>>((props, ref) => {
+const TextArea: React.RefForwardingComponent<HTMLTextAreaElement, Attributes<HTMLTextAreaElement, TextAreaProps>> = (props, ref) => {
   const {
     disabled,
     label,
@@ -48,6 +48,6 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Attributes<HTMLTextAreaEl
           tag="textarea" />
     </InputLabel>
   );
-});
+};
 
-export default TextArea;
+export default React.forwardRef(TextArea);

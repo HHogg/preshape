@@ -1,5 +1,6 @@
 import * as React from 'react' ;
 import { TextArea, TextAreaProps } from 'preshape';
+import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const Item: CatalogueItem<{
@@ -11,7 +12,9 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <TextArea { ...props.TextArea } placeholder="Type into me" rows={ 5 } />
+      <Showcase>
+        <TextArea { ...props.TextArea } placeholder="Type into me" rows={ 5 } />
+      </Showcase>
     ),
     state: {
       TextArea: {

@@ -1,5 +1,6 @@
 import * as React from 'react' ;
 import { Text, TextProps } from 'preshape';
+import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const Item: CatalogueItem<{
@@ -11,7 +12,7 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <React.Fragment>
+      <Showcase>
         <Text heading size="x5" { ...props.Text } margin="x3">
           The spectacle before us was indeed sublime.
         </Text>
@@ -27,7 +28,7 @@ const Item: CatalogueItem<{
           dark gulf below, I could see a ruddy light streaming
           through a rift in the clouds.
         </Text>
-      </React.Fragment>
+      </Showcase>
     ),
     state: {
       Text: {},

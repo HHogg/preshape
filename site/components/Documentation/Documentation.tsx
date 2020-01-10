@@ -43,22 +43,7 @@ export default () => {
 
         { item.showcase && (
           <Flex margin="x6">
-            <Flex
-                backgroundColor="background-shade-2"
-                container
-                padding="x6">
-              <item.showcase.Component { ...state } />
-            </Flex>
-
-            <Text
-                align="middle"
-                backgroundColor="background-shade-3"
-                paddingHorizontal="x6"
-                paddingVertical="x2"
-                size="x1"
-                strong>
-              Use the props table below to control this example above.
-            </Text>
+            <item.showcase.Component { ...state } />
           </Flex>
         ) }
 

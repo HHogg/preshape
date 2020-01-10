@@ -6,10 +6,10 @@ export interface PlacementContentProps extends FlexProps {
 
 }
 
-const PlacementContent = React.forwardRef<HTMLElement, Attributes<HTMLElement, PlacementContentProps>>((props, ref) => {
+const PlacementContent: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, PlacementContentProps>> = (props, ref) => {
   return (
     <Flex { ...props } container ref={ ref } />
   );
-});
+};
 
-export default PlacementContent;
+export default React.forwardRef(PlacementContent);

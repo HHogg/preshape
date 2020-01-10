@@ -1,5 +1,6 @@
 import * as React from 'react' ;
 import { Alert, AlertProps, Text } from 'preshape';
+import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const Item: CatalogueItem<{
@@ -11,11 +12,13 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Alert { ...props.Alert } padding="x4">
-        <Text size="x1" strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          laoreet faucibus quam et fringilla. Maecenas vitae pulvinar augue.
-          Suspendisse mollis bibendum leo, ac porta nisi convallis eget.</Text>
-      </Alert>
+      <Showcase>
+        <Alert { ...props.Alert } padding="x4">
+          <Text size="x1" strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            laoreet faucibus quam et fringilla. Maecenas vitae pulvinar augue.
+            Suspendisse mollis bibendum leo, ac porta nisi convallis eget.</Text>
+        </Alert>
+      </Showcase>
     ),
     state: {
       Alert: {

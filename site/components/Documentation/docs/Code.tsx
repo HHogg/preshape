@@ -1,5 +1,6 @@
 import * as React from 'react' ;
 import { CodeBlock, CodeBlockProps } from 'preshape';
+import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const css = `/**
@@ -50,16 +51,12 @@ const square = two.makeRectangle(213, 100, 100, 100);`;
 const jsx = `import * as React from 'react' ;
 import { Flex, Text } from 'preshape';
 
-export default class MyPage extends Component {
-  render() {
-    return (
-      <Flex alignChildren="middle" direction="horizontal" gap="x4">
-        <Flex><Text strong>Lorem</Text></Flex>
-        <Flex><Text strong>Ipsum</Text></Flex>
-      </Flex>
-    );
-  };
-}`;
+export default () => (
+  <Flex alignChildren="middle" direction="horizontal" gap="x4">
+    <Flex><Text strong>Lorem</Text></Flex>
+    <Flex><Text strong>Ipsum</Text></Flex>
+  </Flex>
+);`;
 
 const json = `[
   ["Big Tasty", 799, 46, 50, 4.3, 45, 3.4],
@@ -90,13 +87,16 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <CodeBlock { ...props.CodeBlock }>
-        { props.CodeBlock.language && languageExamples[props.CodeBlock.language] || ''  }
-      </CodeBlock>
+      <Showcase>
+        <CodeBlock { ...props.CodeBlock }>
+          { props.CodeBlock.language && languageExamples[props.CodeBlock.language] || '' }
+        </CodeBlock>
+      </Showcase>
     ),
     state: {
       CodeBlock: {
         language: 'js',
+        wrap: true,
       },
     },
   },

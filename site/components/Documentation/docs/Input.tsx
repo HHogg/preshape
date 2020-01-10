@@ -1,6 +1,7 @@
 import * as React from 'react' ;
 import { Input, InputProps } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 
 const Item: CatalogueItem<{
   Input: InputProps;
@@ -11,7 +12,9 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Input { ...props.Input } placeholder="Type into me" />
+      <Showcase>
+        <Input { ...props.Input } placeholder="Type into me" />
+      </Showcase>
     ),
     state: {
       Input: {

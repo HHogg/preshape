@@ -1,6 +1,7 @@
 import * as React from 'react' ;
 import { Grid, GridProps, GridItem, GridItemProps, Flex } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 import ThemeIcon from '../../ThemeIcon/ThemeIcon';
 
 const Item: CatalogueItem<{
@@ -13,21 +14,23 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Grid { ...props.Grid }>
-        { Array.from({ length: 9 }).map((_, n) => (
-          <GridItem { ...props.GridItem } key={ n }>
-            <Flex
-                alignChildren="middle"
-                backgroundColor="text-shade-1"
-                direction="vertical"
-                height="6rem"
-                textColor="background-shade-1"
-                width="6rem">
-              <ThemeIcon size="1.5rem" />
-            </Flex>
-          </GridItem>
-        )) }
-      </Grid>
+      <Showcase>
+        <Grid { ...props.Grid }>
+          { Array.from({ length: 9 }).map((_, n) => (
+            <GridItem { ...props.GridItem } key={ n }>
+              <Flex
+                  alignChildren="middle"
+                  backgroundColor="text-shade-1"
+                  direction="vertical"
+                  height="3rem"
+                  textColor="background-shade-1"
+                  width="3rem">
+                <ThemeIcon size="1.5rem" />
+              </Flex>
+            </GridItem>
+          )) }
+        </Grid>
+      </Showcase>
     ),
     state: {
       Grid: {

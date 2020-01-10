@@ -1,10 +1,25 @@
-import { Variants } from 'framer-motion';
+import { Variant } from 'framer-motion';
 import { sizeX4Px } from '../variables';
 import { TypeAnimation } from './Appear';
 
 const variants: {
-  [key in TypeAnimation]: Variants;
+  [key in TypeAnimation]: {
+    hidden: Variant;
+    visible: Variant;
+  };
 } = {
+  Expand: {
+    hidden: {
+      height: 0,
+      opacity: 0,
+      overflow: 'hidden',
+    },
+    visible: {
+      height: 'auto',
+      opacity: 1,
+      overflow: 'visible',
+    },
+  },
   Fade: {
     hidden: {
       opacity: 0,

@@ -5,7 +5,7 @@ import './BlockQuote.css';
 
 export interface BlockQuoteProps extends TextProps {}
 
-const BlockQuote = React.forwardRef<HTMLQuoteElement, Attributes<HTMLQuoteElement, BlockQuoteProps>>((props, ref) => {
+const BlockQuote: React.RefForwardingComponent<HTMLQuoteElement, Attributes<HTMLQuoteElement, BlockQuoteProps>> = (props, ref) => {
   return (
     <Text
         paddingHorizontal="x6"
@@ -16,6 +16,6 @@ const BlockQuote = React.forwardRef<HTMLQuoteElement, Attributes<HTMLQuoteElemen
         tag="blockquote"
         textColor="text-shade-3" />
   );
-});
+};
 
-export default BlockQuote;
+export default React.forwardRef(BlockQuote);

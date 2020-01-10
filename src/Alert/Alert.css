@@ -1,56 +1,4 @@
-@keyframes AlertOutlineAccent {
-  from {
-    border-color: var(--color-accent--shade-3);
-    color: var(--color-accent--shade-3);
-  }
-
-  to {
-    border-color: var(--color-accent--shade-1);
-    color: var(--color-accent--shade-1);
-  }
-}
-
-@keyframes AlertOutlineNegative {
-  from {
-    border-color: var(--color-negative--shade-3);
-    color: var(--color-negative--shade-3);
-  }
-
-  to {
-    border-color: var(--color-negative--shade-1);
-    color: var(--color-negative--shade-1);
-  }
-}
-
-@keyframes AlertOutlinePositive {
-  from {
-    border-color: var(--color-positive--shade-3);
-    color: var(--color-positive--shade-3);
-  }
-
-  to {
-    border-color: var(--color-positive--shade-1);
-    color: var(--color-positive--shade-1);
-  }
-}
-
-@keyframes AlertFillAccent {
-  from { background-color: var(--color-accent--shade-3); }
-  to { background-color: var(--color-accent--shade-1); }
-}
-
-@keyframes AlertFillNegative {
-  from { background-color: var(--color-negative--shade-3); }
-  to { background-color: var(--color-negative--shade-1); }
-}
-
-@keyframes AlertFillPositive {
-  from { background-color: var(--color-positive--shade-3); }
-  to { background-color: var(--color-positive--shade-1); }
-}
-
 .Alert {
-  color: var(--color-light--shade-1);
   animation-direction: alternate;
   animation-duration: var(--transition-time--slow);
   animation-fill-mode: forwards;
@@ -59,15 +7,25 @@
   animation-timing-function: var(--transition-function);
 }
 
-.Alert--flash {
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+.Alert--accent {
+  border-color: var(--color-accent--shade-2);
+  color: var(--color-accent--shade-2);
 }
 
-.Alert--accent { animation-name: AlertOutlineAccent; }
-.Alert--negative { animation-name: AlertOutlineNegative; }
-.Alert--positive { animation-name: AlertOutlinePositive; }
+.Alert--negative {
+  border-color: var(--color-negative--shade-2);
+  color: var(--color-negative--shade-2);
+}
 
-.Alert--fill.Alert--accent { animation-name: AlertFillAccent; }
-.Alert--fill.Alert--negative { animation-name: AlertFillNegative; }
-.Alert--fill.Alert--positive { animation-name: AlertFillPositive; }
+.Alert--positive {
+  border-color: var(--color-positive--shade-2);
+  color: var(--color-positive--shade-2);
+}
+
+.Alert--fill {
+  color: var(--color-white);
+
+  &.Alert--accent { background-color: var(--color-accent--shade-2); }
+  &.Alert--negative { background-color: var(--color-negative--shade-2); }
+  &.Alert--positive { background-color: var(--color-positive--shade-2); }
+}

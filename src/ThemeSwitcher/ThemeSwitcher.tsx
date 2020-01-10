@@ -6,12 +6,13 @@ import List, { ListProps } from '../List/List';
 import ListItem from '../List/ListItem';
 
 export interface ThemeSwitcherProps extends ListProps {
+  iconSize?: string;
   onChange?: (theme: TypeTheme) => void;
   theme: TypeTheme;
 }
 
-const ThemeControls = React.forwardRef<HTMLUListElement, Attributes<HTMLUListElement, ThemeSwitcherProps>>((props, ref) => {
-  const { onChange, theme, ...rest } = props;
+const ThemeControls: React.RefForwardingComponent<HTMLUListElement, Attributes<HTMLUListElement, ThemeSwitcherProps>> = (props, ref) => {
+  const { iconSize = '1rem', onChange, theme, ...rest } = props;
 
   return (
     <List { ...rest } ref={ ref }>
@@ -19,7 +20,7 @@ const ThemeControls = React.forwardRef<HTMLUListElement, Attributes<HTMLUListEle
         <Link
             active={ theme === 'day' }
             onClick={ onChange && (() => onChange('day')) }>
-          <Icon name="Sun" size="1rem" />
+          <Icon name="Sun" size={ iconSize } />
         </Link>
       </ListItem>
 
@@ -27,11 +28,11 @@ const ThemeControls = React.forwardRef<HTMLUListElement, Attributes<HTMLUListEle
         <Link
             active={ theme === 'night' }
             onClick={ onChange && (() => onChange('night')) }>
-          <Icon name="Moon" size="0.9rem" />
+          <Icon name="Moon" size={ iconSize } />
         </Link>
       </ListItem>
     </List>
   );
-});
+};
 
-export default ThemeControls;
+export default React.forwardRef(ThemeControls);

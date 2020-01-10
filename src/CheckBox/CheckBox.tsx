@@ -19,7 +19,7 @@ export interface CheckBoxProps {
   paddingVertical?: TypeSize;
 }
 
-const CheckBox = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement, CheckBoxProps>>((props, ref) => {
+const CheckBox: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, CheckBoxProps>> = (props, ref) => {
   const {
     disabled,
     label,
@@ -43,6 +43,6 @@ const CheckBox = React.forwardRef<HTMLInputElement, Attributes<HTMLInputElement,
           ref={ ref } />
     </SelectInputLabel>
   );
-});
+};
 
-export default CheckBox;
+export default React.forwardRef(CheckBox);

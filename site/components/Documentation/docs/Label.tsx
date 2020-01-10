@@ -1,6 +1,7 @@
 import * as React from 'react' ;
 import { Label, LabelProps, Labels, LabelsProps } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 
 const Item: CatalogueItem<{
   Label: LabelProps;
@@ -12,13 +13,15 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Labels { ...props.Labels }>
-        { Array.from({ length: 5 }).map((_, n) => (
-          <Label { ...props.Label } key={ n }>
-            Lorem ipsum
-          </Label>
-        )) }
-      </Labels>
+      <Showcase>
+        <Labels { ...props.Labels }>
+          { Array.from({ length: 5 }).map((_, n) => (
+            <Label { ...props.Label } key={ n }>
+              Lorem ipsum
+            </Label>
+          )) }
+        </Labels>
+      </Showcase>
     ),
     state: {
       Label: {},

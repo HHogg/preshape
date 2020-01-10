@@ -1,5 +1,6 @@
 import * as React from 'react' ;
 import { CheckBox, CheckBoxProps } from 'preshape';
+import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const Item: CatalogueItem<{
@@ -11,11 +12,11 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <React.Fragment>
+      <Showcase>
         <CheckBox { ...props.CheckBox } margin="x2" />
         <CheckBox { ...props.CheckBox } margin="x2" />
         <CheckBox { ...props.CheckBox } margin="x2" />
-      </React.Fragment>
+      </Showcase>
     ),
     state: {
       CheckBox: {

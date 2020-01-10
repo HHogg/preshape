@@ -1,6 +1,7 @@
 import * as React from 'react' ;
 import { Link, LinkProps } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 
 const Item: CatalogueItem<{
   Link: LinkProps;
@@ -11,7 +12,9 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <Link { ...props.Link }>Lorem ipsum</Link>
+      <Showcase>
+        <Link { ...props.Link }>Lorem ipsum</Link>
+      </Showcase>
     ),
     state: {
       Link: {

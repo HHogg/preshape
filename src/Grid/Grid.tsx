@@ -21,7 +21,7 @@ export interface GridProps extends FlexProps {
   rowSize?: string | 'max-content' | 'min-content';
 }
 
-const Grid = React.forwardRef<HTMLElement, Attributes<HTMLElement, GridProps>>((props, ref) => {
+const Grid: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, GridProps>> = (props, ref) => {
   const {
     alignChildren,
     className,
@@ -48,6 +48,6 @@ const Grid = React.forwardRef<HTMLElement, Attributes<HTMLElement, GridProps>>((
   return (
     <Flex { ...rest } className={ classes } ref={ ref } style={ style } />
   );
-});
+};
 
-export default Grid;
+export default React.forwardRef(Grid);

@@ -11,15 +11,12 @@ export interface AlertProps extends BaseProps {
   color: 'accent' | 'negative' | 'positive';
   /** Appies a filled in style to the alert. */
   fill?: boolean;
-  /** Whether the alert is flashing, a great way to give it extra attention. */
-  flash?: boolean;
 }
 
-const Alert = React.forwardRef<HTMLDivElement, Attributes<HTMLDivElement, AlertProps>>((props, ref) => {
-  const { color, fill, flash, ...rest } = props;
+const Alert: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, AlertProps>> = (props, ref) => {
+  const { color, fill, ...rest } = props;
   const classes = classnames('Alert', `Alert--${color}`, {
     'Alert--fill': fill,
-    'Alert--flash': flash,
   });
 
   return (
@@ -28,6 +25,6 @@ const Alert = React.forwardRef<HTMLDivElement, Attributes<HTMLDivElement, AlertP
         className={ classes }
         ref={ ref } />
   );
-});
+};
 
-export default Alert;
+export default React.forwardRef(Alert);

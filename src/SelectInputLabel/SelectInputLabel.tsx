@@ -8,7 +8,7 @@ export interface SelectInputLabelProps extends FlexProps {
   label: string;
 }
 
-const SelectInputLabel = React.forwardRef<HTMLLabelElement, Attributes<HTMLLabelElement, SelectInputLabelProps>>((props, ref) => {
+const SelectInputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, SelectInputLabelProps>> = (props, ref) => {
   const {
     children,
     label,
@@ -32,6 +32,6 @@ const SelectInputLabel = React.forwardRef<HTMLLabelElement, Attributes<HTMLLabel
       </Flex>
     </Flex>
   );
-});
+};
 
-export default SelectInputLabel;
+export default React.forwardRef(SelectInputLabel);

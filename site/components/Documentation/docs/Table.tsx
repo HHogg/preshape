@@ -14,6 +14,7 @@ import {
   TableRowProps,
 } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 
 const headers = [
   'Burger',
@@ -64,37 +65,39 @@ const Item: CatalogueItem<{
       });
 
       return (
-        <Table { ...props.Table }>
-          <TableHeader { ...props.TableHeader }>
-            <TableRow { ...props.TableRow }>
-              { headers.map((header, index) => (
-                <TableHeaderCell { ...props.TableHeaderCell }
-                    align={ index > 0 ? 'end' : 'start' }
-                    key={ header }
-                    onClick={ () => setState([index, index !== sortIndex ? -1 : (sortDirection === -1 ? 1 : -1)]) }
-                    sortable
-                    sorted={ sortIndex === index }>
-                  { header }
-                </TableHeaderCell>
-              )) }
-            </TableRow>
-          </TableHeader>
-
-          <TableBody { ...props.TableBody }>
-            { sortedData.map((data) => (
-              <TableRow { ...props.TableRow } key={ data[0] }>
-                { data.map((data, index) => (
-                  <TableCell { ...props.TableCell }
+        <Showcase>
+          <Table { ...props.Table }>
+            <TableHeader { ...props.TableHeader }>
+              <TableRow { ...props.TableRow }>
+                { headers.map((header, index) => (
+                  <TableHeaderCell { ...props.TableHeaderCell }
                       align={ index > 0 ? 'end' : 'start' }
-                      key={ index }
+                      key={ header }
+                      onClick={ () => setState([index, index !== sortIndex ? -1 : (sortDirection === -1 ? 1 : -1)]) }
+                      sortable
                       sorted={ sortIndex === index }>
-                    { data }
-                  </TableCell>
+                    { header }
+                  </TableHeaderCell>
                 )) }
               </TableRow>
-            )) }
-          </TableBody>
-        </Table>
+            </TableHeader>
+
+            <TableBody { ...props.TableBody }>
+              { sortedData.map((data) => (
+                <TableRow { ...props.TableRow } key={ data[0] }>
+                  { data.map((data, index) => (
+                    <TableCell { ...props.TableCell }
+                        align={ index > 0 ? 'end' : 'start' }
+                        key={ index }
+                        sorted={ sortIndex === index }>
+                      { data }
+                    </TableCell>
+                  )) }
+                </TableRow>
+              )) }
+            </TableBody>
+          </Table>
+        </Showcase>
       );
     },
     state: {

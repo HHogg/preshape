@@ -1,6 +1,7 @@
 import * as React from 'react' ;
 import { List, ListProps, ListItem, ListItemProps } from 'preshape';
 import { CatalogueItem } from '.';
+import Showcase from '../Showcase';
 
 const Item: CatalogueItem<{
   List: ListProps;
@@ -12,17 +13,21 @@ const Item: CatalogueItem<{
   type: 'component',
   showcase: {
     Component: (props) => (
-      <List { ...props.List }>
-        { Array.from({ length: 5 }).map((_, n) => (
-          <ListItem { ...props.ListItem } key={ n }>
-            Lorem ipsum
-          </ListItem>
-        )) }
-      </List>
+      <Showcase>
+        <List { ...props.List }>
+          { Array.from({ length: 5 }).map((_, n) => (
+            <ListItem { ...props.ListItem } key={ n }>
+              Lorem ipsum
+            </ListItem>
+          )) }
+        </List>
+      </Showcase>
     ),
     state: {
       List: {},
-      ListItem: {},
+      ListItem: {
+        separator: '•',
+      },
     },
   },
   apis: [{

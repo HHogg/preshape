@@ -140,7 +140,7 @@ type ReactElemenetProps = Omit<
   React.SVGAttributes<Element>
 , 'crossOrigin'>;
 
-const Base = React.forwardRef<Element, BaseProps & ReactElemenetProps>((props, ref) => {
+const Base: React.RefForwardingComponent<Element, BaseProps & ReactElemenetProps> = (props, ref) => {
   const {
     absolute,
     backgroundColor,
@@ -198,6 +198,6 @@ const Base = React.forwardRef<Element, BaseProps & ReactElemenetProps>((props, r
     ref: ref,
     style: { height, minHeight, maxWidth, minWidth, width, zIndex, ...style },
   }, children);
-});
+};
 
-export default Base;
+export default React.forwardRef(Base);

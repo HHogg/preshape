@@ -22,7 +22,7 @@ export interface CodeBlockProps extends TextProps {
   wrap?: boolean;
 }
 
-const CodeBlock = React.forwardRef<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>>((props, ref) => {
+const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>> = (props, ref) => {
   const { children, language, wrap, ...rest } = props;
   const classes = classnames('CodeBlock', {
     'CodeBlock--wrap': wrap,
@@ -47,6 +47,6 @@ const CodeBlock = React.forwardRef<HTMLPreElement, Attributes<HTMLPreElement, Co
       ) }
     </Text>
   );
-});
+};
 
-export default CodeBlock;
+export default React.forwardRef(CodeBlock);

@@ -23,7 +23,7 @@ export interface ButtonProps extends FlexProps {
   fill?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, Attributes<HTMLButtonElement, ButtonProps>>((props, ref) => {
+const Button: React.RefForwardingComponent<HTMLButtonElement, Attributes<HTMLButtonElement, ButtonProps>> = (props, ref) => {
   const { active, color = 'accent', fill, ...rest } = props;
   const classes = classnames('Button', {
     'Button--active': active,
@@ -40,6 +40,6 @@ const Button = React.forwardRef<HTMLButtonElement, Attributes<HTMLButtonElement,
         ref={ ref }
         tag="button" />
   );
-});
+};
 
-export default Button;
+export default React.forwardRef(Button);
