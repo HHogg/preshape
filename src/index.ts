@@ -44,6 +44,7 @@ export { default as Labels, LabelsProps } from './Label/Labels';
 export { default as Link, LinkProps } from './Link/Link';
 export { default as List, ListProps } from './List/List';
 export { default as ListItem, ListItemProps } from './List/ListItem';
+export { default as Motion } from './Motion/Motion';
 export { default as Placement, PlacementProps } from './Placement/Placement';
 export { default as PlacementArrow, PlacementArrowProps } from './Placement/PlacementArrow';
 export { default as PlacementContent, PlacementContentProps } from './Placement/PlacementContent';
