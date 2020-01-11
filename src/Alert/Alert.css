@@ -1,12 +1,3 @@
-.Alert {
-  animation-direction: alternate;
-  animation-duration: var(--transition-time--slow);
-  animation-fill-mode: forwards;
-  animation-iteration-count: 0;
-  animation-play-state: paused;
-  animation-timing-function: var(--transition-function);
-}
-
 .Alert--accent {
   border-color: var(--color-accent--shade-2);
   color: var(--color-accent--shade-2);

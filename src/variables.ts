@@ -28,6 +28,9 @@ export const borderSizeX2Px = 2;
 export const borderSizeX1Rem = 0.0625;
 export const borderSizeX2Rem = 0.125;
 
+export const colorWhite = '#FFFEFC';
+export const colorBlack = '#1E1B18';
+
 export const colorDarkShade1 = color.gray[9];
 export const colorDarkShade2 = color.gray[8];
 export const colorDarkShade3 = color.gray[7];
@@ -36,21 +39,21 @@ export const colorLightShade1 = color.gray[0];
 export const colorLightShade2 = color.gray[1];
 export const colorLightShade3 = color.gray[2];
 
-export const colorAccent1Shade1 = color.blue[4];
-export const colorAccent1Shade2 = color.blue[5];
-export const colorAccent1Shade3 = color.blue[6];
+export const colorAccent1Shade1 = color.indigo[5];
+export const colorAccent1Shade2 = color.indigo[6];
+export const colorAccent1Shade3 = color.indigo[7];
 
-export const colorAccent2Shade1 = color.violet[4];
-export const colorAccent2Shade2 = color.violet[5];
-export const colorAccent2Shade3 = color.violet[6];
+export const colorAccent2Shade1 = color.grape[5];
+export const colorAccent2Shade2 = color.grape[6];
+export const colorAccent2Shade3 = color.grape[7];
 
-export const colorPositiveShade1 = color.green[4];
-export const colorPositiveShade2 = color.green[5];
-export const colorPositiveShade3 = color.green[6];
+export const colorPositiveShade1 = color.teal[5];
+export const colorPositiveShade2 = color.teal[6];
+export const colorPositiveShade3 = color.teal[7];
 
-export const colorNegativeShade1 = color.red[4];
-export const colorNegativeShade2 = color.red[5];
-export const colorNegativeShade3 = color.red[6];
+export const colorNegativeShade1 = color.pink[5];
+export const colorNegativeShade2 = color.pink[6];
+export const colorNegativeShade3 = color.pink[7];
 
 export const themeDay = {
   colorBackgroundShade1: colorLightShade1,

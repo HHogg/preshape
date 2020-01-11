@@ -12,7 +12,8 @@
   --border-size--x1: 0.0625rem;
   --border-size--x2: 0.125rem;
 
-  --color-white: #FFFFFF;
+  --color-white: #FFFEFC;
+  --color-black: #1E1B18;
 
   --color-dark--shade-1: var(--oc-gray-9);
   --color-dark--shade-2: var(--oc-gray-8);
@@ -22,21 +23,21 @@
   --color-light--shade-2: var(--oc-gray-1);
   --color-light--shade-3: var(--oc-gray-2);
 
-  --color-accent-1--shade-1: var(--oc-blue-4);
-  --color-accent-1--shade-2: var(--oc-blue-5);
-  --color-accent-1--shade-3: var(--oc-blue-6);
+  --color-accent-1--shade-1: var(--oc-indigo-5);
+  --color-accent-1--shade-2: var(--oc-indigo-6);
+  --color-accent-1--shade-3: var(--oc-indigo-7);
 
-  --color-accent-2--shade-1: var(--oc-violet-4);
-  --color-accent-2--shade-2: var(--oc-violet-5);
-  --color-accent-2--shade-3: var(--oc-violet-6);
+  --color-accent-2--shade-1: var(--oc-grape-5);
+  --color-accent-2--shade-2: var(--oc-grape-6);
+  --color-accent-2--shade-3: var(--oc-grape-7);
 
-  --color-positive--shade-1: var(--oc-green-4);
-  --color-positive--shade-2: var(--oc-green-5);
-  --color-positive--shade-3: var(--oc-green-6);
+  --color-positive--shade-1: var(--oc-teal-5);
+  --color-positive--shade-2: var(--oc-teal-6);
+  --color-positive--shade-3: var(--oc-teal-7);
 
-  --color-negative--shade-1: var(--oc-red-4);
-  --color-negative--shade-2: var(--oc-red-5);
-  --color-negative--shade-3: var(--oc-red-6);
+  --color-negative--shade-1: var(--oc-pink-5);
+  --color-negative--shade-2: var(--oc-pink-6);
+  --color-negative--shade-3: var(--oc-pink-7);
 
   --transition-time--fast: 200ms;
   --transition-time--base: 400ms;
@@ -45,7 +46,7 @@
 
   --text-family--heading: 'Merriweather', serif;
   --text-family--content: 'Open Sans', sans-serif;
-  --text-family--monospace: 'Courier', 'Ubuntu Mono', monospace;
+  --text-family--monospace: 'Courier New', 'Ubuntu Mono', monospace;
 
   --text-size--x1: 0.8125rem;
   --text-size--x2: 1rem;
@@ -77,9 +78,9 @@
 }
 
 .Theme--night {
-  --color-background--shade-1: var(--color-dark--shade-1);
-  --color-background--shade-2: var(--color-dark--shade-2);
-  --color-background--shade-3: var(--color-dark--shade-3);
+  --color-background--shade-1: var(--color-black);
+  --color-background--shade-2: var(--color-dark--shade-1);
+  --color-background--shade-3: var(--color-dark--shade-2);
 
   --color-text--shade-1: var(--color-light--shade-1);
   --color-text--shade-2: var(--color-light--shade-2);
