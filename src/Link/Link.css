@@ -12,5 +12,45 @@
 }
 
 .Link--underline {
-  border-bottom: 0.0625rem dashed var(--color-accent--shade-2);
+  display: inline-block;
+  position: relative;
+  padding: 0 var(--size--x1);
+  font-style: italic;
+  z-index: 0;
+  transition-property: color, background-color;
+  transition-duration: var(--transition-time--fast);
+  transition-timing-function: var(--transition-function);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0.1) rotate(-1deg);
+    transform-origin: bottom;
+    border-radius: var(--border-size--x1);
+    background-color: var(--color-accent--shade-2);
+    z-index: -1;
+    transition-property: bacgkround-color, transform;
+    transition-duration: var(--transition-time--fast);
+    transition-timing-function: var(--transition-function);
+  }
+
+  &.Link--active,
+  &:hover {
+    color: var(--color-light--shade-1);
+  }
+
+  &.Link--active::before,
+  &:hover::before {
+    transform: scaleY(1);
+    background-color: var(--color-accent--shade-1);
+  }
+
+  &.Link--active::before,
+  &:active::before {
+    background-color: var(--color-accent--shade-3);
+  }
 }

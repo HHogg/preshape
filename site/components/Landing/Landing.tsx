@@ -54,6 +54,7 @@ export default () => {
               { landingSections.map(({ title, id }) => (
                 <ListItem key={ title } separator="~" >
                   <Link
+                      active
                       className="MyLink"
                       href={ `#${id}` }
                       size="x1"
