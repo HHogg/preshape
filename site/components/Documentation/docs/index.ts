@@ -1,4 +1,4 @@
-import { APIViewerItem } from '../../APIViewer/APIViewer';
+import { APIRecord } from '../../APIViewer/Types';
 
 export interface CatalogueItem<S extends {} = {}> {
   name: string;
@@ -10,7 +10,7 @@ export interface CatalogueItem<S extends {} = {}> {
     Component: React.ReactType<S>;
     state?: S;
   };
-  apis?: APIViewerItem[];
+  apis?: APIRecord[];
 }
 
 export default {
@@ -35,4 +35,5 @@ export default {
   table: require('./Table').default,
   text: require('./Text').default,
   textarea: require('./TextArea').default,
+  themeswitcher: require('./ThemeSwitcher').default,
 };

@@ -1,16 +1,22 @@
 import * as React from 'react';
+import { JSONOutput } from 'typedoc';
 import { Labels } from 'preshape';
 import TypeRenderer from './TypeRenderer';
+import { Renderer } from './Types';
 
-export default (props) => {
-  const { onStateChange, state, types } = props;
+interface Props extends Renderer, JSONOutput.UnionType {
+
+}
+
+export default (props: Props) => {
+  const { context, onStateChange, state, types } = props;
   const filteredTypes = types.filter(({ name }) => name !== 'undefined');
 
   if (filteredTypes.length === 1) {
     return (
       <TypeRenderer { ...filteredTypes[0] }
+          context={ context }
           onStateChange={ onStateChange }
-          parent={ props }
           state={ state } />
     );
   }
@@ -19,9 +25,9 @@ export default (props) => {
     <Labels>
       { filteredTypes.map((type, index) => (
         <TypeRenderer { ...type }
+            context={ context }
             key={ index }
             onStateChange={ onStateChange }
-            parent={ props }
             state={ state } />
       )) }
     </Labels>

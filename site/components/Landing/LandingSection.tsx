@@ -10,9 +10,12 @@ export default (props: Attributes<HTMLElement, Props>) => {
   const { children, id, title, ...rest } = props;
 
   return (
-    <Base { ...rest } id={ id } paddingVertical="x8">
+    <Base { ...rest } id={ id } paddingVertical="x12">
       { title && <Text margin="x4" size="x3" strong>{ title }</Text> }
-      { children }
+
+      <Base>
+        { children }
+      </Base>
     </Base>
   );
 };

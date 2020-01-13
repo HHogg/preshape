@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+  themesOpposite,
   Form,
   Input,
   Placement,
@@ -8,27 +9,29 @@ import {
   PlacementManager,
   PlacementReference,
 } from 'preshape';
+import { Renderer } from './Types';
+import SiteContext from '../SiteContext';
 
-interface Props {
+export interface Props extends Renderer {
   children: (props: {
     onClick: (event: React.MouseEvent) => void;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ref: React.Ref<any>;
   }) => React.ReactNode;
-  value?: number | string;
-  onChange: (value?: string) => void;
-  placeholder: string;
+  name?: string;
+  placeholder?: string;
 }
 
 export default (props: Props) => {
-  const { children, value, onChange, placeholder } = props;
+  const { children, context, state, onStateChange, placeholder } = props;
+  const { theme } = React.useContext(SiteContext);
   const [visible, setVisible] = React.useState(false);
-  const [textValue, setTextValue] = React.useState(value || '');
+  const [textValue, setTextValue] = React.useState((state || '').toString());
 
   const handleOnChange = (event: React.FormEvent<HTMLInputElement>) => {
     const value = (event.target as HTMLInputElement).value;
     setTextValue(value);
-    onChange(value);
+    onStateChange(value);
   };
 
   const handleOnClick = (event: React.MouseEvent) => {
@@ -49,7 +52,8 @@ export default (props: Props) => {
 
       <Placement
           onClose={ () => setVisible(false) }
-          theme="night"
+          theme={ themesOpposite[theme] }
+          unrender
           visible={ visible }
           zIndex={ 1 }>
         <PlacementArrow backgroundColor="background-shade-1" />
@@ -59,6 +63,7 @@ export default (props: Props) => {
             padding="x1">
           <Form onSubmit={ handleOnSubmit }>
             <Input
+                label={ context.name }
                 onChange={ handleOnChange }
                 placeholder={ placeholder }
                 value={ textValue } />

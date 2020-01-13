@@ -12,24 +12,24 @@ const landingSections: {
   Component: React.ReactType<any>;
 }[] = [{
   id: 'Colors',
-  title: 'Colours',
+  title: 'Colors',
   Component: Colors,
-}, {
-  id: 'Icons',
-  title: 'Icons',
-  Component: Icons,
 }, {
   id: 'Themes',
   title: 'Themes',
   Component: Themes,
 }, {
-  id: 'Animations',
-  title: 'Animations & Transitions',
-  Component: Animations,
-}, {
   id: 'Sizing',
   title: 'Sizing',
   Component: Sizing,
+}, {
+  id: 'Icons',
+  title: 'Icons',
+  Component: Icons,
+}, {
+  id: 'Animations',
+  title: 'Animations & Transitions',
+  Component: Animations,
 }, {
   id: 'Components',
   title: 'Components',

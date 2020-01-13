@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Manager } from 'react-popper';
 
 export interface PlacementManagerProps {
+  /**
+   * @Ignore
+   */
   children: React.ReactNode;
 }
 

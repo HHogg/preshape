@@ -8,7 +8,7 @@ const Item: CatalogueItem<{
   Appear: AppearProps;
 }> = {
   name: 'Appear',
-  description: 'Adds some subtle animations to the entrance and exit of sections of the UI.',
+  description: 'Using framer-motion, the Appear component provides a variety of ways to make parts of the UI appear in style.',
   pictogram: require('../../../assets/pictogram-appear.svg').default,
   type: 'component',
   showcase: {

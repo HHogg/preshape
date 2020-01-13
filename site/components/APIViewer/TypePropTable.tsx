@@ -8,10 +8,17 @@ import {
   TableRow,
   Text,
 } from 'preshape';
-import TypePropTableRow, { getTag } from './TypePropTableRow';
+import { JSONOutput } from 'typedoc';
+import { RendererContainer } from './Types';
+import { getTag } from './utils';
+import TypePropTableRow from './TypePropTableRow';
 
-export default (props) => {
-  const { children, onStateChange, state } = props;
+interface Props extends RendererContainer, JSONOutput.Reflection {
+
+}
+
+export default (props: Props) => {
+  const { children = [], onStateChange, state } = props;
   const uninheritedProps = children
   .filter((child) => !child.inheritedFrom);
 
@@ -39,7 +46,6 @@ export default (props) => {
           <TypePropTableRow { ...child }
               key={ child.name }
               onStateChange={ (value) => onStateChange({ ...state, [child.name]: value }) }
-              parent={ props }
               state={ state && state[child.name] }
               withDefault={ hasADefault } />
         )) }

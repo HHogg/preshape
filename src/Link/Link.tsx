@@ -11,7 +11,9 @@ const isModifiedEvent = (event: React.MouseEvent) =>
 export interface LinkProps extends TextProps {
   /** Retained active state, indicated with styling */
   active?: boolean;
-  /** */
+  /**
+   * @Ignore
+  */
   navigate?: () => void;
   /**
    * React Router "to" prop, when applied the Component given to Text

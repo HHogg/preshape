@@ -1,16 +1,23 @@
 import * as React from 'react';
 import TypeLabel from './TypeLabel';
+import { Props as TypeTooltipIntrinsicProps } from './TypeTooltipIntrinsic';
 import TypeTooltipIntrinsicNumber from './TypeTooltipIntrinsicNumber';
 import TypeTooltipIntrinsicString from './TypeTooltipIntrinsicString';
 import TypeRendererUnion from './TypeRendererUnion';
+import { Renderer } from './Types';
+import { JSONOutput } from 'typedoc';
 
-const TypeTooltipIntrinsicMap: { [key: string]: React.Type<any>} = {
+const TypeTooltipIntrinsicMap: {
+  [key: string]: React.FC<TypeTooltipIntrinsicProps>;
+} = {
   number: TypeTooltipIntrinsicNumber,
   string: TypeTooltipIntrinsicString,
 };
 
-export default (props) => {
-  const { name, onStateChange, state } = props;
+interface Props extends Renderer, JSONOutput.IntrinsicType { }
+
+export default (props: Props) => {
+  const { context, name, onStateChange, state } = props;
   const isBoolean = name === 'boolean';
   const isBooleanValue = name === 'true' || name === 'false';
   const TypeTooltipIntrinsic = TypeTooltipIntrinsicMap[name];
@@ -18,6 +25,7 @@ export default (props) => {
   if (isBoolean) {
     return (
       <TypeRendererUnion
+          context={ context }
           onStateChange={ onStateChange }
           state={ state }
           type="union"
@@ -44,8 +52,9 @@ export default (props) => {
   if (TypeTooltipIntrinsic) {
     return (
       <TypeTooltipIntrinsic
-          onChange={ onStateChange }
-          value={ state }>
+          context={ context }
+          onStateChange={ onStateChange }
+          state={ state }>
         { (props) => (
           <TypeLabel { ...props }
               active={ state === undefined ? false : (

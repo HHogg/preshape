@@ -53,6 +53,10 @@ export type TypeTheme =
   'day' |
   'night';
 
+/**
+ * The core component that is the end of the chain for all other components.
+ * It provides general utility behaviour and styling.
+ */
 export interface BaseProps {
   /** Quick way of absolutely position to common places */
   absolute?:
@@ -64,15 +68,9 @@ export interface BaseProps {
     'bottom' |
     'bottom-left' |
     'bottom-right';
-  /**
-   * Background colour to be applied, shades are taken from the current
-   * theme.
-   */
+  /** Background color, shades are taken from the current theme.*/
   backgroundColor?: TypeColor;
-  /**
-   * Border colour to be applied, shades are taken from the current
-   * theme.
-   */
+  /** Border color, shades are taken from the current theme. */
   borderColor?: TypeColor;
   /** Adds styling of a border radius to one of the size multiples */
   borderRadius?: 'full' | 'x1' | 'x2' | 'x3';
@@ -84,7 +82,7 @@ export interface BaseProps {
   container?: boolean;
   /** Applies display styling */
   display?: 'block' | 'inline-block';
-  /** Quick way of absolutely position to common places */
+  /** Quick way of fixed position to common places */
   fixed?:
     'center' |
     'fullscreen' |
@@ -104,7 +102,7 @@ export interface BaseProps {
   minHeight?: number | string;
   /** Min width applied through inline style */
   minWidth?: number | string;
-  /** Overflow */
+  /** Sets how overflown content is handled */
   overflow?: 'hidden';
   /** Padding applied for the global spacing variables */
   padding?: TypeSize;
@@ -120,13 +118,12 @@ export interface BaseProps {
    * @reference false
    */
   tag?: TypeAllElementTags;
-  /**
-   * Text colour to be applied.
-   */
+  /** Text color, shades are taken from the current theme. */
   textColor?: TypeColor;
   /**
    * Theme applied to this element and inherited for child elements (until
-   * a descendant theme is applied).
+   * a descendant theme is applied). Note the accent color remains consistent
+   * to the theme applied on the HTML element.
    */
   theme?: TypeTheme;
   /** Fixed width applied through inline styling */

@@ -20,6 +20,7 @@ import {
   colorNegativeShade1,
   colorNegativeShade2,
   colorNegativeShade3,
+  colorHighlight,
 } from 'preshape';
 import ColorsTable, { Props, TypeColorVariables } from './ColorsTable';
 
@@ -123,6 +124,11 @@ export const variables: TypeColorVariables = [{
   css: '--color-negative--shade-3',
   js: 'colorNegativeShade3',
   value: colorNegativeShade3,
+}, {
+  name: 'Highlight',
+  css: '--color-highlight',
+  js: 'colorHighlight',
+  value: colorHighlight,
 }];
 
 export default (props: Omit<Props, 'variables'>) => {

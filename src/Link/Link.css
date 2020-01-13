@@ -28,7 +28,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transform: scaleY(0.1) rotate(-1deg);
+    transform: scaleY(0.1);
     transform-origin: bottom;
     border-radius: var(--border-size--x1);
     background-color: var(--color-accent--shade-2);

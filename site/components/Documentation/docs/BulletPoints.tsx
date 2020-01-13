@@ -8,7 +8,7 @@ const Item: CatalogueItem<{
   BulletPoints: BulletPointsProps;
 }> = {
   name: 'BulletPoints',
-  description: 'A vertical list component for listing your todos.',
+  description: 'A vertical list component for listing your todos, ordered and chaos modes included.',
   pictogram: require('../../../assets/pictogram-bulletpoints.svg').default,
   type: 'component',
   showcase: {

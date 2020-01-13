@@ -7,7 +7,7 @@ const Item: CatalogueItem<{
   CheckBox: CheckBoxProps;
 }> = {
   name: 'CheckBox',
-  description: 'Standard input for selecting multiple choices.',
+  description: 'Standard toggling checkbox input for selecting multiple choices.',
   pictogram: require('../../../assets/pictogram-checkbox.svg').default,
   type: 'component',
   showcase: {

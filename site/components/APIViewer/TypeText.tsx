@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { Flex, Text } from 'preshape';
 
-export default (props) => {
+interface Props {
+  children: React.ReactNode;
+  isArray?: boolean;
+}
+
+export default (props: Props) => {
   const { children, isArray } = props;
 
   return (

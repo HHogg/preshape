@@ -26,7 +26,7 @@ const Item: CatalogueItem<{
   PlacementReference: PlacementReferenceProps;
 }> = {
   name: 'Placement',
-  description: '',
+  description: 'A powerful set of components for placing contents around reference nodes. Uses the awesome PopperJS positioning engine. ',
   pictogram: require('../../../assets/pictogram-placement.svg').default,
   type: 'component',
   showcase: {

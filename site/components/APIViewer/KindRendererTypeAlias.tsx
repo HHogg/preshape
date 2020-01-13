@@ -1,13 +1,17 @@
 import * as React from 'react';
+import { JSONOutput } from 'typedoc';
+import { Renderer } from './Types';
 import TypeRenderer from './TypeRenderer';
 
-export default (props) => {
-  const { onStateChange, state, type } = props;
+interface Props extends Renderer, JSONOutput.Reflection {}
+
+export default (props: Props) => {
+  const { context, onStateChange, state, type } = props;
 
   return (
     <TypeRenderer { ...type }
+        context={ context }
         onStateChange={ onStateChange }
-        parent={ props }
         state={ state } />
   );
 };

@@ -1,21 +1,28 @@
 import * as React from 'react';
-import KindRendererFunction from './KindRendererFunction';
+import { JSONOutput } from 'typedoc';
+import { Renderer } from './Types';
 import KindRendererInterface from './KindRendererInterface';
-import KindRendererSignature from './KindRendererSignature';
+import KindRendererCallSignature from './KindRendererCallSignature';
 import KindRendererTypeAlias from './KindRendererTypeAlias';
 import KindRendererTypeLiteral from './KindRendererTypeLiteral';
 
-const KindMap = {
-  'Function': KindRendererFunction,
+const KindMap: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: React.FC<any>;
+} = {
   'Interface': KindRendererInterface,
-  'Signature': KindRendererSignature,
+  'Call signature': KindRendererCallSignature,
   'Type alias': KindRendererTypeAlias,
   'Type literal': KindRendererTypeLiteral,
 };
 
-export default (props) => {
+interface Props extends Renderer, JSONOutput.Reflection {
+
+}
+
+export default (props: Props) => {
   const { kindString } = props;
-  const Renderer = KindMap[kindString];
+  const Renderer = kindString && KindMap[kindString];
 
   if (!Renderer) {
     // eslint-disable-next-line no-console

@@ -32,7 +32,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "framer-motion": "^1.7.0",
-    "lodash.debounce": "^4.0.8",
     "lodash.omit": "^4.5.0",
     "normalize.css": "^8.0.0",
     "open-color": "^1.6.3",
@@ -45,11 +44,12 @@
   "devDependencies": {
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/git": "^5.0.0",
+    "@svgr/cli": "^5.0.1",
     "@svgr/parcel-plugin-svgr": "^5.0.1",
     "@types/classnames": "*",
-    "@types/lodash.debounce": "*",
     "@types/lodash.omit": "^4.5.6",
     "@types/lodash.pick": "*",
+    "@types/lodash.shuffle": "^4.2.6",
     "@types/prismjs": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
@@ -64,6 +64,7 @@
     "eslint-config-preshape": "^1.1.0",
     "eslint-plugin-react": "^7.12.4",
     "lodash.pick": "^4.4.0",
+    "lodash.shuffle": "^4.2.0",
     "parcel-bundler": "^1.12.3",
     "postcss-cli": "^6.1.3",
     "postcss-preset-env": "^6.6.0",
@@ -78,7 +79,7 @@
     "stylelint-config-preshape": "^1.0.0",
     "stylelint-order": "^0.8.1",
     "travis-deploy-once": "^5.0.2",
-    "typedoc": "^0.15.5",
+    "typedoc": "^0.16.8",
     "typescript": "^3.4.5"
   },
   "alias": {

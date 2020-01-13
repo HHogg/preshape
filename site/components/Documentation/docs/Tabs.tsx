@@ -23,7 +23,7 @@ const Item: CatalogueItem<{
   TabContent: TabContentProps;
 }> = {
   name: 'Tabs',
-  description: 'Tab organisational components, useful for laying out related by nonconcurrent parts of the UI.',
+  description: 'Tab organisational components, useful for laying out related but nonconcurrent parts of the UI.',
   pictogram: require('../../../assets/pictogram-tabs.svg').default,
   type: 'component',
   showcase: {

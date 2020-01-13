@@ -3,6 +3,10 @@ import { Attributes } from '../Base/Base';
 import Text, { TextProps } from '../Text/Text';
 import './BlockQuote.css';
 
+/**
+ * A component to indicate that the contents is an extended
+ * quotation, by visually indenting and styling.
+ */
 export interface BlockQuoteProps extends TextProps {}
 
 const BlockQuote: React.RefForwardingComponent<HTMLQuoteElement, Attributes<HTMLQuoteElement, BlockQuoteProps>> = (props, ref) => {

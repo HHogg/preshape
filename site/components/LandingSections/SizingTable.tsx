@@ -44,8 +44,8 @@ export default (props: Props) => {
         <TableRow>
           <TableHeaderCell>{ name }</TableHeaderCell>
           { showCellVisual && <TableHeaderCell /> }
-          { showCellCSS && <TableHeaderCell>CSS Custom Property</TableHeaderCell> }
-          { showCellJS && <TableHeaderCell>JS Variable</TableHeaderCell> }
+          { showCellCSS && <TableHeaderCell>CSS</TableHeaderCell> }
+          { showCellJS && <TableHeaderCell>JS</TableHeaderCell> }
           { showCellValue && <TableHeaderCell>Value</TableHeaderCell> }
         </TableRow>
       </TableHeader>

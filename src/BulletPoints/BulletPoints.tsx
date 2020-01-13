@@ -4,6 +4,10 @@ import Base, { Attributes, BaseProps } from '../Base/Base';
 import './BulletPoints.css';
 
 export interface BulletPointsProps extends BaseProps {
+  /**
+   * Replaces the default unordered list styling with
+   * numbers... everyone likes a bit of order.
+   */
   numbered?: boolean;
 }
 

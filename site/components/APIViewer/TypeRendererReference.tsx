@@ -1,26 +1,32 @@
 import * as React from 'react';
-import { Label, Text } from 'preshape';
+import { JSONOutput } from 'typedoc';
+import { Renderer } from './Types';
 import { getById } from './documentation';
-import { getTag } from './TypePropTableRow';
+import { getTag } from './utils';
 import KindRenderer from './KindRenderer';
+import TypeLabel from './TypeLabel';
 
-export default (props) => {
-  const { onStateChange, parent, state } = props;
-  const api = getById(props.id);
-  const referenceTag = getTag(parent, 'reference');
+interface Props extends Renderer, JSONOutput.ReferenceType {
+
+}
+
+export default (props: Props) => {
+  const { context, id, name, onStateChange, state } = props;
+  const api = id !== undefined && getById(id);
+  const referenceTag = getTag(context, 'reference');
 
   if (api && (!referenceTag || !referenceTag.startsWith('false'))) {
     return (
       <KindRenderer { ...api }
+          context={ context }
           onStateChange={ onStateChange }
-          parent={ props }
           state={ state } />
     );
   }
 
   return (
-    <Label>
-      { props.name }
-    </Label>
+    <TypeLabel>
+      { name }
+    </TypeLabel>
   );
 };

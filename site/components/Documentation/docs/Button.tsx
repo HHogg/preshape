@@ -14,7 +14,7 @@ const Item: CatalogueItem<{
   Buttons: ButtonsProps;
 }> = {
   name: 'Button',
-  description: 'A standard clickable button to trigger some sort of action.',
+  description: 'A standard clickable button with a variety of uses to trigger some sort of action.',
   pictogram: require('../../../assets/pictogram-button.svg').default,
   type: 'component',
   showcase: {

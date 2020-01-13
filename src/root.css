@@ -6,8 +6,8 @@
 }
 
 *::selection {
-  background-color: var(--color-accent--shade-1);
-  color: var(--color-light--shade-1);
+  background-color: var(--oc-yellow-2);
+  color: var(--color-dark--shade-1);
 }
 
 html {

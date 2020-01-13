@@ -1,17 +1,10 @@
 import * as React from 'react';
 import { getByModuleAndName } from './documentation';
+import { APIRecord, RendererContainer } from './Types';
 import APIViewerItem from './APIViewerItem';
 
-export interface APIViewerItem {
-  module: string;
-  name: string;
-  rename?: string;
-}
-
-interface Props {
-  apis: APIViewerItem[];
-  onStateChange: (state: {}) => void;
-  state?: { [key: string]: any };
+interface Props extends RendererContainer {
+  apis: APIRecord[];
 }
 
 export default (props: Props) => {

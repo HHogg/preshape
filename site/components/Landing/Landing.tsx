@@ -1,26 +1,21 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
-  themesOpposite,
-  transitionTimeSlow,
   Base,
   Flex,
   Link,
   List,
   ListItem,
   Text,
-  Appear,
 } from 'preshape';
 import { version } from '../../../package.json';
-import { RootContext, widthSmall, widthMedium } from '../Root';
+import { widthSmall, widthMedium } from '../Root';
 import Documentation from '../Documentation/Documentation';
 import landingSections from '../LandingSections';
 import LandingSection from './LandingSection';
 import Logo from '../Logo/Logo';
 
 export default () => {
-  const { theme } = React.useContext(RootContext);
-
   return (
     <Base>
       <Switch>
@@ -28,8 +23,7 @@ export default () => {
       </Switch>
 
       <LandingSection
-          textColor="text-shade-1"
-          theme={ themesOpposite[theme] }>
+          textColor="light-shade-1">
         <Base
             maxWidth={ widthSmall }
             paddingHorizontal="x8"
@@ -40,12 +34,10 @@ export default () => {
             </Flex>
 
             <Flex shrink>
-              <Appear animation="FadeSlideUp" delay={ transitionTimeSlow / 2 } duration={ transitionTimeSlow }>
-                <Text align="middle" margin="x2" size="x5" strong>Preshape</Text>
-                <Text align="middle">
-                  A minimal design system and library of composable React components.
-                </Text>
-              </Appear>
+              <Text align="middle" margin="x2" size="x5" strong>Preshape</Text>
+              <Text align="middle">
+                A minimal design system and library of composable React components.
+              </Text>
             </Flex>
           </Flex>
 
@@ -54,7 +46,6 @@ export default () => {
               { landingSections.map(({ title, id }) => (
                 <ListItem key={ title } separator="~" >
                   <Link
-                      active
                       className="MyLink"
                       href={ `#${id}` }
                       size="x1"
@@ -81,7 +72,9 @@ export default () => {
         </Base>
       </LandingSection>
 
-      <Base backgroundColor="background-shade-1">
+      <Base
+          backgroundColor="background-shade-1"
+          textColor="text-shade-1">
         <Base
             maxWidth={ widthMedium }
             paddingHorizontal="x8"

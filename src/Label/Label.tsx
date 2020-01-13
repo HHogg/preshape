@@ -4,6 +4,7 @@ import Text, { TextProps } from '../Text/Text';
 import './Label.css';
 
 export interface LabelProps extends TextProps {
+  /** Retains the Label in its active state */
   active?: boolean;
 }
 

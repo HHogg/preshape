@@ -4,10 +4,10 @@ import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Alert.css';
 
 /**
- * Alert component for bringing attention to a message.
+ * An alerting component for bringing attention to a message.
  */
 export interface AlertProps extends BaseProps {
-  /** Colour that is applied to the Alert to indicate the type of action */
+  /** Color that is applied to the Alert to indicate the type of action */
   color: 'accent' | 'negative' | 'positive';
   /** Appies a filled in style to the alert. */
   fill?: boolean;

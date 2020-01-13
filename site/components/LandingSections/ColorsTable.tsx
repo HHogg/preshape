@@ -41,9 +41,9 @@ export default (props: Props) => {
       <TableHeader>
         <TableRow>
           { showCellVisual && <TableHeaderCell /> }
-          <TableHeaderCell sorted>Colour</TableHeaderCell>
-          { showCellCSS && <TableHeaderCell>CSS Variable</TableHeaderCell> }
-          { showCellJS && <TableHeaderCell>JS Variable</TableHeaderCell> }
+          <TableHeaderCell sorted>Color</TableHeaderCell>
+          { showCellCSS && <TableHeaderCell>CSS</TableHeaderCell> }
+          { showCellJS && <TableHeaderCell>JS</TableHeaderCell> }
           { showCellValue && <TableHeaderCell>Value</TableHeaderCell> }
         </TableRow>
       </TableHeader>

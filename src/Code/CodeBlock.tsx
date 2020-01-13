@@ -9,8 +9,13 @@ import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-jsx';
 import './CodeBlock.css';
 
+/**
+ * Provides some syntax highlighting, courtesy of PrismJS.
+ */
 export interface CodeBlockProps extends TextProps {
+  /** The code to be highlighted */
   children?: string;
+  /** Language of the content to be highlighted. More are supported but not loaded. */
   language?:
     string |
     'css' |
@@ -19,6 +24,10 @@ export interface CodeBlockProps extends TextProps {
     'js' |
     'jsx' |
     'json';
+  /**
+   * Allows for the code contents to be wrapped when it falls outside of the
+   * containing element.
+   */
   wrap?: boolean;
 }
 

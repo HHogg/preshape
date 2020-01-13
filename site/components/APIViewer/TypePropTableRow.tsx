@@ -1,21 +1,15 @@
 import * as React from 'react';
+import { JSONOutput } from 'typedoc';
 import { Label, TableCell, TableRow, Text } from 'preshape';
+import { Renderer } from './Types';
 import TypeRenderer from './TypeRenderer';
+import { getComment, getIsOptional, getTag } from './utils';
 
-export const getComment = (props) =>
-  props.comment &&
-  props.comment.shortText;
+interface Props extends Renderer, JSONOutput.Reflection {
+  withDefault?: boolean;
+}
 
-export const getIsOptional = (props) =>
-  props.flags &&
-  props.flags.isOptional;
-
-export const getTag = (props, tagName: string) =>
-  props.comment &&
-  props.comment.tags &&
-  (props.comment.tags.find(({ tag }) => tag === tagName) || {}).text;
-
-export default (props) => {
+export default (props: Props) => {
   const { name, onStateChange, state, type, withDefault } = props;
   const comment = getComment(props);
   const deflt = withDefault && getTag(props, 'default');
@@ -39,8 +33,8 @@ export default (props) => {
         </Text>
 
         <TypeRenderer { ...type }
+            context={ props }
             onStateChange={ onStateChange }
-            parent={ props }
             state={ state } />
       </TableCell>
 

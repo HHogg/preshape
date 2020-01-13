@@ -13,10 +13,19 @@ export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>(
 });
 
 export interface PlacementProps extends BaseProps {
+  /**
+   * When provided this enables an event listener for clicks onto the document,
+   * when clicks occur outside the placed element, the callback will be
+   * called.
+   */
   onClose?: () => void;
+  /** Options that are passed onto PopperJS. */
   options?: PopperProps;
+  /** The desired side of placement, note it may differ depending on the environment. */
   placement?: 'bottom' | 'left' | 'right' | 'top';
+  /** Flag that enables the unredering of the content when not visible. */
   unrender?: boolean;
+  /** Flag that toggles the visible of the placed content. */
   visible?: boolean;
 }
 

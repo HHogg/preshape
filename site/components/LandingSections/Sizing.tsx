@@ -1,6 +1,6 @@
 import * as React from 'react' ;
 import {
-  useMediaQuery,
+  useMatchMedia,
   Flex,
   Text,
 } from 'preshape';
@@ -10,7 +10,7 @@ import SizingBorderTable from './SizingBorderTable';
 import SizingGeneralTable from './SizingGeneralTable';
 
 export default (props: Props) => {
-  const match = useMediaQuery([widthSmall, widthMedium]);
+  const match = useMatchMedia([widthSmall, widthMedium]);
 
   return (
     <LandingSection { ...props }>

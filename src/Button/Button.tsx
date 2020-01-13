@@ -12,7 +12,7 @@ export interface ButtonProps extends FlexProps {
   /** Retains the Button in its active state */
   active?: boolean;
   /**
-   * Colour that is applied to the button to indicate the type of action
+   * Color that is applied to the button to indicate the type of action
    *
    * @default "accent"
    */

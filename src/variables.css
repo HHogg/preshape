@@ -78,9 +78,9 @@
 }
 
 .Theme--night {
-  --color-background--shade-1: var(--color-black);
-  --color-background--shade-2: var(--color-dark--shade-1);
-  --color-background--shade-3: var(--color-dark--shade-2);
+  --color-background--shade-1: var(--color-dark--shade-1);
+  --color-background--shade-2: var(--color-dark--shade-2);
+  --color-background--shade-3: var(--color-dark--shade-3);
 
   --color-text--shade-1: var(--color-light--shade-1);
   --color-text--shade-2: var(--color-light--shade-2);

@@ -7,7 +7,7 @@ const Item: CatalogueItem<{
   Alert: AlertProps;
 }> = {
   name: 'Alert',
-  description: 'Useful for bringing attention to a message.',
+  description: 'An alerting component for bringing attention to a message.',
   pictogram:  require('../../../assets/pictogram-alert.svg').default,
   type: 'component',
   showcase: {

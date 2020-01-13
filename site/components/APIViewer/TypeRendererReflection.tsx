@@ -1,8 +1,15 @@
 import * as React from 'react';
+import { JSONOutput } from 'typedoc';
+import { Renderer } from './Types';
 import KindRenderer from './KindRenderer';
 
-export default (props) => {
+interface Props extends Renderer, JSONOutput.ReflectionType {
+
+}
+
+export default (props: Props) => {
   const {
+    context,
     declaration,
     onStateChange,
     state,
@@ -10,8 +17,8 @@ export default (props) => {
 
   return (
     <KindRenderer { ...declaration }
+        context={ context }
         onStateChange={ onStateChange }
-        parent={ props }
         state={ state } />
   );
 };
