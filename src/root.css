@@ -6,7 +6,7 @@
 }
 
 *::selection {
-  background-color: var(--oc-yellow-2);
+  background-color: var(--color-highlight);
   color: var(--color-dark--shade-1);
 }
 
@@ -37,5 +37,6 @@ canvas {
 }
 
 svg:not(:root) {
+  display: block;
   overflow: visible;
 }
