@@ -55,6 +55,8 @@ export const colorNegativeShade1 = color.pink[5];
 export const colorNegativeShade2 = color.pink[6];
 export const colorNegativeShade3 = color.pink[7];
 
+export const colorHighlight = color.yellow[2];
+
 export const themeDay = {
   colorBackgroundShade1: colorLightShade1,
   colorBackgroundShade2: colorLightShade2,

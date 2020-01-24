@@ -39,6 +39,8 @@
   --color-negative--shade-2: var(--oc-pink-6);
   --color-negative--shade-3: var(--oc-pink-7);
 
+  --color-highlight: var(--oc-yellow-3);
+
   --transition-time--fast: 200ms;
   --transition-time--base: 400ms;
   --transition-time--slow: 800ms;
