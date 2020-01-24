@@ -11,6 +11,8 @@ export type Attributes<E, P = {}> = P & Omit<
     : React.AllHTMLAttributes<E>, keyof P>;
 
 export type TypeColor =
+  'black' |
+  'white' |
   'accent-shade-1' |
   'accent-shade-2' |
   'accent-shade-3' |
