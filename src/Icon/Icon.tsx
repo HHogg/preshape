@@ -1,5 +1,4 @@
 import * as React from 'react';
-import classnames from 'classnames';
 import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Icon.css';
 
@@ -214,15 +213,10 @@ export interface IconProps extends BaseProps {
   name: TypeIcon;
   /** Size to be used for with and height of the icon */
   size: string;
-  /** Spins the Icon, by the given speed reference. */
-  spin?: 'slow' | 'base' | 'fast';
 }
 
 const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<SVGSVGElement, IconProps>> = (props, ref) => {
-  const { name, size, spin, ...rest } = props;
-  const classes = classnames('Icon', {
-    [`Icon--spin-${spin}`]: spin,
-  });
+  const { name, size, ...rest } = props;
 
   if (!IconPathMap[name]) {
     return null;
@@ -230,7 +224,7 @@ const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<SVGSVGElement
 
   return (
     <Base { ...rest }
-        className={ classes }
+        className="Icon"
         height={ size }
         ref={ ref }
         tag="svg"
