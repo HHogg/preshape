@@ -1,37 +1,115 @@
 import * as React from 'react';
+import { Variants } from 'framer-motion';
+import { transitionTimeFast, transitionTimingFunction } from '../variables';
 import { Attributes, TypeTheme } from '../Base/Base';
+import Flex, { FlexProps } from '../Flex/Flex';
 import Icon from '../Icon/Icon';
-import Link from '../Link/Link';
-import List, { ListProps } from '../List/List';
-import ListItem from '../List/ListItem';
+import Motion from '../Motion/Motion';
+import './ThemeSwitcher.css';
 
-export interface ThemeSwitcherProps extends ListProps {
-  iconSize?: string;
-  onChange?: (theme: TypeTheme) => void;
+const transition = {
+  duration: transitionTimeFast / 1000,
+  ease: transitionTimingFunction,
+};
+
+const VariantsToggle: Variants = {
+  day: {
+    origin: 0.5,
+    scale: 1.2,
+    x: '0%',
+  },
+  night: {
+    scale: 1.2,
+    x: '100%',
+  },
+};
+
+const VariantsIconSun: Variants = {
+  day: {
+    x: '0%',
+    opacity: [0, 1, 1],
+  },
+  night: {
+    x: '100%',
+    opacity: [1, 0, 0, 0, 0],
+  },
+};
+
+const VariantsIconMoon: Variants = {
+  day: {
+    x: '-100%',
+    opacity: [1, 0, 0, 0, 0],
+  },
+  night: {
+    x: '0%',
+    opacity: [0, 1, 1],
+  },
+};
+
+
+export interface ThemeSwitcherProps extends FlexProps {
+  size?: number;
+  onChange: (theme: TypeTheme) => void;
   theme: TypeTheme;
 }
 
-const ThemeControls: React.RefForwardingComponent<HTMLUListElement, Attributes<HTMLUListElement, ThemeSwitcherProps>> = (props, ref) => {
-  const { iconSize = '1rem', onChange, theme, ...rest } = props;
+const ThemeControls: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, ThemeSwitcherProps>> = (props, ref) => {
+  const {
+    onChange,
+    size = 16,
+    theme,
+    ...rest
+  } = props;
 
   return (
-    <List { ...rest } ref={ ref }>
-      <ListItem>
-        <Link
-            active={ theme === 'day' }
-            onClick={ onChange && (() => onChange('day')) }>
-          <Icon name="Sun" size={ iconSize } />
-        </Link>
-      </ListItem>
+    <Flex { ...rest }
+        container
+        direction="horizontal"
+        ref={ ref }
+        tag="label">
+      <input
+          checked={ theme === 'night' }
+          className="ThemeSwitcher__input"
+          onChange={ () => onChange(theme === 'night' ? 'day' : 'night') }
+          type="checkbox" />
 
-      <ListItem>
-        <Link
-            active={ theme === 'night' }
-            onClick={ onChange && (() => onChange('night')) }>
-          <Icon name="Moon" size={ iconSize } />
-        </Link>
-      </ListItem>
-    </List>
+      <Motion
+          animate={ theme }
+          backgroundColor="background-shade-3"
+          borderSize="x2"
+          className="ThemeSwitcher"
+          clickable
+          container
+          initial="day"
+          overflow="hidden"
+          transition={ transition }>
+        <Motion
+            absolute="top-left"
+            borderRadius="full"
+            className="ThemeSwitcher__toggle"
+            style={ { padding: size / 8 } }
+            transition={ transition }
+            variants={ VariantsToggle }>
+          <Icon name="Sun" size={ `${size}px` } />
+        </Motion>
+
+        <Flex direction="horizontal" textColor="background-shade-1">
+          <Motion
+              style={ { padding: size / 8 } }
+              transition={ transition }
+              variants={ VariantsIconSun }>
+            <Icon name="Sun" size={ `${size}px` } />
+          </Motion>
+
+          <Motion
+              style={ { padding: size / 8 } }
+              transition={ transition }
+              variants={ VariantsIconMoon }>
+            <Icon name="Moon" size={ `${size}px` } />
+          </Motion>
+        </Flex>
+      </Motion>
+    </Flex>
   );
 };
 
