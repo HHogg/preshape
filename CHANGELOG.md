@@ -1,3 +1,79 @@
+# [4.0.0](https://github.com/HHogg/preshape/compare/v3.1.0...v4.0.0) (2020-01-25)
+
+
+### Bug Fixes
+
+* **Alert:** Renamed prop 'style' to 'type' ([293a32d](https://github.com/HHogg/preshape/commit/293a32d))
+* **Flex:** Renamed `initial` prop to `basis`. ([a5988a6](https://github.com/HHogg/preshape/commit/a5988a6))
+* **Label:** Added interaction styling to Labels ([c489cc7](https://github.com/HHogg/preshape/commit/c489cc7))
+* **SVG:** Set all SVG elements to be display block. ([af34855](https://github.com/HHogg/preshape/commit/af34855))
+* **ThemeSwitcher:** Updated design of theme switch ([518556b](https://github.com/HHogg/preshape/commit/518556b))
+
+
+### chore
+
+* **Icon:** Removed Spin prop ([f415577](https://github.com/HHogg/preshape/commit/f415577))
+
+
+### Features
+
+* **Appear:** Improved Appear component and fixed initial hidden animated state. ([423b445](https://github.com/HHogg/preshape/commit/423b445))
+* **Application:** Removed Application components in favour of hooks and granular components. ([f9260ee](https://github.com/HHogg/preshape/commit/f9260ee))
+* **Base:** Added 'fixed' prop ([4258602](https://github.com/HHogg/preshape/commit/4258602))
+* **Base:** Added Black and White colors ([3d02260](https://github.com/HHogg/preshape/commit/3d02260))
+* **Base:** Added borderRadius prop ([dd29606](https://github.com/HHogg/preshape/commit/dd29606))
+* **Base:** Added overflow prop ([0f85e66](https://github.com/HHogg/preshape/commit/0f85e66))
+* **Base:** Normalised colors options across all the color props. ([7b9d8c1](https://github.com/HHogg/preshape/commit/7b9d8c1))
+* **Button:** Removed 'style' prop and added 'fill' prop. ([b3658a8](https://github.com/HHogg/preshape/commit/b3658a8))
+* **Color:** Added highlight color ([0d1e48a](https://github.com/HHogg/preshape/commit/0d1e48a))
+* **colors:** Teaked color palette ([08c50d2](https://github.com/HHogg/preshape/commit/08c50d2))
+* **forwardRef:** Allow all components to foward refs instead of using the innerRef prop. ([1caf35f](https://github.com/HHogg/preshape/commit/1caf35f))
+* **Grid:** Improved the naming of the API to allow for non auto-fit column layouts and added the ability to customise the row size. ([8a29809](https://github.com/HHogg/preshape/commit/8a29809))
+* **Icon:** Added Cloud, Command, Info, Shuffle, Terminal and Triangle icons. ([0e02735](https://github.com/HHogg/preshape/commit/0e02735))
+* **Icon:** Exported Icon name list ([2d8acf5](https://github.com/HHogg/preshape/commit/2d8acf5))
+* **Link:** Added new underline style ([a8cb559](https://github.com/HHogg/preshape/commit/a8cb559))
+* **Markdown:** Removed Markdown component ([2490bed](https://github.com/HHogg/preshape/commit/2490bed))
+* **Menu:** Removed Menu component ([3a0b61a](https://github.com/HHogg/preshape/commit/3a0b61a))
+* **Motion:** Added Motion component ([19ddf8c](https://github.com/HHogg/preshape/commit/19ddf8c))
+* **PlacementContent:** Added PlacementContent component to easily construct tooltip like components. ([0da8bad](https://github.com/HHogg/preshape/commit/0da8bad))
+* **SwitchTransition:** Removed component ([f77c3ca](https://github.com/HHogg/preshape/commit/f77c3ca))
+* **TypeScript:** Converted library components over to TypeScript ([7c9fff1](https://github.com/HHogg/preshape/commit/7c9fff1))
+* **useEventListener:** Added useEventListener hook ([380cfbe](https://github.com/HHogg/preshape/commit/380cfbe))
+* **useIntersectionObserver:** Added useIntersectionObserver hook ([d181312](https://github.com/HHogg/preshape/commit/d181312))
+* **useMatchMedia:** Added MathMedia API hook ([4d5517a](https://github.com/HHogg/preshape/commit/4d5517a))
+* **useResizeObserver:** Removed Bounds component in favour of useResizeObserver hook. ([c508be4](https://github.com/HHogg/preshape/commit/c508be4))
+
+
+### BREAKING CHANGES
+
+* **SVG:** All SVG elements will be set with display block.
+* **Alert:** Renamed Alerts  prop 'style' to 'type'.
+* **Grid:** Renamed Grid props:
+
+autoFitWidthMax -> repeatWidthMax
+autoFitWidthMin -> repeatWidthMin
+columnCount -> repeat
+columnWidth -> repeatWidth
+* **Flex:** Renamed Flexs `initial` prop to `basis`
+* **Appear:** Appear component API has changed, as it's now using framer-motion.
+
+- `time` prop has been renamed to `duration` and accepts a number in milliseconds
+- `onEntered` and `onExited` has been renamed to `onAnimationStart` and `onAnimationEnd`.
+* **PlacementContent:** Removed Toolbar component as it's trivial to reconstruct with other components.
+* **forwardRef:** - Removed the `innerRef` prop as all components use the forwardRef API so the `ref` prop can be used.
+- Removed the `Component` prop. The rendered tag for Base and some other comoponents can be configured with the `tag` prop. Previous functionality of the passing in React components is no more.
+* **Icon:** Removed Progress icon
+* **Icon:** Removed 'spin' prop from Icon
+* **useResizeObserver:** Removed Bounds component in favour of useResizerObserver hook.
+* **Button:** Replaced the 'style' prop for a 'fill' prop, where 'outline' styling is still the default.
+* **Markdown:** Removed Markdown component
+* **SwitchTransition:** Removed the SwitchTransition component
+* **Base:** - Removed implicit theme color when using a true value
+- Removed simple shade-N values for explicit text and background versions
+- Renamed `color` prop to `textColor`
+* **Application:** Removed all Application components, and reaplced theme changing behaviour with `useTheme` hook and scrolling behaviour with `useWindowScrollTo` hook.
+* **Menu:** Removed Menu components
+
 # [3.1.0](https://github.com/HHogg/preshape/compare/v3.0.1...v3.1.0) (2019-02-19)
 
 
