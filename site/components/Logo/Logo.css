@@ -15,7 +15,7 @@
   transition-timing-function: var(--transition-timing-function);
 }
 
-.Theme--day.Logo {
+.Theme--day .Logo {
   & path:nth-child(1) { color: var(--oc-gray-6); }
   & path:nth-child(2) { color: var(--oc-gray-7); }
   & path:nth-child(3) { color: var(--oc-gray-8); }
@@ -23,7 +23,7 @@
   & path:nth-child(5) { color: var(--oc-gray-9); }
 }
 
-.Theme--night.Logo {
+.Theme--night .Logo {
   & path:nth-child(1) { color: var(--oc-gray-4); }
   & path:nth-child(2) { color: var(--oc-gray-3); }
   & path:nth-child(3) { color: var(--oc-gray-2); }

@@ -22,10 +22,7 @@ import {
   colorNegativeShade1,
   colorNegativeShade2,
   colorNegativeShade3,
-  useMatchMedia,
   Base,
-  Button,
-  Buttons,
   Code,
   Flex,
   Grid,
@@ -35,8 +32,6 @@ import {
   Text,
   TypeColor,
 } from 'preshape';
-import { widthMedium } from '../Root';
-import SiteContext from '../SiteContext';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 const palette: {
@@ -161,35 +156,25 @@ const paletteShuffled = shuffle(palette);
 
 export default (props: Props) => {
   const [isShuffled, setIsShuffled] = React.useState(true);
-  const match = useMatchMedia([widthMedium]);
   const colors = isShuffled ? paletteShuffled : palette;
 
   return (
     <LandingSection { ...props }>
-      <Flex
-          alignChildrenVertical="end"
-          direction={ match(widthMedium) ? 'horizontal' : 'vertical' }
-          gap="x16"
-          margin="x8">
-        <Flex basis="none" grow>
-          <Text>
-            A minimal set of colours to provide clear contrast across
-            the Day and Night themes.
-            All colours are from the optimised open source <Link href="https://yeun.github.io/open-color/" underline>Open Color</Link> scheme.
-          </Text>
-        </Flex>
+      <Text margin="x8">
+        A minimal set of colors to provide clear contrast across
+        the Day and Night themes.
+        All colors are from the optimised open source <Link href="https://yeun.github.io/open-color/" underline>Open Color</Link> scheme.
+      </Text>
 
-        <Flex>
-          <Text align="end">
-            <Link onClick={ () => setIsShuffled(!isShuffled) } underline>
-              <Flex alignChildrenVertical="middle" direction="horizontal" gap="x1">
-                <Flex><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Flex>
-                <Flex><Icon name="Shuffle" size="1rem" /></Flex>
-              </Flex>
-            </Link>
-          </Text>
-        </Flex>
-      </Flex>
+
+      <Text align="end" margin="x4">
+        <Link onClick={ () => setIsShuffled(!isShuffled) } underline>
+          <Flex alignChildren="middle" direction="horizontal" gap="x1">
+            <Flex><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Flex>
+            <Flex><Icon name="Shuffle" size="1rem" /></Flex>
+          </Flex>
+        </Link>
+      </Text>
 
       <Grid
           gap="x2"

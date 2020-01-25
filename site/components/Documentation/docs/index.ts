@@ -35,5 +35,4 @@ export default {
   table: require('./Table').default,
   text: require('./Text').default,
   textarea: require('./TextArea').default,
-  themeswitcher: require('./ThemeSwitcher').default,
 };

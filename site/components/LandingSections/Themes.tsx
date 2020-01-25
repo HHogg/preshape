@@ -3,15 +3,12 @@ import { Variants, Variant } from 'framer-motion';
 import {
   transitionTimingFunction,
   transitionTimeSlow,
-  useMatchMedia,
   Flex,
   Icon,
-  Link,
   Text,
   Motion,
   ThemeSwitcher,
 } from 'preshape';
-import { widthMedium } from '../Root';
 import SiteContext from '../SiteContext';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
@@ -42,19 +39,6 @@ const VariantsStar = (x: number, y: number): ThemeVariants => ({
     scale: 1,
   },
 });
-
-const VariantsMoon: ThemeVariants = {
-  day: {
-    opacity: 0,
-    x: '-50%',
-    y: '150%',
-  },
-  night: {
-    opacity: 1,
-    x: '-50%',
-    y: '-50%',
-  },
-};
 
 const VariantsClouds: ThemeVariants = {
   night: {
@@ -101,16 +85,9 @@ const stars: { size: number; x: number; y: number }[] = [
 
 export default (props: Props) => {
   const { onChangeTheme, theme } = React.useContext(SiteContext);
-  const match = useMatchMedia([widthMedium]);
 
   return (
     <LandingSection { ...props }>
-      <Text margin="x4">
-        Themes give a UI a unique appearance, while still retaining an overal consitent
-        feel of the design system. The right theme choice depends on factors such as the UI's
-        focal point, the target audience or what time the majority of activty occurs.
-      </Text>
-
       <Motion
           alignChildren="middle"
           animate={ theme }
@@ -156,11 +133,12 @@ export default (props: Props) => {
                 key={ index }
                 variants={ VariantsCloud(dir, x, y) }>
               <Motion
-                  animate={ { y: Math.random() * (10 - 5) + 5 } }
-                  initial={ { y: 0 } }
+                  animate={ { y: 5 } }
+                  initial={ { y: -5 } }
                   transition={ {
-                    duration: Math.random() * (3 - 1) + 1,
-                    ease: transitionTimingFunction,
+                    delay: index,
+                    duration: 2,
+                    ease: 'linear',
                     yoyo: Infinity,
                   } }>
                 <Icon name="Cloud" size={ `${size}px` } />
@@ -170,22 +148,12 @@ export default (props: Props) => {
         </Motion>
       </Motion>
 
-      <Flex direction={ match(widthMedium) ? 'horizontal' : 'vertical' } gap="x4" margin="x4">
-        <Flex basis={ match(widthMedium) ? 'none' : undefined } grow shrink>
-          <Text>
-            The <Link onClick={ () => onChangeTheme('day') } underline>Day</Link> theme may be better
-            used for websites where the main focus is the text, that are being looked
-            at for a short duration.
-          </Text>
-        </Flex>
-
-        <Flex basis={ match(widthMedium) ? 'none' : undefined } grow shrink>
-          <Text>
-            The <Link onClick={ () => onChangeTheme('night') } underline>Night</Link> theme may be better
-            for a UI where users spend long periods of time concentrating on the content.
-          </Text>
-        </Flex>
-      </Flex>
+      <Text margin="x4">
+        Dark themes help to lower the luminance of a UI and help with strain on
+        a user's eyes. A "Night" theme is provided for occassions where a user
+        is spending longer periods of time concentrating on the content or when
+        a UI is being used in lower lighting conditions.
+      </Text>
     </LandingSection>
 
   );

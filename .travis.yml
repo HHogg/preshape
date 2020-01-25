@@ -5,10 +5,10 @@ branches:
   - master
 script:
 - yarn lint
-- yarn test
-- yarn build:package
+- yarn build:lib
 after_success:
 - npm run travis-deploy-once "npm run semantic-release"
+- yarn build:docs
 - yarn build:site
 deploy:
   provider: firebase
