@@ -1,3 +1,13 @@
+## [4.0.1](https://github.com/HHogg/preshape/compare/v4.0.0...v4.0.1) (2020-01-27)
+
+
+### Bug Fixes
+
+* **Placement:** Passing PopperJS props down ([48ff92b](https://github.com/HHogg/preshape/commit/48ff92b))
+* **Table:** Allow paddings to be configurable ([1d11d5f](https://github.com/HHogg/preshape/commit/1d11d5f))
+* **Table:** Clickable styling for other interaction events. ([11a87d2](https://github.com/HHogg/preshape/commit/11a87d2))
+* **Table:** Improved row interactions styling and added an active prop, to apply active styling ([6ca5890](https://github.com/HHogg/preshape/commit/6ca5890))
+
 # [4.0.0](https://github.com/HHogg/preshape/compare/v3.1.0...v4.0.0) (2020-01-25)
 
 
