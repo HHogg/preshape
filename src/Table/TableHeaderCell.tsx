@@ -11,11 +11,20 @@ export interface TableHeaderCellProps extends TextProps {
 }
 
 const TableHeaderCell: React.RefForwardingComponent<HTMLTableHeaderCellElement, Attributes<HTMLTableHeaderCellElement, TableHeaderCellProps>> = (props, ref) => {
-  const { children, sortable, sorted, ...rest } = props;
+  const {
+    children,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
+    sortable,
+    sorted,
+    ...rest
+  } = props;
 
   return (
     <Text { ...rest }
         className="Table__header-cell"
+        paddingHorizontal={ paddingHorizontal }
+        paddingVertical={ paddingVertical }
         ref={ ref }
         size="x1"
         strong

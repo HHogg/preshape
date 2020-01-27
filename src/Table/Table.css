@@ -16,11 +16,9 @@
 }
 
 .Table__header-cell {
-  padding: var(--size--x2) var(--size--x3);
   border-bottom: var(--border-size--x2) solid var(--color-text--shade-1);
 }
 
 .Table__cell {
-  padding: var(--size--x2) var(--size--x3);
   border-bottom: var(--border-size--x1) solid var(--color-text--shade-1);
 }
