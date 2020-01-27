@@ -4,15 +4,22 @@
   text-align: left;
 }
 
-.Table__row--clickable {
-  cursor: pointer;
-  transition-property: background-color;
+.Table__row {
+  transition-property: background-color. color;
   transition-duration: var(--transition-time--base);
   transition-timing-function: var(--transition-timing-function);
 }
 
-.Table__row--clickable:hover {
-  background-color: var(--color-background--shade-2);
+.Table__row--clickable {
+  &:hover {
+    background-color: var(--color-accent--shade-1);
+    color: var(--color-light--shade-1);
+  }
+
+  &.Table__row--active,
+  &:active {
+    background-color: var(--color-accent--shade-3);
+  }
 }
 
 .Table__header-cell {

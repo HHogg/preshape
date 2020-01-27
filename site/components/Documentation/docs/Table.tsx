@@ -84,7 +84,7 @@ const Item: CatalogueItem<{
 
             <TableBody { ...props.TableBody }>
               { sortedData.map((data) => (
-                <TableRow { ...props.TableRow } key={ data[0] }>
+                <TableRow { ...props.TableRow } clickable key={ data[0] }>
                   { data.map((data, index) => (
                     <TableCell { ...props.TableCell }
                         align={ index > 0 ? 'end' : 'start' }

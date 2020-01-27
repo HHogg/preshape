@@ -19,6 +19,5 @@
   &.Label--active,
   &:active {
     background-color: var(--color-accent--shade-3);
-    color: var(--color-light--shade-1);
   }
 }

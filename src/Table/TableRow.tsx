@@ -2,11 +2,15 @@ import * as React from 'react';
 import classnames from 'classnames';
 import Base, { Attributes, BaseProps } from '../Base/Base';
 
-export interface TableRowProps extends BaseProps {}
+export interface TableRowProps extends BaseProps {
+  /** Retains the row in its active state */
+  active?: boolean;
+}
 
 const TableRow: React.RefForwardingComponent<HTMLTableRowElement, Attributes<HTMLTableRowElement, TableRowProps>> = (props, ref) => {
-  const { clickable, ...rest } = props;
+  const { active, clickable, ...rest } = props;
   const classes = classnames('Table__row', {
+    'Table__row--active': active,
     'Table__row--clickable': clickable,
   });
 
