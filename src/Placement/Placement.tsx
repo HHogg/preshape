@@ -30,7 +30,7 @@ export interface PlacementProps extends BaseProps {
 }
 
 const Placement: React.FC<PlacementProps> = (props) => {
-  const { children, onClose, placement, unrender, visible = true, ...rest } = props;
+  const { children, options, onClose, placement, unrender, visible = true, ...rest } = props;
   const [render, setRender] = React.useState(unrender ? visible : true);
   const ref = React.useRef<HTMLElement | null>();
 
@@ -57,7 +57,9 @@ const Placement: React.FC<PlacementProps> = (props) => {
   };
 
   return createPortal(
-    <Popper innerRef={ (el) => ref.current = el || null } placement={ placement }>
+    <Popper { ...options }
+        innerRef={ (el) => ref.current = el || null }
+        placement={ placement }>
       { ({ arrowProps, placement, ref, style }) => (
         <PlacementArrowPropsContext.Provider value={ arrowProps }>
           <Base { ...rest }

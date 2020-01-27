@@ -69,6 +69,13 @@ const Item: CatalogueItem<{
     state: {
       Placement: {
         placement: 'top',
+        options: {
+          modifiers: {
+            preventOverflow: {
+              boundariesElement: 'window',
+            },
+          },
+        },
       },
       PlacementArrow: {},
       PlacementContent: {},
