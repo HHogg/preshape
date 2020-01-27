@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/HHogg/preshape/compare/v4.0.1...v4.0.2) (2020-01-27)
+
+
+### Bug Fixes
+
+* **Table:** Apply correct text color on active state ([df3f072](https://github.com/HHogg/preshape/commit/df3f072))
+
 ## [4.0.1](https://github.com/HHogg/preshape/compare/v4.0.0...v4.0.1) (2020-01-27)
 
 
