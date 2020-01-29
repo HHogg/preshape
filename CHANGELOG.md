@@ -1,3 +1,17 @@
+# [4.1.0](https://github.com/HHogg/preshape/compare/v4.0.2...v4.1.0) (2020-01-29)
+
+
+### Bug Fixes
+
+* **Base:** Allow highlight color to be used as backgroundColor, borderColor and textColor. ([bfd0c1d](https://github.com/HHogg/preshape/commit/bfd0c1d))
+* **Button:** Always use light text color on fill style ([c9270c4](https://github.com/HHogg/preshape/commit/c9270c4))
+
+
+### Features
+
+* **Color:** Added overlay color as a possible backgroundColor ([8ca07bd](https://github.com/HHogg/preshape/commit/8ca07bd))
+* **Grid:** Add props to configure horizontal and vertical gap separately ([ed3505a](https://github.com/HHogg/preshape/commit/ed3505a))
+
 ## [4.0.2](https://github.com/HHogg/preshape/compare/v4.0.1...v4.0.2) (2020-01-27)
 
 
