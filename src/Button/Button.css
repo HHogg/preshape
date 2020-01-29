@@ -67,25 +67,25 @@
 .Button--fill {
   border-color: var(--color-text--shade-1);
   background-color: var(--color-text--shade-1);
-  color: var(--color-background--shade-1);
+  color: var(--color-light--shade-1);
 
   &:hover {
     &.Button--accent {
       border-color: var(--color-accent--shade-1);
       background-color: var(--color-accent--shade-1);
-      color: var(--color-background--shade-1);
+      color: var(--color-light--shade-1);
     }
 
     &.Button--positive {
       border-color: var(--color-positive--shade-1);
       background-color: var(--color-positive--shade-1);
-      color: var(--color-background--shade-1);
+      color: var(--color-light--shade-1);
     }
 
     &.Button--negative {
       border-color: var(--color-negative--shade-1);
       background-color: var(--color-negative--shade-1);
-      color: var(--color-background--shade-1);
+      color: var(--color-light--shade-1);
     }
   }
 
@@ -94,19 +94,19 @@
     &.Button--accent {
       border-color: var(--color-accent--shade-3);
       background-color: var(--color-accent--shade-3);
-      color: var(--color-background--shade-1);
+      color: var(--color-light--shade-1);
     }
 
     &.Button--positive {
       border-color: var(--color-positive--shade-3);
       background-color: var(--color-positive--shade-3);
-      color: var(--color-background--shade-1);
+      color: var(--color-light--shade-1);
     }
 
     &.Button--negative {
       border-color: var(--color-negative--shade-3);
       background-color: var(--color-negative--shade-3);
-      color: var(--color-background--shade-1);
+      color: var(--color-light--shade-1);
     }
   }
 
