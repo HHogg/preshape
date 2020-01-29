@@ -13,6 +13,7 @@ export type Attributes<E, P = {}> = P & Omit<
 export type TypeColor =
   'black' |
   'white' |
+  'highlight' |
   'accent-shade-1' |
   'accent-shade-2' |
   'accent-shade-3' |

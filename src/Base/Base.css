@@ -67,6 +67,8 @@
 
 .Base--background-color-black { background-color: var(--color-black); }
 .Base--background-color-white { background-color: var(--color-white); }
+.Base--background-color-highlight { background-color: var(--color-highlight); }
+.Base--background-color-overlay { background-color: var(--color-overlay); }
 .Base--background-color-accent-shade-1 { background-color: var(--color-accent--shade-1); }
 .Base--background-color-accent-shade-2 { background-color: var(--color-accent--shade-2); }
 .Base--background-color-accent-shade-3 { background-color: var(--color-accent--shade-3); }
@@ -91,6 +93,7 @@
 
 .Base--border-color-black { border-color: var(--color-black); }
 .Base--border-color-white { border-color: var(--color-white); }
+.Base--border-color-highlight { border-color: var(--color-highlight); }
 .Base--border-color-accent-shade-1 { border-color: var(--color-accent--shade-1); }
 .Base--border-color-accent-shade-2 { border-color: var(--color-accent--shade-2); }
 .Base--border-color-accent-shade-3 { border-color: var(--color-accent--shade-3); }
@@ -115,6 +118,7 @@
 
 .Base--text-color-black { color: var(--color-black); }
 .Base--text-color-white { color: var(--color-white); }
+.Base--text-color-highlight { color: var(--color-highlight); }
 .Base--text-color-accent-shade-1 { color: var(--color-accent--shade-1); }
 .Base--text-color-accent-shade-2 { color: var(--color-accent--shade-2); }
 .Base--text-color-accent-shade-3 { color: var(--color-accent--shade-3); }
