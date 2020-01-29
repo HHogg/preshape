@@ -41,6 +41,8 @@
 
   --color-highlight: var(--oc-yellow-3);
 
+  --color-overlay: rgba(30, 27, 24, 0.7);
+
   --transition-time--fast: 200ms;
   --transition-time--base: 400ms;
   --transition-time--slow: 800ms;

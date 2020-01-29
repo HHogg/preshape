@@ -72,7 +72,7 @@ export interface BaseProps {
     'bottom-left' |
     'bottom-right';
   /** Background color, shades are taken from the current theme.*/
-  backgroundColor?: TypeColor;
+  backgroundColor?: TypeColor | 'overlay';
   /** Border color, shades are taken from the current theme. */
   borderColor?: TypeColor;
   /** Adds styling of a border radius to one of the size multiples */
