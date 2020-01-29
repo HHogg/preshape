@@ -9,6 +9,10 @@ export interface GridProps extends FlexProps {
   alignChildren?: 'start' | 'middle' | 'end';
   /** Sets the distances between items to a multiple value. E.g. 'x1'. */
   gap?: TypeSize;
+  /** Sets the horizontal distance between items to a multiple value. E.g. 'x1'. */
+  gapHorizontal?: TypeSize;
+  /** Sets the horizontal distance between items to a multiple value. E.g. 'x1'. */
+  gapVertical?: TypeSize;
   /** Sets the primary repeat value */
   repeat?: number | string | 'auto-fill' | 'auto-fit';
   /** Sets the explicit width the repeated items will be resized */
@@ -26,6 +30,8 @@ const Grid: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Gr
     alignChildren,
     className,
     gap,
+    gapHorizontal = gap,
+    gapVertical = gap,
     repeat = 'auto-fit',
     repeatWidth = 'max-content',
     repeatWidthMax = '1fr',
@@ -36,7 +42,8 @@ const Grid: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Gr
 
   const classes = classnames('Grid', {
     [`Grid--align-${alignChildren}`]: alignChildren,
-    [`Grid--gap-${gap}`]: gap,
+    [`Grid--gap-horizontal-${gapHorizontal}`]: gapHorizontal,
+    [`Grid--gap-vertical-${gapVertical}`]: gapVertical,
   }, className);
 
   const style = {
