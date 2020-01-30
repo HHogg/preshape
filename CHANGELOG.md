@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/HHogg/preshape/compare/v4.1.0...v4.1.1) (2020-01-30)
+
+
+### Bug Fixes
+
+* **Placement:** Dont require children as a PopperOption ([087bd03](https://github.com/HHogg/preshape/commit/087bd03))
+
 # [4.1.0](https://github.com/HHogg/preshape/compare/v4.0.2...v4.1.0) (2020-01-29)
 
 
