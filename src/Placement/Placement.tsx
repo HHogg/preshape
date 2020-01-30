@@ -7,6 +7,8 @@ import Appear from '../Appear/Appear';
 import Base, { BaseProps } from '../Base/Base';
 import './Placement.css';
 
+type PopperOptions = Omit<PopperProps, 'children'>;
+
 export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>({
   ref: () => {},
   style: {},
@@ -19,8 +21,12 @@ export interface PlacementProps extends BaseProps {
    * called.
    */
   onClose?: () => void;
-  /** Options that are passed onto PopperJS. */
-  options?: PopperProps;
+  /**
+   * Options that are passed onto PopperJS.
+   *
+   * @Reference false
+   */
+  options?: PopperOptions;
   /** The desired side of placement, note it may differ depending on the environment. */
   placement?: 'bottom' | 'left' | 'right' | 'top';
   /** Flag that enables the unredering of the content when not visible. */
