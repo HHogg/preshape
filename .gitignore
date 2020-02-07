@@ -1,4 +1,5 @@
 .cache
+.firebase
 /dist
 /lib
 /node_modules
