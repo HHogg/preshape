@@ -1,3 +1,10 @@
+## [4.1.2](https://github.com/HHogg/preshape/compare/v4.1.1...v4.1.2) (2020-02-08)
+
+
+### Bug Fixes
+
+* **Button:** Use correct theme text color for fill style ([b93e97b](https://github.com/HHogg/preshape/commit/b93e97b))
+
 ## [4.1.1](https://github.com/HHogg/preshape/compare/v4.1.0...v4.1.1) (2020-01-30)
 
 
