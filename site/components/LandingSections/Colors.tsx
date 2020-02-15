@@ -203,11 +203,13 @@ export default (props: Props) => {
                   } } />
             )) }
 
-            <Text align="end" margin="x2" strong>{ value }</Text>
-            <Text size="x1" tag="div">
-              <Text strong>{ name }</Text>
-              <Text><Code>{ css }</Code></Text>
-              <Text><Code>{ js }</Code></Text>
+            <Text container>
+              <Text align="end" margin="x2" strong>{ value }</Text>
+              <Text size="x1" tag="div">
+                <Text strong>{ name }</Text>
+                <Text><Code>{ css }</Code></Text>
+                <Text><Code>{ js }</Code></Text>
+              </Text>
             </Text>
           </Motion>
         )) }
