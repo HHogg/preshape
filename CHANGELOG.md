@@ -1,3 +1,10 @@
+## [4.1.3](https://github.com/HHogg/preshape/compare/v4.1.2...v4.1.3) (2020-02-16)
+
+
+### Bug Fixes
+
+* **useEventListener:** Pass through options ([472d8d2](https://github.com/HHogg/preshape/commit/472d8d2))
+
 ## [4.1.2](https://github.com/HHogg/preshape/compare/v4.1.1...v4.1.2) (2020-02-08)
 
 
