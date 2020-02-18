@@ -36,8 +36,6 @@
     "open-color": "^1.6.3",
     "prismjs": "^1.14.0",
     "react-popper": "^1.3.7",
-    "remarkable": "^2.0.0",
-    "remarkable-react": "^1.4.1",
     "resize-observer-polyfill": "^1.5.0"
   },
   "devDependencies": {
@@ -88,7 +86,8 @@
     "react-dom": "@hot-loader/react-dom"
   },
   "resolutions": {
-    "fast-glob": "3.1.1"
+    "fast-glob": "3.1.1",
+    "remark": "11.0.2"
   },
   "marked": null,
   "reactSnap": {
