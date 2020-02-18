@@ -1,3 +1,10 @@
+## [4.1.4](https://github.com/HHogg/preshape/compare/v4.1.3...v4.1.4) (2020-02-18)
+
+
+### Bug Fixes
+
+* **Label:** Allow Label background and text color to be configureable ([a4db56c](https://github.com/HHogg/preshape/commit/a4db56c))
+
 ## [4.1.3](https://github.com/HHogg/preshape/compare/v4.1.2...v4.1.3) (2020-02-16)
 
 
