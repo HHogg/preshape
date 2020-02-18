@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "preshape-c4cdc"
+    "default": "hoggio-2524a"
+  },
+  "targets": {
+    "hoggio-2524a": {
+      "hosting": {
+        "preshape": [
+          "preshape"
+        ]
+      }
+    }
   }
 }

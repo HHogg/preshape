@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "preshape",
     "public": "public",
     "rewrites": [{
       "source": "**",
