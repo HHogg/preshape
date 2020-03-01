@@ -167,14 +167,14 @@ export default (props: Props) => {
       </Text>
 
 
-      <Text align="end" margin="x4">
-        <Link onClick={ () => setIsShuffled(!isShuffled) } underline>
+      <Flex alignChildren="end" direction="horizontal" margin="x4">
+        <Link display="block" onClick={ () => setIsShuffled(!isShuffled) } underline>
           <Flex alignChildren="middle" direction="horizontal" gap="x1">
             <Flex><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Flex>
             <Flex><Icon name="Shuffle" size="1rem" /></Flex>
           </Flex>
         </Link>
-      </Text>
+      </Flex>
 
       <Grid
           gap="x2"
