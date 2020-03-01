@@ -52,6 +52,7 @@ const Flex: React.RefForwardingComponent<Element, Attributes<Element, FlexProps>
     [`Flex--align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
     [`Flex--${direction}`]: direction,
     [`Flex--basis-${basis}`]: basis,
+    'Flex--gapped': gap,
     [`Flex--gap-${gap}`]: gap,
     'Flex--grow': grow,
     'Flex--shrink': shrink,

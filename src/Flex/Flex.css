@@ -43,58 +43,28 @@
 .Flex--vertical.Flex--align-vert-around  { justify-content: space-around; }
 .Flex--vertical.Flex--align-vert-between { justify-content: space-between; }
 
-.Flex--gap-x1 > .Flex { margin: calc(var(--size--x1) * 0.5); }
-.Flex--gap-x2 > .Flex { margin: calc(var(--size--x2) * 0.5); }
-.Flex--gap-x3 > .Flex { margin: calc(var(--size--x3) * 0.5); }
-.Flex--gap-x4 > .Flex { margin: calc(var(--size--x4) * 0.5); }
-.Flex--gap-x6 > .Flex { margin: calc(var(--size--x6) * 0.5); }
-.Flex--gap-x8 > .Flex { margin: calc(var(--size--x8) * 0.5); }
-.Flex--gap-x10 > .Flex { margin: calc(var(--size--x10) * 0.5); }
-.Flex--gap-x12 > .Flex { margin: calc(var(--size--x12) * 0.5); }
-.Flex--gap-x16 > .Flex { margin: calc(var(--size--x16) * 0.5); }
+.Flex--vertical.Flex--gap-x1 > .Flex { margin-top: calc(var(--size--x1) * 0.5); margin-bottom: calc(var(--size--x1) * 0.5); }
+.Flex--vertical.Flex--gap-x2 > .Flex { margin-top: calc(var(--size--x2) * 0.5); margin-bottom: calc(var(--size--x2) * 0.5); }
+.Flex--vertical.Flex--gap-x3 > .Flex { margin-top: calc(var(--size--x3) * 0.5); margin-bottom: calc(var(--size--x3) * 0.5); }
+.Flex--vertical.Flex--gap-x4 > .Flex { margin-top: calc(var(--size--x4) * 0.5); margin-bottom: calc(var(--size--x4) * 0.5); }
+.Flex--vertical.Flex--gap-x6 > .Flex { margin-top: calc(var(--size--x6) * 0.5); margin-bottom: calc(var(--size--x6) * 0.5); }
+.Flex--vertical.Flex--gap-x8 > .Flex { margin-top: calc(var(--size--x8) * 0.5); margin-bottom: calc(var(--size--x8) * 0.5); }
+.Flex--vertical.Flex--gap-x10 > .Flex { margin-top: calc(var(--size--x10) * 0.5); margin-bottom: calc(var(--size--x10) * 0.5); }
+.Flex--vertical.Flex--gap-x12 > .Flex { margin-top: calc(var(--size--x12) * 0.5); margin-bottom: calc(var(--size--x12) * 0.5); }
+.Flex--vertical.Flex--gap-x16 > .Flex { margin-top: calc(var(--size--x16) * 0.5); margin-bottom: calc(var(--size--x16) * 0.5); }
 
-.Flex--gap-x1 > .Flex,
-.Flex--gap-x2 > .Flex,
-.Flex--gap-x3 > .Flex,
-.Flex--gap-x4 > .Flex,
-.Flex--gap-x6 > .Flex,
-.Flex--gap-x8 > .Flex,
-.Flex--gap-x10 > .Flex,
-.Flex--gap-x12 > .Flex,
-.Flex--gap-x16 > .Flex {
-  &:first-child {
-    margin-top: 0;
-    margin-left: 0;
-  }
+.Flex--horizontal.Flex--gap-x1 > .Flex { margin-right: calc(var(--size--x1) * 0.5); margin-left: calc(var(--size--x1) * 0.5); }
+.Flex--horizontal.Flex--gap-x2 > .Flex { margin-right: calc(var(--size--x2) * 0.5); margin-left: calc(var(--size--x2) * 0.5); }
+.Flex--horizontal.Flex--gap-x3 > .Flex { margin-right: calc(var(--size--x3) * 0.5); margin-left: calc(var(--size--x3) * 0.5); }
+.Flex--horizontal.Flex--gap-x4 > .Flex { margin-right: calc(var(--size--x4) * 0.5); margin-left: calc(var(--size--x4) * 0.5); }
+.Flex--horizontal.Flex--gap-x6 > .Flex { margin-right: calc(var(--size--x6) * 0.5); margin-left: calc(var(--size--x6) * 0.5); }
+.Flex--horizontal.Flex--gap-x8 > .Flex { margin-right: calc(var(--size--x8) * 0.5); margin-left: calc(var(--size--x8) * 0.5); }
+.Flex--horizontal.Flex--gap-x10 > .Flex { margin-right: calc(var(--size--x10) * 0.5); margin-left: calc(var(--size--x10) * 0.5); }
+.Flex--horizontal.Flex--gap-x12 > .Flex { margin-right: calc(var(--size--x12) * 0.5); margin-left: calc(var(--size--x12) * 0.5); }
+.Flex--horizontal.Flex--gap-x16 > .Flex { margin-right: calc(var(--size--x16) * 0.5); margin-left: calc(var(--size--x16) * 0.5); }
 
-  &:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-}
+.Flex--gapped.Flex--vertical > .Flex:first-child { margin-top: 0; }
+.Flex--gapped.Flex--vertical > .Flex:last-child { margin-bottom: 0; }
 
-.Flex--vertical.Flex--gap-x1 > .Flex,
-.Flex--vertical.Flex--gap-x2 > .Flex,
-.Flex--vertical.Flex--gap-x3 > .Flex,
-.Flex--vertical.Flex--gap-x4 > .Flex,
-.Flex--vertical.Flex--gap-x6 > .Flex,
-.Flex--vertical.Flex--gap-x8 > .Flex,
-.Flex--vertical.Flex--gap-x10 > .Flex,
-.Flex--vertical.Flex--gap-x12 > .Flex,
-.Flex--vertical.Flex--gap-x16 > .Flex {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.Flex--horizontal.Flex--gap-x1 > .Flex,
-.Flex--horizontal.Flex--gap-x2 > .Flex,
-.Flex--horizontal.Flex--gap-x3 > .Flex,
-.Flex--horizontal.Flex--gap-x4 > .Flex,
-.Flex--horizontal.Flex--gap-x6 > .Flex,
-.Flex--horizontal.Flex--gap-x8 > .Flex,
-.Flex--horizontal.Flex--gap-x10 > .Flex,
-.Flex--horizontal.Flex--gap-x12 > .Flex,
-.Flex--horizontal.Flex--gap-x16 > .Flex {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+.Flex--gapped.Flex--horizontal > .Flex:first-child { margin-left: 0; }
+.Flex--gapped.Flex--horizontal > .Flex:last-child { margin-right: 0; }
