@@ -9,17 +9,22 @@ export interface TabProps extends BaseProps {
 }
 
 const Tab: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TabProps>> = (props, ref) => {
-  const { active, children, ...rest } = props;
+  const {
+    active,
+    backgroundColor = 'background-shade-1',
+    children,
+    ...rest
+  } = props;
   const classes = classnames('Tab', {
     'Tab--active': active,
   });
 
   return (
-    <Base { ...rest } className={ classes } ref={ ref }>
-      <Base
-          backgroundColor={ active ? undefined : 'text-shade-1' }
-          className="Tab__background"
-          textColor={ active ? undefined : 'background-shade-1' }>
+    <Base { ...rest }
+        backgroundColor={ backgroundColor }
+        className={ classes }
+        ref={ ref }>
+      <Base className="Tab__background">
         <Link
             display="block"
             padding="x3"

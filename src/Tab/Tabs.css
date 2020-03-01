@@ -5,33 +5,39 @@
 
 .Tabs {
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
-.Tabs::after {
+.Tabs::before {
   content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   flex: 1 0 var(--Tabs--space);
   border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
 }
 
 .Tab {
   position: relative;
+  transform: translateY(var(--size--x2));
+  transform-origin: bottom;
   border: var(--Tabs--border) solid var(--color-text--shade-1);
   border-bottom: none;
   cursor: pointer;
+  transition-property: transform, color;
+  transition-duration: var(--transition-time--fast);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .Tab:not(:last-child) {
   margin-right: var(--Tabs--space);
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: var(--Tabs--space);
-    transform: translateX(calc(var(--Tabs--space) + var(--Tabs--border)));
-    border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
-  }
+.Tab--active {
+  transform: translateY(0);
+  color: var(--color-accent--shade-2);
 }
 
 .Tab__background {
