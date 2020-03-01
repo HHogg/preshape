@@ -29,6 +29,7 @@ export default {
   label: require('./Label').default,
   link: require('./Link').default,
   list: require('./List').default,
+  modal: require('./Modal').default,
   placement: require('./Placement').default,
   radiobutton: require('./RadioButton').default,
   tabs: require('./Tabs').default,

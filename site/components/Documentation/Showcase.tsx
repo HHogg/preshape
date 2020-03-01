@@ -28,9 +28,10 @@ const getCodeString = (node: React.ReactNode) => React.Children
 
 interface Props {
   children: React.ReactNode;
+  disableCode?: boolean;
 }
 
-export default ({ children }: Props) => {
+export default ({ children, disableCode }: Props) => {
   const { onChangeTheme, theme } = React.useContext(SiteContext);
   const [code, setCode] = React.useState(getCodeString(children));
   const [isIsolatedExample, setIsIsolatedExample] = React.useState(false);
@@ -95,40 +96,42 @@ export default ({ children }: Props) => {
           { children }
         </Flex>
 
-        <Flex>
-          <Appear
-              animation="Expand"
-              visible={ isCodeExpanded }
-              visibleInitially={ false }>
-            <CodeBlock
-                language="jsx"
-                paddingHorizontal="x6"
-                paddingVertical="x3"
-                size="x1"
-                wrap>
-              { code }
-            </CodeBlock>
-          </Appear>
+        { !disableCode && (
+          <Flex>
+            <Appear
+                animation="Expand"
+                visible={ isCodeExpanded }
+                visibleInitially={ false }>
+              <CodeBlock
+                  language="jsx"
+                  paddingHorizontal="x6"
+                  paddingVertical="x3"
+                  size="x1"
+                  wrap>
+                { code }
+              </CodeBlock>
+            </Appear>
 
-          <Text align="end" padding="x1">
-            <Link
-                display="inline-block"
-                onClick={ () => setIsCodeExpanded(!isCodeExpanded) }
-                size="x1"
-                strong
-                underline>
-              <Flex alignChildren="middle" direction="horizontal" gap="x1">
-                <Flex>
-                  { isCodeExpanded ? 'Hide code' : 'Show code' }
-                </Flex>
+            <Text align="end" padding="x1">
+              <Link
+                  display="inline-block"
+                  onClick={ () => setIsCodeExpanded(!isCodeExpanded) }
+                  size="x1"
+                  strong
+                  underline>
+                <Flex alignChildren="middle" direction="horizontal" gap="x1">
+                  <Flex>
+                    { isCodeExpanded ? 'Hide code' : 'Show code' }
+                  </Flex>
 
-                <Flex>
-                  <Icon name="Code" size="1rem" />
+                  <Flex>
+                    <Icon name="Code" size="1rem" />
+                  </Flex>
                 </Flex>
-              </Flex>
-            </Link>
-          </Text>
-        </Flex>
+              </Link>
+            </Text>
+          </Flex>
+        ) }
       </Flex>
     </ShowcaseContext.Provider>
   );

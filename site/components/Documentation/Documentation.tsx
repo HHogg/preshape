@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useRouteMatch, useHistory } from 'react-router-dom';
-import { Appear, Flex, Icon, Link, Text } from 'preshape';
+import { Flex, Modal, ModalBody, ModalHeader, Text } from 'preshape';
 import { widthMedium } from '../Root';
 import docs from './docs';
 
@@ -20,27 +20,22 @@ export default () => {
   }
 
   return (
-    <Appear
-        animation="Fade"
-        backgroundColor="background-shade-1"
-        direction="vertical"
-        fixed="fullscreen"
-        padding="x12"
-        scrollable
-        zIndex={ 1 }>
-      <Flex direction="vertical" grow maxWidth={ widthMedium }>
-        <Flex direction="horizontal" gap="x3" margin="x6">
-          <Flex grow>
-            <Text size="x4" strong titlecase>{ item && item.name }</Text>
-          </Flex>
+    <Modal
+        fullscreen
+        gap="x10"
+        onClose={ () => history.push('/') }
+        paddingHorizontal="x6"
+        paddingVertical="x10"
+        visible>
+      <ModalHeader
+          closeIconSize="2rem"
+          maxWidth={ widthMedium }>
+        <Text margin="x1" size="x4" strong>{ item && item.name }</Text>
+        <Text margin="x1" size="x2">{ item && item.description }</Text>
+      </ModalHeader>
 
-          <Flex>
-            <Link to="/">
-              <Icon name="Cross" size="2rem" />
-            </Link>
-          </Flex>
-        </Flex>
-
+      <ModalBody
+          maxWidth={ widthMedium }>
         { item.showcase && (
           <Flex margin="x6">
             <item.showcase.Component { ...state } />
@@ -50,7 +45,6 @@ export default () => {
         { item.apis && (
           <React.Suspense fallback={ (
             <Flex alignChildren="middle" direction="vertical" grow>
-              <Icon margin="x2" name="Progress" size="2rem" spin="slow" />
               <Text strong>Grabbing the documentation</Text>
               <Text strong>sit tight.</Text>
             </Flex>
@@ -61,7 +55,7 @@ export default () => {
                 state={ state } />
           </React.Suspense>
         ) }
-      </Flex>
-    </Appear>
+      </ModalBody>
+    </Modal>
   );
 };
