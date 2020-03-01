@@ -59,7 +59,7 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
   const [render, setRender] = React.useState(props.visible);
   const refModal = React.useRef<HTMLDivElement>(null);
   const match = useMatchMedia([maxWidth]);
-  const isMaxWidthEnabled = !fullscreen && maxWidth !== 'auto';
+  const isMaxWidthEnabled = maxWidth !== 'auto';
 
   React.useEffect(() => {
     if (visible) {
