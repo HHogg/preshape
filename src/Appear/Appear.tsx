@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { MotionProps } from 'framer-motion';
-import { transitionTimeFast, transitionTimingFunction } from '../variables';
+import { MotionProps, Transition } from 'framer-motion';
 import animations from './animations';
 import { Attributes } from '../Base/Base';
 import { FlexProps } from '../Flex/Flex';
@@ -16,6 +15,14 @@ export type TypeAnimation =
   'Pop' |
   'ScaleYDown' |
   'ScaleYUp';
+
+const defaultTransition = {
+  type: 'spring',
+  damping: 15,
+  mass: 0.75,
+  stiffness: 400,
+  velocity: 1,
+};
 
 
 /**
@@ -35,16 +42,18 @@ export interface AppearProps extends FlexProps, MotionProps {
    * @default 0
    */
   delay?: number;
-  /**
-   * Duration (in milliseconds) of the animation from start to finish.
-   *
-   * @default 200
-   */
-  duration?: number;
   /** Callback for when the animation has ended */
   onAnimationEnd?: () => void;
   /** Callback for when the animation has started */
   onAnimationStart?: () => void;
+  /** The animation origin on the X axis, from 0 -1 */
+  originX?: number;
+  /** The animation origin on the Y axis, from 0 -1 */
+  originY?: number;
+  /**
+   * Framer Motion transition.
+   */
+  transition?: Transition;
   /**
    * Trigger for appearance/disappearance animation.
    *
@@ -64,13 +73,17 @@ const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, 
   const {
     animation = 'FadeSlideUp',
     delay = 0,
-    duration = transitionTimeFast,
+    originX,
+    originY,
+    transition,
     visible = true,
     visibleInitially = false,
     ...rest
   } = props;
 
-  if (!animations[animation]) {
+  const variantsConfig = animations[animation];
+
+  if (!variantsConfig) {
     return null;
   }
 
@@ -79,12 +92,11 @@ const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, 
         animate={ visible ? 'visible' : 'hidden' }
         initial={ visibleInitially ? 'visible' : 'hidden' }
         ref={ ref }
-        transition={ {
-          ease: transitionTimingFunction,
+        transition={ transition || {
+          ...defaultTransition,
           delay: delay / 1000,
-          duration: duration / 1000,
         } }
-        variants={ animations[animation] } />
+        variants={ animations[animation](originX, originY) } />
   );
 };
 

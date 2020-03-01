@@ -3,12 +3,12 @@ import { sizeX4Px } from '../variables';
 import { TypeAnimation } from './Appear';
 
 const variants: {
-  [key in TypeAnimation]: {
+  [key in TypeAnimation]: (originX?: number, originY?: number) => {
     hidden: Variant;
     visible: Variant;
   };
 } = {
-  Expand: {
+  Expand: () => ({
     hidden: {
       height: 0,
       opacity: 0,
@@ -19,95 +19,97 @@ const variants: {
       opacity: 1,
       overflow: 'visible',
     },
-  },
-  Fade: {
+  }),
+  Fade: () => ({
     hidden: {
       opacity: 0,
     },
     visible: {
       opacity: 1,
     },
-  },
-  FadeSlideUp: {
+  }),
+  FadeSlideUp: () => ({
     hidden: {
       opacity: 0,
-      origin: 0.5,
       y: sizeX4Px,
     },
     visible: {
       opacity: 1,
-      origin: 0.5,
       y: 0,
     },
-  },
-  FadeSlideRight: {
+  }),
+  FadeSlideRight: () => ({
     hidden: {
       opacity: 0,
-      origin: 0.5,
       x: -sizeX4Px,
     },
     visible: {
       opacity: 1,
-      origin: 0.5,
       x: 0,
     },
-  },
-  FadeSlideDown: {
+  }),
+  FadeSlideDown: () => ({
     hidden: {
       opacity: 0,
-      origin: 0.5,
       y: -sizeX4Px,
     },
     visible: {
       opacity: 1,
-      origin: 0.5,
       y: 0,
     },
-  },
-  FadeSlideLeft: {
+  }),
+  FadeSlideLeft: () => ({
     hidden: {
       opacity: 0,
-      origin: 0.5,
       x: sizeX4Px,
     },
     visible: {
       opacity: 1,
-      origin: 0.5,
       x: 0,
     },
-  },
-  Pop: {
+  }),
+  Pop: (originX = 0.5, originY = 0.5) => ({
     hidden: {
+      opacity: 0,
+      originX: originX,
+      originY: originY,
       scale: 0,
-      opacity: 1,
-      origin: 0.5,
     },
     visible: {
       scale: 1,
+      originX: originX,
+      originY: originY,
       opacity: 1,
-      origin: 0.5,
     },
-  },
-  ScaleYDown: {
+  }),
+  ScaleYDown: (originX = 0.5, originY = 0) => ({
     hidden: {
-      originY: 0,
+      opacity: 0,
+      originX: originX,
+      originY: originY,
       scaleY: 0,
     },
     visible: {
-      originY: 0,
+      opacity: 1,
+      originX: originX,
+      originY: originY,
       scaleY: 1,
     },
-  },
-  ScaleYUp: {
+  }),
+  ScaleYUp: (originX = 0.5, originY = 1) => ({
     hidden: {
-      originY: 1,
+      opacity: 0,
+      originX: originX,
+      originY: originY,
       scaleY: 0,
     },
     visible: {
-      originY: 1,
+      opacity: 1,
+      originX: originX,
+      originY: originY,
       scaleY: 1,
     },
-  },
+  }),
 };
 
 export default variants;

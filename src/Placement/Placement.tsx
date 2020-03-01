@@ -1,11 +1,63 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
+import * as PopperJS from 'popper.js';
 import { Popper, PopperProps, PopperArrowProps } from 'react-popper';
 import classnames from 'classnames';
 import { useEventListener } from '../hooks';
 import Appear from '../Appear/Appear';
 import Base, { BaseProps } from '../Base/Base';
 import './Placement.css';
+import { PlacementManagerContext } from './PlacementManager';
+
+const getAnimationOrigin = (placement: PopperJS.Placement): {
+  originX: 0 | 0.5 | 1;
+  originY: 0 | 0.5 | 1;
+} => {
+  switch (placement) {
+    case 'bottom':
+    case 'bottom-end':
+    case 'bottom-start': {
+      return {
+        originX: 0.5,
+        originY: 0,
+      };
+    }
+
+    case 'left':
+    case 'left-end':
+    case 'left-start': {
+      return {
+        originX: 1,
+        originY: 0.5,
+      };
+    }
+
+    case 'right':
+    case 'right-end':
+    case 'right-start': {
+      return {
+        originX: 0,
+        originY: 0.5,
+      };
+    }
+
+    case 'top':
+    case 'top-end':
+    case 'top-start': {
+      return {
+        originX: 0.5,
+        originY: 1,
+      };
+    }
+
+    default: {
+      return {
+        originX: 0.5,
+        originY: 0.5,
+      };
+    }
+  }
+};
 
 type PopperOptions = Omit<PopperProps, 'children'>;
 
@@ -72,7 +124,7 @@ const Placement: React.FC<PlacementProps> = (props) => {
               className={ classnames('Placement', `Placement--${placement}`) }
               ref={ ref }
               style={ style }>
-            <Appear
+            <Appear { ...getAnimationOrigin(placement) }
                 animation="Pop"
                 onAnimationComplete={ handleExited }
                 visible={ visible }>
