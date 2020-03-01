@@ -100,6 +100,8 @@ export interface BaseProps {
   /** Margins applied for the global spacing variables */
   margin?: TypeSize;
   /** Max width applied through inline styling */
+  maxHeight?: number | string;
+  /** Max width applied through inline styling */
   maxWidth?: number | string;
   /** Max height applied through inline styling */
   minHeight?: number | string;
@@ -154,6 +156,7 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElemenetProps
     display,
     fixed,
     height,
+    maxHeight,
     maxWidth,
     minWidth,
     minHeight,
@@ -196,7 +199,7 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElemenetProps
     ...rest,
     className: classes,
     ref: ref,
-    style: { height, minHeight, maxWidth, minWidth, width, zIndex, ...style },
+    style: { height, maxHeight, minHeight, maxWidth, minWidth, width, zIndex, ...style },
   }, children);
 };
 
