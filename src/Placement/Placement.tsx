@@ -88,7 +88,24 @@ export interface PlacementProps extends BaseProps {
 }
 
 const Placement: React.FC<PlacementProps> = (props) => {
-  const { children, options, onClose, placement, unrender, visible = true, ...rest } = props;
+  const {
+    children,
+    options,
+    onClose: onCloseControlled,
+    placement,
+    unrender,
+    visible: visibleControlled = true,
+    ...rest
+  } = props;
+
+  const {
+    onClose: onCloseUncontrolled,
+    visible: visibleUncontrolled,
+  } = React.useContext(PlacementManagerContext);
+
+  const onClose = onCloseUncontrolled || onCloseControlled;
+  const visible = visibleUncontrolled === undefined ? visibleControlled : visibleUncontrolled;
+
   const [render, setRender] = React.useState(unrender ? visible : true);
   const ref = React.useRef<HTMLElement | null>();
 
@@ -98,11 +115,11 @@ const Placement: React.FC<PlacementProps> = (props) => {
     }
   }, [visible]);
 
-  useEventListener(document, 'click', (event) => {
-    if (onClose && ref.current && !ref.current.contains(event.target as Node)) {
+  useEventListener(document, 'pointerup', (event) => {
+    if (onClose && visible && ref.current && !ref.current.contains(event.target as Node)) {
       onClose();
     }
-  }, [onClose]);
+  }, [onClose, visible]);
 
   if (!render) {
     return null;
