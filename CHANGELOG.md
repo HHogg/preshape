@@ -1,3 +1,10 @@
+## [4.2.1](https://github.com/HHogg/preshape/compare/v4.2.0...v4.2.1) (2020-03-02)
+
+
+### Bug Fixes
+
+* **Modal:** Allow maxWidth to be used with fullscreen ([0b7cf59](https://github.com/HHogg/preshape/commit/0b7cf599bca555ba5e2032757f944b15dd7989af))
+
 # [4.2.0](https://github.com/HHogg/preshape/compare/v4.1.4...v4.2.0) (2020-03-02)
 
 
