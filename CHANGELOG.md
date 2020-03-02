@@ -1,3 +1,21 @@
+# [4.2.0](https://github.com/HHogg/preshape/compare/v4.1.4...v4.2.0) (2020-03-02)
+
+
+### Bug Fixes
+
+* **Flex:** Allow maxWidth to be used with children of Flex with gap ([d23a80e](https://github.com/HHogg/preshape/commit/d23a80eaa63031fa00871ae286b4e0ad48027d65))
+* **Link:** Updated Link style ([5425d1c](https://github.com/HHogg/preshape/commit/5425d1c19832ede58c2a8b98d396b0e559d49f42))
+* **Tabs:** Updated Tabs style ([a353031](https://github.com/HHogg/preshape/commit/a3530318261a54f31439cd37eaf1a67f84a9f606))
+
+
+### Features
+
+* **Appear:** Added origin props to change the animation origin. Also added a transition prop to pass a Framer Motion transition. Removed the duration property, as transition allows for more flexibility in configuring the animation. ([34161a7](https://github.com/HHogg/preshape/commit/34161a72be87cbeb204e2535ca0306c7eba1a5ff))
+* **Base:** Added maxHeight prop ([3db5e68](https://github.com/HHogg/preshape/commit/3db5e68b96174d7de82ba22d9709951d7a880154))
+* **Modal:** Added modal component ([1b3ad32](https://github.com/HHogg/preshape/commit/1b3ad328009412cc3269e3e8a70bddc9bd7c458f))
+* **Placement:** Added trigger prop to allow uncontrolled use of Placement by adding handlers onto the reference element. ([26bd669](https://github.com/HHogg/preshape/commit/26bd669302f57c836bdcc69987c0a7840d25de0a))
+* **Tooltip:** Added tooltip component ([ae650b1](https://github.com/HHogg/preshape/commit/ae650b14049962581fa06ccf5c0ffcbb23f343df))
+
 ## [4.1.4](https://github.com/HHogg/preshape/compare/v4.1.3...v4.1.4) (2020-02-18)
 
 
