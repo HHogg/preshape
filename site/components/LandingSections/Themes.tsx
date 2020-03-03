@@ -9,7 +9,7 @@ import {
   Motion,
   ThemeSwitcher,
 } from 'preshape';
-import SiteContext from '../SiteContext';
+import { RootContext } from '../Root';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 interface ThemeVariants extends Variants {
@@ -84,7 +84,7 @@ const stars: { size: number; x: number; y: number }[] = [
 ];
 
 export default (props: Props) => {
-  const { onChangeTheme, theme } = React.useContext(SiteContext);
+  const { onChangeTheme, theme } = React.useContext(RootContext);
 
   return (
     <LandingSection { ...props }>

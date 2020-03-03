@@ -40,7 +40,6 @@
     "resize-observer-polyfill": "^1.5.0"
   },
   "devDependencies": {
-    "@hot-loader/react-dom": "^16.11.0",
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/git": "^9.0.0",
     "@svgr/cli": "^5.0.1",
@@ -70,7 +69,6 @@
     "react": ">=16.6.0",
     "react-dom": ">=16.6.0",
     "react-element-to-jsx-string": "^14.2.0",
-    "react-hot-loader": "^4.12.18",
     "react-router-dom": "^5.1.2",
     "react-snap": "^1.23.0",
     "react-test-renderer": "^16.3.2",
@@ -83,8 +81,7 @@
     "typescript": "^3.4.5"
   },
   "alias": {
-    "preshape": "./src",
-    "react-dom": "@hot-loader/react-dom"
+    "preshape": "./src"
   },
   "resolutions": {
     "fast-glob": "3.1.1",

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import toJsxString from 'react-element-to-jsx-string';
 import { CodeBlock, Appear, Flex, Icon, Link, Text, ThemeSwitcher } from 'preshape';
-import SiteContext from '../SiteContext';
+import { RootContext } from '../Root';
 
 export const ShowcaseContext = React.createContext<{
   setShowcaseCode: (node: React.ReactNode) => void;
@@ -32,7 +32,7 @@ interface Props {
 }
 
 export default ({ children, disableCode }: Props) => {
-  const { onChangeTheme, theme } = React.useContext(SiteContext);
+  const { onChangeTheme, theme } = React.useContext(RootContext);
   const [code, setCode] = React.useState(getCodeString(children));
   const [isIsolatedExample, setIsIsolatedExample] = React.useState(false);
   const [isCodeExpanded, setIsCodeExpanded] = React.useState(false);

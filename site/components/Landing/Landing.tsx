@@ -10,15 +10,14 @@ import {
   ThemeSwitcher,
 } from 'preshape';
 import { version } from '../../../package.json';
-import { widthSmall, widthMedium } from '../Root';
+import { RootContext, widthSmall, widthMedium } from '../Root';
 import Documentation from '../Documentation/Documentation';
 import landingSections from '../LandingSections';
 import LandingSection from './LandingSection';
 import Logo from '../Logo/Logo';
-import SiteContext from '../SiteContext';
 
 export default () => {
-  const { onChangeTheme, theme } = React.useContext(SiteContext);
+  const { onChangeTheme, theme } = React.useContext(RootContext);
 
   return (
     <Base>

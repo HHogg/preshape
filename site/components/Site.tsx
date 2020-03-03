@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { hot } from 'react-hot-loader';
 import { useTheme, Base, TypeTheme } from 'preshape';
 import Landing from './Landing/Landing';
 import SiteContext from './SiteContext';
 
-const Site = () => {
+export default () => {
   const [theme, onChangeTheme] = React.useState<TypeTheme>('day');
 
   useTheme(theme);
@@ -20,5 +19,3 @@ const Site = () => {
     </Base>
   );
 };
-
-export default hot(module)(Site);

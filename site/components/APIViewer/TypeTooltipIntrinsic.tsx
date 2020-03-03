@@ -10,7 +10,7 @@ import {
   PlacementReference,
 } from 'preshape';
 import { Renderer } from './Types';
-import SiteContext from '../SiteContext';
+import { RootContext } from '../Root';
 
 export interface Props extends Renderer {
   children: (props: {
@@ -24,7 +24,7 @@ export interface Props extends Renderer {
 
 export default (props: Props) => {
   const { children, context, state, onStateChange, placeholder } = props;
-  const { theme } = React.useContext(SiteContext);
+  const { theme } = React.useContext(RootContext);
   const [visible, setVisible] = React.useState(false);
   const [textValue, setTextValue] = React.useState((state || '').toString());
 

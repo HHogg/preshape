@@ -12,7 +12,3 @@ if (rootElement) {
     render(<Root />, rootElement);
   }
 }
-
-if (module.hot) {
-  module.hot.accept();
-}
