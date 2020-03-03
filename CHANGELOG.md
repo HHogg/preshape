@@ -1,3 +1,10 @@
+## [4.2.2](https://github.com/HHogg/preshape/compare/v4.2.1...v4.2.2) (2020-03-03)
+
+
+### Bug Fixes
+
+* **HotLoader:** Using aliased hotloader breaks consumers without hotloader ([31ab6cf](https://github.com/HHogg/preshape/commit/31ab6cfbcf9a436a50ad4dda06234011269b5d27))
+
 ## [4.2.1](https://github.com/HHogg/preshape/compare/v4.2.0...v4.2.1) (2020-03-02)
 
 
