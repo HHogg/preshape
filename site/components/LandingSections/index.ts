@@ -1,4 +1,3 @@
-import Animations from './Animations';
 import Colors from './Colors';
 import Components from './Components';
 import Icons from './Icons';

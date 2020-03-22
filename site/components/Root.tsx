@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { useTheme, TypeTheme } from 'preshape';
+import { useLocalStorage, useTheme, TypeTheme } from 'preshape';
 import Landing from './Landing/Landing';
 
 export const widthContainer = '1152px';
@@ -18,7 +18,7 @@ export const RootContext = React.createContext<{
 
 
 export default () => {
-  const [theme, onChangeTheme] = React.useState<TypeTheme>('day');
+  const [theme, onChangeTheme] = useLocalStorage<TypeTheme>('com.hogg.theme', 'day');
 
   useTheme(theme);
 
