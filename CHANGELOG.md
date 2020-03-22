@@ -1,3 +1,11 @@
+# [4.3.0](https://github.com/HHogg/preshape/compare/v4.2.2...v4.3.0) (2020-03-22)
+
+
+### Features
+
+* **useLocalStorage:** Added useLocalStorage hook. ([f3ee155](https://github.com/HHogg/preshape/commit/f3ee1555b3ac3e4399bc583b44e6b8b0b52509ee))
+* **useUrlState:** Added useUrlState hook for managing storing state in url search parameters ([d16231f](https://github.com/HHogg/preshape/commit/d16231f0ab49f26f7210e293aa9f5d530ee3d221))
+
 ## [4.2.2](https://github.com/HHogg/preshape/compare/v4.2.1...v4.2.2) (2020-03-03)
 
 
