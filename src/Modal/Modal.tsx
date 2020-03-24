@@ -2,8 +2,8 @@ import * as React from 'react';
 import { createPortal } from 'react-dom';
 import { useMatchMedia } from '../hooks';
 import { Attributes } from '../Base/Base';
-import Appear, { AppearProps } from '../Appear/Appear';
-import Flex from '../Flex/Flex';
+import Appear, { TypeAnimation } from '../Appear/Appear';
+import Flex, { FlexProps } from '../Flex/Flex';
 import './Modal.css';
 
 export const ModalContext = React.createContext<{
@@ -16,7 +16,13 @@ export const ModalContext = React.createContext<{
  * an overlay, animations, behaviour to disable body scroll when
  * it is visible.
  */
-export interface ModalProps extends AppearProps {
+export interface ModalProps extends FlexProps {
+  /**
+   * Animation for the Modal window. See Appear component.
+   *
+   * @default "Fade"
+   */
+  animation?: TypeAnimation;
   /**
   * Extends the initial height of the modal to
   * be the full height of the viewport
@@ -34,8 +40,8 @@ export interface ModalProps extends AppearProps {
    */
   onClose?: (event: React.PointerEvent<HTMLElement>) => void;
   /**
-   * The visible state of the modal. When the visiblity
-   * is set to false, the content will be remvoed from the
+   * The visible state of the modal. When the visibility
+   * is set to false, the content will be removed from the
    * DOM.
    */
   visible: boolean;
@@ -43,6 +49,7 @@ export interface ModalProps extends AppearProps {
 
 const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalProps>> = (props, ref) => {
   const {
+    animation = 'Fade',
     children,
     fullscreen,
     gap,
@@ -86,21 +93,22 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
 
   return createPortal(
     <ModalContext.Provider value={ { onClose } }>
-      <Appear { ...rest }
+      <Flex { ...rest }
           alignChildren="middle"
-          animation="Fade"
           direction="vertical"
           fixed="fullscreen"
-          onAnimationComplete={ handleOnAnimateComplete }
           padding={ (!isMaxWidthEnabled || match(maxWidth)) ? margin : 'x0' }
-          ref={ ref }
-          visible={ visible }>
-        <Flex
+          ref={ ref }>
+        <Appear
             absolute="fullscreen"
+            animation="Fade"
             backgroundColor="overlay"
-            onPointerUp={ onClose } />
+            onAnimationComplete={ handleOnAnimateComplete }
+            onPointerUp={ onClose }
+            visible={ visible } />
 
-        <Flex
+        <Appear
+            animation={ animation }
             backgroundColor="background-shade-1"
             container
             direction="vertical"
@@ -115,10 +123,11 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
             paddingVertical={ paddingVertical }
             ref={ refModal }
             scrollable
-            shrink>
+            shrink
+            visible={ visible }>
           { children }
-        </Flex>
-      </Appear>
+        </Appear>
+      </Flex>
     </ModalContext.Provider>
   , document.body);
 };

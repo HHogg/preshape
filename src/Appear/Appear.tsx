@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { MotionProps, Transition } from 'framer-motion';
 import animations from './animations';
+import { transitionTimeFast } from '../variables';
 import { Attributes } from '../Base/Base';
 import { FlexProps } from '../Flex/Flex';
 import Motion from '../Motion/Motion';
@@ -15,15 +16,6 @@ export type TypeAnimation =
   'Pop' |
   'ScaleYDown' |
   'ScaleYUp';
-
-const defaultTransition = {
-  type: 'spring',
-  damping: 15,
-  mass: 0.75,
-  stiffness: 400,
-  velocity: 1,
-};
-
 
 /**
  * Using framer-motion, the Appear component provides a variety of
@@ -42,6 +34,13 @@ export interface AppearProps extends FlexProps, MotionProps {
    * @default 0
    */
   delay?: number;
+  /**
+   * Duration (in milliseconds) that the animation is played for. Not compatible with
+   * spring based animations.
+   *
+   * @default 200
+   */
+  duration?: number;
   /** Callback for when the animation has ended */
   onAnimationEnd?: () => void;
   /** Callback for when the animation has started */
@@ -61,7 +60,7 @@ export interface AppearProps extends FlexProps, MotionProps {
    * */
   visible?: boolean;
   /**
-   * The iniital visibility state, which determines the starting
+   * The initial visibility state, which determines the starting
    * animation state.
    *
    * @default false
@@ -73,9 +72,9 @@ const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, 
   const {
     animation = 'FadeSlideUp',
     delay = 0,
+    duration = transitionTimeFast,
     originX,
     originY,
-    transition,
     visible = true,
     visibleInitially = false,
     ...rest
@@ -87,16 +86,22 @@ const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, 
     return null;
   }
 
+  const {
+    transition,
+    variants,
+  } = animations[animation](originX, originY);
+
   return (
     <Motion { ...rest }
         animate={ visible ? 'visible' : 'hidden' }
         initial={ visibleInitially ? 'visible' : 'hidden' }
         ref={ ref }
-        transition={ transition || {
-          ...defaultTransition,
+        transition={ props.transition || {
+          ...transition,
           delay: delay / 1000,
+          duration: duration / 1000,
         } }
-        variants={ animations[animation](originX, originY) } />
+        variants={ variants } />
   );
 };
 
