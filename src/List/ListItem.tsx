@@ -4,7 +4,7 @@ import Flex, { FlexProps } from '../Flex/Flex';
 
 export interface ListItemProps extends FlexProps {
   /**
-   * Seperating string.
+   * Separating string.
    *
    * @default "/"
    */

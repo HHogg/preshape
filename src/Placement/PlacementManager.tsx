@@ -22,7 +22,7 @@ export interface PlacementManagerProps {
    */
   children: React.ReactNode;
   /**
-   * The control trigger that activates visibilty control by
+   * The control trigger that activates visibility control by
    * passing the matching event handlers onto the reference
    * element.
    */

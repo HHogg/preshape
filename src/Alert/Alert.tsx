@@ -9,7 +9,7 @@ import './Alert.css';
 export interface AlertProps extends BaseProps {
   /** Color that is applied to the Alert to indicate the type of action */
   color: 'accent' | 'negative' | 'positive';
-  /** Appies a filled in style to the alert. */
+  /** Applies a filled in style to the alert. */
   fill?: boolean;
 }
 

@@ -19,7 +19,7 @@ export interface ButtonProps extends FlexProps {
   color?: 'accent' | 'negative' | 'positive';
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
-  /** Appies a filled in style to the button. */
+  /** Applies a filled in style to the button. */
   fill?: boolean;
 }
 

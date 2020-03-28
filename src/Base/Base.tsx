@@ -137,12 +137,12 @@ export interface BaseProps {
   zIndex?: number;
 }
 
-type ReactElemenetProps = Omit<
+type ReactElementProps = Omit<
   React.AllHTMLAttributes<Element> &
   React.SVGAttributes<Element>
 , 'crossOrigin'>;
 
-const Base: React.RefForwardingComponent<Element, BaseProps & ReactElemenetProps> = (props, ref) => {
+const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps> = (props, ref) => {
   const {
     absolute,
     backgroundColor,

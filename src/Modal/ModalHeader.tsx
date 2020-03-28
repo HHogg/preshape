@@ -8,7 +8,7 @@ import Link from '../Link/Link';
 /**
  * THe header element of the Modal. Any children content
  * will be placed in the title area. If an onClose
- * callbacj is provided to the Modal component, then
+ * callback is provided to the Modal component, then
  * the cross icon will appear in this element.
  */
 export interface ModalHeaderProps extends FlexProps {
