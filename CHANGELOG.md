@@ -1,3 +1,10 @@
+## [4.3.1](https://github.com/HHogg/preshape/compare/v4.3.0...v4.3.1) (2020-03-28)
+
+
+### Bug Fixes
+
+* **Modal:** Flicker from Appear component spring animation. ([5cce3dd](https://github.com/HHogg/preshape/commit/5cce3ddfd964bc497774aa83952903092de3bb95))
+
 # [4.3.0](https://github.com/HHogg/preshape/compare/v4.2.2...v4.3.0) (2020-03-22)
 
 
