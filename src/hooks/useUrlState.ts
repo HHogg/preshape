@@ -70,7 +70,12 @@ function useUrlState<S>(props: Props<S>) {
       const encodedValue = urlSearchParams[key] as (undefined | string);
 
       if (encodedValue !== undefined) {
-        urlState[key] = decoder(encodedValue, urlSearchParams);
+        try {
+          urlState[key] = decoder(encodedValue, urlSearchParams);
+        } catch (e) {
+          // eslint-disable-next-line no-console
+          console.error(e);
+        }
       }
     }
 
@@ -107,7 +112,12 @@ function useUrlState<S>(props: Props<S>) {
       const decodedValue = state[key] as S[Extract<keyof S, string>];
 
       if (encoder && decodedValue !== undefined) {
-        urlSearchParams.set(key, encoder(decodedValue));
+        try {
+          urlSearchParams.set(key, encoder(decodedValue));
+        } catch (e) {
+          // eslint-disable-next-line no-console
+          console.error(e);
+        }
       }
     }
 
@@ -125,11 +135,11 @@ function useUrlState<S>(props: Props<S>) {
     const urlStateFull = getFullUrlState();
 
     for (const key in state) {
-      const validator = validators[key];
       const decodedValue = state[key] as S[Extract<keyof S, string>];
+      const validator = getValidator(key);
       const defaultValue = getDefaultValue(key, urlStateFull);
 
-      if (decodedValue !== undefined && validator && validator(decodedValue, state) && !isEqual(key, defaultValue, decodedValue)) {
+      if (decodedValue !== undefined && validator(decodedValue, state) && !isEqual(key, defaultValue, decodedValue)) {
         urlState[key] = decodedValue;
       } else {
         delete urlState[key];
