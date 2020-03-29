@@ -1,3 +1,10 @@
+## [4.3.2](https://github.com/HHogg/preshape/compare/v4.3.1...v4.3.2) (2020-03-29)
+
+
+### Bug Fixes
+
+* **useUrlState:** Gracefully handle failing encoders and decoders ([3f9e324](https://github.com/HHogg/preshape/commit/3f9e324711262ce3d73c498a3981b0689351ae4a))
+
 ## [4.3.1](https://github.com/HHogg/preshape/compare/v4.3.0...v4.3.1) (2020-03-28)
 
 
