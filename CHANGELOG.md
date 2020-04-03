@@ -1,3 +1,16 @@
+# [4.4.0](https://github.com/HHogg/preshape/compare/v4.3.2...v4.4.0) (2020-04-03)
+
+
+### Bug Fixes
+
+* useIntersectionObserver & useResizeObserver not reacting to ref changes ([0a3450d](https://github.com/HHogg/preshape/commit/0a3450d63e8bc070d64dd363eaedaf8c1e1990f7))
+* **Colors:** Added RGB color variables ([92efa10](https://github.com/HHogg/preshape/commit/92efa106dbb997c624268124a9a463d4910701ad))
+
+
+### Features
+
+* **Editor:** Added Editor component ([3ffd369](https://github.com/HHogg/preshape/commit/3ffd36929026e569e088a39181701f86a57fefc1))
+
 ## [4.3.2](https://github.com/HHogg/preshape/compare/v4.3.1...v4.3.2) (2020-03-29)
 
 
