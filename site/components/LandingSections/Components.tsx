@@ -19,7 +19,13 @@ export default (props: Props) => {
             .entries(docs)
             .filter(([, { type }]) => type === 'component')
             .map(([id, item]) => (
-              <Link borderSize="x2" display="block" key={ id } padding="x3" to={ `/api/${id}` }>
+              <Link
+                  borderSize="x2"
+                  display="block"
+                  key={ id }
+                  padding="x3"
+                  rel="nofollow"
+                  to={ `/api/${id}` }>
                 { item.pictogram && <item.pictogram /> }
                 <Text margin="x1" strong>{ item.name }</Text>
                 <Text margin="x1" size="x1" tag="div">{ item.description }</Text>

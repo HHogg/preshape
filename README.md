@@ -1,12 +1,17 @@
 <p align="center">
-  <img src="./site/assets/logo-with-text.svg" width="231" height="170" alt="Preshape" />
+  <img src="./site/assets/preshape.svg" alt="Preshape" />
 </p>
 
+<h1 align="center">
+  Preshape
+</h1>
+
 <h3 align="center">
-  A minimal design system and library of React components.
+  A minimal design system and library of React components.<br/>
+  <a>https://preshape.hogg.io</a>
 </h3>
 
-_This exists primarially for my own personal projects, hence the lack of supporting documentation, although a basic styleguide and component API docs exist to validate the design system._
+<hr />
 
 ### Getting Started
 
@@ -40,6 +45,58 @@ if (rootElement) {
 ### Documentation
 
 Description of the design system and component documentation can be found on the [Preshape site](https://preshape.hogg.io).
+
+### Technology
+
+- [Typescript](https://www.typescriptlang.org/)
+- [Parcel](https://parceljs.org/) (bundler and dev servers)
+- [React](https://reactjs.org/)
+- [PostCSS](https://postcss.org/) (with postcss-preset-env for a little power)
+- [Firebase](https://firebase.google.com/) (hosting)
+
+### Setup
+
+##### Prerequisites
+
+• [Node](https://nodejs.org/en/) - Either use [nvm use](https://github.com/nvm-sh/nvm) or checkout the tested version inside the [.nvmrc](./nmvrc) file.
+
+##### Setup
+
+Clone the repository
+
+```
+git clone git@github.com:HHogg/circles.git
+```
+
+Install the dependencies with your favourite package manager
+
+```
+yarn install
+```
+
+##### Running
+
+Spin up the Parcel development server
+
+```
+yarn start
+```
+
+##### Building the static site
+
+Build the static files using Parcel
+
+```
+yarn build:site
+```
+
+##### Building the library
+
+Build the static files using Parcel
+
+```
+yarn build:lib
+```
 
 ### Contribution
 

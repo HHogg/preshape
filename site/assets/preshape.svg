@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="180px" viewBox="0 0 600 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>preshape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="preshape" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FF7EAB" x="0" y="0" width="600" height="180"></rect>
+        <g id="Group" transform="translate(152.000000, -3.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <g id="4x4-copy-4" transform="translate(64.000000, 0.000000)">
+                <polygon id="W" fill="#212529" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+                <polygon id="E" fill="#1E1B18" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 41.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 21.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="4x4-copy-6" transform="translate(0.000000, 37.000000)">
+                <polygon id="W" fill="#212529" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+                <polygon id="E" fill="#1E1B18" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 41.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 21.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="4x4-copy-5" transform="translate(96.000000, 18.600000)">
+                <polygon id="W" fill="#212529" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+                <polygon id="E" fill="#1E1B18" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 41.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 21.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="4x4-copy-7" transform="translate(32.000000, 55.600000)">
+                <polygon id="W" fill="#212529" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+                <polygon id="E" fill="#1E1B18" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 41.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 21.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="2x2-copy-6" transform="translate(96.000000, 0.000000)">
+                <polygon id="W" fill="#E9ECEF" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+                <polygon id="E" fill="#DEE2E6" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+                <polygon id="N" fill="#F1F3F5" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 13.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 22.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 3.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 13.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="4x4-copy-8" transform="translate(32.000000, 19.000000)">
+                <polygon id="W" fill="#E9ECEF" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+                <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+                <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 41.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 21.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 31.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                    <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="2x2-copy-4" transform="translate(128.000000, 55.000000)">
+                <polygon id="W" fill="#212529" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+                <polygon id="E" fill="#1E1B18" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 13.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 22.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 3.770000)">
+                    <path d="M0,5.9 C0,7.72253967 2.46243388,9.2 5.5,9.2 C8.53756612,9.2 11,7.72253967 11,5.9 L11,2.6 L0,2.6 L0,5.9 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 13.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x2-copy-4" transform="translate(112.000000, 74.200000)">
+                <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(11.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x1-copy-3" transform="translate(160.000000, 84.000000)">
+                <polygon id="E" fill="#1E1B18" points="32 9.23760431 32 27.7128129 16 36.9504172 16 18.4752086"></polygon>
+                <polygon id="W" fill="#212529" points="16 18.4752086 16 36.9504172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 32 9.23760431 16 18.4752086 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(10.500000, 3.000000)">
+                    <path d="M0,6.9 C0,8.72253967 2.46243388,10.2 5.5,10.2 C8.53756612,10.2 11,8.72253967 11,6.9 L11,3.6 L0,3.6 L0,6.9 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x2-copy-10" transform="translate(216.000000, 94.000000)">
+                <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(11.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x2-copy-8" transform="translate(208.000000, 126.500000) scale(-1, 1) translate(-208.000000, -126.500000) translate(184.000000, 103.000000)">
+                <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(11.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x2-copy-9" transform="translate(248.000000, 112.500000)">
+                <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(11.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="2x2-copy-5" transform="translate(200.000000, 119.000000)">
+                <polygon id="W" fill="#AE3EC9" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+                <polygon id="E" fill="#9C36B5" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+                <polygon id="N" fill="#BE4BDB" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+                <g id="Dot" transform="translate(11.000000, 13.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                    <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 22.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                    <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 3.770000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                    <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(43.000000, 13.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                    <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x2-copy-5" transform="translate(256.000000, 154.500000) scale(-1, 1) translate(-256.000000, -154.500000) translate(232.000000, 131.000000)">
+                <polygon id="W" fill="#1E1B18" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(11.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x2-copy-6" transform="translate(168.000000, 121.600000)">
+                <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(11.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+            <g id="1x2-copy-7" transform="translate(200.000000, 140.000000)">
+                <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+                <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+                <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+                <g id="Dot" transform="translate(11.000000, 3.000000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+                <g id="Dot" transform="translate(27.000000, 12.230000)">
+                    <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                    <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+                </g>
+            </g>
+        </g>
+        <g id="2x2-copy-17" transform="translate(384.000000, -40.500000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="E" fill="#9C36B5" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+        </g>
+        <g id="2x2-copy-16" transform="translate(416.000000, -22.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#4263EB" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="E" fill="#3B5BDB" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+            <polygon id="N" fill="#4C6EF5" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 13.000000)" fill="#4263EB">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 22.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 13.000000)" fill="#4263EB">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+        </g>
+        <g id="4x4-copy-10" transform="translate(528.000000, 15.500000) scale(-1, 1) translate(-528.000000, -15.500000) translate(480.000000, -22.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#9C36B5" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)" fill="#AE3EC9">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)" fill="#AE3EC9">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+        </g>
+        <g id="4x4-copy-14" transform="translate(496.000000, 33.900000) scale(-1, 1) translate(-496.000000, -33.900000) translate(448.000000, -3.600000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-9" transform="translate(512.000000, 15.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#4263EB" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#3B5BDB" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#4C6EF5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-11" transform="translate(560.000000, 15.500000) scale(-1, 1) translate(-560.000000, -15.500000) translate(512.000000, -22.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)" fill="#DEE2E6">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)" fill="#DEE2E6">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+        </g>
+        <g id="1x2-copy-11" transform="translate(552.000000, -7.500000) scale(-1, 1) translate(-552.000000, 7.500000) translate(528.000000, -31.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+            <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+        </g>
+        <g id="2x2-copy-8" transform="translate(544.000000, -22.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="E" fill="#9C36B5" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 13.000000)" fill="#AE3EC9">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 22.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 13.000000)" fill="#AE3EC9">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path"></path>
+            </g>
+        </g>
+        <g id="2x2-copy-10" transform="translate(576.000000, 33.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="1x2-copy-13" transform="translate(600.000000, 38.500000) scale(-1, 1) translate(-600.000000, -38.500000) translate(576.000000, 15.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+            <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+            <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+            <g id="Dot" transform="translate(27.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-15" transform="translate(512.000000, 52.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="2x2-copy-11" transform="translate(576.000000, 70.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="1x2-copy-12" transform="translate(560.000000, -40.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#4263EB" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+            <polygon id="E" fill="#3B5BDB" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+        </g>
+        <g id="2x2-copy-15" transform="translate(120.000000, -36.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+        </g>
+        <g id="4x4-copy-19" transform="translate(24.000000, -36.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-17" transform="translate(56.000000, -17.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#4263EB" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#3B5BDB" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#4C6EF5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-18" transform="translate(-40.000000, 1.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="E" fill="#3B5BDB" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#4C6EF5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-16" transform="translate(72.000000, 57.500000) scale(-1, 1) translate(-72.000000, -57.500000) translate(24.000000, 20.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#9C36B5" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-2" transform="translate(-40.000000, 38.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-20" transform="translate(-7.000000, -36.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#9C36B5" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="2x2-copy-9" transform="translate(25.000000, 0.600000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#212529" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="E" fill="#1E1B18" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+            <polygon id="N" fill="#343A40" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 22.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 3.770000)">
+                <path d="M0,5.9 C0,7.72253967 2.46243388,9.2 5.5,9.2 C8.53756612,9.2 11,7.72253967 11,5.9 L11,2.6 L0,2.6 L0,5.9 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="1x2-copy-14" transform="translate(17.000000, -12.500000) scale(-1, 1) translate(-17.000000, 12.500000) translate(-7.000000, -36.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+        </g>
+        <g id="1x2-copy-15" transform="translate(-23.000000, 1.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+            <g id="Dot" transform="translate(27.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-21" transform="translate(72.000000, 94.300000) scale(-1, 1) translate(-72.000000, -94.300000) translate(24.000000, 56.800000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#9C36B5" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-13" transform="translate(40.000000, 112.500000) scale(-1, 1) translate(-40.000000, -112.500000) translate(-8.000000, 75.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#4263EB" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#3B5BDB" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#4C6EF5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="1x2-copy-16" transform="translate(80.000000, 135.900000) scale(-1, 1) translate(-80.000000, -135.900000) translate(56.000000, 112.400000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#212529" points="32 27.7052086 32 46.1804172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+            <polygon id="E" fill="#1E1B18" points="48 18.4676043 48 36.9428129 32 46.1804172 32 27.7052086"></polygon>
+            <polygon id="N" fill="#343A40" points="16 -1.59872116e-14 48 18.4752086 32 27.7090108 0 9.23760431"></polygon>
+            <g id="Dot" transform="translate(11.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="1x1-copy-6" transform="translate(71.000000, 131.800000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="E" fill="#3B5BDB" points="32 9.23760431 32 27.7128129 16 36.9504172 16 18.4752086"></polygon>
+            <polygon id="W" fill="#4263EB" points="16 18.4752086 16 36.9504172 1.87534647e-14 27.7128129 0 9.23760431"></polygon>
+            <polygon id="N" fill="#4C6EF5" points="16 -1.59872116e-14 32 9.23760431 16 18.4752086 0 9.23760431"></polygon>
+            <g id="Dot" transform="translate(10.500000, 3.000000)">
+                <path d="M0,6.9 C0,8.72253967 2.46243388,10.2 5.5,10.2 C8.53756612,10.2 11,8.72253967 11,6.9 L11,3.6 L0,3.6 L0,6.9 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="2x2-copy-12" transform="translate(-39.000000, 93.500000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="E" fill="#1E1B18" points="64 19.2376043 64 37.7090108 32 56.1804172 32 37.7052086"></polygon>
+            <polygon id="N" fill="#343A40" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(43.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-12" transform="translate(41.000000, 150.100000) scale(-1, 1) translate(-41.000000, -150.100000) translate(-7.000000, 112.600000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#E9ECEF" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-22" transform="translate(512.000000, 89.200000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#4263EB" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#3B5BDB" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#4C6EF5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-23" transform="translate(105.000000, 187.100000) scale(-1, 1) translate(-105.000000, -187.100000) translate(57.000000, 149.600000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="E" fill="#9C36B5" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-24" transform="translate(9.000000, 168.500000) scale(-1, 1) translate(-9.000000, -168.500000) translate(-39.000000, 131.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#212529" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#1E1B18" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#343A40" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="2x2-copy-13" transform="translate(-40.000000, 166.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="N" fill="#4C6EF5" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(43.000000, 13.000000)" fill="#5C7CFA">
+                <ellipse id="Oval-Copy-2" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="2x2-copy-14" transform="translate(25.000000, 167.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="N" fill="#4C6EF5" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(27.000000, 3.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#4263EB"></path>
+                <ellipse id="Oval-Copy-2" fill="#5C7CFA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-25" transform="translate(544.000000, 107.600000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#AE3EC9" points="32 55.7052086 32 74.1804172 1.87534647e-14 55.7128129 0 37.2376043"></polygon>
+            <polygon id="E" fill="#9C36B5" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#BE4BDB" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 41.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#AE3EC9"></path>
+                <ellipse id="Oval-Copy-2" fill="#CC5DE8" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="2x2-copy-18" transform="translate(576.000000, 144.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="W" fill="#212529" points="32 37.7052086 32 56.1804172 1.87534647e-14 37.7128129 0 19.2376043"></polygon>
+            <polygon id="N" fill="#343A40" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="4x4-copy-26" transform="translate(560.000000, 182.500000) scale(-1, 1) translate(-560.000000, -182.500000) translate(512.000000, 145.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="E" fill="#DEE2E6" points="96 18.7661978 96 37.2376043 32 74.1804172 32 55.7052086"></polygon>
+            <polygon id="N" fill="#F1F3F5" points="64 0.2 96 18.83 32 55.7090108 0 37.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy" transform="translate(43.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-2" transform="translate(59.000000, 23.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 21.770000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-3" transform="translate(59.000000, 3.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 31.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot-Copy-4" transform="translate(75.000000, 12.230000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#DEE2E6"></path>
+                <ellipse id="Oval-Copy-2" fill="#F8F9FA" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+        <g id="2x2-copy-19" transform="translate(480.000000, 163.000000)" stroke="#1E1B18" stroke-linejoin="round">
+            <polygon id="N" fill="#343A40" points="32 0.77 64 19.2452086 32 37.7090108 0 19.2376043"></polygon>
+            <g id="Dot" transform="translate(11.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(27.000000, 3.770000)">
+                <path d="M0,5.9 C0,7.72253967 2.46243388,9.2 5.5,9.2 C8.53756612,9.2 11,7.72253967 11,5.9 L11,2.6 L0,2.6 L0,5.9 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+            <g id="Dot" transform="translate(43.000000, 13.000000)">
+                <path d="M0,6.6 C0,8.42253967 2.46243388,9.9 5.5,9.9 C8.53756612,9.9 11,8.42253967 11,6.6 L11,3.3 L0,3.3 L0,6.6 Z" id="Path" fill="#212529"></path>
+                <ellipse id="Oval-Copy-2" fill="#495057" cx="5.5" cy="3.3" rx="5.5" ry="3.3"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

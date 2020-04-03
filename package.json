@@ -14,7 +14,7 @@
     "build:lib": "rm -rf ./lib && yarn build:lib:cjs && yarn build:lib:esn",
     "build:lib:esn": "tsc -p src -m esnext -t esnext --outDir lib/esn && yarn build:css --dir lib/esn",
     "build:lib:cjs": "tsc -p src --outDir lib/cjs && yarn build:css --dir lib/cjs",
-    "build:site": "rm -rf public && parcel build site/index.html -d public",
+    "build:site": "rm -rf public && parcel build site/index.html -d public && react-snap --crawl false",
     "lint:css": "npx stylelint site/**/*.css src/**/*.css",
     "lint:js": "eslint src/**/*.tsx src/**/*.ts site/**/*.ts site/**/*.tsx",
     "lint": "yarn lint:js && yarn lint:css",
@@ -90,6 +90,8 @@
   },
   "marked": null,
   "reactSnap": {
+    "crawl": false,
+    "include" : ["/"],
     "source": "public",
     "minifyHtml": {
       "collapseWhitespace": false,
