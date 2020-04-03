@@ -1,29 +1,41 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Prism from 'prismjs';
+import * as ace from 'brace';
 import { Attributes } from '../Base/Base';
-import Code from '../Code/Code';
+import { TypeEditorLanguage } from '../Editor/Editor';
 import Text, { TextProps } from '../Text/Text';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-json';
-import 'prismjs/components/prism-jsx';
+import 'brace/ext/static_highlight';
 import './CodeBlock.css';
+
+const highlighter = ace.acequire('ace/ext/static_highlight');
+
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const getMergedRef = (...refs: React.Ref<any>[]) => (value: any) => {
+  for (const ref of refs) {
+    if (typeof ref === 'function') {
+      ref(value);
+    } else if (ref !== null) {
+      (ref.current as any) = value;
+    }
+  }
+};
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
 
 /**
  * Provides some syntax highlighting, courtesy of PrismJS.
  */
 export interface CodeBlockProps extends TextProps {
-  /** The code to be highlighted */
+   /**
+   * Language of the content to be highlighted. What ever language is
+   * set here the matching Ace mode needs to be imported. For example.
+   *
+   * import 'ace/mode/javascript';
+   **/
   children?: string;
-  /** Language of the content to be highlighted. More are supported but not loaded. */
-  language?:
-    string |
-    'css' |
-    'html' |
-    'javascript' |
-    'js' |
-    'jsx' |
-    'json';
+  /** Language of the content to be highlighted */
+  language: TypeEditorLanguage;
   /**
    * Allows for the code contents to be wrapped when it falls outside of the
    * containing element.
@@ -31,29 +43,30 @@ export interface CodeBlockProps extends TextProps {
   wrap?: boolean;
 }
 
-const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>> = (props, ref) => {
+const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>> = (props, refFor) => {
   const { children, language, wrap, ...rest } = props;
+  const refContainer = React.useRef<Element>();
+  const ref = getMergedRef(refContainer, refFor);
   const classes = classnames('CodeBlock', {
     'CodeBlock--wrap': wrap,
     [`language-${language}`]: language,
   });
 
-  let content = children;
-
-  if (language && children) {
-    content = Prism.highlight(children, Prism.languages[language], language);
-  }
+  React.useLayoutEffect(() => {
+    if (refContainer.current) {
+      highlighter(refContainer.current, {
+        mode: `ace/mode/${language}`,
+        theme: 'ace/theme/preshape',
+      });
+    }
+  }, [children]);
 
   return (
     <Text { ...rest }
         className={ classes }
         ref={ ref }
         tag="pre">
-      { language ? (
-        <Code dangerouslySetInnerHTML={ { __html: content as string } } />
-      ) : (
-        <Code>{ content }</Code>
-      ) }
+      { children }
     </Text>
   );
 };

@@ -14,6 +14,10 @@ export {
 } from './Base/Base';
 
 export {
+  TypeEditorLanguage,
+} from './Editor/Editor';
+
+export {
   TypeIcon,
 } from './Icon/Icon';
 
@@ -32,6 +36,7 @@ export { default as Buttons, ButtonsProps } from './Button/Buttons';
 export { default as CheckBox, CheckBoxProps } from './CheckBox/CheckBox';
 export { default as Code, CodeProps } from './Code/Code';
 export { default as CodeBlock, CodeBlockProps } from './Code/CodeBlock';
+export { default as Editor, EditorProps } from './Editor/Editor';
 export { default as Flex, FlexProps } from './Flex/Flex';
 export { default as Form } from './Form/Form';
 export { default as Grid, GridProps } from './Grid/Grid';

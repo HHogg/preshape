@@ -6,12 +6,22 @@ import docs from './docs';
 
 const APIViewer = React.lazy(() => import('../APIViewer/APIViewer'));
 
+const getDocItem = (id: string) => {
+  for (const i in docs) {
+    if (i.toLocaleLowerCase() === id.toLocaleLowerCase()) {
+      return docs[i];
+    }
+  }
+
+  return null;
+};
+
 export default () => {
   const history = useHistory();
   const match = useRouteMatch<{ id: string }>();
   const { params } = match;
   const id = params.id.toLowerCase();
-  const item = docs[id];
+  const item = getDocItem(id);
   const [state, setState] = React.useState(item && item.showcase ? (item.showcase.state || {}) : {});
 
   if (!item) {

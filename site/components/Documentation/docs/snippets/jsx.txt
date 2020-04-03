@@ -1,0 +1,11 @@
+import * as React from 'react' ;
+import { Flex, Text } from 'preshape';
+
+const MyComponent = (props) => (
+  <Flex { ...props } alignChildren="middle" direction="horizontal" gap="x4">
+    <Flex><Text strong>Lorem</Text></Flex>
+    <Flex><Text strong>Ipsum</Text></Flex>
+  </Flex>
+);
+
+export default MyComponent

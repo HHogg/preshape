@@ -1,0 +1,67 @@
+/* stylelint-disable no-duplicate-selectors */
+
+.ace-preshape .ace_editor,
+.ace-preshape .ace_gutter {
+  background: var(--color-background--shade-1);
+  color: var(--color-text--shade-3);
+}
+
+.ace-preshape .ace_cursor {
+  color: var(--color-text--shade-3);
+}
+
+.ace-preshape .ace_gutter-active-line,
+.ace-preshape .ace_active-line  {
+  background-color: rgba(var(--rgb-text--shade-1), 0.05);
+}
+
+.ace-preshape .ace_marker-layer .ace_selection {
+  background-color: rgba(var(--rgb-highlight), 0.4);
+}
+
+.ace-preshape .ace_marker-layer .ace_selected-word {
+  border: 0;
+}
+
+.ace-preshape .ace_indent-guide {
+  border-right: var(--color-background--shade-3) dotted 0.0625rem;
+}
+
+/* https://github.com/ajaxorg/ace/wiki/Creating-or-Extending-an-Edit-Mode#common-tokens */
+
+.ace-preshape .ace_attribute-name { color: var(--oc-yellow-6); }
+.ace-preshape .ace_boolean        { color: var(--oc-red-5); }
+.ace-preshape .ace_class          { color: var(--oc-cyan-6); }
+.ace-preshape .ace_comment        { color: rgba(var(--rgb-text--shade-1), 0.5); }
+.ace-preshape .ace_constant       { color: var(--oc-red-5); }
+.ace-preshape .ace_doctype        { color: var(--oc-teal-5); }
+.ace-preshape .ace_emphasis       { color: var(--text-color--shade-1); }
+.ace-preshape .ace_function       { color: var(--oc-cyan-6); }
+.ace-preshape .ace_identifier     { color: var(--text-color--shade-1); }
+.ace-preshape .ace_keyword        { color: var(--oc-yellow-6); }
+.ace-preshape .ace_language       { color: var(--oc-cyan-6); }
+.ace-preshape .ace_numeric        { color: var(--oc-orange-6); }
+.ace-preshape .ace_operator       { color: var(--text-color--shade-1); }
+.ace-preshape .ace_string         { color: var(--oc-orange-7); }
+.ace-preshape .ace_strong         { color: var(--text-color--shade-1); }
+.ace-preshape .ace_tag            { color: var(--oc-cyan-6); }
+.ace-preshape .ace_tag-name       { color: var(--oc-teal-5); }
+.ace-preshape .ace_ts             { color: var(--oc-red-5); }
+.ace-preshape .ace_type           { color: var(--oc-teal-5); }
+.ace-preshape .ace_underline      { color: var(--oc-orange-7); }
+.ace-preshape .ace_variable       { color: var(--oc-yellow-6); }
+.ace-preshape .ace_xml-pe         { color: var(--oc-yellow-6); }
+.ace-preshape .ace_storage        { color: var(--oc-yellow-6); }
+
+.ace-preshape .ace_heading,
+.ace-preshape .ace_heading ~ * {
+  color: var(--oc-grape-4);
+}
+
+.ace-preshape .ace_emphasis  {
+  font-style: italic;
+}
+
+.ace-preshape .ace_strong {
+  font-weight: bold;
+}

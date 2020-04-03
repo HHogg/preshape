@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import * as React from 'react' ;
-import { CodeBlock, CodeBlockProps, TypeEditorLanguage } from 'preshape';
+import { Editor, EditorProps, TypeEditorLanguage } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
@@ -30,31 +30,32 @@ const snippets: {
 };
 
 const Item: CatalogueItem<{
-  CodeBlock: CodeBlockProps;
+  Editor: EditorProps;
 }> = {
-  name: 'Code',
-  description: 'A syntax highlighting code block component.',
-  pictogram: require('../../../assets/pictogram-code.svg').default,
+  name: 'Editor',
+  description: 'A code editor component powered by Ace Editor.',
+  pictogram: require('../../../assets/pictogram-editor.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (
       <Showcase>
-        <CodeBlock { ...props.CodeBlock }>
-          { snippets[props.CodeBlock.language] }
-        </CodeBlock>
+        <Editor { ...props.Editor }
+            height="400px"
+            value={ snippets[props.Editor.language] } />
       </Showcase>
     ),
     state: {
-      CodeBlock: {
+      Editor: {
         language: 'javascript',
-        wrap: true,
+        onChange: () => {},
+        value: '',
       },
     },
   },
   apis: [{
-    module: '"Code/CodeBlock"',
-    name: 'CodeBlockProps',
-    rename: 'CodeBlock',
+    module: '"Editor/Editor"',
+    name: 'EditorProps',
+    rename: 'Editor',
   }],
 };
 
