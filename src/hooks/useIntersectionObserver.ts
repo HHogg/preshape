@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default (): [boolean, React.Ref<HTMLElement>] => {
-  const ref = useRef<HTMLElement>(null);
+  const [node, setNode] = useState<Element | null>(null);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
@@ -9,18 +9,18 @@ export default (): [boolean, React.Ref<HTMLElement>] => {
       setIsInView(entries[0] && entries[0].intersectionRatio > 0);
     });
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (node) {
+        observer.unobserve(node);
       }
 
       observer.disconnect();
     };
-  }, [ref.current]);
+  }, [node]);
 
-  return [isInView, ref];
+  return [isInView, setNode];
 };

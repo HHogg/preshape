@@ -1,8 +1,8 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
 export default (): [{ height: number; width: number }, React.Ref<HTMLElement>] => {
-  const ref = useRef<HTMLElement>(null);
+  const [node, setNode] = useState<Element | null>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -13,18 +13,18 @@ export default (): [{ height: number; width: number }, React.Ref<HTMLElement>] =
       }
     });
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (node) {
+        observer.unobserve(node);
       }
 
       observer.disconnect();
     };
-  }, [ref.current]);
+  }, [node]);
 
-  return [size, ref];
+  return [size, setNode];
 };
