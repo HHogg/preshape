@@ -43,6 +43,32 @@
 
   --color-overlay: rgba(30, 27, 24, 0.7);
 
+  --rgb-dark--shade-1: var(--oc-gray-9-rgb);
+  --rgb-dark--shade-2: var(--oc-gray-8-rgb);
+  --rgb-dark--shade-3: var(--oc-gray-7-rgb);
+
+  --rgb-light--shade-1: var(--oc-gray-0-rgb);
+  --rgb-light--shade-2: var(--oc-gray-1-rgb);
+  --rgb-light--shade-3: var(--oc-gray-2-rgb);
+
+  --rgb-accent-1--shade-1: var(--oc-indigo-5-rgb);
+  --rgb-accent-1--shade-2: var(--oc-indigo-6-rgb);
+  --rgb-accent-1--shade-3: var(--oc-indigo-7-rgb);
+
+  --rgb-accent-2--shade-1: var(--oc-grape-5-rgb);
+  --rgb-accent-2--shade-2: var(--oc-grape-6-rgb);
+  --rgb-accent-2--shade-3: var(--oc-grape-7-rgb);
+
+  --rgb-positive--shade-1: var(--oc-teal-5-rgb);
+  --rgb-positive--shade-2: var(--oc-teal-6-rgb);
+  --rgb-positive--shade-3: var(--oc-teal-7-rgb);
+
+  --rgb-negative--shade-1: var(--oc-pink-5-rgb);
+  --rgb-negative--shade-2: var(--oc-pink-6-rgb);
+  --rgb-negative--shade-3: var(--oc-pink-7-rgb);
+
+  --rgb-highlight: var(--oc-yellow-3-rgb);
+
   --transition-time--fast: 200ms;
   --transition-time--base: 400ms;
   --transition-time--slow: 800ms;
@@ -79,6 +105,14 @@
   --color-text--shade-1: var(--color-dark--shade-1);
   --color-text--shade-2: var(--color-dark--shade-2);
   --color-text--shade-3: var(--color-dark--shade-3);
+
+  --rgb-background--shade-1: var(--rgb-white);
+  --rgb-background--shade-2: var(--rgb-light--shade-1);
+  --rgb-background--shade-3: var(--rgb-light--shade-2);
+
+  --rgb-text--shade-1: var(--rgb-dark--shade-1);
+  --rgb-text--shade-2: var(--rgb-dark--shade-2);
+  --rgb-text--shade-3: var(--rgb-dark--shade-3);
 }
 
 .Theme--night {
@@ -89,16 +123,32 @@
   --color-text--shade-1: var(--color-light--shade-1);
   --color-text--shade-2: var(--color-light--shade-2);
   --color-text--shade-3: var(--color-light--shade-3);
+
+  --rgb-background--shade-1: var(--rgb-dark--shade-1);
+  --rgb-background--shade-2: var(--rgb-dark--shade-2);
+  --rgb-background--shade-3: var(--rgb-dark--shade-3);
+
+  --rgb-text--shade-1: var(--rgb-light--shade-1);
+  --rgb-text--shade-2: var(--rgb-light--shade-2);
+  --rgb-text--shade-3: var(--rgb-light--shade-3);
 }
 
 html.Theme--day {
   --color-accent--shade-1: var(--color-accent-1--shade-1);
   --color-accent--shade-2: var(--color-accent-1--shade-2);
   --color-accent--shade-3: var(--color-accent-1--shade-3);
+
+  --rgb-accent--shade-1: var(--rgb-accent-1--shade-1);
+  --rgb-accent--shade-2: var(--rgb-accent-1--shade-2);
+  --rgb-accent--shade-3: var(--rgb-accent-1--shade-3);
 }
 
 html.Theme--night {
   --color-accent--shade-1: var(--color-accent-2--shade-1);
   --color-accent--shade-2: var(--color-accent-2--shade-2);
   --color-accent--shade-3: var(--color-accent-2--shade-3);
+
+  --rgb-accent--shade-1: var(--rgb-accent-2--shade-1);
+  --rgb-accent--shade-2: var(--rgb-accent-2--shade-2);
+  --rgb-accent--shade-3: var(--rgb-accent-2--shade-3);
 }
