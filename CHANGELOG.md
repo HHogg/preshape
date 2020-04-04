@@ -1,3 +1,10 @@
+# [4.5.0](https://github.com/HHogg/preshape/compare/v4.4.0...v4.5.0) (2020-04-04)
+
+
+### Features
+
+* **Icon:** Added LinkedIn, Layers and Hexagon icons ([e0dad42](https://github.com/HHogg/preshape/commit/e0dad42d7996f3510b4860da246a965dd6d04158))
+
 # [4.4.0](https://github.com/HHogg/preshape/compare/v4.3.2...v4.4.0) (2020-04-03)
 
 
