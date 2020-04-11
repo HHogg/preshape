@@ -1,3 +1,11 @@
+.BulletPoints {
+  font-weight: var(--text-weight--strong);
+}
+
 .BulletPoints--numbered {
   list-style-type: decimal;
+}
+
+.BulletPoints__point-content {
+  font-weight: normal;
 }

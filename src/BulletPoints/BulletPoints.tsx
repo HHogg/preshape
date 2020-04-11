@@ -21,7 +21,7 @@ const BulletPoints: React.RefForwardingComponent<HTMLUListElement, Attributes<HT
     <Base { ...rest }
         className={ classes }
         ref={ ref }
-        tag="ul" />
+        tag={ numbered ? 'ol' : 'ul' } />
   );
 };
 
