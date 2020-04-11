@@ -11,7 +11,12 @@ export default (props: Attributes<HTMLElement, Props>) => {
 
   return (
     <Base { ...rest } id={ id } paddingVertical="x12">
-      { title && <Text margin="x4" size="x3" strong>{ title }</Text> }
+      { title && (
+        <Text
+            margin="x4"
+            size="x3"
+            strong>{ title }</Text>
+      ) }
 
       <Base>
         { children }

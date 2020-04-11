@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
 import { useMatchMedia } from '../hooks';
-import { Attributes } from '../Base/Base';
+import { Attributes, TypeColor } from '../Base/Base';
 import Appear, { TypeAnimation } from '../Appear/Appear';
 import Flex, { FlexProps } from '../Flex/Flex';
 import './Modal.css';
@@ -29,6 +29,11 @@ export interface ModalProps extends FlexProps {
   */
  fullscreen?: boolean;
   /**
+   * Sets the background color of the overlay that sits
+   * under the modal and on top of the main UI.
+   */
+  overlayBackgroundColor?: TypeColor;
+  /**
    * The maximum width of the dialog box.
    */
   maxWidth?: string;
@@ -50,12 +55,14 @@ export interface ModalProps extends FlexProps {
 const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalProps>> = (props, ref) => {
   const {
     animation = 'Fade',
+    backgroundColor = 'background-shade-1',
     children,
     fullscreen,
     gap,
     maxWidth = 'auto',
     onClose,
     margin,
+    overlayBackgroundColor = 'overlay',
     padding,
     paddingHorizontal,
     paddingVertical,
@@ -102,14 +109,14 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
         <Appear
             absolute="fullscreen"
             animation="Fade"
-            backgroundColor="overlay"
+            backgroundColor={ overlayBackgroundColor }
             onAnimationComplete={ handleOnAnimateComplete }
             onPointerUp={ onClose }
             visible={ visible } />
 
         <Appear
             animation={ animation }
-            backgroundColor="background-shade-1"
+            backgroundColor={ backgroundColor }
             container
             direction="vertical"
             gap={ gap }

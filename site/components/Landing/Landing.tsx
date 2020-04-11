@@ -20,12 +20,14 @@ export default () => {
   const { onChangeTheme, theme } = React.useContext(RootContext);
 
   return (
-    <Base>
+    <Base
+        backgroundColor="background-shade-1"
+        padding="x6">
       <Switch>
         <Route component={ Documentation } path="/api/:id" />
       </Switch>
 
-      <Base absolute="top-right" padding="x6">
+      <Base absolute="top-right" padding="x12">
         <ThemeSwitcher onChange={ onChangeTheme } theme={ theme } />
       </Base>
 

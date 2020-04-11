@@ -33,7 +33,9 @@ export default () => {
     <Modal
         fullscreen
         gap="x10"
+        margin="x3"
         onClose={ () => history.push('/') }
+        overlayBackgroundColor="dark-shade-1"
         paddingHorizontal="x6"
         paddingVertical="x10"
         visible>

@@ -1,3 +1,4 @@
 body {
-  padding: var(--size--x6);
+  padding: var(--size--x3);
+  background-color: var(--color-dark--shade-1);
 }

@@ -24,7 +24,7 @@ const Item: CatalogueItem<{
   pictogram: require('../../../assets/pictogram-modal.svg').default,
   type: 'component',
   showcase: {
-    Component: () => {
+    Component: (props) => {
       const [isAutoOpen, setIsAutoOpen] = React.useState(false);
       const [isMaxWidthOpen, setIsMaxWidthOpen] = React.useState(false);
 
@@ -48,9 +48,10 @@ const Item: CatalogueItem<{
               Open Auto Modal
             </Button>
 
-            <Modal
+            <Modal { ...props.Modal }
                 gap="x6"
                 margin="x10"
+                maxWidth={ undefined }
                 onClose={ () => setIsAutoOpen(false) }
                 padding="x6"
                 visible={ isAutoOpen }>
@@ -85,10 +86,10 @@ const Item: CatalogueItem<{
               Open Max Width Modal
             </Button>
 
-            <Modal
+            <Modal maxWidth="24rem"
+                { ...props.Modal }
                 gap="x3"
                 margin="x10"
-                maxWidth="24rem"
                 onClose={ () => setIsMaxWidthOpen(false) }
                 padding="x6"
                 visible={ isMaxWidthOpen }>
