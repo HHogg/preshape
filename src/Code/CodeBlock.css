@@ -1,7 +1,7 @@
 .CodeBlock .ace_static_highlight {
   max-width: 100%;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 .CodeBlock--wrap .ace_static_highlight {

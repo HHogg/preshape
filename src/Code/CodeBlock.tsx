@@ -3,25 +3,12 @@ import classnames from 'classnames';
 import * as ace from 'brace';
 import { Attributes } from '../Base/Base';
 import { TypeEditorLanguage } from '../Editor/Editor';
+import Code from './Code';
 import Text, { TextProps } from '../Text/Text';
 import 'brace/ext/static_highlight';
 import './CodeBlock.css';
 
 const highlighter = ace.acequire('ace/ext/static_highlight');
-
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
-const getMergedRef = (...refs: React.Ref<any>[]) => (value: any) => {
-  for (const ref of refs) {
-    if (typeof ref === 'function') {
-      ref(value);
-    } else if (ref !== null) {
-      (ref.current as any) = value;
-    }
-  }
-};
-/* eslint-enable @typescript-eslint/no-explicit-any */
-
 
 /**
  * Provides some syntax highlighting, courtesy of PrismJS.
@@ -43,10 +30,9 @@ export interface CodeBlockProps extends TextProps {
   wrap?: boolean;
 }
 
-const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>> = (props, refFor) => {
+const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>> = (props, ref) => {
   const { children, language, wrap, ...rest } = props;
-  const refContainer = React.useRef<Element>();
-  const ref = getMergedRef(refContainer, refFor);
+  const refContainer = React.useRef<HTMLElement>(null);
   const classes = classnames('CodeBlock', {
     'CodeBlock--wrap': wrap,
     [`language-${language}`]: language,
@@ -66,7 +52,9 @@ const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPre
         className={ classes }
         ref={ ref }
         tag="pre">
-      { children }
+      <Code ref={ refContainer }>
+        { children }
+      </Code>
     </Text>
   );
 };
