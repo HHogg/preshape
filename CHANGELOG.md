@@ -1,3 +1,10 @@
+## [4.5.2](https://github.com/HHogg/preshape/compare/v4.5.1...v4.5.2) (2020-04-12)
+
+
+### Bug Fixes
+
+* **CodeBlock:** White space when not wrapping ([0b64ec7](https://github.com/HHogg/preshape/commit/0b64ec72bd4cfa355b350702eee860d4214bbf32))
+
 ## [4.5.1](https://github.com/HHogg/preshape/compare/v4.5.0...v4.5.1) (2020-04-12)
 
 
