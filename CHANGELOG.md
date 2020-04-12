@@ -1,3 +1,12 @@
+## [4.5.1](https://github.com/HHogg/preshape/compare/v4.5.0...v4.5.1) (2020-04-12)
+
+
+### Bug Fixes
+
+* **BulletPoints:** Changed counter style to bold font ([0dbde3d](https://github.com/HHogg/preshape/commit/0dbde3db4ebc625a385fedbec6aa5ecc6db144cd))
+* **Modal:** Added overlayBackgroundColor prop ([d146b34](https://github.com/HHogg/preshape/commit/d146b3412993bdc6d73f4b762649aa23df3dfdaf))
+* **Variables:** Added missing x5 variable ([7b618e5](https://github.com/HHogg/preshape/commit/7b618e5f428aa590f4070c7789e09da2f1274f0a))
+
 # [4.5.0](https://github.com/HHogg/preshape/compare/v4.4.0...v4.5.0) (2020-04-04)
 
 
