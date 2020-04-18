@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export default (): [boolean, React.Ref<HTMLElement>] => {
-  const [node, setNode] = useState<Element | null>(null);
+export default <T extends Element = Element>(): [boolean, React.Ref<T>, T | null] => {
+  const [node, setNode] = useState<T | null>(null);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
@@ -22,5 +22,5 @@ export default (): [boolean, React.Ref<HTMLElement>] => {
     };
   }, [node]);
 
-  return [isInView, setNode];
+  return [isInView, setNode, node];
 };
