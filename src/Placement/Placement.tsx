@@ -68,6 +68,12 @@ export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>(
 
 export interface PlacementProps extends BaseProps {
   /**
+   * The minimum width of the Placement element. This can be a standard
+   * CSS value or a keyword of 'reference', which will apply the width
+   * of the reference element.
+   */
+  minWidth?: 'reference' | number | string;
+  /**
    * When provided this enables an event listener for clicks onto the document,
    * when clicks occur outside the placed element, the callback will be
    * called.
@@ -90,6 +96,7 @@ export interface PlacementProps extends BaseProps {
 const Placement: React.FC<PlacementProps> = (props) => {
   const {
     children,
+    minWidth,
     options,
     onClose: onCloseControlled,
     placement,
@@ -100,11 +107,13 @@ const Placement: React.FC<PlacementProps> = (props) => {
 
   const {
     onClose: onCloseUncontrolled,
+    referenceNode,
     visible: visibleUncontrolled,
   } = React.useContext(PlacementManagerContext);
 
   const onClose = onCloseUncontrolled || onCloseControlled;
   const visible = visibleUncontrolled === undefined ? visibleControlled : visibleUncontrolled;
+  const placementMinWidth = (minWidth === 'reference' && referenceNode) ? referenceNode.clientWidth : minWidth;
 
   const [render, setRender] = React.useState(unrender ? visible : true);
   const ref = React.useRef<HTMLElement | null>();
@@ -139,6 +148,7 @@ const Placement: React.FC<PlacementProps> = (props) => {
         <PlacementArrowPropsContext.Provider value={ arrowProps }>
           <Base { ...rest }
               className={ classnames('Placement', `Placement--${placement}`) }
+              minWidth={ placementMinWidth }
               ref={ ref }
               style={ style }>
             <Appear { ...getAnimationOrigin(placement) }

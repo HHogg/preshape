@@ -25,10 +25,12 @@ const PlacementReference: React.FC<PlacementReferenceProps> = (props) => {
     onPointerUp,
     onPointerEnter,
     onPointerLeave,
+    setReferenceNode,
+    visible,
   } = React.useContext(PlacementManagerContext);
 
   return (
-    <Reference { ...rest }>
+    <Reference { ...rest } innerRef={ setReferenceNode }>
       { (props) => children({
         ...props,
         onPointerEnter,
