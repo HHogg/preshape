@@ -1,3 +1,36 @@
+# [5.0.0](https://github.com/HHogg/preshape/compare/v4.5.2...v5.0.0) (2020-04-21)
+
+
+### Bug Fixes
+
+* **Base:** Renamed absolute/fixed prop value 'fullscreen' to 'edge-to-edge'. ([47899c5](https://github.com/HHogg/preshape/commit/47899c54e57f8fb46932ba6ff644c9dddaeb2e1e))
+* **CheckBox:** Swapped `label` prop for `children`. ([809c404](https://github.com/HHogg/preshape/commit/809c40433b0e6adca0d89258ec35db3bdf79d966))
+* **Grid:** Allow grid inline CSS to override API CSS. ([72ffa21](https://github.com/HHogg/preshape/commit/72ffa21d8029cd1305fb3d24a2c1342bc7f05d16))
+* **Input:** Split out the structure of the Input component. ([58f401b](https://github.com/HHogg/preshape/commit/58f401b4483852fd886277f513b405b0defbbf1e))
+* **RadioButton:** Swapped `label` prop for `children`. ([acb232f](https://github.com/HHogg/preshape/commit/acb232f46a6576fb3370a1b22cd9d0653f16dca5))
+* **TextArea:** Split out the structure of the TextArea component. ([bee72f9](https://github.com/HHogg/preshape/commit/bee72f94cf9240a634ab1ff306c3304fc82e3f69))
+* **useIntersectionObserver:** Return the ref node ([7d7f193](https://github.com/HHogg/preshape/commit/7d7f193fb5ab07c5f93b528529215b08851b0165))
+* **useResizeObserver:** Return the ref node ([5fc9ce8](https://github.com/HHogg/preshape/commit/5fc9ce8803eff15b81c5cfdff56f0b684337b197))
+
+
+### Features
+
+* **Base:** Added  prop that applies a drop shadow filter that gives the appearance of elevation ([d250ac4](https://github.com/HHogg/preshape/commit/d250ac41137c85d2f1bbcc981591be49d1b3b6e5))
+* **Icon:** Added 'ChevronUp' and 'ChevronDown' icons. ([bdb55a3](https://github.com/HHogg/preshape/commit/bdb55a3701615f1dae5543fa7ea45998e4a9af0d))
+* **Options:** Added Options component that can be used as a dropdown selection component. ([1ffa57e](https://github.com/HHogg/preshape/commit/1ffa57e84d820bd2f6841f6ad70a2e45ac3cf314))
+* **Placement:** Added ability to set the minWidth to the reference node width with ([8c54878](https://github.com/HHogg/preshape/commit/8c54878c39da001210757a8a793292a78189443a))
+* **Placement:** Pass the controlled visible value down through the Reference render callback. ([2a3cdc6](https://github.com/HHogg/preshape/commit/2a3cdc663d90dc0dea3b3fbbd9bdc5fedcb22c53))
+
+
+### BREAKING CHANGES
+
+* **Placement:** PlacementReference now passes the controlled `visible` value down in the render callback. Any current spreading of these props will cause a console error.
+* **TextArea:** To support addon content sitting beside TextArea element and to allow the unstyled textarea to be used the structure has been split out to be more composable. TextArea is now required to be wrapped inside the TextAraLabel component to retain the same behaviour.
+* **Input:** To support addon content sitting beside Input element and to allow the unstyled input to be used the structure has been split out to be more composable. Input is now required to be wrapped inside the InputLabel component to retain the same behaviour.
+* **RadioButton:** Label contents for RadioButton should now be passed in as children.
+* **CheckBox:** Label contents for CheckBox should now be passed in as children.
+* **Base:** Renamed Base absolute/fixed prop value 'fullscreen' to 'edge-to-edge'.
+
 ## [4.5.2](https://github.com/HHogg/preshape/compare/v4.5.1...v4.5.2) (2020-04-12)
 
 
