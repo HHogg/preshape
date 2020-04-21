@@ -44,6 +44,8 @@ export { default as GridItem, GridItemProps } from './Grid/GridItem';
 export { default as Icon, IconProps } from './Icon/Icon';
 export { default as Image, ImageProps } from './Image/Image';
 export { default as Input, InputProps } from './Input/Input';
+export { default as InputAddon, InputAddonProps } from './Input/InputAddon';
+export { default as InputLabel, InputLabelProps } from './InputLabel/InputLabel';
 export { default as Label, LabelProps } from './Label/Label';
 export { default as Labels, LabelsProps } from './Label/Labels';
 export { default as Link, LinkProps } from './Link/Link';

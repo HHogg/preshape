@@ -3,6 +3,7 @@ import {
   themesOpposite,
   Form,
   Input,
+  InputLabel,
   Placement,
   PlacementArrow,
   PlacementContent,
@@ -55,6 +56,7 @@ export default (props: Props) => {
           theme={ themesOpposite[theme] }
           unrender
           visible={ visible }
+          width="12rem"
           zIndex={ 1 }>
         <PlacementArrow backgroundColor="background-shade-1" />
         <PlacementContent
@@ -62,11 +64,12 @@ export default (props: Props) => {
             borderRadius="x1"
             padding="x1">
           <Form onSubmit={ handleOnSubmit }>
-            <Input
-                label={ context.name }
-                onChange={ handleOnChange }
-                placeholder={ placeholder }
-                value={ textValue } />
+            <InputLabel label={ context.name }>
+              <Input
+                  onChange={ handleOnChange }
+                  placeholder={ placeholder }
+                  value={ textValue } />
+            </InputLabel>
           </Form>
         </PlacementContent>
       </Placement>

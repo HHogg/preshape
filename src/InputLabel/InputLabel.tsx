@@ -1,15 +1,20 @@
 import * as React from 'react';
-import { Attributes, TypeSize } from '../Base/Base';
+import { Attributes } from '../Base/Base';
 import Flex, { FlexProps } from '../Flex/Flex';
 import Text from '../Text/Text';
 import './InputLabel.css';
 
-interface InputLabelProps extends FlexProps {
-  children: React.ReactNode;
+export interface InputLabelProps extends FlexProps {
+  /**
+   * The disabled state that prevents the input from being clickable.
+   * Note that this elements simply applies the disabled styling, it
+   * still needs to be provided to the Input component.
+   */
   disabled?: boolean;
+  /**
+   * The label string that is rendered above the Input.
+   */
   label?: string;
-  paddingHorizontal?: TypeSize;
-  paddingVertical?: TypeSize;
 }
 
 const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, InputLabelProps>> = (props, ref) => {
@@ -17,8 +22,8 @@ const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTML
     children,
     disabled,
     label,
-    paddingHorizontal,
-    paddingVertical,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
     ...rest
   } = props;
 
@@ -40,7 +45,13 @@ const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTML
         </Text>
       ) }
 
-      { children }
+      <Flex
+          alignChildrenVertical="middle"
+          backgroundColor="background-shade-1"
+          direction="horizontal"
+          textColor="text-shade-1">
+        { children }
+      </Flex>
     </Flex>
   );
 };

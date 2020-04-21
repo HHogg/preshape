@@ -4,7 +4,7 @@
   min-width: 0;
   border: 0;
   border-radius: 0;
-  background-color: var(--color-background--shade-1);
+  background-color: transparent;
   color: var(--color-text--shade-1);
   text-overflow: ellipsis;
   appearance: none;
