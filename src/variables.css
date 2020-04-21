@@ -42,8 +42,6 @@
 
   --color-highlight: var(--oc-yellow-3);
 
-  --color-overlay: rgba(30, 27, 24, 0.7);
-
   --rgb-dark--shade-1: var(--oc-gray-9-rgb);
   --rgb-dark--shade-2: var(--oc-gray-8-rgb);
   --rgb-dark--shade-3: var(--oc-gray-7-rgb);
@@ -69,6 +67,9 @@
   --rgb-negative--shade-3: var(--oc-pink-7-rgb);
 
   --rgb-highlight: var(--oc-yellow-3-rgb);
+
+  --color-overlay: rgba(var(--rgb-dark--shade-1), 0.7);
+  --color-elevate: rgba(var(--oc-gray-5-rgb), 0.7);
 
   --transition-time--fast: 200ms;
   --transition-time--base: 400ms;

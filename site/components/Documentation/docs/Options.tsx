@@ -72,6 +72,7 @@ const Item: CatalogueItem<{
               </PlacementReference>
 
               <Placement
+                  elevate
                   minWidth="reference"
                   options={ {
                     modifiers: {

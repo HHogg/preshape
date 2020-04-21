@@ -65,6 +65,8 @@
   margin-left: auto;
 }
 
+.Base--elevate { filter: drop-shadow(0 0.125rem 0.3125rem var(--color-elevate)); }
+
 .Base--background-color-black { background-color: var(--color-black); }
 .Base--background-color-white { background-color: var(--color-white); }
 .Base--background-color-highlight { background-color: var(--color-highlight); }

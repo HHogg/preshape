@@ -85,6 +85,8 @@ export interface BaseProps {
   container?: boolean;
   /** Applies display styling */
   display?: 'block' | 'inline-block';
+  /** Applies a drop shadow filter that gives the appearance of elevation */
+  elevate?: boolean;
   /** Quick way of fixed position to common places */
   fixed?:
     'center' |
@@ -154,6 +156,7 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
     clickable,
     container,
     display,
+    elevate,
     fixed,
     height,
     maxHeight,
@@ -178,6 +181,7 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
   const classes = classnames('Base', {
     'Base--clickable': clickable,
     'Base--container': container,
+    'Base--elevate': elevate,
     'Base--max-width': maxWidth,
     'Base--scrollable': scrollable,
     [`Base--absolute-${absolute}`]: absolute,

@@ -40,7 +40,7 @@ const Item: CatalogueItem<{
               ) }
             </PlacementReference>
 
-            <Placement { ...props.Placement } zIndex={ 1 }>
+            <Placement { ...props.Placement } elevate zIndex={ 1 }>
               <PlacementArrow backgroundColor="text-shade-1" />
               <PlacementContent
                   backgroundColor="text-shade-1"
