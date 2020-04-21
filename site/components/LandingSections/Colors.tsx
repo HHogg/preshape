@@ -193,7 +193,7 @@ export default (props: Props) => {
               textColor={ textColor }>
             { Array.from({ length: 4 }).map((_, index) => (
               <Base
-                  absolute="fullscreen"
+                  absolute="edge-to-edge"
                   backgroundColor={ textColor }
                   key={ index }
                   style={ {

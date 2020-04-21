@@ -103,11 +103,11 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
       <Flex { ...rest }
           alignChildren="middle"
           direction="vertical"
-          fixed="fullscreen"
+          fixed="edge-to-edge"
           padding={ (!isMaxWidthEnabled || match(maxWidth)) ? margin : 'x0' }
           ref={ ref }>
         <Appear
-            absolute="fullscreen"
+            absolute="edge-to-edge"
             animation="Fade"
             backgroundColor={ overlayBackgroundColor }
             onAnimationComplete={ handleOnAnimateComplete }

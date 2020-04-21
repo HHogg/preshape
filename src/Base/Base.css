@@ -142,7 +142,7 @@
 .Base--text-color-positive-shade-3 { color: var(--color-positive--shade-3); }
 
 .Base--absolute-center,
-.Base--absolute-fullscreen,
+.Base--absolute-edge-to-edge,
 .Base--absolute-top,
 .Base--absolute-top-left,
 .Base--absolute-top-right,
@@ -153,7 +153,7 @@
 }
 
 .Base--fixed-center,
-.Base--fixed-fullscreen,
+.Base--fixed-edge-to-edge,
 .Base--fixed-top,
 .Base--fixed-top-left,
 .Base--fixed-top-right,
@@ -163,17 +163,17 @@
   position: fixed;
 }
 
-.Base--absolute-fullscreen,
-.Base--fixed-fullscreen {
+.Base--absolute-edge-to-edge,
+.Base--fixed-edge-to-edge {
   width: 100%;
   height: 100%;
 }
 
-.Base--absolute-fullscreen,
+.Base--absolute-edge-to-edge,
 .Base--absolute-top,
 .Base--absolute-top-left,
 .Base--absolute-top-right,
-.Base--fixed-fullscreen,
+.Base--fixed-edge-to-edge,
 .Base--fixed-top,
 .Base--fixed-top-left,
 .Base--fixed-top-right { top: 0; }
@@ -185,10 +185,10 @@
 .Base--fixed-bottom-left,
 .Base--fixed-bottom-right { bottom: 0; }
 
-.Base--absolute-fullscreen,
+.Base--absolute-edge-to-edge,
 .Base--absolute-top-left,
 .Base--absolute-bottom-left,
-.Base--fixed-fullscreen,
+.Base--fixed-edge-to-edge,
 .Base--fixed-top-left,
 .Base--fixed-bottom-left { left: 0; }
 

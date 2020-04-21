@@ -99,7 +99,7 @@ const Editor: React.FC<EditorProps> = (props) => {
         container
         grow
         ref={ refContainer }>
-      <Flex absolute="fullscreen" direction="vertical">
+      <Flex absolute="edge-to-edge" direction="vertical">
         <Flex grow ref={ ref } />
       </Flex>
     </Flex>

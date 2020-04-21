@@ -64,7 +64,7 @@ export interface BaseProps {
   /** Quick way of absolutely position to common places */
   absolute?:
     'center' |
-    'fullscreen' |
+    'edge-to-edge' |
     'top' |
     'top-left' |
     'top-right' |
@@ -88,7 +88,7 @@ export interface BaseProps {
   /** Quick way of fixed position to common places */
   fixed?:
     'center' |
-    'fullscreen' |
+    'edge-to-edge' |
     'top' |
     'top-left' |
     'top-right' |
