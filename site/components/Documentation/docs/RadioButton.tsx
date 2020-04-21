@@ -13,21 +13,13 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <RadioButton { ...props.RadioButton }
-            margin="x2"
-            name="radio" />
-        <RadioButton { ...props.RadioButton }
-            margin="x2"
-            name="radio" />
-        <RadioButton { ...props.RadioButton }
-            margin="x2"
-            name="radio" />
+        <RadioButton { ...props.RadioButton } margin="x2" name="radio">Lorem Ipsum</RadioButton>
+        <RadioButton { ...props.RadioButton } margin="x2" name="radio">Lorem Ipsum</RadioButton>
+        <RadioButton { ...props.RadioButton } margin="x2" name="radio">Lorem Ipsum</RadioButton>
       </Showcase>
     ),
     state: {
-      RadioButton: {
-        label: 'Lorem ipsum',
-      },
+      RadioButton: {},
     },
   },
   apis: [{

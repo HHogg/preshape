@@ -5,8 +5,10 @@ import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './RadioButton.css';
 
 export interface RadioButtonProps {
-  /** A label that gives describes what the input is for */
-  label: string;
+  /** Contents that is rendered next to the indicator */
+  children?: React.ReactNode;
+  /** A styled disabled state that disables all interactions */
+  disabled?: boolean;
   /** @Ignore */
   margin?: TypeSize;
   /** @Ignore */
@@ -19,8 +21,8 @@ export interface RadioButtonProps {
 
 const RadioButton: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, RadioButtonProps>> = (props, ref) => {
   const {
+    children,
     disabled,
-    label,
     margin,
     padding,
     paddingHorizontal = 'x3',
@@ -31,7 +33,7 @@ const RadioButton: React.RefForwardingComponent<HTMLInputElement, Attributes<HTM
   return (
     <SelectInputLabel
         disabled={ disabled }
-        label={ label }
+        label={ children }
         margin={ margin }
         padding={ padding }
         paddingHorizontal={ paddingHorizontal }
