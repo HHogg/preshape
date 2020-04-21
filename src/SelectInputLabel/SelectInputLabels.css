@@ -1,4 +1,9 @@
-.SelectInputLabel {
+.SelectInputLabels {
+  border: var(--border-size--x2) solid var(--color-text--shade-1);
+  background-color: var(--color-background--shade-1);
+}
+
+.SelectInputLabels__label {
   border: var(--border-size--x2) solid var(--color-text--shade-1);
   cursor: pointer;
   transition-property: border-color;
@@ -7,6 +12,7 @@
 
   &:hover {
     border-color: var(--color-accent--shade-1);
+    color: var(--color-accent--shade-1);
   }
 
   &:focus-within {
@@ -23,4 +29,18 @@
     color: var(--color-text--shade-3);
     cursor: default;
   }
+}
+
+.SelectInputLabels .SelectInputLabels__label {
+  border: 0;
+
+  &:not(:last-child) {
+    border-bottom: var(--border-size--x2) solid var(--color-text--shade-1);
+  }
+}
+
+.SelectInputLabels__label-text {
+  transition-property: color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
 }

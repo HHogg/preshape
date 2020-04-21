@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Grid, Link, Text } from 'preshape';
+import { Flex, Grid, Link, Text } from 'preshape';
 import docs from '../Documentation/docs';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
@@ -26,7 +26,9 @@ export default (props: Props) => {
                   padding="x3"
                   rel="nofollow"
                   to={ `/api/${id}` }>
-                { item.pictogram && <item.pictogram /> }
+                <Flex margin="x2">
+                  { item.pictogram && <item.pictogram /> }
+                </Flex>
                 <Text margin="x1" strong>{ item.name }</Text>
                 <Text margin="x1" size="x1" tag="div">{ item.description }</Text>
               </Link>

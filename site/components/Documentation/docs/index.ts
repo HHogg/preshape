@@ -31,6 +31,7 @@ const docs: { [key: string]: CatalogueItem } = {
   List: require('./List').default,
   Modal: require('./Modal').default,
   Placement: require('./Placement').default,
+  Options: require('./Options').default,
   RadioButton: require('./RadioButton').default,
   Tabs: require('./Tabs').default,
   Table: require('./Table').default,

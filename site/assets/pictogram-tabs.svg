@@ -4,12 +4,12 @@
     <title>pictogram-tabs</title>
     <desc>Created with Sketch.</desc>
     <g id="pictogram-tabs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Rectangle" fill="#000000" x="8" y="34" width="52" height="48" rx="2"></rect>
-        <path d="M70,24 L118,24 C119.104569,24 120,24.8954305 120,26 L120,72 L120,72 L68,72 L68,26 C68,24.8954305 68.8954305,24 70,24 Z" id="Rectangle-Copy" fill="#000000"></path>
-        <rect id="Rectangle-Copy-5" fill="#000000" x="128" y="35" width="52" height="48" rx="2"></rect>
-        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="18" y="56" width="32" height="8" rx="1"></rect>
-        <rect id="Rectangle-Copy-3" fill="#4C6EF5" x="78" y="44" width="32" height="8" rx="1"></rect>
-        <rect id="Rectangle-Copy-4" fill="#FFFFFF" x="138" y="56" width="32" height="8" rx="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="8" y="34" width="72" height="48" rx="2"></rect>
+        <path d="M86,24 L154,24 C155.104569,24 156,24.8954305 156,26 L156,72 L156,72 L84,72 L84,26 C84,24.8954305 84.8954305,24 86,24 Z" id="Rectangle-Copy" fill="#000000"></path>
+        <rect id="Rectangle-Copy-5" fill="#000000" x="160" y="35" width="72" height="48" rx="2"></rect>
+        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="22" y="56" width="44" height="8" rx="1"></rect>
+        <rect id="Rectangle-Copy-3" fill="#4C6EF5" x="98" y="44" width="44" height="8" rx="1"></rect>
+        <rect id="Rectangle-Copy-4" fill="#FFFFFF" x="174" y="56" width="44" height="8" rx="1"></rect>
         <rect id="Rectangle" fill="#000000" x="8" y="72" width="231" height="16" rx="2"></rect>
     </g>
 </svg>

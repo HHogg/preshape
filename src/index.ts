@@ -55,6 +55,8 @@ export { default as Modal, ModalProps } from './Modal/Modal';
 export { default as ModalBody, ModalBodyProps } from './Modal/ModalBody';
 export { default as ModalHeader, ModalHeaderProps } from './Modal/ModalHeader';
 export { default as Motion } from './Motion/Motion';
+export { default as Option, OptionProps } from './Options/Option';
+export { default as Options, OptionsProps } from './Options/Options';
 export { default as Placement, PlacementProps } from './Placement/Placement';
 export { default as PlacementArrow, PlacementArrowProps } from './Placement/PlacementArrow';
 export { default as PlacementContent, PlacementContentProps } from './Placement/PlacementContent';
