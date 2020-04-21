@@ -47,9 +47,9 @@ const Grid: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Gr
   }, className);
 
   const style = {
-    ...rest.style,
     gridTemplateColumns: `repeat(${repeat}, ${repeatWidthMin ? `minmax(${repeatWidthMin}, ${repeatWidthMax})` : repeatWidth})`,
     gridAutoRows: rowSize,
+    ...rest.style,
   };
 
   return (

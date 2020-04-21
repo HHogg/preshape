@@ -19,6 +19,7 @@ const GridItem: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement
   const style = {
     gridColumn: column,
     gridRow: row,
+    ...rest.style,
   };
 
   return (
