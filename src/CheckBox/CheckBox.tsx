@@ -5,10 +5,10 @@ import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';
 
 export interface CheckBoxProps {
+  /** Contents that is rendered next to the indicator */
+  children?: React.ReactNode;
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
-  /** A label that gives describes what the input is for */
-  label: string;
   /** @Ignore */
   margin?: TypeSize;
   /** @Ignore */
@@ -21,8 +21,8 @@ export interface CheckBoxProps {
 
 const CheckBox: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, CheckBoxProps>> = (props, ref) => {
   const {
+    children,
     disabled,
-    label,
     margin,
     padding,
     paddingHorizontal = 'x3',
@@ -33,7 +33,7 @@ const CheckBox: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLIn
   return (
     <SelectInputLabel
         disabled={ disabled }
-        label={ label }
+        label={ children }
         margin={ margin }
         padding={ padding }
         paddingHorizontal={ paddingHorizontal }

@@ -13,15 +13,13 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <CheckBox { ...props.CheckBox } margin="x2" />
-        <CheckBox { ...props.CheckBox } margin="x2" />
-        <CheckBox { ...props.CheckBox } margin="x2" />
+        <CheckBox { ...props.CheckBox } margin="x2">Lorem Ipsum</CheckBox>
+        <CheckBox { ...props.CheckBox } margin="x2">Lorem Ipsum</CheckBox>
+        <CheckBox { ...props.CheckBox } margin="x2">Lorem Ipsum</CheckBox>
       </Showcase>
     ),
     state: {
-      CheckBox: {
-        label: 'Lorem Ipsum',
-      },
+      CheckBox: {},
     },
   },
   apis: [{
