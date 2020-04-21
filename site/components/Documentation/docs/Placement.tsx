@@ -79,8 +79,12 @@ const Item: CatalogueItem<{
       },
       PlacementArrow: {},
       PlacementContent: {},
-      PlacementManager: {},
-      PlacementReference: {},
+      PlacementManager: {
+        children: null,
+      },
+      PlacementReference: {
+        children: () => null,
+      },
     },
   },
   apis: [{

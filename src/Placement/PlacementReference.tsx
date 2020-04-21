@@ -8,6 +8,7 @@ export type PlacementReferenceChildren = (props: {
   onPointerUp?: (event: React.PointerEvent) => void;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ref: React.Ref<any>;
+  visible?: boolean;
 }) => React.ReactNode
 
 export interface PlacementReferenceProps {
@@ -36,6 +37,7 @@ const PlacementReference: React.FC<PlacementReferenceProps> = (props) => {
         onPointerEnter,
         onPointerLeave,
         onPointerUp,
+        visible,
       }) }
     </Reference>
   );
