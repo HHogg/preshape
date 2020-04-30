@@ -1,3 +1,11 @@
+## [5.0.1](https://github.com/HHogg/preshape/compare/v5.0.0...v5.0.1) (2020-04-30)
+
+
+### Bug Fixes
+
+* **Link:** Forward ref ([d5fd4e5](https://github.com/HHogg/preshape/commit/d5fd4e53c37519dc022e6dc6d0c6f59cd37b0609))
+* **Placement:** Pass 'visible' down in PlacementReference in a state param to prevent warning of spreading onto elements ([c923f3b](https://github.com/HHogg/preshape/commit/c923f3bb1c56d407b26db44f1bf1c3da474d7dc6))
+
 # [5.0.0](https://github.com/HHogg/preshape/compare/v4.5.2...v5.0.0) (2020-04-21)
 
 
