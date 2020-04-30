@@ -57,8 +57,8 @@ const Item: CatalogueItem<{
           <Base maxWidth="16rem">
             <PlacementManager trigger="click">
               <PlacementReference>
-                { ({ visible, ...rest }) => (
-                  <InputLabel { ...rest } >
+                { (props, { visible }) => (
+                  <InputLabel { ...props } >
                     <Input
                         readOnly
                         value={ value } />
