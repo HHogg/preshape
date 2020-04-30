@@ -25,18 +25,19 @@ export interface LinkProps extends TextProps {
   underline?: boolean;
 }
 
-const Link: React.FC<Attributes<HTMLAnchorElement, LinkProps>> = (props) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Link = React.forwardRef<any, Attributes<HTMLAnchorElement, LinkProps>>((props, ref) => {
   const { active, navigate, target, to, underline, ...rest } = props;
   const classes = classnames('Link', {
     'Link--active': active,
     'Link--underline': underline,
   });
 
-
   if (to) {
     return (
       <RouterLink { ...props }
           component={ Link }
+          ref={ ref }
           to={ to } />
     );
   }
@@ -63,9 +64,10 @@ const Link: React.FC<Attributes<HTMLAnchorElement, LinkProps>> = (props) => {
   return (
     <Text { ...rest }
         className={ classes }
+        ref={ ref }
         tag="a"
         target={ target } />
   );
-};
+});
 
 export default Link;
