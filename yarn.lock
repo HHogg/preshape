@@ -8282,6 +8282,13 @@ parcel-bundler@^1.12.4:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
+parcel-plugin-html-externals@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-html-externals/-/parcel-plugin-html-externals-0.2.0.tgz#2f87ce4dcb16e69ed35c194d553b0a360a316064"
+  integrity sha512-2UAGLhVd/RH4wz2l9VB7Hnl2VHy7+9IYabh60hSdJQsjXE6qiCq/ehXvW7ZsnqndG2B1fWmoHlG6dv1Z++CO5w==
+  dependencies:
+    minimatch "^3.0.4"
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"

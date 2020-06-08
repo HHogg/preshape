@@ -65,6 +65,7 @@
     "lodash.pick": "^4.4.0",
     "lodash.shuffle": "^4.2.0",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-html-externals": "^0.2.0",
     "postcss-cli": "^7.1.0",
     "postcss-preset-env": "^6.7.0",
     "react": ">=16.6.0",
@@ -83,6 +84,9 @@
   },
   "alias": {
     "preshape": "./src"
+  },
+  "externals": {
+    "/__/**/*": false
   },
   "resolutions": {
     "fast-glob": "3.1.1",
