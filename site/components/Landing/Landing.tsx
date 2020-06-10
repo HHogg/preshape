@@ -1,15 +1,14 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
+  themes,
   Base,
   Flex,
+  Image,
   Link,
-  List,
-  ListItem,
   Text,
   ThemeSwitcher,
 } from 'preshape';
-import { version } from '../../../package.json';
 import { RootContext, widthSmall, widthMedium } from '../Root';
 import Documentation from '../Documentation/Documentation';
 import landingSections from '../LandingSections';
@@ -50,21 +49,15 @@ export default () => {
               </Flex>
             </Flex>
 
-            <Base margin="x8">
-              <List alignChildren="middle" margin="x6">
-                <ListItem separator="|">
-                  <Text size="x1">v{ version }</Text>
-                </ListItem>
-
-                <ListItem separator="|">
-                  <Link
-                      href="https://github.com/HHogg/preshape/blob/master/CHANGELOG.md"
-                      size="x1"
-                      target="PreshapeGithub"
-                      underline>CHANGELOG</Link>
-                </ListItem>
-              </List>
-            </Base>
+            <Flex alignChildren="middle" direction="horizontal" margin="x8">
+              <Link display="block" href="https://www.npmjs.com/package/preshape">
+                <Image
+                    alt="npm version"
+                    async
+                    height="18"
+                    src={ `https://img.shields.io/npm/v/preshape?color=${encodeURIComponent(themes[theme].colorAccentShade2)}&label=Preshape` } />
+              </Link>
+            </Flex>
           </Base>
         </LandingSection>
 
