@@ -24,6 +24,12 @@
     <script src="https://preshape.hogg.io/__/firebase/7.15.0/firebase-analytics.js"></script>
     <script src="https://preshape.hogg.io/__/firebase/7.15.0/firebase-performance.js"></script>
     <script src="https://preshape.hogg.io/__/firebase/init.js"></script>
+    <script>
+      if (location.hostname === 'preshape.hogg.io') {
+        firebase.analytics();
+        firebase.performance();
+      }
+    </script>
     <script src="./index.tsx"></script>
   </body>
 </html>
