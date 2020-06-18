@@ -1,0 +1,79 @@
+.Range {
+  display: block;
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--color-text--shade-1);
+  cursor: pointer;
+  appearance: none;
+
+  &::-moz-focus-outer {
+    border: none;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    color: var(--color-accent--shade-2);
+  }
+}
+
+.Range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: var(--size--x1);
+  margin: var(--size--x2) 0;
+  background-color: var(--color-text--shade-1);
+}
+
+.Range::-moz-range-track {
+  width: 100%;
+  height: var(--size--x1);
+  margin: var(--size--x2) 0;
+  background-color: var(--color-text--shade-1);
+}
+
+.Range::-ms-track {
+  width: 100%;
+  height: var(--size--x1);
+  margin: var(--size--x2) 0;
+  background-color: var(--color-text--shade-1);
+}
+
+.Range::-webkit-slider-thumb {
+  width: var(--size--x4);
+  height: var(--size--x4);
+  transform: translateY(calc(-50% + 1px));
+  border: none;
+  border-radius: 50%;
+  background-color: currentColor;
+  transition-property: background-color, color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
+  appearance: none;
+}
+
+.Range::-moz-range-thumb {
+  width: var(--size--x4);
+  height: var(--size--x4);
+  border: none;
+  border-radius: 50%;
+  background-color: currentColor;
+  transition-property: background-color, color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
+  appearance: none;
+}
+
+.Range::-ms-thumb {
+  width: var(--size--x4);
+  height: var(--size--x4);
+  transform: translateY(calc(-50% + 1px));
+  border: none;
+  border-radius: 50%;
+  background-color: currentColor;
+  transition-property: background-color, color;
+  transition-duration: var(--transition-time--base);
+  transition-timing-function: var(--transition-timing-function);
+  appearance: none;
+}

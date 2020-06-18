@@ -64,6 +64,7 @@ export { default as PlacementManager, PlacementManagerProps } from './Placement/
 export { default as PlacementReference, PlacementReferenceProps } from './Placement/PlacementReference';
 export { default as PlacementReferenceElement } from './Placement/PlacementReferenceElement';
 export { default as RadioButton, RadioButtonProps } from './RadioButton/RadioButton';
+export { default as Range, RangeProps } from './Range/Range';
 export { default as Separator, SeparatorProps } from './Separator/Separator';
 export { default as Tab, TabProps } from './Tab/Tab';
 export { default as TabContent, TabContentProps } from './Tab/TabContent';

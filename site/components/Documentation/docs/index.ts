@@ -33,6 +33,7 @@ const docs: { [key: string]: CatalogueItem } = {
   Placement: require('./Placement').default,
   Options: require('./Options').default,
   RadioButton: require('./RadioButton').default,
+  Range: require('./Range').default,
   Tabs: require('./Tabs').default,
   Table: require('./Table').default,
   Text: require('./Text').default,

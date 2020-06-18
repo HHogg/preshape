@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>pictogram-range</title>
+    <desc>Created with Sketch.</desc>
+    <g id="pictogram-range" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26,44 L221,44 C221.552285,44 222,44.4477153 222,45 L222,51 C222,51.5522847 221.552285,52 221,52 L26,52 C25.4477153,52 25,51.5522847 25,51 L25,45 C25,44.4477153 25.4477153,44 26,44 Z" id="Rectangle-Copy" fill="#000000"></path>
+        <circle id="Oval" fill="#4C6EF5" cx="124" cy="48" r="12"></circle>
+    </g>
+</svg>
