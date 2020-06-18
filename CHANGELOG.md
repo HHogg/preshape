@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/HHogg/preshape/compare/v5.0.1...v5.1.0) (2020-06-18)
+
+
+### Features
+
+* **Range:** Added a Range slider component ([294d28c](https://github.com/HHogg/preshape/commit/294d28c8df00977de8faa5ca6f39ff06335fd74d))
+
 ## [5.0.1](https://github.com/HHogg/preshape/compare/v5.0.0...v5.0.1) (2020-04-30)
 
 
