@@ -1,16 +1,16 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
 /**
  * The body element of the Modal. This can be used as
  * the padded and scroll area (with use of the scrollable prop).
  * It should be placed directly under the ModalHeader component.
  */
-export interface ModalBodyProps extends BaseProps {}
+export interface ModalBodyProps extends BoxProps {}
 
 const ModalBody: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalBodyProps>> = (props, ref) => {
   return (
-    <Base { ...props }
+    <Box { ...props }
         flex="vertical"
         grow
         ref={ ref }

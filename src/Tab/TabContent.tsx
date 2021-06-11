@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-export interface TabContentProps extends BaseProps {}
+export interface TabContentProps extends BoxProps {}
 
 const TabContent: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TabContentProps>> = (props, ref) => {
   const {
@@ -10,7 +10,7 @@ const TabContent: React.RefForwardingComponent<HTMLElement, Attributes<HTMLEleme
   } = props;
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         backgroundColor={ backgroundColor }
         className="TabContent"
         ref={ ref } />

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ace from 'brace';
 import useResizeObserver from '../hooks/useResizeObserver';
-import Base, { BaseProps } from '../Base/Base';
+import Box, { BoxProps } from '../Box/Box';
 import './Editor.css';
 
 // Define has no definition.
@@ -28,7 +28,7 @@ define('ace/theme/preshape', (_, exports) => {
 /**
  * Code editing component powered by Ace Editor.
  */
-export interface EditorProps extends BaseProps {
+export interface EditorProps extends BoxProps {
   /**
    * Language of the content to be edited. What ever language is
    * set here the matching Ace mode needs to be imported. For example.
@@ -94,15 +94,15 @@ const Editor: React.FC<EditorProps> = (props) => {
   }, [onChange]);
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         className="Editor"
         container
         grow
         ref={ refContainer }>
-      <Base absolute="edge-to-edge" flex="vertical">
-        <Base grow ref={ ref } />
-      </Base>
-    </Base>
+      <Box absolute="edge-to-edge" flex="vertical">
+        <Box grow ref={ ref } />
+      </Box>
+    </Box>
   );
 };
 

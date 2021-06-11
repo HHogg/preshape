@@ -1,6 +1,6 @@
 import * as React from 'react' ;
 import {
-  Base,
+  Box,
   Icon,
   Input,
   InputAddon,
@@ -54,7 +54,7 @@ const Item: CatalogueItem<{
 
       return (
         <Showcase>
-          <Base maxWidth="16rem">
+          <Box maxWidth="16rem">
             <PlacementManager trigger="click">
               <PlacementReference>
                 { (props, { visible }) => (
@@ -97,7 +97,7 @@ const Item: CatalogueItem<{
                 </Options>
               </Placement>
             </PlacementManager>
-          </Base>
+          </Box>
         </Showcase>
       );
     },

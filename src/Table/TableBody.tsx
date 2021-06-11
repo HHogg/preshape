@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-export interface TableBodyProps extends BaseProps {}
+export interface TableBodyProps extends BoxProps {}
 
 const TableBody: React.RefForwardingComponent<HTMLTableSectionElement, Attributes<HTMLTableSectionElement, TableBodyProps>> = (props, ref) => {
   return (
-    <Base { ...props } className="Table__body" ref={ ref } tag="tbody" />
+    <Box { ...props } className="Table__body" ref={ ref } tag="tbody" />
   );
 };
 

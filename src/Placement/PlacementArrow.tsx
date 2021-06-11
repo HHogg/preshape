@@ -1,14 +1,14 @@
 import * as React from 'react';
-import Base, { BaseProps } from '../Base/Base';
+import Box, { BoxProps } from '../Box/Box';
 import { PlacementArrowPropsContext } from './Placement';
 
-export interface PlacementArrowProps extends BaseProps {}
+export interface PlacementArrowProps extends BoxProps {}
 
 const PlacementArrow: React.FC<PlacementArrowProps> = (props) => {
   return (
     <PlacementArrowPropsContext.Consumer>
       { ({ ref, style }) => (
-        <Base { ...props }
+        <Box { ...props }
             className="Placement__arrow"
             ref={ ref }
             style={ style } />

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Attributes, TypeSize } from '../Base/Base';
+import { Attributes, TypeSize } from '../Box/Box';
 import RadioButtonIndicator from './RadioButtonIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './RadioButton.css';

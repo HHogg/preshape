@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
+import { Attributes } from '../Box/Box';
 import InputLabel, { InputLabelProps } from '../InputLabel/InputLabel';
 
 export interface TextAreaLabelProps extends InputLabelProps {

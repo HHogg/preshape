@@ -1,14 +1,14 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './SelectInputLabels.css';
 
-export interface SelectInputLabelsProps extends BaseProps {
+export interface SelectInputLabelsProps extends BoxProps {
 
 }
 
 const BulletPoints: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, SelectInputLabelsProps>> = (props, ref) => {
   return (
-    <Base { ...props }
+    <Box { ...props }
         className="SelectInputLabels"
         ref={ ref } />
   );

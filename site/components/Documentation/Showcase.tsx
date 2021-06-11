@@ -1,6 +1,6 @@
 import * as React from 'react';
 import toJsxString from 'react-element-to-jsx-string';
-import { CodeBlock, Appear, Base, Icon, Link, Text, ThemeSwitcher } from 'preshape';
+import { CodeBlock, Appear, Box, Icon, Link, Text, ThemeSwitcher } from 'preshape';
 import { RootContext } from '../Root';
 
 export const ShowcaseContext = React.createContext<{
@@ -50,42 +50,42 @@ export default ({ children, disableCode }: Props) => {
 
   return (
     <ShowcaseContext.Provider value={ { setShowcaseCode } }>
-      <Base
+      <Box
           backgroundColor="background-shade-2"
           borderSize="x2"
           flex="vertical"
           gap="x2"
           paddingHorizontal="x3"
           paddingVertical="x2">
-        <Base alignChildrenVertical="middle" flex="horizontal" gap="x4">
-          <Base flex="horizontal" gap="x1" grow>
-            <Base>
+        <Box alignChildrenVertical="middle" flex="horizontal" gap="x4">
+          <Box flex="horizontal" gap="x1" grow>
+            <Box>
               <Icon
                   name="Circle"
                   size="1rem" />
-            </Base>
+            </Box>
 
-            <Base>
+            <Box>
               <Icon
                   name="Circle"
                   size="1rem" />
-            </Base>
+            </Box>
 
-            <Base>
+            <Box>
               <Icon
                   name="Circle"
                   size="1rem" />
-            </Base>
-          </Base>
+            </Box>
+          </Box>
 
-          <Base>
+          <Box>
             <ThemeSwitcher
                 onChange={ onChangeTheme }
                 theme={ theme } />
-          </Base>
-        </Base>
+          </Box>
+        </Box>
 
-        <Base
+        <Box
             backgroundColor="background-shade-1"
             borderSize="x2"
             container
@@ -94,10 +94,10 @@ export default ({ children, disableCode }: Props) => {
             scrollable
             textColor="text-shade-1">
           { children }
-        </Base>
+        </Box>
 
         { !disableCode && (
-          <Base>
+          <Box>
             <Appear
                 animation="Expand"
                 visible={ isCodeExpanded }
@@ -119,20 +119,20 @@ export default ({ children, disableCode }: Props) => {
                   size="x1"
                   strong
                   underline>
-                <Base alignChildren="middle" flex="horizontal" gap="x1">
-                  <Base>
+                <Box alignChildren="middle" flex="horizontal" gap="x1">
+                  <Box>
                     { isCodeExpanded ? 'Hide code' : 'Show code' }
-                  </Base>
+                  </Box>
 
-                  <Base>
+                  <Box>
                     <Icon name="Code" size="1rem" />
-                  </Base>
-                </Base>
+                  </Box>
+                </Box>
               </Link>
             </Text>
-          </Base>
+          </Box>
         ) }
-      </Base>
+      </Box>
     </ShowcaseContext.Provider>
   );
 };

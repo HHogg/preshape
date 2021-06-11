@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
 import { useMatchMedia } from '../hooks';
-import Base, { Attributes, BaseProps, TypeColor } from '../Base/Base';
+import Box, { Attributes, BoxProps, TypeColor } from '../Box/Box';
 import Appear, { TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
 
@@ -15,7 +15,7 @@ export const ModalContext = React.createContext<{
  * an overlay, animations, behaviour to disable body scroll when
  * it is visible.
  */
-export interface ModalProps extends BaseProps {
+export interface ModalProps extends BoxProps {
   /**
    * Animation for the Modal window. See Appear component.
    *
@@ -99,7 +99,7 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
 
   return createPortal(
     <ModalContext.Provider value={ { onClose } }>
-      <Base { ...rest }
+      <Box { ...rest }
           alignChildren="middle"
           fixed="edge-to-edge"
           flex="vertical"
@@ -133,7 +133,7 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
             visible={ visible }>
           { children }
         </Appear>
-      </Base>
+      </Box>
     </ModalContext.Provider>
   , document.body);
 };

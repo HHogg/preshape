@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Base, Label, LabelProps, Icon } from 'preshape';
+import { Box, Label, LabelProps, Icon } from 'preshape';
 import TypeText from './TypeText';
 
 interface Props extends LabelProps {
@@ -13,20 +13,20 @@ export default React.forwardRef<HTMLDivElement, Props & React.HTMLAttributes<HTM
   return (
     <Label { ...rest } ref={ ref }>
       <TypeText isArray={ isArray }>
-        <Base
+        <Box
             alignChildrenVertical="middle"
             flex="horizontal"
             gap="x1">
-          <Base>
+          <Box>
             { children }
-          </Base>
+          </Box>
 
           { hasInfo && (
-            <Base>
+            <Box>
               <Icon name="Info" size="0.875rem" />
-            </Base>
+            </Box>
           ) }
-        </Base>
+        </Box>
       </TypeText>
     </Label>
   );

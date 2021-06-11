@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Base, Button, ButtonProps, Buttons, ButtonsProps, Icon } from 'preshape';
+import { Box, Button, ButtonProps, Buttons, ButtonsProps, Icon } from 'preshape';
 import Showcase from '../Showcase';
 import ShowcaseCode from '../ShowcaseCode';
 import { CatalogueItem } from '.';
@@ -20,14 +20,14 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props: Props) => (
       <Showcase>
-        <Base flex="horizontal" gap="x4">
-          <Base flex="horizontal" grow>
+        <Box flex="horizontal" gap="x4">
+          <Box flex="horizontal" grow>
             <Buttons { ...props.Buttons } grow>
               <Button { ...props.Button }>Lorem ipsum</Button>
             </Buttons>
-          </Base>
+          </Box>
 
-          <Base flex="horizontal" grow>
+          <Box flex="horizontal" grow>
             <ShowcaseCode>
               <Buttons { ...props.Buttons } grow>
                 <Button { ...props.Button }>
@@ -44,14 +44,14 @@ const Item: CatalogueItem<{
                 </Button>
               </Buttons>
             </ShowcaseCode>
-          </Base>
+          </Box>
 
-          <Base flex="horizontal" grow>
+          <Box flex="horizontal" grow>
             <Buttons { ...props.Buttons } grow>
               <Button { ...props.Button }>Lorem ipsum</Button>
             </Buttons>
-          </Base>
-        </Base>
+          </Box>
+        </Box>
       </Showcase>
     ),
     state: {

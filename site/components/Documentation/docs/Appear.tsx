@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Appear, AppearProps, Base } from 'preshape';
+import { Appear, AppearProps, Box } from 'preshape';
 import Showcase from '../Showcase';
 import ThemeIcon from '../../ThemeIcon/ThemeIcon';
 import { CatalogueItem } from '.';
@@ -14,7 +14,7 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <Base flex="horizontal" gap="x3">
+        <Box flex="horizontal" gap="x3">
           { Array.from({ length: 3 }).map((_, n) => (
             <Appear { ...props.Appear }
                 alignChildren="middle"
@@ -29,7 +29,7 @@ const Item: CatalogueItem<{
               <ThemeIcon size="1.5rem" />
             </Appear>
           )) }
-        </Base>
+        </Box>
       </Showcase>
     ),
     state: {

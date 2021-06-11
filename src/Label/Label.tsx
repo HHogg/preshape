@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import { Attributes } from '../Base/Base';
+import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './Label.css';
 

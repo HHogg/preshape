@@ -11,7 +11,7 @@ export {
   TypeColor,
   TypeSize,
   TypeTheme,
-} from './Base/Base';
+} from './Box/Box';
 
 export {
   TypeEditorLanguage,
@@ -27,7 +27,7 @@ export {
 
 export { default as Alert, AlertProps } from './Alert/Alert';
 export { default as Appear, AppearProps } from './Appear/Appear';
-export { default as Base, BaseProps } from './Base/Base';
+export { default as Box, BoxProps } from './Box/Box';
 export { default as BlockQuote, BlockQuoteProps } from './BlockQuote/BlockQuote';
 export { default as BulletPoint, BulletPointProps } from './BulletPoints/BulletPoint';
 export { default as BulletPoints, BulletPointsProps } from './BulletPoints/BulletPoints';

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-export interface GridItemProps extends BaseProps {
+export interface GridItemProps extends BoxProps {
   /** Specifies a specific column this item should be in. */
   column?: number;
   /** Specifies a specific row this item should be in. */
@@ -22,7 +22,7 @@ const GridItem: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement
   };
 
   return (
-    <Base { ...rest } className="GridItem" ref={ ref } style={ style } />
+    <Box { ...rest } className="GridItem" ref={ ref } style={ style } />
   );
 };
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './BulletPoints.css';
 
-export interface BulletPointsProps extends BaseProps {
+export interface BulletPointsProps extends BoxProps {
   /**
    * Replaces the default unordered list styling with
    * numbers... everyone likes a bit of order.
@@ -18,7 +18,7 @@ const BulletPoints: React.RefForwardingComponent<HTMLUListElement, Attributes<HT
   });
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         className={ classes }
         ref={ ref }
         tag={ numbered ? 'ol' : 'ul' } />

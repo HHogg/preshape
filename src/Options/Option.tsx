@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
+import { Attributes } from '../Box/Box';
 import CheckBox from '../CheckBox/CheckBox';
 import RadioButton from '../RadioButton/RadioButton';
 

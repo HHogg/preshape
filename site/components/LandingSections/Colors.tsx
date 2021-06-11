@@ -22,7 +22,7 @@ import {
   colorNegativeShade1,
   colorNegativeShade2,
   colorNegativeShade3,
-  Base,
+  Box,
   Code,
   Grid,
   Icon,
@@ -166,14 +166,14 @@ export default (props: Props) => {
       </Text>
 
 
-      <Base alignChildren="end" flex="horizontal" margin="x4">
+      <Box alignChildren="end" flex="horizontal" margin="x4">
         <Link display="block" onClick={ () => setIsShuffled(!isShuffled) } underline>
-          <Base alignChildren="middle" flex="horizontal" gap="x1">
-            <Base><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Base>
-            <Base><Icon name="Shuffle" size="1rem" /></Base>
-          </Base>
+          <Box alignChildren="middle" flex="horizontal" gap="x1">
+            <Box><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Box>
+            <Box><Icon name="Shuffle" size="1rem" /></Box>
+          </Box>
         </Link>
-      </Base>
+      </Box>
 
       <Grid
           gap="x2"
@@ -191,7 +191,7 @@ export default (props: Props) => {
               style={ { backgroundColor: value } }
               textColor={ textColor }>
             { Array.from({ length: 4 }).map((_, index) => (
-              <Base
+              <Box
                   absolute="edge-to-edge"
                   backgroundColor={ textColor }
                   key={ index }

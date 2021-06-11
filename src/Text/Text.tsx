@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Attributes, BaseProps, TypeAllElementTags } from '../Base/Base';
+import Box, { Attributes, BoxProps, TypeAllElementTags } from '../Box/Box';
 import './Text.css';
 
 export type TypeTextSize =
@@ -27,7 +27,7 @@ const TagInlineMap = (props: TextProps): TypeAllElementTags =>
   (props.superscript && 'sup') ||
   'span';
 
-export interface TextProps extends BaseProps {
+export interface TextProps extends BoxProps {
   /** Text alignment */
   align?: 'start' | 'middle' | 'end';
   /** How the block of text should break onto new lines. */
@@ -100,7 +100,7 @@ const Text: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Te
     : (size && TagBlockMap[size])) || 'div';
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         className={ classes }
         ref={ ref }
         tag={ finalTag } />

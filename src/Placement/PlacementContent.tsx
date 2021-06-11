@@ -1,13 +1,13 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-export interface PlacementContentProps extends BaseProps {
+export interface PlacementContentProps extends BoxProps {
 
 }
 
 const PlacementContent: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, PlacementContentProps>> = (props, ref) => {
   return (
-    <Base { ...props } container ref={ ref } />
+    <Box { ...props } container ref={ ref } />
   );
 };
 

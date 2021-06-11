@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-export interface ListItemProps extends BaseProps {
+export interface ListItemProps extends BoxProps {
   /**
    * Separating string.
    *
@@ -14,15 +14,15 @@ const ListItem: React.RefForwardingComponent<HTMLLIElement, Attributes<HTMLLIEle
   const { children, separator = '/', ...rest } = props;
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         alignChildrenVertical="middle"
         className="ListItem"
         data-separator={ separator }
         flex="horizontal"
         ref={ ref }
         tag="li">
-      <Base>{ children }</Base>
-    </Base>
+      <Box>{ children }</Box>
+    </Box>
   );
 };
 

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-interface Props extends BaseProps {}
+interface Props extends BoxProps {}
 
 const Form: React.RefForwardingComponent<HTMLFormElement, Attributes<HTMLFormElement, Props>> = (props, ref) => {
   return (
-    <Base { ...props } ref={ ref } tag="form" />
+    <Box { ...props } ref={ ref } tag="form" />
   );
 };
 

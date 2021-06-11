@@ -1,11 +1,11 @@
 import * as React from 'react' ;
-import { Base, Text } from 'preshape';
+import { Box, Text } from 'preshape';
 
 const MyComponent = (props) => (
-  <Base { ...props } alignChildren="middle" flex="horizontal" gap="x4">
-    <Base><Text strong>Lorem</Text></Base>
-    <Base><Text strong>Ipsum</Text></Base>
-  </Base>
+  <Box { ...props } alignChildren="middle" flex="horizontal" gap="x4">
+    <Box><Text strong>Lorem</Text></Box>
+    <Box><Text strong>Ipsum</Text></Box>
+  </Box>
 );
 
 export default MyComponent

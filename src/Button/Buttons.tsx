@@ -1,11 +1,11 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Attributes, BaseProps, TypeSize } from '../Base/Base';
+import Box, { Attributes, BoxProps, TypeSize } from '../Box/Box';
 
 /**
  * Button container component that joins or separates child components.
  */
-export interface ButtonsProps extends BaseProps {
+export interface ButtonsProps extends BoxProps {
   /**
    * Spacing applied between child Button items, values are global spacing variables.
    *
@@ -23,7 +23,7 @@ const Buttons: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement,
   });
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         className={ classes }
         flex="horizontal"
         gap={ joined ? undefined : gap }

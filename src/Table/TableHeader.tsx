@@ -1,12 +1,12 @@
 
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-export interface TableHeaderProps extends BaseProps {}
+export interface TableHeaderProps extends BoxProps {}
 
 const TableHeader: React.RefForwardingComponent<HTMLTableSectionElement, Attributes<HTMLTableSectionElement, TableHeaderProps>> = (props, ref) => {
   return (
-    <Base { ...props }
+    <Box { ...props }
         className="Table__header"
         ref={ ref }
         tag="thead" />

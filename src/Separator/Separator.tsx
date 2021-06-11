@@ -1,9 +1,9 @@
 
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Separator.css';
 
-export interface SeparatorProps extends BaseProps {}
+export interface SeparatorProps extends BoxProps {}
 
 const Separator: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, SeparatorProps>> = (props, ref) => {
   const {
@@ -13,7 +13,7 @@ const Separator: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElemen
   } = props;
 
   return (
-    <Base
+    <Box
         { ...rest }
         borderColor={ borderColor }
         borderSize={ borderSize }

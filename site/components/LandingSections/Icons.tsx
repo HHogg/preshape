@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { icons, Base, Grid, GridItem, Icon, Link, Text } from 'preshape';
+import { icons, Box, Grid, GridItem, Icon, Link, Text } from 'preshape';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 export default (props: Props) => {
@@ -20,11 +20,11 @@ export default (props: Props) => {
           <GridItem
               key={ icon }
               padding="x3">
-            <Base
+            <Box
                 alignChildren="middle"
                 flex="horizontal">
               <Icon name={ icon } size="1.75rem" />
-            </Base>
+            </Box>
 
             <Text
                 align="middle"

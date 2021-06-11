@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import classnames from 'classnames';
-import './Base.css';
+import './Box.css';
 
 export type Attributes<E, P = {}> = P & Omit<
   E extends SVGElement
@@ -60,7 +60,7 @@ export type TypeTheme =
  * The core component that is the end of the chain for all other components.
  * It provides general utility behaviour and styling.
  */
-export interface BaseProps {
+export interface BoxProps {
   /** Quick way of absolutely position to common places */
   absolute?:
     'center' |
@@ -169,7 +169,7 @@ type ReactElementProps = Omit<
   React.SVGAttributes<Element>
 , 'crossOrigin' | 'wrap'>;
 
-const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps> = (props, ref) => {
+const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> = (props, ref) => {
   const {
     absolute,
     alignChildren,
@@ -214,32 +214,32 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
     ...rest
   } = props;
 
-  const classes = classnames('Base', {
-    'Base--clickable': clickable,
-    'Base--container': container,
-    'Base--elevate': elevate,
-    'Base--flex-reverse': reverse,
-    'Base--flex-wrap': wrap,
-    'Base--flex-gapped': gap,
-    'Base--max-width': maxWidth,
-    'Base--scrollable': scrollable,
-    [`Base--absolute-${absolute}`]: absolute,
-    [`Base--background-color-${backgroundColor}`]: backgroundColor,
-    [`Base--border-color-${borderColor}`]: borderColor,
-    [`Base--border-radius-${borderRadius}`]: borderRadius,
-    [`Base--border-size-${borderSize}`]: borderSize,
-    [`Base--display-${display}`]: display,
-    [`Base--fixed-${fixed}`]: fixed,
-    [`Base--flex-${flex}`]: flex,
-    [`Base--flex-align-horz-${alignChildrenHorizontal}`]: alignChildrenHorizontal,
-    [`Base--flex-align-self-${alignSelf}`]: alignSelf,
-    [`Base--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
-    [`Base--flex-gap-${gap}`]: gap,
-    [`Base--margin-${margin}`]: margin,
-    [`Base--overflow-${overflow}`]: overflow,
-    [`Base--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
-    [`Base--padding-vertical-${paddingVertical}`]: paddingVertical,
-    [`Base--text-color-${textColor}`]: textColor,
+  const classes = classnames('Box', {
+    'Box--clickable': clickable,
+    'Box--container': container,
+    'Box--elevate': elevate,
+    'Box--flex-reverse': reverse,
+    'Box--flex-wrap': wrap,
+    'Box--flex-gapped': gap,
+    'Box--max-width': maxWidth,
+    'Box--scrollable': scrollable,
+    [`Box--absolute-${absolute}`]: absolute,
+    [`Box--background-color-${backgroundColor}`]: backgroundColor,
+    [`Box--border-color-${borderColor}`]: borderColor,
+    [`Box--border-radius-${borderRadius}`]: borderRadius,
+    [`Box--border-size-${borderSize}`]: borderSize,
+    [`Box--display-${display}`]: display,
+    [`Box--fixed-${fixed}`]: fixed,
+    [`Box--flex-${flex}`]: flex,
+    [`Box--flex-align-horz-${alignChildrenHorizontal}`]: alignChildrenHorizontal,
+    [`Box--flex-align-self-${alignSelf}`]: alignSelf,
+    [`Box--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
+    [`Box--flex-gap-${gap}`]: gap,
+    [`Box--margin-${margin}`]: margin,
+    [`Box--overflow-${overflow}`]: overflow,
+    [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
+    [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
+    [`Box--text-color-${textColor}`]: textColor,
     [`Theme--${theme}`]: theme,
   }, className);
 
@@ -263,4 +263,4 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
   }, children);
 };
 
-export default React.forwardRef(Base);
+export default React.forwardRef(Box);

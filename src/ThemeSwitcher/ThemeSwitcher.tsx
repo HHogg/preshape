@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Variants } from 'framer-motion';
 import { transitionTimeFast, transitionTimingFunction } from '../variables';
-import Base, { Attributes, BaseProps, TypeTheme } from '../Base/Base';
+import Box, { Attributes, BoxProps, TypeTheme } from '../Box/Box';
 import Icon from '../Icon/Icon';
 import Motion from '../Motion/Motion';
 import './ThemeSwitcher.css';
@@ -46,7 +46,7 @@ const VariantsIconMoon: Variants = {
 };
 
 
-export interface ThemeSwitcherProps extends BaseProps {
+export interface ThemeSwitcherProps extends BoxProps {
   size?: number;
   onChange: (theme: TypeTheme) => void;
   theme: TypeTheme;
@@ -61,7 +61,7 @@ const ThemeControls: React.RefForwardingComponent<HTMLLabelElement, Attributes<H
   } = props;
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         container
         flex="horizontal"
         ref={ ref }
@@ -92,7 +92,7 @@ const ThemeControls: React.RefForwardingComponent<HTMLLabelElement, Attributes<H
           <Icon name="Sun" size={ `${size}px` } />
         </Motion>
 
-        <Base flex="horizontal" textColor="background-shade-1">
+        <Box flex="horizontal" textColor="background-shade-1">
           <Motion
               style={ { padding: size / 8 } }
               transition={ transition }
@@ -106,9 +106,9 @@ const ThemeControls: React.RefForwardingComponent<HTMLLabelElement, Attributes<H
               variants={ VariantsIconMoon }>
             <Icon name="Moon" size={ `${size}px` } />
           </Motion>
-        </Base>
+        </Box>
       </Motion>
-    </Base>
+    </Box>
   );
 };
 

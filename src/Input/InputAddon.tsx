@@ -1,14 +1,14 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Input.css';
 
-export interface InputAddonProps extends BaseProps {}
+export interface InputAddonProps extends BoxProps {}
 
 const InputAddon: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, InputAddonProps>> = (props, ref) => {
   const { padding, paddingHorizontal = 'x3' } = props;
 
   return (
-    <Base { ...props }
+    <Box { ...props }
         padding={ padding }
         paddingHorizontal={ padding || paddingHorizontal }
         ref={ ref } />

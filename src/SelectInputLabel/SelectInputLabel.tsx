@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
 
-export interface SelectInputLabelProps extends BaseProps {
+export interface SelectInputLabelProps extends BoxProps {
   label: React.ReactNode;
 }
 
@@ -14,25 +14,25 @@ const SelectInputLabel: React.RefForwardingComponent<HTMLLabelElement, Attribute
   } = props;
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         alignChildrenVertical="middle"
         className="SelectInputLabels__label"
         flex="horizontal"
         gap="x2"
         ref={ ref }
         tag="label">
-      <Base>
+      <Box>
         { children }
-      </Base>
+      </Box>
 
-      <Base grow shrink>
+      <Box grow shrink>
         <Text
             className="SelectInputLabels__label-text"
             ellipsis
             size="x1"
             strong>{ label }</Text>
-      </Base>
-    </Base>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
+import { Attributes } from '../Box/Box';
 import Link from '../Link/Link';
 import Text, { TextProps } from '../Text/Text';
 

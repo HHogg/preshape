@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
+import { Attributes } from '../Box/Box';
 import Placement, { PlacementProps } from '../Placement/Placement';
 import PlacementArrow from '../Placement/PlacementArrow';
 import PlacementContent from '../Placement/PlacementContent';

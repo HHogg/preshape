@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Base, Text } from 'preshape';
+import { Box, Text } from 'preshape';
 import { JSONOutput } from 'typedoc';
 import { StatePrimitive } from './Types';
 import KindRenderer from './KindRenderer';
@@ -16,13 +16,13 @@ export default (props: Props) => {
   } = props;
 
   return (
-    <Base margin="x8">
-      <Base margin="x4">
+    <Box margin="x8">
+      <Box margin="x4">
         <Text size="x2" strong>{ name }</Text>
         { comment && comment.shortText && <Text>{ comment.shortText }</Text> }
-      </Base>
+      </Box>
 
       <KindRenderer { ...props } context={ props } />
-    </Base>
+    </Box>
   );
 };

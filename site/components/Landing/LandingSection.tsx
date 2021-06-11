@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Attributes, Base, BaseProps, Text } from 'preshape';
+import { Attributes, Box, BoxProps, Text } from 'preshape';
 
-export interface Props extends BaseProps {
+export interface Props extends BoxProps {
   id?: string;
   title?: string;
 }
@@ -10,7 +10,7 @@ export default (props: Attributes<HTMLElement, Props>) => {
   const { children, id, title, ...rest } = props;
 
   return (
-    <Base { ...rest } id={ id } paddingVertical="x12">
+    <Box { ...rest } id={ id } paddingVertical="x12">
       { title && (
         <Text
             margin="x4"
@@ -18,9 +18,9 @@ export default (props: Attributes<HTMLElement, Props>) => {
             strong>{ title }</Text>
       ) }
 
-      <Base>
+      <Box>
         { children }
-      </Base>
-    </Base>
+      </Box>
+    </Box>
   );
 };

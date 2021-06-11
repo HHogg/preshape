@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MotionProps, Transition } from 'framer-motion';
 import animations from './animations';
 import { transitionTimeFast } from '../variables';
-import { Attributes, BaseProps } from '../Base/Base';
+import { Attributes, BoxProps } from '../Box/Box';
 import Motion from '../Motion/Motion';
 
 export type TypeAnimation =
@@ -20,7 +20,7 @@ export type TypeAnimation =
  * Using framer-motion, the Appear component provides a variety of
  * ways to make parts of the UI appear in style.
  */
-export interface AppearProps extends BaseProps, MotionProps {
+export interface AppearProps extends BoxProps, MotionProps {
   /**
    * Name of the animation to play when the visibility state changes.
    *

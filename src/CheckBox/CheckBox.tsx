@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Attributes, TypeSize } from '../Base/Base';
+import { Attributes, TypeSize } from '../Box/Box';
 import CheckBoxIndicator from './CheckBoxIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';

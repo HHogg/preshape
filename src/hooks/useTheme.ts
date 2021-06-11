@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { TypeTheme } from '../Base/Base';
+import { TypeTheme } from '../Box/Box';
 
 export default (theme: TypeTheme) => {
   useEffect(() => {

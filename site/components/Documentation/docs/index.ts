@@ -15,7 +15,7 @@ export interface CatalogueItem<S extends {} = {}> {
 const docs: { [key: string]: CatalogueItem } = {
   Alert: require('./Alert').default,
   Appear: require('./Appear').default,
-  Base: require('./Base').default,
+  Box: require('./Box').default,
   Blockquote: require('./BlockQuote').default,
   BulletPoints: require('./BulletPoints').default,
   Button: require('./Button').default,

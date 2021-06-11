@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Icon.css';
 
 export type TypeIcon =
@@ -228,7 +228,7 @@ export const IconPathMap: { [key in TypeIcon]: string[] } = {
   ],
 };
 
-export interface IconProps extends BaseProps {
+export interface IconProps extends BoxProps {
   /** Name of the icon to be displayed */
   name: TypeIcon;
   /** Size to be used for with and height of the icon */
@@ -243,7 +243,7 @@ const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<SVGSVGElement
   }
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         className="Icon"
         height={ size }
         ref={ ref }
@@ -251,7 +251,7 @@ const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<SVGSVGElement
         viewBox="0 0 1024 1024"
         width={ size }>
       { IconPathMap[name].map((d, i) => <path d={ d } key={ i } />) }
-    </Base>
+    </Box>
   );
 };
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { motion, MotionProps } from 'framer-motion';
 import omit from 'lodash.omit';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
-type MotionsProps = Attributes<Element, MotionProps & BaseProps>;
+type MotionsProps = Attributes<Element, MotionProps & BoxProps>;
 
 const motionProps: (keyof MotionProps)[] = [
   'animate',
@@ -19,7 +19,7 @@ const motionProps: (keyof MotionProps)[] = [
 
 const Motion = motion.custom<MotionsProps>(
   React.forwardRef<Element, MotionsProps>((props, ref) =>
-    <Base { ...omit(props, motionProps) } ref={ ref } />
+    <Box { ...omit(props, motionProps) } ref={ ref } />
   ));
 
 export default Motion;

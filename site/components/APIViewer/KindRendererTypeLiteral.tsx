@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { JSONOutput } from 'typedoc';
-import { Base } from 'preshape';
+import { Box } from 'preshape';
 import { Renderer } from './Types';
 import TypeLabel from './TypeLabel';
 
@@ -10,10 +10,10 @@ export default (props: Props) => {
   const isFunction = !!props.signatures;
 
   return (
-    <Base>
+    <Box>
       <TypeLabel>
         { isFunction ? 'Function' : 'Object' }
       </TypeLabel>
-    </Base>
+    </Box>
   );
 };

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Base,
+  Box,
   Code,
   Table,
   TableProps,
@@ -55,7 +55,7 @@ export default (props: Props) => {
             <TableCell align={ showCellVisual ? 'end' : 'start' } sorted>{ name }</TableCell>
             { showCellVisual && (
               <TableCell>
-                <Base
+                <Box
                     backgroundColor="text-shade-1"
                     height="1rem"
                     width={ `var(${css})` } />

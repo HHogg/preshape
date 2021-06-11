@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import Link from '../Link/Link';
 
-export interface TabProps extends BaseProps {
+export interface TabProps extends BoxProps {
   /** Applies the active styling to the Tab */
   active?: boolean;
 }
@@ -20,11 +20,11 @@ const Tab: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Tab
   });
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         backgroundColor={ backgroundColor }
         className={ classes }
         ref={ ref }>
-      <Base className="Tab__background">
+      <Box className="Tab__background">
         <Link
             display="block"
             padding="x3"
@@ -32,8 +32,8 @@ const Tab: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Tab
             strong>
           { children }
         </Link>
-      </Base>
-    </Base>
+      </Box>
+    </Box>
   );
 };
 

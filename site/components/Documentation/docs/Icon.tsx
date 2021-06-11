@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Base, Icon, IconProps } from 'preshape';
+import { Box, Icon, IconProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
 
@@ -13,9 +13,9 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <Base alignChildren="middle" flex="vertical">
+        <Box alignChildren="middle" flex="vertical">
           <Icon { ...props.Icon } />
-        </Base>
+        </Box>
       </Showcase>
     ),
     state: {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ModalContext } from './Modal';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
 
@@ -10,7 +10,7 @@ import Link from '../Link/Link';
  * callback is provided to the Modal component, then
  * the cross icon will appear in this element.
  */
-export interface ModalHeaderProps extends BaseProps {
+export interface ModalHeaderProps extends BoxProps {
   /**
    * Size of the close icon that is used to trigger
    * the onClose callback.
@@ -23,23 +23,23 @@ const ModalHeader: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLD
   const { onClose } = React.useContext(ModalContext);
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         alignChildrenVertical="start"
         flex="horizontal"
         gap="x6"
         ref={ ref }>
-      <Base grow shrink>
+      <Box grow shrink>
         { children }
-      </Base>
+      </Box>
 
       { onClose && (
-        <Base>
+        <Box>
           <Link onPointerUp={ onClose }>
             <Icon name="Cross" size={ closeIconSize } />
           </Link>
-        </Base>
+        </Box>
       ) }
-    </Base>
+    </Box>
   );
 };
 

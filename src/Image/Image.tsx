@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Image.css';
 
-export interface ImageProps extends BaseProps {}
+export interface ImageProps extends BoxProps {}
 
 const Image: React.RefForwardingComponent<HTMLImageElement, Attributes<HTMLImageElement, ImageProps>> = (props, ref) => {
   return (
-    <Base { ...props }
+    <Box { ...props }
         className="Image"
         ref={ ref }
         tag="img" />

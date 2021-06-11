@@ -5,7 +5,7 @@ import { Popper, PopperProps, PopperArrowProps } from 'react-popper';
 import classnames from 'classnames';
 import { useEventListener } from '../hooks';
 import Appear from '../Appear/Appear';
-import Base, { BaseProps } from '../Base/Base';
+import Box, { BoxProps } from '../Box/Box';
 import './Placement.css';
 import { PlacementManagerContext } from './PlacementManager';
 
@@ -66,7 +66,7 @@ export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>(
   style: {},
 });
 
-export interface PlacementProps extends BaseProps {
+export interface PlacementProps extends BoxProps {
   /**
    * The minimum width of the Placement element. This can be a standard
    * CSS value or a keyword of 'reference', which will apply the width
@@ -146,7 +146,7 @@ const Placement: React.FC<PlacementProps> = (props) => {
         placement={ placement }>
       { ({ arrowProps, placement, ref, style }) => (
         <PlacementArrowPropsContext.Provider value={ arrowProps }>
-          <Base { ...rest }
+          <Box { ...rest }
               className={ classnames('Placement', `Placement--${placement}`) }
               minWidth={ placementMinWidth }
               ref={ ref }
@@ -157,7 +157,7 @@ const Placement: React.FC<PlacementProps> = (props) => {
                 visible={ visible }>
               { children }
             </Appear>
-          </Base>
+          </Box>
         </PlacementArrowPropsContext.Provider>
       ) }
     </Popper>,

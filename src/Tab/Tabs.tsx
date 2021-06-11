@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Tabs.css';
 
-export interface TabsProps extends BaseProps {}
+export interface TabsProps extends BoxProps {}
 
 const Tabs: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TabsProps>> = (props, ref) => {
   return (
-    <Base { ...props } className="Tabs" ref={ ref } />
+    <Box { ...props } className="Tabs" ref={ ref } />
   );
 };
 

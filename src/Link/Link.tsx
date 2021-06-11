@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import classnames from 'classnames';
-import { Attributes } from '../Base/Base';
+import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './Link.css';
 

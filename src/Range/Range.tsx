@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Range.css';
 
-export interface RangeProps extends BaseProps {}
+export interface RangeProps extends BoxProps {}
 
 const Range: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, RangeProps>> = (props, ref) => {
   const {
@@ -13,7 +13,7 @@ const Range: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInput
   } = props;
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         basis="0"
         className="Range"
         grow

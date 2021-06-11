@@ -1,12 +1,12 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Attributes, BaseProps } from '../Base/Base';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Alert.css';
 
 /**
  * An alerting component for bringing attention to a message.
  */
-export interface AlertProps extends BaseProps {
+export interface AlertProps extends BoxProps {
   /** Color that is applied to the Alert to indicate the type of action */
   color: 'accent' | 'negative' | 'positive';
   /** Applies a filled in style to the alert. */
@@ -20,7 +20,7 @@ const Alert: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
   });
 
   return (
-    <Base { ...rest }
+    <Box { ...rest }
         borderSize="x2"
         className={ classes }
         ref={ ref } />

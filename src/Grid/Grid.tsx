@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Base, { Attributes, BaseProps, TypeSize } from '../Base/Base';
+import Box, { Attributes, BoxProps, TypeSize } from '../Box/Box';
 import './Grid.css';
 
-export interface GridProps extends BaseProps {
+export interface GridProps extends BoxProps {
   /** Controls the horizontal alignment of the items */
   alignChildren?: 'start' | 'middle' | 'end';
   /** Sets the distances between items to a multiple value. E.g. 'x1'. */
@@ -52,7 +52,7 @@ const Grid: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Gr
   };
 
   return (
-    <Base { ...rest } className={ classes } ref={ ref } style={ style } />
+    <Box { ...rest } className={ classes } ref={ ref } style={ style } />
   );
 };
 
