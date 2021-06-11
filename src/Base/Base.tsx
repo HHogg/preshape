@@ -85,7 +85,7 @@ export interface BaseProps {
   /** Background color, shades are taken from the current theme.*/
   backgroundColor?: TypeColor | 'overlay';
   /** Flex basis */
-  basis?: 'none' | 'content' | 'container';
+  basis?: string;
   /** Border color, shades are taken from the current theme. */
   borderColor?: TypeColor;
   /** Adds styling of a border radius to one of the size multiples */
