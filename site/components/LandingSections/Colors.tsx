@@ -24,7 +24,6 @@ import {
   colorNegativeShade3,
   Base,
   Code,
-  Flex,
   Grid,
   Icon,
   Motion,
@@ -167,14 +166,14 @@ export default (props: Props) => {
       </Text>
 
 
-      <Flex alignChildren="end" direction="horizontal" margin="x4">
+      <Base alignChildren="end" flex="horizontal" margin="x4">
         <Link display="block" onClick={ () => setIsShuffled(!isShuffled) } underline>
-          <Flex alignChildren="middle" direction="horizontal" gap="x1">
-            <Flex><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Flex>
-            <Flex><Icon name="Shuffle" size="1rem" /></Flex>
-          </Flex>
+          <Base alignChildren="middle" flex="horizontal" gap="x1">
+            <Base><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Base>
+            <Base><Icon name="Shuffle" size="1rem" /></Base>
+          </Base>
         </Link>
-      </Flex>
+      </Base>
 
       <Grid
           gap="x2"

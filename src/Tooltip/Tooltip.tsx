@@ -7,7 +7,6 @@ import PlacementManager, { TypePlacementTrigger } from '../Placement/PlacementMa
 import PlacementReference, { PlacementReferenceChildren } from '../Placement/PlacementReference';
 import Text from '../Text/Text';
 
-
 export interface TooltipProps extends PlacementProps {
   /**
    * A render callback function that passes on the ref

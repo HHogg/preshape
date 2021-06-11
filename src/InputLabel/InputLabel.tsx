@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import Text from '../Text/Text';
 import './InputLabel.css';
 
-export interface InputLabelProps extends FlexProps {
+export interface InputLabelProps extends BaseProps {
   /**
    * The disabled state that prevents the input from being clickable.
    * Note that this elements simply applies the disabled styling, it
@@ -28,10 +27,10 @@ const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTML
   } = props;
 
   return (
-    <Flex { ...rest }
+    <Base { ...rest }
         className="InputLabel"
-        direction="vertical"
         disabled={ disabled }
+        flex="vertical"
         ref={ ref }
         tag="label">
       { label && (
@@ -45,14 +44,14 @@ const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTML
         </Text>
       ) }
 
-      <Flex
+      <Base
           alignChildrenVertical="middle"
           backgroundColor="background-shade-1"
-          direction="horizontal"
+          flex="horizontal"
           textColor="text-shade-1">
         { children }
-      </Flex>
-    </Flex>
+      </Base>
+    </Base>
   );
 };
 

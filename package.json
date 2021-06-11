@@ -10,7 +10,7 @@
   "typings": "lib/cjs/index.d.ts",
   "scripts": {
     "build:css": "postcss src/{*.css,**/*.css} --base src",
-    "build:docs": "typedoc --json site/assets/documentation.json src",
+    "build:docs": "rm -f sites/assets/documentation.json && typedoc --json site/assets/documentation.json src",
     "build:lib": "rm -rf ./lib && yarn build:lib:cjs && yarn build:lib:esn",
     "build:lib:esn": "tsc -p src -m esnext -t esnext --outDir lib/esn && yarn build:css --dir lib/esn",
     "build:lib:cjs": "tsc -p src --outDir lib/cjs && yarn build:css --dir lib/cjs",
@@ -20,7 +20,8 @@
     "lint": "yarn lint:js && yarn lint:css",
     "semantic-release": "semantic-release",
     "serve": "superstatic ./public --port 4000 -c superstatic.json",
-    "start": "rm -rf dist && parcel site/index.dev.html --port 4000 -d dist --no-cache --no-autoinstall",
+    "start": "yarn build:docs && yarn start:site",
+    "start:site": "parcel site/index.dev.html --port 4000 -d dist --no-cache --no-autoinstall",
     "travis-deploy-once": "travis-deploy-once"
   },
   "peerDependencies": {
@@ -59,6 +60,7 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "caniuse-lite": "^1.0.30000697",
+    "concurrently": "^6.2.0",
     "eslint": "^5.15.1",
     "eslint-config-preshape": "^1.1.0",
     "eslint-plugin-react": "^7.12.4",

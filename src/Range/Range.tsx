@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Range.css';
 
-export interface RangeProps extends FlexProps {}
+export interface RangeProps extends BaseProps {}
 
 const Range: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, RangeProps>> = (props, ref) => {
   const {
@@ -14,8 +13,8 @@ const Range: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInput
   } = props;
 
   return (
-    <Flex { ...rest }
-        basis="none"
+    <Base { ...rest }
+        basis="0"
         className="Range"
         grow
         paddingHorizontal={ padding || paddingHorizontal }

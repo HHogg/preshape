@@ -1,10 +1,9 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import { Attributes, TypeSize } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps, TypeSize } from '../Base/Base';
 import './List.css';
 
-export interface ListProps extends FlexProps {
+export interface ListProps extends BaseProps {
   /**
    * Spacing applied between child ListItems, values are global spacing variables.
    *
@@ -18,10 +17,10 @@ const List: React.RefForwardingComponent<HTMLUListElement, Attributes<HTMLUListE
   const classes = classnames('List', `List--${gap}`);
 
   return (
-    <Flex { ...rest }
+    <Base { ...rest }
         alignChildrenVertical="middle"
         className={ classes }
-        direction="horizontal"
+        flex="horizontal"
         gap={ gap }
         ref={ ref }
         tag="ul"

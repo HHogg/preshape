@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-export interface GridItemProps extends FlexProps {
+export interface GridItemProps extends BaseProps {
   /** Specifies a specific column this item should be in. */
   column?: number;
   /** Specifies a specific row this item should be in. */
@@ -23,7 +22,7 @@ const GridItem: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement
   };
 
   return (
-    <Flex { ...rest } className="GridItem" ref={ ref } style={ style } />
+    <Base { ...rest } className="GridItem" ref={ ref } style={ style } />
   );
 };
 

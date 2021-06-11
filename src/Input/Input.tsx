@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex from '../Flex/Flex';
+import Base, { Attributes } from '../Base/Base';
 import Text, { TextProps } from '../Text/Text';
 import './Input.css';
 
@@ -16,7 +15,7 @@ const Input: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInput
   } = props;
 
   return (
-    <Flex basis="none" grow>
+    <Base basis="0" grow>
       <Text { ...rest }
           className="Input"
           paddingHorizontal={ padding || paddingHorizontal }
@@ -25,7 +24,7 @@ const Input: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInput
           size={ size }
           strong
           tag="input" />
-    </Flex>
+    </Base>
   );
 };
 

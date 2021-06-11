@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Flex, Text } from 'preshape';
+import { Base, Text } from 'preshape';
 
 interface Props {
   children: React.ReactNode;
@@ -10,19 +10,19 @@ export default (props: Props) => {
   const { children, isArray } = props;
 
   return (
-    <Flex
+    <Base
         alignChildrenVertical="middle"
-        direction="horizontal"
+        flex="horizontal"
         gap="x1">
-      <Flex>
+      <Base>
         { children }
-      </Flex>
+      </Base>
 
       { isArray && (
-        <Flex>
+        <Base>
           <Text inline strong>[]</Text>
-        </Flex>
+        </Base>
       ) }
-    </Flex>
+    </Base>
   );
 };

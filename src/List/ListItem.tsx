@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-export interface ListItemProps extends FlexProps {
+export interface ListItemProps extends BaseProps {
   /**
    * Separating string.
    *
@@ -15,15 +14,15 @@ const ListItem: React.RefForwardingComponent<HTMLLIElement, Attributes<HTMLLIEle
   const { children, separator = '/', ...rest } = props;
 
   return (
-    <Flex { ...rest }
+    <Base { ...rest }
         alignChildrenVertical="middle"
         className="ListItem"
         data-separator={ separator }
-        direction="horizontal"
+        flex="horizontal"
         ref={ ref }
         tag="li">
-      <Flex>{ children }</Flex>
-    </Flex>
+      <Base>{ children }</Base>
+    </Base>
   );
 };
 

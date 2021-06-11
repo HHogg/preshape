@@ -1,8 +1,8 @@
 import * as React from 'react' ;
 import {
+  Base,
   Button,
   Buttons,
-  Flex,
   Icon,
   Placement,
   PlacementProps,
@@ -32,7 +32,7 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <Flex alignChildren="middle" direction="horizontal">
+        <Base alignChildren="middle" flex="horizontal">
           <PlacementManager { ...props.PlacementManager }>
             <PlacementReference { ...props.PlacementReference }>
               { (props) => (
@@ -63,7 +63,7 @@ const Item: CatalogueItem<{
               </PlacementContent>
             </Placement>
           </PlacementManager>
-        </Flex>
+        </Base>
       </Showcase>
     ),
     state: {

@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Base, BaseProps, Flex } from 'preshape';
+import { Base, BaseProps } from 'preshape';
 import Showcase from '../Showcase';
 import ThemeIcon from '../../ThemeIcon/ThemeIcon';
 import { CatalogueItem } from '.';
@@ -14,11 +14,11 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <Flex alignChildren="middle" direction="vertical">
+        <Base alignChildren="middle" flex="vertical">
           <Base { ...props.Base }>
             <ThemeIcon size="1.5rem" />
           </Base>
-        </Flex>
+        </Base>
       </Showcase>
     ),
     state: {

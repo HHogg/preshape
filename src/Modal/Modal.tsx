@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
 import { useMatchMedia } from '../hooks';
-import { Attributes, TypeColor } from '../Base/Base';
+import Base, { Attributes, BaseProps, TypeColor } from '../Base/Base';
 import Appear, { TypeAnimation } from '../Appear/Appear';
-import Flex, { FlexProps } from '../Flex/Flex';
 import './Modal.css';
 
 export const ModalContext = React.createContext<{
@@ -16,7 +15,7 @@ export const ModalContext = React.createContext<{
  * an overlay, animations, behaviour to disable body scroll when
  * it is visible.
  */
-export interface ModalProps extends FlexProps {
+export interface ModalProps extends BaseProps {
   /**
    * Animation for the Modal window. See Appear component.
    *
@@ -100,10 +99,10 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
 
   return createPortal(
     <ModalContext.Provider value={ { onClose } }>
-      <Flex { ...rest }
+      <Base { ...rest }
           alignChildren="middle"
-          direction="vertical"
           fixed="edge-to-edge"
+          flex="vertical"
           padding={ (!isMaxWidthEnabled || match(maxWidth)) ? margin : 'x0' }
           ref={ ref }>
         <Appear
@@ -118,7 +117,7 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
             animation={ animation }
             backgroundColor={ backgroundColor }
             container
-            direction="vertical"
+            flex="vertical"
             gap={ gap }
             grow={ fullscreen || (isMaxWidthEnabled && !match(maxWidth)) }
             maxHeight="100vh"
@@ -134,7 +133,7 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
             visible={ visible }>
           { children }
         </Appear>
-      </Flex>
+      </Base>
     </ModalContext.Provider>
   , document.body);
 };

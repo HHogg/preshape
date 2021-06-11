@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-export interface PlacementContentProps extends FlexProps {
+export interface PlacementContentProps extends BaseProps {
 
 }
 
 const PlacementContent: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, PlacementContentProps>> = (props, ref) => {
   return (
-    <Flex { ...props } container ref={ ref } />
+    <Base { ...props } container ref={ ref } />
   );
 };
 

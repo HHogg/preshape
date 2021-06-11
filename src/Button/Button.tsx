@@ -1,14 +1,13 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Button.css';
 
 /**
  * Button component with a fill and outline style with a variety of colours
  * for different purposes.
  */
-export interface ButtonProps extends FlexProps {
+export interface ButtonProps extends BaseProps {
   /** Retains the Button in its active state */
   active?: boolean;
   /**
@@ -32,10 +31,10 @@ const Button: React.RefForwardingComponent<HTMLButtonElement, Attributes<HTMLBut
   });
 
   return (
-    <Flex { ...rest }
+    <Base { ...rest }
         alignChildren="middle"
         className={ classes }
-        direction="horizontal"
+        flex="horizontal"
         grow
         ref={ ref }
         tag="button" />

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useRouteMatch, useHistory } from 'react-router-dom';
-import { Flex, Modal, ModalBody, ModalHeader, Text } from 'preshape';
+import { Base, Modal, ModalBody, ModalHeader, Text } from 'preshape';
 import { widthMedium } from '../Root';
 import docs from './docs';
 
@@ -49,17 +49,17 @@ export default () => {
       <ModalBody
           maxWidth={ widthMedium }>
         { item.showcase && (
-          <Flex margin="x6">
+          <Base margin="x6">
             <item.showcase.Component { ...state } />
-          </Flex>
+          </Base>
         ) }
 
         { item.apis && (
           <React.Suspense fallback={ (
-            <Flex alignChildren="middle" direction="vertical" grow>
+            <Base alignChildren="middle" flex="vertical" grow>
               <Text strong>Grabbing the documentation</Text>
               <Text strong>sit tight.</Text>
-            </Flex>
+            </Base>
           ) }>
             <APIViewer
                 apis={ item.apis }

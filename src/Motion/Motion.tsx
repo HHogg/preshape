@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { motion, MotionProps } from 'framer-motion';
 import omit from 'lodash.omit';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-type MotionsProps = Attributes<Element, MotionProps & FlexProps>;
+type MotionsProps = Attributes<Element, MotionProps & BaseProps>;
 
 const motionProps: (keyof MotionProps)[] = [
   'animate',
@@ -20,7 +19,7 @@ const motionProps: (keyof MotionProps)[] = [
 
 const Motion = motion.custom<MotionsProps>(
   React.forwardRef<Element, MotionsProps>((props, ref) =>
-    <Flex { ...omit(props, motionProps) } ref={ ref } />
+    <Base { ...omit(props, motionProps) } ref={ ref } />
   ));
 
 export default Motion;

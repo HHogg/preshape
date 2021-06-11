@@ -71,8 +71,21 @@ export interface BaseProps {
     'bottom' |
     'bottom-left' |
     'bottom-right';
+ /**
+  * Short cut child alignment property for both alignChildrenHorizontal and
+  * alignChildrenVertical.
+  */
+  alignChildren?: 'start' | 'middle' | 'end';
+  /** Horizontal alignment of children flex items. */
+  alignChildrenHorizontal?: 'start' | 'middle' | 'end' | 'around' | 'between';
+  /** Vertical alignment of children flex items. */
+  alignChildrenVertical?: 'start' | 'middle' | 'end' | 'around' | 'between';
+  /** Flex item alignment property (changes with parent direction). */
+  alignSelf?: 'start' | 'middle' | 'end';
   /** Background color, shades are taken from the current theme.*/
   backgroundColor?: TypeColor | 'overlay';
+  /** Flex basis */
+  basis?: 'none' | 'content' | 'container';
   /** Border color, shades are taken from the current theme. */
   borderColor?: TypeColor;
   /** Adds styling of a border radius to one of the size multiples */
@@ -97,6 +110,12 @@ export interface BaseProps {
     'bottom' |
     'bottom-left' |
     'bottom-right';
+  /** Flex direction */
+  flex?: 'horizontal' | 'vertical';
+  /** Spacing applied between child flex items, values are global spacing variables. */
+  gap?: TypeSize;
+  /** Flex item property if it should grow with available space. */
+  grow?: boolean | string;
   /** Fixed height applied through inline styling */
   height?: number | string;
   /** Margins applied for the global spacing variables */
@@ -117,8 +136,12 @@ export interface BaseProps {
   paddingHorizontal?: TypeSize;
   /** Vertical pa?dding applied for the global spacing variables */
   paddingVertical?: TypeSize;
+  /** Reverses the flex direction */
+  reverse?: boolean;
   /** Applies overflow styling to enable/disable scrolling.  */
   scrollable?: boolean;
+  /** Flex item property if it should shrink. */
+  shrink?: boolean | string;
   /**
    * Any valid HTML or SVG element tag.
    *
@@ -135,6 +158,8 @@ export interface BaseProps {
   theme?: TypeTheme;
   /** Fixed width applied through inline styling */
   width?: number | string;
+  /** Flag to allow flex items to wrap over to new lines */
+  wrap?: boolean;
   /** z-index number for layering elements.  */
   zIndex?: number;
 }
@@ -142,12 +167,17 @@ export interface BaseProps {
 type ReactElementProps = Omit<
   React.AllHTMLAttributes<Element> &
   React.SVGAttributes<Element>
-, 'crossOrigin'>;
+, 'crossOrigin' | 'wrap'>;
 
 const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps> = (props, ref) => {
   const {
     absolute,
+    alignChildren,
+    alignChildrenHorizontal = alignChildren,
+    alignChildrenVertical = alignChildren,
+    alignSelf,
     backgroundColor,
+    basis,
     borderColor,
     borderRadius,
     borderSize,
@@ -158,6 +188,9 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
     display,
     elevate,
     fixed,
+    flex,
+    gap,
+    grow,
     height,
     maxHeight,
     maxWidth,
@@ -168,12 +201,15 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
     paddingHorizontal = padding,
     paddingVertical = padding,
     margin,
+    reverse,
     scrollable,
+    shrink,
     style,
     tag,
     textColor,
     theme,
     width,
+    wrap,
     zIndex,
     ...rest
   } = props;
@@ -182,6 +218,9 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
     'Base--clickable': clickable,
     'Base--container': container,
     'Base--elevate': elevate,
+    'Base--flex-reverse': reverse,
+    'Base--flex-wrap': wrap,
+    'Base--flex-gapped': gap,
     'Base--max-width': maxWidth,
     'Base--scrollable': scrollable,
     [`Base--absolute-${absolute}`]: absolute,
@@ -191,6 +230,11 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
     [`Base--border-size-${borderSize}`]: borderSize,
     [`Base--display-${display}`]: display,
     [`Base--fixed-${fixed}`]: fixed,
+    [`Base--flex-${flex}`]: flex,
+    [`Base--flex-align-horz-${alignChildrenHorizontal}`]: alignChildrenHorizontal,
+    [`Base--flex-align-self-${alignSelf}`]: alignSelf,
+    [`Base--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
+    [`Base--flex-gap-${gap}`]: gap,
     [`Base--margin-${margin}`]: margin,
     [`Base--overflow-${overflow}`]: overflow,
     [`Base--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
@@ -203,7 +247,19 @@ const Base: React.RefForwardingComponent<Element, BaseProps & ReactElementProps>
     ...rest,
     className: classes,
     ref: ref,
-    style: { height, maxHeight, minHeight, maxWidth, minWidth, width, zIndex, ...style },
+    style: {
+      flexBasis: basis,
+      flexGrow: grow === true ? '1' : grow,
+      flexShrink: shrink === true ? '1' : shrink,
+      height: height,
+      maxHeight: maxHeight,
+      minHeight: minHeight,
+      maxWidth: maxWidth,
+      minWidth: minWidth,
+      width: width,
+      zIndex: zIndex,
+      ...style,
+    },
   }, children);
 };
 

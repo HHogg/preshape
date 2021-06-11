@@ -1,7 +1,7 @@
 import * as React from 'react' ;
 import {
   useMatchMedia,
-  Flex,
+  Base,
   Text,
 } from 'preshape';
 import { widthMedium, widthSmall } from '../Root';
@@ -21,28 +21,28 @@ export default (props: Props) => {
         empty or unrelated.
       </Text>
 
-      <Flex
-          direction={ match(widthMedium) ? 'horizontal' : 'vertical' }
+      <Base
+          flex={ match(widthMedium) ? 'horizontal' : 'vertical' }
           gap="x4"
           margin="x4">
-        <Flex
-            basis={ match(widthMedium) ? 'none' : undefined }
+        <Base
+            basis={ match(widthMedium) ? '0' : undefined }
             grow
             shrink>
           <SizingGeneralTable
               showCellCSS
               showCellVisual={ match(widthSmall) } />
-        </Flex>
+        </Base>
 
-        <Flex
-            basis={ match(widthMedium) ? 'none' : undefined }
+        <Base
+            basis={ match(widthMedium) ? '0' : undefined }
             grow
             shrink>
           <SizingBorderTable
               showCellCSS
               showCellVisual={ match(widthSmall) } />
-        </Flex>
-      </Flex>
+        </Base>
+      </Base>
     </LandingSection>
   );
 };

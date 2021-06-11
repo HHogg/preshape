@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import {
   themes,
   Base,
-  Flex,
   Image,
   Link,
   Text,
@@ -36,20 +35,20 @@ export default () => {
           paddingVertical="x16">
         <LandingSection>
           <Base maxWidth={ widthSmall }>
-            <Flex alignChildrenHorizontal="middle" direction="vertical" gap="x4">
-              <Flex shrink>
+            <Base alignChildrenHorizontal="middle" flex="vertical" gap="x4">
+              <Base shrink>
                 <Logo height="6rem" width="6rem" />
-              </Flex>
+              </Base>
 
-              <Flex shrink>
+              <Base shrink>
                 <Text align="middle" margin="x2" size="x5" strong>Preshape</Text>
                 <Text align="middle">
                   A minimal design system and library of composable React components.
                 </Text>
-              </Flex>
-            </Flex>
+              </Base>
+            </Base>
 
-            <Flex alignChildren="middle" direction="horizontal" margin="x8">
+            <Base alignChildren="middle" flex="horizontal" margin="x8">
               <Link display="block" href="https://www.npmjs.com/package/preshape">
                 <Image
                     alt="npm version"
@@ -57,7 +56,7 @@ export default () => {
                     height="18"
                     src={ `https://img.shields.io/npm/v/preshape?color=${encodeURIComponent(themes[theme].colorAccentShade2)}&label=Preshape` } />
               </Link>
-            </Flex>
+            </Base>
           </Base>
         </LandingSection>
 

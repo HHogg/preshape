@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 
-export interface TabContentProps extends FlexProps {}
+export interface TabContentProps extends BaseProps {}
 
 const TabContent: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TabContentProps>> = (props, ref) => {
   const {
@@ -11,7 +10,7 @@ const TabContent: React.RefForwardingComponent<HTMLElement, Attributes<HTMLEleme
   } = props;
 
   return (
-    <Flex { ...rest }
+    <Base { ...rest }
         backgroundColor={ backgroundColor }
         className="TabContent"
         ref={ ref } />

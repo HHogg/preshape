@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { Attributes } from '../Base/Base';
-import Flex, { FlexProps } from '../Flex/Flex';
+import Base, { Attributes, BaseProps } from '../Base/Base';
 import './Input.css';
 
-export interface InputAddonProps extends FlexProps {}
+export interface InputAddonProps extends BaseProps {}
 
 const InputAddon: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, InputAddonProps>> = (props, ref) => {
   const { padding, paddingHorizontal = 'x3' } = props;
 
   return (
-    <Flex { ...props }
+    <Base { ...props }
         padding={ padding }
         paddingHorizontal={ padding || paddingHorizontal }
         ref={ ref } />
