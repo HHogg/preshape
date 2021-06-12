@@ -1,3 +1,33 @@
+# [6.0.0](https://github.com/HHogg/preshape/compare/v5.1.0...v6.0.0) (2021-06-12)
+
+
+### Bug Fixes
+
+* **Appear:** animation value changing would cause previous stylings to remain ([6fede12](https://github.com/HHogg/preshape/commit/6fede1241225490b95b1b3f3eea4bb343436bdc5))
+* **Icon:** Warning in Safari when using rems for SVG sizing. ([2044f81](https://github.com/HHogg/preshape/commit/2044f8140e27853efc1582df8279ec4c51de671b))
+* **Input & Range:** Uniform height to align with the other form elements. ([4b07ca9](https://github.com/HHogg/preshape/commit/4b07ca951c54cc9757eb1da07e6bc0786521d1bb))
+* **Text:** Improved sizing and spacings ([bd887c9](https://github.com/HHogg/preshape/commit/bd887c95e2fb3e3ecf86398fea3e15858cba7718))
+
+
+### chore
+
+* **React:** Updated React and FramerMotion ([b12fd7f](https://github.com/HHogg/preshape/commit/b12fd7f3be532b63c24ad30f6052308290d615ed))
+
+
+### Features
+
+* **Base:** Changed the accepted value for "basis", "grow" and "shrink" to be any valid CSS value. ([2510cd5](https://github.com/HHogg/preshape/commit/2510cd5278f6c5770d1d843a5cbb9038c66037f1))
+* **Base:** Merged Flex into the Base component. ([fe91327](https://github.com/HHogg/preshape/commit/fe9132737d1ea77f89fde79468da3bb92129b1f8))
+* **Box:** Renamed Base component to Box. ([95c8b87](https://github.com/HHogg/preshape/commit/95c8b876dc191c798971580e95e7458dddaa19e6))
+
+
+### BREAKING CHANGES
+
+* **React:** Major Version bumps on React and FramerMotion
+* **Box:** Renamed Base component to Box.
+* **Base:** Replaced basis prop values of "none", "content" and "container" with "0", "auto" and "100%".
+* **Base:** Removed the Flex component. Any uses should be replaced with the Base component, and the "direction" prop should be replaced with "flex".
+
 # [5.1.0](https://github.com/HHogg/preshape/compare/v5.0.1...v5.1.0) (2020-06-18)
 
 
