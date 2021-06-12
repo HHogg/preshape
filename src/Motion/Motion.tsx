@@ -5,7 +5,7 @@ import Box, { Attributes, BoxProps } from '../Box/Box';
 
 type MotionsProps = Attributes<Element, MotionProps & BoxProps>;
 
-const motionProps: (keyof MotionProps)[] = [
+const motionProps: (keyof MotionProps | 'positionTransition')[] = [
   'animate',
   'initial',
   'onAnimationComplete',
@@ -19,7 +19,7 @@ const motionProps: (keyof MotionProps)[] = [
 
 const Motion = motion<MotionsProps>(
   React.forwardRef<Element, MotionsProps>((props, ref) =>
-    <Box { ...omit(props, motionProps) } ref={ ref } />
+    <Box { ...omit(props, motionProps) as BoxProps } ref={ ref } />
   ));
 
 export default Motion;
