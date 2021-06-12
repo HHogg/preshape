@@ -23,7 +23,7 @@ export default (props: Props) => {
             <Box
                 alignChildren="middle"
                 flex="horizontal">
-              <Icon name={ icon } size="1.75rem" />
+              <Icon name={ icon } size="28px" />
             </Box>
 
             <Text

@@ -10,6 +10,7 @@ const motionProps: (keyof MotionProps)[] = [
   'initial',
   'onAnimationComplete',
   'onAnimationStart',
+  'positionTransition',
   'transition',
   'variants',
   'whileHover',

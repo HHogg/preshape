@@ -38,7 +38,7 @@ const Item: CatalogueItem<{
                   active={ activeTab === n || props.Tab.active || false }
                   key={ n }
                   onClick={ () => setActiveTab(n) }>
-                <Icon name={ icons[n] } size="1rem" />
+                <Icon name={ icons[n] } size="16px" />
               </Tab>
             )) }
           </Tabs>

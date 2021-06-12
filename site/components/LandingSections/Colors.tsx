@@ -170,7 +170,7 @@ export default (props: Props) => {
         <Link display="block" onClick={ () => setIsShuffled(!isShuffled) } underline>
           <Box alignChildren="middle" flex="horizontal" gap="x1">
             <Box><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Box>
-            <Box><Icon name="Shuffle" size="1rem" /></Box>
+            <Box><Icon name="Shuffle" size="16px" /></Box>
           </Box>
         </Link>
       </Box>

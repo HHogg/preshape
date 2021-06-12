@@ -125,7 +125,7 @@ export default ({ children, disableCode }: Props) => {
                   </Box>
 
                   <Box>
-                    <Icon name="Code" size="1rem" />
+                    <Icon name="Code" size="16px" />
                   </Box>
                 </Box>
               </Link>

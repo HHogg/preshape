@@ -15,11 +15,11 @@ const Item: CatalogueItem<{
       <Showcase>
         <InputLabel label="Daylight">
           <InputAddon>
-            <Icon name="Moon" size="1.25rem" />
+            <Icon name="Moon" size="20px" />
           </InputAddon>
           <Range { ...props.Range } />
           <InputAddon>
-            <Icon name="Sun" size="1.25rem" />
+            <Icon name="Sun" size="20px" />
           </InputAddon>
         </InputLabel>
       </Showcase>

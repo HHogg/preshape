@@ -18,7 +18,7 @@ const Item: CatalogueItem<{
         <InputLabel { ...props.InputLabel }>
           <Input { ...props.Input } placeholder="Type into me" />
           <InputAddon { ...props.InputAddon }>
-            <Icon name="Pencil" size="1.25rem" />
+            <Icon name="Pencil" size="20px" />
           </InputAddon>
         </InputLabel>
       </Showcase>

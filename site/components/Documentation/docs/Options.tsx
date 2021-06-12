@@ -65,7 +65,7 @@ const Item: CatalogueItem<{
                     <InputAddon>
                       <Icon
                           name={ visible ? 'ChevronUp' : 'ChevronDown' }
-                          size="1.5rem" />
+                          size="24px" />
                     </InputAddon>
                   </InputLabel>
                 ) }

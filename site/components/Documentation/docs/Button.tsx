@@ -31,16 +31,16 @@ const Item: CatalogueItem<{
             <ShowcaseCode>
               <Buttons { ...props.Buttons } grow>
                 <Button { ...props.Button }>
-                  <Icon name="Beginning" size="1rem" />
+                  <Icon name="Beginning" size="16px" />
                 </Button>
                 <Button { ...props.Button }>
-                  <Icon name="Play" size="1rem" />
+                  <Icon name="Play" size="16px" />
                 </Button>
                 <Button { ...props.Button }>
-                  <Icon name="Pause" size="1rem" />
+                  <Icon name="Pause" size="16px" />
                 </Button>
                 <Button { ...props.Button }>
-                  <Icon name="End" size="1rem" />
+                  <Icon name="End" size="16px" />
                 </Button>
               </Buttons>
             </ShowcaseCode>

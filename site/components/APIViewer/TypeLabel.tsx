@@ -23,7 +23,7 @@ export default React.forwardRef<HTMLDivElement, Props & React.HTMLAttributes<HTM
 
           { hasInfo && (
             <Box>
-              <Icon name="Info" size="0.875rem" />
+              <Icon name="Info" size="14px" />
             </Box>
           ) }
         </Box>

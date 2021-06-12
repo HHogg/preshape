@@ -19,7 +19,7 @@ export interface ModalHeaderProps extends BoxProps {
 }
 
 const ModalHeader: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalHeaderProps>> = (props, ref) => {
-  const { children, closeIconSize = '1.5rem', ...rest } = props;
+  const { children, closeIconSize = '24px', ...rest } = props;
   const { onClose } = React.useContext(ModalContext);
 
   return (

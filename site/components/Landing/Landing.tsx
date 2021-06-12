@@ -37,7 +37,7 @@ export default () => {
           <Box maxWidth={ widthSmall }>
             <Box alignChildrenHorizontal="middle" flex="vertical" gap="x4">
               <Box shrink>
-                <Logo height="6rem" width="6rem" />
+                <Logo height="96px" width="96px" />
               </Box>
 
               <Box shrink>
