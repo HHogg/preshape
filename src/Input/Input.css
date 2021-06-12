@@ -7,6 +7,7 @@
   background-color: transparent;
   color: var(--color-text--shade-1);
   text-overflow: ellipsis;
+  line-height: var(--size--x4);
   appearance: none;
 
   &::placeholder {
