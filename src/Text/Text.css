@@ -2,6 +2,7 @@ body {
   font-family: var(--text-family--content);
   font-size: var(--text-size--body);
   -webkit-font-smoothing: antialiased;
+  letter-spacing: var(--text-letter-spacing-body);
   line-height: var(--text-height--body);
 }
 
@@ -20,11 +21,35 @@ body {
 .Text--break-none { white-space: nowrap; }
 .Text--break-word { word-wrap: break-word; }
 
-.Text--size-x1 { font-size: var(--text-size--x1); line-height: var(--text-height--x1); }
-.Text--size-x2 { font-size: var(--text-size--x2); line-height: var(--text-height--x2); }
-.Text--size-x3 { font-size: var(--text-size--x3); line-height: var(--text-height--x3); }
-.Text--size-x4 { font-size: var(--text-size--x4); line-height: var(--text-height--x4); }
-.Text--size-x5 { font-size: var(--text-size--x5); line-height: var(--text-height--x5); }
+.Text--size-x1 {
+  font-size: var(--text-size--x1);
+  letter-spacing: var(--text-letter-spacing--x1);
+  line-height: var(--text-height--x1);
+}
+
+.Text--size-x2 {
+  font-size: var(--text-size--x2);
+  letter-spacing: var(--text-letter-spacing--x2);
+  line-height: var(--text-height--x2);
+}
+
+.Text--size-x3 {
+  font-size: var(--text-size--x3);
+  letter-spacing: var(--text-letter-spacing--x3);
+  line-height: var(--text-height--x3);
+}
+
+.Text--size-x4 {
+  font-size: var(--text-size--x4);
+  letter-spacing: var(--text-letter-spacing--x4);
+  line-height: var(--text-height--x4);
+}
+
+.Text--size-x5 {
+  font-size: var(--text-size--x5);
+  letter-spacing: var(--text-letter-spacing--x5);
+  line-height: var(--text-height--x5);
+}
 
 .Text--strong { font-weight: var(--text-weight--strong); }
 .Text--weak   { font-weight: var(--text-weight--weak); }

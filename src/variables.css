@@ -1,3 +1,5 @@
+/* stylelint-disable custom-property-empty-line-before */
+
 :root {
   --size--x1: 0.25rem;
   --size--x2: 0.5rem;
@@ -80,20 +82,27 @@
   --text-family--content: 'Open Sans', sans-serif;
   --text-family--monospace: 'Courier New', 'Ubuntu Mono', monospace;
 
-  --text-size--x1: 0.8125rem;
+  --text-size--x1: 0.875rem;
   --text-size--x2: 1rem;
-  --text-size--x3: 1.375rem;
-  --text-size--x4: 1.5rem;
-  --text-size--x5: 1.75rem;
+  --text-size--x3: 1.5rem;
+  --text-size--x4: 2.125rem;
+  --text-size--x5: 3rem;
 
-  --text-height--x1: 1.2;
-  --text-height--x2: 1.375;
-  --text-height--x3: 1.35;
+  --text-height--x1: 1.4;
+  --text-height--x2: 1.4;
+  --text-height--x3: 1.25;
   --text-height--x4: 1.25;
-  --text-height--x5: 1.215;
+  --text-height--x5: 1.2;
+
+  --text-letter-spacing--x1: 0.01785714286rem;
+  --text-letter-spacing--x2: 0.03125rem;
+  --text-letter-spacing--x3: 0;
+  --text-letter-spacing--x4: 0.007352941176rem;
+  --text-letter-spacing--x5: 0;
 
   --text-size--body: var(--text-size--x2);
   --text-height--body: var(--text-height--x2);
+  --text-letter-spacing--body: var(--text-letter-spacing--x2);
 
   --text-weight--weak: 400;
   --text-weight--strong: 700;
