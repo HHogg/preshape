@@ -10,14 +10,13 @@ const motionProps: (keyof MotionProps)[] = [
   'initial',
   'onAnimationComplete',
   'onAnimationStart',
-  'positionTransition',
   'transition',
   'variants',
   'whileHover',
   'whileTap',
 ];
 
-const Motion = motion.custom<MotionsProps>(
+const Motion = motion<MotionsProps>(
   React.forwardRef<Element, MotionsProps>((props, ref) =>
     <Box { ...omit(props, motionProps) } ref={ ref } />
   ));

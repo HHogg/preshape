@@ -94,6 +94,7 @@ const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, 
     <Motion { ...rest }
         animate={ visible ? 'visible' : 'hidden' }
         initial={ visibleInitially ? 'visible' : 'hidden' }
+        key={ animation }
         ref={ ref }
         transition={ props.transition || {
           ...transition,
