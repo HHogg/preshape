@@ -19,14 +19,16 @@ const Item: CatalogueItem<{
             textColor="text-shade-1"
             theme="night">
           <Box maxWidth="500px">
-            <Text heading margin="x3" size="x4">The spectacle before us was indeed sublime.</Text>
-            <Text heading margin="x3" size="x3">Apparently we had reached a great height in the atmosphere,
+            <Text heading margin="x4" size="x5" strong>The spectacle before us was indeed sublime.</Text>
+            <Text heading margin="x4" size="x4">Apparently we had reached a great height in the atmosphere,
               for the sky was a dead black, and the stars had ceased
               to twinkle.</Text>
           </Box>
         </Box>
 
         <Box margin="x6" maxWidth="500px">
+          <Text margin="x3" size="x3" strong>The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere.</Text>
+
           <Text { ...props.Text } margin="x3">
             Apparently we had reached a great height in the atmosphere,
             for the sky was a dead black, and the stars had ceased

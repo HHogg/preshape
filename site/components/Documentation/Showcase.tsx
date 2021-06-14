@@ -59,25 +59,27 @@ export default ({ children, disableCode }: Props) => {
           paddingVertical="x2">
         <Box alignChildrenVertical="middle" flex="horizontal" gap="x4">
           <Box flex="horizontal" gap="x1" grow>
-            <Box>
-              <Icon
-                  name="Circle"
-                  size="1rem" />
-            </Box>
+            <Box
+                backgroundColor="negative-shade-1"
+                borderRadius="full"
+                borderSize="x2"
+                height="0.75rem"
+                width="0.75rem" />
 
-            <Box>
-              <Icon
-                  name="Circle"
-                  size="1rem" />
-            </Box>
+            <Box
+                backgroundColor="highlight"
+                borderRadius="full"
+                borderSize="x2"
+                height="0.75rem"
+                width="0.75rem" />
 
-            <Box>
-              <Icon
-                  name="Circle"
-                  size="1rem" />
-            </Box>
+            <Box
+                backgroundColor="positive-shade-1"
+                borderRadius="full"
+                borderSize="x2"
+                height="0.75rem"
+                width="0.75rem" />
           </Box>
-
           <Box>
             <ThemeSwitcher
                 onChange={ onChangeTheme }

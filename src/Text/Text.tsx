@@ -8,16 +8,18 @@ export type TypeTextSize =
   'x2' |
   'x3' |
   'x4' |
-  'x5';
+  'x5' |
+  'x6';
 
 const TagBlockMap: {
   [K in TypeTextSize]: TypeAllElementTags;
 } = {
   x1: 'p',
   x2: 'p',
-  x3: 'h3',
-  x4: 'h2',
-  x5: 'h1',
+  x3: 'h4',
+  x4: 'h3',
+  x5: 'h2',
+  x6: 'h1',
 };
 
 const TagInlineMap = (props: TextProps): TypeAllElementTags =>

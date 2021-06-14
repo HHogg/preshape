@@ -13,7 +13,7 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <InputLabel label="Daylight">
+        <InputLabel>
           <InputAddon>
             <Icon name="Moon" size="20px" />
           </InputAddon>
