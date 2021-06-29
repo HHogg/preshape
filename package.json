@@ -18,7 +18,7 @@
     "lint:css": "npx stylelint site/**/*.css src/**/*.css",
     "lint:js": "eslint src/**/*.tsx src/**/*.ts site/**/*.ts site/**/*.tsx",
     "lint": "yarn lint:js && yarn lint:css",
-    "semantic-release": "semantic-release",
+    "deploy:lib": "semantic-release",
     "serve": "superstatic ./public --port 4000 -c superstatic.json",
     "start": "yarn build:docs && yarn start:site",
     "start:site": "parcel site/index.dev.html --port 4000 -d dist --no-cache --no-autoinstall",
@@ -41,7 +41,8 @@
     "resize-observer-polyfill": "^1.5.0"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
     "@svgr/cli": "^5.0.1",
     "@svgr/parcel-plugin-svgr": "^5.0.1",
@@ -77,11 +78,11 @@
     "react-router-dom": "^5.2.0",
     "react-snap": "^1.23.0",
     "react-test-renderer": "^16.3.2",
-    "semantic-release": "^17.0.3",
+    "semantic-release": "^17.4.4",
+    "semantic-release-cli": "^5.4.3",
     "stylelint": "^13.2.0",
     "stylelint-config-preshape": "^2.0.0",
     "superstatic": "^6.0.4",
-    "travis-deploy-once": "^5.0.2",
     "typedoc": "^0.16.8",
     "typescript": "^3.4.5"
   },
