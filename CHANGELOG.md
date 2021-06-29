@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/HHogg/preshape/compare/v6.0.0...v6.1.0) (2021-06-29)
+
+
+### Features
+
+* **Text:** Added an extra sizing option ([d126447](https://github.com/HHogg/preshape/commit/d1264472c79e5782e164dadd81294a7390a3cf47))
+
 # [6.0.0](https://github.com/HHogg/preshape/compare/v5.1.0...v6.0.0) (2021-06-12)
 
 
