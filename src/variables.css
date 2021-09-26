@@ -44,6 +44,9 @@
 
   --color-highlight: var(--oc-yellow-3);
 
+  --rgb-white: 255, 255, 255;
+  --rgb-black: 12, 11, 9;
+
   --rgb-dark--shade-1: var(--oc-gray-9-rgb);
   --rgb-dark--shade-2: var(--oc-gray-8-rgb);
   --rgb-dark--shade-3: var(--oc-gray-7-rgb);
