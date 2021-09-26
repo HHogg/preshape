@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/HHogg/preshape/compare/v6.1.0...v6.1.1) (2021-09-26)
+
+
+### Bug Fixes
+
+* **Colors:** Defined rgb CSS variables for white and black. ([2700f63](https://github.com/HHogg/preshape/commit/2700f63cb1dc2c73e865dc494fb8ff520754e967))
+
 # [6.1.0](https://github.com/HHogg/preshape/compare/v6.0.0...v6.1.0) (2021-06-29)
 
 
