@@ -1,3 +1,16 @@
+# [7.0.0](https://github.com/HHogg/preshape/compare/v6.1.1...v7.0.0) (2021-10-07)
+
+
+### Features
+
+* **Icon:** Added check icon ([e74d4a3](https://github.com/HHogg/preshape/commit/e74d4a358484553f4f7f50384384977d4f6291c2))
+* **Text:** Introduced a smaller sizing which is the new x1, and everything shifts up a number. ([11b8377](https://github.com/HHogg/preshape/commit/11b8377e5d7a1cec949def45cca7b8fc170917e2))
+
+
+### BREAKING CHANGES
+
+* **Text:** All Text sizes x1 - x6 need shifing up 1. I did this with a find and replace, starting with x6.
+
 ## [6.1.1](https://github.com/HHogg/preshape/compare/v6.1.0...v6.1.1) (2021-09-26)
 
 
