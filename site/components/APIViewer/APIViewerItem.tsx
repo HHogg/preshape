@@ -18,7 +18,7 @@ export default (props: Props) => {
   return (
     <Box margin="x8">
       <Box margin="x4">
-        <Text size="x2" strong>{ name }</Text>
+        <Text size="x3" strong>{ name }</Text>
         { comment && comment.shortText && <Text>{ comment.shortText }</Text> }
       </Box>
 

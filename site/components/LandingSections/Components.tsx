@@ -30,7 +30,7 @@ export default (props: Props) => {
                   { item.pictogram && <item.pictogram /> }
                 </Box>
                 <Text margin="x1" strong>{ item.name }</Text>
-                <Text margin="x1" size="x1" tag="div">{ item.description }</Text>
+                <Text margin="x1" size="x2" tag="div">{ item.description }</Text>
               </Link>
             ))
         }

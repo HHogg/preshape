@@ -4,10 +4,10 @@ import * as PopperJS from 'popper.js';
 import { Popper, PopperProps, PopperArrowProps } from 'react-popper';
 import classnames from 'classnames';
 import { useEventListener } from '../hooks';
-import Appear from '../Appear/Appear';
-import Box, { BoxProps } from '../Box/Box';
-import './Placement.css';
+import Appear, { AppearProps } from '../Appear/Appear';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 import { PlacementManagerContext } from './PlacementManager';
+import './Placement.css';
 
 const getAnimationOrigin = (placement: PopperJS.Placement): {
   originX: 0 | 0.5 | 1;
@@ -66,7 +66,7 @@ export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>(
   style: {},
 });
 
-export interface PlacementProps extends BoxProps {
+export interface PlacementProps extends BoxProps, Pick<AppearProps, 'animation'> {
   /**
    * The minimum width of the Placement element. This can be a standard
    * CSS value or a keyword of 'reference', which will apply the width
@@ -93,14 +93,16 @@ export interface PlacementProps extends BoxProps {
   visible?: boolean;
 }
 
-const Placement: React.FC<PlacementProps> = (props) => {
+const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
   const {
+    animation = 'Pop',
     children,
     minWidth,
     options,
     onClose: onCloseControlled,
     placement,
     unrender,
+    style,
     visible: visibleControlled = true,
     ...rest
   } = props;
@@ -144,15 +146,15 @@ const Placement: React.FC<PlacementProps> = (props) => {
     <Popper { ...options }
         innerRef={ (el) => ref.current = el || null }
         placement={ placement }>
-      { ({ arrowProps, placement, ref, style }) => (
+      { ({ arrowProps, placement, ref, style: stylePopper }) => (
         <PlacementArrowPropsContext.Provider value={ arrowProps }>
           <Box { ...rest }
               className={ classnames('Placement', `Placement--${placement}`) }
               minWidth={ placementMinWidth }
               ref={ ref }
-              style={ style }>
+              style={ { ...stylePopper, ...style } }>
             <Appear { ...getAnimationOrigin(placement) }
-                animation="Pop"
+                animation={ animation }
                 onAnimationComplete={ handleExited }
                 visible={ visible }>
               { children }

@@ -204,7 +204,7 @@ export default (props: Props) => {
 
             <Text container>
               <Text align="end" margin="x2" strong>{ value }</Text>
-              <Text size="x1" tag="div">
+              <Text size="x2" tag="div">
                 <Text strong>{ name }</Text>
                 <Text><Code>{ css }</Code></Text>
                 <Text><Code>{ js }</Code></Text>

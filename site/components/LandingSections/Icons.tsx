@@ -30,7 +30,7 @@ export default (props: Props) => {
                 align="middle"
                 ellipsis
                 margin="x2"
-                size="x1"
+                size="x2"
                 strong>
               { icon }
             </Text>

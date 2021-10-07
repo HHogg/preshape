@@ -19,31 +19,53 @@ const Item: CatalogueItem<{
             textColor="text-shade-1"
             theme="night">
           <Box maxWidth="500px">
-            <Text heading margin="x4" size="x5" strong>The spectacle before us was indeed sublime.</Text>
-            <Text heading margin="x4" size="x4">Apparently we had reached a great height in the atmosphere,
-              for the sky was a dead black, and the stars had ceased
-              to twinkle.</Text>
+            <Text heading margin="x4" size="x7" strong>
+              An Animal of No Significance.
+            </Text>
+
+            <Text heading margin="x4" size="x6" strong>
+              About 13.5 billion years ago.
+            </Text>
+
+            <Text heading margin="x4" size="x5">
+              Matter, energy, time and space came into being in what is known
+              as the Big Bang. The story of these fundamental
+              features of our universe is called physics..
+            </Text>
           </Box>
         </Box>
 
         <Box margin="x6" maxWidth="500px">
-          <Text margin="x3" size="x3" strong>The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere.</Text>
-
-          <Text { ...props.Text } margin="x3">
-            Apparently we had reached a great height in the atmosphere,
-            for the sky was a dead black, and the stars had ceased
-            to twinkle. By the same illusion which lifts the horizon
-            of the sea to the level of the spectator on a hillside,
-            the sable cloud beneath was dished out, and the car seemed
-            to float in the middle of an immense dark sphere, whose
-            upper half was strewn with silver. Looking down into the
-            dark gulf below, I could see a ruddy light streaming
-            through a rift in the clouds.
+          <Text margin="x3" size="x4" strong>
+            The spectacle before us was indeed sublime. Apparently
+            we had reached a great height in the atmosphere.
           </Text>
 
-          <Text margin="x3" size="x1" strong>Apparently we had reached a great height in the atmosphere,
-            for the sky was a dead black, and the stars had ceased
-            to twinkle.</Text>
+          <Text margin="x3">
+            About 300,000 years after their appearance, matter and
+            energy started to coalesce into complex structures,
+            called atoms, which then combined into molecules.
+            The story of atoms, molecules and their interactions
+            is called chemistry.
+          </Text>
+
+          <Text margin="x3" size="x2">
+            About 3.8 billion years ago, on a planet called Earth,
+            certain molecules combined to form particularly
+            large and intricate structures called organisms.
+            The story of organisms is called biology. About
+            70,000 years ago, organisms belonging to the species
+            Homo sapiens started to form even more elaborate structures
+            called cultures. The subsequent development of these human
+            cultures is called history.
+          </Text>
+
+          <Text margin="x3" size="x1">
+            Excerpt from Sapiens: A Brief History of Humankind by Yuval
+            Noah Harari © 2015 by Yuval Noah Harari. Reprinted courtesy
+            of Harper, an imprint of HarperCollins Publishers without
+            permission in writing from the publisher.
+          </Text>
         </Box>
       </Showcase>
     ),

@@ -42,8 +42,8 @@ export default () => {
       <ModalHeader
           closeIconSize="2rem"
           maxWidth={ widthMedium }>
-        <Text margin="x1" size="x4" strong>{ item && item.name }</Text>
-        <Text margin="x1" size="x2">{ item && item.description }</Text>
+        <Text margin="x1" size="x5" strong>{ item && item.name }</Text>
+        <Text margin="x1" size="x3">{ item && item.description }</Text>
       </ModalHeader>
 
       <ModalBody

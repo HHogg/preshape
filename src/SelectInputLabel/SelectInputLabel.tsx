@@ -29,7 +29,7 @@ const SelectInputLabel: React.RefForwardingComponent<HTMLLabelElement, Attribute
         <Text
             className="SelectInputLabels__label-text"
             ellipsis
-            size="x1"
+            size="x2"
             strong>{ label }</Text>
       </Box>
     </Box>

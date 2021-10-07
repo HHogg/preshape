@@ -14,7 +14,7 @@ const Item: CatalogueItem<{
     Component: (props) => (
       <Showcase>
         <Alert { ...props.Alert } padding="x4">
-          <Text size="x1" strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          <Text size="x2" strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             laoreet faucibus quam et fringilla. Maecenas vitae pulvinar augue.
             Suspendisse mollis bibendum leo, ac porta nisi convallis eget.</Text>
         </Alert>

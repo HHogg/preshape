@@ -26,7 +26,7 @@ export default (props: Props) => {
     .some((child) => getTag(child, 'default'));
 
   return (
-    <Table margin="x4" size="x1">
+    <Table margin="x4" size="x2">
       <TableHeader>
         <TableRow>
           <TableHeaderCell>

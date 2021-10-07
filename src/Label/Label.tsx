@@ -29,7 +29,7 @@ const Label: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
         className={ classes }
         clickable={ clickable }
         ref={ ref }
-        size="x1"
+        size="x2"
         strong
         tag="div"
         textColor={ textColor } />

@@ -57,6 +57,12 @@ body {
   line-height: var(--text-height--x6);
 }
 
+.Text--size-x7 {
+  font-size: var(--text-size--x7);
+  letter-spacing: var(--text-letter-spacing--x7);
+  line-height: var(--text-height--x7);
+}
+
 .Text--strong { font-weight: var(--text-weight--strong); }
 .Text--weak   { font-weight: var(--text-weight--weak); }
 

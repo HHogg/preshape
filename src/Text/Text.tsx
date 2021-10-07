@@ -9,18 +9,8 @@ export type TypeTextSize =
   'x3' |
   'x4' |
   'x5' |
-  'x6';
-
-const TagBlockMap: {
-  [K in TypeTextSize]: TypeAllElementTags;
-} = {
-  x1: 'p',
-  x2: 'p',
-  x3: 'h4',
-  x4: 'h3',
-  x5: 'h2',
-  x6: 'h1',
-};
+  'x6' |
+  'x7';
 
 const TagInlineMap = (props: TextProps): TypeAllElementTags =>
   (props.strong && 'strong') ||
@@ -97,9 +87,7 @@ const Text: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Te
     [`Text--size-${size}`]: size,
   });
 
-  const finalTag = tag || (inline
-    ? TagInlineMap(props)
-    : (size && TagBlockMap[size])) || 'div';
+  const finalTag = tag || (inline && TagInlineMap(props)) || 'div';
 
   return (
     <Box { ...rest }

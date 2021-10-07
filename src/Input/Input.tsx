@@ -10,7 +10,7 @@ const Input: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInput
     padding,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
-    size = 'x1',
+    size = 'x2',
     ...rest
   } = props;
 
