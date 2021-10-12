@@ -220,7 +220,6 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     'Box--elevate': elevate,
     'Box--flex-reverse': reverse,
     'Box--flex-wrap': wrap,
-    'Box--flex-gapped': gap,
     'Box--max-width': maxWidth,
     'Box--scrollable': scrollable,
     [`Box--absolute-${absolute}`]: absolute,
