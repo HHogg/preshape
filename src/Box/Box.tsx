@@ -88,6 +88,14 @@ export interface BoxProps {
   basis?: string;
   /** Border color, shades are taken from the current theme. */
   borderColor?: TypeColor;
+  /** Applies just the bottom border. To apply all border, just pass borderSize */
+  borderBottom?: boolean;
+  /** Applies just the left border. To apply all border, just pass borderSize */
+  borderLeft?: boolean;
+  /** Applies just the right border. To apply all border, just pass borderSize */
+  borderRight?: boolean;
+  /** Applies just the top border. To apply all border, just pass borderSize */
+  borderTop?: boolean;
   /** Adds styling of a border radius to one of the size multiples */
   borderRadius?: 'full' | 'x1' | 'x2' | 'x3';
   /** Thickness of the border to be applied */
@@ -178,9 +186,13 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     alignSelf,
     backgroundColor,
     basis,
+    borderBottom,
     borderColor,
+    borderLeft,
     borderRadius,
+    borderRight,
     borderSize,
+    borderTop,
     children,
     className,
     clickable,
@@ -214,7 +226,14 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     ...rest
   } = props;
 
+  const border = borderTop || borderRight || borderBottom || borderLeft;
+
   const classes = classnames('Box', {
+    'Box--border': border,
+    'Box--border-top': borderTop,
+    'Box--border-right': borderRight,
+    'Box--border-bottom': borderBottom,
+    'Box--border-left': borderLeft,
     'Box--clickable': clickable,
     'Box--container': container,
     'Box--elevate': elevate,

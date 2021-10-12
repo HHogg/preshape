@@ -48,13 +48,23 @@
 .Box--border-radius-x3 { border-radius: var(--size--x3); }
 .Box--border-radius-full { border-radius: 50%; }
 
-.Box--border-size-x1 { border-width: var(--border-size--x1); }
+.Box--border-size-x1,
+.Box--border {
+  border-width: var(--border-size--x1);
+}
+
 .Box--border-size-x2 { border-width: var(--border-size--x2); }
 
+.Box--border,
 .Box--border-size-x1,
 .Box--border-size-x2 {
   border-style: solid;
 }
+
+.Box--border:not(.Box--border-top) { border-top-width: 0; }
+.Box--border:not(.Box--border-right) { border-right-width: 0; }
+.Box--border:not(.Box--border-bottom) { border-bottom-width: 0; }
+.Box--border:not(.Box--border-left) { border-left-width: 0; }
 
 .Box--scrollable {
   overflow: auto;
