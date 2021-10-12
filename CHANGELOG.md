@@ -1,3 +1,15 @@
+# [7.1.0](https://github.com/HHogg/preshape/compare/v7.0.0...v7.1.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* **Box:** Swapped over to using flex-gap instead of margin hack ([f21936a](https://github.com/HHogg/preshape/commit/f21936ab805ebd48d118e52af4a986fa0a90b8ca))
+
+
+### Features
+
+* **Box:** Added props for specifying what sides borders should be applied to ([bb785b0](https://github.com/HHogg/preshape/commit/bb785b0d3ca463da035084018acdf17fac1f780e))
+
 # [7.0.0](https://github.com/HHogg/preshape/compare/v6.1.1...v7.0.0) (2021-10-07)
 
 
