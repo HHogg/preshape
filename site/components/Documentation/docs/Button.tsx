@@ -23,23 +23,23 @@ const Item: CatalogueItem<{
         <Box flex="horizontal" gap="x4">
           <Box flex="horizontal" grow>
             <Buttons { ...props.Buttons } grow>
-              <Button { ...props.Button }>Lorem ipsum</Button>
+              <Button { ...props.Button } grow tag="a">Lorem ipsum</Button>
             </Buttons>
           </Box>
 
           <Box flex="horizontal" grow>
             <ShowcaseCode>
               <Buttons { ...props.Buttons } grow>
-                <Button { ...props.Button }>
+                <Button { ...props.Button } grow>
                   <Icon name="Beginning" size="16px" />
                 </Button>
-                <Button { ...props.Button }>
+                <Button { ...props.Button } grow>
                   <Icon name="Play" size="16px" />
                 </Button>
-                <Button { ...props.Button }>
+                <Button { ...props.Button } grow>
                   <Icon name="Pause" size="16px" />
                 </Button>
-                <Button { ...props.Button }>
+                <Button { ...props.Button } grow>
                   <Icon name="End" size="16px" />
                 </Button>
               </Buttons>
@@ -48,7 +48,7 @@ const Item: CatalogueItem<{
 
           <Box flex="horizontal" grow>
             <Buttons { ...props.Buttons } grow>
-              <Button { ...props.Button }>Lorem ipsum</Button>
+              <Button { ...props.Button } grow>Lorem ipsum</Button>
             </Buttons>
           </Box>
         </Box>
