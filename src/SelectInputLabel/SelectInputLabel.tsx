@@ -8,6 +8,7 @@ export interface SelectInputLabelProps extends BoxProps {
 
 const SelectInputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, SelectInputLabelProps>> = (props, ref) => {
   const {
+    borderRadius = 'x2',
     children,
     label,
     ...rest
@@ -16,6 +17,7 @@ const SelectInputLabel: React.RefForwardingComponent<HTMLLabelElement, Attribute
   return (
     <Box { ...rest }
         alignChildrenVertical="middle"
+        borderRadius={ borderRadius }
         className="SelectInputLabels__label"
         flex="horizontal"
         gap="x2"

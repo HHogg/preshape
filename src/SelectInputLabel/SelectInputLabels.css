@@ -33,6 +33,7 @@
 
 .SelectInputLabels .SelectInputLabels__label {
   border: 0;
+  border-radius: 0;
 
   &:not(:last-child) {
     border-bottom: var(--border-size--x2) solid var(--color-text--shade-1);

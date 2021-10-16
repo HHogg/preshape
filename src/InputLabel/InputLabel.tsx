@@ -19,6 +19,8 @@ export interface InputLabelProps extends BoxProps {
 const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, InputLabelProps>> = (props, ref) => {
   const {
     children,
+    borderRadius = 'x2',
+    borderSize = 'x2',
     disabled,
     label,
     paddingHorizontal = 'x3',
@@ -28,9 +30,12 @@ const InputLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTML
 
   return (
     <Box { ...rest }
+        borderRadius={ borderRadius }
+        borderSize={ borderSize }
         className="InputLabel"
         disabled={ disabled }
         flex="vertical"
+        overflow="hidden"
         ref={ ref }
         tag="label">
       { label && (

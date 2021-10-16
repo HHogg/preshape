@@ -25,6 +25,7 @@
   transform-origin: bottom;
   border: var(--Tabs--border) solid var(--color-text--shade-1);
   border-bottom: none;
+  border-radius: var(--size--x1) var(--size--x1) 0 0;
   cursor: pointer;
   transition-property: transform, color;
   transition-duration: var(--transition-time--fast);
@@ -50,4 +51,5 @@
   border-right: var(--Tabs--border) solid var(--color-text--shade-1);
   border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
   border-left: var(--Tabs--border) solid var(--color-text--shade-1);
+  border-radius: 0 0 var(--size--x1) var(--size--x1);
 }

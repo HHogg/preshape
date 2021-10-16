@@ -14,14 +14,22 @@ export interface AlertProps extends BoxProps {
 }
 
 const Alert: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, AlertProps>> = (props, ref) => {
-  const { color, fill, ...rest } = props;
+  const {
+    borderRadius = 'x2',
+    borderSize = 'x2',
+    color,
+    fill,
+    ...rest
+  } = props;
+
   const classes = classnames('Alert', `Alert--${color}`, {
     'Alert--fill': fill,
   });
 
   return (
     <Box { ...rest }
-        borderSize="x2"
+        borderRadius={ borderRadius }
+        borderSize={ borderSize }
         className={ classes }
         ref={ ref } />
   );

@@ -52,6 +52,7 @@ export default ({ children, disableCode }: Props) => {
     <ShowcaseContext.Provider value={ { setShowcaseCode } }>
       <Box
           backgroundColor="background-shade-2"
+          borderRadius="x3"
           borderSize="x2"
           flex="vertical"
           gap="x2"

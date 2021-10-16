@@ -8,6 +8,7 @@
   width: var(--size--x4);
   height: var(--size--x4);
   border: var(--border-size--x2) solid var(--color-text--shade-1);
+  border-radius: var(--size--x1);
   transition-property: border-color;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);

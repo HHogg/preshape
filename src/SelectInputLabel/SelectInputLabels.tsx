@@ -9,6 +9,7 @@ export interface SelectInputLabelsProps extends BoxProps {
 const BulletPoints: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, SelectInputLabelsProps>> = (props, ref) => {
   return (
     <Box { ...props }
+        borderRadius="x2"
         className="SelectInputLabels"
         ref={ ref } />
   );
