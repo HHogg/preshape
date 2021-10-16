@@ -61,6 +61,7 @@ const Item: CatalogueItem<{
                   <InputLabel { ...props } >
                     <Input
                         readOnly
+                        size="x2"
                         value={ value } />
                     <InputAddon>
                       <Icon

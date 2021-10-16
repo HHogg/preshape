@@ -7,7 +7,6 @@
   background-color: transparent;
   color: var(--color-text--shade-1);
   text-overflow: ellipsis;
-  line-height: var(--size--x4);
   appearance: none;
 
   &::placeholder {
@@ -23,6 +22,19 @@
   }
 
   &:disabled {
-    background-color: var(--color-background--shade-3);
+    opacity: 0.75;
+    cursor: default;
   }
+}
+
+.Input--x1 {
+  padding: var(--size--x2) var(--size--x3);
+  font-size: var(--text-size--x1);
+  line-height: var(--text-height--x1);
+}
+
+.Input--x2 {
+  padding: var(--size--x3) var(--size--x4);
+  font-size: var(--text-size--x2);
+  line-height: var(--text-height--x2);
 }
