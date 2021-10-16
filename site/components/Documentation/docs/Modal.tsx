@@ -42,9 +42,9 @@ const Item: CatalogueItem<{
 
             <Button
                 active={ isAutoOpen }
-                fill
                 margin="x4"
-                onClick={ () => setIsAutoOpen(true) }>
+                onClick={ () => setIsAutoOpen(true) }
+                variant="primary">
               Open Auto Modal
             </Button>
 
@@ -60,9 +60,9 @@ const Item: CatalogueItem<{
               </ModalHeader>
               <ModalBody>
                 <Text margin="x3">Are you sure you want to do that?</Text>
-                <Buttons margin="x3">
+                <Buttons alignChildrenHorizontal="end" margin="x3">
                   <Button onClick={ () => setIsAutoOpen(false) }>Ok, maybe not!</Button>
-                  <Button color="negative" fill onClick={ () => setIsAutoOpen(false) }>YUP!</Button>
+                  <Button color="negative" onClick={ () => setIsAutoOpen(false) } variant="primary">YUP!</Button>
                 </Buttons>
               </ModalBody>
             </Modal>
@@ -80,9 +80,9 @@ const Item: CatalogueItem<{
 
             <Button
                 active={ isMaxWidthOpen }
-                fill
                 margin="x4"
-                onClick={ () => setIsMaxWidthOpen(true) }>
+                onClick={ () => setIsMaxWidthOpen(true) }
+                variant="primary">
               Open Max Width Modal
             </Button>
 
@@ -103,11 +103,11 @@ const Item: CatalogueItem<{
                   for the sky was a dead black, and the stars had ceased
                   to twinkle.
                 </Text>
-                <Buttons margin="x3">
+                <Buttons alignChildrenHorizontal="end" margin="x3">
                   <Button
                       color="positive"
-                      fill
-                      onClick={ () => setIsMaxWidthOpen(false) }>
+                      onClick={ () => setIsMaxWidthOpen(false) }
+                      variant="primary">
                     Sure
                   </Button>
                 </Buttons>
@@ -130,7 +130,7 @@ const Item: CatalogueItem<{
                 trigger="click"
                 zIndex={ 3 }>
               { (props) => (
-                <Button { ...props } fill margin="x4">
+                <Button { ...props } margin="x4" variant="primary">
                   Open Full Screen Modal
                 </Button>
               ) }
