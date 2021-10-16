@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { JSONOutput } from 'typedoc';
-import { Labels } from 'preshape';
+import { Buttons } from 'preshape';
 import TypeRenderer from './TypeRenderer';
 import { Renderer } from './Types';
 
@@ -22,7 +22,7 @@ export default (props: Props) => {
   }
 
   return (
-    <Labels>
+    <Buttons wrap>
       { filteredTypes.map((type, index) => (
         <TypeRenderer { ...type }
             context={ context }
@@ -30,6 +30,6 @@ export default (props: Props) => {
             onStateChange={ onStateChange }
             state={ state } />
       )) }
-    </Labels>
+    </Buttons>
   );
 };

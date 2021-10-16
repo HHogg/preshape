@@ -18,26 +18,48 @@ export interface ButtonProps extends BoxProps {
   color?: 'accent' | 'negative' | 'positive';
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
-  /** Applies a filled in style to the button. */
-  fill?: boolean;
+  /**
+   * Sets the size of the button
+   *
+   * @default "x2"
+   */
+  size?: 'x1' | 'x2' | 'x3';
+  /**
+   * Changes the visual priority of the button
+   *
+   * @default "secondary"
+   */
+  variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
 const Button: React.RefForwardingComponent<HTMLButtonElement, Attributes<HTMLButtonElement, ButtonProps>> = (props, ref) => {
-  const { active, color = 'accent', fill, ...rest } = props;
+  const {
+    active,
+    borderRadius = 'x3',
+    borderSize = 'x2',
+    color,
+    size = 'x2',
+    tag = 'button',
+    variant = 'secondary',
+    ...rest
+  } = props;
+
   const classes = classnames('Button', {
     'Button--active': active,
-    'Button--fill': fill,
     [`Button--${color}`]: color,
+    [`Button--${size}`]: size,
+    [`Button--${variant}`]: variant,
   });
 
   return (
     <Box { ...rest }
         alignChildren="middle"
+        borderRadius={ borderRadius }
+        borderSize={ borderSize }
         className={ classes }
         flex="horizontal"
-        grow
         ref={ ref }
-        tag="button" />
+        tag={ tag } />
   );
 };
 

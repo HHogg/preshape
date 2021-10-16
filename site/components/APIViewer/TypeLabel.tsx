@@ -1,17 +1,17 @@
 import * as React from 'react';
-import { Box, Label, LabelProps, Icon } from 'preshape';
+import { Box, Button, ButtonProps, Icon } from 'preshape';
 import TypeText from './TypeText';
 
-interface Props extends LabelProps {
+interface Props extends ButtonProps {
   hasInfo?: boolean;
   isArray?: boolean;
 }
 
-export default React.forwardRef<HTMLDivElement, Props & React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
+export default React.forwardRef<HTMLButtonElement, Props & React.HTMLAttributes<HTMLButtonElement>>((props, ref) => {
   const { children, hasInfo, isArray, ...rest } = props;
 
   return (
-    <Label { ...rest } ref={ ref }>
+    <Button { ...rest } ref={ ref } size="x1">
       <TypeText isArray={ isArray }>
         <Box
             alignChildrenVertical="middle"
@@ -28,6 +28,6 @@ export default React.forwardRef<HTMLDivElement, Props & React.HTMLAttributes<HTM
           ) }
         </Box>
       </TypeText>
-    </Label>
+    </Button>
   );
 });

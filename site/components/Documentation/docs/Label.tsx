@@ -16,7 +16,7 @@ const Item: CatalogueItem<{
       <Showcase>
         <Labels { ...props.Labels }>
           { Array.from({ length: 5 }).map((_, n) => (
-            <Label { ...props.Label } clickable key={ n }>
+            <Label { ...props.Label } key={ n }>
               Lorem ipsum
             </Label>
           )) }
