@@ -99,7 +99,7 @@ export interface BoxProps {
   /** Adds styling of a border radius to one of the size multiples */
   borderRadius?: 'full' | 'x1' | 'x2' | 'x3';
   /** Thickness of the border to be applied */
-  borderSize?: 'x1' | 'x2';
+  borderSize?: 'x1' | 'x2' | 'x3';
   /** Adds styling to indicate that the element is clickable */
   clickable?: boolean;
   /** Applies relative positioning to contain child elements. */

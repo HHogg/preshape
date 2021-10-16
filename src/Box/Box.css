@@ -54,10 +54,12 @@
 }
 
 .Box--border-size-x2 { border-width: var(--border-size--x2); }
+.Box--border-size-x3 { border-width: var(--border-size--x3); }
 
 .Box--border,
 .Box--border-size-x1,
-.Box--border-size-x2 {
+.Box--border-size-x2,
+.Box--border-size-x3 {
   border-style: solid;
 }
 
