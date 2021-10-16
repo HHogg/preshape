@@ -34,6 +34,7 @@ export { default as BulletPoints, BulletPointsProps } from './BulletPoints/Bulle
 export { default as Button, ButtonProps } from './Button/Button';
 export { default as Buttons, ButtonsProps } from './Button/Buttons';
 export { default as CheckBox, CheckBoxProps } from './CheckBox/CheckBox';
+export { default as CheckboxIndicator } from './CheckBox/CheckboxIndicator';
 export { default as Code, CodeProps } from './Code/Code';
 export { default as CodeBlock, CodeBlockProps } from './Code/CodeBlock';
 export { default as Editor, EditorProps } from './Editor/Editor';
@@ -63,6 +64,7 @@ export { default as PlacementManager, PlacementManagerProps } from './Placement/
 export { default as PlacementReference, PlacementReferenceProps } from './Placement/PlacementReference';
 export { default as PlacementReferenceElement } from './Placement/PlacementReferenceElement';
 export { default as RadioButton, RadioButtonProps } from './RadioButton/RadioButton';
+export { default as RadioButtonIndicator } from './RadioButton/RadioButtonIndicator';
 export { default as Range, RangeProps } from './Range/Range';
 export { default as Separator, SeparatorProps } from './Separator/Separator';
 export { default as Tab, TabProps } from './Tab/Tab';
