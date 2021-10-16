@@ -116,6 +116,7 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
         <Appear
             animation={ animation }
             backgroundColor={ backgroundColor }
+            borderRadius="x3"
             container
             flex="vertical"
             gap={ gap }
