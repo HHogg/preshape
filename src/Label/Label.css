@@ -7,16 +7,3 @@
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
 }
-
-.Label--clickable {
-  &:hover {
-    background-color: var(--color-accent--shade-1);
-    color: var(--color-light--shade-1);
-  }
-
-  &.Label--active,
-  &:active {
-    background-color: var(--color-accent--shade-3);
-    color: var(--color-light--shade-1);
-  }
-}

@@ -13,23 +13,20 @@ const Label: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
   const {
     active,
     backgroundColor = 'text-shade-1',
-    clickable,
     textColor = 'background-shade-1',
     ...rest
   } = props;
 
   const classes = classnames('Label', {
     'Label--active': active,
-    'Label--clickable': clickable,
   });
 
   return (
     <Text { ...rest }
         backgroundColor={ backgroundColor }
         className={ classes }
-        clickable={ clickable }
         ref={ ref }
-        size="x2"
+        size="x1"
         strong
         tag="div"
         textColor={ textColor } />
