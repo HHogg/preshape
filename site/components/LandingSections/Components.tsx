@@ -20,6 +20,7 @@ export default (props: Props) => {
             .filter(([, { type }]) => type === 'component')
             .map(([id, item]) => (
               <Link
+                  borderRadius="x1"
                   borderSize="x2"
                   display="block"
                   key={ id }

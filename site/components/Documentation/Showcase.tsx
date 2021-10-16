@@ -117,10 +117,10 @@ export default ({ children, disableCode }: Props) => {
             <Text align="end" padding="x1">
               <Link
                   display="inline-block"
+                  isTextLink
                   onClick={ () => setIsCodeExpanded(!isCodeExpanded) }
                   size="x2"
-                  strong
-                  underline>
+                  strong>
                 <Box alignChildren="middle" flex="horizontal" gap="x1">
                   <Box>
                     { isCodeExpanded ? 'Hide code' : 'Show code' }

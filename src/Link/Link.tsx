@@ -11,6 +11,8 @@ const isModifiedEvent = (event: React.MouseEvent) =>
 export interface LinkProps extends TextProps {
   /** Retained active state, indicated with styling */
   active?: boolean;
+  /** Applies visual style to indicate that text is clickable */
+  isTextLink?: boolean;
   /**
    * @Ignore
   */
@@ -21,16 +23,14 @@ export interface LinkProps extends TextProps {
    * anchor tag is used.
    */
   to?: string;
-  /** Applies and underlines style, perfect for within a block of text */
-  underline?: boolean;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Link = React.forwardRef<any, Attributes<HTMLAnchorElement, LinkProps>>((props, ref) => {
-  const { active, navigate, target, to, underline, ...rest } = props;
+  const { active, navigate, target, to, isTextLink, ...rest } = props;
   const classes = classnames('Link', {
     'Link--active': active,
-    'Link--underline': underline,
+    'Link--text-link': isTextLink,
   });
 
   if (to) {

@@ -23,6 +23,9 @@
   }
 }
 
-.Link--underline {
+.Link--text-link {
+  display: inline-block;
+  font-weight: var(--text-weight--strong);
   text-decoration-line: underline;
+  text-decoration-thickness: var(--border-size--x2);
 }

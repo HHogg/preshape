@@ -162,12 +162,12 @@ export default (props: Props) => {
       <Text margin="x8">
         A minimal set of colors to provide clear contrast across
         the Day and Night themes.
-        All colors are from the optimised open source <Link href="https://yeun.github.io/open-color/" underline>Open Color</Link> scheme.
+        All colors are from the optimised open source <Link href="https://yeun.github.io/open-color/" isTextLink>Open Color</Link> scheme.
       </Text>
 
 
       <Box alignChildren="end" flex="horizontal" margin="x4">
-        <Link display="block" onClick={ () => setIsShuffled(!isShuffled) } underline>
+        <Link display="block" isTextLink onClick={ () => setIsShuffled(!isShuffled) }>
           <Box alignChildren="middle" flex="horizontal" gap="x1">
             <Box><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Box>
             <Box><Icon name="Shuffle" size="16px" /></Box>
