@@ -26,7 +26,6 @@ const TableHeaderCell: React.RefForwardingComponent<HTMLTableHeaderCellElement, 
         paddingHorizontal={ paddingHorizontal }
         paddingVertical={ paddingVertical }
         ref={ ref }
-        size="x2"
         strong
         tag="th"
         uppercase>

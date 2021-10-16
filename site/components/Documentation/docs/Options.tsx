@@ -72,6 +72,7 @@ const Item: CatalogueItem<{
               </PlacementReference>
 
               <Placement
+                  animation="FadeSlideDown"
                   elevate
                   minWidth="reference"
                   options={ {

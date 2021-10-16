@@ -50,6 +50,7 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => {
       const [[sortIndex, sortDirection], setState] = React.useState([1, -1]);
+
       const sortedData = data.sort((a, b) => {
         if (sortIndex === 0) {
           if (sortDirection === -1) {
@@ -66,12 +67,13 @@ const Item: CatalogueItem<{
 
       return (
         <Showcase>
-          <Table { ...props.Table }>
+          <Table { ...props.Table } size="x1">
             <TableHeader { ...props.TableHeader }>
               <TableRow { ...props.TableRow }>
                 { headers.map((header, index) => (
                   <TableHeaderCell { ...props.TableHeaderCell }
                       align={ index > 0 ? 'end' : 'start' }
+                      breakOn="none"
                       key={ header }
                       onClick={ () => setState([index, index !== sortIndex ? -1 : (sortDirection === -1 ? 1 : -1)]) }
                       sortable
