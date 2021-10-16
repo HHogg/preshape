@@ -187,21 +187,8 @@ export default (props: Props) => {
               key={ value }
               overflow="hidden"
               padding="x3"
-              positionTransition
               style={ { backgroundColor: value } }
               textColor={ textColor }>
-            { Array.from({ length: 4 }).map((_, index) => (
-              <Box
-                  absolute="edge-to-edge"
-                  backgroundColor={ textColor }
-                  key={ index }
-                  style={ {
-                    opacity: 0.02,
-                    transformOrigin: index % 2 ? 'top left' : 'bottom left',
-                    transform: `rotate(${Math.random() * (index % 2 ? 35 : -35)}deg) scale(1.5)`,
-                  } } />
-            )) }
-
             <Text container>
               <Text align="end" margin="x2" strong>{ value }</Text>
               <Text size="x2" tag="div">

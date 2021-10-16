@@ -7,9 +7,9 @@ export default (props: Props) => {
     <LandingSection { ...props }>
       <Text>
         A selected set of icons from
-        the <Link href="https://github.com/feathericons/feather" target="FeatherIcon" underline>Feather Icon</Link> set,
+        the <Link href="https://github.com/feathericons/feather" isTextLink target="FeatherIcon">Feather Icon</Link> set,
         designed with an emphasis on simplicity, consistency, and flexibility. All can be
-        used with the <Link to="/api/icon" underline>Icon component</Link>.
+        used with the <Link isTextLink to="/api/icon">Icon component</Link>.
       </Text>
 
       <Grid
