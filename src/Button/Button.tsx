@@ -35,7 +35,7 @@ export interface ButtonProps extends BoxProps {
 const Button: React.RefForwardingComponent<HTMLButtonElement, Attributes<HTMLButtonElement, ButtonProps>> = (props, ref) => {
   const {
     active,
-    borderRadius = 'x2',
+    borderRadius = 'x1',
     borderSize = 'x2',
     color,
     size = 'x2',

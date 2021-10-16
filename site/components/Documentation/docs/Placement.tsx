@@ -48,15 +48,15 @@ const Item: CatalogueItem<{
                   padding="x1"
                   textColor="background-shade-1">
                 <Buttons joined>
-                  <Button fill>
+                  <Button variant="primary">
                     <Icon name="Pencil" size="16px" />
                   </Button>
 
-                  <Button fill>
+                  <Button variant="primary">
                     <Icon name="Copy" size="16px" />
                   </Button>
 
-                  <Button fill>
+                  <Button variant="primary">
                     <Icon name="Water" size="16px" />
                   </Button>
                 </Buttons>

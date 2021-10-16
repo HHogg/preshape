@@ -11,7 +11,7 @@ export default React.forwardRef<HTMLButtonElement, Props & React.HTMLAttributes<
   const { children, hasInfo, isArray, ...rest } = props;
 
   return (
-    <Button { ...rest } ref={ ref } size="x1">
+    <Button { ...rest } borderRadius="x3" ref={ ref } size="x1">
       <TypeText isArray={ isArray }>
         <Box
             alignChildrenVertical="middle"
