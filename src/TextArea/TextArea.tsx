@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { InputWrapperContext } from '../Input/InputWrapper';
 import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './TextArea.css';
@@ -13,9 +14,17 @@ const TextArea: React.RefForwardingComponent<HTMLTextAreaElement, Attributes<HTM
     ...rest
   } = props;
 
+  if (rest.disabled !== undefined) {
+    // eslint-disable-next-line no-console
+    console.error('Preshape [TextArea]: Pass "disabled" to TextAreaWrapper');
+  }
+
+  const { disabled } = React.useContext(InputWrapperContext);
+
   return (
     <Text { ...rest }
         className="TextArea"
+        disabled={ disabled }
         paddingHorizontal={ padding || paddingHorizontal }
         paddingVertical={ padding || paddingVertical }
         ref={ ref }

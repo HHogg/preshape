@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Attributes } from '../Box/Box';
-import InputLabel, { InputLabelProps } from '../InputLabel/InputLabel';
+import InputWrapper, { InputWrapperProps } from '../Input/InputWrapper';
 
-export interface TextAreaLabelProps extends InputLabelProps {
+export interface TextAreaWrapperProps extends InputWrapperProps {
   /**
    * The disabled state that prevents the input from being clickable.
    * Note that this elements simply applies the disabled styling, it
@@ -15,10 +15,10 @@ export interface TextAreaLabelProps extends InputLabelProps {
   label?: string;
 }
 
-const TextAreaLabel: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, TextAreaLabelProps>> = (props, ref) => {
+const TextAreaWrapper: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, TextAreaWrapperProps>> = (props, ref) => {
   return (
-    <InputLabel { ...props } ref={ ref } />
+    <InputWrapper { ...props } ref={ ref } />
   );
 };
 
-export default React.forwardRef(TextAreaLabel);
+export default React.forwardRef(TextAreaWrapper);
