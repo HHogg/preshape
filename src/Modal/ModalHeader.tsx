@@ -25,6 +25,10 @@ const ModalHeader: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLD
   return (
     <Box { ...rest }
         alignChildrenVertical="start"
+        borderBottom
+        borderColor="background-shade-3"
+        borderSize="x2"
+        className="Modal__header"
         flex="horizontal"
         gap="x6"
         ref={ ref }>

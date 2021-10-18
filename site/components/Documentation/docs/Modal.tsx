@@ -6,6 +6,7 @@ import {
   ModalProps,
   ModalBody,
   ModalBodyProps,
+  ModalFooter,
   ModalHeader,
   ModalHeaderProps,
   Text,
@@ -60,11 +61,13 @@ const Item: CatalogueItem<{
               </ModalHeader>
               <ModalBody>
                 <Text margin="x3">Are you sure you want to do that?</Text>
+              </ModalBody>
+              <ModalFooter>
                 <Buttons alignChildrenHorizontal="end" margin="x3">
                   <Button onClick={ () => setIsAutoOpen(false) }>Ok, maybe not!</Button>
                   <Button color="negative" onClick={ () => setIsAutoOpen(false) } variant="primary">YUP!</Button>
                 </Buttons>
-              </ModalBody>
+              </ModalFooter>
             </Modal>
           </Text>
 
@@ -103,6 +106,9 @@ const Item: CatalogueItem<{
                   for the sky was a dead black, and the stars had ceased
                   to twinkle.
                 </Text>
+              </ModalBody>
+
+              <ModalFooter>
                 <Buttons alignChildrenHorizontal="end" margin="x3">
                   <Button
                       color="positive"
@@ -111,7 +117,7 @@ const Item: CatalogueItem<{
                     Sure
                   </Button>
                 </Buttons>
-              </ModalBody>
+              </ModalFooter>
             </Modal>
           </Text>
 

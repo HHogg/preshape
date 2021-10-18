@@ -4,6 +4,7 @@ import { useMatchMedia } from '../hooks';
 import Box, { Attributes, BoxProps, TypeColor } from '../Box/Box';
 import Appear, { TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
+import classNames from 'classnames';
 
 export const ModalContext = React.createContext<{
   onClose?: (event: React.PointerEvent<HTMLElement>) => void;
@@ -44,6 +45,11 @@ export interface ModalProps extends BoxProps {
    */
   onClose?: (event: React.PointerEvent<HTMLElement>) => void;
   /**
+   * Set the size of the modal, increasing the space around
+   * the content accordingly.
+   */
+  size?: 'x1' | 'x2' | 'x3';
+  /**
    * The visible state of the modal. When the visibility
    * is set to false, the content will be removed from the
    * DOM.
@@ -57,14 +63,11 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
     backgroundColor = 'background-shade-1',
     children,
     fullscreen,
-    gap,
     maxWidth = 'auto',
     onClose,
     margin,
     overlayBackgroundColor = 'overlay',
-    padding,
-    paddingHorizontal,
-    paddingVertical,
+    size = 'x2',
     visible,
     ...rest
   } = props;
@@ -73,6 +76,9 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
   const refModal = React.useRef<HTMLDivElement>(null);
   const match = useMatchMedia([maxWidth]);
   const isMaxWidthEnabled = maxWidth !== 'auto';
+  const classes = classNames('Modal', {
+    [`Modal--size-${size}`]: size,
+  });
 
   React.useEffect(() => {
     if (visible) {
@@ -117,17 +123,14 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
             animation={ animation }
             backgroundColor={ backgroundColor }
             borderRadius="x3"
+            className={ classes }
             container
             flex="vertical"
-            gap={ gap }
             grow={ fullscreen || (isMaxWidthEnabled && !match(maxWidth)) }
             maxHeight="100vh"
             maxWidth={
               (isMaxWidthEnabled && maxWidth) ||
               (fullscreen && '100%') || undefined }
-            padding={ padding }
-            paddingHorizontal={ paddingHorizontal }
-            paddingVertical={ paddingVertical }
             ref={ refModal }
             scrollable
             shrink

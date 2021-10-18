@@ -1,3 +1,24 @@
 .Modal__body-open {
   overflow: hidden;
 }
+
+.Modal--size-x1 {
+  --Modal-padding-horizontal: var(--size--x8);
+  --Modal-padding-vertical: var(--size--x4);
+}
+
+.Modal--size-x2 {
+  --Modal-padding-horizontal: var(--size--x8);
+  --Modal-padding-vertical: var(--size--x6);
+}
+
+.Modal--size-x3 {
+  --Modal-padding-horizontal: var(--size--x12);
+  --Modal-padding-vertical: var(--size--x10);
+}
+
+.Modal__header,
+.Modal__body,
+.Modal__footer {
+  padding: var(--Modal-padding-vertical) var(--Modal-padding-horizontal);
+}
