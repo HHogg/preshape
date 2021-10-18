@@ -3,7 +3,7 @@ import {
   themesOpposite,
   Form,
   Input,
-  InputLabel,
+  InputWrapper,
   Placement,
   PlacementArrow,
   PlacementContent,
@@ -64,12 +64,12 @@ export default (props: Props) => {
             borderRadius="x1"
             padding="x1">
           <Form onSubmit={ handleOnSubmit }>
-            <InputLabel label={ context.name }>
+            <InputWrapper label={ context.name }>
               <Input
                   onChange={ handleOnChange }
                   placeholder={ placeholder }
                   value={ textValue } />
-            </InputLabel>
+            </InputWrapper>
           </Form>
         </PlacementContent>
       </Placement>

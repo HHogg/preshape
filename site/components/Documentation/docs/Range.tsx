@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Icon, InputLabel, InputAddon, Range, RangeProps } from 'preshape';
+import { Icon, InputWrapper, InputAddon, Range, RangeProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
 
@@ -13,7 +13,7 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <InputLabel>
+        <InputWrapper>
           <InputAddon>
             <Icon name="Moon" size="20px" />
           </InputAddon>
@@ -21,7 +21,7 @@ const Item: CatalogueItem<{
           <InputAddon>
             <Icon name="Sun" size="20px" />
           </InputAddon>
-        </InputLabel>
+        </InputWrapper>
       </Showcase>
     ),
     state: {

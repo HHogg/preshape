@@ -32,12 +32,10 @@ export default () => {
   return (
     <Modal
         fullscreen
-        gap="x10"
-        margin="x3"
+        margin="x10"
         onClose={ () => history.push('/') }
         overlayBackgroundColor="dark-shade-1"
-        paddingHorizontal="x6"
-        paddingVertical="x10"
+        size="x3"
         visible>
       <ModalHeader
           closeIconSize="2rem"

@@ -4,7 +4,7 @@ import {
   Icon,
   Input,
   InputAddon,
-  InputLabel,
+  InputWrapper,
   Options,
   OptionsProps,
   Option,
@@ -58,7 +58,7 @@ const Item: CatalogueItem<{
             <PlacementManager trigger="click">
               <PlacementReference>
                 { (props, { visible }) => (
-                  <InputLabel { ...props } >
+                  <InputWrapper { ...props } >
                     <Input
                         readOnly
                         size="x2"
@@ -68,7 +68,7 @@ const Item: CatalogueItem<{
                           name={ visible ? 'ChevronUp' : 'ChevronDown' }
                           size="24px" />
                     </InputAddon>
-                  </InputLabel>
+                  </InputWrapper>
                 ) }
               </PlacementReference>
 

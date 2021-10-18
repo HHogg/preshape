@@ -45,7 +45,7 @@ export { default as Icon, IconProps } from './Icon/Icon';
 export { default as Image, ImageProps } from './Image/Image';
 export { default as Input, InputProps } from './Input/Input';
 export { default as InputAddon, InputAddonProps } from './Input/InputAddon';
-export { default as InputLabel, InputLabelProps } from './InputLabel/InputLabel';
+export { default as InputWrapper, InputWrapperProps } from './Input/InputWrapper';
 export { default as Label, LabelProps } from './Label/Label';
 export { default as Labels, LabelsProps } from './Label/Labels';
 export { default as Link, LinkProps } from './Link/Link';
@@ -79,6 +79,6 @@ export { default as TableHeaderCell, TableHeaderCellProps } from './Table/TableH
 export { default as TableRow, TableRowProps } from './Table/TableRow';
 export { default as Text, TextProps } from './Text/Text';
 export { default as TextArea, TextAreaProps } from './TextArea/TextArea';
-export { default as TextAreaLabel, TextAreaLabelProps } from './TextArea/TextAreaLabel';
+export { default as TextAreaWrapper, TextAreaWrapperProps } from './TextArea/TextAreaWrapper';
 export { default as ThemeSwitcher, ThemeSwitcherProps } from './ThemeSwitcher/ThemeSwitcher';
 export { default as Tooltip, TooltipProps } from './Tooltip/Tooltip';
