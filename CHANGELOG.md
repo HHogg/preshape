@@ -1,3 +1,36 @@
+# [8.0.0](https://github.com/HHogg/preshape/compare/v7.1.0...v8.0.0) (2021-10-18)
+
+
+### Bug Fixes
+
+* **Build:** Case sensitivity on export ([625fd84](https://github.com/HHogg/preshape/commit/625fd8474684a0767d100cab81016799238cd9fd))
+
+
+### Features
+
+* **Box:** Added x3 border size ([27b0096](https://github.com/HHogg/preshape/commit/27b0096e44ef4a0deca63628d406257773a7cf78))
+* **Button:** Removed the default heaviour of buttons to grow. ([7e01270](https://github.com/HHogg/preshape/commit/7e01270a36c5f859c9abb03843fc41ee5af8547a))
+* **Button:** Updated and added more styling options with variants and sizes. ([4551847](https://github.com/HHogg/preshape/commit/455184792f8acbbcc28dbea6d831feaab405c779))
+* **Icon:** Removed Icon component and exports all Feather icons under Icons[IconName]. ([946442c](https://github.com/HHogg/preshape/commit/946442ca459cdfc67076021802594a21acef2e1f))
+* **Input:** Added Input sizes ([4f346d9](https://github.com/HHogg/preshape/commit/4f346d90380efda4c8a3cfd413770800beece6b8))
+* **Input:** Renamed InputLabel to InputWrapper and will log an error if "disabled" is given ([6e4beb9](https://github.com/HHogg/preshape/commit/6e4beb90efc94bb3874abf93a1848b05ecb1f6e2))
+* **Label:** Removed clickable styling. Use a button instead. ([d62cb17](https://github.com/HHogg/preshape/commit/d62cb1723b9af49da0f4a1dc9a5378b2eef79f23))
+* **Link:** Added isTextLink prop to be used when the link is being used for text and should be styled like so. ([d612cc6](https://github.com/HHogg/preshape/commit/d612cc63074b72db1ec848fa301c28f531d349af))
+* **Modal:** Added ModalFooter component ([fa64d17](https://github.com/HHogg/preshape/commit/fa64d17d1c9b228a5f1c05766ecadf2bd2c5a486))
+* **Modal:** Added size property ([22ccb25](https://github.com/HHogg/preshape/commit/22ccb25cfae495d32610ffe73b11c36e4b24c748))
+* **SelectIndicators:** Export the Checkbox and RadioButton Indicators from the package ([dedf558](https://github.com/HHogg/preshape/commit/dedf55800fc92bbb1ed1f6c18776e7f2264ec5df))
+* **TextArea:** Renamed TextAreaLabel to TextAreaWrapper and will log an error if "disabled" is given ([92e9e9f](https://github.com/HHogg/preshape/commit/92e9e9f7eec06e2f2c7dc4ce10427a71da32f6c7))
+
+
+### BREAKING CHANGES
+
+* **Icon:** Removed Icon components and replaced with exporting all feather Icons under Icons.*
+* **TextArea:** TextAreaLabel is renamed to TextAreaWrapper
+* **Input:** InputLabel is renamed to InputWrapper
+* **Button:** Button auto grow has been removed. Add the grow prop back on to get it back.
+* **Button:** Removed the fill prop
+* **Link:** Removed underline prop, use isTextLink
+
 # [7.1.0](https://github.com/HHogg/preshape/compare/v7.0.0...v7.1.0) (2021-10-12)
 
 
