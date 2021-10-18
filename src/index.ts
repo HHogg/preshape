@@ -32,7 +32,7 @@ export { default as BulletPoints, BulletPointsProps } from './BulletPoints/Bulle
 export { default as Button, ButtonProps } from './Button/Button';
 export { default as Buttons, ButtonsProps } from './Button/Buttons';
 export { default as CheckBox, CheckBoxProps } from './CheckBox/CheckBox';
-export { default as CheckboxIndicator } from './CheckBox/CheckboxIndicator';
+export { default as CheckboxIndicator } from './CheckBox/CheckBoxIndicator';
 export { default as Code, CodeProps } from './Code/Code';
 export { default as CodeBlock, CodeBlockProps } from './Code/CodeBlock';
 export { default as Editor, EditorProps } from './Editor/Editor';
