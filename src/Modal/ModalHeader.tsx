@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ModalContext } from './Modal';
 import Box, { Attributes, BoxProps } from '../Box/Box';
-import Icon from '../Icon/Icon';
+import * as Icons from '../Icon';
 import Link from '../Link/Link';
 
 /**
@@ -39,7 +39,7 @@ const ModalHeader: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLD
       { onClose && (
         <Box>
           <Link onPointerUp={ onClose }>
-            <Icon name="Cross" size={ closeIconSize } />
+            <Icons.X size={ closeIconSize } />
           </Link>
         </Box>
       ) }

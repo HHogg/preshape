@@ -25,7 +25,7 @@ import {
   Box,
   Code,
   Grid,
-  Icon,
+  Icons,
   Motion,
   Link,
   Text,
@@ -170,7 +170,7 @@ export default (props: Props) => {
         <Link display="block" isTextLink onClick={ () => setIsShuffled(!isShuffled) }>
           <Box alignChildren="middle" flex="horizontal" gap="x1">
             <Box><Text>{ isShuffled ? 'Unshuffle' : 'Shuffle' }</Text></Box>
-            <Box><Icon name="Shuffle" size="16px" /></Box>
+            <Box><Icons.Shuffle size="16px" /></Box>
           </Box>
         </Link>
       </Box>

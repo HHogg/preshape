@@ -18,7 +18,7 @@ const Item: CatalogueItem<{
     ),
     state: {
       Link: {
-        underline: true,
+        isTextLink: true,
       },
     },
   },

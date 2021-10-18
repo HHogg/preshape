@@ -11,7 +11,7 @@ const Item: CatalogueItem<{
   pictogram: require('../../../assets/pictogram-text.svg').default,
   type: 'component',
   showcase: {
-    Component: (props) => (
+    Component: () => (
       <Showcase>
         <Box
             backgroundColor="background-shade-1"

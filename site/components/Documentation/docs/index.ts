@@ -23,7 +23,6 @@ const docs: { [key: string]: CatalogueItem } = {
   Code: require('./Code').default,
   Editor: require('./Editor').default,
   Grid: require('./Grid').default,
-  Icon: require('./Icon').default,
   Input: require('./Input').default,
   Label: require('./Label').default,
   Link: require('./Link').default,

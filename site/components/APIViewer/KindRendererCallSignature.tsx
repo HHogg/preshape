@@ -5,10 +5,9 @@ import { Renderer } from './Types';
 
 interface Props extends Renderer, JSONOutput.ReferenceReflection {}
 
-export default (props: Props) => {
+export default () => {
   return (
     <Box>
-
     </Box>
   );
 };

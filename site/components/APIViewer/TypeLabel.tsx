@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button, ButtonProps, Icon } from 'preshape';
+import { Box, Button, ButtonProps, Icons } from 'preshape';
 import TypeText from './TypeText';
 
 interface Props extends ButtonProps {
@@ -23,7 +23,7 @@ export default React.forwardRef<HTMLButtonElement, Props & React.HTMLAttributes<
 
           { hasInfo && (
             <Box>
-              <Icon name="Info" size="14px" />
+              <Icons.Info name="Info" size="14px" />
             </Box>
           ) }
         </Box>

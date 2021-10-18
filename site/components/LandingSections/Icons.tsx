@@ -1,29 +1,29 @@
 import * as React from 'react' ;
-import { icons, Box, Grid, GridItem, Icon, Link, Text } from 'preshape';
+import { Box, Grid, GridItem, Icons, Link, Text } from 'preshape';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 export default (props: Props) => {
   return (
     <LandingSection { ...props }>
       <Text>
-        A selected set of icons from
+        Icons from
         the <Link href="https://github.com/feathericons/feather" isTextLink target="FeatherIcon">Feather Icon</Link> set,
         designed with an emphasis on simplicity, consistency, and flexibility. All can be
-        used with the <Link isTextLink to="/api/icon">Icon component</Link>.
+        used with <Link isTextLink to="/api/icon">Icons.[IconName]</Link>.
       </Text>
 
       <Grid
           gap="x3"
           margin="x10"
           repeatWidthMin="6rem">
-        { icons.map((icon) => (
+        { Object.entries(Icons).map(([name, Icon]) => (
           <GridItem
-              key={ icon }
+              key={ name }
               padding="x3">
             <Box
                 alignChildren="middle"
                 flex="horizontal">
-              <Icon name={ icon } size="28px" />
+              <Icon size="28px" />
             </Box>
 
             <Text
@@ -32,7 +32,7 @@ export default (props: Props) => {
                 margin="x2"
                 size="x2"
                 strong>
-              { icon }
+              { name }
             </Text>
           </GridItem>
         ))

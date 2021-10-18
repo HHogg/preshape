@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Variants } from 'framer-motion';
 import { transitionTimeFast, transitionTimingFunction } from '../variables';
 import Box, { Attributes, BoxProps, TypeTheme } from '../Box/Box';
-import Icon from '../Icon/Icon';
+import * as Icons from '../Icon';
 import Motion from '../Motion/Motion';
 import './ThemeSwitcher.css';
 
@@ -89,7 +89,7 @@ const ThemeControls: React.RefForwardingComponent<HTMLLabelElement, Attributes<H
             style={ { padding: size / 8 } }
             transition={ transition }
             variants={ VariantsToggle }>
-          <Icon name="Sun" size={ `${size}px` } />
+          <Icons.Sun size={ `${size}px` } />
         </Motion>
 
         <Box flex="horizontal" textColor="background-shade-1">
@@ -97,14 +97,14 @@ const ThemeControls: React.RefForwardingComponent<HTMLLabelElement, Attributes<H
               style={ { padding: size / 8 } }
               transition={ transition }
               variants={ VariantsIconSun }>
-            <Icon name="Sun" size={ `${size}px` } />
+            <Icons.Sun name="Sun" size={ `${size}px` } />
           </Motion>
 
           <Motion
               style={ { padding: size / 8 } }
               transition={ transition }
               variants={ VariantsIconMoon }>
-            <Icon name="Moon" size={ `${size}px` } />
+            <Icons.Moon name="Moon" size={ `${size}px` } />
           </Motion>
         </Box>
       </Motion>

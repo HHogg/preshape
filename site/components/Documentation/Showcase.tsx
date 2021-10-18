@@ -1,6 +1,6 @@
 import * as React from 'react';
 import toJsxString from 'react-element-to-jsx-string';
-import { CodeBlock, Appear, Box, Icon, Link, Text, ThemeSwitcher } from 'preshape';
+import { CodeBlock, Appear, Box, Icons, Link, Text, ThemeSwitcher } from 'preshape';
 import { RootContext } from '../Root';
 
 export const ShowcaseContext = React.createContext<{
@@ -128,7 +128,7 @@ export default ({ children, disableCode }: Props) => {
                   </Box>
 
                   <Box>
-                    <Icon name="Code" size="16px" />
+                    <Icons.Code size="16px" />
                   </Box>
                 </Box>
               </Link>

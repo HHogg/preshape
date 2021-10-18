@@ -1,7 +1,7 @@
 import * as React from 'react' ;
 import {
   Box,
-  Icon,
+  Icons,
   Input,
   InputAddon,
   InputWrapper,
@@ -64,9 +64,9 @@ const Item: CatalogueItem<{
                         size="x2"
                         value={ value } />
                     <InputAddon>
-                      <Icon
-                          name={ visible ? 'ChevronUp' : 'ChevronDown' }
-                          size="24px" />
+                      { visible
+                        ? <Icons.ChevronUp size="24px" />
+                        : <Icons.ChevronDown size="24px" /> }
                     </InputAddon>
                   </InputWrapper>
                 ) }

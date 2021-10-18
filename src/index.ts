@@ -3,6 +3,8 @@ import 'open-color/open-color.css';
 import './variables.css';
 import './root.css';
 
+import * as Icons from './Icon';
+
 export * from './hooks';
 export * from './variables';
 
@@ -16,10 +18,6 @@ export {
 export {
   TypeEditorLanguage,
 } from './Editor/Editor';
-
-export {
-  TypeIcon,
-} from './Icon/Icon';
 
 export {
   TypeTextSize,
@@ -41,7 +39,7 @@ export { default as Editor, EditorProps } from './Editor/Editor';
 export { default as Form } from './Form/Form';
 export { default as Grid, GridProps } from './Grid/Grid';
 export { default as GridItem, GridItemProps } from './Grid/GridItem';
-export { default as Icon, IconProps } from './Icon/Icon';
+export { Icons };
 export { default as Image, ImageProps } from './Image/Image';
 export { default as Input, InputProps } from './Input/Input';
 export { default as InputAddon, InputAddonProps } from './Input/InputAddon';

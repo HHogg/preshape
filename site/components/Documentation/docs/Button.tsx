@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Box, Button, ButtonProps, Buttons, ButtonsProps, Icon } from 'preshape';
+import { Box, Button, ButtonProps, Buttons, ButtonsProps, Icons } from 'preshape';
 import Showcase from '../Showcase';
 import ShowcaseCode from '../ShowcaseCode';
 import { CatalogueItem } from '.';
@@ -31,16 +31,16 @@ const Item: CatalogueItem<{
             <ShowcaseCode>
               <Buttons { ...props.Buttons } grow>
                 <Button { ...props.Button } grow>
-                  <Icon name="Beginning" size="16px" />
+                  <Icons.SkipBack size="16px" />
                 </Button>
                 <Button { ...props.Button } grow>
-                  <Icon name="Play" size="16px" />
+                  <Icons.Play name="Play" size="16px" />
                 </Button>
                 <Button { ...props.Button } grow>
-                  <Icon name="Pause" size="16px" />
+                  <Icons.Pause name="Pause" size="16px" />
                 </Button>
                 <Button { ...props.Button } grow>
-                  <Icon name="End" size="16px" />
+                  <Icons.SkipForward name="End" size="16px" />
                 </Button>
               </Buttons>
             </ShowcaseCode>

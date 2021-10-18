@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Icon, Input, InputProps, InputWrapper, InputWrapperProps, InputAddon, InputAddonProps } from 'preshape';
+import { Icons, Input, InputProps, InputWrapper, InputWrapperProps, InputAddon, InputAddonProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
 
@@ -18,7 +18,7 @@ const Item: CatalogueItem<{
         <InputWrapper { ...props.InputWrapper }>
           <Input { ...props.Input } placeholder="Email address" />
           <InputAddon { ...props.InputAddon }>
-            <Icon name="Letter" size="20px" />
+            <Icons.Mail name="Letter" size="20px" />
           </InputAddon>
         </InputWrapper>
       </Showcase>

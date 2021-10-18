@@ -1,13 +1,13 @@
 import * as React from 'react' ;
-import { Icon, IconProps } from 'preshape';
+import { Icons } from 'preshape';
 import { RootContext } from '../Root';
 
-const ThemeIcon: React.FC<Omit<IconProps, 'name'>> = (props) => {
+const ThemeIcon: React.FC<{}> = (props) => {
   const { theme } = React.useContext(RootContext);
 
-  return (
-    <Icon { ...props } name={ theme === 'day' ? 'Sun' : 'Moon' } />
-  );
+  return theme === 'day'
+    ? <Icons.Sun { ...props } />
+    : <Icons.Moon { ...props } />;
 };
 
 export default ThemeIcon;

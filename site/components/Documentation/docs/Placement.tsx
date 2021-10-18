@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   Buttons,
-  Icon,
+  Icons,
   Placement,
   PlacementProps,
   PlacementArrow,
@@ -36,7 +36,7 @@ const Item: CatalogueItem<{
           <PlacementManager { ...props.PlacementManager }>
             <PlacementReference { ...props.PlacementReference }>
               { (props) => (
-                <Icon { ...props } name="Star" size="2rem" />
+                <Icons.Star{ ...props } name="Star" size="2rem" />
               ) }
             </PlacementReference>
 
@@ -49,15 +49,15 @@ const Item: CatalogueItem<{
                   textColor="background-shade-1">
                 <Buttons joined>
                   <Button variant="primary">
-                    <Icon name="Pencil" size="16px" />
+                    <Icons.Edit2 name="Pencil" size="16px" />
                   </Button>
 
                   <Button variant="primary">
-                    <Icon name="Copy" size="16px" />
+                    <Icons.Copy name="Copy" size="16px" />
                   </Button>
 
                   <Button variant="primary">
-                    <Icon name="Water" size="16px" />
+                    <Icons.Droplet name="Water" size="16px" />
                   </Button>
                 </Buttons>
               </PlacementContent>

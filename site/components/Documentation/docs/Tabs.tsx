@@ -1,7 +1,7 @@
 import * as React from 'react' ;
 import {
   BlockQuote,
-  Icon,
+  Icons,
   Link,
   Tabs,
   TabsProps,
@@ -10,12 +10,11 @@ import {
   TabContent,
   TabContentProps,
   Text,
-  TypeIcon,
 } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
-const icons: TypeIcon[] = ['Star', 'Sun', 'Moon'];
+const icons = [Icons.Star, Icons.Sun, Icons.Moon];
 
 const Item: CatalogueItem<{
   Tabs: TabsProps;
@@ -33,12 +32,13 @@ const Item: CatalogueItem<{
       return (
         <Showcase>
           <Tabs { ...props.Tabs }>
-            { Array.from({ length: 3 }).map((_, n) => (
+            { icons.map((Icon, n) => (
               <Tab { ...props.Tab }
                   active={ activeTab === n || props.Tab.active || false }
                   key={ n }
                   onClick={ () => setActiveTab(n) }>
-                <Icon name={ icons[n] } size="16px" />
+
+                <Icon size="16px" />
               </Tab>
             )) }
           </Tabs>
@@ -61,7 +61,7 @@ const Item: CatalogueItem<{
                 </Text>
 
                 <Text margin="x2" size="x2">
-                  <Link href="https://en.wikipedia.org/wiki/Star" strong underline>Star, Wikipedia</Link>
+                  <Link href="https://en.wikipedia.org/wiki/Star" isTextLink strong>Star, Wikipedia</Link>
                 </Text>
               </BlockQuote>
             ) }
@@ -82,7 +82,7 @@ const Item: CatalogueItem<{
                 </Text>
 
                 <Text margin="x2" size="x2">
-                  <Link href="https://en.wikipedia.org/wiki/Sun" strong underline>Sun, Wikipedia</Link>
+                  <Link href="https://en.wikipedia.org/wiki/Sun" isTextLink strong>Sun, Wikipedia</Link>
                 </Text>
               </BlockQuote>
             ) }
@@ -105,7 +105,7 @@ const Item: CatalogueItem<{
                 </Text>
 
                 <Text margin="x2" size="x2">
-                  <Link href="https://en.wikipedia.org/wiki/Moon" strong underline>Moon, Wikipedia</Link>
+                  <Link href="https://en.wikipedia.org/wiki/Moon" isTextLink strong>Moon, Wikipedia</Link>
                 </Text>
               </BlockQuote>
             ) }

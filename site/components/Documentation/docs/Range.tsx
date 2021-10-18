@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import { Icon, InputWrapper, InputAddon, Range, RangeProps } from 'preshape';
+import { Icons, InputWrapper, InputAddon, Range, RangeProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
 
@@ -15,11 +15,11 @@ const Item: CatalogueItem<{
       <Showcase>
         <InputWrapper>
           <InputAddon>
-            <Icon name="Moon" size="20px" />
+            <Icons.Moon name="Moon" size="20px" />
           </InputAddon>
           <Range { ...props.Range } />
           <InputAddon>
-            <Icon name="Sun" size="20px" />
+            <Icons.Sun name="Sun" size="20px" />
           </InputAddon>
         </InputWrapper>
       </Showcase>
