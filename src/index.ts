@@ -53,6 +53,7 @@ export { default as List, ListProps } from './List/List';
 export { default as ListItem, ListItemProps } from './List/ListItem';
 export { default as Modal, ModalProps } from './Modal/Modal';
 export { default as ModalBody, ModalBodyProps } from './Modal/ModalBody';
+export { default as ModalFooter, ModalFooterProps } from './Modal/ModalFooter';
 export { default as ModalHeader, ModalHeaderProps } from './Modal/ModalHeader';
 export { default as Motion } from './Motion/Motion';
 export { default as Option, OptionProps } from './Options/Option';
