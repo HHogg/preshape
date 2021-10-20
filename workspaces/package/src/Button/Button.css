@@ -1,7 +1,9 @@
 .Button {
-  --Button-color-intent: var(--color-accent--shade-4);
+  --Button-color-intent: var(--color-accent--shade-3);
+  --Button-color-intent-background: var(--color-accent--shade-1);
   --Button-color: var(--color-text--shade-1);
-  --Button-color-active: var(--color-accent--shade-3);
+  --Button-color-active: var(--color-accent--shade-5);
+  --Button-color-active-background: var(--color-accent--shade-2);
 
   padding: var(--size--x2) var(--size--x3);
   border-style: solid;
@@ -56,20 +58,26 @@
 
 .Button--accent {
   --Button-color-intent: var(--color-accent--shade-3);
+  --Button-color-intent-background: var(--color-accent--shade-1);
   --Button-color: var(--color-accent--shade-4);
   --Button-color-active: var(--color-accent--shade-5);
+  --Button-color-active-background: var(--color-accent--shade-2);
 }
 
 .Button--positive {
   --Button-color-intent: var(--color-positive--shade-3);
+  --Button-color-intent-background: var(--color-positive--shade-1);
   --Button-color: var(--color-positive--shade-4);
   --Button-color-active: var(--color-positive--shade-5);
+  --Button-color-active-background: var(--color-positive--shade-2);
 }
 
 .Button--negative {
   --Button-color-intent: var(--color-negative--shade-3);
+  --Button-color-intent-background: var(--color-negative--shade-1);
   --Button-color: var(--color-negative--shade-4);
   --Button-color-active: var(--color-negative--shade-5);
+  --Button-color-active-background: var(--color-negative--shade-2);
 }
 
 .Button--primary {
@@ -96,12 +104,14 @@
 
   &:hover:not([disabled]) {
     border-color: var(--Button-color-intent);
+    background-color: var(--Button-color-intent-background);
     color: var(--Button-color-intent);
   }
 
   &.Button--active:not([disabled]),
   &:active:not([disabled]) {
     border-color: var(--Button-color-active);
+    background-color: var(--Button-color-active-background);
     color: var(--Button-color-active);
   }
 }
@@ -112,11 +122,13 @@
   color: var(--Button-color);
 
   &:hover:not([disabled]) {
+    background-color: var(--Button-color-intent-background);
     color: var(--Button-color-intent);
   }
 
   &.Button--active:not([disabled]),
   &:active:not([disabled]) {
+    background-color: var(--Button-color-active-background);
     color: var(--Button-color-active);
   }
 }
