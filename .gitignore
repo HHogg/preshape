@@ -1,8 +1,8 @@
 .cache
 .firebase
-/dist
-/lib
-/node_modules
-/public
-/yarn-error.log
-/site/assets/documentation.json
+dist
+lib
+node_modules
+public
+yarn-error.log
+workspaces/site/src/assets/documentation.json

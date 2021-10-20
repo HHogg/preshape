@@ -1,7 +1,7 @@
 {
   "hosting": {
     "target": "preshape",
-    "public": "public",
+    "public": "./workspaces/site/public",
     "rewrites": [{
       "source": "**",
       "destination": "/index.html"

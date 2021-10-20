@@ -1,0 +1,1 @@
+{"version":3,"file":"TableHeaderCell.d.ts","sourceRoot":"","sources":["../../src/Table/TableHeaderCell.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAG/B,OAAa,EAAE,SAAS,EAAE,MAAM,cAAc,CAAC;AAE/C,MAAM,WAAW,oBAAqB,SAAQ,SAAS;IACrD,8DAA8D;IAC9D,QAAQ,CAAC,EAAE,OAAO,CAAC;IACnB,4EAA4E;IAC5E,MAAM,CAAC,EAAE,OAAO,CAAC;CAClB;;AAgCD,wBAAiD"}

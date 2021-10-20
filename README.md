@@ -7,7 +7,7 @@
 </h1>
 
 <h3 align="center">
-  A minimal design system and library of React components.<br/>
+  A minimal design system and library of React components to facilitate my own projects, you probably don't want to use it.<br/>
   <a>https://preshape.hogg.io</a>
 </h3>
 
@@ -19,27 +19,6 @@
 
 ```
 yarn add preshape
-```
-
-##### Import and start using
-
-```tsx
-import React from 'react';
-import { render } from 'react-dom';
-import { Flex, Text } from 'preshape';
-
-const rootElement = document.getElementById('Root');
-
-if (rootElement) {
-  render((
-    <Flex alignChildren="middle" direction="vertical" grow>
-      <Flex>
-        <Icon name="Preshape" margin="x2" size="24px" />
-        <Text margin="x2" strong>Ready!</Text>
-      </Flex>
-    </Flex>
-  ), rootElement);
-}
 ```
 
 ### Documentation
@@ -74,28 +53,12 @@ Install the dependencies with your favourite package manager
 yarn install
 ```
 
-##### Running
+##### Development
 
 Spin up the Parcel development server
 
 ```
 yarn start
-```
-
-##### Building the static site
-
-Build the static files using Parcel
-
-```
-yarn build:site
-```
-
-##### Building the library
-
-Build the static files using Parcel
-
-```
-yarn build:lib
 ```
 
 ### Contribution

@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   workflow_dispatch:
 jobs:
   build:
@@ -25,16 +25,12 @@ jobs:
         run: yarn
       - name: "Test: Linting"
         run: yarn lint
-      - name: "Build: Library"
-        run: yarn build:lib
-      - name: "Deploy: Library"
-        run: yarn deploy:lib
+      - name: "Build Library & Site"
+        run: yarn build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: "Build: Docs"
-        run: yarn build:docs
-      - name: "Build: Site"
-        run: yarn build:site
+      - name: "Deploy: Library"
+        run: yarn deploy:lib
       - name: "Deploy: Site"
-        run: "yarn firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}"
+        run: "yarn deploy:site --token ${{ secrets.FIREBASE_TOKEN }}"
