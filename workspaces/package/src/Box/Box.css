@@ -43,9 +43,9 @@
 .Box--padding-vertical-x12 { padding-top: var(--size--x12); padding-bottom: var(--size--x12); }
 .Box--padding-vertical-x16 { padding-top: var(--size--x16); padding-bottom: var(--size--x16); }
 
-.Box--border-radius-x1 { border-radius: var(--size--x1); }
-.Box--border-radius-x2 { border-radius: var(--size--x2); }
-.Box--border-radius-x3 { border-radius: var(--size--x3); }
+.Box--border-radius-x1 { border-radius: var(--border-radius-size--x1); }
+.Box--border-radius-x2 { border-radius: var(--border-radius-size--x2); }
+.Box--border-radius-x3 { border-radius: var(--border-radius-size--x3); }
 .Box--border-radius-full { border-radius: 50%; }
 
 .Box--border-size-x1,

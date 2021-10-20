@@ -32,9 +32,19 @@ export const sizeX16Rem = sizeX1Rem * 16;
 
 export const borderSizeX1Px = 1;
 export const borderSizeX2Px = 2;
+export const borderSizeX3Px = 3;
 
 export const borderSizeX1Rem = 0.0625;
 export const borderSizeX2Rem = 0.125;
+export const borderSizeX3Rem = 0.1875;
+
+export const borderRadiusSizeX1Px = sizeX1Px;
+export const borderRadiusSizeX2Px = sizeX2Px;
+export const borderRadiusSizeX3Px = sizeX3Px;
+
+export const borderRadiusSizeX1Rem = sizeX1Rem;
+export const borderRadiusSizeX2Rem = sizeX2Rem;
+export const borderRadiusSizeX3Rem = sizeX3Rem;
 
 export const colorWhite = '#FFFEFC';
 export const colorBlack = '#1E1B18';

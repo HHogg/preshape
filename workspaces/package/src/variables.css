@@ -16,6 +16,10 @@
   --border-size--x2: 0.125rem;
   --border-size--x3: 0.1875rem;
 
+  --border-radius-size--x1: var(--size--x1);
+  --border-radius-size--x2: var(--size--x2);
+  --border-radius-size--x3: var(--size--x3);
+
   --color-white: #FFFEFC;
   --color-black: #1E1B18;
 

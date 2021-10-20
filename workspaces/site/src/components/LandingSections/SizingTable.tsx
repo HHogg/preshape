@@ -20,6 +20,7 @@ export type TypeSizingVariables = {
 
 export interface Props extends TableProps {
   name?: string;
+  shape?: 'line' | 'square';
   showCellCSS?: boolean;
   showCellJS?: boolean;
   showCellValue?: boolean;
@@ -30,6 +31,7 @@ export interface Props extends TableProps {
 export default (props: Props) => {
   const {
     name,
+    shape = 'line',
     showCellVisual,
     showCellCSS,
     showCellJS,
@@ -39,11 +41,10 @@ export default (props: Props) => {
   } = props;
 
   return (
-    <Table { ...rest }>
+    <Table { ...rest } margin="x8" size="x2">
       <TableHeader>
         <TableRow>
-          <TableHeaderCell>{ name }</TableHeaderCell>
-          { showCellVisual && <TableHeaderCell /> }
+          <TableHeaderCell colSpan={ showCellVisual ? 2 : 1 }>{ name }</TableHeaderCell>
           { showCellCSS && <TableHeaderCell>CSS</TableHeaderCell> }
           { showCellJS && <TableHeaderCell>JS</TableHeaderCell> }
           { showCellValue && <TableHeaderCell>Value</TableHeaderCell> }
@@ -55,10 +56,20 @@ export default (props: Props) => {
             <TableCell align={ showCellVisual ? 'end' : 'start' } sorted>{ name }</TableCell>
             { showCellVisual && (
               <TableCell>
-                <Box
-                    backgroundColor="text-shade-1"
-                    height="1rem"
-                    width={ `var(${css})` } />
+                { shape === 'line' && (
+                  <Box
+                      backgroundColor="text-shade-1"
+                      height="1rem"
+                      width={ `var(${css})` } />
+                ) }
+
+                { shape === 'square' && (
+                  <Box
+                      backgroundColor="text-shade-1"
+                      borderRadius={ name }
+                      height={ `calc(var(${css}) * 4)` }
+                      width={ `calc(var(${css}) * 4)` } />
+                ) }
               </TableCell>
             ) }
 

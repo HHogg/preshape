@@ -5,7 +5,7 @@ import Landing from './Landing/Landing';
 
 export const widthContainer = '1152px';
 export const widthLarge = '1024px';
-export const widthMedium = '832px';
+export const widthMedium = '900px';
 export const widthSmall = '480px';
 
 export const RootContext = React.createContext<{

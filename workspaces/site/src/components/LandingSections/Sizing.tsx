@@ -8,6 +8,7 @@ import { widthMedium, widthSmall } from '../Root';
 import LandingSection, { Props } from '../Landing/LandingSection';
 import SizingBorderTable from './SizingBorderTable';
 import SizingGeneralTable from './SizingGeneralTable';
+import SizingBorderRadiusTable from './SizingBorderRadiusTable';
 
 export default (props: Props) => {
   const match = useMatchMedia([widthSmall, widthMedium]);
@@ -39,6 +40,10 @@ export default (props: Props) => {
             grow
             shrink>
           <SizingBorderTable
+              showCellCSS
+              showCellVisual={ match(widthSmall) } />
+
+          <SizingBorderRadiusTable
               showCellCSS
               showCellVisual={ match(widthSmall) } />
         </Box>
