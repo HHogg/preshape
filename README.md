@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./site/assets/preshape.svg" alt="Preshape" />
+  <img src="./workspaces/site/src/assets/preshape.svg" alt="Preshape" />
 </p>
 
 <h1 align="center">
