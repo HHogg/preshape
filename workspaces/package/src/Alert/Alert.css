@@ -1,22 +1,22 @@
 .Alert--accent {
-  border-color: var(--color-accent--shade-2);
-  color: var(--color-accent--shade-2);
+  border-color: var(--color-accent--shade-4);
+  color: var(--color-accent--shade-4);
 }
 
 .Alert--negative {
-  border-color: var(--color-negative--shade-2);
-  color: var(--color-negative--shade-2);
+  border-color: var(--color-negative--shade-4);
+  color: var(--color-negative--shade-4);
 }
 
 .Alert--positive {
-  border-color: var(--color-positive--shade-2);
-  color: var(--color-positive--shade-2);
+  border-color: var(--color-positive--shade-4);
+  color: var(--color-positive--shade-4);
 }
 
 .Alert--fill {
   color: var(--color-white);
 
-  &.Alert--accent { background-color: var(--color-accent--shade-2); }
-  &.Alert--negative { background-color: var(--color-negative--shade-2); }
-  &.Alert--positive { background-color: var(--color-positive--shade-2); }
+  &.Alert--accent { background-color: var(--color-accent--shade-4); }
+  &.Alert--negative { background-color: var(--color-negative--shade-4); }
+  &.Alert--positive { background-color: var(--color-positive--shade-4); }
 }

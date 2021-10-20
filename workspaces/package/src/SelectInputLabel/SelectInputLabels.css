@@ -11,16 +11,16 @@
   transition-timing-function: var(--transition-timing-function);
 
   &:hover {
-    border-color: var(--color-accent--shade-1);
-    color: var(--color-accent--shade-1);
+    border-color: var(--color-accent--shade-3);
+    color: var(--color-accent--shade-3);
   }
 
   &:focus-within {
-    border-color: var(--color-accent--shade-3);
+    border-color: var(--color-accent--shade-5);
   }
 
   &[checked] {
-    color: var(--color-text-accent--shade-2);
+    color: var(--color-text-accent--shade-4);
   }
 
   &[disabled] {

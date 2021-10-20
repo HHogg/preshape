@@ -61,7 +61,7 @@ export default ({ children, disableCode }: Props) => {
         <Box alignChildrenVertical="middle" flex="horizontal" gap="x4">
           <Box flex="horizontal" gap="x1" grow>
             <Box
-                backgroundColor="negative-shade-1"
+                backgroundColor="negative-shade-3"
                 borderRadius="full"
                 borderSize="x2"
                 height="0.75rem"
@@ -75,7 +75,7 @@ export default ({ children, disableCode }: Props) => {
                 width="0.75rem" />
 
             <Box
-                backgroundColor="positive-shade-1"
+                backgroundColor="positive-shade-3"
                 borderRadius="full"
                 borderSize="x2"
                 height="0.75rem"

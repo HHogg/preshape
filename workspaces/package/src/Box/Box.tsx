@@ -14,9 +14,9 @@ export type TypeColor =
   'black' |
   'white' |
   'highlight' |
-  'accent-shade-1' |
-  'accent-shade-2' |
   'accent-shade-3' |
+  'accent-shade-4' |
+  'accent-shade-5' |
   'background-shade-1' |
   'background-shade-2' |
   'background-shade-3' |
@@ -26,12 +26,12 @@ export type TypeColor =
   'light-shade-1' |
   'light-shade-2' |
   'light-shade-3' |
-  'negative-shade-1' |
-  'negative-shade-2' |
   'negative-shade-3' |
-  'positive-shade-1' |
-  'positive-shade-2' |
+  'negative-shade-4' |
+  'negative-shade-5' |
   'positive-shade-3' |
+  'positive-shade-4' |
+  'positive-shade-5' |
   'text-shade-1' |
   'text-shade-2' |
   'text-shade-3';

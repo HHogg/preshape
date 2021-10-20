@@ -17,7 +17,7 @@
   &:hover,
   &:focus {
     outline: 0;
-    color: var(--color-accent--shade-2);
+    color: var(--color-accent--shade-4);
   }
 }
 

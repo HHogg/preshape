@@ -14,7 +14,7 @@
   transition-timing-function: var(--transition-timing-function);
 
   @nest .CheckBox__input:checked + & {
-    border-color: var(--color-accent--shade-2);
+    border-color: var(--color-accent--shade-4);
   }
 }
 
@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   transform: scale(0);
-  background-color: var(--color-accent--shade-2);
+  background-color: var(--color-accent--shade-4);
   transition-property: transform;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);

@@ -5,8 +5,8 @@
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
 
-  &:hover { border-color: var(--color-accent--shade-1); }
-  &:active { border-color: var(--color-accent--shade-3); }
+  &:hover { border-color: var(--color-accent--shade-3); }
+  &:active { border-color: var(--color-accent--shade-5); }
 }
 
 .ThemeSwitcher__input {
@@ -22,6 +22,6 @@
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
 
-  @nest .ThemeSwitcher:hover & { background-color: var(--color-accent--shade-1); }
-  @nest .ThemeSwitcher:active & { background-color: var(--color-accent--shade-3); }
+  @nest .ThemeSwitcher:hover & { background-color: var(--color-accent--shade-3); }
+  @nest .ThemeSwitcher:active & { background-color: var(--color-accent--shade-5); }
 }

@@ -54,7 +54,7 @@ export default () => {
                     alt="npm version"
                     async
                     height="18"
-                    src={ `https://img.shields.io/npm/v/preshape?color=${encodeURIComponent(themes[theme].colorAccentShade2)}&label=Preshape` } />
+                    src={ `https://img.shields.io/npm/v/preshape?color=${encodeURIComponent(themes[theme].colorAccentShade4)}&label=Preshape` } />
               </Link>
             </Box>
           </Box>

@@ -21,7 +21,7 @@ export default (props: Props) => {
         <Text margin="x3">
           <Text margin="x1" strong>
             { name } { !isOptional && (
-              <Text inline textColor="negative-shade-2">
+              <Text inline textColor="negative-shade-4">
                 [Required]
               </Text>
             ) }

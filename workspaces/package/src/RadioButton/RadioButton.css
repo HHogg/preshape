@@ -19,7 +19,7 @@
   transition-timing-function: var(--transition-timing-function);
 
   @nest .RadioButton__input:checked + & {
-    border-color: var(--color-accent--shade-2);
+    border-color: var(--color-accent--shade-4);
   }
 }
 
@@ -30,7 +30,7 @@
   height: 100%;
   transform: scale(0);
   border-radius: 50%;
-  background-color: var(--color-accent--shade-2);
+  background-color: var(--color-accent--shade-4);
   transition-property: transform;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
