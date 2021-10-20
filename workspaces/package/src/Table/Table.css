@@ -12,14 +12,12 @@
 
 .Table__row--clickable {
   &:hover {
-    background-color: var(--color-accent--shade-3);
-    color: var(--color-light--shade-1);
+    background-color: var(--color-accent--shade-1);
   }
 
   &.Table__row--active,
   &:active {
-    background-color: var(--color-accent--shade-5);
-    color: var(--color-light--shade-1);
+    background-color: var(--color-accent--shade-2);
   }
 }
 
