@@ -29,6 +29,7 @@
     "babel-eslint": "^10.0.1",
     "caniuse-lite": "^1.0.30001237",
     "concurrently": "^6.2.0",
+    "conventional-changelog-conventionalcommits": "^4.6.1",
     "eslint": "^5.15.1",
     "eslint-config-preshape": "^1.1.0",
     "eslint-plugin-react": "^7.12.4",
