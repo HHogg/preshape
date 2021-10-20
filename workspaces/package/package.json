@@ -10,11 +10,11 @@
   "esnext": "lib/esn/index.js",
   "typings": "lib/cjs/index.d.ts",
   "scripts": {
-    "build": "yarn build:icons && rm -rf lib && yarn build:lib:cjs && yarn build:lib:esn",
+    "build": "yarn build:icons && rm -rf lib && yarn build:cjs && yarn build:esn",
     "build:css": "postcss src/{*.css,**/*.css} --base src",
     "build:icons": "yarn svgr -d src/Icon ../../node_modules/feather-icons/dist/icons --ext tsx --config-file .svgrrc.js",
-    "build:lib:esn": "tsc -p src -m esnext -t esnext --outDir esn && yarn build:css --dir lib/esn",
-    "build:lib:cjs": "tsc -p src --outDir lib/cjs && yarn build:css --dir lib/cjs"
+    "build:esn": "tsc -p src -m esnext -t esnext --outDir lib/esn && yarn build:css --dir lib/esn",
+    "build:cjs": "tsc -p src --outDir lib/cjs && yarn build:css --dir lib/cjs"
   },
   "peerDependencies": {
     "react": "^17.0.2",
