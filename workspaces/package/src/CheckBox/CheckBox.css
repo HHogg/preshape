@@ -12,10 +12,6 @@
   transition-property: border-color;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
-
-  @nest .CheckBox__input:checked + & {
-    border-color: var(--color-accent--shade-4);
-  }
 }
 
 .CheckBox__indicator::before {
@@ -25,11 +21,20 @@
   height: 100%;
   transform: scale(0);
   background-color: var(--color-accent--shade-4);
-  transition-property: transform;
+  transition-property: background-color, transform;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
+}
 
-  @nest .CheckBox__input:checked + & {
+.CheckBox__label:hover .CheckBox__indicator,
+.CheckBox__input:checked + .CheckBox__indicator {
+  border-color: var(--color-accent--shade-4);
+
+  &::before {
     transform: scale(0.5);
   }
+}
+
+.CheckBox__label:hover .CheckBox__input:not(:checked) + .CheckBox__indicator::before {
+  background-color: var(--color-accent--shade-2);
 }

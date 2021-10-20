@@ -32,6 +32,7 @@ const CheckBox: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLIn
 
   return (
     <SelectInputLabel
+        className="CheckBox__label"
         disabled={ disabled }
         label={ children }
         margin={ margin }

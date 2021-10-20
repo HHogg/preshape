@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import * as React from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
@@ -10,15 +11,18 @@ const SelectInputLabel: React.RefForwardingComponent<HTMLLabelElement, Attribute
   const {
     borderRadius = 'x2',
     children,
+    className,
     label,
     ...rest
   } = props;
+
+  const classes = classNames('SelectInputLabels__label', className);
 
   return (
     <Box { ...rest }
         alignChildrenVertical="middle"
         borderRadius={ borderRadius }
-        className="SelectInputLabels__label"
+        className={ classes }
         flex="horizontal"
         gap="x2"
         ref={ ref }
