@@ -32,6 +32,7 @@ const RadioButton: React.RefForwardingComponent<HTMLInputElement, Attributes<HTM
 
   return (
     <SelectInputLabel
+        className="RadioButton__label"
         disabled={ disabled }
         label={ children }
         margin={ margin }

@@ -17,10 +17,6 @@
   transition-property: border-color;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
-
-  @nest .RadioButton__input:checked + & {
-    border-color: var(--color-accent--shade-4);
-  }
 }
 
 .RadioButton__indicator::before {
@@ -34,8 +30,17 @@
   transition-property: transform;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);
+}
 
-  @nest .RadioButton__input:checked + & {
+.RadioButton__label:hover .RadioButton__indicator,
+.RadioButton__input:checked + .RadioButton__indicator {
+  border-color: var(--color-accent--shade-4);
+
+  &::before {
     transform: scale(0.5);
   }
+}
+
+.RadioButton__label:hover .RadioButton__input:not(:checked) + .RadioButton__indicator::before {
+  background-color: var(--color-accent--shade-2);
 }
