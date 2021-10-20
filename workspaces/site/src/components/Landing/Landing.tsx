@@ -8,7 +8,7 @@ import {
   Text,
   ThemeSwitcher,
 } from 'preshape';
-import { RootContext, widthSmall, widthMedium } from '../Root';
+import { RootContext, widthSmall } from '../Root';
 import Documentation from '../Documentation/Documentation';
 import landingSections from '../LandingSections';
 import LandingSection from './LandingSection';
@@ -30,7 +30,6 @@ export default () => {
       </Box>
 
       <Box
-          maxWidth={ widthMedium }
           paddingHorizontal="x8"
           paddingVertical="x16">
         <LandingSection>

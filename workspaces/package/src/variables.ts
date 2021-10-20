@@ -1,6 +1,13 @@
 import color from 'open-color';
 import { TypeTheme } from './Box/Box';
 
+const hexToRGBA = (hex: string, a: number): string => {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+};
+
 export const sizeX1Px = 4;
 export const sizeX2Px = sizeX1Px * 2;
 export const sizeX3Px = sizeX1Px * 3;
@@ -40,18 +47,26 @@ export const colorLightShade1 = color.gray[0];
 export const colorLightShade2 = color.gray[1];
 export const colorLightShade3 = color.gray[2];
 
+export const colorAccent1Shade1 = hexToRGBA(color.indigo[7], 0.1);
+export const colorAccent1Shade2 = hexToRGBA(color.indigo[7], 0.2);
 export const colorAccent1Shade3 = color.indigo[5];
 export const colorAccent1Shade4 = color.indigo[6];
 export const colorAccent1Shade5 = color.indigo[7];
 
+export const colorAccent2Shade1 = hexToRGBA(color.grape[7], 0.1);
+export const colorAccent2Shade2 = hexToRGBA(color.grape[7], 0.2);
 export const colorAccent2Shade3 = color.grape[5];
 export const colorAccent2Shade4 = color.grape[6];
 export const colorAccent2Shade5 = color.grape[7];
 
+export const colorPositiveShade1 = hexToRGBA(color.teal[7], 0.1);
+export const colorPositiveShade2 = hexToRGBA(color.teal[7], 0.2);
 export const colorPositiveShade3 = color.teal[5];
 export const colorPositiveShade4 = color.teal[6];
 export const colorPositiveShade5 = color.teal[7];
 
+export const colorNegativeShade1 = hexToRGBA(color.pink[7], 0.1);
+export const colorNegativeShade2 = hexToRGBA(color.pink[7], 0.2);
 export const colorNegativeShade3 = color.pink[5];
 export const colorNegativeShade4 = color.pink[6];
 export const colorNegativeShade5 = color.pink[7];
@@ -65,6 +80,8 @@ export const themeDay = {
   colorTextShade1: colorDarkShade1,
   colorTextShade2: colorDarkShade2,
   colorTextShade3: colorDarkShade3,
+  colorAccentShade1: colorAccent1Shade1,
+  colorAccentShade2: colorAccent1Shade2,
   colorAccentShade3: colorAccent1Shade3,
   colorAccentShade4: colorAccent1Shade4,
   colorAccentShade5: colorAccent1Shade5,
@@ -77,6 +94,8 @@ export const themeNight = {
   colorTextShade1: colorLightShade1,
   colorTextShade2: colorLightShade2,
   colorTextShade3: colorLightShade3,
+  colorAccentShade1: colorAccent2Shade1,
+  colorAccentShade2: colorAccent2Shade2,
   colorAccentShade3: colorAccent2Shade3,
   colorAccentShade4: colorAccent2Shade4,
   colorAccentShade5: colorAccent2Shade5,
@@ -103,6 +122,8 @@ export const themePropNameCSSMap = {
   colorTextShade1: 'color-text--shade-1',
   colorTextShade2: 'color-text--shade-2',
   colorTextShade3: 'color-text--shade-3',
+  colorAccentShade1: 'color-accent--shade-1',
+  colorAccentShade2: 'color-accent--shade-3',
   colorAccentShade3: 'color-accent--shade-3',
   colorAccentShade4: 'color-accent--shade-4',
   colorAccentShade5: 'color-accent--shade-5',

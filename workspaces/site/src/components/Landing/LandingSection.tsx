@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Attributes, Box, BoxProps, Text } from 'preshape';
+import { widthMedium } from '../Root';
 
 export interface Props extends BoxProps {
   id?: string;
@@ -7,10 +8,10 @@ export interface Props extends BoxProps {
 }
 
 export default (props: Attributes<HTMLElement, Props>) => {
-  const { children, id, title, ...rest } = props;
+  const { children, id, maxWidth = widthMedium, title, ...rest } = props;
 
   return (
-    <Box { ...rest } id={ id } paddingVertical="x12">
+    <Box { ...rest } id={ id } maxWidth={ maxWidth } paddingVertical="x12">
       { title && (
         <Text
             margin="x4"
