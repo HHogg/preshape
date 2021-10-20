@@ -1,22 +1,24 @@
 import * as React from 'react' ;
-import { Box, Grid, GridItem, Icons, Link, Text } from 'preshape';
+import { Box, Code, Grid, GridItem, Icons, Link, Text } from 'preshape';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 export default (props: Props) => {
+  const [showAll, setShowAll] = React.useState(false);
+
   return (
     <LandingSection { ...props }>
       <Text>
         Icons from
         the <Link href="https://github.com/feathericons/feather" isTextLink target="FeatherIcon">Feather Icon</Link> set,
         designed with an emphasis on simplicity, consistency, and flexibility. All can be
-        used with <Link isTextLink to="/api/icon">Icons.[IconName]</Link>.
+        used like <Code lang="jsx">{ '<Icons.Activity />' }</Code>.
       </Text>
 
       <Grid
           gap="x3"
           margin="x10"
-          repeatWidthMin="6rem">
-        { Object.entries(Icons).map(([name, Icon]) => (
+          repeatWidthMin="8rem">
+        { Object.entries(Icons).slice(0, showAll ? undefined : 6 * 4).map(([name, Icon]) => (
           <GridItem
               key={ name }
               padding="x3">
@@ -38,6 +40,10 @@ export default (props: Props) => {
         ))
         }
       </Grid>
+
+      { !showAll && (
+        <Text align="middle"><Link isTextLink onClick={ () => setShowAll(true) }>Show All</Link></Text>
+      ) }
     </LandingSection>
   );
 };
