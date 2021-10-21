@@ -1,3 +1,24 @@
+## [9.0.0](https://github.com/HHogg/preshape/compare/v8.0.0...v9.0.0) (2021-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Colors:** Renumbered Accent, Positive and Negative colours. Do a find and replace and increase the numbers by 2.
+
+### Features
+
+* **Colors:** Added 2 veyr light colours of Accents, Positive and Negative ([95e1682](https://github.com/HHogg/preshape/commit/95e1682e1691810353139a990521fce5dd328da4))
+* **Colors:** Renumbered Accent, Positive and Negative colours to make way for some lighter shades. ([a93de18](https://github.com/HHogg/preshape/commit/a93de189304e6b1dcd200f3f8365e6d886141b2a))
+
+
+### Style Changes
+
+* **Alert:** Updated style of Alert to use new light colours ([60d496f](https://github.com/HHogg/preshape/commit/60d496ffe7201e7e9a1bc35a32bec4eb358a89f1))
+* **Button:** Updated style of Button to use new light colours ([4f9945e](https://github.com/HHogg/preshape/commit/4f9945ecc3b7386da83e4cb4fbf3c45ff20c28e3))
+* **CheckBox:** Updated style to use new light colours ([46fc3db](https://github.com/HHogg/preshape/commit/46fc3db4bffcb0c6d81ff3337b28376e8b83338b))
+* **RadioButton:** Updated style to use new light colours ([6977821](https://github.com/HHogg/preshape/commit/697782149a7e6b0ea5642651aa79870bc7c3fb65))
+* **Table:** Updated style to use new light colours ([037c2a9](https://github.com/HHogg/preshape/commit/037c2a94805cc82d1042a8c0115388c5d584e685))
+
 # [8.0.0](https://github.com/HHogg/preshape/compare/v7.1.0...v8.0.0) (2021-10-18)
 
 
