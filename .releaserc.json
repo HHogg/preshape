@@ -27,6 +27,7 @@
     ["@semantic-release/npm", {
       "pkgRoot": "./workspaces/package"
     }],
+    "@semantic-release/github",
     "@semantic-release/git"
   ]
 }
