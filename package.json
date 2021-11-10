@@ -40,6 +40,7 @@
     "semantic-release-cli": "^5.4.4",
     "stylelint": "^13.2.0",
     "stylelint-config-preshape": "^2.0.0",
+    "ts-node": "^10.4.0",
     "typescript": "^3.4.5"
   },
   "resolutions": {
