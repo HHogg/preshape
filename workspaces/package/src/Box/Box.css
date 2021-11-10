@@ -12,6 +12,7 @@
 .Box--display-inline-block { display: inline-block; }
 
 .Box--overflow-hidden { overflow: hidden; }
+.Box--overflow-scroll { overflow: auto; }
 
 .Box--margin-x1 { margin: var(--size--x1) 0; }
 .Box--margin-x2 { margin: var(--size--x2) 0; }
@@ -67,10 +68,6 @@
 .Box--border:not(.Box--border-right) { border-right-width: 0; }
 .Box--border:not(.Box--border-bottom) { border-bottom-width: 0; }
 .Box--border:not(.Box--border-left) { border-left-width: 0; }
-
-.Box--scrollable {
-  overflow: auto;
-}
 
 .Box--max-width {
   width: 100%;

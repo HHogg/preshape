@@ -137,7 +137,7 @@ export interface BoxProps {
   /** Min width applied through inline style */
   minWidth?: number | string;
   /** Sets how overflown content is handled */
-  overflow?: 'hidden';
+  overflow?: 'auto' | 'hidden';
   /** Padding applied for the global spacing variables */
   padding?: TypeSize;
   /** Horizontal padding applied for the global spacing variables */
@@ -146,8 +146,6 @@ export interface BoxProps {
   paddingVertical?: TypeSize;
   /** Reverses the flex direction */
   reverse?: boolean;
-  /** Applies overflow styling to enable/disable scrolling.  */
-  scrollable?: boolean;
   /** Flex item property if it should shrink. */
   shrink?: boolean | string;
   /**
@@ -214,7 +212,6 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     paddingVertical = padding,
     margin,
     reverse,
-    scrollable,
     shrink,
     style,
     tag,
@@ -240,7 +237,6 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     'Box--flex-reverse': reverse,
     'Box--flex-wrap': wrap,
     'Box--max-width': maxWidth,
-    'Box--scrollable': scrollable,
     [`Box--absolute-${absolute}`]: absolute,
     [`Box--background-color-${backgroundColor}`]: backgroundColor,
     [`Box--border-color-${borderColor}`]: borderColor,
@@ -254,7 +250,6 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     [`Box--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
     [`Box--flex-gap-${gap}`]: gap,
     [`Box--margin-${margin}`]: margin,
-    [`Box--overflow-${overflow}`]: overflow,
     [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
     [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
     [`Box--text-color-${textColor}`]: textColor,
@@ -274,6 +269,7 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
       minHeight: minHeight,
       maxWidth: maxWidth,
       minWidth: minWidth,
+      overflow: overflow,
       width: width,
       zIndex: zIndex,
       ...style,

@@ -131,8 +131,8 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
             maxWidth={
               (isMaxWidthEnabled && maxWidth) ||
               (fullscreen && '100%') || undefined }
+            overflow="auto"
             ref={ refModal }
-            scrollable
             shrink
             visible={ visible }>
           { children }

@@ -87,7 +87,7 @@ const Item: CatalogueItem<{
                   zIndex={ 1 }>
                 <Options { ...props.Options }
                     maxHeight="10rem"
-                    scrollable>
+                    overflow="auto">
                   { Array.from({ length: 10 }).map((_, index) => (
                     <Option { ...props.Option }
                         checked={ !!values[index] }

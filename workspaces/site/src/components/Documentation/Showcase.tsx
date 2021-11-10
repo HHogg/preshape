@@ -92,9 +92,9 @@ export default ({ children, disableCode }: Props) => {
             backgroundColor="background-shade-1"
             borderSize="x2"
             container
+            overflow="auto"
             paddingHorizontal="x6"
             paddingVertical="x12"
-            scrollable
             textColor="text-shade-1">
           { children }
         </Box>
