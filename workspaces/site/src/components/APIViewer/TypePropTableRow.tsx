@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { JSONOutput } from 'typedoc';
-import { Label, TableCell, TableRow, Text } from 'preshape';
+import { Buttons, Label, TableCell, TableRow, Text } from 'preshape';
 import { Renderer } from './Types';
 import TypeRenderer from './TypeRenderer';
 import { getComment, getIsOptional, getTag } from './utils';
@@ -32,10 +32,13 @@ export default (props: Props) => {
           ) }
         </Text>
 
-        <TypeRenderer { ...type }
-            context={ props }
-            onStateChange={ onStateChange }
-            state={ state } />
+        <Buttons wrap>
+          <TypeRenderer { ...type }
+              context={ props }
+              onStateChange={ onStateChange }
+              state={ state } />
+        </Buttons>
+
       </TableCell>
 
       { withDefault && (

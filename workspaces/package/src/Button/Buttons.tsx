@@ -27,7 +27,8 @@ const Buttons: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement,
         className={ classes }
         flex="horizontal"
         gap={ joined ? undefined : gap }
-        ref={ ref } />
+        ref={ ref }
+        shrink />
   );
 };
 

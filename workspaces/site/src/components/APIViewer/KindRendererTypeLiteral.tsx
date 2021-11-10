@@ -10,10 +10,8 @@ export default (props: Props) => {
   const isFunction = !!props.signatures;
 
   return (
-    <Box>
-      <TypeLabel>
-        { isFunction ? 'Function' : 'Object' }
-      </TypeLabel>
-    </Box>
+    <TypeLabel>
+      { isFunction ? 'Function' : 'Object' }
+    </TypeLabel>
   );
 };
