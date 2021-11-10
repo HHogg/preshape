@@ -19,15 +19,15 @@ const Item: CatalogueItem<{
             textColor="text-shade-1"
             theme="night">
           <Box maxWidth="500px">
-            <Text heading margin="x4" size="x7" strong>
+            <Text heading margin="x4" size="x8" strong>
               An Animal of No Significance.
             </Text>
 
-            <Text heading margin="x4" size="x6" strong>
+            <Text heading margin="x4" size="x7" strong>
               About 13.5 billion years ago.
             </Text>
 
-            <Text heading margin="x4" size="x5">
+            <Text heading margin="x4" size="x6">
               Matter, energy, time and space came into being in what is known
               as the Big Bang. The story of these fundamental
               features of our universe is called physics..
@@ -36,7 +36,7 @@ const Item: CatalogueItem<{
         </Box>
 
         <Box margin="x6" maxWidth="500px">
-          <Text margin="x3" size="x4" strong>
+          <Text margin="x3" size="x5" strong>
             The spectacle before us was indeed sublime. Apparently
             we had reached a great height in the atmosphere.
           </Text>
@@ -49,7 +49,7 @@ const Item: CatalogueItem<{
             is called chemistry.
           </Text>
 
-          <Text margin="x3" size="x2">
+          <Text margin="x3" size="x3">
             About 3.8 billion years ago, on a planet called Earth,
             certain molecules combined to form particularly
             large and intricate structures called organisms.
@@ -60,7 +60,7 @@ const Item: CatalogueItem<{
             cultures is called history.
           </Text>
 
-          <Text margin="x3" size="x1">
+          <Text margin="x3" size="x2">
             Excerpt from Sapiens: A Brief History of Humankind by Yuval
             Noah Harari © 2015 by Yuval Noah Harari. Reprinted courtesy
             of Harper, an imprint of HarperCollins Publishers without

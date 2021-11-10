@@ -47,7 +47,7 @@ const InputWrapper: React.RefForwardingComponent<HTMLLabelElement, Attributes<HT
               ellipsis
               paddingHorizontal={ paddingHorizontal }
               paddingVertical={ paddingVertical }
-              size="x1"
+              size="x2"
               strong>
             { label }
           </Text>

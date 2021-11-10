@@ -28,7 +28,7 @@ const TextArea: React.RefForwardingComponent<HTMLTextAreaElement, Attributes<HTM
         paddingHorizontal={ padding || paddingHorizontal }
         paddingVertical={ padding || paddingVertical }
         ref={ ref }
-        size="x2"
+        size="x3"
         strong
         tag="textarea" />
   );

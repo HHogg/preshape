@@ -240,11 +240,11 @@ export default (props: Props) => {
                   : (match({ '600px': 'span 10' }) || 'span 30'),
               } }
               textColor={ textColor }>
-            <Text size="x1" strong>
+            <Text size="x2" strong>
               <Text>{ name }</Text>
               <Text>{ value }</Text>
             </Text>
-            <Text size="x1">
+            <Text size="x2">
               <Text><Code>var({ css })</Code></Text>
               <Text><Code>{ js }</Code></Text>
             </Text>

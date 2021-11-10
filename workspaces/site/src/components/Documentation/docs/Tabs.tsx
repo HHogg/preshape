@@ -46,7 +46,7 @@ const Item: CatalogueItem<{
           <TabContent { ...props.TabContent } padding="x6">
             { activeTab === 0 && (
               <BlockQuote>
-                <Text size="x2">
+                <Text size="x3">
                   A star is an astronomical object consisting of a luminous spheroid
                   of plasma held together by its own gravity. The nearest star to Earth
                   is the Sun. Many other stars are visible to the naked eye from Earth during
@@ -60,7 +60,7 @@ const Item: CatalogueItem<{
                   Milky Way.
                 </Text>
 
-                <Text margin="x2" size="x2">
+                <Text margin="x2" size="x3">
                   <Link href="https://en.wikipedia.org/wiki/Star" isTextLink strong>Star, Wikipedia</Link>
                 </Text>
               </BlockQuote>
@@ -68,7 +68,7 @@ const Item: CatalogueItem<{
 
             { activeTab === 1 && (
               <BlockQuote>
-                <Text size="x2">
+                <Text size="x3">
                   The Sun is the star at the center of the Solar System. It is a nearly
                   perfect sphere of hot plasma, with internal convective motion
                   that generates a magnetic field via a dynamo process. It is by far
@@ -81,7 +81,7 @@ const Item: CatalogueItem<{
                   neon, and iron.
                 </Text>
 
-                <Text margin="x2" size="x2">
+                <Text margin="x2" size="x3">
                   <Link href="https://en.wikipedia.org/wiki/Sun" isTextLink strong>Sun, Wikipedia</Link>
                 </Text>
               </BlockQuote>
@@ -89,7 +89,7 @@ const Item: CatalogueItem<{
 
             { activeTab === 2 && (
               <BlockQuote>
-                <Text size="x2">
+                <Text size="x3">
                   The Moon is an astronomical body that orbits Earth as its only
                   natural satellite. It is the fifth-largest satellite in the Solar
                   System, and the largest among planetary satellites relative to the
@@ -104,7 +104,7 @@ const Item: CatalogueItem<{
                   older than previously thought.
                 </Text>
 
-                <Text margin="x2" size="x2">
+                <Text margin="x2" size="x3">
                   <Link href="https://en.wikipedia.org/wiki/Moon" isTextLink strong>Moon, Wikipedia</Link>
                 </Text>
               </BlockQuote>

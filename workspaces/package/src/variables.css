@@ -106,31 +106,34 @@
   --text-family--content: 'Open Sans', sans-serif;
   --text-family--monospace: 'Courier New', 'Ubuntu Mono', monospace;
 
-  --text-size--x1: 0.75rem;
-  --text-size--x2: 0.875rem;
-  --text-size--x3: 1rem;
-  --text-size--x4: 1.125rem;
-  --text-size--x5: 1.5rem;
-  --text-size--x6: 2.125rem;
-  --text-size--x7: 3rem;
+  --text-size--x1: 0.625rem;
+  --text-size--x2: 0.75rem;
+  --text-size--x3: 0.875rem;
+  --text-size--x4: 1rem;
+  --text-size--x5: 1.125rem;
+  --text-size--x6: 1.5rem;
+  --text-size--x7: 2.125rem;
+  --text-size--x8: 3rem;
 
   --text-height--x1: 1.3333333333;
-  --text-height--x2: 1.4285714286;
-  --text-height--x3: 1.3125;
-  --text-height--x4: 1.2222222222;
-  --text-height--x5: 1.3333333333;
-  --text-height--x6: 1.2352941176;
-  --text-height--x7: 1.0833333333;
+  --text-height--x2: 1.3333333333;
+  --text-height--x3: 1.4285714286;
+  --text-height--x4: 1.3125;
+  --text-height--x5: 1.2222222222;
+  --text-height--x6: 1.3333333333;
+  --text-height--x7: 1.2352941176;
+  --text-height--x8: 1.0833333333;
 
   --text-letter-spacing--x1: 0.01785714286rem;
   --text-letter-spacing--x2: 0.01785714286rem;
-  --text-letter-spacing--x3: 0.03125rem;
-  --text-letter-spacing--x4: 0.0075rem;
-  --text-letter-spacing--x5: 0;
-  --text-letter-spacing--x6: 0.007352941176rem;
-  --text-letter-spacing--x7: 0;
+  --text-letter-spacing--x3: 0.01785714286rem;
+  --text-letter-spacing--x4: 0.03125rem;
+  --text-letter-spacing--x5: 0.0075rem;
+  --text-letter-spacing--x6: 0;
+  --text-letter-spacing--x7: 0.007352941176rem;
+  --text-letter-spacing--x8: 0;
 
-  --text-size--body: var(--text-size--x3);
+  --text-size--body: var(--text-size--x4);
   --text-height--body: var(--text-height--x3);
   --text-letter-spacing--body: var(--text-letter-spacing--x3);
 

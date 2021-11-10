@@ -15,7 +15,7 @@ export default (props: Attributes<HTMLElement, Props>) => {
       { title && (
         <Text
             margin="x4"
-            size="x4"
+            size="x6"
             strong>{ title }</Text>
       ) }
 

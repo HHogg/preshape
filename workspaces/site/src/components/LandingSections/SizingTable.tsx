@@ -41,7 +41,7 @@ export default (props: Props) => {
   } = props;
 
   return (
-    <Table { ...rest } margin="x8" size="x2">
+    <Table { ...rest } margin="x8" size="x3">
       <TableHeader>
         <TableRow>
           <TableHeaderCell colSpan={ showCellVisual ? 2 : 1 }>{ name }</TableHeaderCell>

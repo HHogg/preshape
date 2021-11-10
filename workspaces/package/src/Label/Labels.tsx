@@ -7,7 +7,10 @@ const Labels: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, 
   return (
     <Box { ...props }
         className="Labels"
-        ref={ ref } />
+        flex="horizontal"
+        gap="x1"
+        ref={ ref }
+        wrap />
   );
 };
 

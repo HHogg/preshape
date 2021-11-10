@@ -10,7 +10,8 @@ export type TypeTextSize =
   'x4' |
   'x5' |
   'x6' |
-  'x7';
+  'x7' |
+  'x8';
 
 const TagInlineMap = (props: TextProps): TypeAllElementTags =>
   (props.strong && 'strong') ||

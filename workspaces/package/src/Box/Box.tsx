@@ -103,7 +103,7 @@ export interface BoxProps {
   /** Applies just the top border. To apply all border, just pass borderSize */
   borderTop?: boolean;
   /** Adds styling of a border radius to one of the size multiples */
-  borderRadius?: 'full' | 'x1' | 'x2' | 'x3' | string;
+  borderRadius?: 'full' | 'x1' | 'x2' | 'x3' | string | number;
   /** Thickness of the border to be applied */
   borderSize?: 'x1' | 'x2' | 'x3';
   /** Adds styling to indicate that the element is clickable */

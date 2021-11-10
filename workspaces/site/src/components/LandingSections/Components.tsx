@@ -6,13 +6,13 @@ import LandingSection, { Props } from '../Landing/LandingSection';
 export default (props: Props) => {
   return (
     <LandingSection { ...props }>
-      <Text margin="x3">
+      <Text margin="x16">
         A collection of React Components to provide the building blocks
         for UIs.
       </Text>
 
       <Grid
-          gap="x6"
+          gap="x8"
           margin="x6"
           repeatWidthMin="240px">
         { Object
@@ -20,18 +20,26 @@ export default (props: Props) => {
             .filter(([, { type }]) => type === 'component')
             .map(([id, item]) => (
               <Link
-                  borderRadius="x1"
+                  borderColor="background-shade-3"
+                  borderRadius="x3"
                   borderSize="x2"
                   display="block"
                   key={ id }
                   padding="x3"
                   rel="nofollow"
                   to={ `/api/${id}` }>
-                <Box margin="x2">
+                <Box
+                    backgroundColor="background-shade-2"
+                    borderRadius="x3"
+                    margin="x4"
+                    paddingHorizontal="x8">
                   { item.pictogram && <item.pictogram /> }
                 </Box>
-                <Text margin="x1" strong>{ item.name }</Text>
-                <Text margin="x1" size="x2" tag="div">{ item.description }</Text>
+
+                <Box paddingHorizontal="x4">
+                  <Text margin="x1" strong>{ item.name }</Text>
+                  <Text margin="x1" size="x3" tag="div">{ item.description }</Text>
+                </Box>
               </Link>
             ))
         }

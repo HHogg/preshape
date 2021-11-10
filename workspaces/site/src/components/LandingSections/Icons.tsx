@@ -32,7 +32,7 @@ export default (props: Props) => {
                 align="middle"
                 ellipsis
                 margin="x2"
-                size="x2"
+                size="x3"
                 strong>
               { name }
             </Text>

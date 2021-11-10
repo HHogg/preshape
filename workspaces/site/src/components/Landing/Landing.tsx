@@ -40,7 +40,7 @@ export default () => {
               </Box>
 
               <Box shrink>
-                <Text align="middle" margin="x2" size="x7" strong>Preshape</Text>
+                <Text align="middle" margin="x2" size="x8" strong>Preshape</Text>
                 <Text align="middle">
                   A minimal design system and library of composable React components.
                 </Text>

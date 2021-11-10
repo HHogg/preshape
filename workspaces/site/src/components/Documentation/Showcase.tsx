@@ -109,7 +109,7 @@ export default ({ children, disableCode }: Props) => {
                   language="jsx"
                   paddingHorizontal="x6"
                   paddingVertical="x3"
-                  size="x2"
+                  size="x3"
                   wrap>
                 { code }
               </CodeBlock>
@@ -120,7 +120,7 @@ export default ({ children, disableCode }: Props) => {
                   display="inline-block"
                   isTextLink
                   onClick={ () => setIsCodeExpanded(!isCodeExpanded) }
-                  size="x2"
+                  size="x3"
                   strong>
                 <Box alignChildren="middle" flex="horizontal" gap="x1">
                   <Box>

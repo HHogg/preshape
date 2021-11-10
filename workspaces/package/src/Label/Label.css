@@ -1,8 +1,5 @@
 .Label {
   display: inline-flex;
-  margin: 0 var(--size--x2) var(--size--x2) 0;
-  padding: var(--size--x1) var(--size--x3);
-  border-radius: var(--size--x3);
   transition-property: background-color, color;
   transition-duration: var(--transition-time--fast);
   transition-timing-function: var(--transition-timing-function);

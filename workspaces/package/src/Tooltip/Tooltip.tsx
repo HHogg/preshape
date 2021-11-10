@@ -48,7 +48,7 @@ const Tooltip: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivEl
             paddingVertical="x2"
             ref={ ref }
             textColor="background-shade-1">
-          <Text align="middle" size="x2" strong>{ content }</Text>
+          <Text align="middle" size="x3" strong>{ content }</Text>
         </PlacementContent>
       </Placement>
     </PlacementManager>

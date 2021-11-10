@@ -67,7 +67,7 @@ const Item: CatalogueItem<{
 
       return (
         <Showcase>
-          <Table { ...props.Table } size="x1">
+          <Table { ...props.Table } size="x2">
             <TableHeader { ...props.TableHeader }>
               <TableRow { ...props.TableRow }>
                 { headers.map((header, index) => (

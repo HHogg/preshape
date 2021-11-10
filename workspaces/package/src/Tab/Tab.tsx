@@ -28,7 +28,7 @@ const Tab: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Tab
         <Link
             display="block"
             padding="x3"
-            size="x1"
+            size="x2"
             strong>
           { children }
         </Link>
