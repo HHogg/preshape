@@ -97,7 +97,7 @@ export interface BoxProps {
   /** Applies just the top border. To apply all border, just pass borderSize */
   borderTop?: boolean;
   /** Adds styling of a border radius to one of the size multiples */
-  borderRadius?: 'full' | 'x1' | 'x2' | 'x3';
+  borderRadius?: 'full' | 'x1' | 'x2' | 'x3' | string;
   /** Thickness of the border to be applied */
   borderSize?: 'x1' | 'x2' | 'x3';
   /** Adds styling to indicate that the element is clickable */
@@ -224,6 +224,7 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
   } = props;
 
   const border = borderTop || borderRight || borderBottom || borderLeft;
+  const isPredefinedBorderRadius = borderRadius === 'full' || borderRadius === 'x1' || borderRadius === 'x2' || borderRadius === 'x3';
 
   const classes = classnames('Box', {
     'Box--border': border,
@@ -240,7 +241,7 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     [`Box--absolute-${absolute}`]: absolute,
     [`Box--background-color-${backgroundColor}`]: backgroundColor,
     [`Box--border-color-${borderColor}`]: borderColor,
-    [`Box--border-radius-${borderRadius}`]: borderRadius,
+    [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
     [`Box--border-size-${borderSize}`]: borderSize,
     [`Box--display-${display}`]: display,
     [`Box--fixed-${fixed}`]: fixed,
@@ -261,6 +262,7 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     className: classes,
     ref: ref,
     style: {
+      borderRadius: isPredefinedBorderRadius ? undefined : borderRadius,
       flexBasis: basis,
       flexGrow: grow === true ? '1' : grow,
       flexShrink: shrink === true ? '1' : shrink,
