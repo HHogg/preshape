@@ -77,6 +77,16 @@
 
 .Box--elevate { filter: drop-shadow(0 0.125rem 0.3125rem var(--color-elevate)); }
 
+.Box--transition-fast,
+.Box--transition-base,
+.Box--transition-slow {
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.Box--transition-fast { transition-duration: var(--transition-duration--fast); }
+.Box--transition-base { transition-duration: var(--transition-duration--base); }
+.Box--transition-slow { transition-duration: var(--transition-duration--slow); }
+
 .Box--absolute-center,
 .Box--absolute-edge-to-edge,
 .Box--absolute-top,

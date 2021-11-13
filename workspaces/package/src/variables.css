@@ -100,7 +100,7 @@
   --transition-duration--fast: 200ms;
   --transition-duration--base: 400ms;
   --transition-duration--slow: 800ms;
-  --transition-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   --text-family--heading: 'Merriweather', serif;
   --text-family--content: 'Open Sans', sans-serif;

@@ -29,7 +29,7 @@ body {
   color: var(--color-text--shade-1);
   transition-property: background-color, color;
   transition-duration: var(--transition-duration--fast);
-  transition-timing-function: var(--transition-function);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 canvas {
