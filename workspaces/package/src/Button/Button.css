@@ -12,7 +12,7 @@
   font-weight: var(--text-weight--strong);
   text-transform: uppercase;
   transition-property: border-color, background-color, color, opacity;
-  transition-duration: var(--transition-time--fast);
+  transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
 
   &:hover {

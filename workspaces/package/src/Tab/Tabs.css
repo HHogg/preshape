@@ -28,7 +28,7 @@
   border-radius: var(--size--x1) var(--size--x1) 0 0;
   cursor: pointer;
   transition-property: transform, color;
-  transition-duration: var(--transition-time--fast);
+  transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
 }
 
@@ -43,7 +43,7 @@
 
 .Tab__background {
   transition-property: background-color;
-  transition-duration: var(--transition-time--fast);
+  transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
 }
 

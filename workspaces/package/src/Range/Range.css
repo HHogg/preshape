@@ -50,7 +50,7 @@
   border-radius: 50%;
   background-color: currentColor;
   transition-property: background-color, color;
-  transition-duration: var(--transition-time--base);
+  transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
   appearance: none;
 }
@@ -62,7 +62,7 @@
   border-radius: 50%;
   background-color: currentColor;
   transition-property: background-color, color;
-  transition-duration: var(--transition-time--base);
+  transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
   appearance: none;
 }
@@ -75,7 +75,7 @@
   border-radius: 50%;
   background-color: currentColor;
   transition-property: background-color, color;
-  transition-duration: var(--transition-time--base);
+  transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
   appearance: none;
 }

@@ -2,7 +2,7 @@
   border-radius: var(--size--x16);
   border-color: var(--color-text--shade-1);
   transition-property: border-color;
-  transition-duration: var(--transition-time--fast);
+  transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
 
   &:hover { border-color: var(--color-accent--shade-3); }
@@ -19,7 +19,7 @@
   background-color: var(--color-text--shade-1);
   color: transparent;
   transition-property: background-color;
-  transition-duration: var(--transition-time--fast);
+  transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
 
   @nest .ThemeSwitcher:hover & { background-color: var(--color-accent--shade-3); }

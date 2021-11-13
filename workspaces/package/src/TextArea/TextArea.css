@@ -9,7 +9,7 @@
   color: var(--color-text--shade-1);
   resize: none;
   transition-property: border-color;
-  transition-duration: var(--transition-time--base);
+  transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
   appearance: none;
 

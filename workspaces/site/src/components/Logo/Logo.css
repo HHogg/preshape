@@ -11,7 +11,7 @@
   fill: currentColor;
   stroke: currentColor;
   transition-property: stroke, fill;
-  transition-duration: var(--transition-time--slow);
+  transition-duration: var(--transition-duration--slow);
   transition-timing-function: var(--transition-timing-function);
 }
 
