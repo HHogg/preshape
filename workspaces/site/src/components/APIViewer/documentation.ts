@@ -3,18 +3,16 @@ import documentation from '../../assets/documentation.json';
 
 const doc: JSONOutput.ProjectReflection = documentation;
 
-const documentationMapByName: { [key: string]: JSONOutput.Reflection } = {};
-const documentationMapNameById: { [key: number]: [string, string] } = {};
+const documentationMapByName: Record<string, JSONOutput.DeclarationReflection> = {};
+const documentationMapNameById: Record<number, string> = {};
 
 if (doc.children) {
-  doc.children.forEach((module) => {
-    module.children && module.children.forEach((exprt) => {
-      documentationMapNameById[exprt.id] = [module.name, exprt.name];
-      documentationMapByName[`${module.name},${exprt.name}`] = exprt;
-    });
+  doc.children.forEach((exprt) => {
+    documentationMapNameById[exprt.id] = exprt.name;
+    documentationMapByName[exprt.name] = exprt;
   });
 }
 
-export const getById = (id: number) => documentationMapByName[documentationMapNameById[id].toString()];
-export const getByModuleAndName = (moduleName: string, exportName: string) => documentationMapByName[`${moduleName},${exportName}`];
-export const getModuleNameById = (id: number) => documentationMapNameById[id] || [];
+export const getById = (id?: number) => id ? documentationMapByName[documentationMapNameById[id]] : null;
+export const getNameById = (id: number): string => documentationMapNameById[id];
+export const getByModuleAndName = (exportName: string) => documentationMapByName[exportName];

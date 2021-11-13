@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { JSONOutput } from 'typedoc';
-import { Renderer } from './Types';
+import { RendererContainer } from './Types';
 import TypePropTable from './TypePropTable';
 
-interface Props extends Renderer, JSONOutput.Reflection {}
+interface Props extends RendererContainer, JSONOutput.DeclarationReflection {}
 
 export default (props: Props) => {
   return (

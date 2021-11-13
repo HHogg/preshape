@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default () => {
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const element = location.hash && document.querySelector(location.hash);
@@ -11,7 +11,7 @@ export default () => {
     if (location.hash && element) {
       window.requestAnimationFrame(() => {
         element.scrollIntoView();
-        history.replace(location.pathname);
+        navigate(location.pathname, { replace: true });
       });
     } else {
       window.scrollTo({ top: 0 });

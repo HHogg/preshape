@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Attributes, Box, BoxProps } from 'preshape';
+import Box, { Attributes, BoxProps } from '../Box/Box';
 
 const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGElement, 'display'>, BoxProps & {
   size?: string;

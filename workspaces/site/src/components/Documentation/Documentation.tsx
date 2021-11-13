@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useRouteMatch, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Modal, ModalBody, ModalHeader, Text } from 'preshape';
 import { widthMedium } from '../Root';
 import docs from './docs';
@@ -17,15 +17,18 @@ const getDocItem = (id: string) => {
 };
 
 export default () => {
-  const history = useHistory();
-  const match = useRouteMatch<{ id: string }>();
-  const { params } = match;
-  const id = params.id.toLowerCase();
-  const item = getDocItem(id);
+  const navigate = useNavigate();
+  const { id } = useParams<'id'>();
+
+  if (!id) {
+    return null;
+  }
+
+  const item = getDocItem(id.toLocaleLowerCase());
   const [state, setState] = React.useState(item && item.showcase ? (item.showcase.state || {}) : {});
 
   if (!item) {
-    history.replace('/');
+    navigate('/', { replace: true });
     return null;
   }
 
@@ -33,7 +36,7 @@ export default () => {
     <Modal
         fullscreen
         margin="x10"
-        onClose={ () => history.push('/') }
+        onClose={ () => navigate('/') }
         overlayBackgroundColor="dark-shade-1"
         size="x3"
         visible>

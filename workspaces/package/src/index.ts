@@ -15,16 +15,8 @@ export {
   TypeTheme,
 } from './Box/Box';
 
-export {
-  TypeEditorLanguage,
-} from './Editor/Editor';
-
-export {
-  TypeTextSize,
-} from './Text/Text';
-
 export { default as Alert, AlertProps } from './Alert/Alert';
-export { default as Appear, AppearProps } from './Appear/Appear';
+export { default as Appear, AppearProps, TypeAnimation } from './Appear/Appear';
 export { default as Box, BoxProps } from './Box/Box';
 export { default as BlockQuote, BlockQuoteProps } from './BlockQuote/BlockQuote';
 export { default as BulletPoint, BulletPointProps } from './BulletPoints/BulletPoint';
@@ -35,7 +27,7 @@ export { default as CheckBox, CheckBoxProps } from './CheckBox/CheckBox';
 export { default as CheckboxIndicator } from './CheckBox/CheckBoxIndicator';
 export { default as Code, CodeProps } from './Code/Code';
 export { default as CodeBlock, CodeBlockProps } from './Code/CodeBlock';
-export { default as Editor, EditorProps } from './Editor/Editor';
+export { default as Editor, EditorProps, TypeEditorLanguage } from './Editor/Editor';
 export { default as Form } from './Form/Form';
 export { default as Grid, GridProps } from './Grid/Grid';
 export { default as GridItem, GridItemProps } from './Grid/GridItem';
@@ -59,8 +51,8 @@ export { default as Options, OptionsProps } from './Options/Options';
 export { default as Placement, PlacementProps } from './Placement/Placement';
 export { default as PlacementArrow, PlacementArrowProps } from './Placement/PlacementArrow';
 export { default as PlacementContent, PlacementContentProps } from './Placement/PlacementContent';
-export { default as PlacementManager, PlacementManagerProps } from './Placement/PlacementManager';
-export { default as PlacementReference, PlacementReferenceProps } from './Placement/PlacementReference';
+export { default as PlacementManager, PlacementManagerProps, TypePlacementTrigger } from './Placement/PlacementManager';
+export { default as PlacementReference, PlacementReferenceProps, PlacementReferenceChildren } from './Placement/PlacementReference';
 export { default as PlacementReferenceElement } from './Placement/PlacementReferenceElement';
 export { default as RadioButton, RadioButtonProps } from './RadioButton/RadioButton';
 export { default as RadioButtonIndicator } from './RadioButton/RadioButtonIndicator';
@@ -75,7 +67,7 @@ export { default as TableCell, TableCellProps } from './Table/TableCell';
 export { default as TableHeader, TableHeaderProps } from './Table/TableHeader';
 export { default as TableHeaderCell, TableHeaderCellProps } from './Table/TableHeaderCell';
 export { default as TableRow, TableRowProps } from './Table/TableRow';
-export { default as Text, TextProps } from './Text/Text';
+export { default as Text, TextProps, TypeTextSize } from './Text/Text';
 export { default as TextArea, TextAreaProps } from './TextArea/TextArea';
 export { default as TextAreaWrapper, TextAreaWrapperProps } from './TextArea/TextAreaWrapper';
 export { default as ThemeSwitcher, ThemeSwitcherProps } from './ThemeSwitcher/ThemeSwitcher';

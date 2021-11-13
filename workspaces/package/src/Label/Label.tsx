@@ -1,5 +1,5 @@
-import { sizeX3Px } from 'preshape';
 import * as React from 'react';
+import { sizeX3Px } from '../variables';
 import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './Label.css';

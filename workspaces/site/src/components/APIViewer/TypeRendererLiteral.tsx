@@ -3,7 +3,7 @@ import { JSONOutput } from 'typedoc';
 import { Renderer } from './Types';
 import TypeLabel from './TypeLabel';
 
-interface Props extends Renderer, JSONOutput.StringLiteralType {
+interface Props extends Renderer, JSONOutput.LiteralType {
 
 }
 

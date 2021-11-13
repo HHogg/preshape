@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { JSONOutput } from 'typedoc';
 import { Renderer } from './Types';
 import { getById } from './documentation';
@@ -10,18 +10,21 @@ interface Props extends Renderer, JSONOutput.ReferenceType {
 
 }
 
-export default (props: Props) => {
+export default (props: PropsWithChildren<Props>) => {
   const { context, id, name, onStateChange, state } = props;
-  const api = id !== undefined && getById(id);
-  const referenceTag = getTag(context, 'reference');
 
-  if (api && (!referenceTag || !referenceTag.startsWith('false'))) {
-    return (
-      <KindRenderer { ...api }
-          context={ context }
-          onStateChange={ onStateChange }
-          state={ state } />
-    );
+  if (id && context) {
+    const api = getById(id);
+    const referenceTag = getTag(context, 'reference');
+
+    if (api && (!referenceTag || !referenceTag.startsWith('false'))) {
+      return (
+        <KindRenderer { ...api }
+            context={ context }
+            onStateChange={ onStateChange }
+            state={ state } />
+      );
+    }
   }
 
   return (

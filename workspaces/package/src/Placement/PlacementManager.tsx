@@ -7,14 +7,14 @@ export const PlacementManagerContext = React.createContext<{
   onClose?: () => void;
   onPointerEnter?: (event: React.PointerEvent) => void;
   onPointerLeave?: (event: React.PointerEvent) => void;
-  onPointerUp?: (event: React.PointerEvent) => void;
+  onClick?: (event: React.PointerEvent) => void;
   referenceNode: HTMLElement | null;
   setReferenceNode(referenceNode: HTMLElement | null): void;
   visible?: boolean;
 }>({
   onPointerEnter: undefined,
   onPointerLeave: undefined,
-  onPointerUp: undefined,
+  onClick: undefined,
   referenceNode: null,
   setReferenceNode: () => {},
   visible: undefined,
@@ -40,7 +40,7 @@ const PlacementManager: React.FC<PlacementManagerProps> = (props) => {
   const onClose = trigger === undefined ? undefined : () => setVisible(false);
   const onPointerEnter = trigger === 'hover' ? () => setVisible(true) : undefined;
   const onPointerLeave = trigger === 'hover' ? () => setVisible(false) : undefined;
-  const onPointerUp = trigger === 'click' ? () => setVisible(true) : undefined;
+  const onClick = trigger === 'click' ? () => setVisible(true) : undefined;
 
   React.useEffect(() => {
     if (trigger === undefined) {
@@ -53,7 +53,7 @@ const PlacementManager: React.FC<PlacementManagerProps> = (props) => {
       onClose,
       onPointerEnter,
       onPointerLeave,
-      onPointerUp,
+      onClick,
       referenceNode,
       setReferenceNode,
       visible,

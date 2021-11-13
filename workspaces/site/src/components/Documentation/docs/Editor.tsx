@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import fs from 'fs';
 import * as React from 'react' ;
 import { Editor, EditorProps, TypeEditorLanguage } from 'preshape';
 import Showcase from '../Showcase';
@@ -17,16 +17,16 @@ import 'brace/mode/typescript';
 export const snippets: {
   [key in TypeEditorLanguage]: string;
 } = {
-  css: readFileSync(__dirname + '/../../../../../package/src/Tab/Tabs.css', 'utf8'),
-  glsl: readFileSync(__dirname + '/snippets/glsl.glsl', 'utf8'),
-  html: readFileSync(__dirname + '/../../../index.html', 'utf8'),
-  javascript: readFileSync(__dirname + '/snippets/javascript.js', 'utf8'),
-  json: readFileSync(__dirname + '/snippets/json.json', 'utf8'),
-  jsx: readFileSync(__dirname + '/snippets/jsx.txt', 'utf8'),
-  markdown: readFileSync(__dirname + '/../../../../../../CHANGELOG.md', 'utf8'),
-  svg: readFileSync(__dirname + '/../../../assets/P-day.svg', 'utf8'),
-  tsx: readFileSync(__dirname + '/../../Root.tsx', 'utf8'),
-  typescript: readFileSync(__dirname + '/../../../../../package/src/hooks/useResizeObserver.ts', 'utf8'),
+  css: fs.readFileSync(__dirname + '/../../../../../package/src/Tab/Tabs.css', 'utf8'),
+  glsl: fs.readFileSync(__dirname + '/snippets/glsl.glsl', 'utf8'),
+  html: fs.readFileSync(__dirname + '/../../../index.html', 'utf8'),
+  javascript: fs.readFileSync(__dirname + '/snippets/javascript.js', 'utf8'),
+  json: fs.readFileSync(__dirname + '/snippets/json.json', 'utf8'),
+  jsx: fs.readFileSync(__dirname + '/snippets/jsx.txt', 'utf8'),
+  markdown: fs.readFileSync(__dirname + '/../../../../../../CHANGELOG.md', 'utf8'),
+  svg: fs.readFileSync(__dirname + '/../../../assets/P-day.svg', 'utf8'),
+  tsx: fs.readFileSync(__dirname + '/../../Root.tsx', 'utf8'),
+  typescript: fs.readFileSync(__dirname + '/../../../../../package/src/hooks/useResizeObserver.ts', 'utf8'),
 };
 
 const Item: CatalogueItem<{

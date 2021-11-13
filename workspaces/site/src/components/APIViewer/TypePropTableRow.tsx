@@ -5,7 +5,7 @@ import { Renderer } from './Types';
 import TypeRenderer from './TypeRenderer';
 import { getComment, getIsOptional, getTag } from './utils';
 
-interface Props extends Renderer, JSONOutput.Reflection {
+interface Props extends Renderer, JSONOutput.DeclarationReflection {
   withDefault?: boolean;
 }
 

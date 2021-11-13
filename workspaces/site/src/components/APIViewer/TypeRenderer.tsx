@@ -1,25 +1,24 @@
 /* eslint-disable no-console */
 import * as React from 'react';
-import { JSONOutput } from 'typedoc';
+import { Type, TypeKind, TypeKindMap } from 'typedoc';
 import { Renderer } from './Types';
 import TypeRendererIntrinsic from './TypeRendererIntrinsic';
 import TypeRendererReference from './TypeRendererReference';
 import TypeRendererReflection from './TypeRendererReflection';
-import TypeRendererStringLiteral from './TypeRendererStringLiteral';
+import TypeRendererLiteral from './TypeRendererLiteral';
 import TypeRendererUnion from './TypeRendererUnion';
 
 const TypeMap: {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: React.FC<any>;
+  [K in TypeKind]: React.FunctionComponent<Renderer & TypeKindMap[K]>;
 } = {
   intrinsic: TypeRendererIntrinsic,
+  literal: TypeRendererLiteral,
   reference: TypeRendererReference,
   reflection: TypeRendererReflection,
-  stringLiteral: TypeRendererStringLiteral,
   union: TypeRendererUnion,
 };
 
-interface Props extends Renderer, JSONOutput.UnknownType {}
+interface Props extends Renderer, Type {}
 
 export default (props: Props) => {
   const Renderer = TypeMap[props.type];

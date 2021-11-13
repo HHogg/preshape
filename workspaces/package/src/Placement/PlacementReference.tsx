@@ -5,7 +5,7 @@ import { PlacementManagerContext } from './PlacementManager';
 export type PlacementReferenceChildren = (props: {
   onPointerEnter?: (event: React.PointerEvent) => void;
   onPointerLeave?: (event: React.PointerEvent) => void;
-  onPointerUp?: (event: React.PointerEvent) => void;
+  onClick?: (event: React.PointerEvent) => void;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ref: React.Ref<any>;
 }, state: {
@@ -24,7 +24,7 @@ export interface PlacementReferenceProps {
 const PlacementReference: React.FC<PlacementReferenceProps> = (props) => {
   const { children, ...rest } = props;
   const {
-    onPointerUp,
+    onClick,
     onPointerEnter,
     onPointerLeave,
     setReferenceNode,
@@ -37,7 +37,7 @@ const PlacementReference: React.FC<PlacementReferenceProps> = (props) => {
         ...props,
         onPointerEnter,
         onPointerLeave,
-        onPointerUp,
+        onClick,
       }, {
         visible,
       }) }

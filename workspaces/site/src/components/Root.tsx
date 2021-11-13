@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useLocalStorage, useTheme, TypeTheme } from 'preshape';
 import Landing from './Landing/Landing';
 
@@ -24,11 +24,11 @@ export default () => {
 
   return (
     <BrowserRouter>
-      <Switch>
-        <RootContext.Provider value={ { onChangeTheme, theme } }>
-          <Route component={ Landing } path="/" />
-        </RootContext.Provider>
-      </Switch>
+      <RootContext.Provider value={ { onChangeTheme, theme } }>
+        <Routes>
+          <Route element={ <Landing /> } path="/*" />
+        </Routes>
+      </RootContext.Provider>
     </BrowserRouter>
   );
 };

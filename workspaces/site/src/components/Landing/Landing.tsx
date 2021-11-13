@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import {
   themes,
   Box,
@@ -21,9 +21,9 @@ export default () => {
     <Box
         backgroundColor="background-shade-1"
         padding="x6">
-      <Switch>
-        <Route component={ Documentation } path="/api/:id" />
-      </Switch>
+      <Routes>
+        <Route element={ <Documentation /> } path="/api/:id" />
+      </Routes>
 
       <Box absolute="top-right" padding="x12">
         <ThemeSwitcher onChange={ onChangeTheme } theme={ theme } />

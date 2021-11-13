@@ -13,12 +13,11 @@ import { RendererContainer } from './Types';
 import { getTag } from './utils';
 import TypePropTableRow from './TypePropTableRow';
 
-interface Props extends RendererContainer, JSONOutput.Reflection {
-
-}
+interface Props extends RendererContainer, JSONOutput.DeclarationReflection {}
 
 export default (props: Props) => {
   const { children = [], onStateChange, state } = props;
+
   const uninheritedProps = children
   .filter((child) => !child.inheritedFrom);
 

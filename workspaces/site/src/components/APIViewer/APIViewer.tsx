@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { getByModuleAndName } from './documentation';
+import { JSONOutput } from 'typedoc';
 import { APIRecord, RendererContainer } from './Types';
 import APIViewerItem from './APIViewerItem';
 
@@ -13,7 +14,7 @@ export default (props: Props) => {
   return (
     <React.Fragment>
       { apis
-          .map((api) => [api, getByModuleAndName(api.module, api.name)])
+          .map((api) => [api, getByModuleAndName(api.name)] as [APIRecord, JSONOutput.Reflection])
           .filter(([, _]) => _)
           .map(([{ name, rename }, exprt]) => (
             <APIViewerItem { ...exprt }

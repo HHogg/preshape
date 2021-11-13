@@ -16,7 +16,7 @@
     "lint:js": "eslint \"workspaces/package/src/**/*.tsx\" \"workspaces/package/src/**/*.ts\" \"workspaces/site/src/**/*.ts\" \"workspaces/site/src/**/*.tsx\"",
     "deploy:lib": "semantic-release",
     "deploy:site": "firebase deploy",
-    "start": "yarn workspace site run start"
+    "start": "concurrently \"yarn workspace site run start\" \"yarn workspace preshape run start\""
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.0",
@@ -41,11 +41,12 @@
     "stylelint": "^13.2.0",
     "stylelint-config-preshape": "^2.0.0",
     "ts-node": "^10.4.0",
-    "typescript": "^3.4.5"
+    "typescript": "^4.4.4"
   },
   "resolutions": {
     "fast-glob": "3.1.1",
     "remark": "11.0.2"
   },
-  "marked": null
+  "marked": null,
+  "dependencies": {}
 }

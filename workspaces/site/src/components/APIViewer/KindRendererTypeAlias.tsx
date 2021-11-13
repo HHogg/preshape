@@ -3,7 +3,7 @@ import { JSONOutput } from 'typedoc';
 import { Renderer } from './Types';
 import TypeRenderer from './TypeRenderer';
 
-interface Props extends Renderer, JSONOutput.Reflection {}
+interface Props extends Renderer, JSONOutput.DeclarationReflection {}
 
 export default (props: Props) => {
   const { context, onStateChange, state, type } = props;

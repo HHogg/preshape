@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { JSONOutput } from 'typedoc';
 import { Box } from 'preshape';
-import { Renderer } from './Types';
+import { RendererContainer } from './Types';
 
-interface Props extends Renderer, JSONOutput.ReferenceReflection {}
+interface Props extends RendererContainer, JSONOutput.DeclarationReflection {}
 
 export default () => {
   return (

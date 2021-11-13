@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { JSONOutput } from 'typedoc';
-import { Renderer } from './Types';
+import { Renderer, RendererContainer } from './Types';
 import KindRendererInterface from './KindRendererInterface';
 import KindRendererCallSignature from './KindRendererCallSignature';
 import KindRendererTypeAlias from './KindRendererTypeAlias';
 import KindRendererTypeLiteral from './KindRendererTypeLiteral';
 
 const KindMap: {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: React.FC<any>;
+  [key: string]:
+    | React.FunctionComponent<Renderer & JSONOutput.DeclarationReflection>
+    | React.FunctionComponent<RendererContainer & JSONOutput.DeclarationReflection>;
 } = {
   'Interface': KindRendererInterface,
   'Call signature': KindRendererCallSignature,
@@ -16,11 +17,11 @@ const KindMap: {
   'Type literal': KindRendererTypeLiteral,
 };
 
-interface Props extends Renderer, JSONOutput.Reflection {
+type Props<K extends typeof KindMap> = JSONOutput.DeclarationReflection & {
+  kindString: K;
+} & (K extends 'Interface' | 'Call signature' ? RendererContainer : Renderer);
 
-}
-
-export default (props: Props) => {
+export default <K extends typeof KindMap>(props: Props<K>) => {
   const { kindString } = props;
   const Renderer = kindString && KindMap[kindString];
 

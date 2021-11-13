@@ -18,7 +18,7 @@ export interface RendererContainer {
 }
 
 export interface Renderer {
-  context: JSONOutput.Reflection;
+  context?: JSONOutput.DeclarationReflection;
   onStateChange: (value: StatePrimitive) => void;
   state: StatePrimitive;
 }

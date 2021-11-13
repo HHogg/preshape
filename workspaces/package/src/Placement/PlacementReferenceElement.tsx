@@ -6,7 +6,7 @@ interface Rect {
 }
 
 export default class PlacementReferenceElement {
-  clientRect: ClientRect = {
+  clientRect: Omit<DOMRect, 'toJSON' | 'x' | 'y'> = {
     top: 0,
     left: 0,
     right: 0,

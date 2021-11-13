@@ -4,9 +4,8 @@
   "description": "preshape site",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf public && yarn build:docs && parcel build src/index.html -d public && react-snap --crawl false",
-    "build:docs": "typedoc --json src/assets/documentation.json ../package/src",
-    "start": "yarn build:docs && parcel src/index.dev.html --port 4000 -d dist --no-cache --no-autoinstall"
+    "build": "rm -rf public && parcel build src/index.html -d public && react-snap --crawl false",
+    "start": "parcel src/index.dev.html --port 4000 -d dist --no-cache --no-autoinstall"
   },
   "devDependencies": {
     "@svgr/parcel-plugin-svgr": "^5.0.1",
@@ -14,7 +13,6 @@
     "@types/lodash.omit": "^4.5.6",
     "@types/react": "*",
     "@types/react-dom": "*",
-    "@types/react-router-dom": "*",
     "autoprefixer": "^9.4.10",
     "classnames": "^2.2.5",
     "lodash.omit": "^4.5.0",
@@ -23,9 +21,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-element-to-jsx-string": "^14.2.0",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.0.2",
     "react-snap": "^1.23.0",
-    "typedoc": "^0.16.8"
+    "typedoc": "^0.22.8"
   },
   "reactSnap": {
     "crawl": false,

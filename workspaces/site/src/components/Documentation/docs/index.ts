@@ -6,7 +6,7 @@ export interface CatalogueItem<S extends {} = {}> {
   pictogram?: string;
   type: 'component' | 'hook';
   showcase?: {
-    Component: React.ReactType<S>;
+    Component: React.ElementType<S>;
     state?: S;
   };
   apis?: APIRecord[];
