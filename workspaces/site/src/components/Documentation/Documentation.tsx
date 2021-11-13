@@ -50,7 +50,11 @@ export default () => {
       <ModalBody
           maxWidth={ widthMedium }>
         { item.showcase && (
-          <Box margin="x6">
+          <Box
+              backgroundColor="background-shade-1"
+              margin="x6"
+              paddingVertical="x2"
+              style={ { position: 'sticky', top: 0 } }>
             <item.showcase.Component { ...state } />
           </Box>
         ) }

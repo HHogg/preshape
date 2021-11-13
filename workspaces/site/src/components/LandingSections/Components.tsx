@@ -32,7 +32,8 @@ export default (props: Props) => {
                     backgroundColor="background-shade-2"
                     borderRadius="x3"
                     margin="x4"
-                    paddingHorizontal="x8">
+                    paddingHorizontal="x8"
+                    paddingVertical="x1">
                   { item.pictogram && <item.pictogram /> }
                 </Box>
 

@@ -168,6 +168,10 @@ export interface BoxProps {
    * to the theme applied on the HTML element.
    */
   theme?: TypeTheme;
+  /** Transition speed */
+  transitionDuration?: 'slow' | 'base' | 'fast';
+  /** Quick prop to transition changing CSS properties. */
+  transitionProperty?: string;
   /** Fixed width applied through inline styling */
   width?: number | string;
   /** Flag to allow flex items to wrap over to new lines */
@@ -223,6 +227,8 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     tag,
     textColor,
     theme,
+    transitionDuration = 'base',
+    transitionProperty,
     width,
     wrap,
     zIndex,
@@ -260,6 +266,7 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
     [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
     [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
     [`Box--text-color-${textColor}`]: textColor,
+    [`Box--transition-${transitionDuration}`]: transitionProperty,
     [`Theme--${theme}`]: theme,
   }, className);
 
@@ -278,6 +285,7 @@ const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
       maxWidth: maxWidth,
       minWidth: minWidth,
       overflow: overflow,
+      transitionProperty: transitionProperty,
       width: width,
       zIndex: zIndex,
       ...style,
