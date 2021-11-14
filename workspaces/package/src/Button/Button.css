@@ -10,7 +10,6 @@
   border-color: transparent;
   background-color: transparent;
   font-weight: var(--text-weight--strong);
-  text-transform: uppercase;
   transition-property: border-color, background-color, color, opacity;
   transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
@@ -39,19 +38,16 @@
 }
 
 .Button--x1 {
-  padding: var(--size--x1) var(--size--x2);
   font-size: var(--text-size--x2);
   line-height: var(--text-height--x1);
 }
 
 .Button--x2 {
-  padding: var(--size--x2) var(--size--x3);
   font-size: var(--text-size--x2);
   line-height: var(--text-height--x1);
 }
 
 .Button--x3 {
-  padding: var(--size--x3) var(--size--x4);
   font-size: var(--text-size--x3);
   line-height: var(--text-height--x2);
 }
