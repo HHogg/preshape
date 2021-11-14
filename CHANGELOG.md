@@ -1,3 +1,11 @@
+### [10.0.1](https://github.com/HHogg/preshape/compare/v10.0.0...v10.0.1) (2021-11-14)
+
+
+### Fixes
+
+* **Button:** Allow Button paddings and text style to be configured ([0f5a58e](https://github.com/HHogg/preshape/commit/0f5a58e9fc6cd410de03f47614ac723e621816de))
+* **Text:** Added missing sizing class ([3af33c6](https://github.com/HHogg/preshape/commit/3af33c6a649d71d9674635dd2970dfd1aa875a14))
+
 ## [10.0.0](https://github.com/HHogg/preshape/compare/v9.0.0...v10.0.0) (2021-11-14)
 
 
