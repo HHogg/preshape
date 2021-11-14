@@ -37,7 +37,7 @@ Description of the design system and component documentation can be found on the
 
 ##### Prerequisites
 
-• [Node](https://nodejs.org/en/) - Either use [nvm use](https://github.com/nvm-sh/nvm) or checkout the tested version inside the [.nvmrc](./nmvrc) file.
+• [Node](https://nodejs.org/en/) - Either use [nvm use](https://github.com/nvm-sh/nvm) or checkout the tested version inside the [.nvmrc](./nmvrc) file
 
 ##### Setup
 
