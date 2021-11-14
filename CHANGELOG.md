@@ -1,3 +1,10 @@
+### [10.1.1](https://github.com/HHogg/preshape/compare/v10.1.0...v10.1.1) (2021-11-14)
+
+
+### Fixes
+
+* **Package:** Oopsie in build structure ([a8d341d](https://github.com/HHogg/preshape/commit/a8d341d2de5d65974d89190a7f25339133128a72))
+
 ## [10.1.0](https://github.com/HHogg/preshape/compare/v10.0.1...v10.1.0) (2021-11-14)
 
 
