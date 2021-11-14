@@ -30,5 +30,4 @@ const TypeLabel = React.forwardRef<
   );
 });
 
-
 export default TypeLabel;

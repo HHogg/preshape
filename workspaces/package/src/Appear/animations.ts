@@ -6,13 +6,19 @@ const defaultTransition: Transition = {
   ease: transitionTimingFunction,
 };
 
-const variants: Record<TypeAnimation, (originX?: number, originY?: number) => {
-  transition?: Transition;
-  variants: {
-    hidden: Variant;
-    visible: Variant;
-  };
-}> = {
+const variants: Record<
+  TypeAnimation,
+  (
+    originX?: number,
+    originY?: number
+  ) => {
+    transition?: Transition;
+    variants: {
+      hidden: Variant;
+      visible: Variant;
+    };
+  }
+> = {
   Expand: () => ({
     transition: defaultTransition,
     variants: {

@@ -111,7 +111,7 @@ export const themeNight = {
   colorAccentShade5: colorAccent2Shade5,
 };
 
-export const themes: Record<TypeTheme, { [key: string]: string }>= {
+export const themes: Record<TypeTheme, { [key: string]: string }> = {
   day: themeDay,
   night: themeNight,
 };

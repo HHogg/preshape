@@ -11,4 +11,4 @@ const KindRendererTypeLiteral = (props: Props) => {
   return <TypeLabel>{isFunction ? 'Function' : 'Object'}</TypeLabel>;
 };
 
-export default KindRendererTypeLiteral
+export default KindRendererTypeLiteral;
