@@ -29,12 +29,6 @@
     opacity: 0.5;
     cursor: default;
   }
-
-  &::before,
-  &::after {
-    content: '';
-    flex: 1 0 auto;
-  }
 }
 
 .Button--x1 {
