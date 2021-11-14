@@ -1,4 +1,3 @@
-// import fs from 'fs';
 import React from 'react';
 import { Editor, EditorProps, TypeEditorLanguage } from 'preshape';
 import Showcase from '../Showcase';
@@ -15,25 +14,16 @@ import 'brace/mode/tsx';
 import 'brace/mode/typescript';
 
 export const snippets: Record<TypeEditorLanguage, string> = {
-  // css: fs.readFileSync(
-  //   __dirname + '/../../../../../package/src/Tab/Tabs.css',
-  //   'utf8'
-  // ),
-  // glsl: fs.readFileSync(__dirname + '/snippets/glsl.glsl', 'utf8'),
-  // html: fs.readFileSync(__dirname + '/../../../index.html', 'utf8'),
-  // javascript: fs.readFileSync(__dirname + '/snippets/javascript.js', 'utf8'),
-  // json: fs.readFileSync(__dirname + '/snippets/json.json', 'utf8'),
-  // jsx: fs.readFileSync(__dirname + '/snippets/jsx.txt', 'utf8'),
-  // markdown: fs.readFileSync(
-  //   __dirname + '/../../../../../../CHANGELOG.md',
-  //   'utf8'
-  // ),
-  // svg: fs.readFileSync(__dirname + '/../../../assets/P-day.svg', 'utf8'),
-  // tsx: fs.readFileSync(__dirname + '/../../Root.tsx', 'utf8'),
-  // typescript: fs.readFileSync(
-  //   __dirname + '/../../../../../package/src/hooks/useResizeObserver.ts',
-  //   'utf8'
-  // ),
+  css: require('bundle-text:../../../../../package/src/Tab/Tabs.css'),
+  glsl: require('bundle-text:./snippets/glsl.txt'),
+  html: require('bundle-text:./snippets/html.txt'),
+  javascript: require('bundle-text:./snippets/javascript.txt'),
+  json: require('bundle-text:./snippets/json.txt'),
+  jsx: require('bundle-text:./snippets/jsx.txt'),
+  markdown: require('bundle-text:../../../../../../README.md'),
+  svg: require('bundle-text:../../../assets/svgs/P-day.svg'),
+  tsx: require('bundle-text:./snippets/tsx.txt'),
+  typescript: require('bundle-text:./snippets/ts.txt'),
 };
 
 const Item: CatalogueItem<{

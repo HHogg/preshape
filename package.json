@@ -20,6 +20,9 @@
     "start": "concurrently \"yarn workspace site run start\" \"yarn workspace preshape run start\""
   },
   "devDependencies": {
+    "@parcel/optimizer-data-url": "^2.0.1",
+    "@parcel/transformer-glsl": "^2.0.1",
+    "@parcel/transformer-inline-string": "^2.0.1",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/commit-analyzer": "^9.0.1",
     "@semantic-release/git": "^10.0.0",
