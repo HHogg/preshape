@@ -1,3 +1,10 @@
+### [10.1.2](https://github.com/HHogg/preshape/compare/v10.1.1...v10.1.2) (2021-11-14)
+
+
+### Fixes
+
+* **Button:** Removed old button alignment fix ([565d3a1](https://github.com/HHogg/preshape/commit/565d3a12b0493008052364a83341953f5808c127))
+
 ### [10.1.1](https://github.com/HHogg/preshape/compare/v10.1.0...v10.1.1) (2021-11-14)
 
 
