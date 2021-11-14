@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { CodeBlock, CodeBlockProps } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -9,7 +9,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Code',
   description: 'A syntax highlighting code block component.',
-  pictogram: require('../../../assets/pictogram-code.svg').default,
+  pictogram: require('../../SVGs/PictogramCode').default,
   type: 'component',
   showcase: {
     Component: (props) => (

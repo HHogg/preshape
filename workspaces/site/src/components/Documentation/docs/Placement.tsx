@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   Box,
   Button,
@@ -28,7 +28,7 @@ const Item: CatalogueItem<{
   name: 'Placement',
   description:
     'A powerful set of components for placing contents around reference nodes. Uses the awesome PopperJS positioning engine. ',
-  pictogram: require('../../../assets/pictogram-placement.svg').default,
+  pictogram: require('../../SVGs/PictogramPlacement').default,
   type: 'component',
   showcase: {
     Component: (props) => (

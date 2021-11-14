@@ -1,13 +1,13 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
 export interface PlacementContentProps extends BoxProps {}
 
-const PlacementContent: React.RefForwardingComponent<
+const PlacementContent: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, PlacementContentProps>
 > = (props, ref) => {
   return <Box {...props} container ref={ref} />;
 };
 
-export default React.forwardRef(PlacementContent);
+export default forwardRef(PlacementContent);

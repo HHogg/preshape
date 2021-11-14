@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
 export interface BulletPointProps extends BoxProps {}
 
-const BulletPoint: React.RefForwardingComponent<
+const BulletPoint: RefForwardingComponent<
   HTMLLIElement,
   Attributes<HTMLLIElement, BulletPointProps>
 > = (props, ref) => {
@@ -16,4 +16,4 @@ const BulletPoint: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(BulletPoint);
+export default forwardRef(BulletPoint);

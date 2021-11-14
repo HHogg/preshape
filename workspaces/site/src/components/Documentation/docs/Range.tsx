@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Icons, InputWrapper, InputAddon, Range, RangeProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
@@ -9,7 +9,7 @@ const Item: CatalogueItem<{
   name: 'Range',
   description:
     'A slider control for selecting a number between a given min and max number.',
-  pictogram: require('../../../assets/pictogram-range.svg').default,
+  pictogram: require('../../SVGs/PictogramRange').default,
   type: 'component',
   showcase: {
     Component: (props) => (

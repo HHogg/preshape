@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Variants } from 'framer-motion';
 import { transitionTimeFast, transitionTimingFunction } from '../variables';
 import Box, { Attributes, BoxProps, TypeTheme } from '../Box/Box';
@@ -51,7 +51,7 @@ export interface ThemeSwitcherProps extends BoxProps {
   theme: TypeTheme;
 }
 
-const ThemeControls: React.RefForwardingComponent<
+const ThemeControls: RefForwardingComponent<
   HTMLLabelElement,
   Attributes<HTMLLabelElement, ThemeSwitcherProps>
 > = (props, ref) => {
@@ -110,4 +110,4 @@ const ThemeControls: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(ThemeControls);
+export default forwardRef(ThemeControls);

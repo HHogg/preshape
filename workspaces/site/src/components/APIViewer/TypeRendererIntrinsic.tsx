@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import TypeLabel from './TypeLabel';
 import { Props as TypeTooltipIntrinsicProps } from './TypeTooltipIntrinsic';
 import TypeTooltipIntrinsicNumber from './TypeTooltipIntrinsicNumber';
@@ -8,7 +8,7 @@ import { Renderer } from './Types';
 import { JSONOutput } from 'typedoc';
 
 const TypeTooltipIntrinsicMap: {
-  [key: string]: React.FC<TypeTooltipIntrinsicProps>;
+  [key: string]: FC<TypeTooltipIntrinsicProps>;
 } = {
   number: TypeTooltipIntrinsicNumber,
   string: TypeTooltipIntrinsicString,

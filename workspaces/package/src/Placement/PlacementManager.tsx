@@ -1,13 +1,21 @@
-import * as React from 'react';
+import React, {
+  createContext,
+  FC,
+  PointerEvent,
+  MouseEvent,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import { Manager } from 'react-popper';
 
 export type TypePlacementTrigger = 'click' | 'hover';
 
-export const PlacementManagerContext = React.createContext<{
+export const PlacementManagerContext = createContext<{
   onClose?: () => void;
-  onPointerEnter?: (event: React.PointerEvent) => void;
-  onPointerLeave?: (event: React.PointerEvent) => void;
-  onClick?: (event: React.PointerEvent) => void;
+  onPointerEnter?: (event: PointerEvent) => void;
+  onPointerLeave?: (event: PointerEvent) => void;
+  onClick?: (event: MouseEvent) => void;
   referenceNode: HTMLElement | null;
   setReferenceNode(referenceNode: HTMLElement | null): void;
   visible?: boolean;
@@ -24,7 +32,7 @@ export interface PlacementManagerProps {
   /**
    * @Ignore
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * The control trigger that activates visibility control by
    * passing the matching event handlers onto the reference
@@ -33,14 +41,10 @@ export interface PlacementManagerProps {
   trigger?: TypePlacementTrigger;
 }
 
-const PlacementManager: React.FC<PlacementManagerProps> = (props) => {
+const PlacementManager: FC<PlacementManagerProps> = (props) => {
   const { trigger, ...rest } = props;
-  const [referenceNode, setReferenceNode] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [visible, setVisible] = React.useState<boolean | undefined>(
-    trigger && false
-  );
+  const [referenceNode, setReferenceNode] = useState<null | HTMLElement>(null);
+  const [visible, setVisible] = useState<boolean | undefined>(trigger && false);
   const onClose = trigger === undefined ? undefined : () => setVisible(false);
   const onPointerEnter =
     trigger === 'hover' ? () => setVisible(true) : undefined;
@@ -48,7 +52,7 @@ const PlacementManager: React.FC<PlacementManagerProps> = (props) => {
     trigger === 'hover' ? () => setVisible(false) : undefined;
   const onClick = trigger === 'click' ? () => setVisible(true) : undefined;
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (trigger === undefined) {
       setVisible(undefined);
     }

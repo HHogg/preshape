@@ -1,14 +1,14 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import { BoxProps } from 'preshape';
-import LogoDay from '../../assets/P-day.svg';
-import LogoNight from '../../assets/P-night.svg';
+import LogoDay from '../SVGs/PDay';
+import LogoNight from '../SVGs/PNight';
 import { RootContext } from '../Root';
 import './Logo.css';
 
 interface Props extends BoxProps {}
 
 const Logo = (props: Props) => {
-  const { theme } = React.useContext(RootContext);
+  const { theme } = useContext(RootContext);
 
   return theme === 'day' ? <LogoDay {...props} /> : <LogoNight {...props} />;
 };

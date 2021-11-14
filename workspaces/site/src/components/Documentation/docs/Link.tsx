@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Link, LinkProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
@@ -9,7 +9,7 @@ const Item: CatalogueItem<{
   name: 'Link',
   description:
     'React Router compatible links (when provided with a "to" destination).',
-  pictogram: require('../../../assets/pictogram-link.svg').default,
+  pictogram: require('../../SVGs/PictogramLink').default,
   type: 'component',
   showcase: {
     Component: (props) => (

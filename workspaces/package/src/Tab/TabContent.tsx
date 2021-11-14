@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
 export interface TabContentProps extends BoxProps {}
 
-const TabContent: React.RefForwardingComponent<
+const TabContent: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, TabContentProps>
 > = (props, ref) => {
@@ -19,4 +19,4 @@ const TabContent: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(TabContent);
+export default forwardRef(TabContent);

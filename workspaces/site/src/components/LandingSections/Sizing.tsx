@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useMatchMedia, Box, Text } from 'preshape';
 import { widthMedium, widthSmall } from '../Root';
 import LandingSection, { Props } from '../Landing/LandingSection';

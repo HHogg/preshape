@@ -1,4 +1,12 @@
-import * as React from 'react';
+import React, {
+  Children,
+  createContext,
+  ReactElement,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import toJsxString from 'react-element-to-jsx-string';
 import {
   CodeBlock,
@@ -11,14 +19,14 @@ import {
 } from 'preshape';
 import { RootContext } from '../Root';
 
-export const ShowcaseContext = React.createContext<{
-  setShowcaseCode: (node: React.ReactNode) => void;
+export const ShowcaseContext = createContext<{
+  setShowcaseCode: (node: ReactNode) => void;
 }>({
   setShowcaseCode: () => {},
 });
 
 const toJsxStringOptions = {
-  displayName: (element: React.ReactElement<any>): string =>
+  displayName: (element: ReactElement<any>): string =>
     element.type.displayName ||
     (element.type.name !== '_default' ? element.type.name : null) || // function name
     (element.type.render && element.type.render.name !== '_default'
@@ -31,28 +39,28 @@ const toJsxStringOptions = {
   functionValue: () => () => {},
 };
 
-const getCodeString = (node: React.ReactNode) =>
-  React.Children.toArray(node)
+const getCodeString = (node: ReactNode) =>
+  Children.toArray(node)
     .map((node) => toJsxString(node, toJsxStringOptions))
     .join('\n');
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   disableCode?: boolean;
 }
 
 const Showcase = ({ children, disableCode }: Props) => {
-  const { onChangeTheme, theme } = React.useContext(RootContext);
-  const [code, setCode] = React.useState(getCodeString(children));
-  const [isIsolatedExample, setIsIsolatedExample] = React.useState(false);
-  const [isCodeExpanded, setIsCodeExpanded] = React.useState(false);
+  const { onChangeTheme, theme } = useContext(RootContext);
+  const [code, setCode] = useState(getCodeString(children));
+  const [isIsolatedExample, setIsIsolatedExample] = useState(false);
+  const [isCodeExpanded, setIsCodeExpanded] = useState(false);
 
-  const setShowcaseCode = (node: React.ReactNode) => {
+  const setShowcaseCode = (node: ReactNode) => {
     setIsIsolatedExample(true);
     setCode(getCodeString(node));
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isIsolatedExample) {
       setCode(getCodeString(children));
     }

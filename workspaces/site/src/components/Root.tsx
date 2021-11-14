@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { createContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useLocalStorage, useTheme, TypeTheme } from 'preshape';
 import Landing from './Landing/Landing';
@@ -8,7 +8,7 @@ export const widthLarge = '1024px';
 export const widthMedium = '900px';
 export const widthSmall = '480px';
 
-export const RootContext = React.createContext<{
+export const RootContext = createContext<{
   onChangeTheme: (theme: TypeTheme) => void;
   theme: TypeTheme;
 }>({

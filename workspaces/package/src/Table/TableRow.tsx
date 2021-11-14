@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
@@ -7,7 +7,7 @@ export interface TableRowProps extends BoxProps {
   active?: boolean;
 }
 
-const TableRow: React.RefForwardingComponent<
+const TableRow: RefForwardingComponent<
   HTMLTableRowElement,
   Attributes<HTMLTableRowElement, TableRowProps>
 > = (props, ref) => {
@@ -28,4 +28,4 @@ const TableRow: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(TableRow);
+export default forwardRef(TableRow);

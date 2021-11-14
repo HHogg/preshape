@@ -1,19 +1,26 @@
-import * as React from 'react';
+import React, {
+  MouseEvent,
+  PointerEvent,
+  FC,
+  ReactNode,
+  Ref,
+  useContext,
+} from 'react';
 import { Reference } from 'react-popper';
 import { PlacementManagerContext } from './PlacementManager';
 
 export type PlacementReferenceChildren = (
   props: {
-    onPointerEnter?: (event: React.PointerEvent) => void;
-    onPointerLeave?: (event: React.PointerEvent) => void;
-    onClick?: (event: React.PointerEvent) => void;
+    onPointerEnter?: (event: PointerEvent) => void;
+    onPointerLeave?: (event: PointerEvent) => void;
+    onClick?: (event: MouseEvent) => void;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ref: React.Ref<any>;
+    ref: Ref<any>;
   },
   state: {
     visible?: boolean;
   }
-) => React.ReactNode;
+) => ReactNode;
 
 export interface PlacementReferenceProps {
   /**
@@ -24,10 +31,10 @@ export interface PlacementReferenceProps {
   children: PlacementReferenceChildren;
 }
 
-const PlacementReference: React.FC<PlacementReferenceProps> = (props) => {
+const PlacementReference: FC<PlacementReferenceProps> = (props) => {
   const { children, ...rest } = props;
   const { onClick, onPointerEnter, onPointerLeave, setReferenceNode, visible } =
-    React.useContext(PlacementManagerContext);
+    useContext(PlacementManagerContext);
 
   return (
     <Reference {...rest} innerRef={setReferenceNode}>

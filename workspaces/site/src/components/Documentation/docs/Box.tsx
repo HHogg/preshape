@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import omit from 'lodash.omit';
 import { Box, BoxProps } from 'preshape';
 import Showcase from '../Showcase';
@@ -24,7 +24,7 @@ const Item: CatalogueItem<{
   name: 'Box',
   description:
     'The core component that is the end of the chain for all other components. It provides general utility behaviour, flexing and styling.',
-  pictogram: require('../../../assets/pictogram-base.svg').default,
+  pictogram: require('../../SVGs/PictogramBase').default,
   type: 'component',
   showcase: {
     Component: (props) => (

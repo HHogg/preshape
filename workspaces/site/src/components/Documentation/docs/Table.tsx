@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
   Table,
   TableProps,
@@ -46,11 +46,11 @@ const Item: CatalogueItem<{
   name: 'Table',
   description:
     'Standard table layout components. Useful for presenting, comparing and sorting raw tabular data',
-  pictogram: require('../../../assets/pictogram-table.svg').default,
+  pictogram: require('../../SVGs/PictogramTable').default,
   type: 'component',
   showcase: {
     Component: (props) => {
-      const [[sortIndex, sortDirection], setState] = React.useState([1, -1]);
+      const [[sortIndex, sortDirection], setState] = useState([1, -1]);
 
       const sortedData = data.sort((a, b) => {
         if (sortIndex === 0) {

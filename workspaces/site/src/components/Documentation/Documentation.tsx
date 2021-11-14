@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Modal, ModalBody, ModalHeader, Text } from 'preshape';
 import { widthMedium } from '../Root';
 import docs from './docs';
 
-const APIViewer = React.lazy(() => import('../APIViewer/APIViewer'));
+const APIViewer = lazy(() => import('../APIViewer/APIViewer'));
 
 const getDocItem = (id: string) => {
   for (const i in docs) {
@@ -25,7 +25,7 @@ const Documentation = () => {
   }
 
   const item = getDocItem(id.toLocaleLowerCase());
-  const [state, setState] = React.useState(
+  const [state, setState] = useState(
     item && item.showcase ? item.showcase.state || {} : {}
   );
 
@@ -64,7 +64,7 @@ const Documentation = () => {
         )}
 
         {item.apis && (
-          <React.Suspense
+          <Suspense
             fallback={
               <Box alignChildren="middle" flex="vertical" grow>
                 <Text strong>Grabbing the documentation</Text>
@@ -77,7 +77,7 @@ const Documentation = () => {
               onStateChange={setState}
               state={state}
             />
-          </React.Suspense>
+          </Suspense>
         )}
       </ModalBody>
     </Modal>

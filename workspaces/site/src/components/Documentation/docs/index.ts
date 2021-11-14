@@ -1,3 +1,4 @@
+import { ElementType } from 'react';
 import { APIRecord } from '../../APIViewer/Types';
 
 export interface CatalogueItem<S extends {} = {}> {
@@ -6,7 +7,7 @@ export interface CatalogueItem<S extends {} = {}> {
   pictogram?: string;
   type: 'component' | 'hook';
   showcase?: {
-    Component: React.ElementType<S>;
+    Component: ElementType<S>;
     state?: S;
   };
   apis?: APIRecord[];

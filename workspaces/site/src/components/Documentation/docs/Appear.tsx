@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Appear, AppearProps, Box } from 'preshape';
 import Showcase from '../Showcase';
 import ThemeIcon from '../../ThemeIcon/ThemeIcon';
@@ -10,15 +10,15 @@ const Item: CatalogueItem<{
   name: 'Appear',
   description:
     'Using framer-motion, the Appear component provides a variety of ways to make parts of the UI appear in style.',
-  pictogram: require('../../../assets/pictogram-appear.svg').default,
+  pictogram: require('../../SVGs/PictogramAppear').default,
   type: 'component',
   showcase: {
     Component: (props) => {
-      const [animation, setAnimation] = React.useState(props.Appear.animation);
-      const [visible, setVisible] = React.useState(false);
-      const ref = React.useRef<number>();
+      const [animation, setAnimation] = useState(props.Appear.animation);
+      const [visible, setVisible] = useState(false);
+      const ref = useRef<number>();
 
-      React.useEffect(() => {
+      useEffect(() => {
         setVisible(false);
 
         ref.current = window.setTimeout(() => {

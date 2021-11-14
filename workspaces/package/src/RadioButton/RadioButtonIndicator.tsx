@@ -1,8 +1,12 @@
-import * as React from 'react';
+import React, {
+  forwardRef,
+  InputHTMLAttributes,
+  RefForwardingComponent,
+} from 'react';
 
-const RadioButtonIndicator: React.RefForwardingComponent<
+const RadioButtonIndicator: RefForwardingComponent<
   HTMLInputElement,
-  React.InputHTMLAttributes<HTMLInputElement>
+  InputHTMLAttributes<HTMLInputElement>
 > = (props, ref) => {
   return (
     <div className="RadioButton">
@@ -12,4 +16,4 @@ const RadioButtonIndicator: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(RadioButtonIndicator);
+export default forwardRef(RadioButtonIndicator);

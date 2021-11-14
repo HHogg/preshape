@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
-const Icon: React.RefForwardingComponent<
+const Icon: RefForwardingComponent<
   SVGSVGElement,
   Attributes<
     Omit<SVGSVGElement, 'display'>,
@@ -39,4 +39,4 @@ const Icon: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Icon);
+export default forwardRef(Icon);

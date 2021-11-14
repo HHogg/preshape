@@ -7,7 +7,7 @@ const landingSections: {
   id: string;
   title: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Component: React.ReactType<any>;
+  Component: ReactType<any>;
 }[] = [
   {
     id: 'Colors',

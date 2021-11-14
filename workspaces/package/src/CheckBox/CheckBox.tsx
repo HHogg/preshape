@@ -1,12 +1,10 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes, TypeSize } from '../Box/Box';
 import CheckBoxIndicator from './CheckBoxIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';
 
 export interface CheckBoxProps {
-  /** Contents that is rendered next to the indicator */
-  children?: React.ReactNode;
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
   /** @Ignore */
@@ -19,7 +17,7 @@ export interface CheckBoxProps {
   paddingVertical?: TypeSize;
 }
 
-const CheckBox: React.RefForwardingComponent<
+const CheckBox: RefForwardingComponent<
   HTMLInputElement,
   Attributes<HTMLInputElement, CheckBoxProps>
 > = (props, ref) => {
@@ -48,4 +46,4 @@ const CheckBox: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(CheckBox);
+export default forwardRef(CheckBox);

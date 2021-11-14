@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Grid, Link, Text } from 'preshape';
 import docs from '../Documentation/docs';
 import LandingSection, { Props } from '../Landing/LandingSection';

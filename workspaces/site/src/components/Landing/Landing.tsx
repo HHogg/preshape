@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { themes, Box, Image, Link, Text, ThemeSwitcher } from 'preshape';
 import { RootContext, widthSmall } from '../Root';
@@ -8,7 +8,7 @@ import LandingSection from './LandingSection';
 import Logo from '../Logo/Logo';
 
 const Landing = () => {
-  const { onChangeTheme, theme } = React.useContext(RootContext);
+  const { onChangeTheme, theme } = useContext(RootContext);
 
   return (
     <Box backgroundColor="background-shade-1" padding="x6">

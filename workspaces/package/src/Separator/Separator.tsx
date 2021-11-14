@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Separator.css';
 
 export interface SeparatorProps extends BoxProps {}
 
-const Separator: React.RefForwardingComponent<
+const Separator: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, SeparatorProps>
 > = (props, ref) => {
@@ -21,4 +21,4 @@ const Separator: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Separator);
+export default forwardRef(Separator);

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
   BlockQuote,
   Icons,
@@ -24,11 +24,11 @@ const Item: CatalogueItem<{
   name: 'Tabs',
   description:
     'Tab organisational components, useful for laying out related but nonconcurrent parts of the UI.',
-  pictogram: require('../../../assets/pictogram-tabs.svg').default,
+  pictogram: require('../../SVGs/PictogramTabs').default,
   type: 'component',
   showcase: {
     Component: (props) => {
-      const [activeTab, setActiveTab] = React.useState(0);
+      const [activeTab, setActiveTab] = useState(0);
 
       return (
         <Showcase>

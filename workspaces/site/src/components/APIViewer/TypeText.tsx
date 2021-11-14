@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Text } from 'preshape';
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   isArray?: boolean;
 }
 

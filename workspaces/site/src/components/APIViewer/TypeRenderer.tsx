@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import * as React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Type, TypeKind, TypeKindMap } from 'typedoc';
 import { Renderer } from './Types';
 import TypeRendererIntrinsic from './TypeRendererIntrinsic';
@@ -8,8 +8,8 @@ import TypeRendererReflection from './TypeRendererReflection';
 import TypeRendererLiteral from './TypeRendererLiteral';
 import TypeRendererUnion from './TypeRendererUnion';
 
-const TypeMap: {
-  [K in TypeKind]: React.FunctionComponent<Renderer & TypeKindMap[K]>;
+const typeMap: {
+  [K in TypeKind]: FunctionComponent<Renderer & TypeKindMap[K]>;
 } = {
   intrinsic: TypeRendererIntrinsic,
   literal: TypeRendererLiteral,
@@ -21,7 +21,7 @@ const TypeMap: {
 interface Props extends Renderer, Type {}
 
 const TypeRenderer = (props: Props) => {
-  const Renderer = TypeMap[props.type];
+  const Renderer = typeMap[props.type];
 
   if (!Renderer) {
     console.log(`No TypeRenderer for '${props.type}'`);

@@ -8,10 +8,10 @@ module.exports = {
   template: ({ template }, _, { componentName, props, jsx }) => {
     const typeScriptTpl = template.smart({ plugins: ['jsx', 'typescript'] });
     return typeScriptTpl.ast`/** AUTO GENERATED **/
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
-const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGElement, 'display'>, BoxProps & { size?: string }>> = (props, ref) => {
+const Icon: RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGElement, 'display'>, BoxProps & { size?: string }>> = (props, ref) => {
   const { size = '1rem', ...rest } = props;
 
   return (
@@ -27,7 +27,7 @@ const Icon: React.RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGEl
   );
 };
 
-export default React.forwardRef(Icon);
+export default forwardRef(Icon);
 `;
   },
   index: true,

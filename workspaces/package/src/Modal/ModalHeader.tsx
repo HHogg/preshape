@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent, useContext } from 'react';
 import { ModalContext } from './Modal';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import * as Icons from '../Icon';
@@ -18,12 +18,12 @@ export interface ModalHeaderProps extends BoxProps {
   closeIconSize?: string;
 }
 
-const ModalHeader: React.RefForwardingComponent<
+const ModalHeader: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, ModalHeaderProps>
 > = (props, ref) => {
   const { children, closeIconSize = '24px', ...rest } = props;
-  const { onClose } = React.useContext(ModalContext);
+  const { onClose } = useContext(ModalContext);
 
   return (
     <Box
@@ -52,4 +52,4 @@ const ModalHeader: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(ModalHeader);
+export default forwardRef(ModalHeader);

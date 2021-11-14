@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import Box, { Attributes, BoxProps, TypeSize } from '../Box/Box';
 
@@ -16,7 +16,7 @@ export interface ButtonsProps extends BoxProps {
   joined?: boolean;
 }
 
-const Buttons: React.RefForwardingComponent<
+const Buttons: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, ButtonsProps>
 > = (props, ref) => {
@@ -37,4 +37,4 @@ const Buttons: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Buttons);
+export default forwardRef(Buttons);

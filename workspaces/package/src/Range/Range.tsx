@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Range.css';
 
 export interface RangeProps extends BoxProps {}
 
-const Range: React.RefForwardingComponent<
+const Range: RefForwardingComponent<
   HTMLInputElement,
   Attributes<HTMLInputElement, RangeProps>
 > = (props, ref) => {
@@ -30,4 +30,4 @@ const Range: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Range);
+export default forwardRef(Range);

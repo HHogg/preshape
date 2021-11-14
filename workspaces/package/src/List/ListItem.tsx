@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
 export interface ListItemProps extends BoxProps {
@@ -10,7 +10,7 @@ export interface ListItemProps extends BoxProps {
   separator?: string;
 }
 
-const ListItem: React.RefForwardingComponent<
+const ListItem: RefForwardingComponent<
   HTMLLIElement,
   Attributes<HTMLLIElement, ListItemProps>
 > = (props, ref) => {
@@ -31,4 +31,4 @@ const ListItem: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(ListItem);
+export default forwardRef(ListItem);

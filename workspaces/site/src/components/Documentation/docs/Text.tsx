@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Text, TextProps } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -9,7 +9,7 @@ const Item: CatalogueItem<{
   name: 'Text',
   description:
     'The core component for styling text. Instead of specifying various elements, a suitable and semantic element will be determined from the props.',
-  pictogram: require('../../../assets/pictogram-text.svg').default,
+  pictogram: require('../../SVGs/PictogramText').default,
   type: 'component',
   showcase: {
     Component: () => (

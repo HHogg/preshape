@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { sizeX3Px } from '../variables';
 import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
@@ -6,7 +6,7 @@ import './Label.css';
 
 export interface LabelProps extends TextProps {}
 
-const Label: React.RefForwardingComponent<
+const Label: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, LabelProps>
 > = (props, ref) => {
@@ -37,4 +37,4 @@ const Label: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Label);
+export default forwardRef(Label);

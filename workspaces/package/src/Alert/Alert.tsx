@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Alert.css';
@@ -13,7 +13,7 @@ export interface AlertProps extends BoxProps {
   fill?: boolean;
 }
 
-const Alert: React.RefForwardingComponent<
+const Alert: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, AlertProps>
 > = (props, ref) => {
@@ -40,4 +40,4 @@ const Alert: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Alert);
+export default forwardRef(Alert);

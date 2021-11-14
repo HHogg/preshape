@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   Box,
   Button,
@@ -23,7 +23,7 @@ const Item: CatalogueItem<{
   name: 'Button',
   description:
     'A standard clickable button with a variety of uses to trigger some sort of action.',
-  pictogram: require('../../../assets/pictogram-button.svg').default,
+  pictogram: require('../../SVGs/PictogramButton').default,
   type: 'component',
   showcase: {
     Component: (props: Props) => (

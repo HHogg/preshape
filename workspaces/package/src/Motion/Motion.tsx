@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef } from 'react';
 import { motion, MotionProps } from 'framer-motion';
 import omit from 'lodash.omit';
 import Box, { Attributes, BoxProps } from '../Box/Box';
@@ -18,7 +18,7 @@ const motionProps: (keyof MotionProps | 'positionTransition')[] = [
 ];
 
 const Motion = motion<MotionsProps>(
-  React.forwardRef<Element, MotionsProps>(function Motion(props, ref) {
+  forwardRef<Element, MotionsProps>(function Motion(props, ref) {
     return <Box {...(omit(props, motionProps) as BoxProps)} ref={ref} />;
   })
 );

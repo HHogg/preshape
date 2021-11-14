@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent, useContext } from 'react';
 import { InputWrapperContext } from '../Input/InputWrapper';
 import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
@@ -6,7 +6,7 @@ import './TextArea.css';
 
 export interface TextAreaProps extends TextProps {}
 
-const TextArea: React.RefForwardingComponent<
+const TextArea: RefForwardingComponent<
   HTMLTextAreaElement,
   Attributes<HTMLTextAreaElement, TextAreaProps>
 > = (props, ref) => {
@@ -22,7 +22,7 @@ const TextArea: React.RefForwardingComponent<
     console.error('Preshape [TextArea]: Pass "disabled" to TextAreaWrapper');
   }
 
-  const { disabled } = React.useContext(InputWrapperContext);
+  const { disabled } = useContext(InputWrapperContext);
 
   return (
     <Text
@@ -39,4 +39,4 @@ const TextArea: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(TextArea);
+export default forwardRef(TextArea);

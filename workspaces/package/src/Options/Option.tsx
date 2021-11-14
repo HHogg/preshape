@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes } from '../Box/Box';
 import CheckBox from '../CheckBox/CheckBox';
 import RadioButton from '../RadioButton/RadioButton';
@@ -11,7 +11,7 @@ export interface OptionProps {
   multiselect?: boolean;
 }
 
-const Option: React.RefForwardingComponent<
+const Option: RefForwardingComponent<
   HTMLInputElement,
   Attributes<HTMLInputElement, OptionProps>
 > = (props, ref) => {
@@ -24,4 +24,4 @@ const Option: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Option);
+export default forwardRef(Option);

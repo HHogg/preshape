@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { JSONOutput } from 'typedoc';
 import { Buttons, Label, TableCell, TableRow, Text } from 'preshape';
 import { Renderer } from './Types';

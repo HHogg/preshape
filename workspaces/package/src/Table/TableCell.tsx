@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 
@@ -7,7 +7,7 @@ export interface TableCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableCell: React.RefForwardingComponent<
+const TableCell: RefForwardingComponent<
   HTMLTableDataCellElement,
   Attributes<HTMLTableDataCellElement, TableCellProps>
 > = (props, ref) => {
@@ -31,4 +31,4 @@ const TableCell: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(TableCell);
+export default forwardRef(TableCell);

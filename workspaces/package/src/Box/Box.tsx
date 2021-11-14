@@ -1,15 +1,18 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import * as React from 'react';
+import {
+  createElement,
+  forwardRef,
+  AllHTMLAttributes,
+  RefForwardingComponent,
+  SVGAttributes,
+} from 'react';
 import classnames from 'classnames';
 import './Box.css';
 
 export type Attributes<E, P = {}> = P &
-  Omit<
-    E extends SVGElement ? React.SVGAttributes<E> : React.AllHTMLAttributes<E>,
-    keyof P
-  >;
+  Omit<E extends SVGElement ? SVGAttributes<E> : AllHTMLAttributes<E>, keyof P>;
 
 export type TypeColor =
   | 'black'
@@ -180,131 +183,132 @@ export interface BoxProps {
 }
 
 type ReactElementProps = Omit<
-  React.AllHTMLAttributes<Element> & React.SVGAttributes<Element>,
+  AllHTMLAttributes<Element> & SVGAttributes<Element>,
   'crossOrigin' | 'wrap'
 >;
 
-const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
-  (props, ref) => {
-    const {
-      absolute,
-      alignChildren,
-      alignChildrenHorizontal = alignChildren,
-      alignChildrenVertical = alignChildren,
-      alignSelf,
-      backgroundColor,
-      basis,
-      borderBottom,
-      borderColor,
-      borderLeft,
-      borderRadius,
-      borderRight,
-      borderSize,
-      borderTop,
-      children,
-      className,
-      clickable,
-      container,
-      display,
-      elevate,
-      fixed,
-      flex,
-      gap,
-      grow,
-      height,
-      maxHeight,
-      maxWidth,
-      minWidth,
-      minHeight,
-      overflow,
-      padding,
-      paddingHorizontal = padding,
-      paddingVertical = padding,
-      margin,
-      reverse,
-      shrink,
-      style,
-      tag,
-      textColor,
-      theme,
-      transitionDuration = 'base',
-      transitionProperty,
-      width,
-      wrap,
-      zIndex,
-      ...rest
-    } = props;
+const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
+  props,
+  ref
+) => {
+  const {
+    absolute,
+    alignChildren,
+    alignChildrenHorizontal = alignChildren,
+    alignChildrenVertical = alignChildren,
+    alignSelf,
+    backgroundColor,
+    basis,
+    borderBottom,
+    borderColor,
+    borderLeft,
+    borderRadius,
+    borderRight,
+    borderSize,
+    borderTop,
+    children,
+    className,
+    clickable,
+    container,
+    display,
+    elevate,
+    fixed,
+    flex,
+    gap,
+    grow,
+    height,
+    maxHeight,
+    maxWidth,
+    minWidth,
+    minHeight,
+    overflow,
+    padding,
+    paddingHorizontal = padding,
+    paddingVertical = padding,
+    margin,
+    reverse,
+    shrink,
+    style,
+    tag,
+    textColor,
+    theme,
+    transitionDuration = 'base',
+    transitionProperty,
+    width,
+    wrap,
+    zIndex,
+    ...rest
+  } = props;
 
-    const border = borderTop || borderRight || borderBottom || borderLeft;
-    const isPredefinedBorderRadius =
-      borderRadius === 'full' ||
-      borderRadius === 'x1' ||
-      borderRadius === 'x2' ||
-      borderRadius === 'x3';
+  const border = borderTop || borderRight || borderBottom || borderLeft;
+  const isPredefinedBorderRadius =
+    borderRadius === 'full' ||
+    borderRadius === 'x1' ||
+    borderRadius === 'x2' ||
+    borderRadius === 'x3';
 
-    const classes = classnames(
-      'Box',
-      {
-        'Box--border': border,
-        'Box--border-top': borderTop,
-        'Box--border-right': borderRight,
-        'Box--border-bottom': borderBottom,
-        'Box--border-left': borderLeft,
-        'Box--clickable': clickable,
-        'Box--container': container,
-        'Box--elevate': elevate,
-        'Box--flex-reverse': reverse,
-        'Box--flex-wrap': wrap,
-        'Box--max-width': maxWidth,
-        [`Box--absolute-${absolute}`]: absolute,
-        [`Box--background-color-${backgroundColor}`]: backgroundColor,
-        [`Box--border-color-${borderColor}`]: borderColor,
-        [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
-        [`Box--border-size-${borderSize}`]: borderSize,
-        [`Box--display-${display}`]: display,
-        [`Box--fixed-${fixed}`]: fixed,
-        [`Box--flex-${flex}`]: flex,
-        [`Box--flex-align-horz-${alignChildrenHorizontal}`]:
-          alignChildrenHorizontal,
-        [`Box--flex-align-self-${alignSelf}`]: alignSelf,
-        [`Box--flex-align-vert-${alignChildrenVertical}`]:
-          alignChildrenVertical,
-        [`Box--flex-gap-${gap}`]: gap,
-        [`Box--margin-${margin}`]: margin,
-        [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
-        [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
-        [`Box--text-color-${textColor}`]: textColor,
-        [`Box--transition-${transitionDuration}`]: transitionProperty,
-        [`Theme--${theme}`]: theme,
+  const classes = classnames(
+    'Box',
+    {
+      'Box--border': border,
+      'Box--border-top': borderTop,
+      'Box--border-right': borderRight,
+      'Box--border-bottom': borderBottom,
+      'Box--border-left': borderLeft,
+      'Box--clickable': clickable,
+      'Box--container': container,
+      'Box--elevate': elevate,
+      'Box--flex-reverse': reverse,
+      'Box--flex-wrap': wrap,
+      'Box--max-width': maxWidth,
+      [`Box--absolute-${absolute}`]: absolute,
+      [`Box--background-color-${backgroundColor}`]: backgroundColor,
+      [`Box--border-color-${borderColor}`]: borderColor,
+      [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
+      [`Box--border-size-${borderSize}`]: borderSize,
+      [`Box--display-${display}`]: display,
+      [`Box--fixed-${fixed}`]: fixed,
+      [`Box--flex-${flex}`]: flex,
+      [`Box--flex-align-horz-${alignChildrenHorizontal}`]:
+        alignChildrenHorizontal,
+      [`Box--flex-align-self-${alignSelf}`]: alignSelf,
+      [`Box--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
+      [`Box--flex-gap-${gap}`]: gap,
+      [`Box--margin-${margin}`]: margin,
+      [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
+      [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
+      [`Box--text-color-${textColor}`]: textColor,
+      [`Box--transition-${transitionDuration}`]: transitionProperty,
+      [`Theme--${theme}`]: theme,
+    },
+    className
+  );
+
+  return createElement(
+    tag || 'div',
+    {
+      ...rest,
+      className: classes,
+      ref: ref,
+      style: {
+        borderRadius: isPredefinedBorderRadius ? undefined : borderRadius,
+        flexBasis: basis,
+        flexGrow: grow === true ? '1' : grow,
+        flexShrink: shrink === true ? '1' : shrink,
+        height: height,
+        maxHeight: maxHeight,
+        minHeight: minHeight,
+        maxWidth: maxWidth,
+        minWidth: minWidth,
+        overflow: overflow,
+        transitionProperty: transitionProperty,
+        width: width,
+        zIndex: zIndex,
+        ...style,
       },
-      className
-    );
+    },
+    children
+  );
+};
 
-    return React.createElement(
-      tag || 'div',
-      {
-        ...rest,
-        className: classes,
-        ref: ref,
-        style: {
-          borderRadius: isPredefinedBorderRadius ? undefined : borderRadius,
-          flexBasis: basis,
-          flexGrow: grow === true ? '1' : grow,
-          flexShrink: shrink === true ? '1' : shrink,
-          height: height,
-          maxHeight: maxHeight,
-          minHeight: minHeight,
-          maxWidth: maxWidth,
-          minWidth: minWidth,
-          overflow: overflow,
-          transitionProperty: transitionProperty,
-          width: width,
-          zIndex: zIndex,
-          ...style,
-        },
-      },
-      children
-    );
-  };
-
-export default React.forwardRef(Box);
+export default forwardRef(Box);

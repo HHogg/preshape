@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Attributes, Box, BoxProps, Text } from 'preshape';
 import { widthMedium } from '../Root';
 

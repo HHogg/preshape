@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import Box, { Attributes, BoxProps, TypeSize } from '../Box/Box';
 import './Grid.css';
@@ -24,7 +24,7 @@ export interface GridProps extends BoxProps {
   rowSize?: string | 'max-content' | 'min-content';
 }
 
-const Grid: React.RefForwardingComponent<
+const Grid: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, GridProps>
 > = (props, ref) => {
@@ -65,4 +65,4 @@ const Grid: React.RefForwardingComponent<
   return <Box {...rest} className={classes} ref={ref} style={style} />;
 };
 
-export default React.forwardRef(Grid);
+export default forwardRef(Grid);

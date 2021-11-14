@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { getByModuleAndName } from './documentation';
 import { JSONOutput } from 'typedoc';
 import { APIRecord, RendererContainer } from './Types';
@@ -12,7 +12,7 @@ const ApiViewer = (props: Props) => {
   const { apis, onStateChange, state } = props;
 
   return (
-    <React.Fragment>
+    <>
       {apis
         .map(
           (api) =>
@@ -33,7 +33,7 @@ const ApiViewer = (props: Props) => {
             state={state && state[rename || name]}
           />
         ))}
-    </React.Fragment>
+    </>
   );
 };
 

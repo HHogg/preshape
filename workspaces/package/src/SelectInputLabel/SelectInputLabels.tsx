@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import './SelectInputLabels.css';
 
 export interface SelectInputLabelsProps extends BoxProps {}
 
-const BulletPoints: React.RefForwardingComponent<
+const BulletPoints: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, SelectInputLabelsProps>
 > = (props, ref) => {
@@ -13,4 +13,4 @@ const BulletPoints: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(BulletPoints);
+export default forwardRef(BulletPoints);

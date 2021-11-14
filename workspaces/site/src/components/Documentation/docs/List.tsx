@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { List, ListProps, ListItem, ListItemProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
@@ -10,7 +10,7 @@ const Item: CatalogueItem<{
   name: 'List',
   description:
     'Inline listing component, useful for separating out UI actions and a short list of options.',
-  pictogram: require('../../../assets/pictogram-list.svg').default,
+  pictogram: require('../../SVGs/PictogramList').default,
   type: 'component',
   showcase: {
     Component: (props) => (

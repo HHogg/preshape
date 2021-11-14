@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, ReactNode, RefForwardingComponent } from 'react';
 import { Attributes, TypeSize } from '../Box/Box';
 import RadioButtonIndicator from './RadioButtonIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
@@ -6,7 +6,7 @@ import './RadioButton.css';
 
 export interface RadioButtonProps {
   /** Contents that is rendered next to the indicator */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
   /** @Ignore */
@@ -19,7 +19,7 @@ export interface RadioButtonProps {
   paddingVertical?: TypeSize;
 }
 
-const RadioButton: React.RefForwardingComponent<
+const RadioButton: RefForwardingComponent<
   HTMLInputElement,
   Attributes<HTMLInputElement, RadioButtonProps>
 > = (props, ref) => {
@@ -48,4 +48,4 @@ const RadioButton: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(RadioButton);
+export default forwardRef(RadioButton);

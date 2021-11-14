@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, MouseEvent, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import { Attributes, TypeSize } from '../Box/Box';
@@ -63,7 +63,7 @@ const sizePaddingMap: Record<
   },
 };
 
-const Button: React.RefForwardingComponent<
+const Button: RefForwardingComponent<
   HTMLButtonElement,
   Attributes<HTMLButtonElement, ButtonProps>
 > = (props, ref) => {
@@ -97,9 +97,9 @@ const Button: React.RefForwardingComponent<
   const originalOnClick = rest.onClick;
 
   if (to) {
-    rest.onClick = (event: React.MouseEvent<any>) => {
+    rest.onClick = (event: MouseEvent<any>) => {
       if (originalOnClick) originalOnClick(event);
-      internalOnClick(event as React.MouseEvent<HTMLAnchorElement>);
+      internalOnClick(event as MouseEvent<HTMLAnchorElement>);
     };
   }
 
@@ -122,4 +122,4 @@ const Button: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Button);
+export default forwardRef(Button);

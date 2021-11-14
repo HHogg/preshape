@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes } from '../Box/Box';
 import SelectInputLabels, {
   SelectInputLabelsProps,
@@ -6,11 +6,11 @@ import SelectInputLabels, {
 
 export interface OptionsProps extends SelectInputLabelsProps {}
 
-const Options: React.RefForwardingComponent<
+const Options: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, OptionsProps>
 > = (props, ref) => {
   return <SelectInputLabels {...props} ref={ref} />;
 };
 
-export default React.forwardRef(Options);
+export default forwardRef(Options);

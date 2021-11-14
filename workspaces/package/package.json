@@ -9,6 +9,7 @@
   "main": "lib/cjs/index.js",
   "esnext": "lib/esn/index.js",
   "typings": "lib/cjs/index.d.ts",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "build": "yarn build:icons && yarn build:docs && rm -rf lib && yarn build:cjs && yarn build:esn",
     "build:css": "postcss src/{*.css,**/*.css} --base src",
@@ -43,6 +44,10 @@
     "@types/lodash.omit": "^4.5.6",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
+    "postcss-preset-env": "^6.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.0.2"

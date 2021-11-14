@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, HTMLAttributes } from 'react';
 import { Box, Button, ButtonProps, Icons } from 'preshape';
 import TypeText from './TypeText';
 
@@ -7,9 +7,9 @@ interface Props extends ButtonProps {
   isArray?: boolean;
 }
 
-const TypeLabel = React.forwardRef<
+const TypeLabel = forwardRef<
   HTMLButtonElement,
-  Props & React.HTMLAttributes<HTMLButtonElement>
+  Props & HTMLAttributes<HTMLButtonElement>
 >(function TypeLabel(props, ref) {
   const { children, hasInfo, isArray, ...rest } = props;
 

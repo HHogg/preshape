@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
 /**
@@ -8,7 +8,7 @@ import Box, { Attributes, BoxProps } from '../Box/Box';
  */
 export interface ModalBodyProps extends BoxProps {}
 
-const ModalBody: React.RefForwardingComponent<
+const ModalBody: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, ModalBodyProps>
 > = (props, ref) => {
@@ -24,4 +24,4 @@ const ModalBody: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(ModalBody);
+export default forwardRef(ModalBody);

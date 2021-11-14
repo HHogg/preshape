@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Box, Code, Grid, GridItem, Icons, Link, Text } from 'preshape';
 import LandingSection, { Props } from '../Landing/LandingSection';
 
 const IconsSection = (props: Props) => {
-  const [showAll, setShowAll] = React.useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   return (
     <LandingSection {...props}>

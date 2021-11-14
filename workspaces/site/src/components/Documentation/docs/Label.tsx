@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Label, LabelProps, Labels, LabelsProps } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
@@ -10,7 +10,7 @@ const Item: CatalogueItem<{
   name: 'Labels',
   description:
     'Keyword highlighting component, useful for giving specific data emphasis.',
-  pictogram: require('../../../assets/pictogram-labels.svg').default,
+  pictogram: require('../../SVGs/PictogramLabels').default,
   type: 'component',
   showcase: {
     Component: (props) => (

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes } from '../Box/Box';
 import InputWrapper, { InputWrapperProps } from '../Input/InputWrapper';
 
@@ -15,11 +15,11 @@ export interface TextAreaWrapperProps extends InputWrapperProps {
   label?: string;
 }
 
-const TextAreaWrapper: React.RefForwardingComponent<
+const TextAreaWrapper: RefForwardingComponent<
   HTMLLabelElement,
   Attributes<HTMLLabelElement, TextAreaWrapperProps>
 > = (props, ref) => {
   return <InputWrapper {...props} ref={ref} />;
 };
 
-export default React.forwardRef(TextAreaWrapper);
+export default forwardRef(TextAreaWrapper);

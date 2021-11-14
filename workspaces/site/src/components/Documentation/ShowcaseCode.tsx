@@ -1,12 +1,14 @@
-import * as React from 'react';
+import React, { PropsWithChildren, useContext, useEffect } from 'react';
 import { ShowcaseContext } from './Showcase';
 
-export default ({ children }: React.PropsWithChildren<{}>) => {
-  const { setShowcaseCode } = React.useContext(ShowcaseContext);
+const ShowcaseCode = ({ children }: PropsWithChildren<{}>) => {
+  const { setShowcaseCode } = useContext(ShowcaseContext);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setShowcaseCode(children);
   }, []);
 
-  return children as JSX.Element;
+  return <>{children}</>;
 };
+
+export default ShowcaseCode;

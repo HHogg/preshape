@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import './Input.css';
 
 export interface InputAddonProps extends BoxProps {}
 
-const InputAddon: React.RefForwardingComponent<
+const InputAddon: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, InputAddonProps>
 > = (props, ref) => {
@@ -20,4 +20,4 @@ const InputAddon: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(InputAddon);
+export default forwardRef(InputAddon);

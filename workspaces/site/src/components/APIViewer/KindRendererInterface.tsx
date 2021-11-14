@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { JSONOutput } from 'typedoc';
 import { RendererContainer } from './Types';
 import TypePropTable from './TypePropTable';

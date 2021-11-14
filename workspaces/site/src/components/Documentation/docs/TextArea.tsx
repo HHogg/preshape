@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   TextArea,
   TextAreaProps,
@@ -14,7 +14,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'TextArea',
   description: 'Standard multi line textarea input for data collection.',
-  pictogram: require('../../../assets/pictogram-textarea.svg').default,
+  pictogram: require('../../SVGs/PictogramTextarea').default,
   type: 'component',
   showcase: {
     Component: (props) => (

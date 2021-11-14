@@ -3,21 +3,24 @@
   "version": "0.0.0",
   "description": "preshape site",
   "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "build": "rm -rf public && parcel build src/index.html -d public && react-snap --crawl false",
-    "start": "parcel src/index.dev.html --port 4000 -d dist --no-cache --no-autoinstall"
+    "build": "rm -rf public && parcel build src/index.html && react-snap --crawl false",
+    "build:svgs": "yarn svgr -d ./src/components/SVGs ./src/assets/svgs --ext tsx --config-file .svgrrc.js",
+    "start": "parcel src/index.dev.html --port 4000"
   },
   "devDependencies": {
-    "@svgr/parcel-plugin-svgr": "^5.0.1",
+    "@svgr/cli": "^5.5.0",
     "@types/classnames": "*",
     "@types/lodash.omit": "^4.5.6",
     "@types/react": "*",
     "@types/react-dom": "*",
-    "autoprefixer": "^9.4.10",
+    "autoprefixer": "^10.4.0",
     "classnames": "^2.2.5",
     "lodash.omit": "^4.5.0",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-html-externals": "^0.2.0",
+    "parcel": "^2.0.1",
+    "postcss": "^8.3.11",
+    "postcss-preset-env": "^6.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-element-to-jsx-string": "^14.2.0",
@@ -30,7 +33,7 @@
     "include": [
       "/"
     ],
-    "source": "public",
+    "source": "dist",
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": false

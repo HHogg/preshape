@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import * as React from 'react';
+import React, { forwardRef, useContext, RefForwardingComponent } from 'react';
 import Box, { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './Input.css';
@@ -9,7 +9,7 @@ export interface InputProps extends TextProps {
   size?: 'x1' | 'x2';
 }
 
-const Input: React.RefForwardingComponent<
+const Input: RefForwardingComponent<
   HTMLInputElement,
   Attributes<HTMLInputElement, InputProps>
 > = (props, ref) => {
@@ -20,7 +20,7 @@ const Input: React.RefForwardingComponent<
     console.error('Preshape [Input]: Pass "disabled" to InputWrapper');
   }
 
-  const { disabled } = React.useContext(InputWrapperContext);
+  const { disabled } = useContext(InputWrapperContext);
   const classes = classnames('Input', {
     [`Input--${size}`]: size,
   });
@@ -39,4 +39,4 @@ const Input: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Input);
+export default forwardRef(Input);

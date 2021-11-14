@@ -5,7 +5,6 @@
   --Button-color-active: var(--color-accent--shade-5);
   --Button-color-active-background: var(--color-accent--shade-2);
 
-  padding: var(--size--x2) var(--size--x3);
   border-style: solid;
   border-color: transparent;
   background-color: transparent;

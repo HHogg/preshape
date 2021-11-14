@@ -1,4 +1,11 @@
-import * as React from 'react';
+import React, {
+  createContext,
+  FC,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { createPortal } from 'react-dom';
 import * as PopperJS from 'popper.js';
 import { Popper, PopperProps, PopperArrowProps } from 'react-popper';
@@ -63,12 +70,10 @@ const getAnimationOrigin = (
 
 type PopperOptions = Omit<PopperProps, 'children'>;
 
-export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>(
-  {
-    ref: () => {},
-    style: {},
-  }
-);
+export const PlacementArrowPropsContext = createContext<PopperArrowProps>({
+  ref: () => {},
+  style: {},
+});
 
 export interface PlacementProps
   extends BoxProps,
@@ -99,9 +104,7 @@ export interface PlacementProps
   visible?: boolean;
 }
 
-const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (
-  props
-) => {
+const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
   const {
     animation = 'Pop',
     children,
@@ -119,7 +122,7 @@ const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (
     onClose: onCloseUncontrolled,
     referenceNode,
     visible: visibleUncontrolled,
-  } = React.useContext(PlacementManagerContext);
+  } = useContext(PlacementManagerContext);
 
   const onClose = onCloseUncontrolled || onCloseControlled;
   const visible =
@@ -129,10 +132,10 @@ const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (
       ? referenceNode.clientWidth
       : minWidth;
 
-  const [render, setRender] = React.useState(unrender ? visible : true);
-  const ref = React.useRef<HTMLElement | null>();
+  const [render, setRender] = useState(unrender ? visible : true);
+  const ref = useRef<HTMLElement | null>();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (visible && unrender) {
       setRender(true);
     }

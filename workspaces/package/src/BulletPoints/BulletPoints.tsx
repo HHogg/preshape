@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import './BulletPoints.css';
@@ -11,7 +11,7 @@ export interface BulletPointsProps extends BoxProps {
   numbered?: boolean;
 }
 
-const BulletPoints: React.RefForwardingComponent<
+const BulletPoints: RefForwardingComponent<
   HTMLUListElement,
   Attributes<HTMLUListElement, BulletPointsProps>
 > = (props, ref) => {
@@ -25,4 +25,4 @@ const BulletPoints: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(BulletPoints);
+export default forwardRef(BulletPoints);

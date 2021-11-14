@@ -1,13 +1,13 @@
 import classNames from 'classnames';
-import * as React from 'react';
+import React, { forwardRef, ReactNode, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
 
 export interface SelectInputLabelProps extends BoxProps {
-  label: React.ReactNode;
+  label: ReactNode;
 }
 
-const SelectInputLabel: React.RefForwardingComponent<
+const SelectInputLabel: RefForwardingComponent<
   HTMLLabelElement,
   Attributes<HTMLLabelElement, SelectInputLabelProps>
 > = (props, ref) => {
@@ -42,4 +42,4 @@ const SelectInputLabel: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(SelectInputLabel);
+export default forwardRef(SelectInputLabel);

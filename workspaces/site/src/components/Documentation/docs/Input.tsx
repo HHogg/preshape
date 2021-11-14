@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   Icons,
   Input,
@@ -18,7 +18,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Input',
   description: 'Standard single line text input for data collection.',
-  pictogram: require('../../../assets/pictogram-input.svg').default,
+  pictogram: require('../../SVGs/PictogramInput').default,
   type: 'component',
   showcase: {
     Component: (props) => (

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import Box, { Attributes, BoxProps, TypeAllElementTags } from '../Box/Box';
 import './Text.css';
@@ -51,7 +51,7 @@ export interface TextProps extends BoxProps {
   weak?: boolean;
 }
 
-const Text: React.RefForwardingComponent<
+const Text: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, TextProps>
 > = (props, ref) => {
@@ -96,4 +96,4 @@ const Text: React.RefForwardingComponent<
   return <Box {...rest} className={classes} ref={ref} tag={finalTag} />;
 };
 
-export default React.forwardRef(Text);
+export default forwardRef(Text);

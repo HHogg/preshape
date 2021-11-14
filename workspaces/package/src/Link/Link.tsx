@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef } from 'react';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import classnames from 'classnames';
 import { Attributes } from '../Box/Box';
@@ -18,7 +18,7 @@ export interface LinkProps extends TextProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Link = React.forwardRef<any, Attributes<HTMLAnchorElement, LinkProps>>(
+const Link = forwardRef<any, Attributes<HTMLAnchorElement, LinkProps>>(
   (props, ref) => {
     const { active, to = '', isTextLink, ...rest } = props;
     const classes = classnames('Link', {

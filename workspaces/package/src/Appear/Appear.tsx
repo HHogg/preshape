@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { MotionProps, Transition } from 'framer-motion';
 import animations from './animations';
 import { transitionTimeFast } from '../variables';
@@ -67,7 +67,7 @@ export interface AppearProps extends BoxProps, MotionProps {
   visibleInitially?: boolean;
 }
 
-const Appear: React.RefForwardingComponent<
+const Appear: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, AppearProps>
 > = (props, ref) => {
@@ -109,4 +109,4 @@ const Appear: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Appear);
+export default forwardRef(Appear);

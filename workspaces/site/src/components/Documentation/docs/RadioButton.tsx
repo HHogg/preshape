@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { RadioButton, RadioButtonProps } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -8,7 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'RadioButton',
   description: 'Standard toggling radio input for selecting single choices.',
-  pictogram: require('../../../assets/pictogram-radiobutton.svg').default,
+  pictogram: require('../../SVGs/PictogramRadiobutton').default,
   type: 'component',
   showcase: {
     Component: (props) => (

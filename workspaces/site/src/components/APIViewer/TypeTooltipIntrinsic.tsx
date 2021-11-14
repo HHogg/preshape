@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { FormEvent, ReactNode, Ref, useContext, useState } from 'react';
 import {
   themesOpposite,
   Form,
@@ -15,32 +15,32 @@ import { RootContext } from '../Root';
 
 export interface Props extends Renderer {
   children: (props: {
-    onClick: (event: React.MouseEvent) => void;
+    onClick: (event: MouseEvent) => void;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ref: React.Ref<any>;
-  }) => React.ReactNode;
+    ref: Ref<any>;
+  }) => ReactNode;
   name?: string;
   placeholder?: string;
 }
 
 const TypeTooltipIntrinsic = (props: Props) => {
   const { children, context, state, onStateChange, placeholder } = props;
-  const { theme } = React.useContext(RootContext);
-  const [visible, setVisible] = React.useState(false);
-  const [textValue, setTextValue] = React.useState((state || '').toString());
+  const { theme } = useContext(RootContext);
+  const [visible, setVisible] = useState(false);
+  const [textValue, setTextValue] = useState((state || '').toString());
 
-  const handleOnChange = (event: React.FormEvent<HTMLInputElement>) => {
+  const handleOnChange = (event: FormEvent<HTMLInputElement>) => {
     const value = (event.target as HTMLInputElement).value;
     setTextValue(value);
     onStateChange(value);
   };
 
-  const handleOnClick = (event: React.MouseEvent) => {
+  const handleOnClick = (event: MouseEvent) => {
     event.nativeEvent.stopImmediatePropagation();
     setVisible(true);
   };
 
-  const handleOnSubmit = (event: React.FocusEvent<HTMLFormElement>) => {
+  const handleOnSubmit = (event: FocusEvent<HTMLFormElement>) => {
     event.preventDefault();
     setVisible(false);
   };

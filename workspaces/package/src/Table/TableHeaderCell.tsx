@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes } from '../Box/Box';
 import Link from '../Link/Link';
 import Text, { TextProps } from '../Text/Text';
@@ -10,7 +10,7 @@ export interface TableHeaderCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableHeaderCell: React.RefForwardingComponent<
+const TableHeaderCell: RefForwardingComponent<
   HTMLTableHeaderCellElement,
   Attributes<HTMLTableHeaderCellElement, TableHeaderCellProps>
 > = (props, ref) => {
@@ -39,4 +39,4 @@ const TableHeaderCell: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(TableHeaderCell);
+export default forwardRef(TableHeaderCell);

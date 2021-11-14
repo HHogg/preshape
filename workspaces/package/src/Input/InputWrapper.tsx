@@ -1,4 +1,8 @@
-import * as React from 'react';
+import React, {
+  createContext,
+  forwardRef,
+  RefForwardingComponent,
+} from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
 
@@ -15,13 +19,13 @@ export interface InputWrapperProps extends BoxProps {
   label?: string;
 }
 
-export const InputWrapperContext = React.createContext<
+export const InputWrapperContext = createContext<
   Pick<InputWrapperProps, 'disabled'>
 >({
   disabled: false,
 });
 
-const InputWrapper: React.RefForwardingComponent<
+const InputWrapper: RefForwardingComponent<
   HTMLLabelElement,
   Attributes<HTMLLabelElement, InputWrapperProps>
 > = (props, ref) => {
@@ -74,4 +78,4 @@ const InputWrapper: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(InputWrapper);
+export default forwardRef(InputWrapper);

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes } from '../Box/Box';
 import Placement, { PlacementProps } from '../Placement/Placement';
 import PlacementArrow from '../Placement/PlacementArrow';
@@ -29,7 +29,7 @@ export interface TooltipProps extends PlacementProps {
   trigger?: TypePlacementTrigger;
 }
 
-const Tooltip: React.RefForwardingComponent<
+const Tooltip: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, TooltipProps>
 > = (props, ref) => {
@@ -58,4 +58,4 @@ const Tooltip: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Tooltip);
+export default forwardRef(Tooltip);

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Buttons,
@@ -23,12 +23,12 @@ const Item: CatalogueItem<{
   name: 'Modal',
   description:
     'A multi purpose Modal component that can be used to overly any content over the main UI.',
-  pictogram: require('../../../assets/pictogram-modal.svg').default,
+  pictogram: require('../../SVGs/PictogramModal').default,
   type: 'component',
   showcase: {
     Component: (props) => {
-      const [isAutoOpen, setIsAutoOpen] = React.useState(false);
-      const [isMaxWidthOpen, setIsMaxWidthOpen] = React.useState(false);
+      const [isAutoOpen, setIsAutoOpen] = useState(false);
+      const [isMaxWidthOpen, setIsMaxWidthOpen] = useState(false);
 
       return (
         <Showcase disableCode>

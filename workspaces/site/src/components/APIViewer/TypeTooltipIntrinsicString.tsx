@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import TypeTooltipIntrinsic, {
   Props as TypeTooltipIntrinsicProps,
 } from './TypeTooltipIntrinsic';
 
 interface Props extends TypeTooltipIntrinsicProps {}
 
-const TypeTooltipIntrinsicStirng = (props: Props) => {
+const TypeTooltipIntrinsicString = (props: Props) => {
   const { onStateChange, ...rest } = props;
 
   const handleOnChange = (value?: boolean | number | string) => {
@@ -25,4 +25,4 @@ const TypeTooltipIntrinsicStirng = (props: Props) => {
   );
 };
 
-export default TypeTooltipIntrinsicStirng;
+export default TypeTooltipIntrinsicString;

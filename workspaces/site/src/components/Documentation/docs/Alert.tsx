@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Alert, AlertProps, Text } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -8,7 +8,7 @@ const Item: CatalogueItem<{
 }> = {
   name: 'Alert',
   description: 'An alerting component for bringing attention to a message.',
-  pictogram: require('../../../assets/pictogram-alert.svg').default,
+  pictogram: require('../../SVGs/PictogramAlert').default,
   type: 'component',
   showcase: {
     Component: (props) => (

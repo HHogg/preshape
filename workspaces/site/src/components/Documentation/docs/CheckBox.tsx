@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { CheckBox, CheckBoxProps } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -9,7 +9,7 @@ const Item: CatalogueItem<{
   name: 'CheckBox',
   description:
     'Standard toggling checkbox input for selecting multiple choices.',
-  pictogram: require('../../../assets/pictogram-checkbox.svg').default,
+  pictogram: require('../../SVGs/PictogramCheckbox').default,
   type: 'component',
   showcase: {
     Component: (props) => (

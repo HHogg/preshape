@@ -1,10 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Ref } from 'react';
 
-export default <T extends Element = Element>(): [
-  boolean,
-  React.Ref<T>,
-  T | null
-] => {
+export default <T extends Element = Element>(): [boolean, Ref<T>, T | null] => {
   const [node, setNode] = useState<T | null>(null);
   const [isInView, setIsInView] = useState(false);
 

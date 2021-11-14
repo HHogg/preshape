@@ -1,4 +1,12 @@
-import * as React from 'react';
+import React, {
+  createContext,
+  forwardRef,
+  PointerEvent,
+  RefForwardingComponent,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { createPortal } from 'react-dom';
 import { useMatchMedia } from '../hooks';
 import Box, { Attributes, BoxProps, TypeColor } from '../Box/Box';
@@ -6,8 +14,8 @@ import Appear, { TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
 import classNames from 'classnames';
 
-export const ModalContext = React.createContext<{
-  onClose?: (event: React.PointerEvent<HTMLElement>) => void;
+export const ModalContext = createContext<{
+  onClose?: (event: PointerEvent<HTMLElement>) => void;
 }>({});
 
 /**
@@ -43,7 +51,7 @@ export interface ModalProps extends BoxProps {
    * and when clicking on the cross icon inside the
    * ModalHeader.
    */
-  onClose?: (event: React.PointerEvent<HTMLElement>) => void;
+  onClose?: (event: PointerEvent<HTMLElement>) => void;
   /**
    * Set the size of the modal, increasing the space around
    * the content accordingly.
@@ -57,7 +65,7 @@ export interface ModalProps extends BoxProps {
   visible: boolean;
 }
 
-const Modal: React.RefForwardingComponent<
+const Modal: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, ModalProps>
 > = (props, ref) => {
@@ -75,15 +83,15 @@ const Modal: React.RefForwardingComponent<
     ...rest
   } = props;
 
-  const [render, setRender] = React.useState(props.visible);
-  const refModal = React.useRef<HTMLDivElement>(null);
+  const [render, setRender] = useState(props.visible);
+  const refModal = useRef<HTMLDivElement>(null);
   const match = useMatchMedia([maxWidth]);
   const isMaxWidthEnabled = maxWidth !== 'auto';
   const classes = classNames('Modal', {
     [`Modal--size-${size}`]: size,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (visible) {
       setRender(true);
       document.body.classList.add('Modal__body-open');
@@ -152,4 +160,4 @@ const Modal: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(Modal);
+export default forwardRef(Modal);

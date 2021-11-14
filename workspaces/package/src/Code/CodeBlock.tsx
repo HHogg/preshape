@@ -1,4 +1,9 @@
-import * as React from 'react';
+import React, {
+  forwardRef,
+  useLayoutEffect,
+  useRef,
+  RefForwardingComponent,
+} from 'react';
 import classnames from 'classnames';
 import * as ace from 'brace';
 import { Attributes } from '../Box/Box';
@@ -30,18 +35,18 @@ export interface CodeBlockProps extends TextProps {
   wrap?: boolean;
 }
 
-const CodeBlock: React.RefForwardingComponent<
+const CodeBlock: RefForwardingComponent<
   HTMLPreElement,
   Attributes<HTMLPreElement, CodeBlockProps>
 > = (props, ref) => {
   const { children, language, wrap, ...rest } = props;
-  const refContainer = React.useRef<HTMLElement>(null);
+  const refContainer = useRef<HTMLElement>(null);
   const classes = classnames('CodeBlock', {
     'CodeBlock--wrap': wrap,
     [`language-${language}`]: language,
   });
 
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
     if (refContainer.current) {
       highlighter(refContainer.current, {
         mode: `ace/mode/${language}`,
@@ -57,4 +62,4 @@ const CodeBlock: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(CodeBlock);
+export default forwardRef(CodeBlock);

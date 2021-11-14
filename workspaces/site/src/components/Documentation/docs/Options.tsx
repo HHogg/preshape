@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Icons,
@@ -23,13 +23,11 @@ const Item: CatalogueItem<{
   name: 'Options',
   description:
     'A multi-selection list component that can be used inline or as a dropdown.',
-  pictogram: require('../../../assets/pictogram-options.svg').default,
+  pictogram: require('../../SVGs/PictogramOptions').default,
   type: 'component',
   showcase: {
     Component: (props) => {
-      const [values, setValues] = React.useState<{ [key: string]: boolean }>(
-        {}
-      );
+      const [values, setValues] = useState<{ [key: string]: boolean }>({});
 
       const handleSelect = (index: number) => {
         if (props.Option.multiselect) {
@@ -39,7 +37,7 @@ const Item: CatalogueItem<{
         }
       };
 
-      const value = React.useMemo(() => {
+      const value = useMemo(() => {
         const selected = Object.entries(values).filter(([, v]) => v);
 
         if (!selected.length) {
@@ -51,7 +49,7 @@ const Item: CatalogueItem<{
         return `${selected.length} options selected`;
       }, [values]);
 
-      React.useEffect(() => {
+      useEffect(() => {
         setValues({});
       }, [props.Option.multiselect]);
 

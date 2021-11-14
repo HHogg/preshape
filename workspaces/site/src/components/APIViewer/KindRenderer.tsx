@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { FunctionComponent } from 'react';
 import { JSONOutput } from 'typedoc';
 import { Renderer, RendererContainer } from './Types';
 import KindRendererInterface from './KindRendererInterface';
@@ -8,10 +8,8 @@ import KindRendererTypeLiteral from './KindRendererTypeLiteral';
 
 const KindMap: {
   [key: string]:
-    | React.FunctionComponent<Renderer & JSONOutput.DeclarationReflection>
-    | React.FunctionComponent<
-        RendererContainer & JSONOutput.DeclarationReflection
-      >;
+    | FunctionComponent<Renderer & JSONOutput.DeclarationReflection>
+    | FunctionComponent<RendererContainer & JSONOutput.DeclarationReflection>;
 } = {
   Interface: KindRendererInterface,
   'Call signature': KindRendererCallSignature,

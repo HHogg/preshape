@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import classnames from 'classnames';
 import Box, { Attributes, BoxProps, TypeSize } from '../Box/Box';
 import './List.css';
@@ -12,7 +12,7 @@ export interface ListProps extends BoxProps {
   gap?: TypeSize;
 }
 
-const List: React.RefForwardingComponent<
+const List: RefForwardingComponent<
   HTMLUListElement,
   Attributes<HTMLUListElement, ListProps>
 > = (props, ref) => {
@@ -33,4 +33,4 @@ const List: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(List);
+export default forwardRef(List);

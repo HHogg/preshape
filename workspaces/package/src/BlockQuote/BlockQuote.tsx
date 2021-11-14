@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './BlockQuote.css';
@@ -9,7 +9,7 @@ import './BlockQuote.css';
  */
 export interface BlockQuoteProps extends TextProps {}
 
-const BlockQuote: React.RefForwardingComponent<
+const BlockQuote: RefForwardingComponent<
   HTMLQuoteElement,
   Attributes<HTMLQuoteElement, BlockQuoteProps>
 > = (props, ref) => {
@@ -26,4 +26,4 @@ const BlockQuote: React.RefForwardingComponent<
   );
 };
 
-export default React.forwardRef(BlockQuote);
+export default forwardRef(BlockQuote);

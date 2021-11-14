@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { BlockQuote, BlockQuoteProps, Link, Text } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -9,7 +9,7 @@ const Item: CatalogueItem<{
   name: 'BlockQuote',
   description:
     'A component to indicate that the contents is an extended quotation, by visually indenting and styling.',
-  pictogram: require('../../../assets/pictogram-blockquote.svg').default,
+  pictogram: require('../../SVGs/PictogramBlockquote').default,
   type: 'component',
   showcase: {
     Component: (props) => (

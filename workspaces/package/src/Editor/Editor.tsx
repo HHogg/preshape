@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useLayoutEffect, useRef, FC } from 'react';
 import ace from 'brace';
 import useResizeObserver from '../hooks/useResizeObserver';
 import Box, { BoxProps } from '../Box/Box';
@@ -45,13 +45,13 @@ export interface EditorProps extends BoxProps {
   value: string;
 }
 
-const Editor: React.FC<EditorProps> = (props) => {
+const Editor: FC<EditorProps> = (props) => {
   const { language, onChange, value, ...rest } = props;
-  const ref = React.useRef<HTMLDivElement>(null);
-  const refEditor = React.useRef<ace.Editor>();
+  const ref = useRef<HTMLDivElement>(null);
+  const refEditor = useRef<ace.Editor>();
   const [size, refContainer] = useResizeObserver();
 
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
     if (ref.current) {
       refEditor.current = ace.edit(ref.current);
       refEditor.current.$blockScrolling = Infinity;
@@ -64,21 +64,21 @@ const Editor: React.FC<EditorProps> = (props) => {
     }
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     refEditor.current?.resize();
   }, [size]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (value !== refEditor.current?.getValue()) {
       refEditor.current?.setValue(value, 1);
     }
   }, [value]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     refEditor.current?.getSession().setMode(`ace/mode/${language}`);
   }, [language]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleChange = () => {
       if (onChange) {
         onChange(refEditor.current?.getValue() || '');

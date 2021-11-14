@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   BulletPoint,
   BulletPointProps,
@@ -15,7 +15,7 @@ const Item: CatalogueItem<{
   name: 'BulletPoints',
   description:
     'A vertical list component for listing your todos, ordered and chaos modes included.',
-  pictogram: require('../../../assets/pictogram-bulletpoints.svg').default,
+  pictogram: require('../../SVGs/PictogramBulletPoints').default,
   type: 'component',
   showcase: {
     Component: (props) => (
