@@ -15,7 +15,7 @@ const Item: CatalogueItem<{
   name: 'BulletPoints',
   description:
     'A vertical list component for listing your todos, ordered and chaos modes included.',
-  pictogram: require('../../SVGs/PictogramBulletPoints').default,
+  pictogram: require('../../SVGs/PictogramBulletpoints').default,
   type: 'component',
   showcase: {
     Component: (props) => (

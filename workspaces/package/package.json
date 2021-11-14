@@ -15,8 +15,8 @@
     "build:css": "postcss src/{*.css,**/*.css} --base src",
     "build:docs": "typedoc --exclude lib --json ../site/src/assets/documentation.json src/index.ts",
     "build:icons": "yarn svgr -d src/Icon ../../node_modules/feather-icons/dist/icons --ext tsx --config-file .svgrrc.js",
-    "build:esn": "tsc -m esnext -t esnext --outDir lib/esn && yarn build:css --dir lib/esn",
-    "build:cjs": "tsc --outDir lib/cjs && yarn build:css --dir lib/cjs",
+    "build:esn": "tsc -p src -m esnext -t esnext --outDir lib/esn && yarn build:css --dir lib/esn",
+    "build:cjs": "tsc -p src --outDir lib/cjs && yarn build:css --dir lib/cjs",
     "start": "yarn build:docs"
   },
   "peerDependencies": {

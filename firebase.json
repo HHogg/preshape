@@ -1,7 +1,7 @@
 {
   "hosting": {
     "target": "preshape",
-    "public": "./workspaces/site/public",
+    "public": "./workspaces/site/dist",
     "rewrites": [
       {
         "source": "**",
