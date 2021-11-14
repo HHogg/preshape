@@ -8,12 +8,11 @@ export interface GridItemProps extends BoxProps {
   row?: number;
 }
 
-const GridItem: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, GridItemProps>> = (props, ref) => {
-  const {
-    column,
-    row,
-    ...rest
-  } = props;
+const GridItem: React.RefForwardingComponent<
+  HTMLElement,
+  Attributes<HTMLElement, GridItemProps>
+> = (props, ref) => {
+  const { column, row, ...rest } = props;
 
   const style = {
     gridColumn: column,
@@ -21,9 +20,7 @@ const GridItem: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement
     ...rest.style,
   };
 
-  return (
-    <Box { ...rest } className="GridItem" ref={ ref } style={ style } />
-  );
+  return <Box {...rest} className="GridItem" ref={ref} style={style} />;
 };
 
 export default React.forwardRef(GridItem);

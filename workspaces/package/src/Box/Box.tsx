@@ -5,62 +5,61 @@ import * as React from 'react';
 import classnames from 'classnames';
 import './Box.css';
 
-export type Attributes<E, P = {}> = P & Omit<
-  E extends SVGElement
-    ? React.SVGAttributes<E>
-    : React.AllHTMLAttributes<E>, keyof P>;
+export type Attributes<E, P = {}> = P &
+  Omit<
+    E extends SVGElement ? React.SVGAttributes<E> : React.AllHTMLAttributes<E>,
+    keyof P
+  >;
 
 export type TypeColor =
-  'black' |
-  'white' |
-  'highlight' |
-  'accent-shade-1' |
-  'accent-shade-2' |
-  'accent-shade-3' |
-  'accent-shade-4' |
-  'accent-shade-5' |
-  'background-shade-1' |
-  'background-shade-2' |
-  'background-shade-3' |
-  'dark-shade-1' |
-  'dark-shade-2' |
-  'dark-shade-3' |
-  'light-shade-1' |
-  'light-shade-2' |
-  'light-shade-3' |
-  'negative-shade-1' |
-  'negative-shade-2' |
-  'negative-shade-3' |
-  'negative-shade-4' |
-  'negative-shade-5' |
-  'positive-shade-1' |
-  'positive-shade-2' |
-  'positive-shade-3' |
-  'positive-shade-4' |
-  'positive-shade-5' |
-  'text-shade-1' |
-  'text-shade-2' |
-  'text-shade-3';
+  | 'black'
+  | 'white'
+  | 'highlight'
+  | 'accent-shade-1'
+  | 'accent-shade-2'
+  | 'accent-shade-3'
+  | 'accent-shade-4'
+  | 'accent-shade-5'
+  | 'background-shade-1'
+  | 'background-shade-2'
+  | 'background-shade-3'
+  | 'dark-shade-1'
+  | 'dark-shade-2'
+  | 'dark-shade-3'
+  | 'light-shade-1'
+  | 'light-shade-2'
+  | 'light-shade-3'
+  | 'negative-shade-1'
+  | 'negative-shade-2'
+  | 'negative-shade-3'
+  | 'negative-shade-4'
+  | 'negative-shade-5'
+  | 'positive-shade-1'
+  | 'positive-shade-2'
+  | 'positive-shade-3'
+  | 'positive-shade-4'
+  | 'positive-shade-5'
+  | 'text-shade-1'
+  | 'text-shade-2'
+  | 'text-shade-3';
 
 export type TypeSize =
-  'x0' |
-  'x1' |
-  'x2' |
-  'x3' |
-  'x4' |
-  'x6' |
-  'x8' |
-  'x10' |
-  'x12' |
-  'x16';
+  | 'x0'
+  | 'x1'
+  | 'x2'
+  | 'x3'
+  | 'x4'
+  | 'x6'
+  | 'x8'
+  | 'x10'
+  | 'x12'
+  | 'x16';
 
 export type TypeHTMLTags = keyof HTMLElementTagNameMap;
 export type TypeSVGTags = keyof Omit<SVGElementTagNameMap, TypeHTMLTags>;
 export type TypeAllElementTags = TypeHTMLTags | TypeSVGTags;
 
-export type TypeTheme =
-  'day' |
-  'night';
+export type TypeTheme = 'day' | 'night';
 
 /**
  * The core component that is the end of the chain for all other components.
@@ -69,18 +68,18 @@ export type TypeTheme =
 export interface BoxProps {
   /** Quick way of absolutely position to common places */
   absolute?:
-    'center' |
-    'edge-to-edge' |
-    'top' |
-    'top-left' |
-    'top-right' |
-    'bottom' |
-    'bottom-left' |
-    'bottom-right';
- /**
-  * Short cut child alignment property for both alignChildrenHorizontal and
-  * alignChildrenVertical.
-  */
+    | 'center'
+    | 'edge-to-edge'
+    | 'top'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'bottom-right';
+  /**
+   * Short cut child alignment property for both alignChildrenHorizontal and
+   * alignChildrenVertical.
+   */
   alignChildren?: 'start' | 'middle' | 'end';
   /** Horizontal alignment of children flex items. */
   alignChildrenHorizontal?: 'start' | 'middle' | 'end' | 'around' | 'between';
@@ -116,14 +115,14 @@ export interface BoxProps {
   elevate?: boolean;
   /** Quick way of fixed position to common places */
   fixed?:
-    'center' |
-    'edge-to-edge' |
-    'top' |
-    'top-left' |
-    'top-right' |
-    'bottom' |
-    'bottom-left' |
-    'bottom-right';
+    | 'center'
+    | 'edge-to-edge'
+    | 'top'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'bottom-right';
   /** Flex direction */
   flex?: 'horizontal' | 'vertical';
   /** Spacing applied between child flex items, values are global spacing variables. */
@@ -181,116 +180,131 @@ export interface BoxProps {
 }
 
 type ReactElementProps = Omit<
-  React.AllHTMLAttributes<Element> &
-  React.SVGAttributes<Element>
-, 'crossOrigin' | 'wrap'>;
+  React.AllHTMLAttributes<Element> & React.SVGAttributes<Element>,
+  'crossOrigin' | 'wrap'
+>;
 
-const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> = (props, ref) => {
-  const {
-    absolute,
-    alignChildren,
-    alignChildrenHorizontal = alignChildren,
-    alignChildrenVertical = alignChildren,
-    alignSelf,
-    backgroundColor,
-    basis,
-    borderBottom,
-    borderColor,
-    borderLeft,
-    borderRadius,
-    borderRight,
-    borderSize,
-    borderTop,
-    children,
-    className,
-    clickable,
-    container,
-    display,
-    elevate,
-    fixed,
-    flex,
-    gap,
-    grow,
-    height,
-    maxHeight,
-    maxWidth,
-    minWidth,
-    minHeight,
-    overflow,
-    padding,
-    paddingHorizontal = padding,
-    paddingVertical = padding,
-    margin,
-    reverse,
-    shrink,
-    style,
-    tag,
-    textColor,
-    theme,
-    transitionDuration = 'base',
-    transitionProperty,
-    width,
-    wrap,
-    zIndex,
-    ...rest
-  } = props;
+const Box: React.RefForwardingComponent<Element, BoxProps & ReactElementProps> =
+  (props, ref) => {
+    const {
+      absolute,
+      alignChildren,
+      alignChildrenHorizontal = alignChildren,
+      alignChildrenVertical = alignChildren,
+      alignSelf,
+      backgroundColor,
+      basis,
+      borderBottom,
+      borderColor,
+      borderLeft,
+      borderRadius,
+      borderRight,
+      borderSize,
+      borderTop,
+      children,
+      className,
+      clickable,
+      container,
+      display,
+      elevate,
+      fixed,
+      flex,
+      gap,
+      grow,
+      height,
+      maxHeight,
+      maxWidth,
+      minWidth,
+      minHeight,
+      overflow,
+      padding,
+      paddingHorizontal = padding,
+      paddingVertical = padding,
+      margin,
+      reverse,
+      shrink,
+      style,
+      tag,
+      textColor,
+      theme,
+      transitionDuration = 'base',
+      transitionProperty,
+      width,
+      wrap,
+      zIndex,
+      ...rest
+    } = props;
 
-  const border = borderTop || borderRight || borderBottom || borderLeft;
-  const isPredefinedBorderRadius = borderRadius === 'full' || borderRadius === 'x1' || borderRadius === 'x2' || borderRadius === 'x3';
+    const border = borderTop || borderRight || borderBottom || borderLeft;
+    const isPredefinedBorderRadius =
+      borderRadius === 'full' ||
+      borderRadius === 'x1' ||
+      borderRadius === 'x2' ||
+      borderRadius === 'x3';
 
-  const classes = classnames('Box', {
-    'Box--border': border,
-    'Box--border-top': borderTop,
-    'Box--border-right': borderRight,
-    'Box--border-bottom': borderBottom,
-    'Box--border-left': borderLeft,
-    'Box--clickable': clickable,
-    'Box--container': container,
-    'Box--elevate': elevate,
-    'Box--flex-reverse': reverse,
-    'Box--flex-wrap': wrap,
-    'Box--max-width': maxWidth,
-    [`Box--absolute-${absolute}`]: absolute,
-    [`Box--background-color-${backgroundColor}`]: backgroundColor,
-    [`Box--border-color-${borderColor}`]: borderColor,
-    [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
-    [`Box--border-size-${borderSize}`]: borderSize,
-    [`Box--display-${display}`]: display,
-    [`Box--fixed-${fixed}`]: fixed,
-    [`Box--flex-${flex}`]: flex,
-    [`Box--flex-align-horz-${alignChildrenHorizontal}`]: alignChildrenHorizontal,
-    [`Box--flex-align-self-${alignSelf}`]: alignSelf,
-    [`Box--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
-    [`Box--flex-gap-${gap}`]: gap,
-    [`Box--margin-${margin}`]: margin,
-    [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
-    [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
-    [`Box--text-color-${textColor}`]: textColor,
-    [`Box--transition-${transitionDuration}`]: transitionProperty,
-    [`Theme--${theme}`]: theme,
-  }, className);
+    const classes = classnames(
+      'Box',
+      {
+        'Box--border': border,
+        'Box--border-top': borderTop,
+        'Box--border-right': borderRight,
+        'Box--border-bottom': borderBottom,
+        'Box--border-left': borderLeft,
+        'Box--clickable': clickable,
+        'Box--container': container,
+        'Box--elevate': elevate,
+        'Box--flex-reverse': reverse,
+        'Box--flex-wrap': wrap,
+        'Box--max-width': maxWidth,
+        [`Box--absolute-${absolute}`]: absolute,
+        [`Box--background-color-${backgroundColor}`]: backgroundColor,
+        [`Box--border-color-${borderColor}`]: borderColor,
+        [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
+        [`Box--border-size-${borderSize}`]: borderSize,
+        [`Box--display-${display}`]: display,
+        [`Box--fixed-${fixed}`]: fixed,
+        [`Box--flex-${flex}`]: flex,
+        [`Box--flex-align-horz-${alignChildrenHorizontal}`]:
+          alignChildrenHorizontal,
+        [`Box--flex-align-self-${alignSelf}`]: alignSelf,
+        [`Box--flex-align-vert-${alignChildrenVertical}`]:
+          alignChildrenVertical,
+        [`Box--flex-gap-${gap}`]: gap,
+        [`Box--margin-${margin}`]: margin,
+        [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
+        [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
+        [`Box--text-color-${textColor}`]: textColor,
+        [`Box--transition-${transitionDuration}`]: transitionProperty,
+        [`Theme--${theme}`]: theme,
+      },
+      className
+    );
 
-  return React.createElement(tag || 'div', {
-    ...rest,
-    className: classes,
-    ref: ref,
-    style: {
-      borderRadius: isPredefinedBorderRadius ? undefined : borderRadius,
-      flexBasis: basis,
-      flexGrow: grow === true ? '1' : grow,
-      flexShrink: shrink === true ? '1' : shrink,
-      height: height,
-      maxHeight: maxHeight,
-      minHeight: minHeight,
-      maxWidth: maxWidth,
-      minWidth: minWidth,
-      overflow: overflow,
-      transitionProperty: transitionProperty,
-      width: width,
-      zIndex: zIndex,
-      ...style,
-    },
-  }, children);
-};
+    return React.createElement(
+      tag || 'div',
+      {
+        ...rest,
+        className: classes,
+        ref: ref,
+        style: {
+          borderRadius: isPredefinedBorderRadius ? undefined : borderRadius,
+          flexBasis: basis,
+          flexGrow: grow === true ? '1' : grow,
+          flexShrink: shrink === true ? '1' : shrink,
+          height: height,
+          maxHeight: maxHeight,
+          minHeight: minHeight,
+          maxWidth: maxWidth,
+          minWidth: minWidth,
+          overflow: overflow,
+          transitionProperty: transitionProperty,
+          width: width,
+          zIndex: zIndex,
+          ...style,
+        },
+      },
+      children
+    );
+  };
 
 export default React.forwardRef(Box);

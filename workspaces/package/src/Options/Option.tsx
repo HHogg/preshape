@@ -11,12 +11,17 @@ export interface OptionProps {
   multiselect?: boolean;
 }
 
-const Option: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, OptionProps>> = (props, ref) => {
+const Option: React.RefForwardingComponent<
+  HTMLInputElement,
+  Attributes<HTMLInputElement, OptionProps>
+> = (props, ref) => {
   const { multiselect, ...rest } = props;
 
-  return multiselect
-    ? <CheckBox { ...rest } ref={ ref } />
-    : <RadioButton { ...rest } ref={ ref } />;
+  return multiselect ? (
+    <CheckBox {...rest} ref={ref} />
+  ) : (
+    <RadioButton {...rest} ref={ref} />
+  );
 };
 
 export default React.forwardRef(Option);

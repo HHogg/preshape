@@ -18,31 +18,36 @@ export interface ModalHeaderProps extends BoxProps {
   closeIconSize?: string;
 }
 
-const ModalHeader: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalHeaderProps>> = (props, ref) => {
+const ModalHeader: React.RefForwardingComponent<
+  HTMLDivElement,
+  Attributes<HTMLDivElement, ModalHeaderProps>
+> = (props, ref) => {
   const { children, closeIconSize = '24px', ...rest } = props;
   const { onClose } = React.useContext(ModalContext);
 
   return (
-    <Box { ...rest }
-        alignChildrenVertical="start"
-        borderBottom
-        borderColor="background-shade-3"
-        borderSize="x2"
-        className="Modal__header"
-        flex="horizontal"
-        gap="x6"
-        ref={ ref }>
+    <Box
+      {...rest}
+      alignChildrenVertical="start"
+      borderBottom
+      borderColor="background-shade-3"
+      borderSize="x2"
+      className="Modal__header"
+      flex="horizontal"
+      gap="x6"
+      ref={ref}
+    >
       <Box grow shrink>
-        { children }
+        {children}
       </Box>
 
-      { onClose && (
+      {onClose && (
         <Box>
-          <Link onPointerUp={ onClose }>
-            <Icons.X size={ closeIconSize } />
+          <Link onPointerUp={onClose}>
+            <Icons.X size={closeIconSize} />
           </Link>
         </Box>
-      ) }
+      )}
     </Box>
   );
 };

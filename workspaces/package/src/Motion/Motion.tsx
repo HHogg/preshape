@@ -18,8 +18,9 @@ const motionProps: (keyof MotionProps | 'positionTransition')[] = [
 ];
 
 const Motion = motion<MotionsProps>(
-  React.forwardRef<Element, MotionsProps>((props, ref) =>
-    <Box { ...omit(props, motionProps) as BoxProps } ref={ ref } />
-  ));
+  React.forwardRef<Element, MotionsProps>(function Motion(props, ref) {
+    return <Box {...(omit(props, motionProps) as BoxProps)} ref={ref} />;
+  })
+);
 
 export default Motion;

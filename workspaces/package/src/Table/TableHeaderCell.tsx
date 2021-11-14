@@ -10,7 +10,10 @@ export interface TableHeaderCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableHeaderCell: React.RefForwardingComponent<HTMLTableHeaderCellElement, Attributes<HTMLTableHeaderCellElement, TableHeaderCellProps>> = (props, ref) => {
+const TableHeaderCell: React.RefForwardingComponent<
+  HTMLTableHeaderCellElement,
+  Attributes<HTMLTableHeaderCellElement, TableHeaderCellProps>
+> = (props, ref) => {
   const {
     children,
     paddingHorizontal = 'x3',
@@ -21,21 +24,17 @@ const TableHeaderCell: React.RefForwardingComponent<HTMLTableHeaderCellElement, 
   } = props;
 
   return (
-    <Text { ...rest }
-        className="Table__header-cell"
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }
-        ref={ ref }
-        strong
-        tag="th"
-        uppercase>
-      { sortable ? (
-        <Link active={ sorted }>
-          { children }
-        </Link>
-      ) : (
-        children
-      ) }
+    <Text
+      {...rest}
+      className="Table__header-cell"
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+      ref={ref}
+      strong
+      tag="th"
+      uppercase
+    >
+      {sortable ? <Link active={sorted}>{children}</Link> : children}
     </Text>
   );
 };

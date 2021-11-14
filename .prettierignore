@@ -1,0 +1,10 @@
+.cache
+.firebase
+.parche-cache
+.yarn
+*.css
+*.json
+data-emulator
+dist
+public
+lib

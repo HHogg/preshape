@@ -1,5 +1,10 @@
-import * as React from 'react' ;
-import { BulletPoint, BulletPointProps, BulletPoints, BulletPointsProps } from 'preshape';
+import * as React from 'react';
+import {
+  BulletPoint,
+  BulletPointProps,
+  BulletPoints,
+  BulletPointsProps,
+} from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
@@ -8,18 +13,19 @@ const Item: CatalogueItem<{
   BulletPoints: BulletPointsProps;
 }> = {
   name: 'BulletPoints',
-  description: 'A vertical list component for listing your todos, ordered and chaos modes included.',
+  description:
+    'A vertical list component for listing your todos, ordered and chaos modes included.',
   pictogram: require('../../../assets/pictogram-bulletpoints.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (
       <Showcase>
-        <BulletPoints { ...props.BulletPoints }>
-          { Array.from({ length: 5 }).map((_, n) => (
-            <BulletPoint { ...props.BulletPoint } key={ n }>
+        <BulletPoints {...props.BulletPoints}>
+          {Array.from({ length: 5 }).map((_, n) => (
+            <BulletPoint {...props.BulletPoint} key={n}>
               Lorem ipsum
             </BulletPoint>
-          )) }
+          ))}
         </BulletPoints>
       </Showcase>
     ),
@@ -28,15 +34,18 @@ const Item: CatalogueItem<{
       BulletPoints: {},
     },
   },
-  apis: [{
-    module: '"BulletPoints/BulletPoints"',
-    name: 'BulletPointsProps',
-    rename: 'BulletPoints',
-  }, {
-    module: '"BulletPoints/BulletPoint"',
-    name: 'BulletPointProps',
-    rename: 'BulletPoint',
-  }],
+  apis: [
+    {
+      module: '"BulletPoints/BulletPoints"',
+      name: 'BulletPointsProps',
+      rename: 'BulletPoints',
+    },
+    {
+      module: '"BulletPoints/BulletPoint"',
+      name: 'BulletPointProps',
+      rename: 'BulletPoint',
+    },
+  ],
 };
 
 export default Item;

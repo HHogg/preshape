@@ -1,4 +1,7 @@
 {
-  "extends": "stylelint-config-preshape",
-  "ignoreFiles": ["**/*.tsx"]
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "block-opening-brace-space-before": "always-multi-line",
+    "declaration-block-single-line-max-declarations": 2
+  }
 }

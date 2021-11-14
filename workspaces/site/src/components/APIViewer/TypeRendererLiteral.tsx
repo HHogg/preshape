@@ -3,23 +3,20 @@ import { JSONOutput } from 'typedoc';
 import { Renderer } from './Types';
 import TypeLabel from './TypeLabel';
 
-interface Props extends Renderer, JSONOutput.LiteralType {
+interface Props extends Renderer, JSONOutput.LiteralType {}
 
-}
-
-export default (props: Props) => {
-  const {
-    onStateChange,
-    state,
-    value,
-  } = props;
+const TypeRendererLiteral = (props: Props) => {
+  const { onStateChange, state, value } = props;
 
   return (
     <TypeLabel
-        active={ state === value }
-        clickable
-        onClick={ () => onStateChange(value) }>
-      "{ value }"
+      active={state === value}
+      clickable
+      onClick={() => onStateChange(value)}
+    >
+      "{value}"
     </TypeLabel>
   );
 };
+
+export default TypeRendererLiteral;

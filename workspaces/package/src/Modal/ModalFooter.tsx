@@ -8,16 +8,21 @@ import Box, { Attributes, BoxProps } from '../Box/Box';
  */
 export interface ModalFooterProps extends BoxProps {}
 
-const ModalFooter: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalFooterProps>> = (props, ref) => {
+const ModalFooter: React.RefForwardingComponent<
+  HTMLDivElement,
+  Attributes<HTMLDivElement, ModalFooterProps>
+> = (props, ref) => {
   return (
-    <Box { ...props }
-        borderColor="background-shade-3"
-        borderSize="x2"
-        borderTop
-        className="Modal__footer"
-        grow
-        ref={ ref }
-        shrink />
+    <Box
+      {...props}
+      borderColor="background-shade-3"
+      borderSize="x2"
+      borderTop
+      className="Modal__footer"
+      grow
+      ref={ref}
+      shrink
+    />
   );
 };
 

@@ -1,5 +1,10 @@
-import * as React from 'react' ;
-import { TextArea, TextAreaProps, TextAreaWrapper, TextAreaWrapperProps } from 'preshape';
+import * as React from 'react';
+import {
+  TextArea,
+  TextAreaProps,
+  TextAreaWrapper,
+  TextAreaWrapperProps,
+} from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
@@ -14,8 +19,8 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <TextAreaWrapper { ...props.TextAreaWrapper }>
-          <TextArea { ...props.TextArea } placeholder="Type into me" rows={ 5 } />
+        <TextAreaWrapper {...props.TextAreaWrapper}>
+          <TextArea {...props.TextArea} placeholder="Type into me" rows={5} />
         </TextAreaWrapper>
       </Showcase>
     ),
@@ -26,15 +31,18 @@ const Item: CatalogueItem<{
       },
     },
   },
-  apis: [{
-    module: '"TextArea/TextAreaWrapper"',
-    name: 'TextAreaWrapperProps',
-    rename: 'TextAreaWrapper',
-  }, {
-    module: '"TextArea/TextArea"',
-    name: 'TextAreaProps',
-    rename: 'TextArea',
-  }],
+  apis: [
+    {
+      module: '"TextArea/TextAreaWrapper"',
+      name: 'TextAreaWrapperProps',
+      rename: 'TextAreaWrapper',
+    },
+    {
+      module: '"TextArea/TextArea"',
+      name: 'TextAreaProps',
+      rename: 'TextArea',
+    },
+  ],
 };
 
 export default Item;

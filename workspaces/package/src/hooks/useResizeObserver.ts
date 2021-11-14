@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
-export default <T extends Element = Element>(): [{ height: number; width: number }, React.Ref<T>, T | null] => {
+export default <T extends Element = Element>(): [
+  { height: number; width: number },
+  React.Ref<T>,
+  T | null
+] => {
   const [node, setNode] = useState<T | null>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
 

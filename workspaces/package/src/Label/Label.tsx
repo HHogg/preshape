@@ -6,7 +6,10 @@ import './Label.css';
 
 export interface LabelProps extends TextProps {}
 
-const Label: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, LabelProps>> = (props, ref) => {
+const Label: React.RefForwardingComponent<
+  HTMLDivElement,
+  Attributes<HTMLDivElement, LabelProps>
+> = (props, ref) => {
   const {
     backgroundColor = 'text-shade-1',
     borderRadius = sizeX3Px,
@@ -18,17 +21,19 @@ const Label: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
   } = props;
 
   return (
-    <Text { ...rest }
-        backgroundColor={ backgroundColor }
-        borderRadius={ borderRadius }
-        className="Label"
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }
-        ref={ ref }
-        size={ size }
-        strong
-        tag="div"
-        textColor={ textColor } />
+    <Text
+      {...rest}
+      backgroundColor={backgroundColor}
+      borderRadius={borderRadius}
+      className="Label"
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+      ref={ref}
+      size={size}
+      strong
+      tag="div"
+      textColor={textColor}
+    />
   );
 };
 

@@ -6,7 +6,10 @@ import './TextArea.css';
 
 export interface TextAreaProps extends TextProps {}
 
-const TextArea: React.RefForwardingComponent<HTMLTextAreaElement, Attributes<HTMLTextAreaElement, TextAreaProps>> = (props, ref) => {
+const TextArea: React.RefForwardingComponent<
+  HTMLTextAreaElement,
+  Attributes<HTMLTextAreaElement, TextAreaProps>
+> = (props, ref) => {
   const {
     padding,
     paddingHorizontal = 'x3',
@@ -22,15 +25,17 @@ const TextArea: React.RefForwardingComponent<HTMLTextAreaElement, Attributes<HTM
   const { disabled } = React.useContext(InputWrapperContext);
 
   return (
-    <Text { ...rest }
-        className="TextArea"
-        disabled={ disabled }
-        paddingHorizontal={ padding || paddingHorizontal }
-        paddingVertical={ padding || paddingVertical }
-        ref={ ref }
-        size="x3"
-        strong
-        tag="textarea" />
+    <Text
+      {...rest}
+      className="TextArea"
+      disabled={disabled}
+      paddingHorizontal={padding || paddingHorizontal}
+      paddingVertical={padding || paddingVertical}
+      ref={ref}
+      size="x3"
+      strong
+      tag="textarea"
+    />
   );
 };
 

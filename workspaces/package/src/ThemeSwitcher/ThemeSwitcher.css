@@ -23,5 +23,6 @@
   transition-timing-function: var(--transition-timing-function);
 
   @nest .ThemeSwitcher:hover & { background-color: var(--color-accent--shade-3); }
+
   @nest .ThemeSwitcher:active & { background-color: var(--color-accent--shade-5); }
 }

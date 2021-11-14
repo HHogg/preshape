@@ -9,20 +9,21 @@ interface Props extends JSONOutput.Reflection {
   state: StatePrimitive;
 }
 
-export default (props: Props) => {
-  const {
-    comment,
-    name,
-  } = props;
+const ApiViewerItem = (props: Props) => {
+  const { comment, name } = props;
 
   return (
     <Box margin="x8">
       <Box margin="x4">
-        <Text size="x4" strong>{ name }</Text>
-        { comment && comment.shortText && <Text>{ comment.shortText }</Text> }
+        <Text size="x4" strong>
+          {name}
+        </Text>
+        {comment && comment.shortText && <Text>{comment.shortText}</Text>}
       </Box>
 
-      <KindRenderer { ...props } context={ props } />
+      <KindRenderer {...props} context={props} />
     </Box>
   );
 };
+
+export default ApiViewerItem;

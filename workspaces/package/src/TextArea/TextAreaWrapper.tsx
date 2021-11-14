@@ -15,10 +15,11 @@ export interface TextAreaWrapperProps extends InputWrapperProps {
   label?: string;
 }
 
-const TextAreaWrapper: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, TextAreaWrapperProps>> = (props, ref) => {
-  return (
-    <InputWrapper { ...props } ref={ ref } />
-  );
+const TextAreaWrapper: React.RefForwardingComponent<
+  HTMLLabelElement,
+  Attributes<HTMLLabelElement, TextAreaWrapperProps>
+> = (props, ref) => {
+  return <InputWrapper {...props} ref={ref} />;
 };
 
 export default React.forwardRef(TextAreaWrapper);

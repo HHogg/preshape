@@ -9,11 +9,11 @@ export interface InputProps extends TextProps {
   size?: 'x1' | 'x2';
 }
 
-const Input: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, InputProps>> = (props, ref) => {
-  const {
-    size = 'x1',
-    ...rest
-  } = props;
+const Input: React.RefForwardingComponent<
+  HTMLInputElement,
+  Attributes<HTMLInputElement, InputProps>
+> = (props, ref) => {
+  const { size = 'x1', ...rest } = props;
 
   if (rest.disabled !== undefined) {
     // eslint-disable-next-line no-console
@@ -27,12 +27,14 @@ const Input: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInput
 
   return (
     <Box basis="0" grow>
-      <Text { ...rest }
-          className={ classes }
-          disabled={ disabled }
-          ref={ ref }
-          strong
-          tag="input" />
+      <Text
+        {...rest}
+        className={classes}
+        disabled={disabled}
+        ref={ref}
+        strong
+        tag="input"
+      />
     </Box>
   );
 };

@@ -28,7 +28,7 @@ export interface Props extends TableProps {
   variables: TypeSizingVariables;
 }
 
-export default (props: Props) => {
+const SizingTable = (props: Props) => {
   const {
     name,
     shape = 'line',
@@ -41,58 +41,62 @@ export default (props: Props) => {
   } = props;
 
   return (
-    <Table { ...rest } margin="x8" size="x3">
+    <Table {...rest} margin="x8" size="x3">
       <TableHeader>
         <TableRow>
-          <TableHeaderCell colSpan={ showCellVisual ? 2 : 1 }>{ name }</TableHeaderCell>
-          { showCellCSS && <TableHeaderCell>CSS</TableHeaderCell> }
-          { showCellJS && <TableHeaderCell>JS</TableHeaderCell> }
-          { showCellValue && <TableHeaderCell>Value</TableHeaderCell> }
+          <TableHeaderCell colSpan={showCellVisual ? 2 : 1}>
+            {name}
+          </TableHeaderCell>
+          {showCellCSS && <TableHeaderCell>CSS</TableHeaderCell>}
+          {showCellJS && <TableHeaderCell>JS</TableHeaderCell>}
+          {showCellValue && <TableHeaderCell>Value</TableHeaderCell>}
         </TableRow>
       </TableHeader>
       <TableBody>
-        { variables.map(({ name, css, js, value }) => (
-          <TableRow key={ name }>
-            <TableCell align={ showCellVisual ? 'end' : 'start' } sorted>{ name }</TableCell>
-            { showCellVisual && (
+        {variables.map(({ name, css, js, value }) => (
+          <TableRow key={name}>
+            <TableCell align={showCellVisual ? 'end' : 'start'} sorted>
+              {name}
+            </TableCell>
+            {showCellVisual && (
               <TableCell>
-                { shape === 'line' && (
+                {shape === 'line' && (
                   <Box
-                      backgroundColor="text-shade-1"
-                      height="1rem"
-                      width={ `var(${css})` } />
-                ) }
+                    backgroundColor="text-shade-1"
+                    height="1rem"
+                    width={`var(${css})`}
+                  />
+                )}
 
-                { shape === 'square' && (
+                {shape === 'square' && (
                   <Box
-                      backgroundColor="text-shade-1"
-                      borderRadius={ name }
-                      height={ `calc(var(${css}) * 4)` }
-                      width={ `calc(var(${css}) * 4)` } />
-                ) }
+                    backgroundColor="text-shade-1"
+                    borderRadius={name}
+                    height={`calc(var(${css}) * 4)`}
+                    width={`calc(var(${css}) * 4)`}
+                  />
+                )}
               </TableCell>
-            ) }
+            )}
 
-            { showCellCSS && (
+            {showCellCSS && (
               <TableCell breakOn="none">
-                <Code>var({ css })</Code>
+                <Code>var({css})</Code>
               </TableCell>
-            ) }
+            )}
 
-            { showCellJS && (
+            {showCellJS && (
               <TableCell breakOn="none">
-                <Code>{ js }</Code>
+                <Code>{js}</Code>
               </TableCell>
-            ) }
+            )}
 
-            { showCellValue && (
-              <TableCell breakOn="none">
-                { value }
-              </TableCell>
-            ) }
+            {showCellValue && <TableCell breakOn="none">{value}</TableCell>}
           </TableRow>
-        )) }
+        ))}
       </TableBody>
     </Table>
   );
 };
+
+export default SizingTable;

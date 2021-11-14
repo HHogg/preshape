@@ -5,10 +5,11 @@ import './Table.css';
 
 export interface TableProps extends TextProps {}
 
-const Table: React.RefForwardingComponent<HTMLTableElement, Attributes<HTMLTableElement, TableProps>> = (props, ref) => {
-  return (
-    <Text { ...props } className="Table" ref={ ref } tag="table" />
-  );
+const Table: React.RefForwardingComponent<
+  HTMLTableElement,
+  Attributes<HTMLTableElement, TableProps>
+> = (props, ref) => {
+  return <Text {...props} className="Table" ref={ref} tag="table" />;
 };
 
 export default React.forwardRef(Table);

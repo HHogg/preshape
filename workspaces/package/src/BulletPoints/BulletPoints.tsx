@@ -11,17 +11,17 @@ export interface BulletPointsProps extends BoxProps {
   numbered?: boolean;
 }
 
-const BulletPoints: React.RefForwardingComponent<HTMLUListElement, Attributes<HTMLUListElement, BulletPointsProps>> = (props, ref) => {
+const BulletPoints: React.RefForwardingComponent<
+  HTMLUListElement,
+  Attributes<HTMLUListElement, BulletPointsProps>
+> = (props, ref) => {
   const { numbered, ...rest } = props;
   const classes = classnames('BulletPoints', {
     'BulletPoints--numbered': numbered,
   });
 
   return (
-    <Box { ...rest }
-        className={ classes }
-        ref={ ref }
-        tag={ numbered ? 'ol' : 'ul' } />
+    <Box {...rest} className={classes} ref={ref} tag={numbered ? 'ol' : 'ul'} />
   );
 };
 

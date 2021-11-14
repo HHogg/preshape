@@ -19,7 +19,10 @@ export interface RadioButtonProps {
   paddingVertical?: TypeSize;
 }
 
-const RadioButton: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, RadioButtonProps>> = (props, ref) => {
+const RadioButton: React.RefForwardingComponent<
+  HTMLInputElement,
+  Attributes<HTMLInputElement, RadioButtonProps>
+> = (props, ref) => {
   const {
     children,
     disabled,
@@ -32,16 +35,15 @@ const RadioButton: React.RefForwardingComponent<HTMLInputElement, Attributes<HTM
 
   return (
     <SelectInputLabel
-        className="RadioButton__label"
-        disabled={ disabled }
-        label={ children }
-        margin={ margin }
-        padding={ padding }
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }>
-      <RadioButtonIndicator { ...rest }
-          disabled={ disabled }
-          ref={ ref } />
+      className="RadioButton__label"
+      disabled={disabled}
+      label={children}
+      margin={margin}
+      padding={padding}
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+    >
+      <RadioButtonIndicator {...rest} disabled={disabled} ref={ref} />
     </SelectInputLabel>
   );
 };

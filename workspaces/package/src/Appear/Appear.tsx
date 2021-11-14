@@ -6,15 +6,15 @@ import { Attributes, BoxProps } from '../Box/Box';
 import Motion from '../Motion/Motion';
 
 export type TypeAnimation =
-  'Expand' |
-  'Fade' |
-  'FadeSlideUp' |
-  'FadeSlideRight' |
-  'FadeSlideDown' |
-  'FadeSlideLeft' |
-  'Pop' |
-  'ScaleYDown' |
-  'ScaleYUp';
+  | 'Expand'
+  | 'Fade'
+  | 'FadeSlideUp'
+  | 'FadeSlideRight'
+  | 'FadeSlideDown'
+  | 'FadeSlideLeft'
+  | 'Pop'
+  | 'ScaleYDown'
+  | 'ScaleYUp';
 
 /**
  * Using framer-motion, the Appear component provides a variety of
@@ -67,7 +67,10 @@ export interface AppearProps extends BoxProps, MotionProps {
   visibleInitially?: boolean;
 }
 
-const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, AppearProps>> = (props, ref) => {
+const Appear: React.RefForwardingComponent<
+  HTMLElement,
+  Attributes<HTMLElement, AppearProps>
+> = (props, ref) => {
   const {
     animation = 'FadeSlideUp',
     delay = 0,
@@ -85,23 +88,24 @@ const Appear: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, 
     return null;
   }
 
-  const {
-    transition,
-    variants,
-  } = animations[animation](originX, originY);
+  const { transition, variants } = animations[animation](originX, originY);
 
   return (
-    <Motion { ...rest }
-        animate={ visible ? 'visible' : 'hidden' }
-        initial={ visibleInitially ? 'visible' : 'hidden' }
-        key={ animation }
-        ref={ ref }
-        transition={ props.transition || {
+    <Motion
+      {...rest}
+      animate={visible ? 'visible' : 'hidden'}
+      initial={visibleInitially ? 'visible' : 'hidden'}
+      key={animation}
+      ref={ref}
+      transition={
+        props.transition || {
           ...transition,
           delay: delay / 1000,
           duration: duration / 1000,
-        } }
-        variants={ variants } />
+        }
+      }
+      variants={variants}
+    />
   );
 };
 

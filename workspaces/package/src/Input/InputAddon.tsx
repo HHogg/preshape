@@ -4,14 +4,19 @@ import './Input.css';
 
 export interface InputAddonProps extends BoxProps {}
 
-const InputAddon: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, InputAddonProps>> = (props, ref) => {
+const InputAddon: React.RefForwardingComponent<
+  HTMLDivElement,
+  Attributes<HTMLDivElement, InputAddonProps>
+> = (props, ref) => {
   const { padding, paddingHorizontal = 'x3' } = props;
 
   return (
-    <Box { ...props }
-        padding={ padding }
-        paddingHorizontal={ padding || paddingHorizontal }
-        ref={ ref } />
+    <Box
+      {...props}
+      padding={padding}
+      paddingHorizontal={padding || paddingHorizontal}
+      ref={ref}
+    />
   );
 };
 

@@ -1,4 +1,4 @@
-import * as React from 'react' ;
+import * as React from 'react';
 import {
   Box,
   Icons,
@@ -21,12 +21,15 @@ const Item: CatalogueItem<{
   Option: OptionProps;
 }> = {
   name: 'Options',
-  description: 'A multi-selection list component that can be used inline or as a dropdown.',
+  description:
+    'A multi-selection list component that can be used inline or as a dropdown.',
   pictogram: require('../../../assets/pictogram-options.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => {
-      const [values, setValues] = React.useState<{ [key: string]: boolean }>({});
+      const [values, setValues] = React.useState<{ [key: string]: boolean }>(
+        {}
+      );
 
       const handleSelect = (index: number) => {
         if (props.Option.multiselect) {
@@ -57,45 +60,45 @@ const Item: CatalogueItem<{
           <Box maxWidth="16rem">
             <PlacementManager trigger="click">
               <PlacementReference>
-                { (props, { visible }) => (
-                  <InputWrapper { ...props } >
-                    <Input
-                        readOnly
-                        size="x2"
-                        value={ value } />
+                {(props, { visible }) => (
+                  <InputWrapper {...props}>
+                    <Input readOnly size="x2" value={value} />
                     <InputAddon>
-                      { visible
-                        ? <Icons.ChevronUp size="24px" />
-                        : <Icons.ChevronDown size="24px" /> }
+                      {visible ? (
+                        <Icons.ChevronUp size="24px" />
+                      ) : (
+                        <Icons.ChevronDown size="24px" />
+                      )}
                     </InputAddon>
                   </InputWrapper>
-                ) }
+                )}
               </PlacementReference>
 
               <Placement
-                  animation="FadeSlideDown"
-                  elevate
-                  minWidth="reference"
-                  options={ {
-                    modifiers: {
-                      preventOverflow: {
-                        boundariesElement: 'window',
-                      },
+                animation="FadeSlideDown"
+                elevate
+                minWidth="reference"
+                options={{
+                  modifiers: {
+                    preventOverflow: {
+                      boundariesElement: 'window',
                     },
-                  } }
-                  placement="bottom"
-                  zIndex={ 1 }>
-                <Options { ...props.Options }
-                    maxHeight="10rem"
-                    overflow="auto">
-                  { Array.from({ length: 10 }).map((_, index) => (
-                    <Option { ...props.Option }
-                        checked={ !!values[index] }
-                        key={ index }
-                        onChange={ () => handleSelect(index) }>
-                      Option { index + 1 }
+                  },
+                }}
+                placement="bottom"
+                zIndex={1}
+              >
+                <Options {...props.Options} maxHeight="10rem" overflow="auto">
+                  {Array.from({ length: 10 }).map((_, index) => (
+                    <Option
+                      {...props.Option}
+                      checked={!!values[index]}
+                      key={index}
+                      onChange={() => handleSelect(index)}
+                    >
+                      Option {index + 1}
                     </Option>
-                  )) }
+                  ))}
                 </Options>
               </Placement>
             </PlacementManager>
@@ -108,15 +111,18 @@ const Item: CatalogueItem<{
       Option: {},
     },
   },
-  apis: [{
-    module: '"Options/Option"',
-    name: 'OptionProps',
-    rename: 'Option',
-  }, {
-    module: '"Options/Options"',
-    name: 'OptionsProps',
-    rename: 'Options',
-  }],
+  apis: [
+    {
+      module: '"Options/Option"',
+      name: 'OptionProps',
+      rename: 'Option',
+    },
+    {
+      module: '"Options/Options"',
+      name: 'OptionsProps',
+      rename: 'Options',
+    },
+  ],
 };
 
 export default Item;

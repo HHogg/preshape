@@ -7,7 +7,10 @@ export interface TableRowProps extends BoxProps {
   active?: boolean;
 }
 
-const TableRow: React.RefForwardingComponent<HTMLTableRowElement, Attributes<HTMLTableRowElement, TableRowProps>> = (props, ref) => {
+const TableRow: React.RefForwardingComponent<
+  HTMLTableRowElement,
+  Attributes<HTMLTableRowElement, TableRowProps>
+> = (props, ref) => {
   const { active, clickable, ...rest } = props;
   const classes = classnames('Table__row', {
     'Table__row--active': active,
@@ -15,11 +18,13 @@ const TableRow: React.RefForwardingComponent<HTMLTableRowElement, Attributes<HTM
   });
 
   return (
-    <Box { ...rest }
-        className={ classes }
-        clickable={ clickable }
-        ref={ ref }
-        tag="tr" />
+    <Box
+      {...rest}
+      className={classes}
+      clickable={clickable}
+      ref={ref}
+      tag="tr"
+    />
   );
 };
 

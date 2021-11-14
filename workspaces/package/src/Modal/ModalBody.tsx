@@ -8,14 +8,19 @@ import Box, { Attributes, BoxProps } from '../Box/Box';
  */
 export interface ModalBodyProps extends BoxProps {}
 
-const ModalBody: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalBodyProps>> = (props, ref) => {
+const ModalBody: React.RefForwardingComponent<
+  HTMLDivElement,
+  Attributes<HTMLDivElement, ModalBodyProps>
+> = (props, ref) => {
   return (
-    <Box { ...props }
-        className="Modal__body"
-        flex="vertical"
-        grow
-        ref={ ref }
-        shrink />
+    <Box
+      {...props}
+      className="Modal__body"
+      flex="vertical"
+      grow
+      ref={ref}
+      shrink
+    />
   );
 };
 

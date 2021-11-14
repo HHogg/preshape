@@ -35,11 +35,17 @@ export interface PlacementManagerProps {
 
 const PlacementManager: React.FC<PlacementManagerProps> = (props) => {
   const { trigger, ...rest } = props;
-  const [referenceNode, setReferenceNode] = React.useState<null | HTMLElement>(null);
-  const [visible, setVisible] = React.useState<boolean | undefined>(trigger && false);
+  const [referenceNode, setReferenceNode] = React.useState<null | HTMLElement>(
+    null
+  );
+  const [visible, setVisible] = React.useState<boolean | undefined>(
+    trigger && false
+  );
   const onClose = trigger === undefined ? undefined : () => setVisible(false);
-  const onPointerEnter = trigger === 'hover' ? () => setVisible(true) : undefined;
-  const onPointerLeave = trigger === 'hover' ? () => setVisible(false) : undefined;
+  const onPointerEnter =
+    trigger === 'hover' ? () => setVisible(true) : undefined;
+  const onPointerLeave =
+    trigger === 'hover' ? () => setVisible(false) : undefined;
   const onClick = trigger === 'click' ? () => setVisible(true) : undefined;
 
   React.useEffect(() => {
@@ -49,16 +55,18 @@ const PlacementManager: React.FC<PlacementManagerProps> = (props) => {
   }, [trigger]);
 
   return (
-    <PlacementManagerContext.Provider value={ {
-      onClose,
-      onPointerEnter,
-      onPointerLeave,
-      onClick,
-      referenceNode,
-      setReferenceNode,
-      visible,
-    } }>
-      <Manager { ...rest } />
+    <PlacementManagerContext.Provider
+      value={{
+        onClose,
+        onPointerEnter,
+        onPointerLeave,
+        onClick,
+        referenceNode,
+        setReferenceNode,
+        visible,
+      }}
+    >
+      <Manager {...rest} />
     </PlacementManagerContext.Provider>
   );
 };

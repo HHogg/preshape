@@ -7,7 +7,10 @@ export interface TableCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableCell: React.RefForwardingComponent<HTMLTableDataCellElement, Attributes<HTMLTableDataCellElement, TableCellProps>> = (props, ref) => {
+const TableCell: React.RefForwardingComponent<
+  HTMLTableDataCellElement,
+  Attributes<HTMLTableDataCellElement, TableCellProps>
+> = (props, ref) => {
   const {
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
@@ -16,13 +19,15 @@ const TableCell: React.RefForwardingComponent<HTMLTableDataCellElement, Attribut
   } = props;
 
   return (
-    <Text { ...rest }
-        className="Table__cell"
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }
-        ref={ ref }
-        strong={ sorted }
-        tag="td" />
+    <Text
+      {...rest}
+      className="Table__cell"
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+      ref={ref}
+      strong={sorted}
+      tag="td"
+    />
   );
 };
 

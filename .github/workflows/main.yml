@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: "Cache: node_modules"
+      - name: 'Cache: node_modules'
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
@@ -21,16 +21,16 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: "Install Dependencies"
+      - name: 'Install Dependencies'
         run: yarn
-      - name: "Test: Linting"
+      - name: 'Test: Linting'
         run: yarn lint
-      - name: "Build Library & Site"
+      - name: 'Build Library & Site'
         run: yarn build
-      - name: "Deploy: Library"
+      - name: 'Deploy: Library'
         run: yarn deploy:lib
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: "Deploy: Site"
-        run: "yarn deploy:site --token ${{ secrets.FIREBASE_TOKEN }}"
+      - name: 'Deploy: Site'
+        run: 'yarn deploy:site --token ${{ secrets.FIREBASE_TOKEN }}'

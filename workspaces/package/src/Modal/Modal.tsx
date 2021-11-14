@@ -24,10 +24,10 @@ export interface ModalProps extends BoxProps {
    */
   animation?: TypeAnimation;
   /**
-  * Extends the initial height of the modal to
-  * be the full height of the viewport
-  */
- fullscreen?: boolean;
+   * Extends the initial height of the modal to
+   * be the full height of the viewport
+   */
+  fullscreen?: boolean;
   /**
    * Sets the background color of the overlay that sits
    * under the modal and on top of the main UI.
@@ -57,7 +57,10 @@ export interface ModalProps extends BoxProps {
   visible: boolean;
 }
 
-const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElement, ModalProps>> = (props, ref) => {
+const Modal: React.RefForwardingComponent<
+  HTMLDivElement,
+  Attributes<HTMLDivElement, ModalProps>
+> = (props, ref) => {
   const {
     animation = 'Fade',
     backgroundColor = 'background-shade-1',
@@ -104,42 +107,49 @@ const Modal: React.RefForwardingComponent<HTMLDivElement, Attributes<HTMLDivElem
   }
 
   return createPortal(
-    <ModalContext.Provider value={ { onClose } }>
-      <Box { ...rest }
-          alignChildren="middle"
-          fixed="edge-to-edge"
-          flex="vertical"
-          padding={ (!isMaxWidthEnabled || match(maxWidth)) ? margin : 'x0' }
-          ref={ ref }>
+    <ModalContext.Provider value={{ onClose }}>
+      <Box
+        {...rest}
+        alignChildren="middle"
+        fixed="edge-to-edge"
+        flex="vertical"
+        padding={!isMaxWidthEnabled || match(maxWidth) ? margin : 'x0'}
+        ref={ref}
+      >
         <Appear
-            absolute="edge-to-edge"
-            animation="Fade"
-            backgroundColor={ overlayBackgroundColor }
-            onAnimationComplete={ handleOnAnimateComplete }
-            onPointerUp={ onClose }
-            visible={ visible } />
+          absolute="edge-to-edge"
+          animation="Fade"
+          backgroundColor={overlayBackgroundColor}
+          onAnimationComplete={handleOnAnimateComplete}
+          onPointerUp={onClose}
+          visible={visible}
+        />
 
         <Appear
-            animation={ animation }
-            backgroundColor={ backgroundColor }
-            borderRadius="x3"
-            className={ classes }
-            container
-            flex="vertical"
-            grow={ fullscreen || (isMaxWidthEnabled && !match(maxWidth)) }
-            maxHeight="100vh"
-            maxWidth={
-              (isMaxWidthEnabled && maxWidth) ||
-              (fullscreen && '100%') || undefined }
-            overflow="auto"
-            ref={ refModal }
-            shrink
-            visible={ visible }>
-          { children }
+          animation={animation}
+          backgroundColor={backgroundColor}
+          borderRadius="x3"
+          className={classes}
+          container
+          flex="vertical"
+          grow={fullscreen || (isMaxWidthEnabled && !match(maxWidth))}
+          maxHeight="100vh"
+          maxWidth={
+            (isMaxWidthEnabled && maxWidth) ||
+            (fullscreen && '100%') ||
+            undefined
+          }
+          overflow="auto"
+          ref={refModal}
+          shrink
+          visible={visible}
+        >
+          {children}
         </Appear>
       </Box>
-    </ModalContext.Provider>
-  , document.body);
+    </ModalContext.Provider>,
+    document.body
+  );
 };
 
 export default React.forwardRef(Modal);

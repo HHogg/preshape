@@ -14,9 +14,9 @@ const TypeTooltipIntrinsicMap: {
   string: TypeTooltipIntrinsicString,
 };
 
-interface Props extends Renderer, JSONOutput.IntrinsicType { }
+interface Props extends Renderer, JSONOutput.IntrinsicType {}
 
-export default (props: Props) => {
+const TypeRendererIntrinsic = (props: Props) => {
   const { context, name, onStateChange, state } = props;
   const isBoolean = name === 'boolean';
   const isBooleanValue = name === 'true' || name === 'false';
@@ -25,14 +25,15 @@ export default (props: Props) => {
   if (isBoolean) {
     return (
       <TypeRendererUnion
-          context={ context }
-          onStateChange={ onStateChange }
-          state={ state }
-          type="union"
-          types={ [
-            { type: 'intrinsic', name: 'false' },
-            { type: 'intrinsic', name: 'true' },
-          ] } />
+        context={context}
+        onStateChange={onStateChange}
+        state={state}
+        type="union"
+        types={[
+          { type: 'intrinsic', name: 'false' },
+          { type: 'intrinsic', name: 'true' },
+        ]}
+      />
     );
   }
 
@@ -41,10 +42,11 @@ export default (props: Props) => {
 
     return (
       <TypeLabel
-          active={ state === value }
-          clickable
-          onClick={ () => onStateChange(value) }>
-        { name }
+        active={state === value}
+        clickable
+        onClick={() => onStateChange(value)}
+      >
+        {name}
       </TypeLabel>
     );
   }
@@ -52,28 +54,31 @@ export default (props: Props) => {
   if (TypeTooltipIntrinsic) {
     return (
       <TypeTooltipIntrinsic
-          context={ context }
-          onStateChange={ onStateChange }
-          state={ state }>
-        { (props) => (
-          <TypeLabel { ...props }
-              active={ state === undefined ? false : (
-                (name === 'string' && typeof state === 'string') ||
-                (name === 'number' && typeof state === 'number') ||
-                false
-              ) }
-              clickable
-              hasInfo>
-            { name }
+        context={context}
+        onStateChange={onStateChange}
+        state={state}
+      >
+        {(props) => (
+          <TypeLabel
+            {...props}
+            active={
+              state === undefined
+                ? false
+                : (name === 'string' && typeof state === 'string') ||
+                  (name === 'number' && typeof state === 'number') ||
+                  false
+            }
+            clickable
+            hasInfo
+          >
+            {name}
           </TypeLabel>
-        ) }
+        )}
       </TypeTooltipIntrinsic>
     );
   }
 
-  return (
-    <TypeLabel>
-      { name }
-    </TypeLabel>
-  );
+  return <TypeLabel>{name}</TypeLabel>;
 };
+
+export default TypeRendererIntrinsic;

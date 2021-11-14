@@ -1,32 +1,43 @@
 {
   "plugins": [
-    ["@semantic-release/commit-analyzer", {
-      "releaseRules": [
-        { "type": "style", "release": "patch" }
-      ]
-    }],
-    ["@semantic-release/release-notes-generator", {
-      "preset": "conventionalcommits",
-      "presetConfig": {
-        "types": [{
-          "type": "style",
-          "section": "Style Changes",
-          "hidden": false
-        }, {
-          "type": "feat",
-          "section": "Features",
-          "hidden": false
-        }, {
-          "type": "fix",
-          "section": "Fixes",
-          "hidden": false
-        }]
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "releaseRules": [{ "type": "style", "release": "patch" }]
       }
-    }],
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits",
+        "presetConfig": {
+          "types": [
+            {
+              "type": "style",
+              "section": "Style Changes",
+              "hidden": false
+            },
+            {
+              "type": "feat",
+              "section": "Features",
+              "hidden": false
+            },
+            {
+              "type": "fix",
+              "section": "Fixes",
+              "hidden": false
+            }
+          ]
+        }
+      }
+    ],
     "@semantic-release/changelog",
-    ["@semantic-release/npm", {
-      "pkgRoot": "./workspaces/package"
-    }],
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "./workspaces/package"
+      }
+    ],
     "@semantic-release/github",
     "@semantic-release/git"
   ]

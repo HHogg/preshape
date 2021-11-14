@@ -45,66 +45,64 @@ const VariantsIconMoon: Variants = {
   },
 };
 
-
 export interface ThemeSwitcherProps extends BoxProps {
   size?: number;
   onChange: (theme: TypeTheme) => void;
   theme: TypeTheme;
 }
 
-const ThemeControls: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, ThemeSwitcherProps>> = (props, ref) => {
-  const {
-    onChange,
-    size = 16,
-    theme,
-    ...rest
-  } = props;
+const ThemeControls: React.RefForwardingComponent<
+  HTMLLabelElement,
+  Attributes<HTMLLabelElement, ThemeSwitcherProps>
+> = (props, ref) => {
+  const { onChange, size = 16, theme, ...rest } = props;
 
   return (
-    <Box { ...rest }
-        container
-        flex="horizontal"
-        ref={ ref }
-        tag="label">
+    <Box {...rest} container flex="horizontal" ref={ref} tag="label">
       <input
-          checked={ theme === 'night' }
-          className="ThemeSwitcher__input"
-          onChange={ () => onChange(theme === 'night' ? 'day' : 'night') }
-          type="checkbox" />
+        checked={theme === 'night'}
+        className="ThemeSwitcher__input"
+        onChange={() => onChange(theme === 'night' ? 'day' : 'night')}
+        type="checkbox"
+      />
 
       <Motion
-          animate={ theme }
-          backgroundColor="background-shade-3"
-          borderSize="x2"
-          className="ThemeSwitcher"
-          clickable
-          container
-          initial="day"
-          overflow="hidden"
-          transition={ transition }>
+        animate={theme}
+        backgroundColor="background-shade-3"
+        borderSize="x2"
+        className="ThemeSwitcher"
+        clickable
+        container
+        initial="day"
+        overflow="hidden"
+        transition={transition}
+      >
         <Motion
-            absolute="top-left"
-            borderRadius="full"
-            className="ThemeSwitcher__toggle"
-            style={ { padding: size / 8 } }
-            transition={ transition }
-            variants={ VariantsToggle }>
-          <Icons.Sun size={ `${size}px` } />
+          absolute="top-left"
+          borderRadius="full"
+          className="ThemeSwitcher__toggle"
+          style={{ padding: size / 8 }}
+          transition={transition}
+          variants={VariantsToggle}
+        >
+          <Icons.Sun size={`${size}px`} />
         </Motion>
 
         <Box flex="horizontal" textColor="background-shade-1">
           <Motion
-              style={ { padding: size / 8 } }
-              transition={ transition }
-              variants={ VariantsIconSun }>
-            <Icons.Sun name="Sun" size={ `${size}px` } />
+            style={{ padding: size / 8 }}
+            transition={transition}
+            variants={VariantsIconSun}
+          >
+            <Icons.Sun name="Sun" size={`${size}px`} />
           </Motion>
 
           <Motion
-              style={ { padding: size / 8 } }
-              transition={ transition }
-              variants={ VariantsIconMoon }>
-            <Icons.Moon name="Moon" size={ `${size}px` } />
+            style={{ padding: size / 8 }}
+            transition={transition}
+            variants={VariantsIconMoon}
+          >
+            <Icons.Moon name="Moon" size={`${size}px`} />
           </Motion>
         </Box>
       </Motion>

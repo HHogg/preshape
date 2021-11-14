@@ -8,7 +8,10 @@ export interface TabProps extends BoxProps {
   active?: boolean;
 }
 
-const Tab: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TabProps>> = (props, ref) => {
+const Tab: React.RefForwardingComponent<
+  HTMLElement,
+  Attributes<HTMLElement, TabProps>
+> = (props, ref) => {
   const {
     active,
     backgroundColor = 'background-shade-1',
@@ -20,17 +23,15 @@ const Tab: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Tab
   });
 
   return (
-    <Box { ...rest }
-        backgroundColor={ backgroundColor }
-        className={ classes }
-        ref={ ref }>
+    <Box
+      {...rest}
+      backgroundColor={backgroundColor}
+      className={classes}
+      ref={ref}
+    >
       <Box className="Tab__background">
-        <Link
-            display="block"
-            padding="x3"
-            size="x2"
-            strong>
-          { children }
+        <Link display="block" padding="x3" size="x2" strong>
+          {children}
         </Link>
       </Box>
     </Box>

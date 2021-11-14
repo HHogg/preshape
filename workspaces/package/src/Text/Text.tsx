@@ -4,16 +4,16 @@ import Box, { Attributes, BoxProps, TypeAllElementTags } from '../Box/Box';
 import './Text.css';
 
 export type TypeTextSize =
-  'x1' |
-  'x2' |
-  'x3' |
-  'x4' |
-  'x5' |
-  'x6' |
-  'x7' |
-  'x8';
+  | 'x1'
+  | 'x2'
+  | 'x3'
+  | 'x4'
+  | 'x5'
+  | 'x6'
+  | 'x7'
+  | 'x8';
 
-const TagInlineMap = (props: TextProps): TypeAllElementTags =>
+const getInlineTag = (props: TextProps): TypeAllElementTags =>
   (props.strong && 'strong') ||
   (props.emphasis && 'em') ||
   (props.subscript && 'sub') ||
@@ -51,7 +51,10 @@ export interface TextProps extends BoxProps {
   weak?: boolean;
 }
 
-const Text: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, TextProps>> = (props, ref) => {
+const Text: React.RefForwardingComponent<
+  HTMLElement,
+  Attributes<HTMLElement, TextProps>
+> = (props, ref) => {
   const {
     align,
     breakOn,
@@ -88,14 +91,9 @@ const Text: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Te
     [`Text--size-${size}`]: size,
   });
 
-  const finalTag = tag || (inline && TagInlineMap(props)) || 'div';
+  const finalTag = tag || (inline && getInlineTag(props)) || 'div';
 
-  return (
-    <Box { ...rest }
-        className={ classes }
-        ref={ ref }
-        tag={ finalTag } />
-  );
+  return <Box {...rest} className={classes} ref={ref} tag={finalTag} />;
 };
 
 export default React.forwardRef(Text);

@@ -9,7 +9,9 @@ import Box, { Attributes, BoxProps } from '../Box/Box';
 import { PlacementManagerContext } from './PlacementManager';
 import './Placement.css';
 
-const getAnimationOrigin = (placement: PopperJS.Placement): {
+const getAnimationOrigin = (
+  placement: PopperJS.Placement
+): {
   originX: 0 | 0.5 | 1;
   originY: 0 | 0.5 | 1;
 } => {
@@ -61,12 +63,16 @@ const getAnimationOrigin = (placement: PopperJS.Placement): {
 
 type PopperOptions = Omit<PopperProps, 'children'>;
 
-export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>({
-  ref: () => {},
-  style: {},
-});
+export const PlacementArrowPropsContext = React.createContext<PopperArrowProps>(
+  {
+    ref: () => {},
+    style: {},
+  }
+);
 
-export interface PlacementProps extends BoxProps, Pick<AppearProps, 'animation'> {
+export interface PlacementProps
+  extends BoxProps,
+    Pick<AppearProps, 'animation'> {
   /**
    * The minimum width of the Placement element. This can be a standard
    * CSS value or a keyword of 'reference', which will apply the width
@@ -93,7 +99,9 @@ export interface PlacementProps extends BoxProps, Pick<AppearProps, 'animation'>
   visible?: boolean;
 }
 
-const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
+const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (
+  props
+) => {
   const {
     animation = 'Pop',
     children,
@@ -114,8 +122,12 @@ const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (props) 
   } = React.useContext(PlacementManagerContext);
 
   const onClose = onCloseUncontrolled || onCloseControlled;
-  const visible = visibleUncontrolled === undefined ? visibleControlled : visibleUncontrolled;
-  const placementMinWidth = (minWidth === 'reference' && referenceNode) ? referenceNode.clientWidth : minWidth;
+  const visible =
+    visibleUncontrolled === undefined ? visibleControlled : visibleUncontrolled;
+  const placementMinWidth =
+    minWidth === 'reference' && referenceNode
+      ? referenceNode.clientWidth
+      : minWidth;
 
   const [render, setRender] = React.useState(unrender ? visible : true);
   const ref = React.useRef<HTMLElement | null>();
@@ -126,11 +138,21 @@ const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (props) 
     }
   }, [visible]);
 
-  useEventListener(document, 'pointerup', (event) => {
-    if (onClose && visible && ref.current && !ref.current.contains(event.target as Node)) {
-      onClose();
-    }
-  }, [onClose, visible]);
+  useEventListener(
+    document,
+    'pointerup',
+    (event) => {
+      if (
+        onClose &&
+        visible &&
+        ref.current &&
+        !ref.current.contains(event.target as Node)
+      ) {
+        onClose();
+      }
+    },
+    [onClose, visible]
+  );
 
   if (!render) {
     return null;
@@ -143,27 +165,34 @@ const Placement: React.FC<Attributes<HTMLDivElement, PlacementProps>> = (props) 
   };
 
   return createPortal(
-    <Popper { ...options }
-        innerRef={ (el) => ref.current = el || null }
-        placement={ placement }>
-      { ({ arrowProps, placement, ref, style: stylePopper }) => (
-        <PlacementArrowPropsContext.Provider value={ arrowProps }>
-          <Box { ...rest }
-              className={ classnames('Placement', `Placement--${placement}`) }
-              minWidth={ placementMinWidth }
-              ref={ ref }
-              style={ { ...stylePopper, ...style } }>
-            <Appear { ...getAnimationOrigin(placement) }
-                animation={ animation }
-                onAnimationComplete={ handleExited }
-                visible={ visible }>
-              { children }
+    <Popper
+      {...options}
+      innerRef={(el) => (ref.current = el || null)}
+      placement={placement}
+    >
+      {({ arrowProps, placement, ref, style: stylePopper }) => (
+        <PlacementArrowPropsContext.Provider value={arrowProps}>
+          <Box
+            {...rest}
+            className={classnames('Placement', `Placement--${placement}`)}
+            minWidth={placementMinWidth}
+            ref={ref}
+            style={{ ...stylePopper, ...style }}
+          >
+            <Appear
+              {...getAnimationOrigin(placement)}
+              animation={animation}
+              onAnimationComplete={handleExited}
+              visible={visible}
+            >
+              {children}
             </Appear>
           </Box>
         </PlacementArrowPropsContext.Provider>
-      ) }
+      )}
     </Popper>,
-  document.body);
+    document.body
+  );
 };
 
 export default Placement;

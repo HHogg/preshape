@@ -1,4 +1,4 @@
-import * as React from 'react' ;
+import * as React from 'react';
 import { RadioButton, RadioButtonProps } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -13,20 +13,28 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <RadioButton { ...props.RadioButton } margin="x2" name="radio">Lorem Ipsum</RadioButton>
-        <RadioButton { ...props.RadioButton } margin="x2" name="radio">Lorem Ipsum</RadioButton>
-        <RadioButton { ...props.RadioButton } margin="x2" name="radio">Lorem Ipsum</RadioButton>
+        <RadioButton {...props.RadioButton} margin="x2" name="radio">
+          Lorem Ipsum
+        </RadioButton>
+        <RadioButton {...props.RadioButton} margin="x2" name="radio">
+          Lorem Ipsum
+        </RadioButton>
+        <RadioButton {...props.RadioButton} margin="x2" name="radio">
+          Lorem Ipsum
+        </RadioButton>
       </Showcase>
     ),
     state: {
       RadioButton: {},
     },
   },
-  apis: [{
-    module: '"RadioButton/RadioButton"',
-    name: 'RadioButtonProps',
-    rename: 'RadioButton',
-  }],
+  apis: [
+    {
+      module: '"RadioButton/RadioButton"',
+      name: 'RadioButtonProps',
+      rename: 'RadioButton',
+    },
+  ],
 };
 
 export default Item;

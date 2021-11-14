@@ -23,7 +23,7 @@ export interface Props extends Renderer {
   placeholder?: string;
 }
 
-export default (props: Props) => {
+const TypeTooltipIntrinsic = (props: Props) => {
   const { children, context, state, onStateChange, placeholder } = props;
   const { theme } = React.useContext(RootContext);
   const [visible, setVisible] = React.useState(false);
@@ -48,27 +48,30 @@ export default (props: Props) => {
   return (
     <PlacementManager>
       <PlacementReference>
-        { (props) => children({ ...props, onClick: handleOnClick }) }
+        {(props) => children({ ...props, onClick: handleOnClick })}
       </PlacementReference>
 
       <Placement
-          onClose={ () => setVisible(false) }
-          theme={ themesOpposite[theme] }
-          unrender
-          visible={ visible }
-          width="12rem"
-          zIndex={ 1 }>
+        onClose={() => setVisible(false)}
+        theme={themesOpposite[theme]}
+        unrender
+        visible={visible}
+        width="12rem"
+        zIndex={1}
+      >
         <PlacementArrow backgroundColor="background-shade-1" />
         <PlacementContent
-            backgroundColor="background-shade-1"
-            borderRadius="x1"
-            padding="x1">
-          <Form onSubmit={ handleOnSubmit }>
-            <InputWrapper label={ context.name }>
+          backgroundColor="background-shade-1"
+          borderRadius="x1"
+          padding="x1"
+        >
+          <Form onSubmit={handleOnSubmit}>
+            <InputWrapper label={context.name}>
               <Input
-                  onChange={ handleOnChange }
-                  placeholder={ placeholder }
-                  value={ textValue } />
+                onChange={handleOnChange}
+                placeholder={placeholder}
+                value={textValue}
+              />
             </InputWrapper>
           </Form>
         </PlacementContent>
@@ -76,3 +79,5 @@ export default (props: Props) => {
     </PlacementManager>
   );
 };
+
+export default TypeTooltipIntrinsic;

@@ -6,11 +6,9 @@ import { getTag } from './utils';
 import KindRenderer from './KindRenderer';
 import TypeLabel from './TypeLabel';
 
-interface Props extends Renderer, JSONOutput.ReferenceType {
+interface Props extends Renderer, JSONOutput.ReferenceType {}
 
-}
-
-export default (props: PropsWithChildren<Props>) => {
+const TypeRendererReference = (props: PropsWithChildren<Props>) => {
   const { context, id, name, onStateChange, state } = props;
 
   if (id && context) {
@@ -19,17 +17,17 @@ export default (props: PropsWithChildren<Props>) => {
 
     if (api && (!referenceTag || !referenceTag.startsWith('false'))) {
       return (
-        <KindRenderer { ...api }
-            context={ context }
-            onStateChange={ onStateChange }
-            state={ state } />
+        <KindRenderer
+          {...api}
+          context={context}
+          onStateChange={onStateChange}
+          state={state}
+        />
       );
     }
   }
 
-  return (
-    <TypeLabel>
-      { name }
-    </TypeLabel>
-  );
+  return <TypeLabel>{name}</TypeLabel>;
 };
+
+export default TypeRendererReference;

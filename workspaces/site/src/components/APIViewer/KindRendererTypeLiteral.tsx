@@ -5,12 +5,10 @@ import TypeLabel from './TypeLabel';
 
 interface Props extends Renderer, JSONOutput.DeclarationReflection {}
 
-export default (props: Props) => {
+const KindRendererTypeLiteral = (props: Props) => {
   const isFunction = !!props.signatures;
 
-  return (
-    <TypeLabel>
-      { isFunction ? 'Function' : 'Object' }
-    </TypeLabel>
-  );
+  return <TypeLabel>{isFunction ? 'Function' : 'Object'}</TypeLabel>;
 };
+
+export default KindRendererTypeLiteral

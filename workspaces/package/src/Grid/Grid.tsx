@@ -24,7 +24,10 @@ export interface GridProps extends BoxProps {
   rowSize?: string | 'max-content' | 'min-content';
 }
 
-const Grid: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, GridProps>> = (props, ref) => {
+const Grid: React.RefForwardingComponent<
+  HTMLElement,
+  Attributes<HTMLElement, GridProps>
+> = (props, ref) => {
   const {
     alignChildren,
     className,
@@ -39,21 +42,27 @@ const Grid: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, Gr
     ...rest
   } = props;
 
-  const classes = classnames('Grid', {
-    [`Grid--align-${alignChildren}`]: alignChildren,
-    [`Grid--gap-horizontal-${gapHorizontal}`]: gapHorizontal,
-    [`Grid--gap-vertical-${gapVertical}`]: gapVertical,
-  }, className);
+  const classes = classnames(
+    'Grid',
+    {
+      [`Grid--align-${alignChildren}`]: alignChildren,
+      [`Grid--gap-horizontal-${gapHorizontal}`]: gapHorizontal,
+      [`Grid--gap-vertical-${gapVertical}`]: gapVertical,
+    },
+    className
+  );
 
   const style = {
-    gridTemplateColumns: `repeat(${repeat}, ${repeatWidthMin ? `minmax(${repeatWidthMin}, ${repeatWidthMax})` : repeatWidth})`,
+    gridTemplateColumns: `repeat(${repeat}, ${
+      repeatWidthMin
+        ? `minmax(${repeatWidthMin}, ${repeatWidthMax})`
+        : repeatWidth
+    })`,
     gridAutoRows: rowSize,
     ...rest.style,
   };
 
-  return (
-    <Box { ...rest } className={ classes } ref={ ref } style={ style } />
-  );
+  return <Box {...rest} className={classes} ref={ref} style={style} />;
 };
 
 export default React.forwardRef(Grid);

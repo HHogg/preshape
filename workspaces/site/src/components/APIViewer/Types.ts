@@ -9,9 +9,7 @@ export interface APIRecord {
 export type StatePrimitive = boolean | number | string | undefined;
 
 export interface RendererContainer {
-  onStateChange: (state: {
-    [key: string]: StatePrimitive;
-  }) => void;
+  onStateChange: (state: { [key: string]: StatePrimitive }) => void;
   state: {
     [key: string]: StatePrimitive;
   };

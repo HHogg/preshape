@@ -1,4 +1,4 @@
-import * as React from 'react' ;
+import * as React from 'react';
 import {
   Table,
   TableProps,
@@ -44,7 +44,8 @@ const Item: CatalogueItem<{
   TableRow: TableRowProps;
 }> = {
   name: 'Table',
-  description: 'Standard table layout components. Useful for presenting, comparing and sorting raw tabular data',
+  description:
+    'Standard table layout components. Useful for presenting, comparing and sorting raw tabular data',
   pictogram: require('../../../assets/pictogram-table.svg').default,
   type: 'component',
   showcase: {
@@ -67,36 +68,49 @@ const Item: CatalogueItem<{
 
       return (
         <Showcase>
-          <Table { ...props.Table } size="x2">
-            <TableHeader { ...props.TableHeader }>
-              <TableRow { ...props.TableRow }>
-                { headers.map((header, index) => (
-                  <TableHeaderCell { ...props.TableHeaderCell }
-                      align={ index > 0 ? 'end' : 'start' }
-                      breakOn="none"
-                      key={ header }
-                      onClick={ () => setState([index, index !== sortIndex ? -1 : (sortDirection === -1 ? 1 : -1)]) }
-                      sortable
-                      sorted={ sortIndex === index }>
-                    { header }
+          <Table {...props.Table} size="x2">
+            <TableHeader {...props.TableHeader}>
+              <TableRow {...props.TableRow}>
+                {headers.map((header, index) => (
+                  <TableHeaderCell
+                    {...props.TableHeaderCell}
+                    align={index > 0 ? 'end' : 'start'}
+                    breakOn="none"
+                    key={header}
+                    onClick={() =>
+                      setState([
+                        index,
+                        index !== sortIndex
+                          ? -1
+                          : sortDirection === -1
+                          ? 1
+                          : -1,
+                      ])
+                    }
+                    sortable
+                    sorted={sortIndex === index}
+                  >
+                    {header}
                   </TableHeaderCell>
-                )) }
+                ))}
               </TableRow>
             </TableHeader>
 
-            <TableBody { ...props.TableBody }>
-              { sortedData.map((data) => (
-                <TableRow { ...props.TableRow } clickable key={ data[0] }>
-                  { data.map((data, index) => (
-                    <TableCell { ...props.TableCell }
-                        align={ index > 0 ? 'end' : 'start' }
-                        key={ index }
-                        sorted={ sortIndex === index }>
-                      { data }
+            <TableBody {...props.TableBody}>
+              {sortedData.map((data) => (
+                <TableRow {...props.TableRow} clickable key={data[0]}>
+                  {data.map((data, index) => (
+                    <TableCell
+                      {...props.TableCell}
+                      align={index > 0 ? 'end' : 'start'}
+                      key={index}
+                      sorted={sortIndex === index}
+                    >
+                      {data}
                     </TableCell>
-                  )) }
+                  ))}
                 </TableRow>
-              )) }
+              ))}
             </TableBody>
           </Table>
         </Showcase>
@@ -113,31 +127,38 @@ const Item: CatalogueItem<{
       TableRow: {},
     },
   },
-  apis: [{
-    module:'"Table/Table"',
-    name: 'TableProps',
-    rename: 'Table',
-  }, {
-    module:'"Table/TableHeader"',
-    name: 'TableHeaderProps',
-    rename: 'TableHeader',
-  }, {
-    module:'"Table/TableHeaderCell"',
-    name: 'TableHeaderCellProps',
-    rename: 'TableHeaderCell',
-  }, {
-    module:'"Table/TableBody"',
-    name: 'TableBodyProps',
-    rename: 'TableBody',
-  }, {
-    module:'"Table/TableRow"',
-    name: 'TableRowProps',
-    rename: 'TableRow',
-  }, {
-    module:'"Table/TableCell"',
-    name: 'TableCellProps',
-    rename: 'TableCell',
-  }],
+  apis: [
+    {
+      module: '"Table/Table"',
+      name: 'TableProps',
+      rename: 'Table',
+    },
+    {
+      module: '"Table/TableHeader"',
+      name: 'TableHeaderProps',
+      rename: 'TableHeader',
+    },
+    {
+      module: '"Table/TableHeaderCell"',
+      name: 'TableHeaderCellProps',
+      rename: 'TableHeaderCell',
+    },
+    {
+      module: '"Table/TableBody"',
+      name: 'TableBodyProps',
+      rename: 'TableBody',
+    },
+    {
+      module: '"Table/TableRow"',
+      name: 'TableRowProps',
+      rename: 'TableRow',
+    },
+    {
+      module: '"Table/TableCell"',
+      name: 'TableCellProps',
+      rename: 'TableCell',
+    },
+  ],
 };
 
 export default Item;

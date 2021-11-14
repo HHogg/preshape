@@ -4,7 +4,10 @@ import './Range.css';
 
 export interface RangeProps extends BoxProps {}
 
-const Range: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, RangeProps>> = (props, ref) => {
+const Range: React.RefForwardingComponent<
+  HTMLInputElement,
+  Attributes<HTMLInputElement, RangeProps>
+> = (props, ref) => {
   const {
     padding,
     paddingHorizontal = 'x3',
@@ -13,15 +16,17 @@ const Range: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInput
   } = props;
 
   return (
-    <Box { ...rest }
-        basis="0"
-        className="Range"
-        grow
-        paddingHorizontal={ padding || paddingHorizontal }
-        paddingVertical={ padding || paddingVertical }
-        ref={ ref }
-        tag="input"
-        type="range" />
+    <Box
+      {...rest}
+      basis="0"
+      className="Range"
+      grow
+      paddingHorizontal={padding || paddingHorizontal}
+      paddingVertical={padding || paddingVertical}
+      ref={ref}
+      tag="input"
+      type="range"
+    />
   );
 };
 

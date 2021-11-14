@@ -1,4 +1,4 @@
-import * as React from 'react' ;
+import * as React from 'react';
 import {
   Box,
   Button,
@@ -26,27 +26,27 @@ const Item: CatalogueItem<{
   PlacementReference: PlacementReferenceProps;
 }> = {
   name: 'Placement',
-  description: 'A powerful set of components for placing contents around reference nodes. Uses the awesome PopperJS positioning engine. ',
+  description:
+    'A powerful set of components for placing contents around reference nodes. Uses the awesome PopperJS positioning engine. ',
   pictogram: require('../../../assets/pictogram-placement.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (
       <Showcase>
         <Box alignChildren="middle" flex="horizontal">
-          <PlacementManager { ...props.PlacementManager }>
-            <PlacementReference { ...props.PlacementReference }>
-              { (props) => (
-                <Icons.Star{ ...props } name="Star" size="2rem" />
-              ) }
+          <PlacementManager {...props.PlacementManager}>
+            <PlacementReference {...props.PlacementReference}>
+              {(props) => <Icons.Star {...props} name="Star" size="2rem" />}
             </PlacementReference>
 
-            <Placement { ...props.Placement } elevate zIndex={ 1 }>
+            <Placement {...props.Placement} elevate zIndex={1}>
               <PlacementArrow backgroundColor="text-shade-1" />
               <PlacementContent
-                  backgroundColor="text-shade-1"
-                  borderRadius="x1"
-                  padding="x1"
-                  textColor="background-shade-1">
+                backgroundColor="text-shade-1"
+                borderRadius="x1"
+                padding="x1"
+                textColor="background-shade-1"
+              >
                 <Buttons joined>
                   <Button variant="primary">
                     <Icons.Edit2 name="Pencil" size="16px" />
@@ -87,27 +87,33 @@ const Item: CatalogueItem<{
       },
     },
   },
-  apis: [{
-    module:'"Placement/Placement"',
-    name: 'PlacementProps',
-    rename: 'Placement',
-  }, {
-    module:'"Placement/PlacementArrow"',
-    name: 'PlacementArrowProps',
-    rename: 'PlacementArrow',
-  }, {
-    module:'"Placement/PlacementContent"',
-    name: 'PlacementContentProps',
-    rename: 'PlacementContent',
-  }, {
-    module:'"Placement/PlacementManager"',
-    name: 'PlacementManagerProps',
-    rename: 'PlacementManager',
-  }, {
-    module:'"Placement/PlacementReference"',
-    name: 'PlacementReferenceProps',
-    rename: 'PlacementReference',
-  }],
+  apis: [
+    {
+      module: '"Placement/Placement"',
+      name: 'PlacementProps',
+      rename: 'Placement',
+    },
+    {
+      module: '"Placement/PlacementArrow"',
+      name: 'PlacementArrowProps',
+      rename: 'PlacementArrow',
+    },
+    {
+      module: '"Placement/PlacementContent"',
+      name: 'PlacementContentProps',
+      rename: 'PlacementContent',
+    },
+    {
+      module: '"Placement/PlacementManager"',
+      name: 'PlacementManagerProps',
+      rename: 'PlacementManager',
+    },
+    {
+      module: '"Placement/PlacementReference"',
+      name: 'PlacementReferenceProps',
+      rename: 'PlacementReference',
+    },
+  ],
 };
 
 export default Item;

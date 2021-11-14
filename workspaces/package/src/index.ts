@@ -8,26 +8,34 @@ import * as Icons from './Icon';
 export * from './hooks';
 export * from './variables';
 
-export {
-  Attributes,
-  TypeColor,
-  TypeSize,
-  TypeTheme,
-} from './Box/Box';
+export { Attributes, TypeColor, TypeSize, TypeTheme } from './Box/Box';
 
 export { default as Alert, AlertProps } from './Alert/Alert';
 export { default as Appear, AppearProps, TypeAnimation } from './Appear/Appear';
 export { default as Box, BoxProps } from './Box/Box';
-export { default as BlockQuote, BlockQuoteProps } from './BlockQuote/BlockQuote';
-export { default as BulletPoint, BulletPointProps } from './BulletPoints/BulletPoint';
-export { default as BulletPoints, BulletPointsProps } from './BulletPoints/BulletPoints';
+export {
+  default as BlockQuote,
+  BlockQuoteProps,
+} from './BlockQuote/BlockQuote';
+export {
+  default as BulletPoint,
+  BulletPointProps,
+} from './BulletPoints/BulletPoint';
+export {
+  default as BulletPoints,
+  BulletPointsProps,
+} from './BulletPoints/BulletPoints';
 export { default as Button, ButtonProps } from './Button/Button';
 export { default as Buttons, ButtonsProps } from './Button/Buttons';
 export { default as CheckBox, CheckBoxProps } from './CheckBox/CheckBox';
 export { default as CheckboxIndicator } from './CheckBox/CheckBoxIndicator';
 export { default as Code, CodeProps } from './Code/Code';
 export { default as CodeBlock, CodeBlockProps } from './Code/CodeBlock';
-export { default as Editor, EditorProps, TypeEditorLanguage } from './Editor/Editor';
+export {
+  default as Editor,
+  EditorProps,
+  TypeEditorLanguage,
+} from './Editor/Editor';
 export { default as Form } from './Form/Form';
 export { default as Grid, GridProps } from './Grid/Grid';
 export { default as GridItem, GridItemProps } from './Grid/GridItem';
@@ -35,7 +43,10 @@ export { Icons };
 export { default as Image, ImageProps } from './Image/Image';
 export { default as Input, InputProps } from './Input/Input';
 export { default as InputAddon, InputAddonProps } from './Input/InputAddon';
-export { default as InputWrapper, InputWrapperProps } from './Input/InputWrapper';
+export {
+  default as InputWrapper,
+  InputWrapperProps,
+} from './Input/InputWrapper';
 export { default as Label, LabelProps } from './Label/Label';
 export { default as Labels, LabelsProps } from './Label/Labels';
 export { default as Link, LinkProps } from './Link/Link';
@@ -49,12 +60,29 @@ export { default as Motion } from './Motion/Motion';
 export { default as Option, OptionProps } from './Options/Option';
 export { default as Options, OptionsProps } from './Options/Options';
 export { default as Placement, PlacementProps } from './Placement/Placement';
-export { default as PlacementArrow, PlacementArrowProps } from './Placement/PlacementArrow';
-export { default as PlacementContent, PlacementContentProps } from './Placement/PlacementContent';
-export { default as PlacementManager, PlacementManagerProps, TypePlacementTrigger } from './Placement/PlacementManager';
-export { default as PlacementReference, PlacementReferenceProps, PlacementReferenceChildren } from './Placement/PlacementReference';
+export {
+  default as PlacementArrow,
+  PlacementArrowProps,
+} from './Placement/PlacementArrow';
+export {
+  default as PlacementContent,
+  PlacementContentProps,
+} from './Placement/PlacementContent';
+export {
+  default as PlacementManager,
+  PlacementManagerProps,
+  TypePlacementTrigger,
+} from './Placement/PlacementManager';
+export {
+  default as PlacementReference,
+  PlacementReferenceProps,
+  PlacementReferenceChildren,
+} from './Placement/PlacementReference';
 export { default as PlacementReferenceElement } from './Placement/PlacementReferenceElement';
-export { default as RadioButton, RadioButtonProps } from './RadioButton/RadioButton';
+export {
+  default as RadioButton,
+  RadioButtonProps,
+} from './RadioButton/RadioButton';
 export { default as RadioButtonIndicator } from './RadioButton/RadioButtonIndicator';
 export { default as Range, RangeProps } from './Range/Range';
 export { default as Separator, SeparatorProps } from './Separator/Separator';
@@ -65,10 +93,19 @@ export { default as Table, TableProps } from './Table/Table';
 export { default as TableBody, TableBodyProps } from './Table/TableBody';
 export { default as TableCell, TableCellProps } from './Table/TableCell';
 export { default as TableHeader, TableHeaderProps } from './Table/TableHeader';
-export { default as TableHeaderCell, TableHeaderCellProps } from './Table/TableHeaderCell';
+export {
+  default as TableHeaderCell,
+  TableHeaderCellProps,
+} from './Table/TableHeaderCell';
 export { default as TableRow, TableRowProps } from './Table/TableRow';
 export { default as Text, TextProps, TypeTextSize } from './Text/Text';
 export { default as TextArea, TextAreaProps } from './TextArea/TextArea';
-export { default as TextAreaWrapper, TextAreaWrapperProps } from './TextArea/TextAreaWrapper';
-export { default as ThemeSwitcher, ThemeSwitcherProps } from './ThemeSwitcher/ThemeSwitcher';
+export {
+  default as TextAreaWrapper,
+  TextAreaWrapperProps,
+} from './TextArea/TextAreaWrapper';
+export {
+  default as ThemeSwitcher,
+  ThemeSwitcherProps,
+} from './ThemeSwitcher/ThemeSwitcher';
 export { default as Tooltip, TooltipProps } from './Tooltip/Tooltip';

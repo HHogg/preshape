@@ -1,4 +1,4 @@
-import * as React from 'react' ;
+import * as React from 'react';
 import { BlockQuote, BlockQuoteProps, Link, Text } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -7,13 +7,14 @@ const Item: CatalogueItem<{
   BlockQuote: BlockQuoteProps;
 }> = {
   name: 'BlockQuote',
-  description: 'A component to indicate that the contents is an extended quotation, by visually indenting and styling.',
+  description:
+    'A component to indicate that the contents is an extended quotation, by visually indenting and styling.',
   pictogram: require('../../../assets/pictogram-blockquote.svg').default,
   type: 'component',
   showcase: {
     Component: (props) => (
       <Showcase>
-        <BlockQuote { ...props.BlockQuote }>
+        <BlockQuote {...props.BlockQuote}>
           <Text margin="x1">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             suscipit ante ante, a venenatis mauris auctor a. Donec est ante,
@@ -24,7 +25,9 @@ const Item: CatalogueItem<{
           </Text>
 
           <Text margin="x1">
-            <Link href="https://www.lipsum.com/feed/html" isTextLink strong>Lorem Ipsum</Link>
+            <Link href="https://www.lipsum.com/feed/html" isTextLink strong>
+              Lorem Ipsum
+            </Link>
           </Text>
         </BlockQuote>
       </Showcase>
@@ -33,11 +36,13 @@ const Item: CatalogueItem<{
       BlockQuote: {},
     },
   },
-  apis: [{
-    module: '"BlockQuote/BlockQuote"',
-    name: 'BlockQuoteProps',
-    rename: 'BlockQuote',
-  }],
+  apis: [
+    {
+      module: '"BlockQuote/BlockQuote"',
+      name: 'BlockQuoteProps',
+      rename: 'BlockQuote',
+    },
+  ],
 };
 
 export default Item;

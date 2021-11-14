@@ -19,7 +19,10 @@ export interface CheckBoxProps {
   paddingVertical?: TypeSize;
 }
 
-const CheckBox: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLInputElement, CheckBoxProps>> = (props, ref) => {
+const CheckBox: React.RefForwardingComponent<
+  HTMLInputElement,
+  Attributes<HTMLInputElement, CheckBoxProps>
+> = (props, ref) => {
   const {
     children,
     disabled,
@@ -32,16 +35,15 @@ const CheckBox: React.RefForwardingComponent<HTMLInputElement, Attributes<HTMLIn
 
   return (
     <SelectInputLabel
-        className="CheckBox__label"
-        disabled={ disabled }
-        label={ children }
-        margin={ margin }
-        padding={ padding }
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }>
-      <CheckBoxIndicator { ...rest }
-          disabled={ disabled }
-          ref={ ref } />
+      className="CheckBox__label"
+      disabled={disabled}
+      label={children}
+      margin={margin}
+      padding={padding}
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+    >
+      <CheckBoxIndicator {...rest} disabled={disabled} ref={ref} />
     </SelectInputLabel>
   );
 };

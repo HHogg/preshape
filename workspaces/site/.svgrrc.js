@@ -12,8 +12,10 @@ module.exports = {
     '#FFFFFD': 'var(--color-background--shade-3)',
   },
   svgoConfig: {
-    plugins: [{
-      cleanupIDs: false,
-    }]
-  }
-}
+    plugins: [
+      {
+        cleanupIDs: false,
+      },
+    ],
+  },
+};

@@ -11,7 +11,7 @@
 }
 
 .ace-preshape .ace_gutter-active-line,
-.ace-preshape .ace_active-line  {
+.ace-preshape .ace_active-line {
   background-color: rgba(var(--rgb-text--shade-1), 0.05);
 }
 
@@ -58,7 +58,7 @@
   color: var(--oc-grape-4);
 }
 
-.ace-preshape .ace_emphasis  {
+.ace-preshape .ace_emphasis {
   font-style: italic;
 }
 

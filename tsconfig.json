@@ -7,7 +7,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
-      "*" : ["@types/*"]
+      "*": ["@types/*"]
     },
     "resolveJsonModule": true,
     "strict": true,

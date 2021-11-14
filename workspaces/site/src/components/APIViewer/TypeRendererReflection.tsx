@@ -3,22 +3,19 @@ import { JSONOutput } from 'typedoc';
 import { Renderer } from './Types';
 import KindRenderer from './KindRenderer';
 
-interface Props extends Renderer, JSONOutput.ReflectionType {
+interface Props extends Renderer, JSONOutput.ReflectionType {}
 
-}
-
-export default (props: Props) => {
-  const {
-    context,
-    declaration,
-    onStateChange,
-    state,
-  } = props;
+const TypeRendererReflection = (props: Props) => {
+  const { context, declaration, onStateChange, state } = props;
 
   return (
-    <KindRenderer { ...declaration }
-        context={ context }
-        onStateChange={ onStateChange }
-        state={ state } />
+    <KindRenderer
+      {...declaration}
+      context={context}
+      onStateChange={onStateChange}
+      state={state}
+    />
   );
 };
+
+export default TypeRendererReflection;

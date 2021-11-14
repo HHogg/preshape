@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 
-function useLocalStorage<T>(key: string, initialValue: T): [T, (state: T) => void]
+function useLocalStorage<T>(
+  key: string,
+  initialValue: T
+): [T, (state: T) => void];
 function useLocalStorage<T = undefined>(key: string, initialValue = undefined) {
   const [storedValue, setStoredValue] = useState<T | undefined>(() => {
     try {
@@ -13,7 +16,8 @@ function useLocalStorage<T = undefined>(key: string, initialValue = undefined) {
 
   const setValue = (value: undefined | T | ((value: undefined | T) => T)) => {
     try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      const valueToStore =
+        value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (e) {

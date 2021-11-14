@@ -12,19 +12,24 @@ export interface ListProps extends BoxProps {
   gap?: TypeSize;
 }
 
-const List: React.RefForwardingComponent<HTMLUListElement, Attributes<HTMLUListElement, ListProps>> = (props, ref) => {
+const List: React.RefForwardingComponent<
+  HTMLUListElement,
+  Attributes<HTMLUListElement, ListProps>
+> = (props, ref) => {
   const { gap = 'x1', ...rest } = props;
   const classes = classnames('List', `List--${gap}`);
 
   return (
-    <Box { ...rest }
-        alignChildrenVertical="middle"
-        className={ classes }
-        flex="horizontal"
-        gap={ gap }
-        ref={ ref }
-        tag="ul"
-        wrap />
+    <Box
+      {...rest}
+      alignChildrenVertical="middle"
+      className={classes}
+      flex="horizontal"
+      gap={gap}
+      ref={ref}
+      tag="ul"
+      wrap
+    />
   );
 };
 

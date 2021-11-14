@@ -16,19 +16,23 @@ export const RootContext = React.createContext<{
   theme: 'day',
 });
 
-
-export default () => {
-  const [theme, onChangeTheme] = useLocalStorage<TypeTheme>('com.hogg.theme', 'day');
+const Root = () => {
+  const [theme, onChangeTheme] = useLocalStorage<TypeTheme>(
+    'com.hogg.theme',
+    'day'
+  );
 
   useTheme(theme);
 
   return (
     <BrowserRouter>
-      <RootContext.Provider value={ { onChangeTheme, theme } }>
+      <RootContext.Provider value={{ onChangeTheme, theme }}>
         <Routes>
-          <Route element={ <Landing /> } path="/*" />
+          <Route element={<Landing />} path="/*" />
         </Routes>
       </RootContext.Provider>
     </BrowserRouter>
   );
 };
+
+export default Root;

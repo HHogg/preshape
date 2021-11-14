@@ -17,4 +17,3 @@ export {
   URLStateValidator,
   URLStateValidators,
 } from './useUrlState';
-

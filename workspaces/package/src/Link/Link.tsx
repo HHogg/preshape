@@ -19,31 +19,35 @@ export interface LinkProps extends TextProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Link = React.forwardRef<any, Attributes<HTMLAnchorElement, LinkProps>>((props, ref) => {
-  const { active, to = '', isTextLink, ...rest } = props;
-  const classes = classnames('Link', {
-    'Link--active': active,
-    'Link--text-link': isTextLink,
-  });
+const Link = React.forwardRef<any, Attributes<HTMLAnchorElement, LinkProps>>(
+  (props, ref) => {
+    const { active, to = '', isTextLink, ...rest } = props;
+    const classes = classnames('Link', {
+      'Link--active': active,
+      'Link--text-link': isTextLink,
+    });
 
-  const href = useHref(to);
-  const internalOnClick = useLinkClickHandler(to);
-  const originalOnClick = rest.onClick;
+    const href = useHref(to);
+    const internalOnClick = useLinkClickHandler(to);
+    const originalOnClick = rest.onClick;
 
-  if (to) {
-    rest.onClick = (event) => {
-      if (originalOnClick) originalOnClick(event);
-      internalOnClick(event);
-    };
+    if (to) {
+      rest.onClick = (event) => {
+        if (originalOnClick) originalOnClick(event);
+        internalOnClick(event);
+      };
+    }
+
+    return (
+      <Text
+        {...rest}
+        className={classes}
+        href={to ? href : rest.href}
+        ref={ref}
+        tag="a"
+      />
+    );
   }
-
-  return (
-    <Text { ...rest }
-        className={ classes }
-        href={ to ? href : rest.href }
-        ref={ ref }
-        tag="a" />
-  );
-});
+);
 
 export default Link;

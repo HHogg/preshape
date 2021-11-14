@@ -7,21 +7,20 @@ export interface Props extends BoxProps {
   title?: string;
 }
 
-export default (props: Attributes<HTMLElement, Props>) => {
+const LandingSection = (props: Attributes<HTMLElement, Props>) => {
   const { children, id, maxWidth = widthMedium, title, ...rest } = props;
 
   return (
-    <Box { ...rest } id={ id } maxWidth={ maxWidth } paddingVertical="x12">
-      { title && (
-        <Text
-            margin="x4"
-            size="x6"
-            strong>{ title }</Text>
-      ) }
+    <Box {...rest} id={id} maxWidth={maxWidth} paddingVertical="x12">
+      {title && (
+        <Text margin="x4" size="x6" strong>
+          {title}
+        </Text>
+      )}
 
-      <Box>
-        { children }
-      </Box>
+      <Box>{children}</Box>
     </Box>
   );
 };
+
+export default LandingSection;

@@ -14,7 +14,7 @@ const highlighter = ace.acequire('ace/ext/static_highlight');
  * Provides some syntax highlighting, courtesy of PrismJS.
  */
 export interface CodeBlockProps extends TextProps {
-   /**
+  /**
    * Language of the content to be highlighted. What ever language is
    * set here the matching Ace mode needs to be imported. For example.
    *
@@ -30,7 +30,10 @@ export interface CodeBlockProps extends TextProps {
   wrap?: boolean;
 }
 
-const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPreElement, CodeBlockProps>> = (props, ref) => {
+const CodeBlock: React.RefForwardingComponent<
+  HTMLPreElement,
+  Attributes<HTMLPreElement, CodeBlockProps>
+> = (props, ref) => {
   const { children, language, wrap, ...rest } = props;
   const refContainer = React.useRef<HTMLElement>(null);
   const classes = classnames('CodeBlock', {
@@ -48,13 +51,8 @@ const CodeBlock: React.RefForwardingComponent<HTMLPreElement, Attributes<HTMLPre
   }, [children]);
 
   return (
-    <Text { ...rest }
-        className={ classes }
-        ref={ ref }
-        tag="pre">
-      <Code ref={ refContainer }>
-        { children }
-      </Code>
+    <Text {...rest} className={classes} ref={ref} tag="pre">
+      <Code ref={refContainer}>{children}</Code>
     </Text>
   );
 };

@@ -3,7 +3,8 @@ import documentation from '../../assets/documentation.json';
 
 const doc: JSONOutput.ProjectReflection = documentation;
 
-const documentationMapByName: Record<string, JSONOutput.DeclarationReflection> = {};
+const documentationMapByName: Record<string, JSONOutput.DeclarationReflection> =
+  {};
 const documentationMapNameById: Record<number, string> = {};
 
 if (doc.children) {
@@ -13,6 +14,8 @@ if (doc.children) {
   });
 }
 
-export const getById = (id?: number) => id ? documentationMapByName[documentationMapNameById[id]] : null;
+export const getById = (id?: number) =>
+  id ? documentationMapByName[documentationMapNameById[id]] : null;
 export const getNameById = (id: number): string => documentationMapNameById[id];
-export const getByModuleAndName = (exportName: string) => documentationMapByName[exportName];
+export const getByModuleAndName = (exportName: string) =>
+  documentationMapByName[exportName];

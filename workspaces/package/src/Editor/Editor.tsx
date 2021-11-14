@@ -6,19 +6,22 @@ import './Editor.css';
 
 // Define has no definition.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const define = (ace as any).define as (module: string, callback: (require: any, exports: any) => void) => void;
+const define = (ace as any).define as (
+  module: string,
+  callback: (require: any, exports: any) => void
+) => void;
 
 export type TypeEditorLanguage =
-  'css' |
-  'glsl' |
-  'html' |
-  'javascript' |
-  'json' |
-  'jsx' |
-  'markdown' |
-  'svg' |
-  'tsx' |
-  'typescript';
+  | 'css'
+  | 'glsl'
+  | 'html'
+  | 'javascript'
+  | 'json'
+  | 'jsx'
+  | 'markdown'
+  | 'svg'
+  | 'tsx'
+  | 'typescript';
 
 define('ace/theme/preshape', (_, exports) => {
   exports.isDark = true;
@@ -94,13 +97,9 @@ const Editor: React.FC<EditorProps> = (props) => {
   }, [onChange]);
 
   return (
-    <Box { ...rest }
-        className="Editor"
-        container
-        grow
-        ref={ refContainer }>
+    <Box {...rest} className="Editor" container grow ref={refContainer}>
       <Box absolute="edge-to-edge" flex="vertical">
-        <Box grow ref={ ref } />
+        <Box grow ref={ref} />
       </Box>
     </Box>
   );

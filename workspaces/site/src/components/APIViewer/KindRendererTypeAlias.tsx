@@ -5,13 +5,17 @@ import TypeRenderer from './TypeRenderer';
 
 interface Props extends Renderer, JSONOutput.DeclarationReflection {}
 
-export default (props: Props) => {
+const KindRendererTypeAlias = (props: Props) => {
   const { context, onStateChange, state, type } = props;
 
   return (
-    <TypeRenderer { ...type }
-        context={ context }
-        onStateChange={ onStateChange }
-        state={ state } />
+    <TypeRenderer
+      {...type}
+      context={context}
+      onStateChange={onStateChange}
+      state={state}
+    />
   );
 };
+
+export default KindRendererTypeAlias;

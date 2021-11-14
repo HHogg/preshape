@@ -20,7 +20,7 @@ const TypeMap: {
 
 interface Props extends Renderer, Type {}
 
-export default (props: Props) => {
+const TypeRenderer = (props: Props) => {
   const Renderer = TypeMap[props.type];
 
   if (!Renderer) {
@@ -29,7 +29,7 @@ export default (props: Props) => {
     return null;
   }
 
-  return (
-    <Renderer { ...props } />
-  );
+  return <Renderer {...props} />;
 };
+
+export default TypeRenderer;

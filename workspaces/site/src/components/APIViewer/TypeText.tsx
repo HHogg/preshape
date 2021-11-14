@@ -6,23 +6,22 @@ interface Props {
   isArray?: boolean;
 }
 
-export default (props: Props) => {
+const TypeText = (props: Props) => {
   const { children, isArray } = props;
 
   return (
-    <Box
-        alignChildrenVertical="middle"
-        flex="horizontal"
-        gap="x1">
-      <Box>
-        { children }
-      </Box>
+    <Box alignChildrenVertical="middle" flex="horizontal" gap="x1">
+      <Box>{children}</Box>
 
-      { isArray && (
+      {isArray && (
         <Box>
-          <Text inline strong>[]</Text>
+          <Text inline strong>
+            []
+          </Text>
         </Box>
-      ) }
+      )}
     </Box>
   );
 };
+
+export default TypeText;

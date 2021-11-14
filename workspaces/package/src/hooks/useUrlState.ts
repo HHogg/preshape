@@ -5,14 +5,22 @@ export type URLState<S> = Partial<Record<keyof S, undefined | string>>;
 export type URLStateDefault<S, K extends keyof S> = S[K] | ((state: S) => S[K]);
 export type URLStateDefaults<S> = { [K in keyof S]?: URLStateDefault<S, K> };
 
-export type URLStateDecoder<S, K extends keyof S> = (v: string, state: URLState<S>) => S[K];
+export type URLStateDecoder<S, K extends keyof S> = (
+  v: string,
+  state: URLState<S>
+) => S[K];
 export type URLStateDecoders<S> = { [K in keyof S]?: URLStateDecoder<S, K> };
 
 export type URLStateEncoder<S, K extends keyof S> = (v: S[K]) => string;
 export type URLStateEncoders<S> = { [K in keyof S]?: URLStateEncoder<S, K> };
 
-export type URLStateValidator<S, K extends keyof S> = (v: S[K], s: Partial<S>) => boolean;
-export type URLStateValidators<S> = { [K in keyof S]?: URLStateValidator<S, K> };
+export type URLStateValidator<S, K extends keyof S> = (
+  v: S[K],
+  s: Partial<S>
+) => boolean;
+export type URLStateValidators<S> = {
+  [K in keyof S]?: URLStateValidator<S, K>;
+};
 
 interface Props<S> {
   decoders: URLStateDecoders<S>;
@@ -34,22 +42,18 @@ const getURLSearchParamsAsObject = (urlSearchParamsString: string) => {
   return urlSearchParamsObj;
 };
 
-
 function useUrlState<S>(props: Props<S>) {
-  const {
-    decoders,
-    defaults,
-    encoders,
-    onUpdateSearch,
-    search,
-    validators,
-  } = props;
+  const { decoders, defaults, encoders, onUpdateSearch, search, validators } =
+    props;
 
   const refSearch = useRef<string>(search);
 
-  const getDecoder = <K extends keyof S>(k: K) => (decoders[k] || ((v: S[K]) => v)) as URLStateDecoder<S, K>;
-  const getEncoder = <K extends keyof S>(k: K) => (encoders[k] || ((v: S[K]) => v)) as URLStateEncoder<S, K>;
-  const getValidator = <K extends keyof S>(k: K) => (validators[k] || (() => true)) as URLStateValidator<S, K>;
+  const getDecoder = <K extends keyof S>(k: K) =>
+    (decoders[k] || ((v: S[K]) => v)) as URLStateDecoder<S, K>;
+  const getEncoder = <K extends keyof S>(k: K) =>
+    (encoders[k] || ((v: S[K]) => v)) as URLStateEncoder<S, K>;
+  const getValidator = <K extends keyof S>(k: K) =>
+    (validators[k] || (() => true)) as URLStateValidator<S, K>;
 
   const isEqual = <K extends keyof S>(k: K, a: S[K], b: S[K]) => {
     const encoder = getEncoder(k);
@@ -67,7 +71,7 @@ function useUrlState<S>(props: Props<S>) {
 
     for (const key in urlSearchParams) {
       const decoder = getDecoder(key);
-      const encodedValue = urlSearchParams[key] as (undefined | string);
+      const encodedValue = urlSearchParams[key] as undefined | string;
 
       if (encodedValue !== undefined) {
         try {
@@ -84,7 +88,11 @@ function useUrlState<S>(props: Props<S>) {
       const validator = getValidator(key);
       const decodedValue = urlState[key] as S[Extract<keyof S, string>];
 
-      if (decodedValue === undefined || !validator(decodedValue, urlState) || isEqual(key, defaultValue, decodedValue)) {
+      if (
+        decodedValue === undefined ||
+        !validator(decodedValue, urlState) ||
+        isEqual(key, defaultValue, decodedValue)
+      ) {
         delete urlState[key];
       }
     }
@@ -139,7 +147,11 @@ function useUrlState<S>(props: Props<S>) {
       const validator = getValidator(key);
       const defaultValue = getDefaultValue(key, urlStateFull);
 
-      if (decodedValue !== undefined && validator(decodedValue, state) && !isEqual(key, defaultValue, decodedValue)) {
+      if (
+        decodedValue !== undefined &&
+        validator(decodedValue, state) &&
+        !isEqual(key, defaultValue, decodedValue)
+      ) {
         urlState[key] = decodedValue;
       } else {
         delete urlState[key];

@@ -15,11 +15,16 @@ export interface InputWrapperProps extends BoxProps {
   label?: string;
 }
 
-export const InputWrapperContext = React.createContext<Pick<InputWrapperProps, 'disabled'>>({
+export const InputWrapperContext = React.createContext<
+  Pick<InputWrapperProps, 'disabled'>
+>({
   disabled: false,
 });
 
-const InputWrapper: React.RefForwardingComponent<HTMLLabelElement, Attributes<HTMLLabelElement, InputWrapperProps>> = (props, ref) => {
+const InputWrapper: React.RefForwardingComponent<
+  HTMLLabelElement,
+  Attributes<HTMLLabelElement, InputWrapperProps>
+> = (props, ref) => {
   const {
     children,
     borderRadius = 'x2',
@@ -32,33 +37,37 @@ const InputWrapper: React.RefForwardingComponent<HTMLLabelElement, Attributes<HT
   } = props;
 
   return (
-    <InputWrapperContext.Provider value={ { disabled } }>
-      <Box { ...rest }
-          borderRadius={ borderRadius }
-          borderSize={ borderSize }
-          className="InputWrapper"
-          disabled={ disabled }
-          flex="vertical"
-          overflow="hidden"
-          ref={ ref }
-          tag="label">
-        { label && (
+    <InputWrapperContext.Provider value={{ disabled }}>
+      <Box
+        {...rest}
+        borderRadius={borderRadius}
+        borderSize={borderSize}
+        className="InputWrapper"
+        disabled={disabled}
+        flex="vertical"
+        overflow="hidden"
+        ref={ref}
+        tag="label"
+      >
+        {label && (
           <Text
-              ellipsis
-              paddingHorizontal={ paddingHorizontal }
-              paddingVertical={ paddingVertical }
-              size="x2"
-              strong>
-            { label }
+            ellipsis
+            paddingHorizontal={paddingHorizontal}
+            paddingVertical={paddingVertical}
+            size="x2"
+            strong
+          >
+            {label}
           </Text>
-        ) }
+        )}
 
         <Box
-            alignChildrenVertical="middle"
-            backgroundColor="background-shade-1"
-            flex="horizontal"
-            textColor="text-shade-1">
-          { children }
+          alignChildrenVertical="middle"
+          backgroundColor="background-shade-1"
+          flex="horizontal"
+          textColor="text-shade-1"
+        >
+          {children}
         </Box>
       </Box>
     </InputWrapperContext.Provider>

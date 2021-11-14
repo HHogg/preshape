@@ -5,8 +5,8 @@ import TypePropTable from './TypePropTable';
 
 interface Props extends RendererContainer, JSONOutput.DeclarationReflection {}
 
-export default (props: Props) => {
-  return (
-    <TypePropTable { ...props } />
-  );
+const KindRendererInterface = (props: Props) => {
+  return <TypePropTable {...props} />;
 };
+
+export default KindRendererInterface;

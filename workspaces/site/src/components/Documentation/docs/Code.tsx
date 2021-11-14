@@ -1,4 +1,4 @@
-import * as React from 'react' ;
+import * as React from 'react';
 import { CodeBlock, CodeBlockProps } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
@@ -14,8 +14,8 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <CodeBlock { ...props.CodeBlock }>
-          { snippets[props.CodeBlock.language] }
+        <CodeBlock {...props.CodeBlock}>
+          {snippets[props.CodeBlock.language]}
         </CodeBlock>
       </Showcase>
     ),
@@ -26,11 +26,13 @@ const Item: CatalogueItem<{
       },
     },
   },
-  apis: [{
-    module: '"Code/CodeBlock"',
-    name: 'CodeBlockProps',
-    rename: 'CodeBlock',
-  }],
+  apis: [
+    {
+      module: '"Code/CodeBlock"',
+      name: 'CodeBlockProps',
+      rename: 'CodeBlock',
+    },
+  ],
 };
 
 export default Item;

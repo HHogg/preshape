@@ -6,7 +6,7 @@ module.exports = {
   prettier: false,
   typescript: true,
   template: ({ template }, _, { componentName, props, jsx }) => {
-    const typeScriptTpl = template.smart({ plugins: ['jsx', 'typescript'] })
+    const typeScriptTpl = template.smart({ plugins: ['jsx', 'typescript'] });
     return typeScriptTpl.ast`/** AUTO GENERATED **/
 import * as React from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
@@ -32,7 +32,11 @@ export default React.forwardRef(Icon);
   },
   index: true,
   indexTemplate: (filePaths) => {
-    const names = filePaths.map((filePath) => path.basename(filePath, path.extname(filePath)));
-    return names.map((name) => `export { default as ${name} } from './${name}';`).join('\n');
+    const names = filePaths.map((filePath) =>
+      path.basename(filePath, path.extname(filePath))
+    );
+    return names
+      .map((name) => `export { default as ${name} } from './${name}';`)
+      .join('\n');
   },
-}
+};

@@ -9,9 +9,11 @@ import KindRendererTypeLiteral from './KindRendererTypeLiteral';
 const KindMap: {
   [key: string]:
     | React.FunctionComponent<Renderer & JSONOutput.DeclarationReflection>
-    | React.FunctionComponent<RendererContainer & JSONOutput.DeclarationReflection>;
+    | React.FunctionComponent<
+        RendererContainer & JSONOutput.DeclarationReflection
+      >;
 } = {
-  'Interface': KindRendererInterface,
+  Interface: KindRendererInterface,
   'Call signature': KindRendererCallSignature,
   'Type alias': KindRendererTypeAlias,
   'Type literal': KindRendererTypeLiteral,
@@ -21,7 +23,7 @@ type Props<K extends typeof KindMap> = JSONOutput.DeclarationReflection & {
   kindString: K;
 } & (K extends 'Interface' | 'Call signature' ? RendererContainer : Renderer);
 
-export default <K extends typeof KindMap>(props: Props<K>) => {
+const KindRenderer = <K extends typeof KindMap>(props: Props<K>) => {
   const { kindString } = props;
   const Renderer = kindString && KindMap[kindString];
 
@@ -31,7 +33,7 @@ export default <K extends typeof KindMap>(props: Props<K>) => {
     return null;
   }
 
-  return (
-    <Renderer { ...props } />
-  );
+  return <Renderer {...props} />;
 };
+
+export default KindRenderer;

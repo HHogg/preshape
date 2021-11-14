@@ -32,7 +32,10 @@ export interface ButtonProps extends BoxProps {
   variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const Button: React.RefForwardingComponent<HTMLButtonElement, Attributes<HTMLButtonElement, ButtonProps>> = (props, ref) => {
+const Button: React.RefForwardingComponent<
+  HTMLButtonElement,
+  Attributes<HTMLButtonElement, ButtonProps>
+> = (props, ref) => {
   const {
     active,
     borderRadius = 'x1',
@@ -52,14 +55,16 @@ const Button: React.RefForwardingComponent<HTMLButtonElement, Attributes<HTMLBut
   });
 
   return (
-    <Box { ...rest }
-        alignChildren="middle"
-        borderRadius={ borderRadius }
-        borderSize={ borderSize }
-        className={ classes }
-        flex="horizontal"
-        ref={ ref }
-        tag={ tag } />
+    <Box
+      {...rest}
+      alignChildren="middle"
+      borderRadius={borderRadius}
+      borderSize={borderSize}
+      className={classes}
+      flex="horizontal"
+      ref={ref}
+      tag={tag}
+    />
   );
 };
 

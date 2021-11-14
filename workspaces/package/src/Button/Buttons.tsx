@@ -16,19 +16,24 @@ export interface ButtonsProps extends BoxProps {
   joined?: boolean;
 }
 
-const Buttons: React.RefForwardingComponent<HTMLElement, Attributes<HTMLElement, ButtonsProps>> = (props, ref) => {
+const Buttons: React.RefForwardingComponent<
+  HTMLElement,
+  Attributes<HTMLElement, ButtonsProps>
+> = (props, ref) => {
   const { gap = 'x1', joined, ...rest } = props;
   const classes = classnames('Buttons', {
     'Buttons--joined': joined,
   });
 
   return (
-    <Box { ...rest }
-        className={ classes }
-        flex="horizontal"
-        gap={ joined ? undefined : gap }
-        ref={ ref }
-        shrink />
+    <Box
+      {...rest}
+      className={classes}
+      flex="horizontal"
+      gap={joined ? undefined : gap}
+      ref={ref}
+      shrink
+    />
   );
 };
 
