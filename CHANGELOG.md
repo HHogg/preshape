@@ -1,3 +1,10 @@
+## [10.1.0](https://github.com/HHogg/preshape/compare/v10.0.1...v10.1.0) (2021-11-14)
+
+
+### Features
+
+* **Button:** Added React Router aware to prop to Button ([4c5b3da](https://github.com/HHogg/preshape/commit/4c5b3da11b613017753b289e91bc40a6384a5845))
+
 ### [10.0.1](https://github.com/HHogg/preshape/compare/v10.0.0...v10.0.1) (2021-11-14)
 
 
