@@ -8,30 +8,28 @@
 
 ## [10.0.0](https://github.com/HHogg/preshape/compare/v9.0.0...v10.0.0) (2021-11-14)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **Transition:** Updated CSS variable name for transition-function to transition-timing-function
-* **Transition:** Updated CSS variable name for transition-time to transition-duration
-* **ReactRouter:** Updated to the new ReactRouter v6 API
-* **Text:** All current text sizes should shift up a number (e.g. x7 -> x8), x1 is a new smaller size.
-* **Base:** Removed scrollable prop in favour of overflow prop.
+- **Transition:** Updated CSS variable name for transition-function to transition-timing-function
+- **Transition:** Updated CSS variable name for transition-time to transition-duration
+- **ReactRouter:** Updated to the new ReactRouter v6 API
+- **Text:** All current text sizes should shift up a number (e.g. x7 -> x8), x1 is a new smaller size.
+- **Base:** Removed scrollable prop in favour of overflow prop.
 
 ### Features
 
-* **Box:** Added transitionDuration and tranisitionProperty props ([debbc89](https://github.com/HHogg/preshape/commit/debbc8926b46aa4b8cdd7dc517f267662df9f593))
-* **Box:** Allow any value as well as predefined ones ([50d1369](https://github.com/HHogg/preshape/commit/50d13699feb35dcf15f2dce6e7ffcbca95fe106a))
-* **ReactRouter:** Updated to ReactRouter v6 ([72314b3](https://github.com/HHogg/preshape/commit/72314b31936a013ddb081bd806ad99f44d86b065))
-* **Text:** Added a new smaller size. ([7a0af82](https://github.com/HHogg/preshape/commit/7a0af826f92f9651979890a9887a8dd7149a77d8))
-
+- **Box:** Added transitionDuration and tranisitionProperty props ([debbc89](https://github.com/HHogg/preshape/commit/debbc8926b46aa4b8cdd7dc517f267662df9f593))
+- **Box:** Allow any value as well as predefined ones ([50d1369](https://github.com/HHogg/preshape/commit/50d13699feb35dcf15f2dce6e7ffcbca95fe106a))
+- **ReactRouter:** Updated to ReactRouter v6 ([72314b3](https://github.com/HHogg/preshape/commit/72314b31936a013ddb081bd806ad99f44d86b065))
+- **Text:** Added a new smaller size. ([7a0af82](https://github.com/HHogg/preshape/commit/7a0af826f92f9651979890a9887a8dd7149a77d8))
 
 ### Fixes
 
-* **Base:** Removed scrollable prop, for overflow prop. ([a9b9c9c](https://github.com/HHogg/preshape/commit/a9b9c9c292864b0eca6038efaa64fc719f8ea552))
-* **Box:** Added missing color type values ([fa8c101](https://github.com/HHogg/preshape/commit/fa8c101586c4c00dcf090cdc3aa14460572b0a28))
-* **Buttons:** Wrapping with siblings ([8c0eac6](https://github.com/HHogg/preshape/commit/8c0eac62ed2ace90949b0c52ec54cb86911529e8))
-* **Transition:** Updated CSS variable name for transition-function to transition-timing-function. ([e8f9092](https://github.com/HHogg/preshape/commit/e8f9092dd742c4ca6d32e856529556db2a1f641d))
-* **Transition:** Updated CSS variable name for transition-time to transition-duration. ([0434b00](https://github.com/HHogg/preshape/commit/0434b0071de36f3c37e22bef386bb5fbf82ca0a8))
+- **Base:** Removed scrollable prop, for overflow prop. ([a9b9c9c](https://github.com/HHogg/preshape/commit/a9b9c9c292864b0eca6038efaa64fc719f8ea552))
+- **Box:** Added missing color type values ([fa8c101](https://github.com/HHogg/preshape/commit/fa8c101586c4c00dcf090cdc3aa14460572b0a28))
+- **Buttons:** Wrapping with siblings ([8c0eac6](https://github.com/HHogg/preshape/commit/8c0eac62ed2ace90949b0c52ec54cb86911529e8))
+- **Transition:** Updated CSS variable name for transition-function to transition-timing-function. ([e8f9092](https://github.com/HHogg/preshape/commit/e8f9092dd742c4ca6d32e856529556db2a1f641d))
+- **Transition:** Updated CSS variable name for transition-time to transition-duration. ([0434b00](https://github.com/HHogg/preshape/commit/0434b0071de36f3c37e22bef386bb5fbf82ca0a8))
 
 ## [9.0.0](https://github.com/HHogg/preshape/compare/v8.0.0...v9.0.0) (2021-10-21)
 

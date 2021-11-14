@@ -25,7 +25,11 @@ export {
   default as BulletPoints,
   BulletPointsProps,
 } from './BulletPoints/BulletPoints';
-export { default as Button, ButtonProps, TypeButtonSize } from './Button/Button';
+export {
+  default as Button,
+  ButtonProps,
+  TypeButtonSize,
+} from './Button/Button';
 export { default as Buttons, ButtonsProps } from './Button/Buttons';
 export { default as CheckBox, CheckBoxProps } from './CheckBox/CheckBox';
 export { default as CheckboxIndicator } from './CheckBox/CheckBoxIndicator';

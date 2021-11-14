@@ -3,6 +3,7 @@
 .parche-cache
 .yarn
 *.css
+*.md
 *.json
 data-emulator
 dist

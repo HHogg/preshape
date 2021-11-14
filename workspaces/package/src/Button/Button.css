@@ -10,6 +10,7 @@
   border-color: transparent;
   background-color: transparent;
   font-weight: var(--text-weight--strong);
+  text-decoration: none;
   transition-property: border-color, background-color, color, opacity;
   transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);

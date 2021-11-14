@@ -31,7 +31,7 @@ const Item: CatalogueItem<{
         <Box flex="horizontal" gap="x4">
           <Box flex="horizontal" grow>
             <Buttons {...props.Buttons} grow>
-              <Button {...props.Button} grow tag="a">
+              <Button {...props.Button} grow to="/">
                 Lorem ipsum
               </Button>
             </Buttons>

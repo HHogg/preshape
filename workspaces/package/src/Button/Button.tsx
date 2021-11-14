@@ -1,5 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
+import { useHref, useLinkClickHandler } from 'react-router-dom';
 import { Attributes, TypeSize } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './Button.css';
@@ -28,6 +29,12 @@ export interface ButtonProps extends TextProps {
    */
   size?: TypeButtonSize;
   /**
+   * React Router "to" prop, when applied the Component given to Button
+   * is that of a RouterLink (from React Router DOM). Otherwise an
+   * anchor tag is used.
+   */
+  to?: string;
+  /**
    * Changes the visual priority of the button
    *
    * @default "secondary"
@@ -35,10 +42,13 @@ export interface ButtonProps extends TextProps {
   variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const sizePaddingMap: Record<TypeButtonSize, {
-  paddingHorizontal: TypeSize;
-  paddingVertical: TypeSize;
-}> = {
+const sizePaddingMap: Record<
+  TypeButtonSize,
+  {
+    paddingHorizontal: TypeSize;
+    paddingVertical: TypeSize;
+  }
+> = {
   x1: {
     paddingHorizontal: 'x2',
     paddingVertical: 'x1',
@@ -50,8 +60,8 @@ const sizePaddingMap: Record<TypeButtonSize, {
   x3: {
     paddingHorizontal: 'x4',
     paddingVertical: 'x3',
-  }
-}
+  },
+};
 
 const Button: React.RefForwardingComponent<
   HTMLButtonElement,
@@ -69,6 +79,7 @@ const Button: React.RefForwardingComponent<
     paddingHorizontal = sizePaddingMap[size].paddingHorizontal,
     paddingVertical = sizePaddingMap[size].paddingVertical,
     tag = 'button',
+    to = '',
     variant = 'secondary',
     uppercase = true,
     ...rest
@@ -81,20 +92,32 @@ const Button: React.RefForwardingComponent<
     [`Button--${variant}`]: variant,
   });
 
+  const href = useHref(to);
+  const internalOnClick = useLinkClickHandler(to);
+  const originalOnClick = rest.onClick;
+
+  if (to) {
+    rest.onClick = (event: React.MouseEvent<any>) => {
+      if (originalOnClick) originalOnClick(event);
+      internalOnClick(event as React.MouseEvent<HTMLAnchorElement>);
+    };
+  }
+
   return (
     <Text
       {...rest}
-      alignChildrenHorizontal={ alignChildrenHorizontal }
-      alignChildrenVertical={ alignChildrenVertical }
+      alignChildrenHorizontal={alignChildrenHorizontal}
+      alignChildrenVertical={alignChildrenVertical}
       borderRadius={borderRadius}
       borderSize={borderSize}
       className={classes}
       flex="horizontal"
-      paddingHorizontal={ paddingHorizontal }
-      paddingVertical={ paddingVertical }
+      href={to ? href : rest.href}
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
       ref={ref}
-      tag={tag}
-      uppercase={ uppercase }
+      tag={to ? 'a' : tag}
+      uppercase={uppercase}
     />
   );
 };

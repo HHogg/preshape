@@ -11,9 +11,8 @@ export interface LinkProps extends TextProps {
   /** Applies visual style to indicate that text is clickable */
   isTextLink?: boolean;
   /**
-   * React Router "to" prop, when applied the Component given to Text
-   * is that of a RouterLink (from React Router DOM). Otherwise an
-   * anchor tag is used.
+   * React Router "to" prop, when applied the Link will behave like a
+   * React Router Link component.
    */
   to?: string;
 }
