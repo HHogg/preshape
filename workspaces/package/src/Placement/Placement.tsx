@@ -179,7 +179,11 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
             className={classnames('Placement', `Placement--${placement}`)}
             minWidth={placementMinWidth}
             ref={ref}
-            style={{ ...stylePopper, ...style }}
+            style={{
+              ...stylePopper,
+              ...style,
+              pointerEvents: visible ? undefined : 'none',
+            }}
           >
             <Appear
               {...getAnimationOrigin(placement)}
