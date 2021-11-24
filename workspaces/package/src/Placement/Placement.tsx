@@ -124,7 +124,6 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
     visible: visibleUncontrolled,
   } = useContext(PlacementManagerContext);
 
-  const onClose = onCloseUncontrolled || onCloseControlled;
   const visible =
     visibleUncontrolled === undefined ? visibleControlled : visibleUncontrolled;
   const placementMinWidth =
@@ -146,15 +145,15 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
     'pointerup',
     (event) => {
       if (
-        onClose &&
         visible &&
         ref.current &&
         !ref.current.contains(event.target as Node)
       ) {
-        onClose();
+        onCloseControlled?.();
+        onCloseUncontrolled?.();
       }
     },
-    [onClose, visible]
+    [onCloseControlled, onCloseUncontrolled, visible]
   );
 
   if (!render) {
