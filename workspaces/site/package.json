@@ -5,7 +5,7 @@
   "license": "MIT",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "build": "rm -rf dist && yarn build:svgs && parcel build src/index.html && react-snap --crawl false",
+    "build": "rm -rf dist && yarn build:svgs && parcel build src/index.html --no-optimize && react-snap --crawl false",
     "build:svgs": "yarn svgr -d ./src/components/SVGs ./src/assets/svgs --ext tsx --config-file .svgrrc.js",
     "start": "parcel src/index.dev.html --port 4000"
   },

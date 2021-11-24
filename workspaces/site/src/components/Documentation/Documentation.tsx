@@ -1,10 +1,9 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Modal, ModalBody, ModalHeader, Text } from 'preshape';
+import APIViewer from '../APIViewer/APIViewer';
 import { widthMedium } from '../Root';
 import docs from './docs';
-
-const APIViewer = lazy(() => import('../APIViewer/APIViewer'));
 
 const getDocItem = (id: string) => {
   for (const i in docs) {
@@ -64,20 +63,11 @@ const Documentation = () => {
         )}
 
         {item.apis && (
-          <Suspense
-            fallback={
-              <Box alignChildren="middle" flex="vertical" grow>
-                <Text strong>Grabbing the documentation</Text>
-                <Text strong>sit tight.</Text>
-              </Box>
-            }
-          >
-            <APIViewer
-              apis={item.apis}
-              onStateChange={setState}
-              state={state}
-            />
-          </Suspense>
+          <APIViewer
+            apis={item.apis}
+            onStateChange={setState}
+            state={state}
+          />
         )}
       </ModalBody>
     </Modal>
