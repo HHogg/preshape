@@ -1,17 +1,11 @@
 .InputWrapper {
   width: 100%;
-  border-style: solid;
-  border-color: var(--color-text--shade-1);
-  background-color: var(--color-text--shade-1);
-  color: var(--color-background--shade-1);
   transition-property: background-color, border-color;
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
 
   &:focus-within {
-    border-color: var(--color-accent--shade-5);
-    background-color: var(--color-accent--shade-5);
-    color: var(--color-light--shade-1);
+    color: var(--color-accent--shade-4);
   }
 
   &[disabled] {
@@ -20,9 +14,15 @@
   }
 
   &:hover:not([disabled]) {
-    border-color: var(--color-accent--shade-3);
-    background-color: var(--color-accent--shade-3);
-    color: var(--color-light--shade-1);
+    color: var(--color-accent--shade-3);
+  }
+}
+
+.InputWrapper--invalid {
+  &,
+  &:focus-within,
+  &:hover:not([disabled]) {
+    color: var(--color-negative--shade-4);
   }
 }
 

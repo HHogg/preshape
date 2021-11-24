@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {
   createContext,
   forwardRef,
@@ -13,6 +14,10 @@ export interface InputWrapperProps extends BoxProps {
    * still needs to be provided to the Input component.
    */
   disabled?: boolean;
+  /**
+   * Sets styling to indicate the input is invalid.
+   */
+  invalid?: boolean;
   /**
    * The label string that is rendered above the Input.
    */
@@ -34,23 +39,24 @@ const InputWrapper: RefForwardingComponent<
     borderRadius = 'x2',
     borderSize = 'x2',
     disabled,
+    invalid,
     label,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
     ...rest
   } = props;
 
+  const classes = classNames('InputWrapper', {
+    'InputWrapper--invalid': invalid,
+  });
+
   return (
     <InputWrapperContext.Provider value={{ disabled }}>
       <Box
         {...rest}
-        borderRadius={borderRadius}
-        borderSize={borderSize}
-        className="InputWrapper"
+        className={ classes }
         disabled={disabled}
         flex="vertical"
-        overflow="hidden"
-        ref={ref}
         tag="label"
       >
         {label && (
@@ -68,8 +74,11 @@ const InputWrapper: RefForwardingComponent<
         <Box
           alignChildrenVertical="middle"
           backgroundColor="background-shade-1"
+          borderRadius={ borderRadius }
+          borderSize={ borderSize }
           flex="horizontal"
-          textColor="text-shade-1"
+          overflow="hidden"
+          ref={ref}
         >
           {children}
         </Box>
