@@ -24,25 +24,45 @@
 .Box--margin-x12 { margin: var(--size--x12) 0; }
 .Box--margin-x16 { margin: var(--size--x16) 0; }
 
-.Box--padding-horizontal-x1 { padding-right: var(--size--x1); padding-left: var(--size--x1); }
-.Box--padding-horizontal-x2 { padding-right: var(--size--x2); padding-left: var(--size--x2); }
-.Box--padding-horizontal-x3 { padding-right: var(--size--x3); padding-left: var(--size--x3); }
-.Box--padding-horizontal-x4 { padding-right: var(--size--x4); padding-left: var(--size--x4); }
-.Box--padding-horizontal-x6 { padding-right: var(--size--x6); padding-left: var(--size--x6); }
-.Box--padding-horizontal-x8 { padding-right: var(--size--x8); padding-left: var(--size--x8); }
-.Box--padding-horizontal-x10 { padding-right: var(--size--x10); padding-left: var(--size--x10); }
-.Box--padding-horizontal-x12 { padding-right: var(--size--x12); padding-left: var(--size--x12); }
-.Box--padding-horizontal-x16 { padding-right: var(--size--x16); padding-left: var(--size--x16); }
+.Box--padding-top-x1 { padding-top: var(--size--x1); }
+.Box--padding-top-x2 { padding-top: var(--size--x2); }
+.Box--padding-top-x3 { padding-top: var(--size--x3); }
+.Box--padding-top-x4 { padding-top: var(--size--x4); }
+.Box--padding-top-x6 { padding-top: var(--size--x6); }
+.Box--padding-top-x8 { padding-top: var(--size--x8); }
+.Box--padding-top-x10 { padding-top: var(--size--x10); }
+.Box--padding-top-x12 { padding-top: var(--size--x12); }
+.Box--padding-top-x16 { padding-top: var(--size--x16); }
 
-.Box--padding-vertical-x1 { padding-top: var(--size--x1); padding-bottom: var(--size--x1); }
-.Box--padding-vertical-x2 { padding-top: var(--size--x2); padding-bottom: var(--size--x2); }
-.Box--padding-vertical-x3 { padding-top: var(--size--x3); padding-bottom: var(--size--x3); }
-.Box--padding-vertical-x4 { padding-top: var(--size--x4); padding-bottom: var(--size--x4); }
-.Box--padding-vertical-x6 { padding-top: var(--size--x6); padding-bottom: var(--size--x6); }
-.Box--padding-vertical-x8 { padding-top: var(--size--x8); padding-bottom: var(--size--x8); }
-.Box--padding-vertical-x10 { padding-top: var(--size--x10); padding-bottom: var(--size--x10); }
-.Box--padding-vertical-x12 { padding-top: var(--size--x12); padding-bottom: var(--size--x12); }
-.Box--padding-vertical-x16 { padding-top: var(--size--x16); padding-bottom: var(--size--x16); }
+.Box--padding-right-x1 { padding-right: var(--size--x1); }
+.Box--padding-right-x2 { padding-right: var(--size--x2); }
+.Box--padding-right-x3 { padding-right: var(--size--x3); }
+.Box--padding-right-x4 { padding-right: var(--size--x4); }
+.Box--padding-right-x6 { padding-right: var(--size--x6); }
+.Box--padding-right-x8 { padding-right: var(--size--x8); }
+.Box--padding-right-x10 { padding-right: var(--size--x10); }
+.Box--padding-right-x12 { padding-right: var(--size--x12); }
+.Box--padding-right-x16 { padding-right: var(--size--x16); }
+
+.Box--padding-bottom-x1 { padding-bottom: var(--size--x1); }
+.Box--padding-bottom-x2 { padding-bottom: var(--size--x2); }
+.Box--padding-bottom-x3 { padding-bottom: var(--size--x3); }
+.Box--padding-bottom-x4 { padding-bottom: var(--size--x4); }
+.Box--padding-bottom-x6 { padding-bottom: var(--size--x6); }
+.Box--padding-bottom-x8 { padding-bottom: var(--size--x8); }
+.Box--padding-bottom-x10 { padding-bottom: var(--size--x10); }
+.Box--padding-bottom-x12 { padding-bottom: var(--size--x12); }
+.Box--padding-bottom-x16 { padding-bottom: var(--size--x16); }
+
+.Box--padding-left-x1 { padding-left: var(--size--x1); }
+.Box--padding-left-x2 { padding-left: var(--size--x2); }
+.Box--padding-left-x3 { padding-left: var(--size--x3); }
+.Box--padding-left-x4 { padding-left: var(--size--x4); }
+.Box--padding-left-x6 { padding-left: var(--size--x6); }
+.Box--padding-left-x8 { padding-left: var(--size--x8); }
+.Box--padding-left-x10 { padding-left: var(--size--x10); }
+.Box--padding-left-x12 { padding-left: var(--size--x12); }
+.Box--padding-left-x16 { padding-left: var(--size--x16); }
 
 .Box--border-radius-x1 { border-radius: var(--border-radius-size--x1); }
 .Box--border-radius-x2 { border-radius: var(--border-radius-size--x2); }

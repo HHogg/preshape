@@ -152,6 +152,14 @@ export interface BoxProps {
   paddingHorizontal?: TypeSize;
   /** Vertical pa?dding applied for the global spacing variables */
   paddingVertical?: TypeSize;
+  /** Top padding applied for the global spacing variables */
+  paddingTop?: TypeSize;
+  /** Right padding applied for the global spacing variables */
+  paddingRight?: TypeSize;
+  /** Bottom padding applied for the global spacing variables */
+  paddingBottom?: TypeSize;
+  /** Left padding applied for the global spacing variables */
+  paddingLeft?: TypeSize;
   /** Reverses the flex direction */
   reverse?: boolean;
   /** Flex item property if it should shrink. */
@@ -225,6 +233,10 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
     padding,
     paddingHorizontal = padding,
     paddingVertical = padding,
+    paddingTop = paddingVertical,
+    paddingBottom = paddingVertical,
+    paddingRight = paddingHorizontal,
+    paddingLeft = paddingHorizontal,
     margin,
     reverse,
     shrink,
@@ -275,8 +287,10 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
       [`Box--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
       [`Box--flex-gap-${gap}`]: gap,
       [`Box--margin-${margin}`]: margin,
-      [`Box--padding-horizontal-${paddingHorizontal}`]: paddingHorizontal,
-      [`Box--padding-vertical-${paddingVertical}`]: paddingVertical,
+      [`Box--padding-top-${paddingTop}`]: paddingTop,
+      [`Box--padding-bottom-${paddingBottom}`]: paddingBottom,
+      [`Box--padding-right-${paddingRight}`]: paddingRight,
+      [`Box--padding-left-${paddingLeft}`]: paddingLeft,
       [`Box--text-color-${textColor}`]: textColor,
       [`Box--transition-${transitionDuration}`]: transitionProperty,
       [`Theme--${theme}`]: theme,
