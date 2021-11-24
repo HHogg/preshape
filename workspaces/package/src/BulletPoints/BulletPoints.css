@@ -1,3 +1,9 @@
+ul:not(.BulletPoints),
+ol:not(.BulletPoints) {
+  padding: unset;
+  list-style: none;
+}
+
 .BulletPoints {
   font-weight: var(--text-weight--strong);
 }
