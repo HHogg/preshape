@@ -28,7 +28,7 @@ const SelectInputLabel: RefForwardingComponent<
     >
       <Box>{children}</Box>
 
-      <Box grow shrink>
+      <Box grow minWidth="0" shrink>
         <Text
           className="SelectInputLabels__label-text"
           ellipsis
