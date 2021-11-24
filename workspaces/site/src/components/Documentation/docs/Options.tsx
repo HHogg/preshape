@@ -74,7 +74,6 @@ const Item: CatalogueItem<{
 
               <Placement
                 animation="FadeSlideDown"
-                elevate
                 minWidth="reference"
                 options={{
                   modifiers: {
