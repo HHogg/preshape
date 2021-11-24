@@ -1,3 +1,10 @@
+## [10.3.0](https://github.com/HHogg/preshape/compare/v10.2.1...v10.3.0) (2021-11-24)
+
+
+### Features
+
+* **Box:** Added paddingTop, paddingBottom, paddingLeft, paddingRight props ([c771ec6](https://github.com/HHogg/preshape/commit/c771ec64de64b51445f8d639cf3c6bce444aa60f))
+
 ### [10.2.1](https://github.com/HHogg/preshape/compare/v10.2.0...v10.2.1) (2021-11-24)
 
 
