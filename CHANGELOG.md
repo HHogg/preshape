@@ -1,3 +1,10 @@
+### [10.2.1](https://github.com/HHogg/preshape/compare/v10.2.0...v10.2.1) (2021-11-24)
+
+
+### Fixes
+
+* **Placement:** Offset arrow ([862a3f5](https://github.com/HHogg/preshape/commit/862a3f5dcf0b85f00b35479873705c625d695ed6))
+
 ## [10.2.0](https://github.com/HHogg/preshape/compare/v10.1.2...v10.2.0) (2021-11-24)
 
 
