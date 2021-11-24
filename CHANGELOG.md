@@ -1,3 +1,18 @@
+## [10.2.0](https://github.com/HHogg/preshape/compare/v10.1.2...v10.2.0) (2021-11-24)
+
+
+### Features
+
+* **InputWrapper:** Added invalid prop ([7b4b47a](https://github.com/HHogg/preshape/commit/7b4b47aaaec70e8f90175f19875e9012026681b0))
+
+
+### Fixes
+
+* **lists:** Always remove default browser list styling for uls & ols ([5070ee8](https://github.com/HHogg/preshape/commit/5070ee8f56b76fb2548795b17df789d9943a1133))
+* **Placement:** Always call onClose prop ([945e1cb](https://github.com/HHogg/preshape/commit/945e1cb31fa8805a9de88ac90aff75a692b3939f))
+* **Placement:** Remove pointer events when hidden ([18169df](https://github.com/HHogg/preshape/commit/18169df165b4bec23bf30f7b082d0224086b1a08))
+* **SelectInputLabel:** Issue with not shrinking inside flex containers ([1f4ca02](https://github.com/HHogg/preshape/commit/1f4ca029e9376683ce65ae518db82bc637fb8e09))
+
 ### [10.1.2](https://github.com/HHogg/preshape/compare/v10.1.1...v10.1.2) (2021-11-14)
 
 
