@@ -16,6 +16,12 @@
   pointer-events: none;
 }
 
+.Placement__arrow,
+.Placement__arrow:first-child,
+.Placement__arrow:last-child {
+  margin: var(--Placement-arrow-size);
+}
+
 .Placement--top .Placement__arrow {
   top: 100%;
   transform:
