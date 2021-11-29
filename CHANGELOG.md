@@ -1,3 +1,17 @@
+## [10.4.0](https://github.com/HHogg/preshape/compare/v10.3.0...v10.4.0) (2021-11-29)
+
+
+### Features
+
+* **Color:** Added a 4th text coloring ([db64325](https://github.com/HHogg/preshape/commit/db643258e48cda2b6814fea68ae94847d7d1b895))
+* **InputWrapper:** Added description prop ([b1b1bfb](https://github.com/HHogg/preshape/commit/b1b1bfbde529df3618fbaa8f95784cebe04e1d57))
+* **Modal:** Added onCloseAnimationComplete prop to Modal ([58588b7](https://github.com/HHogg/preshape/commit/58588b76fd97ddf58bd0a41207ba141756dd779f))
+
+
+### Style Changes
+
+* **DarkTheme:** Adjusted the dark theme background colours ([d584d36](https://github.com/HHogg/preshape/commit/d584d368712fb7033e97eabeac755c7330752a0a))
+
 ## [10.3.0](https://github.com/HHogg/preshape/compare/v10.2.1...v10.3.0) (2021-11-24)
 
 
