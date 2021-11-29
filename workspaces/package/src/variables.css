@@ -94,7 +94,7 @@
 
   --rgb-highlight: var(--oc-yellow-3-rgb);
 
-  --color-overlay: rgba(var(--rgb-dark--shade-1), 0.7);
+  --color-overlay: rgba(var(--rgb-black), 0.7);
   --color-elevate: rgba(var(--oc-gray-5-rgb), 0.7);
 
   --transition-duration--fast: 200ms;
@@ -161,18 +161,18 @@
 }
 
 .Theme--night {
-  --color-background--shade-1: var(--color-dark--shade-1);
-  --color-background--shade-2: var(--color-dark--shade-2);
-  --color-background--shade-3: var(--color-dark--shade-3);
+  --color-background--shade-1: var(--color-black);
+  --color-background--shade-2: var(--color-dark--shade-1);
+  --color-background--shade-3: var(--color-dark--shade-2);
 
   --color-text--shade-1: var(--color-light--shade-1);
   --color-text--shade-2: var(--color-light--shade-2);
   --color-text--shade-3: var(--color-light--shade-3);
   --color-text--shade-4: var(--oc-gray-5);
 
-  --rgb-background--shade-1: var(--rgb-dark--shade-1);
-  --rgb-background--shade-2: var(--rgb-dark--shade-2);
-  --rgb-background--shade-3: var(--rgb-dark--shade-3);
+  --rgb-background--shade-1: var(--rgb-black);
+  --rgb-background--shade-2: var(--rgb-dark--shade-1);
+  --rgb-background--shade-3: var(--rgb-dark--shade-2);
 
   --rgb-text--shade-1: var(--rgb-light--shade-1);
   --rgb-text--shade-2: var(--rgb-light--shade-2);
