@@ -9,6 +9,10 @@ import Text from '../Text/Text';
 
 export interface InputWrapperProps extends BoxProps {
   /**
+   * A helpful description that can be displayed under the input.
+   */
+  description?: string;
+  /**
    * The disabled state that prevents the input from being clickable.
    * Note that this elements simply applies the disabled styling, it
    * still needs to be provided to the Input component.
@@ -38,11 +42,11 @@ const InputWrapper: RefForwardingComponent<
     children,
     borderRadius = 'x2',
     borderSize = 'x2',
+    description,
     disabled,
     invalid,
     label,
     paddingHorizontal = 'x3',
-    paddingVertical = 'x2',
     ...rest
   } = props;
 
@@ -56,6 +60,7 @@ const InputWrapper: RefForwardingComponent<
         {...rest}
         className={ classes }
         disabled={disabled}
+        gap="x2"
         flex="vertical"
         tag="label"
       >
@@ -63,7 +68,6 @@ const InputWrapper: RefForwardingComponent<
           <Text
             ellipsis
             paddingHorizontal={paddingHorizontal}
-            paddingVertical={paddingVertical}
             size="x2"
             strong
           >
@@ -82,6 +86,16 @@ const InputWrapper: RefForwardingComponent<
         >
           {children}
         </Box>
+
+        {description && (
+          <Text
+            paddingHorizontal={paddingHorizontal}
+            size="x2"
+            strong
+          >
+            {description}
+          </Text>
+        )}
       </Box>
     </InputWrapperContext.Provider>
   );
