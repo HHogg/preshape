@@ -53,6 +53,11 @@ export interface ModalProps extends BoxProps {
    */
   onClose?: (event: PointerEvent<HTMLElement>) => void;
   /**
+   * Called once the modal has finished animating out and
+   * has been removed from the DOM.
+   */
+  onCloseAnimationComplete?: () => void;
+  /**
    * Set the size of the modal, increasing the space around
    * the content accordingly.
    */
@@ -76,6 +81,7 @@ const Modal: RefForwardingComponent<
     fullscreen,
     maxWidth = 'auto',
     onClose,
+    onCloseAnimationComplete,
     margin,
     overlayBackgroundColor = 'overlay',
     size = 'x2',
@@ -107,6 +113,7 @@ const Modal: RefForwardingComponent<
   const handleOnAnimateComplete = () => {
     if (!visible) {
       setRender(false);
+      onCloseAnimationComplete?.();
     }
   };
 
