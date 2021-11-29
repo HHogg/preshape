@@ -44,7 +44,8 @@ export type TypeColor =
   | 'positive-shade-5'
   | 'text-shade-1'
   | 'text-shade-2'
-  | 'text-shade-3';
+  | 'text-shade-3'
+  | 'text-shade-4';
 
 export type TypeSize =
   | 'x0'

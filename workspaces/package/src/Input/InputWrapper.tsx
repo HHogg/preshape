@@ -92,6 +92,7 @@ const InputWrapper: RefForwardingComponent<
             paddingHorizontal={paddingHorizontal}
             size="x2"
             strong
+            textColor="text-shade-4"
           >
             {description}
           </Text>
