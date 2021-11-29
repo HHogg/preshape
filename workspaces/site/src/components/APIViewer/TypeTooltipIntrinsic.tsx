@@ -1,6 +1,5 @@
-import React, { FormEvent, ReactNode, Ref, useContext, useState } from 'react';
+import React, { MouseEvent, FormEvent, ReactNode, Ref, useState } from 'react';
 import {
-  themesOpposite,
   Form,
   Input,
   InputWrapper,
@@ -11,7 +10,6 @@ import {
   PlacementReference,
 } from 'preshape';
 import { Renderer } from './Types';
-import { RootContext } from '../Root';
 
 export interface Props extends Renderer {
   children: (props: {
@@ -24,8 +22,7 @@ export interface Props extends Renderer {
 }
 
 const TypeTooltipIntrinsic = (props: Props) => {
-  const { children, context, state, onStateChange, placeholder } = props;
-  const { theme } = useContext(RootContext);
+  const { children, state, onStateChange, placeholder } = props;
   const [visible, setVisible] = useState(false);
   const [textValue, setTextValue] = useState((state || '').toString());
 
@@ -40,7 +37,7 @@ const TypeTooltipIntrinsic = (props: Props) => {
     setVisible(true);
   };
 
-  const handleOnSubmit = (event: FocusEvent<HTMLFormElement>) => {
+  const handleOnSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setVisible(false);
   };
@@ -53,20 +50,19 @@ const TypeTooltipIntrinsic = (props: Props) => {
 
       <Placement
         onClose={() => setVisible(false)}
-        theme={themesOpposite[theme]}
         unrender
         visible={visible}
         width="12rem"
         zIndex={1}
       >
-        <PlacementArrow backgroundColor="background-shade-1" />
+        <PlacementArrow backgroundColor="text-shade-1" />
         <PlacementContent
-          backgroundColor="background-shade-1"
-          borderRadius="x1"
+          backgroundColor="text-shade-1"
+          borderRadius="x2"
           padding="x1"
         >
           <Form onSubmit={handleOnSubmit}>
-            <InputWrapper label={context.name}>
+            <InputWrapper>
               <Input
                 onChange={handleOnChange}
                 placeholder={placeholder}
