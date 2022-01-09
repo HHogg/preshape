@@ -1,3 +1,10 @@
+### [10.4.3](https://github.com/HHogg/preshape/compare/v10.4.2...v10.4.3) (2022-01-09)
+
+
+### Fixes
+
+* **Modal:** Remove border radius when snapping to edges ([820d9ab](https://github.com/HHogg/preshape/commit/820d9ab1215d738d0ba4618f56b558e90fc77993))
+
 ### [10.4.2](https://github.com/HHogg/preshape/compare/v10.4.1...v10.4.2) (2022-01-09)
 
 
