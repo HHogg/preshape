@@ -118,6 +118,7 @@ const Modal: RefForwardingComponent<
   const refModal = useRef<HTMLDivElement>(null);
   const match = useMatchMedia([maxWidth]);
   const isMaxWidthEnabled = maxWidth !== 'auto';
+  const isGreaterThanMaxWidth = !isMaxWidthEnabled || match(maxWidth);
   const classes = classNames('Modal', {
     [`Modal--size-${size}`]: size,
   });
@@ -158,7 +159,7 @@ const Modal: RefForwardingComponent<
         alignChildren="middle"
         fixed="edge-to-edge"
         flex="vertical"
-        padding={!isMaxWidthEnabled || match(maxWidth) ? margin : 'x0'}
+        padding={isGreaterThanMaxWidth ? margin : undefined}
         ref={ref}
       >
         <Appear
@@ -173,7 +174,7 @@ const Modal: RefForwardingComponent<
         <Appear
           animation={animation}
           backgroundColor={backgroundColor}
-          borderRadius="x3"
+          borderRadius={ isGreaterThanMaxWidth ? 'x3' : undefined  }
           className={classes}
           container
           flex="vertical"
