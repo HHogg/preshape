@@ -27,9 +27,7 @@ const ModalFooter: RefForwardingComponent<
       borderSize="x2"
       borderTop
       className="Modal__footer"
-      grow
       ref={ref}
-      shrink
     />
   );
 };
