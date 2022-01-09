@@ -1,3 +1,10 @@
+### [10.4.2](https://github.com/HHogg/preshape/compare/v10.4.1...v10.4.2) (2022-01-09)
+
+
+### Fixes
+
+* **Modal:** Remove flex grow from footer ([f1271bb](https://github.com/HHogg/preshape/commit/f1271bbac53b6976a5dc9385a71a2e6cd53cad02))
+
 ### [10.4.1](https://github.com/HHogg/preshape/compare/v10.4.0...v10.4.1) (2022-01-09)
 
 
