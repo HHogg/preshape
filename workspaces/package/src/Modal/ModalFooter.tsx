@@ -1,5 +1,6 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef, RefForwardingComponent, useContext } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
+import { ModalContext } from './Modal';
 
 /**
  * The footer element of the Modal. This can be used as
@@ -12,8 +13,15 @@ const ModalFooter: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, ModalFooterProps>
 > = (props, ref) => {
+  const {
+    paddingHorizontal,
+    paddingVertical
+  } = useContext(ModalContext);
+
   return (
     <Box
+      paddingHorizontal={ paddingHorizontal }
+      paddingVertical={ paddingVertical }
       {...props}
       borderColor="background-shade-3"
       borderSize="x2"

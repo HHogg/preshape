@@ -8,15 +8,40 @@ import React, {
   useState,
 } from 'react';
 import { createPortal } from 'react-dom';
+import classNames from 'classnames';
 import { useMatchMedia } from '../hooks';
-import Box, { Attributes, BoxProps, TypeColor } from '../Box/Box';
+import Box, { Attributes, BoxProps, TypeColor, TypeSize } from '../Box/Box';
 import Appear, { TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
-import classNames from 'classnames';
+
+type ModalSize = 'x1' | 'x2' | 'x3';
+
+const ModalPaddings: Record<ModalSize, {
+  horizontal: TypeSize;
+  vertical: TypeSize;
+}> = {
+  x1: {
+    horizontal: 'x8',
+    vertical: 'x4',
+  },
+  x2: {
+    horizontal: 'x8',
+    vertical: 'x6',
+  },
+  x3: {
+    horizontal: 'x12',
+    vertical: 'x10',
+  },
+};
 
 export const ModalContext = createContext<{
   onClose?: (event: PointerEvent<HTMLElement>) => void;
-}>({});
+  paddingHorizontal: TypeSize;
+  paddingVertical: TypeSize;
+}>({
+  paddingHorizontal: ModalPaddings.x2.horizontal,
+  paddingVertical: ModalPaddings.x2.vertical,
+});
 
 /**
  * The containing component for all the other Modal components.
@@ -61,7 +86,7 @@ export interface ModalProps extends BoxProps {
    * Set the size of the modal, increasing the space around
    * the content accordingly.
    */
-  size?: 'x1' | 'x2' | 'x3';
+  size?: ModalSize;
   /**
    * The visible state of the modal. When the visibility
    * is set to false, the content will be removed from the
@@ -97,6 +122,11 @@ const Modal: RefForwardingComponent<
     [`Modal--size-${size}`]: size,
   });
 
+  const {
+    horizontal: paddingHorizontal,
+    vertical: paddingVertical,
+  } = ModalPaddings[size];
+
   useEffect(() => {
     if (visible) {
       setRender(true);
@@ -122,7 +152,7 @@ const Modal: RefForwardingComponent<
   }
 
   return createPortal(
-    <ModalContext.Provider value={{ onClose }}>
+    <ModalContext.Provider value={{ onClose, paddingHorizontal, paddingVertical }}>
       <Box
         {...rest}
         alignChildren="middle"

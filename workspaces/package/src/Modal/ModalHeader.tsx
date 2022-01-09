@@ -23,10 +23,12 @@ const ModalHeader: RefForwardingComponent<
   Attributes<HTMLDivElement, ModalHeaderProps>
 > = (props, ref) => {
   const { children, closeIconSize = '24px', ...rest } = props;
-  const { onClose } = useContext(ModalContext);
+  const { onClose, paddingHorizontal, paddingVertical } = useContext(ModalContext);
 
   return (
     <Box
+      paddingHorizontal={ paddingHorizontal }
+      paddingVertical={ paddingVertical }
       {...rest}
       alignChildrenVertical="start"
       borderBottom

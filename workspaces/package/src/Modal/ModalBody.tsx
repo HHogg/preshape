@@ -1,5 +1,6 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef, RefForwardingComponent, useContext } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
+import { ModalContext } from './Modal';
 
 /**
  * The body element of the Modal. This can be used as
@@ -12,8 +13,15 @@ const ModalBody: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, ModalBodyProps>
 > = (props, ref) => {
+  const {
+    paddingHorizontal,
+    paddingVertical
+  } = useContext(ModalContext);
+
   return (
     <Box
+      paddingHorizontal={ paddingHorizontal }
+      paddingVertical={ paddingVertical }
       {...props}
       className="Modal__body"
       flex="vertical"
