@@ -1,3 +1,10 @@
+### [10.4.1](https://github.com/HHogg/preshape/compare/v10.4.0...v10.4.1) (2022-01-09)
+
+
+### Fixes
+
+* **Modal:** Allow Modal paddings to be overridden ([593c0be](https://github.com/HHogg/preshape/commit/593c0becd8db4984d273d85909d42d52b2a43378))
+
 ## [10.4.0](https://github.com/HHogg/preshape/compare/v10.3.0...v10.4.0) (2021-11-29)
 
 
