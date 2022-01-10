@@ -9,6 +9,8 @@ import {
   ModalFooter,
   ModalHeader,
   ModalHeaderProps,
+  ModalTitle,
+  ModalTitleProps,
   Text,
   Tooltip,
 } from 'preshape';
@@ -19,6 +21,7 @@ const Item: CatalogueItem<{
   Modal: ModalProps;
   ModalBody: ModalBodyProps;
   ModalHeader: ModalHeaderProps;
+  ModalTitle: ModalTitleProps;
 }> = {
   name: 'Modal',
   description:
@@ -62,7 +65,7 @@ const Item: CatalogueItem<{
               visible={isAutoOpen}
             >
               <ModalHeader>
-                <Text strong>Warning!</Text>
+                <ModalTitle>Warning!</ModalTitle>
               </ModalHeader>
               <ModalBody>
                 <Text margin="x3">Are you sure you want to do that?</Text>
@@ -115,7 +118,7 @@ const Item: CatalogueItem<{
               visible={isMaxWidthOpen}
             >
               <ModalHeader>
-                <Text strong>The spectacle before us was indeed sublime.</Text>
+                <ModalTitle>The spectacle before us was indeed sublime.</ModalTitle>
               </ModalHeader>
 
               <ModalBody>
@@ -173,6 +176,7 @@ const Item: CatalogueItem<{
       },
       ModalBody: {},
       ModalHeader: {},
+      ModalTitle: {},
     },
   },
   apis: [
@@ -190,6 +194,11 @@ const Item: CatalogueItem<{
       module: '"Modal/ModalHeader"',
       name: 'ModalHeaderProps',
       rename: 'ModalHeader',
+    },
+    {
+      module: '"Modal/ModalTitle"',
+      name: 'ModalTitleProps',
+      rename: 'ModalTitle',
     },
   ],
 };
