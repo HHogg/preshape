@@ -1,3 +1,10 @@
+## [10.5.0](https://github.com/HHogg/preshape/compare/v10.4.3...v10.5.0) (2022-01-10)
+
+
+### Features
+
+* **Modal:** Added ModalTitle component ([c2b2ad1](https://github.com/HHogg/preshape/commit/c2b2ad1712313c9173421ba5a35e329fc557d41b))
+
 ### [10.4.3](https://github.com/HHogg/preshape/compare/v10.4.2...v10.4.3) (2022-01-09)
 
 
