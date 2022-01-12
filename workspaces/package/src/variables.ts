@@ -63,11 +63,11 @@ export const colorAccent1Shade3 = color.indigo[5];
 export const colorAccent1Shade4 = color.indigo[6];
 export const colorAccent1Shade5 = color.indigo[7];
 
-export const colorAccent2Shade1 = hexToRGBA(color.grape[7], 0.1);
-export const colorAccent2Shade2 = hexToRGBA(color.grape[7], 0.2);
-export const colorAccent2Shade3 = color.grape[5];
-export const colorAccent2Shade4 = color.grape[6];
-export const colorAccent2Shade5 = color.grape[7];
+export const colorAccent2Shade1 = hexToRGBA(color.violet[7], 0.1);
+export const colorAccent2Shade2 = hexToRGBA(color.violet[7], 0.2);
+export const colorAccent2Shade3 = color.violet[5];
+export const colorAccent2Shade4 = color.violet[6];
+export const colorAccent2Shade5 = color.violet[7];
 
 export const colorPositiveShade1 = hexToRGBA(color.teal[7], 0.1);
 export const colorPositiveShade2 = hexToRGBA(color.teal[7], 0.2);

@@ -37,11 +37,11 @@
   --color-accent-1--shade-4: var(--oc-indigo-6);
   --color-accent-1--shade-5: var(--oc-indigo-7);
 
-  --color-accent-2--shade-1: rgba(var(--oc-grape-7-rgb), 0.1);
-  --color-accent-2--shade-2: rgba(var(--oc-grape-7-rgb), 0.2);
-  --color-accent-2--shade-3: var(--oc-grape-5);
-  --color-accent-2--shade-4: var(--oc-grape-6);
-  --color-accent-2--shade-5: var(--oc-grape-7);
+  --color-accent-2--shade-1: rgba(var(--oc-violet-7-rgb), 0.1);
+  --color-accent-2--shade-2: rgba(var(--oc-violet-7-rgb), 0.2);
+  --color-accent-2--shade-3: var(--oc-violet-5);
+  --color-accent-2--shade-4: var(--oc-violet-6);
+  --color-accent-2--shade-5: var(--oc-violet-7);
 
   --color-positive--shade-1: rgba(var(--oc-teal-7-rgb), 0.1);
   --color-positive--shade-2: rgba(var(--oc-teal-7-rgb), 0.2);
@@ -74,11 +74,11 @@
   --rgb-accent-1--shade-4: var(--oc-indigo-6-rgb);
   --rgb-accent-1--shade-5: var(--oc-indigo-7-rgb);
 
-  --rgb-accent-2--shade-1: var(--oc-grape-7-rgb);
-  --rgb-accent-2--shade-2: var(--oc-grape-7-rgb);
-  --rgb-accent-2--shade-3: var(--oc-grape-5-rgb);
-  --rgb-accent-2--shade-4: var(--oc-grape-6-rgb);
-  --rgb-accent-2--shade-5: var(--oc-grape-7-rgb);
+  --rgb-accent-2--shade-1: var(--oc-violet-7-rgb);
+  --rgb-accent-2--shade-2: var(--oc-violet-7-rgb);
+  --rgb-accent-2--shade-3: var(--oc-violet-5-rgb);
+  --rgb-accent-2--shade-4: var(--oc-violet-6-rgb);
+  --rgb-accent-2--shade-5: var(--oc-violet-7-rgb);
 
   --rgb-positive--shade-1: var(--oc-teal-7-rgb);
   --rgb-positive--shade-2: var(--oc-teal-7-rgb);

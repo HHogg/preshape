@@ -11,13 +11,13 @@ function SvgPNight(props) {
         fillRule="evenodd"
       >
         <g id="P-night_svg__Group" transform="translate(5 2)">
-          <path id="P-night_svg__Path-2" fill="#9C36B5" d="M6 20v-7L0 0z" />
-          <path id="P-night_svg__Path" fill="#AE3EC9" d="M6 20L0 0v20z" />
-          <path id="P-night_svg__Rectangle" fill="#CC5DE8" d="M12 0v13H6z" />
-          <path id="P-night_svg__Path-3" fill="#BE4BDB" d="M6 13l6-13H0z" />
+          <path id="P-night_svg__Path-2" fill="#6741d9" d="M6 20v-7L0 0z" />
+          <path id="P-night_svg__Path" fill="#7048e8" d="M6 20L0 0v20z" />
+          <path id="P-night_svg__Rectangle" fill="#7950f2" d="M12 0v13H6z" />
+          <path id="P-night_svg__Path-3" fill="#845ef7" d="M6 13l6-13H0z" />
           <path
             id="P-night_svg__Path-4"
-            fill="#DA77F2"
+            fill="#9775fa"
             d="M12 13l3.998-6.5L12 0z"
           />
         </g>
