@@ -1,3 +1,15 @@
+## [10.6.0](https://github.com/HHogg/preshape/compare/v10.5.0...v10.6.0) (2022-01-12)
+
+
+### Features
+
+* **Box:** Updated ellevation to have multiple levels. ([6b8ca3b](https://github.com/HHogg/preshape/commit/6b8ca3b782ef3d2efdde22dbb7abc6a0d683299a))
+
+
+### Style Changes
+
+* **NightTheme:** Updated accent colour ([b214026](https://github.com/HHogg/preshape/commit/b214026ca07e371802001fe057781796bd1422e9))
+
 ## [10.5.0](https://github.com/HHogg/preshape/compare/v10.4.3...v10.5.0) (2022-01-10)
 
 
