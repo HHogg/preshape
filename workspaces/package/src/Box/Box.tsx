@@ -115,8 +115,8 @@ export interface BoxProps {
   container?: boolean;
   /** Applies display styling */
   display?: 'block' | 'inline-block';
-  /** Applies a drop shadow filter that gives the appearance of elevation */
-  elevate?: boolean;
+  /** Applies a box shadow that gives the appearance of elevation */
+  elevate?: 'x1' | 'x2' | 'x3' | boolean;
   /** Quick way of fixed position to common places */
   fixed?:
     | 'center'
@@ -254,6 +254,7 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
   } = props;
 
   const border = borderTop || borderRight || borderBottom || borderLeft;
+
   const isPredefinedBorderRadius =
     borderRadius === 'full' ||
     borderRadius === 'x1' ||
@@ -280,6 +281,7 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
       [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
       [`Box--border-size-${borderSize}`]: borderSize,
       [`Box--display-${display}`]: display,
+      [`Box--elevate-${elevate}`]: typeof elevate === 'string',
       [`Box--fixed-${fixed}`]: fixed,
       [`Box--flex-${flex}`]: flex,
       [`Box--flex-align-horz-${alignChildrenHorizontal}`]:

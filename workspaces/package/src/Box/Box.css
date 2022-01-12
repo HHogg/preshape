@@ -95,7 +95,11 @@
   margin-left: auto;
 }
 
-.Box--elevate { filter: drop-shadow(0 0.125rem 0.3125rem var(--color-elevate)); }
+.Box--elevate--x1 { box-shadow: var(--shadow-elevation--x1); }
+
+.Box--elevate,
+.Box--elevate--x2 { box-shadow: var(--shadow-elevation--x2); }
+.Box--elevate--x3 { box-shadow: var(--shadow-elevation--x3); }
 
 .Box--transition-fast,
 .Box--transition-base,

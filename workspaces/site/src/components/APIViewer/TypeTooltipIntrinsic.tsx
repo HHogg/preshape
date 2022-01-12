@@ -55,7 +55,6 @@ const TypeTooltipIntrinsic = (props: Props) => {
         width="12rem"
         zIndex={1}
       >
-        <PlacementArrow backgroundColor="text-shade-1" />
         <PlacementContent
           backgroundColor="text-shade-1"
           borderRadius="x2"
@@ -71,6 +70,7 @@ const TypeTooltipIntrinsic = (props: Props) => {
             </InputWrapper>
           </Form>
         </PlacementContent>
+        <PlacementArrow backgroundColor="text-shade-1" />
       </Placement>
     </PlacementManager>
   );

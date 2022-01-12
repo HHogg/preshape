@@ -39,11 +39,11 @@ const Item: CatalogueItem<{
               {(props) => <Icons.Star {...props} name="Star" size="2rem" />}
             </PlacementReference>
 
-            <Placement {...props.Placement} elevate zIndex={1}>
-              <PlacementArrow backgroundColor="text-shade-1" />
+            <Placement {...props.Placement} zIndex={1}>
               <PlacementContent
                 backgroundColor="text-shade-1"
                 borderRadius="x1"
+                elevate
                 padding="x1"
                 textColor="background-shade-1"
               >
@@ -61,6 +61,7 @@ const Item: CatalogueItem<{
                   </Button>
                 </Buttons>
               </PlacementContent>
+              <PlacementArrow backgroundColor="text-shade-1" />
             </Placement>
           </PlacementManager>
         </Box>

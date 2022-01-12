@@ -14,6 +14,7 @@
   width: var(--Placement-arrow-size);
   height: var(--Placement-arrow-size);
   pointer-events: none;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
 }
 
 .Placement__arrow,

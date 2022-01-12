@@ -95,7 +95,6 @@
   --rgb-highlight: var(--oc-yellow-3-rgb);
 
   --color-overlay: rgba(var(--rgb-black), 0.7);
-  --color-elevate: rgba(var(--oc-gray-5-rgb), 0.7);
 
   --transition-duration--fast: 200ms;
   --transition-duration--base: 400ms;
@@ -139,6 +138,29 @@
 
   --text-weight--weak: 400;
   --text-weight--strong: 700;
+
+  --shadow-color: 240deg 27% 62%;
+
+  --shadow-elevation--x1:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+
+  --shadow-elevation--x2:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.35),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.35),
+    2px 4px 5px -1.7px hsl(var(--shadow-color) / 0.35),
+    4.9px 9.8px 12.3px -2.5px hsl(var(--shadow-color) / 0.35);
+
+  --shadow-elevation--x3:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
 .Theme--day {
@@ -158,6 +180,8 @@
   --rgb-text--shade-1: var(--rgb-dark--shade-1);
   --rgb-text--shade-2: var(--rgb-dark--shade-2);
   --rgb-text--shade-3: var(--rgb-dark--shade-3);
+
+  --shadow-color: 240deg 27% 62%;
 }
 
 .Theme--night {
@@ -177,6 +201,8 @@
   --rgb-text--shade-1: var(--rgb-light--shade-1);
   --rgb-text--shade-2: var(--rgb-light--shade-2);
   --rgb-text--shade-3: var(--rgb-light--shade-3);
+
+  --shadow-color: 0deg 0% 0%;
 }
 
 html.Theme--day {
