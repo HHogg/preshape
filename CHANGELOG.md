@@ -1,3 +1,10 @@
+### [10.6.1](https://github.com/HHogg/preshape/compare/v10.6.0...v10.6.1) (2022-01-13)
+
+
+### Fixes
+
+* **SelectInputLabel:** Remove ellipsis behaviour ([da36658](https://github.com/HHogg/preshape/commit/da3665878fd564f24b46b07ea965fc6c6dc6c571))
+
 ## [10.6.0](https://github.com/HHogg/preshape/compare/v10.5.0...v10.6.0) (2022-01-12)
 
 
