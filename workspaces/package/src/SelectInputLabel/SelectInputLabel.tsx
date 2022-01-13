@@ -31,7 +31,6 @@ const SelectInputLabel: RefForwardingComponent<
       <Box grow minWidth="0" shrink>
         <Text
           className="SelectInputLabels__label-text"
-          ellipsis
           size="x3"
           strong
         >
