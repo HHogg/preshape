@@ -1,8 +1,8 @@
 .Range {
   display: block;
   min-width: 0;
-  height: 0;
-  padding: var(--size--x4) var(--size--x2);
+  height: var(--size--x4);
+  padding: 0;
   border: 0;
   border-radius: 0;
   background: none;

@@ -1,104 +1,64 @@
-import classNames from 'classnames';
-import React, {
-  createContext,
-  forwardRef,
-  RefForwardingComponent,
-} from 'react';
+import classnames from 'classnames';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
-import Text from '../Text/Text';
+import './Input.css';
 
 export interface InputWrapperProps extends BoxProps {
   /**
-   * A helpful description that can be displayed under the input.
+   * Addon that appears before the Input
    */
-  description?: string;
-  /**
-   * The disabled state that prevents the input from being clickable.
-   * Note that this elements simply applies the disabled styling, it
-   * still needs to be provided to the Input component.
+  addonEnd?: JSX.Element;
+   /**
+   * Addon that appears after the Input
    */
-  disabled?: boolean;
+  addonStart?: JSX.Element;
   /**
    * Sets styling to indicate the input is invalid.
    */
-  invalid?: boolean;
-  /**
-   * The label string that is rendered above the Input.
-   */
-  label?: string;
+  invalid?: boolean
 }
 
-export const InputWrapperContext = createContext<
-  Pick<InputWrapperProps, 'disabled'>
->({
-  disabled: false,
-});
-
 const InputWrapper: RefForwardingComponent<
-  HTMLLabelElement,
-  Attributes<HTMLLabelElement, InputWrapperProps>
+  HTMLDivElement,
+  Attributes<HTMLDivElement, InputWrapperProps>
 > = (props, ref) => {
   const {
-    children,
+    addonEnd,
+    addonStart,
     borderRadius = 'x2',
     borderSize = 'x2',
-    description,
+    children,
     disabled,
+    gap = 'x3',
     invalid,
-    label,
     paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
     ...rest
   } = props;
 
-  const classes = classNames('InputWrapper', {
-    'InputWrapper--invalid': invalid,
+  const classes = classnames('Input', {
+    'Input--invalid': invalid,
   });
 
   return (
-    <InputWrapperContext.Provider value={{ disabled }}>
-      <Box
-        {...rest}
-        className={ classes }
-        disabled={disabled}
-        gap="x2"
-        flex="vertical"
-        tag="label"
+    <Box { ...rest }
+        alignChildrenVertical="middle"
+        backgroundColor="background-shade-1"
+        borderRadius={ borderRadius }
+        borderSize={ borderSize }
+        className={classes}
+        disabled={ disabled }
+        flex="horizontal"
+        gap={ gap }
+        overflow="hidden"
+        paddingHorizontal={ paddingHorizontal }
+        paddingVertical={ paddingVertical }
+        ref={ref}
       >
-        {label && (
-          <Text
-            ellipsis
-            paddingHorizontal={paddingHorizontal}
-            size="x2"
-            strong
-          >
-            {label}
-          </Text>
-        )}
-
-        <Box
-          alignChildrenVertical="middle"
-          backgroundColor="background-shade-1"
-          borderRadius={ borderRadius }
-          borderSize={ borderSize }
-          flex="horizontal"
-          overflow="hidden"
-          ref={ref}
-        >
-          {children}
-        </Box>
-
-        {description && (
-          <Text
-            paddingHorizontal={paddingHorizontal}
-            size="x2"
-            strong
-            textColor="text-shade-4"
-          >
-            {description}
-          </Text>
-        )}
-      </Box>
-    </InputWrapperContext.Provider>
+        { addonStart && addonStart }
+        { children }
+        { addonEnd && addonEnd }
+    </Box>
   );
 };
 

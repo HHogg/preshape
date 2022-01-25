@@ -3,8 +3,7 @@ import {
   Box,
   Icons,
   Input,
-  InputAddon,
-  InputWrapper,
+  InputLabel,
   Options,
   OptionsProps,
   Option,
@@ -59,16 +58,12 @@ const Item: CatalogueItem<{
             <PlacementManager trigger="click">
               <PlacementReference>
                 {(props, { visible }) => (
-                  <InputWrapper {...props}>
-                    <Input readOnly size="x2" value={value} />
-                    <InputAddon>
-                      {visible ? (
-                        <Icons.ChevronUp size="24px" />
-                      ) : (
-                        <Icons.ChevronDown size="24px" />
-                      )}
-                    </InputAddon>
-                  </InputWrapper>
+                  <InputLabel {...props}>
+                    <Input
+                      addonEnd={ visible ? <Icons.ChevronUp size="24px" /> : <Icons.ChevronDown size="24px" /> }
+                      readOnly
+                      value={value} />
+                  </InputLabel>
                 )}
               </PlacementReference>
 

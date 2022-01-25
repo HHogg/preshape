@@ -19,6 +19,7 @@ const SelectInputLabel: RefForwardingComponent<
     <Box
       {...rest}
       alignChildrenVertical="middle"
+      backgroundColor="background-shade-1"
       borderRadius={borderRadius}
       className={classes}
       flex="horizontal"

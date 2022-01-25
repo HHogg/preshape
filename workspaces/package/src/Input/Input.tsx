@@ -1,41 +1,90 @@
-import classnames from 'classnames';
-import React, { forwardRef, useContext, RefForwardingComponent } from 'react';
-import Box, { Attributes } from '../Box/Box';
+import React, { forwardRef, RefForwardingComponent } from 'react';
+import { Attributes, BoxProps } from '../Box/Box';
+import InputWrapper from './InputWrapper';
 import Text, { TextProps } from '../Text/Text';
+import useMatchingProps from '../hooks/useMatchingProps';
 import './Input.css';
-import { InputWrapperContext } from './InputWrapper';
 
 export interface InputProps extends TextProps {
-  size?: 'x1' | 'x2';
+  /**
+   * Addon that appears before the Input
+   */
+  addonEnd?: JSX.Element;
+   /**
+   * Addon that appears after the Input
+   */
+  addonStart?: JSX.Element;
+  /**
+   * Sets styling to indicate the input is invalid.
+   */
+  invalid?: boolean
 }
 
+// TODO(hhogg): Find out how to just grab the keys of the BoxProps type.
+const forwardKeys: (keyof BoxProps)[] = [
+  'borderColor',
+  'borderBottom',
+  'borderLeft',
+  'borderRight',
+  'borderTop',
+  'elevate',
+  'height',
+  'maxHeight',
+  'maxWidth',
+  'minHeight',
+  'minWidth',
+  'textColor',
+  'theme',
+  'width',
+];
+
 const Input: RefForwardingComponent<
-  HTMLInputElement,
-  Attributes<HTMLInputElement, InputProps>
+  HTMLInputElement | HTMLTextAreaElement,
+  Attributes<HTMLInputElement | HTMLTextAreaElement, InputProps>
 > = (props, ref) => {
-  const { size = 'x1', ...rest } = props;
+  const {
+    addonEnd,
+    addonStart,
+    borderRadius = 'x2',
+    borderSize = 'x2',
+    disabled,
+    gap = 'x3',
+    invalid,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
+    size = 'x3',
+    tag = 'input',
+    ...rest
+  } = props;
 
-  if (rest.disabled !== undefined) {
-    // eslint-disable-next-line no-console
-    console.error('Preshape [Input]: Pass "disabled" to InputWrapper');
-  }
-
-  const { disabled } = useContext(InputWrapperContext);
-  const classes = classnames('Input', {
-    [`Input--${size}`]: size,
-  });
-
+  const [propsMatching, propsUnmatching] = useMatchingProps<InputProps, BoxProps>(rest, forwardKeys);
   return (
-    <Box basis="0" grow>
-      <Text
-        {...rest}
-        className={classes}
-        disabled={disabled}
-        ref={ref}
-        strong
-        tag="input"
-      />
-    </Box>
+    <InputWrapper { ...propsMatching }
+        addonEnd={ addonEnd }
+        addonStart={ addonStart }
+        alignChildrenVertical="middle"
+        backgroundColor="background-shade-1"
+        borderRadius={ borderRadius }
+        borderSize={ borderSize }
+        disabled={ disabled }
+        invalid={ invalid }
+        flex="horizontal"
+        gap={ gap }
+        paddingHorizontal={ paddingHorizontal }
+        paddingVertical={ paddingVertical }
+      >
+        <Text
+          {...propsUnmatching}
+          basis="0"
+          className="Input__element"
+          disabled={ disabled }
+          grow
+          ref={ref}
+          size={ size }
+          strong
+          tag={ tag }
+        />
+    </InputWrapper>
   );
 };
 

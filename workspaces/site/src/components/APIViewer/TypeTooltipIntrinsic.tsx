@@ -2,7 +2,7 @@ import React, { MouseEvent, FormEvent, ReactNode, Ref, useState } from 'react';
 import {
   Form,
   Input,
-  InputWrapper,
+  InputLabel,
   Placement,
   PlacementArrow,
   PlacementContent,
@@ -61,13 +61,13 @@ const TypeTooltipIntrinsic = (props: Props) => {
           padding="x1"
         >
           <Form onSubmit={handleOnSubmit}>
-            <InputWrapper>
+            <InputLabel>
               <Input
                 onChange={handleOnChange}
                 placeholder={placeholder}
                 value={textValue}
               />
-            </InputWrapper>
+            </InputLabel>
           </Form>
         </PlacementContent>
         <PlacementArrow backgroundColor="text-shade-1" />

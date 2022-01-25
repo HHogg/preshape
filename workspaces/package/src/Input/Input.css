@@ -1,4 +1,8 @@
-.InputWrapper {
+.InputLabel {
+  display: block;
+}
+
+.Input {
   width: 100%;
   transition-property: background-color, border-color;
   transition-duration: var(--transition-duration--base);
@@ -18,7 +22,7 @@
   }
 }
 
-.InputWrapper--invalid {
+.Input--invalid {
   &,
   &:focus-within,
   &:hover:not([disabled]) {
@@ -26,14 +30,16 @@
   }
 }
 
-.Input {
+.Input__element {
   display: block;
+  grid-area: input;
   width: 100%;
   min-width: 0;
   border: 0;
   border-radius: 0;
   background-color: transparent;
   color: var(--color-text--shade-1);
+  padding: 0;
   text-overflow: ellipsis;
   appearance: none;
 
@@ -53,16 +59,4 @@
     opacity: 0.5;
     cursor: default;
   }
-}
-
-.Input--x1 {
-  padding: var(--size--x2) var(--size--x3);
-  font-size: var(--text-size--x2);
-  line-height: var(--text-height--x1);
-}
-
-.Input--x2 {
-  padding: var(--size--x3) var(--size--x4);
-  font-size: var(--text-size--x3);
-  line-height: var(--text-height--x2);
 }

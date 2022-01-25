@@ -46,11 +46,7 @@ export { default as GridItem, GridItemProps } from './Grid/GridItem';
 export { Icons };
 export { default as Image, ImageProps } from './Image/Image';
 export { default as Input, InputProps } from './Input/Input';
-export { default as InputAddon, InputAddonProps } from './Input/InputAddon';
-export {
-  default as InputWrapper,
-  InputWrapperProps,
-} from './Input/InputWrapper';
+export { default as InputLabel, InputLabelProps } from './Input/InputLabel';
 export { default as Label, LabelProps } from './Label/Label';
 export { default as Labels, LabelsProps } from './Label/Labels';
 export { default as Link, LinkProps } from './Link/Link';
@@ -106,9 +102,9 @@ export { default as TableRow, TableRowProps } from './Table/TableRow';
 export { default as Text, TextProps, TypeTextSize } from './Text/Text';
 export { default as TextArea, TextAreaProps } from './TextArea/TextArea';
 export {
-  default as TextAreaWrapper,
-  TextAreaWrapperProps,
-} from './TextArea/TextAreaWrapper';
+  default as TextAreaLabel,
+  TextAreaLabelProps,
+} from './TextArea/TextAreaLabel';
 export {
   default as ThemeSwitcher,
   ThemeSwitcherProps,

@@ -2,15 +2,15 @@ import React from 'react';
 import {
   TextArea,
   TextAreaProps,
-  TextAreaWrapper,
-  TextAreaWrapperProps,
+  TextAreaLabel,
+  TextAreaLabelProps,
 } from 'preshape';
 import Showcase from '../Showcase';
 import { CatalogueItem } from '.';
 
 const Item: CatalogueItem<{
   TextArea: TextAreaProps;
-  TextAreaWrapper: TextAreaWrapperProps;
+  TextAreaLabel: TextAreaLabelProps;
 }> = {
   name: 'TextArea',
   description: 'Standard multi line textarea input for data collection.',
@@ -19,23 +19,23 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <TextAreaWrapper {...props.TextAreaWrapper}>
+        <TextAreaLabel {...props.TextAreaLabel}>
           <TextArea {...props.TextArea} placeholder="Type into me" rows={5} />
-        </TextAreaWrapper>
+        </TextAreaLabel>
       </Showcase>
     ),
     state: {
       TextArea: {},
-      TextAreaWrapper: {
-        label: 'TextAreaWrapper label',
+      TextAreaLabel: {
+        label: 'TextAreaLabel label',
       },
     },
   },
   apis: [
     {
-      module: '"TextArea/TextAreaWrapper"',
-      name: 'TextAreaWrapperProps',
-      rename: 'TextAreaWrapper',
+      module: '"TextArea/TextAreaLabel"',
+      name: 'TextAreaLabelProps',
+      rename: 'TextAreaLabel',
     },
     {
       module: '"TextArea/TextArea"',

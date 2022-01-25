@@ -3,16 +3,15 @@ import {
   Icons,
   Input,
   InputProps,
-  InputWrapper,
-  InputWrapperProps,
-  InputAddon,
+  InputLabel,
+  InputLabelProps,
   InputAddonProps,
 } from 'preshape';
 import { CatalogueItem } from '.';
 import Showcase from '../Showcase';
 
 const Item: CatalogueItem<{
-  InputWrapper: InputWrapperProps;
+  InputLabel: InputLabelProps;
   Input: InputProps;
   InputAddon: InputAddonProps;
 }> = {
@@ -23,17 +22,16 @@ const Item: CatalogueItem<{
   showcase: {
     Component: (props) => (
       <Showcase>
-        <InputWrapper {...props.InputWrapper}>
-          <Input {...props.Input} placeholder="Email address" />
-          <InputAddon {...props.InputAddon}>
-            <Icons.Mail name="Letter" size="20px" />
-          </InputAddon>
-        </InputWrapper>
+        <InputLabel {...props.InputLabel}>
+          <Input {...props.Input}
+            addonStart={ <Icons.Mail name="Letter" size="20px" /> }
+            placeholder="Email address" />
+        </InputLabel>
       </Showcase>
     ),
     state: {
       Input: {},
-      InputWrapper: {
+      InputLabel: {
         label: 'Input label',
       },
       InputAddon: {},
@@ -41,9 +39,9 @@ const Item: CatalogueItem<{
   },
   apis: [
     {
-      module: '"Input/InputWrapper"',
-      name: 'InputWrapperProps',
-      rename: 'InputWrapper',
+      module: '"Input/InputLabel"',
+      name: 'InputLabelProps',
+      rename: 'InputLabel',
     },
     {
       module: '"Input/Input"',
