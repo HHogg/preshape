@@ -1,3 +1,32 @@
+## [11.0.0](https://github.com/HHogg/preshape/compare/v10.6.1...v11.0.0) (2022-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Input:** Changed the Range, TextArea and InputWrapper, Input and InputAddon API.
+
+From
+
+```tsx
+<InputWrapper label="">
+  <InputAddon />
+  <Input />
+  <InoutAddon />
+</InputWrapper>
+```
+
+to
+
+```tsx
+<InputLabel label="">
+  <Input addonStart={ } addonEnd={ } />
+</InputLabel>
+```
+
+### Features
+
+* **Input:** Changed the API of InputWrapper, Input and InputAddon. ([88387c2](https://github.com/HHogg/preshape/commit/88387c25041c42cd9a13c7778e3240a0f7755960))
+
 ### [10.6.1](https://github.com/HHogg/preshape/compare/v10.6.0...v10.6.1) (2022-01-13)
 
 
