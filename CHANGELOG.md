@@ -1,3 +1,10 @@
+## [11.1.0](https://github.com/HHogg/preshape/compare/v11.0.0...v11.1.0) (2022-02-16)
+
+
+### Features
+
+* **useResizeoBserver:** Adjusted to return the entire DOMRect ([91ad087](https://github.com/HHogg/preshape/commit/91ad0875e06723e8fc1b159a56ddd3f692522a2b))
+
 ## [11.0.0](https://github.com/HHogg/preshape/compare/v10.6.1...v11.0.0) (2022-01-25)
 
 
