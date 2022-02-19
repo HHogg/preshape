@@ -16,10 +16,13 @@ import './Modal.css';
 
 type ModalSize = 'x1' | 'x2' | 'x3';
 
-const ModalPaddings: Record<ModalSize, {
-  horizontal: TypeSize;
-  vertical: TypeSize;
-}> = {
+const ModalPaddings: Record<
+  ModalSize,
+  {
+    horizontal: TypeSize;
+    vertical: TypeSize;
+  }
+> = {
   x1: {
     horizontal: 'x8',
     vertical: 'x4',
@@ -88,6 +91,11 @@ export interface ModalProps extends BoxProps {
    */
   size?: ModalSize;
   /**
+   * Unrenders the modal when not visible
+   * @defaults true
+   */
+  unrender?: boolean;
+  /**
    * The visible state of the modal. When the visibility
    * is set to false, the content will be removed from the
    * DOM.
@@ -110,6 +118,7 @@ const Modal: RefForwardingComponent<
     margin,
     overlayBackgroundColor = 'overlay',
     size = 'x2',
+    unrender = true,
     visible,
     ...rest
   } = props;
@@ -123,10 +132,8 @@ const Modal: RefForwardingComponent<
     [`Modal--size-${size}`]: size,
   });
 
-  const {
-    horizontal: paddingHorizontal,
-    vertical: paddingVertical,
-  } = ModalPaddings[size];
+  const { horizontal: paddingHorizontal, vertical: paddingVertical } =
+    ModalPaddings[size];
 
   useEffect(() => {
     if (visible) {
@@ -141,11 +148,20 @@ const Modal: RefForwardingComponent<
     };
   }, [visible]);
 
-  const handleOnAnimateComplete = () => {
-    if (!visible) {
+  useEffect(() => {
+    if (!visible && unrender) {
       setRender(false);
-      onCloseAnimationComplete?.();
+    } else {
+      setRender(true);
     }
+  }, [visible, unrender]);
+
+  const handleOnAnimateComplete = () => {
+    if (!visible && unrender) {
+      setRender(false);
+    }
+
+    onCloseAnimationComplete?.();
   };
 
   if (!render) {
@@ -153,7 +169,9 @@ const Modal: RefForwardingComponent<
   }
 
   return createPortal(
-    <ModalContext.Provider value={{ onClose, paddingHorizontal, paddingVertical }}>
+    <ModalContext.Provider
+      value={{ onClose, paddingHorizontal, paddingVertical }}
+    >
       <Box
         {...rest}
         alignChildren="middle"
@@ -174,7 +192,7 @@ const Modal: RefForwardingComponent<
         <Appear
           animation={animation}
           backgroundColor={backgroundColor}
-          borderRadius={ isGreaterThanMaxWidth ? 'x3' : undefined  }
+          borderRadius={isGreaterThanMaxWidth ? 'x3' : undefined}
           className={classes}
           container
           flex="vertical"
