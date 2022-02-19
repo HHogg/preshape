@@ -1,7 +1,3 @@
-.InputLabel {
-  display: block;
-}
-
 .Input {
   width: 100%;
   transition-property: background-color, border-color;

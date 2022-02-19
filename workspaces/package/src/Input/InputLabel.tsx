@@ -1,7 +1,4 @@
-import React, {
-  forwardRef,
-  RefForwardingComponent,
-} from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
 
@@ -33,12 +30,7 @@ const InputLabel: RefForwardingComponent<
   }
 
   return (
-    <Box
-      {...rest}
-      className="InputLabel"
-      ref={ ref }
-      tag="label"
-    >
+    <Box {...rest} className="InputLabel" flex="vertical" ref={ref} tag="label">
       {label && (
         <Text
           ellipsis
@@ -51,17 +43,15 @@ const InputLabel: RefForwardingComponent<
         </Text>
       )}
 
-      { children && (
-        <Box
-          margin="x2"
-        >
+      {children && (
+        <Box flex="vertical" grow margin="x2">
           {children}
         </Box>
       )}
 
       {description && (
         <Text
-        margin="x2"
+          margin="x2"
           paddingHorizontal={paddingHorizontal}
           size="x2"
           strong
