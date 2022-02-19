@@ -34,19 +34,19 @@
   right: 100%;
   transform:
     translateX(calc(50% - var(--Placement-arrow-size) * -1))
-    rotate(45deg);
+    rotate(135deg);
 }
 
 .Placement--bottom .Placement__arrow {
   bottom: 100%;
   transform:
     translateY(calc(50% - var(--Placement-arrow-size) * -1))
-    rotate(45deg);
+    rotate(-135deg);
 }
 
 .Placement--left .Placement__arrow {
   left: 100%;
   transform:
     translateX(calc(-50% + var(--Placement-arrow-size) * -1))
-    rotate(45deg);
+    rotate(-45deg);
 }
