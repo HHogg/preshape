@@ -160,9 +160,11 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
     return null;
   }
 
-  const handleExited = () => {
+  const handleAnimationChange = (scheduleUpdate: () => void) => () => {
     if (unrender && !visible) {
       setRender(false);
+    } else {
+      scheduleUpdate();
     }
   };
 
@@ -172,7 +174,7 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
       innerRef={(el) => (ref.current = el || null)}
       placement={placement}
     >
-      {({ arrowProps, placement, ref, style: stylePopper }) => (
+      {({ arrowProps, placement, ref, scheduleUpdate, style: stylePopper }) => (
         <PlacementArrowPropsContext.Provider value={arrowProps}>
           <Box
             {...rest}
@@ -188,7 +190,8 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
             <Appear
               {...getAnimationOrigin(placement)}
               animation={animation}
-              onAnimationComplete={handleExited}
+              onAnimationStart={handleAnimationChange(scheduleUpdate)}
+              onAnimationComplete={handleAnimationChange(scheduleUpdate)}
               visible={visible}
             >
               {children}
