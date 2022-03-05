@@ -1,3 +1,18 @@
+## [11.2.0](https://github.com/HHogg/preshape/compare/v11.1.0...v11.2.0) (2022-03-05)
+
+
+### Features
+
+* **Modal:** Added unrender prop to control the unrender behaviour ([d4a0cce](https://github.com/HHogg/preshape/commit/d4a0cced066a0665e29aa8ba78f34b6551083290))
+
+
+### Fixes
+
+* **Input:** Flex the input content container by default ([4862701](https://github.com/HHogg/preshape/commit/4862701c1b755e47edbba38f6ffb4cdb70ec5628))
+* **Modal:** Make ModalHeader and ModalFooter sticky by default ([7b15674](https://github.com/HHogg/preshape/commit/7b156748732344951d65753645898ddb6588ec9d))
+* **Placement:** Added a secuduled update when the content becomes visible ([225a8e5](https://github.com/HHogg/preshape/commit/225a8e58245ffd719299112bee3aa4270b24f136))
+* **Placement:** Corrected arrow rotation ([e07c420](https://github.com/HHogg/preshape/commit/e07c42085d9b0712d12d6294578b8f002f40920f))
+
 ## [11.1.0](https://github.com/HHogg/preshape/compare/v11.0.0...v11.1.0) (2022-02-16)
 
 
