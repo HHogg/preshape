@@ -5,7 +5,7 @@ import { RootContext, widthSmall } from '../Root';
 import Documentation from '../Documentation/Documentation';
 import landingSections from '../LandingSections';
 import LandingSection from './LandingSection';
-import Logo from '../Logo/Logo';
+import { PictogramP } from '../SVGs';
 
 const Landing = () => {
   const { onChangeTheme, theme } = useContext(RootContext);
@@ -25,7 +25,7 @@ const Landing = () => {
           <Box maxWidth={widthSmall}>
             <Box alignChildrenHorizontal="middle" flex="vertical" gap="x4">
               <Box shrink>
-                <Logo height="96px" width="96px" />
+                <PictogramP height="96px" width="96px" />
               </Box>
 
               <Box shrink>

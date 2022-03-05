@@ -21,7 +21,7 @@ export const snippets: Record<TypeEditorLanguage, string> = {
   json: require('bundle-text:./snippets/json.txt'),
   jsx: require('bundle-text:./snippets/jsx.txt'),
   markdown: require('bundle-text:../../../../../../README.md'),
-  svg: require('bundle-text:../../../assets/svgs/P-day.svg'),
+  svg: require('bundle-text:../../../assets/svgs/pictogram-p.svg'),
   tsx: require('bundle-text:./snippets/tsx.txt'),
   typescript: require('bundle-text:./snippets/ts.txt'),
 };
