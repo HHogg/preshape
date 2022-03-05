@@ -1,3 +1,15 @@
+.Modal__header {
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+}
+
 .Modal__body-open {
   overflow: hidden;
+}
+
+.Modal__footer {
+  position: sticky;
+  bottom: 0;
+  background-color: inherit;
 }
