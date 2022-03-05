@@ -10,14 +10,14 @@ export interface InputProps extends TextProps {
    * Addon that appears before the Input
    */
   addonEnd?: JSX.Element;
-   /**
+  /**
    * Addon that appears after the Input
    */
   addonStart?: JSX.Element;
   /**
    * Sets styling to indicate the input is invalid.
    */
-  invalid?: boolean
+  invalid?: boolean;
 }
 
 // TODO(hhogg): Find out how to just grab the keys of the BoxProps type.
@@ -29,6 +29,7 @@ const forwardKeys: (keyof BoxProps)[] = [
   'borderTop',
   'elevate',
   'height',
+  'margin',
   'maxHeight',
   'maxWidth',
   'minHeight',
@@ -57,33 +58,37 @@ const Input: RefForwardingComponent<
     ...rest
   } = props;
 
-  const [propsMatching, propsUnmatching] = useMatchingProps<InputProps, BoxProps>(rest, forwardKeys);
+  const [propsMatching, propsUnmatching] = useMatchingProps<
+    InputProps,
+    BoxProps
+  >(rest, forwardKeys);
   return (
-    <InputWrapper { ...propsMatching }
-        addonEnd={ addonEnd }
-        addonStart={ addonStart }
-        alignChildrenVertical="middle"
-        backgroundColor="background-shade-1"
-        borderRadius={ borderRadius }
-        borderSize={ borderSize }
-        disabled={ disabled }
-        invalid={ invalid }
-        flex="horizontal"
-        gap={ gap }
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }
-      >
-        <Text
-          {...propsUnmatching}
-          basis="0"
-          className="Input__element"
-          disabled={ disabled }
-          grow
-          ref={ref}
-          size={ size }
-          strong
-          tag={ tag }
-        />
+    <InputWrapper
+      {...propsMatching}
+      addonEnd={addonEnd}
+      addonStart={addonStart}
+      alignChildrenVertical="middle"
+      backgroundColor="background-shade-1"
+      borderRadius={borderRadius}
+      borderSize={borderSize}
+      disabled={disabled}
+      invalid={invalid}
+      flex="horizontal"
+      gap={gap}
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+    >
+      <Text
+        {...propsUnmatching}
+        basis="0"
+        className="Input__element"
+        disabled={disabled}
+        grow
+        ref={ref}
+        size={size}
+        strong
+        tag={tag}
+      />
     </InputWrapper>
   );
 };
