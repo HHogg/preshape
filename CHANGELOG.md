@@ -1,3 +1,11 @@
+### [11.2.1](https://github.com/HHogg/preshape/compare/v11.2.0...v11.2.1) (2022-03-05)
+
+
+### Fixes
+
+* **Input:** Handle forwared margin prop ([bcac458](https://github.com/HHogg/preshape/commit/bcac458a084fc51a561e62eb50b2f7a6249531dd))
+* **InputLabel:** Spacing ([949c652](https://github.com/HHogg/preshape/commit/949c652c1f564fbcefeb82a49b4147b65c16a3fc))
+
 ## [11.2.0](https://github.com/HHogg/preshape/compare/v11.1.0...v11.2.0) (2022-03-05)
 
 
