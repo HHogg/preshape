@@ -30,28 +30,28 @@ const InputLabel: RefForwardingComponent<
   }
 
   return (
-    <Box {...rest} className="InputLabel" flex="vertical" ref={ref} tag="label">
+    <Box
+      {...rest}
+      className="InputLabel"
+      flex="vertical"
+      gap="x2"
+      ref={ref}
+      tag="label"
+    >
       {label && (
-        <Text
-          ellipsis
-          paddingHorizontal={paddingHorizontal}
-          margin="x2"
-          size="x2"
-          strong
-        >
+        <Text ellipsis paddingHorizontal={paddingHorizontal} size="x2" strong>
           {label}
         </Text>
       )}
 
       {children && (
-        <Box flex="vertical" grow margin="x2">
+        <Box flex="vertical" grow>
           {children}
         </Box>
       )}
 
       {description && (
         <Text
-          margin="x2"
           paddingHorizontal={paddingHorizontal}
           size="x2"
           strong
