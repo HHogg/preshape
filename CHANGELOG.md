@@ -1,3 +1,10 @@
+## [11.3.0](https://github.com/HHogg/preshape/compare/v11.2.1...v11.3.0) (2022-03-06)
+
+
+### Features
+
+* **Box:** Added gapHorizontal and gapVertical props ([fcdd70c](https://github.com/HHogg/preshape/commit/fcdd70ced2dcd199d4c89ab48e7ecf971026f050))
+
 ### [11.2.1](https://github.com/HHogg/preshape/compare/v11.2.0...v11.2.1) (2022-03-05)
 
 
