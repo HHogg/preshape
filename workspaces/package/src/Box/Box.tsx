@@ -131,6 +131,10 @@ export interface BoxProps {
   flex?: 'horizontal' | 'vertical';
   /** Spacing applied between child flex items, values are global spacing variables. */
   gap?: TypeSize;
+  /** Sets the horizontal distance between items to a multiple value. E.g. 'x1'. */
+  gapHorizontal?: TypeSize;
+  /** Sets the horizontal distance between items to a multiple value. E.g. 'x1'. */
+  gapVertical?: TypeSize;
   /** Flex item property if it should grow with available space. */
   grow?: boolean | string;
   /** Fixed height applied through inline styling */
@@ -224,6 +228,8 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
     fixed,
     flex,
     gap,
+    gapHorizontal = gap,
+    gapVertical = gap,
     grow,
     height,
     maxHeight,
@@ -288,7 +294,8 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
         alignChildrenHorizontal,
       [`Box--flex-align-self-${alignSelf}`]: alignSelf,
       [`Box--flex-align-vert-${alignChildrenVertical}`]: alignChildrenVertical,
-      [`Box--flex-gap-${gap}`]: gap,
+      [`Box--flex-gap-horizontal-${gapHorizontal}`]: gapHorizontal,
+      [`Box--flex-gap-vertical-${gapVertical}`]: gapVertical,
       [`Box--margin-${margin}`]: margin,
       [`Box--padding-top-${paddingTop}`]: paddingTop,
       [`Box--padding-bottom-${paddingBottom}`]: paddingBottom,
