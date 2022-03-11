@@ -1,7 +1,6 @@
 import classnames from 'classnames';
 import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
-import './Input.css';
 
 export interface InputWrapperProps extends BoxProps {
   /**
