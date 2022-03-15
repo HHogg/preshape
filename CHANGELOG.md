@@ -1,3 +1,11 @@
+## [11.4.0](https://github.com/HHogg/preshape/compare/v11.3.0...v11.4.0) (2022-03-15)
+
+
+### Features
+
+* **Box:** Added paddingHorizontal offset prop ([c2aafa1](https://github.com/HHogg/preshape/commit/c2aafa15252b63b444da6de1c4b0b5d76c02cb25))
+* **Modal:** Added ModalPaddingOffset component ([b276d19](https://github.com/HHogg/preshape/commit/b276d195d703b15d1991dfe7c3eb0dbfed2e8da9))
+
 ## [11.3.0](https://github.com/HHogg/preshape/compare/v11.2.1...v11.3.0) (2022-03-06)
 
 
