@@ -64,6 +64,26 @@
 .Box--padding-left-x12 { padding-left: var(--size--x12); }
 .Box--padding-left-x16 { padding-left: var(--size--x16); }
 
+.Box--padding-offset-right-x1 { margin-right: calc(var(--size--x1) * -1); }
+.Box--padding-offset-right-x2 { margin-right: calc(var(--size--x2) * -1); }
+.Box--padding-offset-right-x3 { margin-right: calc(var(--size--x3) * -1); }
+.Box--padding-offset-right-x4 { margin-right: calc(var(--size--x4) * -1); }
+.Box--padding-offset-right-x6 { margin-right: calc(var(--size--x6) * -1); }
+.Box--padding-offset-right-x8 { margin-right: calc(var(--size--x8) * -1); }
+.Box--padding-offset-right-x10 { margin-right: calc(var(--size--x10) * -1); }
+.Box--padding-offset-right-x12 { margin-right: calc(var(--size--x12) * -1); }
+.Box--padding-offset-right-x16 { margin-right: calc(var(--size--x16) * -1); }
+
+.Box--padding-offset-left-x1 { margin-left: calc(var(--size--x1) * -1); }
+.Box--padding-offset-left-x2 { margin-left: calc(var(--size--x2) * -1); }
+.Box--padding-offset-left-x3 { margin-left: calc(var(--size--x3) * -1); }
+.Box--padding-offset-left-x4 { margin-left: calc(var(--size--x4) * -1); }
+.Box--padding-offset-left-x6 { margin-left: calc(var(--size--x6) * -1); }
+.Box--padding-offset-left-x8 { margin-left: calc(var(--size--x8) * -1); }
+.Box--padding-offset-left-x10 { margin-left: calc(var(--size--x10) * -1); }
+.Box--padding-offset-left-x12 { margin-left: calc(var(--size--x12) * -1); }
+.Box--padding-offset-left-x16 { margin-left: calc(var(--size--x16) * -1); }
+
 .Box--border-radius-x1 { border-radius: var(--border-radius-size--x1); }
 .Box--border-radius-x2 { border-radius: var(--border-radius-size--x2); }
 .Box--border-radius-x3 { border-radius: var(--border-radius-size--x3); }

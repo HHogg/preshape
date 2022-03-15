@@ -165,6 +165,12 @@ export interface BoxProps {
   paddingBottom?: TypeSize;
   /** Left padding applied for the global spacing variables */
   paddingLeft?: TypeSize;
+  /** Offset horizontal padding with a negative margin, applied for the global spacing variables */
+  paddingOffsetHorizontal?: TypeSize;
+  /** Offset right padding with a negative margin, applied for the global spacing variables */
+  paddingOffsetLeft?: TypeSize;
+  /** Offset right padding with a negative margin, applied for the global spacing variables */
+  paddingOffsetRight?: TypeSize;
   /** Reverses the flex direction */
   reverse?: boolean;
   /** Flex item property if it should shrink. */
@@ -244,6 +250,9 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
     paddingBottom = paddingVertical,
     paddingRight = paddingHorizontal,
     paddingLeft = paddingHorizontal,
+    paddingOffsetHorizontal,
+    paddingOffsetRight = paddingOffsetHorizontal,
+    paddingOffsetLeft = paddingOffsetHorizontal,
     margin,
     reverse,
     shrink,
@@ -301,6 +310,8 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
       [`Box--padding-bottom-${paddingBottom}`]: paddingBottom,
       [`Box--padding-right-${paddingRight}`]: paddingRight,
       [`Box--padding-left-${paddingLeft}`]: paddingLeft,
+      [`Box--padding-offset-right-${paddingOffsetRight}`]: paddingOffsetRight,
+      [`Box--padding-offset-left-${paddingOffsetLeft}`]: paddingOffsetLeft,
       [`Box--text-color-${textColor}`]: textColor,
       [`Box--transition-${transitionDuration}`]: transitionProperty,
       [`Theme--${theme}`]: theme,
