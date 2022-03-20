@@ -1,4 +1,9 @@
-import React, { forwardRef, RefForwardingComponent, useContext } from 'react';
+import React, {
+  forwardRef,
+  RefForwardingComponent,
+  PointerEvent,
+  useContext,
+} from 'react';
 import { ModalContext } from './Modal';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import * as Icons from '../Icon';
@@ -23,12 +28,18 @@ const ModalHeader: RefForwardingComponent<
   Attributes<HTMLDivElement, ModalHeaderProps>
 > = (props, ref) => {
   const { children, closeIconSize = '24px', ...rest } = props;
-  const { onClose, paddingHorizontal, paddingVertical } = useContext(ModalContext);
+  const { onClose, paddingHorizontal, paddingVertical } =
+    useContext(ModalContext);
+
+  const handleCloseClick = (event: PointerEvent<HTMLAnchorElement>) => {
+    event.stopPropagation();
+    onClose?.(event);
+  };
 
   return (
     <Box
-      paddingHorizontal={ paddingHorizontal }
-      paddingVertical={ paddingVertical }
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
       {...rest}
       alignChildrenVertical="start"
       borderBottom
@@ -45,7 +56,7 @@ const ModalHeader: RefForwardingComponent<
 
       {onClose && (
         <Box>
-          <Link onPointerUp={onClose}>
+          <Link onPointerUp={handleCloseClick}>
             <Icons.X size={closeIconSize} />
           </Link>
         </Box>
