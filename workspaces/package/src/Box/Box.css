@@ -24,6 +24,7 @@
 .Box--margin-x12 { margin: var(--size--x12) 0; }
 .Box--margin-x16 { margin: var(--size--x16) 0; }
 
+.Box--padding-top-x0 { padding-top: 0; }
 .Box--padding-top-x1 { padding-top: var(--size--x1); }
 .Box--padding-top-x2 { padding-top: var(--size--x2); }
 .Box--padding-top-x3 { padding-top: var(--size--x3); }
@@ -34,6 +35,7 @@
 .Box--padding-top-x12 { padding-top: var(--size--x12); }
 .Box--padding-top-x16 { padding-top: var(--size--x16); }
 
+.Box--padding-right-x0 { padding-right: 0; }
 .Box--padding-right-x1 { padding-right: var(--size--x1); }
 .Box--padding-right-x2 { padding-right: var(--size--x2); }
 .Box--padding-right-x3 { padding-right: var(--size--x3); }
@@ -44,6 +46,7 @@
 .Box--padding-right-x12 { padding-right: var(--size--x12); }
 .Box--padding-right-x16 { padding-right: var(--size--x16); }
 
+.Box--padding-bottom-x0 { padding-bottom: 0; }
 .Box--padding-bottom-x1 { padding-bottom: var(--size--x1); }
 .Box--padding-bottom-x2 { padding-bottom: var(--size--x2); }
 .Box--padding-bottom-x3 { padding-bottom: var(--size--x3); }
@@ -54,6 +57,7 @@
 .Box--padding-bottom-x12 { padding-bottom: var(--size--x12); }
 .Box--padding-bottom-x16 { padding-bottom: var(--size--x16); }
 
+.Box--padding-left-x0 { padding-left: 0; }
 .Box--padding-left-x1 { padding-left: var(--size--x1); }
 .Box--padding-left-x2 { padding-left: var(--size--x2); }
 .Box--padding-left-x3 { padding-left: var(--size--x3); }
