@@ -11,7 +11,7 @@ module.exports = {
 import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 
-const Icon: RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGElement, 'display'>, BoxProps & { size?: string }>> = (props, ref) => {
+const Icon: RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGElement, 'display'>, BoxProps & { size?: string | number }>> = (props, ref) => {
   const { size = '1rem', ...rest } = props;
 
   return (

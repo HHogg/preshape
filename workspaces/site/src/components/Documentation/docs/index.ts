@@ -37,6 +37,7 @@ const docs: { [key: string]: CatalogueItem } = {
   Table: require('./Table').default,
   Text: require('./Text').default,
   Textarea: require('./TextArea').default,
+  Toggle: require('./Toggle').default,
 };
 
 export default docs;

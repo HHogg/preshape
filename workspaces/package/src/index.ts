@@ -110,4 +110,5 @@ export {
   default as ThemeSwitcher,
   ThemeSwitcherProps,
 } from './ThemeSwitcher/ThemeSwitcher';
+export { default as Toggle, ToggleProps } from './Toggle/Toggle';
 export { default as Tooltip, TooltipProps } from './Tooltip/Tooltip';

@@ -1,0 +1,14 @@
+.Toggle {
+  padding: var(--border-size--x2);
+  border-radius: var(--size--x16);
+  border-color: var(--color-text--shade-1);
+  transition-property: border-color;
+  transition-duration: var(--transition-duration--fast);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.Toggle__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
