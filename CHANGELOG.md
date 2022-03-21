@@ -1,3 +1,17 @@
+## [11.5.0](https://github.com/HHogg/preshape/compare/v11.4.0...v11.5.0) (2022-03-21)
+
+
+### Features
+
+* **Toggle:** Added Toggle component ([ab33e2e](https://github.com/HHogg/preshape/commit/ab33e2e67c35ce6b6abccb7cd821b1222eb41844))
+
+
+### Fixes
+
+* **Box:** Added padding x0 style for explicitly removing padding ([fa3dc4a](https://github.com/HHogg/preshape/commit/fa3dc4a310acffdee4e3bac6350beb6833af3630))
+* **Button:** Styling on iOS for non Button elements ([ff8c251](https://github.com/HHogg/preshape/commit/ff8c251ce737e57371f1da8e8e1f1c6e984968ff))
+* **Modal:** Event propagation on close icon ([6f9a74f](https://github.com/HHogg/preshape/commit/6f9a74f6a1dbbc20d4103ca53ecd12ca9c53d9ba))
+
 ## [11.4.0](https://github.com/HHogg/preshape/compare/v11.3.0...v11.4.0) (2022-03-15)
 
 
