@@ -6,6 +6,7 @@
   "author": "Harry Hogg <harry@hogg.io>",
   "license": "MIT",
   "source": "src",
+  "sideEffects": false,
   "main": "lib/cjs/index.js",
   "esnext": "lib/esn/index.js",
   "typings": "lib/cjs/index.d.ts",
