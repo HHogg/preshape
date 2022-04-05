@@ -3,7 +3,7 @@ import { Icons } from '..';
 import { Attributes, TypeTheme } from '../Box/Box';
 import Toggle, { ToggleProps } from '../Toggle/Toggle';
 
-export type ThemeSwitcherProps = Omit<ToggleProps, 'onChange'> & {
+export type ThemeSwitcherProps = Omit<ToggleProps, 'onChange' | 'value'> & {
   size?: number;
   onChange: (theme: TypeTheme) => void;
   theme: TypeTheme;
