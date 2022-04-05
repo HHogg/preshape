@@ -100,6 +100,12 @@ export interface PlacementProps
   placement?: 'bottom' | 'left' | 'right' | 'top';
   /** Flag that enables the unredering of the content when not visible. */
   unrender?: boolean;
+  /**
+   * The width of the Placement element. This can be a standard
+   * CSS value or a keyword of 'reference', which will apply the width
+   * of the reference element.
+   */
+  width?: 'reference' | number | string;
   /** Flag that toggles the visible of the placed content. */
   visible?: boolean;
 }
@@ -115,6 +121,7 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
     unrender,
     style,
     visible: visibleControlled = true,
+    width,
     ...rest
   } = props;
 
@@ -130,6 +137,8 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
     minWidth === 'reference' && referenceNode
       ? referenceNode.clientWidth
       : minWidth;
+  const placementWidth =
+    width === 'reference' && referenceNode ? referenceNode.clientWidth : width;
 
   const [render, setRender] = useState(unrender ? visible : true);
   const ref = useRef<HTMLElement | null>();
@@ -186,6 +195,7 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
               ...style,
               pointerEvents: visible ? undefined : 'none',
             }}
+            width={placementWidth}
           >
             <Appear
               {...getAnimationOrigin(placement)}
