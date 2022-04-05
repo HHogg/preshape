@@ -1,3 +1,14 @@
+### [11.5.1](https://github.com/HHogg/preshape/compare/v11.5.0...v11.5.1) (2022-04-05)
+
+
+### Fixes
+
+* **Button:** Always whit etext on coloured buttons ([05c690e](https://github.com/HHogg/preshape/commit/05c690e07db2309445c74901bae96abace49cc72))
+* **Input:** Moved ref to containing div ([921d999](https://github.com/HHogg/preshape/commit/921d999de5aa5faef6b94c6416247b8a584f9758))
+* **Input:** Removed duplicated CSS import ([129f7dd](https://github.com/HHogg/preshape/commit/129f7ddf1456849ed00b5f7b24039f0111934a20))
+* **Placement:** Added fixed width prop to Placement element ([5009b2d](https://github.com/HHogg/preshape/commit/5009b2dd70423561cffad3474b8f6623ffa44662))
+* **Table:** Typo in transition property ([d1c01e5](https://github.com/HHogg/preshape/commit/d1c01e58c5f2ad1b10c61fd3eb664f6edb940dab))
+
 ## [11.5.0](https://github.com/HHogg/preshape/compare/v11.4.0...v11.5.0) (2022-03-21)
 
 
