@@ -40,7 +40,7 @@ const forwardKeys: (keyof BoxProps)[] = [
 ];
 
 const Input: RefForwardingComponent<
-  HTMLInputElement | HTMLTextAreaElement,
+  HTMLDivElement,
   Attributes<HTMLInputElement | HTMLTextAreaElement, InputProps>
 > = (props, ref) => {
   const {
@@ -77,6 +77,7 @@ const Input: RefForwardingComponent<
       gap={gap}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
+      ref={ref}
     >
       <Text
         {...propsUnmatching}
@@ -84,7 +85,6 @@ const Input: RefForwardingComponent<
         className="Input__element"
         disabled={disabled}
         grow
-        ref={ref}
         size={size}
         strong
         tag={tag}
