@@ -5,7 +5,7 @@
 }
 
 .Table__row {
-  transition-property: background-color. color;
+  transition-property: background-color, color;
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
 }
