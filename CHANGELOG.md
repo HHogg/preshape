@@ -1,3 +1,10 @@
+### [11.5.2](https://github.com/HHogg/preshape/compare/v11.5.1...v11.5.2) (2022-04-16)
+
+
+### Fixes
+
+* **Placement:** Allow controlled visibility to be overridden ([c42b8fd](https://github.com/HHogg/preshape/commit/c42b8fd0c36b2bf8f497f373dbc20d12dd01ebb9))
+
 ### [11.5.1](https://github.com/HHogg/preshape/compare/v11.5.0...v11.5.1) (2022-04-05)
 
 
