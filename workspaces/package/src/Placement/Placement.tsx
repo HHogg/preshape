@@ -120,7 +120,7 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
     placement,
     unrender,
     style,
-    visible: visibleControlled = true,
+    visible: visibleControlled,
     width,
     ...rest
   } = props;
@@ -132,11 +132,13 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
   } = useContext(PlacementManagerContext);
 
   const visible =
-    visibleUncontrolled === undefined ? visibleControlled : visibleUncontrolled;
+    visibleControlled === undefined ? visibleUncontrolled : visibleControlled;
+
   const placementMinWidth =
     minWidth === 'reference' && referenceNode
       ? referenceNode.clientWidth
       : minWidth;
+
   const placementWidth =
     width === 'reference' && referenceNode ? referenceNode.clientWidth : width;
 
