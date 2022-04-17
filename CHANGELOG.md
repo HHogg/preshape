@@ -1,3 +1,10 @@
+### [11.5.3](https://github.com/HHogg/preshape/compare/v11.5.2...v11.5.3) (2022-04-17)
+
+
+### Fixes
+
+* **ThemeSwitcher:** Typings ([c89a17b](https://github.com/HHogg/preshape/commit/c89a17b7f40d0ef17aef47e5fd053381a7720877))
+
 ### [11.5.2](https://github.com/HHogg/preshape/compare/v11.5.1...v11.5.2) (2022-04-16)
 
 
