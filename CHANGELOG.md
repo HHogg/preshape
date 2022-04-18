@@ -1,3 +1,10 @@
+### [11.5.4](https://github.com/HHogg/preshape/compare/v11.5.3...v11.5.4) (2022-04-18)
+
+
+### Fixes
+
+* **Tooltip:** Allow some styling to be customised ([fd7846a](https://github.com/HHogg/preshape/commit/fd7846a3a3ccf3f9983cba3aea23f7e824fa4197))
+
 ### [11.5.3](https://github.com/HHogg/preshape/compare/v11.5.2...v11.5.3) (2022-04-17)
 
 
