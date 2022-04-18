@@ -9,7 +9,7 @@ import PlacementManager, {
 import PlacementReference, {
   PlacementReferenceChildren,
 } from '../Placement/PlacementReference';
-import Text from '../Text/Text';
+import Text, { TextProps } from '../Text/Text';
 
 export interface TooltipProps extends PlacementProps {
   /**
@@ -22,7 +22,14 @@ export interface TooltipProps extends PlacementProps {
    * The content to be displayed in the tooltip.
    */
   content: string;
-
+  /**
+   *
+   */
+  size: TextProps['size'];
+  /**
+   *
+   */
+  strong: TextProps['strong'];
   /**
    * The visibility trigger type.
    */
@@ -33,23 +40,33 @@ const Tooltip: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, TooltipProps>
 > = (props, ref) => {
-  const { children, content, trigger = 'hover', ...rest } = props;
+  const {
+    backgroundColor = 'text-shade-1',
+    children,
+    content,
+    paddingHorizontal = 'x3',
+    paddingVertical = 'x2',
+    size = 'x3',
+    textColor = 'background-shade-1',
+    trigger = 'hover',
+    ...rest
+  } = props;
 
   return (
     <PlacementManager trigger={trigger}>
       <PlacementReference>{children}</PlacementReference>
 
       <Placement {...rest}>
-        <PlacementArrow backgroundColor="text-shade-1" />
+        <PlacementArrow backgroundColor={backgroundColor} />
         <PlacementContent
-          backgroundColor="text-shade-1"
+          backgroundColor={backgroundColor}
           borderRadius="x1"
-          paddingHorizontal="x3"
-          paddingVertical="x2"
+          paddingHorizontal={paddingHorizontal}
+          paddingVertical={paddingVertical}
           ref={ref}
-          textColor="background-shade-1"
+          textColor={textColor}
         >
-          <Text align="middle" size="x3" strong>
+          <Text align="middle" size={size} strong>
             {content}
           </Text>
         </PlacementContent>
