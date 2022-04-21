@@ -135,67 +135,55 @@
 .Box--transition-base { transition-duration: var(--transition-duration--base); }
 .Box--transition-slow { transition-duration: var(--transition-duration--slow); }
 
-.Box--absolute-center,
-.Box--absolute-edge-to-edge,
-.Box--absolute-top,
-.Box--absolute-top-left,
-.Box--absolute-top-right,
-.Box--absolute-bottom,
-.Box--absolute-bottom-left,
-.Box--absolute-bottom-right {
+.Box--position-absolute {
   position: absolute;
 }
 
-.Box--fixed-center,
-.Box--fixed-edge-to-edge,
-.Box--fixed-top,
-.Box--fixed-top-left,
-.Box--fixed-top-right,
-.Box--fixed-bottom,
-.Box--fixed-bottom-left,
-.Box--fixed-bottom-right {
+.Box--position-fixed {
   position: fixed;
 }
 
-.Box--absolute-edge-to-edge,
-.Box--fixed-edge-to-edge {
+.Box--position-edge-to-edge {
   width: 100%;
   height: 100%;
 }
 
-.Box--absolute-edge-to-edge,
-.Box--absolute-top,
-.Box--absolute-top-left,
-.Box--absolute-top-right,
-.Box--fixed-edge-to-edge,
-.Box--fixed-top,
-.Box--fixed-top-left,
-.Box--fixed-top-right { top: 0; }
+.Box--position-edge-to-edge,
+.Box--position-top,
+.Box--position-top-left,
+.Box--position-top-right { top: 0; }
 
-.Box--absolute-bottom,
-.Box--absolute-bottom-left,
-.Box--absolute-bottom-right,
-.Box--fixed-bottom,
-.Box--fixed-bottom-left,
-.Box--fixed-bottom-right { bottom: 0; }
+.Box--position-edge-to-edge,
+.Box--position-bottom,
+.Box--position-bottom-left,
+.Box--position-bottom-right { bottom: 0; }
 
-.Box--absolute-edge-to-edge,
-.Box--absolute-top-left,
-.Box--absolute-bottom-left,
-.Box--fixed-edge-to-edge,
-.Box--fixed-top-left,
-.Box--fixed-bottom-left { left: 0; }
+.Box--position-edge-to-edge,
+.Box--position-left,
+.Box--position-top-left,
+.Box--position-bottom-left { left: 0; }
 
-.Box--absolute-top-right,
-.Box--absolute-bottom-right,
-.Box--fixed-top-right,
-.Box--fixed-bottom-right { right: 0; }
+.Box--position-edge-to-edge,
+.Box--position-right,
+.Box--position-top-right,
+.Box--position-bottom-right { right: 0; }
 
-.Box--absolute-center,
-.Box--fixed-center {
+.Box--position-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.Box--position-left,
+.Box--position-right {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.Box--position-top,
+.Box--position-bottom {
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 /********

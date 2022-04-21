@@ -47,6 +47,18 @@ export type TypeColor =
   | 'text-shade-3'
   | 'text-shade-4';
 
+export type TypePosition =
+  | 'center'
+  | 'edge-to-edge'
+  | 'top-left'
+  | 'top'
+  | 'top-right'
+  | 'right'
+  | 'bottom-right'
+  | 'bottom'
+  | 'bottom-left'
+  | 'left';
+
 export type TypeSize =
   | 'x0'
   | 'x1'
@@ -71,15 +83,7 @@ export type TypeTheme = 'day' | 'night';
  */
 export interface BoxProps {
   /** Quick way of absolutely position to common places */
-  absolute?:
-    | 'center'
-    | 'edge-to-edge'
-    | 'top'
-    | 'top-left'
-    | 'top-right'
-    | 'bottom'
-    | 'bottom-left'
-    | 'bottom-right';
+  absolute?: TypePosition;
   /**
    * Short cut child alignment property for both alignChildrenHorizontal and
    * alignChildrenVertical.
@@ -118,15 +122,7 @@ export interface BoxProps {
   /** Applies a box shadow that gives the appearance of elevation */
   elevate?: 'x1' | 'x2' | 'x3' | boolean;
   /** Quick way of fixed position to common places */
-  fixed?:
-    | 'center'
-    | 'edge-to-edge'
-    | 'top'
-    | 'top-left'
-    | 'top-right'
-    | 'bottom'
-    | 'bottom-left'
-    | 'bottom-right';
+  fixed?: TypePosition;
   /** Flex direction */
   flex?: 'horizontal' | 'vertical';
   /** Spacing applied between child flex items, values are global spacing variables. */
@@ -290,14 +286,15 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
       'Box--flex-reverse': reverse,
       'Box--flex-wrap': wrap,
       'Box--max-width': maxWidth,
-      [`Box--absolute-${absolute}`]: absolute,
       [`Box--background-color-${backgroundColor}`]: backgroundColor,
       [`Box--border-color-${borderColor}`]: borderColor,
       [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
       [`Box--border-size-${borderSize}`]: borderSize,
       [`Box--display-${display}`]: display,
       [`Box--elevate-${elevate}`]: typeof elevate === 'string',
-      [`Box--fixed-${fixed}`]: fixed,
+      [`Box--position-absolute`]: absolute,
+      [`Box--position-fixed`]: fixed,
+      [`Box--position-${fixed || absolute}`]: fixed || absolute,
       [`Box--flex-${flex}`]: flex,
       [`Box--flex-align-horz-${alignChildrenHorizontal}`]:
         alignChildrenHorizontal,
