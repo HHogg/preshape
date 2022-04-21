@@ -1,3 +1,10 @@
+## [11.6.0](https://github.com/HHogg/preshape/compare/v11.5.4...v11.6.0) (2022-04-21)
+
+
+### Features
+
+* **Box:** Added left and right positions ([a709f97](https://github.com/HHogg/preshape/commit/a709f97d6b7457335b1ea51766d5b2ed9d4ad5b8))
+
 ### [11.5.4](https://github.com/HHogg/preshape/compare/v11.5.3...v11.5.4) (2022-04-18)
 
 
