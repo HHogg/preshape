@@ -25,11 +25,11 @@ export interface TooltipProps extends PlacementProps {
   /**
    *
    */
-  size: TextProps['size'];
+  size?: TextProps['size'];
   /**
    *
    */
-  strong: TextProps['strong'];
+  strong?: TextProps['strong'];
   /**
    * The visibility trigger type.
    */
