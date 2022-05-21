@@ -1,10 +1,12 @@
 import React, { forwardRef, ReactNode, RefForwardingComponent } from 'react';
-import { Attributes, TypeSize } from '../Box/Box';
+import { Attributes, TypeBorderSize, TypeSize } from '../Box/Box';
 import RadioButtonIndicator from './RadioButtonIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './RadioButton.css';
 
 export interface RadioButtonProps {
+  /** Controls the border size */
+  borderSize?: TypeBorderSize;
   /** Contents that is rendered next to the indicator */
   children?: ReactNode;
   /** A styled disabled state that disables all interactions */
@@ -24,6 +26,7 @@ const RadioButton: RefForwardingComponent<
   Attributes<HTMLInputElement, RadioButtonProps>
 > = (props, ref) => {
   const {
+    borderSize,
     children,
     disabled,
     margin,
@@ -35,6 +38,7 @@ const RadioButton: RefForwardingComponent<
 
   return (
     <SelectInputLabel
+      borderSize={borderSize}
       className="RadioButton__label"
       disabled={disabled}
       label={children}

@@ -1,10 +1,12 @@
 import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes, TypeSize } from '../Box/Box';
+import { Attributes, TypeBorderSize, TypeSize } from '../Box/Box';
 import CheckBoxIndicator from './CheckBoxIndicator';
 import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';
 
 export interface CheckBoxProps {
+  /** Controls the border size */
+  borderSize?: TypeBorderSize;
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
   /** @Ignore */
@@ -22,6 +24,7 @@ const CheckBox: RefForwardingComponent<
   Attributes<HTMLInputElement, CheckBoxProps>
 > = (props, ref) => {
   const {
+    borderSize,
     children,
     disabled,
     margin,
@@ -33,6 +36,7 @@ const CheckBox: RefForwardingComponent<
 
   return (
     <SelectInputLabel
+      borderSize={borderSize}
       className="CheckBox__label"
       disabled={disabled}
       label={children}

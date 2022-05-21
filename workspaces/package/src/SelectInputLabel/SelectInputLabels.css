@@ -4,7 +4,6 @@
 }
 
 .SelectInputLabels__label {
-  border: var(--border-size--x2) solid var(--color-text--shade-1);
   cursor: pointer;
   transition-property: border-color;
   transition-duration: var(--transition-duration--base);

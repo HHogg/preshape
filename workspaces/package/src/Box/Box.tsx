@@ -14,6 +14,8 @@ import './Box.css';
 export type Attributes<E, P = {}> = P &
   Omit<E extends SVGElement ? SVGAttributes<E> : AllHTMLAttributes<E>, keyof P>;
 
+export type TypeBorderSize = 'x0' | 'x1' | 'x2' | 'x3';
+
 export type TypeColor =
   | 'black'
   | 'white'
@@ -112,7 +114,7 @@ export interface BoxProps {
   /** Adds styling of a border radius to one of the size multiples */
   borderRadius?: 'full' | 'x1' | 'x2' | 'x3' | string | number;
   /** Thickness of the border to be applied */
-  borderSize?: 'x1' | 'x2' | 'x3';
+  borderSize?: TypeBorderSize;
   /** Adds styling to indicate that the element is clickable */
   clickable?: boolean;
   /** Applies relative positioning to contain child elements. */
