@@ -11,7 +11,14 @@ const SelectInputLabel: RefForwardingComponent<
   HTMLLabelElement,
   Attributes<HTMLLabelElement, SelectInputLabelProps>
 > = (props, ref) => {
-  const { borderRadius = 'x2', children, className, label, ...rest } = props;
+  const {
+    borderRadius = 'x2',
+    borderSize = 'x2',
+    children,
+    className,
+    label,
+    ...rest
+  } = props;
 
   const classes = classNames('SelectInputLabels__label', className);
 
@@ -20,6 +27,7 @@ const SelectInputLabel: RefForwardingComponent<
       {...rest}
       alignChildrenVertical="middle"
       backgroundColor="background-shade-1"
+      borderSize={borderSize}
       borderRadius={borderRadius}
       className={classes}
       flex="horizontal"
@@ -30,11 +38,7 @@ const SelectInputLabel: RefForwardingComponent<
       <Box>{children}</Box>
 
       <Box grow minWidth="0" shrink>
-        <Text
-          className="SelectInputLabels__label-text"
-          size="x3"
-          strong
-        >
+        <Text className="SelectInputLabels__label-text" size="x3" strong>
           {label}
         </Text>
       </Box>
