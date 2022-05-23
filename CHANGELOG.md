@@ -1,3 +1,10 @@
+## [11.7.0](https://github.com/HHogg/preshape/compare/v11.6.1...v11.7.0) (2022-05-23)
+
+
+### Features
+
+* **SelectInputLabels:** Expose border size ([#41](https://github.com/HHogg/preshape/issues/41)) ([00b16e3](https://github.com/HHogg/preshape/commit/00b16e3ca91232039a92180d99717c3de9603d7e))
+
 ### [11.6.1](https://github.com/HHogg/preshape/compare/v11.6.0...v11.6.1) (2022-04-22)
 
 
