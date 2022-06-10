@@ -37,7 +37,7 @@
     "eslint-plugin-react": "^7.26.1",
     "firebase-tools": "^9.12.1",
     "prettier": "^2.4.1",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^19.0.3",
     "semantic-release-cli": "^5.4.4",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
