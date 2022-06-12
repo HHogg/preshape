@@ -53,6 +53,7 @@
   --Button-color: var(--color-accent--shade-4);
   --Button-color-active: var(--color-accent--shade-5);
   --Button-color-active-background: var(--color-accent--shade-2);
+  --Button-text-color: var(--color-white);
 }
 
 .Button--positive {
@@ -61,6 +62,7 @@
   --Button-color: var(--color-positive--shade-4);
   --Button-color-active: var(--color-positive--shade-5);
   --Button-color-active-background: var(--color-positive--shade-2);
+  --Button-text-color: var(--color-white);
 }
 
 .Button--negative {
@@ -69,12 +71,13 @@
   --Button-color: var(--color-negative--shade-4);
   --Button-color-active: var(--color-negative--shade-5);
   --Button-color-active-background: var(--color-negative--shade-2);
+  --Button-text-color: var(--color-white);
 }
 
 .Button--primary {
   border-color: var(--Button-color);
   background-color: var(--Button-color);
-  color: var(--color-white);
+  color: var(--Button-text-color, var(--color-background--shade-1));
 
   &:hover:not([disabled]) {
     border-color: var(--Button-color-intent);
