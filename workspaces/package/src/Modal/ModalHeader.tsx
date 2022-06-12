@@ -56,7 +56,7 @@ const ModalHeader: RefForwardingComponent<
 
       {onClose && (
         <Box>
-          <Link onPointerUp={handleCloseClick}>
+          <Link onClick={handleCloseClick}>
             <Icons.X size={closeIconSize} />
           </Link>
         </Box>
