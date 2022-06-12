@@ -1,3 +1,12 @@
+### [11.7.1](https://github.com/HHogg/preshape/compare/v11.7.0...v11.7.1) (2022-06-12)
+
+
+### Fixes
+
+* **Button:** Text color for non-colored primary on dark theme ([51a9bf3](https://github.com/HHogg/preshape/commit/51a9bf3ffeb279a73dc92c1c32015aabf01d956a))
+* **Color:** RGB Black values ([5bcfb2b](https://github.com/HHogg/preshape/commit/5bcfb2bdbf50599354b9266bd09e6912d72c9967))
+* **Modal:** Event propagation on close click ([9c79453](https://github.com/HHogg/preshape/commit/9c7945318a89f8f0049948dbe75c40bd246f7625))
+
 ## [11.7.0](https://github.com/HHogg/preshape/compare/v11.6.1...v11.7.0) (2022-05-23)
 
 
