@@ -115,6 +115,8 @@ export interface BoxProps {
   borderRadius?: 'full' | 'x1' | 'x2' | 'x3' | string | number;
   /** Thickness of the border to be applied */
   borderSize?: TypeBorderSize;
+  /** Applies border style  */
+  borderStyle?: 'solid' | 'dashed';
   /** Adds styling to indicate that the element is clickable */
   clickable?: boolean;
   /** Applies relative positioning to contain child elements. */
@@ -222,6 +224,7 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
     borderRadius,
     borderRight,
     borderSize,
+    borderStyle,
     borderTop,
     children,
     className,
@@ -292,6 +295,7 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
       [`Box--border-color-${borderColor}`]: borderColor,
       [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
       [`Box--border-size-${borderSize}`]: borderSize,
+      [`Box--border-style-${borderStyle}`]: borderStyle,
       [`Box--display-${display}`]: display,
       [`Box--elevate-${elevate}`]: typeof elevate === 'string',
       [`Box--position-absolute`]: absolute,

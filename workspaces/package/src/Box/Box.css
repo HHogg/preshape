@@ -108,6 +108,10 @@
   border-style: solid;
 }
 
+.Box--border-style-dashed {
+  border-style: dashed;
+}
+
 .Box--border:not(.Box--border-top) { border-top-width: 0; }
 .Box--border:not(.Box--border-right) { border-right-width: 0; }
 .Box--border:not(.Box--border-bottom) { border-bottom-width: 0; }
