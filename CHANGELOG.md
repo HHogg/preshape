@@ -1,3 +1,10 @@
+## [11.8.0](https://github.com/HHogg/preshape/compare/v11.7.1...v11.8.0) (2022-06-15)
+
+
+### Features
+
+* **Box:** Added dashed border style prop ([51a50f8](https://github.com/HHogg/preshape/commit/51a50f8d3c14c75bd29b97af06e43d5e90228a32))
+
 ### [11.7.1](https://github.com/HHogg/preshape/compare/v11.7.0...v11.7.1) (2022-06-12)
 
 
