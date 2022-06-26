@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .Button {
   --Button-color-intent: var(--color-accent--shade-3);
   --Button-color-intent-background: var(--color-accent--shade-1);
@@ -127,7 +128,7 @@
   }
 }
 
-.Buttons--joined > .Button {
+.Buttons--joined-horizontal > .Button {
   &:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -145,6 +146,29 @@
 
       & + .Button {
         border-left-width: 0;
+      }
+    }
+  }
+}
+
+.Buttons--joined-vertical > .Button {
+  &:not(:first-child) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &:not(:last-child) {
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &.Button--active,
+    &:not([disabled]):hover,
+    &:not([disabled]):active {
+      border-bottom-width: var(--border-size--x2);
+
+      & + .Button {
+        border-top-width: 0;
       }
     }
   }

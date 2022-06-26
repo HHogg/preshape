@@ -75,6 +75,7 @@ const Button: RefForwardingComponent<
     borderRadius = 'x1',
     borderSize = 'x2',
     color,
+    flex = 'horizontal',
     size = 'x2',
     paddingHorizontal = sizePaddingMap[size].paddingHorizontal,
     paddingVertical = sizePaddingMap[size].paddingVertical,
@@ -111,7 +112,7 @@ const Button: RefForwardingComponent<
       borderRadius={borderRadius}
       borderSize={borderSize}
       className={classes}
-      flex="horizontal"
+      flex={flex}
       href={to ? href : rest.href}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}

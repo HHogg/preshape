@@ -20,16 +20,17 @@ const Buttons: RefForwardingComponent<
   HTMLElement,
   Attributes<HTMLElement, ButtonsProps>
 > = (props, ref) => {
-  const { gap = 'x1', joined, ...rest } = props;
+  const { flex = 'horizontal', gap = 'x1', joined, ...rest } = props;
   const classes = classnames('Buttons', {
-    'Buttons--joined': joined,
+    'Buttons--joined-horizontal': joined && flex === 'horizontal',
+    'Buttons--joined-vertical': joined && flex === 'vertical',
   });
 
   return (
     <Box
       {...rest}
       className={classes}
-      flex="horizontal"
+      flex={flex}
       gap={joined ? undefined : gap}
       ref={ref}
       shrink

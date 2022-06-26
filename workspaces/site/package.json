@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rm -rf dist && yarn build:svgs && parcel build src/index.html --no-optimize && react-snap --crawl false",
     "build:svgs": "yarn svgr -d ./src/components/SVGs ./src/assets/svgs --ext tsx --config-file .svgrrc.js",
-    "start": "parcel src/index.dev.html --port 4000"
+    "start": "parcel src/index.dev.html --port 4001"
   },
   "devDependencies": {
     "@svgr/cli": "^5.5.0",
