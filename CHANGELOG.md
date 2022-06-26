@@ -1,3 +1,10 @@
+### [11.8.1](https://github.com/HHogg/preshape/compare/v11.8.0...v11.8.1) (2022-06-26)
+
+
+### Fixes
+
+* **Buttons:** Support vertical flexing ([fa44497](https://github.com/HHogg/preshape/commit/fa4449714354669ad9672039ee8c9871feca439f))
+
 ## [11.8.0](https://github.com/HHogg/preshape/compare/v11.7.1...v11.8.0) (2022-06-15)
 
 
