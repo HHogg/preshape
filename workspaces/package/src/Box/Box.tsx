@@ -47,7 +47,8 @@ export type TypeColor =
   | 'text-shade-1'
   | 'text-shade-2'
   | 'text-shade-3'
-  | 'text-shade-4';
+  | 'text-shade-4'
+  | 'transparent';
 
 export type TypePosition =
   | 'center'
