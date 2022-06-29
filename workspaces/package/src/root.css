@@ -7,7 +7,7 @@
 
 *::selection {
   background-color: var(--color-highlight);
-  color: var(--color-dark--shade-1);
+  color: var(--color-dark-shade-1);
 }
 
 html {
@@ -25,8 +25,8 @@ body,
 }
 
 body {
-  background-color: var(--color-background--shade-1);
-  color: var(--color-text--shade-1);
+  background-color: var(--color-background-shade-1);
+  color: var(--color-text-shade-1);
   transition-property: background-color, color;
   transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);

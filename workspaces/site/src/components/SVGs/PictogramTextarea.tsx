@@ -12,7 +12,7 @@ function SvgPictogramTextarea(props) {
       >
         <rect
           id="pictogram-textarea_svg__Rectangle-Copy-8"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={16}
           width={240}
@@ -21,7 +21,7 @@ function SvgPictogramTextarea(props) {
         />
         <rect
           id="pictogram-textarea_svg__Rectangle-Copy-9"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={20}
           y={32}
           width={208}
@@ -30,7 +30,7 @@ function SvgPictogramTextarea(props) {
         />
         <rect
           id="pictogram-textarea_svg__Rectangle-Copy-11"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={20}
           y={60}
           width={208}

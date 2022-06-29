@@ -1,24 +1,23 @@
 /* stylelint-disable no-descending-specificity */
 .Button {
-  --Button-color-intent: var(--color-accent--shade-3);
-  --Button-color-intent-background: var(--color-accent--shade-1);
-  --Button-color: var(--color-text--shade-1);
-  --Button-color-active: var(--color-accent--shade-5);
-  --Button-color-active-background: var(--color-accent--shade-2);
+  --Button-backgroundColorActive: var(--color-accent-shade-2);
+  --Button-backgroundColorHover: var(--color-accent-shade-1);
+  --Button-borderColorActive: var(--color-accent-shade-5);
+  --Button-borderColorHover: var(--color-accent-shade-3);
+  --Button-textColor: var(--color-text-shade-1);
+  --Button-textColorActive: var(--color-accent-shade-5);
+  --Button-textColorHover: var(--color-accent-shade-3);
 
   border-style: solid;
-  border-color: transparent;
-  background-color: transparent;
+  border-color: var(--Button-borderColor, var(--Button-textColor));
+  background-color: var(--Button-backgroundColor);
+  color: var(--Button-textColor);
   font-weight: var(--text-weight--strong);
   text-decoration: none;
   transition-property: border-color, background-color, color, opacity;
   transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
   appearance: none;
-
-  &:hover {
-    cursor: pointer;
-  }
 
   &:focus {
     outline: 0;
@@ -30,6 +29,20 @@
   &[disabled].Button--active {
     opacity: 0.5;
     cursor: default;
+  }
+
+  &:hover:not([disabled]) {
+    cursor: pointer;
+    border-color: var(--Button-borderColorHover, var(--Button-borderColor));
+    background-color: var(--Button-backgroundColorHover, var(--Button-backgroundColor));
+    color: var(--Button-textColorHover, var(--Button-textColor));
+  }
+
+  &.Button--active:not([disabled]),
+  &:active:not([disabled]) {
+    border-color: var(--Button-borderColorActive, var(--Button-borderColor));
+    background-color: var(--Button-backgroundColorActive);
+    color: var(--Button-textColorActive, var(--Button-textColor));
   }
 }
 
@@ -48,84 +61,81 @@
   line-height: var(--text-height--x2);
 }
 
+.Button--primary {
+  --Button-backgroundColor: var(--color-text-shade-1);
+  --Button-backgroundColorActive: var(--color-accent-shade-5);
+  --Button-backgroundColorHover: var(--color-accent-shade-3);
+  --Button-borderColor: var(--color-text-shade-1);
+  --Button-textColor: var(--color-background-shade-1);
+  --Button-textColorActive: var(--color-white);
+  --Button-textColorHover: var(--color-white);
+}
+
 .Button--accent {
-  --Button-color-intent: var(--color-accent--shade-3);
-  --Button-color-intent-background: var(--color-accent--shade-1);
-  --Button-color: var(--color-accent--shade-4);
-  --Button-color-active: var(--color-accent--shade-5);
-  --Button-color-active-background: var(--color-accent--shade-2);
-  --Button-text-color: var(--color-white);
+  --Button-backgroundColorActive: var(--color-accent-shade-2);
+  --Button-backgroundColorHover: var(--color-accent-shade-1);
+  --Button-borderColorActive: var(--color-accent-shade-5);
+  --Button-borderColorHover: var(--color-accent-shade-3);
+  --Button-textColor: var(--color-accent-shade-4);
+  --Button-textColorActive: var(--color-accent-shade-5);
+  --Button-textColorHover: var(--color-accent-shade-3);
+
+  &.Button--primary {
+    --Button-backgroundColor: var(--color-accent-shade-4);
+    --Button-backgroundColorActive: var(--color-accent-shade-5);
+    --Button-backgroundColorHover: var(--color-accent-shade-3);
+    --Button-borderColor: var(--color-accent-shade-4);
+    --Button-textColor: var(--color-white);
+    --Button-textColorActive: var(--color-white);
+    --Button-textColorHover: var(--color-white);
+  }
 }
 
 .Button--positive {
-  --Button-color-intent: var(--color-positive--shade-3);
-  --Button-color-intent-background: var(--color-positive--shade-1);
-  --Button-color: var(--color-positive--shade-4);
-  --Button-color-active: var(--color-positive--shade-5);
-  --Button-color-active-background: var(--color-positive--shade-2);
-  --Button-text-color: var(--color-white);
+  --Button-backgroundColorActive: var(--color-positive-shade-2);
+  --Button-backgroundColorHover: var(--color-positive-shade-1);
+  --Button-borderColorActive: var(--color-positive-shade-5);
+  --Button-borderColorHover: var(--color-positive-shade-3);
+  --Button-textColor: var(--color-positive-shade-4);
+  --Button-textColorActive: var(--color-positive-shade-5);
+  --Button-textColorHover: var(--color-positive-shade-3);
+
+  &.Button--primary {
+    --Button-backgroundColor: var(--color-positive-shade-4);
+    --Button-backgroundColorActive: var(--color-positive-shade-5);
+    --Button-backgroundColorHover: var(--color-positive-shade-3);
+    --Button-borderColor: var(--color-positive-shade-4);
+    --Button-textColor: var(--color-white);
+    --Button-textColorActive: var(--color-white);
+    --Button-textColorHover: var(--color-white);
+  }
 }
 
 .Button--negative {
-  --Button-color-intent: var(--color-negative--shade-3);
-  --Button-color-intent-background: var(--color-negative--shade-1);
-  --Button-color: var(--color-negative--shade-4);
-  --Button-color-active: var(--color-negative--shade-5);
-  --Button-color-active-background: var(--color-negative--shade-2);
-  --Button-text-color: var(--color-white);
-}
+  --Button-backgroundColorActive: var(--color-negative-shade-2);
+  --Button-backgroundColorHover: var(--color-negative-shade-1);
+  --Button-borderColorActive: var(--color-negative-shade-5);
+  --Button-borderColorHover: var(--color-negative-shade-3);
+  --Button-textColor: var(--color-negative-shade-4);
+  --Button-textColorActive: var(--color-negative-shade-5);
+  --Button-textColorHover: var(--color-negative-shade-3);
 
-.Button--primary {
-  border-color: var(--Button-color);
-  background-color: var(--Button-color);
-  color: var(--Button-text-color, var(--color-background--shade-1));
-
-  &:hover:not([disabled]) {
-    border-color: var(--Button-color-intent);
-    background-color: var(--Button-color-intent);
-  }
-
-  &.Button--active:not([disabled]),
-  &:active:not([disabled]) {
-    border-color: var(--Button-color-active);
-    background-color: var(--Button-color-active);
-  }
-}
-
-.Button--secondary {
-  border-color: var(--Button-color);
-  background-color: transparent;
-  color: var(--Button-color);
-
-  &:hover:not([disabled]) {
-    border-color: var(--Button-color-intent);
-    background-color: var(--Button-color-intent-background);
-    color: var(--Button-color-intent);
-  }
-
-  &.Button--active:not([disabled]),
-  &:active:not([disabled]) {
-    border-color: var(--Button-color-active);
-    background-color: var(--Button-color-active-background);
-    color: var(--Button-color-active);
+  &.Button--primary {
+    --Button-backgroundColor: var(--color-negative-shade-4);
+    --Button-backgroundColorActive: var(--color-negative-shade-5);
+    --Button-backgroundColorHover: var(--color-negative-shade-3);
+    --Button-borderColor: var(--color-negative-shade-4);
+    --Button-textColor: var(--color-white);
+    --Button-textColorActive: var(--color-white);
+    --Button-textColorHover: var(--color-white);
   }
 }
 
 .Button--tertiary {
-  border-color: transparent;
-  background-color: transparent;
-  color: var(--Button-color);
-
-  &:hover:not([disabled]) {
-    background-color: var(--Button-color-intent-background);
-    color: var(--Button-color-intent);
-  }
-
-  &.Button--active:not([disabled]),
-  &:active:not([disabled]) {
-    background-color: var(--Button-color-active-background);
-    color: var(--Button-color-active);
-  }
+  --Button-backgroundColor: transparent;
+  --Button-borderColor: transparent;
+  --Button-borderColorHover: transparent;
+  --Button-borderColorActive: transparent;
 }
 
 .Buttons--joined-horizontal > .Button {

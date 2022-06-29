@@ -13,11 +13,11 @@ function SvgPictogramRange(props) {
         <path
           d="M26 44h195a1 1 0 011 1v6a1 1 0 01-1 1H26a1 1 0 01-1-1v-6a1 1 0 011-1z"
           id="pictogram-range_svg__Rectangle-Copy"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
         />
         <circle
           id="pictogram-range_svg__Oval"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           cx={124}
           cy={48}
           r={12}

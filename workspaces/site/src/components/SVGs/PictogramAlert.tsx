@@ -12,7 +12,7 @@ function SvgPictogramAlert(props) {
       >
         <rect
           id="pictogram-alert_svg__text"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={24}
           width={240}
@@ -22,11 +22,11 @@ function SvgPictogramAlert(props) {
         <path
           d="M31.24 39.426L20.919 56.482A1 1 0 0021.774 58h20.468a1 1 0 00.86-1.511L32.955 39.432a1 1 0 00-1.715-.006z"
           id="pictogram-alert_svg__accent"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
         />
         <rect
           id="pictogram-alert_svg__background"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={60}
           y={41}
           width={164}
@@ -35,7 +35,7 @@ function SvgPictogramAlert(props) {
         />
         <rect
           id="pictogram-alert_svg__background"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={60}
           y={51}
           width={123}

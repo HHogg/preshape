@@ -12,14 +12,14 @@ function SvgPictogramPlacement(props) {
       >
         <circle
           id="pictogram-placement_svg__Oval"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           cx={124}
           cy={76}
           r={4}
         />
         <rect
           id="pictogram-placement_svg__Rectangle-Copy-6"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={32}
           y={19}
           width={184}
@@ -28,7 +28,7 @@ function SvgPictogramPlacement(props) {
         />
         <rect
           id="pictogram-placement_svg__Rectangle-Copy-7"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           transform="rotate(45 124 58)"
           x={116}
           y={50}

@@ -16,14 +16,14 @@
   bottom: 0;
   left: 0;
   flex: 1 0 var(--Tabs--space);
-  border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
+  border-bottom: var(--Tabs--border) solid var(--color-text-shade-1);
 }
 
 .Tab {
   position: relative;
   transform: translateY(var(--size--x2));
   transform-origin: bottom;
-  border: var(--Tabs--border) solid var(--color-text--shade-1);
+  border: var(--Tabs--border) solid var(--color-text-shade-1);
   border-bottom: none;
   border-radius: var(--size--x1) var(--size--x1) 0 0;
   cursor: pointer;
@@ -38,7 +38,7 @@
 
 .Tab--active {
   transform: translateY(0);
-  color: var(--color-accent--shade-4);
+  color: var(--color-accent-shade-4);
 }
 
 .Tab__background {
@@ -48,8 +48,8 @@
 }
 
 .TabContent {
-  border-right: var(--Tabs--border) solid var(--color-text--shade-1);
-  border-bottom: var(--Tabs--border) solid var(--color-text--shade-1);
-  border-left: var(--Tabs--border) solid var(--color-text--shade-1);
+  border-right: var(--Tabs--border) solid var(--color-text-shade-1);
+  border-bottom: var(--Tabs--border) solid var(--color-text-shade-1);
+  border-left: var(--Tabs--border) solid var(--color-text-shade-1);
   border-radius: 0 0 var(--size--x1) var(--size--x1);
 }

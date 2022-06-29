@@ -12,7 +12,7 @@ function SvgPictogramTabs(props) {
       >
         <rect
           id="pictogram-tabs_svg__Rectangle"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={8}
           y={34}
           width={72}
@@ -22,11 +22,11 @@ function SvgPictogramTabs(props) {
         <path
           d="M86 24h68a2 2 0 012 2v46H84V26a2 2 0 012-2z"
           id="pictogram-tabs_svg__Rectangle-Copy"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
         />
         <rect
           id="pictogram-tabs_svg__Rectangle-Copy-5"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={160}
           y={35}
           width={72}
@@ -35,7 +35,7 @@ function SvgPictogramTabs(props) {
         />
         <rect
           id="pictogram-tabs_svg__Rectangle-Copy-2"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={22}
           y={56}
           width={44}
@@ -44,7 +44,7 @@ function SvgPictogramTabs(props) {
         />
         <rect
           id="pictogram-tabs_svg__Rectangle-Copy-3"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={98}
           y={44}
           width={44}
@@ -53,7 +53,7 @@ function SvgPictogramTabs(props) {
         />
         <rect
           id="pictogram-tabs_svg__Rectangle-Copy-4"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={174}
           y={56}
           width={44}
@@ -62,7 +62,7 @@ function SvgPictogramTabs(props) {
         />
         <rect
           id="pictogram-tabs_svg__Rectangle"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={8}
           y={72}
           width={231}

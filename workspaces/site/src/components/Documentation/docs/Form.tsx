@@ -19,7 +19,7 @@ const Item: CatalogueItem<{
   name: 'Form',
   description:
     'Form component with added abilities to communicate field-by-field error pattern through context.',
-  pictogram: require('../../SVGs/PictogramAppear').default,
+  pictogram: require('../../SVGs/PictogramForm').default,
   type: 'component',
   showcase: {
     Component: () => {

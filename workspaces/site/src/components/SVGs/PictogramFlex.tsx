@@ -12,7 +12,7 @@ function SvgPictogramFlex(props) {
       >
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-5"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={64}
           y={8}
           width={120}
@@ -21,7 +21,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-9"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={188}
           y={8}
           width={56}
@@ -30,7 +30,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-6"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={97}
           y={36}
           width={56}
@@ -39,7 +39,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-4"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={64}
           width={40}
@@ -48,7 +48,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-13"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={48}
           y={64}
           width={29}
@@ -57,7 +57,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-14"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={172}
           y={64}
           width={29}
@@ -66,7 +66,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-11"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={205}
           y={64}
           width={39}
@@ -75,7 +75,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-10"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={8}
           width={57}
@@ -84,7 +84,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-7"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={36}
           width={89}
@@ -93,7 +93,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-12"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={80}
           y={64}
           width={89}
@@ -102,7 +102,7 @@ function SvgPictogramFlex(props) {
         />
         <rect
           id="pictogram-flex_svg__Rectangle-Copy-8"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={157}
           y={36}
           width={87}
@@ -111,21 +111,21 @@ function SvgPictogramFlex(props) {
         />
         <circle
           id="pictogram-flex_svg__Oval"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           cx={16}
           cy={20}
           r={4}
         />
         <circle
           id="pictogram-flex_svg__Oval-Copy"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           cx={236}
           cy={48}
           r={4}
         />
         <circle
           id="pictogram-flex_svg__Oval-Copy-2"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           cx={124}
           cy={76}
           r={4}

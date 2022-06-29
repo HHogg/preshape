@@ -12,7 +12,7 @@ function SvgPictogramEditor(props) {
       >
         <rect
           id="pictogram-editor_svg__text-copy-2"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={4}
           width={240}
@@ -22,7 +22,7 @@ function SvgPictogramEditor(props) {
         <g id="pictogram-editor_svg__Group" transform="translate(16 12)">
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-5"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={16}
             y={0}
             width={32}
@@ -31,7 +31,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-8"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={24}
             y={24}
             width={12}
@@ -40,7 +40,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-13"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={52}
             y={0}
             width={12}
@@ -49,7 +49,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-11"
-            fill="var(--color-accent--shade-4)"
+            fill="var(--color-accent-shade-4)"
             x={60}
             y={16}
             width={12}
@@ -58,7 +58,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-15"
-            fill="var(--color-accent--shade-4)"
+            fill="var(--color-accent-shade-4)"
             x={76}
             y={16}
             width={12}
@@ -67,7 +67,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-10"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={40}
             y={24}
             width={20}
@@ -76,7 +76,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-9"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={16}
             y={32}
             width={48}
@@ -85,7 +85,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-12"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={44}
             y={8}
             width={48}
@@ -94,7 +94,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-14"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={64}
             y={24}
             width={8}
@@ -103,7 +103,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-7"
-            fill="var(--color-accent--shade-4)"
+            fill="var(--color-accent-shade-4)"
             x={32}
             y={16}
             width={24}
@@ -112,7 +112,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-6"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={24}
             y={8}
             width={16}
@@ -121,7 +121,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={0}
             width={4}
@@ -130,7 +130,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={8}
             width={4}
@@ -139,7 +139,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-2"
-            fill="var(--color-accent--shade-4)"
+            fill="var(--color-accent-shade-4)"
             x={0}
             y={16}
             width={4}
@@ -148,7 +148,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-3"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={24}
             width={4}
@@ -157,7 +157,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-27"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={40}
             width={4}
@@ -166,7 +166,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-29"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={56}
             width={8}
@@ -175,7 +175,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-4"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={32}
             width={4}
@@ -184,7 +184,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-28"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={48}
             width={8}
@@ -193,7 +193,7 @@ function SvgPictogramEditor(props) {
           />
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-30"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={0}
             y={64}
             width={8}
@@ -204,7 +204,7 @@ function SvgPictogramEditor(props) {
         <g
           id="pictogram-editor_svg__Group-Copy"
           transform="translate(140 12)"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
         >
           <rect
             id="pictogram-editor_svg__Rectangle-Copy-8"
@@ -417,7 +417,7 @@ function SvgPictogramEditor(props) {
         </g>
         <path
           id="pictogram-editor_svg__Rectangle"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           d="M123 4h2v88h-2z"
         />
       </g>

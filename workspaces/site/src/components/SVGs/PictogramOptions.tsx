@@ -13,7 +13,7 @@ function SvgPictogramOptions(props) {
         <g
           id="pictogram-options_svg__Group"
           transform="translate(26 20)"
-          stroke="var(--color-text--shade-1)"
+          stroke="var(--color-text-shade-1)"
           strokeWidth={2}
         >
           <path
@@ -23,7 +23,7 @@ function SvgPictogramOptions(props) {
         </g>
         <rect
           id="pictogram-options_svg__Rectangle-Copy-6"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={25}
           y={11}
           width={198}
@@ -34,11 +34,11 @@ function SvgPictogramOptions(props) {
           <path
             d="M2 0h186a2 2 0 012 2v28H0V2a2 2 0 012-2z"
             id="pictogram-options_svg__Rectangle-Copy-2"
-            fill="var(--color-text--shade-1)"
+            fill="var(--color-text-shade-1)"
           />
           <rect
             id="pictogram-options_svg__Rectangle-Copy-2"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={9}
             y={7.5}
             width={15}
@@ -47,7 +47,7 @@ function SvgPictogramOptions(props) {
           />
           <rect
             id="pictogram-options_svg__Rectangle"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={33}
             y={12}
             width={126}
@@ -61,12 +61,12 @@ function SvgPictogramOptions(props) {
         >
           <path
             id="pictogram-options_svg__Rectangle-Copy-2"
-            fill="var(--color-text--shade-1)"
+            fill="var(--color-text-shade-1)"
             d="M0 0h190v30H0z"
           />
           <rect
             id="pictogram-options_svg__Rectangle-Copy-2"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={9}
             y={7.5}
             width={15}
@@ -75,7 +75,7 @@ function SvgPictogramOptions(props) {
           />
           <rect
             id="pictogram-options_svg__Rectangle-Copy-2"
-            fill="var(--color-accent--shade-4)"
+            fill="var(--color-accent-shade-4)"
             x={13.5}
             y={12}
             width={6}
@@ -84,7 +84,7 @@ function SvgPictogramOptions(props) {
           />
           <rect
             id="pictogram-options_svg__Rectangle"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
             x={33}
             y={12}
             width={126}
@@ -98,13 +98,13 @@ function SvgPictogramOptions(props) {
         >
           <path
             id="pictogram-options_svg__Rectangle-Copy-2"
-            fill="var(--color-text--shade-1)"
+            fill="var(--color-text-shade-1)"
             d="M0 0h190v9H0z"
           />
           <path
             d="M9.75 7.5h13.5a.75.75 0 01.75.75V9H9v-.75a.75.75 0 01.75-.75z"
             id="pictogram-options_svg__Rectangle-Copy-2"
-            fill="var(--color-background--shade-1)"
+            fill="var(--color-background-shade-1)"
           />
         </g>
       </g>

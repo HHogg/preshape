@@ -5,21 +5,21 @@
   transition-property: color, border-width, text-decoration-color;
   transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
-  text-decoration-color: var(--color-accent--shade-4);
+  text-decoration-color: var(--color-accent-shade-4);
 
   &:hover {
-    color: var(--color-accent--shade-3);
-    text-decoration-color: var(--color-accent--shade-3);
+    color: var(--color-accent-shade-3);
+    text-decoration-color: var(--color-accent-shade-3);
   }
 
   &.Link--active {
-    color: var(--color-accent--shade-4);
-    text-decoration-color: var(--color-accent--shade-4);
+    color: var(--color-accent-shade-4);
+    text-decoration-color: var(--color-accent-shade-4);
   }
 
   &:active {
-    color: var(--color-accent--shade-5);
-    text-decoration-color: var(--color-accent--shade-5);
+    color: var(--color-accent-shade-5);
+    text-decoration-color: var(--color-accent-shade-5);
   }
 }
 

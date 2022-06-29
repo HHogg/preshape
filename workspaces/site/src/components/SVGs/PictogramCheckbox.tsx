@@ -12,7 +12,7 @@ function SvgPictogramCheckbox(props) {
       >
         <rect
           id="pictogram-checkbox_svg__Rectangle-Copy-2"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={30}
           width={240}
@@ -21,7 +21,7 @@ function SvgPictogramCheckbox(props) {
         />
         <rect
           id="pictogram-checkbox_svg__Rectangle-Copy-2"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={16}
           y={40}
           width={20}
@@ -30,7 +30,7 @@ function SvgPictogramCheckbox(props) {
         />
         <rect
           id="pictogram-checkbox_svg__Rectangle-Copy-2"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={22}
           y={46}
           width={8}
@@ -39,7 +39,7 @@ function SvgPictogramCheckbox(props) {
         />
         <rect
           id="pictogram-checkbox_svg__Rectangle"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={48}
           y={46}
           width={168}

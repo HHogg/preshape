@@ -12,7 +12,7 @@ function SvgPictogramRadiobutton(props) {
       >
         <rect
           id="pictogram-radiobutton_svg__Rectangle-Copy-3"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={28}
           width={240}
@@ -21,7 +21,7 @@ function SvgPictogramRadiobutton(props) {
         />
         <rect
           id="pictogram-radiobutton_svg__Rectangle-Copy-4"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={16}
           y={38}
           width={20}
@@ -30,7 +30,7 @@ function SvgPictogramRadiobutton(props) {
         />
         <rect
           id="pictogram-radiobutton_svg__Rectangle-Copy-5"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={22}
           y={44}
           width={8}
@@ -39,7 +39,7 @@ function SvgPictogramRadiobutton(props) {
         />
         <rect
           id="pictogram-radiobutton_svg__Rectangle-Copy"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={48}
           y={44}
           width={168}

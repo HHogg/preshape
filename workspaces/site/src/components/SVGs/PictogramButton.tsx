@@ -12,7 +12,7 @@ function SvgPictogramButton(props) {
       >
         <rect
           id="pictogram-button_svg__Rectangle-Copy-9"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={32}
           y={24}
           width={184}
@@ -21,7 +21,7 @@ function SvgPictogramButton(props) {
         />
         <rect
           id="pictogram-button_svg__Rectangle-Copy-22"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={56}
           y={44}
           width={100}
@@ -30,7 +30,7 @@ function SvgPictogramButton(props) {
         />
         <rect
           id="pictogram-button_svg__Rectangle-Copy-23"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={180}
           y={38}
           width={4}
@@ -39,7 +39,7 @@ function SvgPictogramButton(props) {
         />
         <rect
           id="pictogram-button_svg__Rectangle-Copy-23"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={172}
           y={46}
           width={20}

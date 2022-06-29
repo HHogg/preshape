@@ -11,7 +11,7 @@
 .RadioButton__indicator {
   width: var(--RadioButton--size);
   height: var(--RadioButton--size);
-  border: var(--border-size--x2) solid var(--color-text--shade-1);
+  border: var(--border-size--x2) solid var(--color-text-shade-1);
   border-radius: 50%;
   background-color: inherit;
   transition-property: border-color;
@@ -26,7 +26,7 @@
   height: 100%;
   transform: scale(0);
   border-radius: 50%;
-  background-color: var(--color-accent--shade-4);
+  background-color: var(--color-accent-shade-4);
   transition-property: transform;
   transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
@@ -34,7 +34,7 @@
 
 .RadioButton__label:hover .RadioButton__indicator,
 .RadioButton__input:checked + .RadioButton__indicator {
-  border-color: var(--color-accent--shade-4);
+  border-color: var(--color-accent-shade-4);
 
   &::before {
     transform: scale(0.5);
@@ -42,5 +42,5 @@
 }
 
 .RadioButton__label:hover .RadioButton__input:not(:checked) + .RadioButton__indicator::before {
-  background-color: var(--color-accent--shade-2);
+  background-color: var(--color-accent-shade-2);
 }

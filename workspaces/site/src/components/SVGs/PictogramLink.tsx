@@ -12,7 +12,7 @@ function SvgPictogramLink(props) {
       >
         <rect
           id="pictogram-link_svg__Rectangle-Copy-4"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={24}
           y={28}
           width={200}
@@ -21,7 +21,7 @@ function SvgPictogramLink(props) {
         />
         <rect
           id="pictogram-link_svg__Rectangle-Copy-5"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={24}
           y={56}
           width={200}

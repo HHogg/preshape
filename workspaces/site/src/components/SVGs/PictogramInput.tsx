@@ -12,7 +12,7 @@ function SvgPictogramInput(props) {
       >
         <rect
           id="pictogram-input_svg__Rectangle-Copy-6"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={28}
           width={240}
@@ -21,7 +21,7 @@ function SvgPictogramInput(props) {
         />
         <rect
           id="pictogram-input_svg__Rectangle-Copy-7"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={20}
           y={56}
           width={208}

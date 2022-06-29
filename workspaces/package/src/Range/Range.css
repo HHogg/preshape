@@ -6,7 +6,7 @@
   border: 0;
   border-radius: 0;
   background: none;
-  color: var(--color-text--shade-1);
+  color: var(--color-text-shade-1);
   cursor: pointer;
   appearance: none;
 
@@ -17,7 +17,7 @@
   &:hover,
   &:focus {
     outline: 0;
-    color: var(--color-accent--shade-4);
+    color: var(--color-accent-shade-4);
   }
 }
 
@@ -25,21 +25,21 @@
   width: 100%;
   height: var(--size--x1);
   margin: var(--size--x2) 0;
-  background-color: var(--color-text--shade-1);
+  background-color: var(--color-text-shade-1);
 }
 
 .Range::-moz-range-track {
   width: 100%;
   height: var(--size--x1);
   margin: var(--size--x2) 0;
-  background-color: var(--color-text--shade-1);
+  background-color: var(--color-text-shade-1);
 }
 
 .Range::-ms-track {
   width: 100%;
   height: var(--size--x1);
   margin: var(--size--x2) 0;
-  background-color: var(--color-text--shade-1);
+  background-color: var(--color-text-shade-1);
 }
 
 .Range::-webkit-slider-thumb {

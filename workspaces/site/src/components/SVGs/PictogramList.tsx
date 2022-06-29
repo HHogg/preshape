@@ -12,7 +12,7 @@ function SvgPictogramList(props) {
       >
         <rect
           id="pictogram-list_svg__Rectangle-Copy-6"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={19}
           y={39.765}
           width={56}
@@ -21,7 +21,7 @@ function SvgPictogramList(props) {
         />
         <rect
           id="pictogram-list_svg__Rectangle-Copy-10"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={173}
           y={39.765}
           width={56}
@@ -30,7 +30,7 @@ function SvgPictogramList(props) {
         />
         <rect
           id="pictogram-list_svg__Rectangle-Copy-8"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={96}
           y={39.765}
           width={56}
@@ -39,7 +39,7 @@ function SvgPictogramList(props) {
         />
         <rect
           id="pictogram-list_svg__Rectangle-Copy-7"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           transform="rotate(20.5 85.5 47.765)"
           x={84}
           y={35.765}
@@ -49,7 +49,7 @@ function SvgPictogramList(props) {
         />
         <rect
           id="pictogram-list_svg__Rectangle-Copy-9"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           transform="rotate(20.5 162.5 47.765)"
           x={161}
           y={35.765}

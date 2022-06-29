@@ -124,18 +124,18 @@ export const themesOpposite: Record<TypeTheme, TypeTheme> = {
 };
 
 export const themePropNameCSSMap = {
-  colorBackgroundShade1: 'color-background--shade-1',
-  colorBackgroundShade2: 'color-background--shade-2',
-  colorBackgroundShade3: 'color-background--shade-3',
-  colorTextShade1: 'color-text--shade-1',
-  colorTextShade2: 'color-text--shade-2',
-  colorTextShade3: 'color-text--shade-3',
-  colorTextShade4: 'color-text--shade-4',
-  colorAccentShade1: 'color-accent--shade-1',
-  colorAccentShade2: 'color-accent--shade-3',
-  colorAccentShade3: 'color-accent--shade-3',
-  colorAccentShade4: 'color-accent--shade-4',
-  colorAccentShade5: 'color-accent--shade-5',
+  colorBackgroundShade1: 'color-background-shade-1',
+  colorBackgroundShade2: 'color-background-shade-2',
+  colorBackgroundShade3: 'color-background-shade-3',
+  colorTextShade1: 'color-text-shade-1',
+  colorTextShade2: 'color-text-shade-2',
+  colorTextShade3: 'color-text-shade-3',
+  colorTextShade4: 'color-text-shade-4',
+  colorAccentShade1: 'color-accent-shade-1',
+  colorAccentShade2: 'color-accent-shade-3',
+  colorAccentShade3: 'color-accent-shade-3',
+  colorAccentShade4: 'color-accent-shade-4',
+  colorAccentShade5: 'color-accent-shade-5',
 };
 
 export const transitionTimeFast = 200;

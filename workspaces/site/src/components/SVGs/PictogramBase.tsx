@@ -14,7 +14,7 @@ function SvgPictogramBase(props) {
         <path
           d="M34 24h180a2 2 0 012 2v44a2 2 0 01-2 2H34a2 2 0 01-2-2V26a2 2 0 012-2z"
           id="pictogram-base_svg__Rectangle-Copy-10"
-          stroke="var(--color-text--shade-1)"
+          stroke="var(--color-text-shade-1)"
           strokeWidth={2}
         />
       </g>

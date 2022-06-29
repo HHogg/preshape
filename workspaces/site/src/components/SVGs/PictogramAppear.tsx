@@ -7,7 +7,7 @@ function SvgPictogramAppear(props) {
         id="pictogram-appear_svg__pictogram-appear"
         stroke="none"
         strokeWidth={1}
-        fill="var(--color-text--shade-1)"
+        fill="var(--color-text-shade-1)"
         fillRule="evenodd"
       >
         <path

@@ -12,7 +12,7 @@ function SvgPictogramTable(props) {
       >
         <rect
           id="pictogram-table_svg__Rectangle-Copy-2"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={32}
           width={240}
@@ -21,7 +21,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-5"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={24}
           y={16}
           width={56}
@@ -30,7 +30,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-8"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={24}
           y={44}
           width={72}
@@ -39,7 +39,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-14"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={12}
           y={44}
           width={8}
@@ -48,7 +48,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-13"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={24}
           y={70}
           width={80}
@@ -57,7 +57,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-15"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={12}
           y={70}
           width={8}
@@ -66,7 +66,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-9"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={144}
           y={44}
           width={24}
@@ -75,7 +75,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-11"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={204}
           y={44}
           width={32}
@@ -84,7 +84,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-10"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={144}
           y={70}
           width={24}
@@ -93,7 +93,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-12"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={204}
           y={70}
           width={32}
@@ -102,7 +102,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-6"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={120}
           y={16}
           width={48}
@@ -111,7 +111,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-7"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={180}
           y={16}
           width={56}
@@ -120,7 +120,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-3"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={60}
           width={240}
@@ -129,7 +129,7 @@ function SvgPictogramTable(props) {
         />
         <rect
           id="pictogram-table_svg__Rectangle-Copy-4"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={86}
           width={240}

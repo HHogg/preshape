@@ -12,7 +12,7 @@ function SvgPictogramBulletpoints(props) {
       >
         <rect
           id="pictogram-bulletpoints_svg__Rectangle-Copy-16"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={82}
           y={30}
           width={96}
@@ -21,7 +21,7 @@ function SvgPictogramBulletpoints(props) {
         />
         <rect
           id="pictogram-bulletpoints_svg__Rectangle-Copy-18"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={82}
           y={44}
           width={96}
@@ -30,7 +30,7 @@ function SvgPictogramBulletpoints(props) {
         />
         <rect
           id="pictogram-bulletpoints_svg__Rectangle-Copy-20"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={82}
           y={58}
           width={96}
@@ -39,7 +39,7 @@ function SvgPictogramBulletpoints(props) {
         />
         <rect
           id="pictogram-bulletpoints_svg__Rectangle-Copy-17"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={70}
           y={30}
           width={8}
@@ -48,7 +48,7 @@ function SvgPictogramBulletpoints(props) {
         />
         <rect
           id="pictogram-bulletpoints_svg__Rectangle-Copy-19"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={70}
           y={44}
           width={8}
@@ -57,7 +57,7 @@ function SvgPictogramBulletpoints(props) {
         />
         <rect
           id="pictogram-bulletpoints_svg__Rectangle-Copy-21"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={70}
           y={58}
           width={8}

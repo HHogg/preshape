@@ -12,7 +12,7 @@ function SvgPictogramModal(props) {
       >
         <rect
           id="pictogram-modal_svg__text-copy"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={4}
           y={4}
           width={240}
@@ -21,13 +21,13 @@ function SvgPictogramModal(props) {
         />
         <path
           id="pictogram-modal_svg__Rectangle-Copy-6"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           d="M4 28h240v2H4z"
         />
         <g
           id="pictogram-modal_svg__Group"
           transform="rotate(45 106.429 282.599)"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
         >
           <rect
             id="pictogram-modal_svg__Rectangle-Copy-24"
@@ -49,11 +49,11 @@ function SvgPictogramModal(props) {
         <path
           d="M13 14h62a1 1 0 011 1v2a1 1 0 01-1 1H13a1 1 0 01-1-1v-2a1 1 0 011-1z"
           id="pictogram-modal_svg__Rectangle-Copy-6"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
         />
         <rect
           id="pictogram-modal_svg__Rectangle-Copy-2"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={12}
           y={48}
           width={167}
@@ -62,7 +62,7 @@ function SvgPictogramModal(props) {
         />
         <rect
           id="pictogram-modal_svg__Rectangle-Copy-4"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={12}
           y={64}
           width={140}
@@ -71,7 +71,7 @@ function SvgPictogramModal(props) {
         />
         <rect
           id="pictogram-modal_svg__Rectangle-Copy-3"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={12}
           y={56}
           width={123}
@@ -80,7 +80,7 @@ function SvgPictogramModal(props) {
         />
         <rect
           id="pictogram-modal_svg__Rectangle-Copy-5"
-          fill="var(--color-background--shade-1)"
+          fill="var(--color-background-shade-1)"
           x={12}
           y={72}
           width={123}

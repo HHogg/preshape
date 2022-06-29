@@ -18,32 +18,32 @@ function SvgPictogramP(props) {
         >
           <path
             id="pictogram-p_svg__Path-2"
-            fill="var(--color-accent--shade-4)"
-            stroke="var(--color-accent--shade-4)"
+            fill="var(--color-accent-shade-4)"
+            stroke="var(--color-accent-shade-4)"
             d="M6 20v-7L0 0z"
           />
           <path
             id="pictogram-p_svg__Path"
-            fill="var(--color-accent--shade-3)"
-            stroke="var(--color-accent--shade-3)"
+            fill="var(--color-accent-shade-3)"
+            stroke="var(--color-accent-shade-3)"
             d="M6 20L0 0v20z"
           />
           <path
             id="pictogram-p_svg__Rectangle"
-            fill="var(--color-accent--shade-5)"
-            stroke="var(--color-accent--shade-5)"
+            fill="var(--color-accent-shade-5)"
+            stroke="var(--color-accent-shade-5)"
             d="M12 0v13H6z"
           />
           <path
             id="pictogram-p_svg__Path-3"
-            fill="var(--color-accent--shade-4)"
-            stroke="var(--color-accent--shade-4)"
+            fill="var(--color-accent-shade-4)"
+            stroke="var(--color-accent-shade-4)"
             d="M6 13l6-13H0z"
           />
           <path
             id="pictogram-p_svg__Path-4"
-            fill="var(--color-accent--shade-5)"
-            stroke="var(--color-accent--shade-5)"
+            fill="var(--color-accent-shade-5)"
+            stroke="var(--color-accent-shade-5)"
             d="M12 13l3.998-6.5L12 0z"
           />
         </g>

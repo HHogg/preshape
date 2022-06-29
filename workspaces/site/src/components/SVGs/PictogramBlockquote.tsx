@@ -12,7 +12,7 @@ function SvgPictogramBlockquote(props) {
       >
         <rect
           id="pictogram-blockquote_svg__Rectangle-Copy-2"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={36}
           y={24}
           width={4}
@@ -21,7 +21,7 @@ function SvgPictogramBlockquote(props) {
         />
         <rect
           id="pictogram-blockquote_svg__Rectangle-Copy-2"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={48}
           y={36}
           width={167}
@@ -30,7 +30,7 @@ function SvgPictogramBlockquote(props) {
         />
         <rect
           id="pictogram-blockquote_svg__Rectangle-Copy-4"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={48}
           y={52}
           width={140}
@@ -39,7 +39,7 @@ function SvgPictogramBlockquote(props) {
         />
         <rect
           id="pictogram-blockquote_svg__Rectangle-Copy-3"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={48}
           y={44}
           width={123}
@@ -48,7 +48,7 @@ function SvgPictogramBlockquote(props) {
         />
         <rect
           id="pictogram-blockquote_svg__Rectangle-Copy-5"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={48}
           y={60}
           width={123}

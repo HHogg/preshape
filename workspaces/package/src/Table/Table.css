@@ -12,19 +12,19 @@
 
 .Table__row--clickable {
   &:hover {
-    background-color: var(--color-accent--shade-1);
+    background-color: var(--color-accent-shade-1);
   }
 
   &.Table__row--active,
   &:active {
-    background-color: var(--color-accent--shade-2);
+    background-color: var(--color-accent-shade-2);
   }
 }
 
 .Table__header-cell {
-  border-bottom: var(--border-size--x2) solid var(--color-text--shade-1);
+  border-bottom: var(--border-size--x2) solid var(--color-text-shade-1);
 }
 
 .Table__cell {
-  border-bottom: var(--border-size--x1) solid var(--color-text--shade-1);
+  border-bottom: var(--border-size--x1) solid var(--color-text-shade-1);
 }

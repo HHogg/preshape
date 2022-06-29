@@ -12,7 +12,7 @@ function SvgPictogramText(props) {
       >
         <rect
           id="pictogram-text_svg__Rectangle-Copy-2"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={40}
           y={30}
           width={144}
@@ -21,7 +21,7 @@ function SvgPictogramText(props) {
         />
         <rect
           id="pictogram-text_svg__Rectangle-Copy-4"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={40}
           y={46}
           width={140}
@@ -30,7 +30,7 @@ function SvgPictogramText(props) {
         />
         <rect
           id="pictogram-text_svg__Rectangle-Copy-7"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={40}
           y={70}
           width={140}
@@ -39,7 +39,7 @@ function SvgPictogramText(props) {
         />
         <rect
           id="pictogram-text_svg__Rectangle-Copy-3"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={40}
           y={38}
           width={123}
@@ -48,7 +48,7 @@ function SvgPictogramText(props) {
         />
         <rect
           id="pictogram-text_svg__Rectangle-Copy-6"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={40}
           y={62}
           width={123}
@@ -57,7 +57,7 @@ function SvgPictogramText(props) {
         />
         <rect
           id="pictogram-text_svg__Rectangle-Copy-5"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={40}
           y={54}
           width={96}
@@ -66,7 +66,7 @@ function SvgPictogramText(props) {
         />
         <rect
           id="pictogram-text_svg__Rectangle-Copy-8"
-          fill="var(--color-text--shade-1)"
+          fill="var(--color-text-shade-1)"
           x={40}
           y={78}
           width={96}
@@ -75,7 +75,7 @@ function SvgPictogramText(props) {
         />
         <rect
           id="pictogram-text_svg__Rectangle-Copy"
-          fill="var(--color-accent--shade-4)"
+          fill="var(--color-accent-shade-4)"
           x={40}
           y={14}
           width={168}

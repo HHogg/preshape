@@ -5,8 +5,8 @@
   height: 100%;
   border: 0;
   border-radius: 0;
-  background-color: var(--color-background--shade-1);
-  color: var(--color-text--shade-1);
+  background-color: var(--color-background-shade-1);
+  color: var(--color-text-shade-1);
   resize: none;
   transition-property: border-color;
   transition-duration: var(--transition-duration--base);
@@ -14,7 +14,7 @@
   appearance: none;
 
   &::placeholder {
-    color: var(--color-text--shade-3);
+    color: var(--color-text-shade-3);
   }
 
   &:focus::placeholder {
@@ -26,6 +26,6 @@
   }
 
   &:disabled {
-    background-color: var(--color-background--shade-3);
+    background-color: var(--color-background-shade-3);
   }
 }
