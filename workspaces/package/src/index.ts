@@ -8,6 +8,14 @@ import * as Icons from './Icon';
 export * from './hooks';
 export * from './variables';
 
+// To allow custom variables in the React.CSSProperty
+// types.
+declare module 'react' {
+  export interface CSSProperties {
+      [key: `--${string}`]: string | number
+  }
+}
+
 export { Attributes, TypeColor, TypeSize, TypeTheme } from './Box/Box';
 
 export { default as Alert, AlertProps } from './Alert/Alert';
@@ -40,7 +48,10 @@ export {
   EditorProps,
   TypeEditorLanguage,
 } from './Editor/Editor';
-export { default as Form } from './Form/Form';
+export { default as Form, FormProps } from './Form/Form';
+export { default as FormError, FormErrorProps } from './Form/FormError';
+export { default as FormProvider, FormProviderProps, FormState, useFormContext  } from './Form/FormContext';
+export { default as useForm } from './Form/useForm';
 export { default as Grid, GridProps } from './Grid/Grid';
 export { default as GridItem, GridItemProps } from './Grid/GridItem';
 export { Icons };

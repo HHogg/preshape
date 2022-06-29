@@ -7,14 +7,14 @@ export interface InputWrapperProps extends BoxProps {
    * Addon that appears before the Input
    */
   addonEnd?: JSX.Element;
-   /**
+  /**
    * Addon that appears after the Input
    */
   addonStart?: JSX.Element;
   /**
    * Sets styling to indicate the input is invalid.
    */
-  invalid?: boolean
+  invalid?: boolean;
 }
 
 const InputWrapper: RefForwardingComponent<
@@ -40,23 +40,24 @@ const InputWrapper: RefForwardingComponent<
   });
 
   return (
-    <Box { ...rest }
-        alignChildrenVertical="middle"
-        backgroundColor="background-shade-1"
-        borderRadius={ borderRadius }
-        borderSize={ borderSize }
-        className={classes}
-        disabled={ disabled }
-        flex="horizontal"
-        gap={ gap }
-        overflow="hidden"
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }
-        ref={ref}
-      >
-        { addonStart && addonStart }
-        { children }
-        { addonEnd && addonEnd }
+    <Box
+      {...rest}
+      alignChildrenVertical="middle"
+      backgroundColor="background-shade-1"
+      borderRadius={borderRadius}
+      borderSize={borderSize}
+      className={classes}
+      disabled={disabled}
+      flex="horizontal"
+      gap={gap}
+      overflow="hidden"
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+      ref={ref}
+    >
+      {addonStart && addonStart}
+      {children}
+      {addonEnd && addonEnd}
     </Box>
   );
 };

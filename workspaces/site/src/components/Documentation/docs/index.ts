@@ -23,6 +23,7 @@ const docs: { [key: string]: CatalogueItem } = {
   Checkbox: require('./CheckBox').default,
   Code: require('./Code').default,
   Editor: require('./Editor').default,
+  Form: require('./Form').default,
   Grid: require('./Grid').default,
   Input: require('./Input').default,
   Label: require('./Label').default,
