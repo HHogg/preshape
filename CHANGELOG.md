@@ -1,3 +1,23 @@
+## [12.0.0](https://github.com/HHogg/preshape/compare/v11.8.1...v12.0.0) (2022-07-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **css:** Changed all CSS color variable names to just be a single dash
+
+### Features
+
+* **Box:** Added transparent to all color options ([0831ff0](https://github.com/HHogg/preshape/commit/0831ff00731a2c6c0e52b59f8274ac31dbef2ff9))
+* **Button:** Added props to control border, backgroundColor and textColor on hover and active states ([2d3c4e0](https://github.com/HHogg/preshape/commit/2d3c4e0d6e6c55dd967fec9877f0ddbc64a4f8e8))
+* **css:** Change all CSS color variables names to no longer require a double dash before the shade. ([a7eaeed](https://github.com/HHogg/preshape/commit/a7eaeed37320e2ab4c61ba54018c78d712632391))
+* **Form:** Added a useForm hook and other components that can be used for a form validation pattern ([f13da70](https://github.com/HHogg/preshape/commit/f13da700c622f3cdcfc086ccc5ab2e091ed0acb2))
+* **ModalManager:** Added ModalManager to manage multiple modal being visible at the same time ([ad1f81b](https://github.com/HHogg/preshape/commit/ad1f81bd9f0ef58b3529e55195c8038cb39c7d1c))
+
+
+### Fixes
+
+* **InputLabel:** Allow labels and descriptions to be JSX.Elements ([32d007b](https://github.com/HHogg/preshape/commit/32d007bc1dac14caa4ed6d0a502eaeeccb6bd4d0))
+
 ### [11.8.1](https://github.com/HHogg/preshape/compare/v11.8.0...v11.8.1) (2022-06-26)
 
 
