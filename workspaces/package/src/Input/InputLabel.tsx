@@ -6,11 +6,11 @@ export interface InputLabelProps extends BoxProps {
   /**
    * A helpful description that can be displayed under the input.
    */
-  description?: string;
+  description?: JSX.Element;
   /**
    * The label string that is rendered above the Input.
    */
-  label?: string;
+  label?: JSX.Element;
 }
 
 const InputLabel: RefForwardingComponent<
