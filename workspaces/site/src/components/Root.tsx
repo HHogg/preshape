@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useLocalStorage, useTheme, TypeTheme } from 'preshape';
+import { useLocalStorage, useTheme, ModalManager, TypeTheme } from 'preshape';
 import Landing from './Landing/Landing';
 
 export const widthContainer = '1152px';
@@ -26,11 +26,13 @@ const Root = () => {
 
   return (
     <BrowserRouter>
-      <RootContext.Provider value={{ onChangeTheme, theme }}>
-        <Routes>
-          <Route element={<Landing />} path="/*" />
-        </Routes>
-      </RootContext.Provider>
+      <ModalManager>
+        <RootContext.Provider value={{ onChangeTheme, theme }}>
+          <Routes>
+            <Route element={<Landing />} path="/*" />
+          </Routes>
+        </RootContext.Provider>
+      </ModalManager>
     </BrowserRouter>
   );
 };

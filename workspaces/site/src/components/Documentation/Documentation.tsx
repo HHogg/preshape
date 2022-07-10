@@ -36,6 +36,7 @@ const Documentation = () => {
   return (
     <Modal
       fullscreen
+      ignoreModalManager
       margin="x10"
       onClose={() => navigate('/')}
       overlayBackgroundColor="dark-shade-1"
@@ -63,11 +64,7 @@ const Documentation = () => {
         )}
 
         {item.apis && (
-          <APIViewer
-            apis={item.apis}
-            onStateChange={setState}
-            state={state}
-          />
+          <APIViewer apis={item.apis} onStateChange={setState} state={state} />
         )}
       </ModalBody>
     </Modal>

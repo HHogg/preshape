@@ -13,6 +13,7 @@ import { useMatchMedia } from '../hooks';
 import Box, { Attributes, BoxProps, TypeColor, TypeSize } from '../Box/Box';
 import Appear, { TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
+import useIsModalVisible from './useIsModalVisible';
 
 type ModalSize = 'x1' | 'x2' | 'x3';
 
@@ -65,6 +66,10 @@ export interface ModalProps extends BoxProps {
    */
   fullscreen?: boolean;
   /**
+   * A flag to ignore visibility management by ModalManager
+   */
+  ignoreModalManager?: boolean;
+  /**
    * Sets the background color of the overlay that sits
    * under the modal and on top of the main UI.
    */
@@ -112,6 +117,7 @@ const Modal: RefForwardingComponent<
     backgroundColor = 'background-shade-1',
     children,
     fullscreen,
+    ignoreModalManager,
     maxWidth = 'auto',
     onClose,
     onCloseAnimationComplete,
@@ -123,7 +129,8 @@ const Modal: RefForwardingComponent<
     ...rest
   } = props;
 
-  const [render, setRender] = useState(props.visible);
+  const visibleManaged = useIsModalVisible(visible);
+  const [render, setRender] = useState(visible);
   const refModal = useRef<HTMLDivElement>(null);
   const match = useMatchMedia([maxWidth]);
   const isMaxWidthEnabled = maxWidth !== 'auto';
@@ -186,7 +193,7 @@ const Modal: RefForwardingComponent<
           backgroundColor={overlayBackgroundColor}
           onAnimationComplete={handleOnAnimateComplete}
           onPointerUp={onClose}
-          visible={visible}
+          visible={ignoreModalManager ? visible : visibleManaged}
         />
 
         <Appear
@@ -206,7 +213,7 @@ const Modal: RefForwardingComponent<
           overflow="auto"
           ref={refModal}
           shrink
-          visible={visible}
+          visible={ignoreModalManager ? visible : visibleManaged}
         >
           {children}
         </Appear>
