@@ -1,3 +1,10 @@
+### [12.0.1](https://github.com/HHogg/preshape/compare/v12.0.0...v12.0.1) (2022-07-10)
+
+
+### Fixes
+
+* **InputLabel:** Fix type for label and description to allow strings ([c78142e](https://github.com/HHogg/preshape/commit/c78142effc9334085102c638976ca67410da2602))
+
 ## [12.0.0](https://github.com/HHogg/preshape/compare/v11.8.1...v12.0.0) (2022-07-10)
 
 
