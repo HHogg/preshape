@@ -1,3 +1,10 @@
+### [12.0.2](https://github.com/HHogg/preshape/compare/v12.0.1...v12.0.2) (2022-07-19)
+
+
+### Fixes
+
+* **Editor:** Inherit gutter backgroundColor ([0454208](https://github.com/HHogg/preshape/commit/0454208b53fdfd2aad694af889059c205ae3a39f))
+
 ### [12.0.1](https://github.com/HHogg/preshape/compare/v12.0.0...v12.0.1) (2022-07-10)
 
 
