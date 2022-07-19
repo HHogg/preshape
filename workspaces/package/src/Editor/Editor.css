@@ -2,7 +2,7 @@
 
 .ace-preshape .ace_editor,
 .ace-preshape .ace_gutter {
-  background: var(--color-background-shade-1);
+  background: inherit;
   color: var(--color-text-shade-3);
 }
 
