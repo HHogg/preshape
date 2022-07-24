@@ -24,6 +24,7 @@ const InputWrapper: RefForwardingComponent<
   const {
     addonEnd,
     addonStart,
+    backgroundColor,
     borderRadius = 'x2',
     borderSize = 'x2',
     children,
@@ -43,7 +44,7 @@ const InputWrapper: RefForwardingComponent<
     <Box
       {...rest}
       alignChildrenVertical="middle"
-      backgroundColor="background-shade-1"
+      backgroundColor={backgroundColor}
       borderRadius={borderRadius}
       borderSize={borderSize}
       className={classes}
