@@ -1,4 +1,11 @@
-export { default as Activity } from './Activity';
+
+import { BoxProps } from '../Box/Box';
+
+export type Props = BoxProps & {
+  size?: string;
+};
+
+      export { default as Activity } from './Activity';
 export { default as Airplay } from './Airplay';
 export { default as AlertCircle } from './AlertCircle';
 export { default as AlertOctagon } from './AlertOctagon';
@@ -284,3 +291,4 @@ export { default as ZapOff } from './ZapOff';
 export { default as Zap } from './Zap';
 export { default as ZoomIn } from './ZoomIn';
 export { default as ZoomOut } from './ZoomOut';
+    

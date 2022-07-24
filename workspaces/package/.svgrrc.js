@@ -35,8 +35,19 @@ export default forwardRef(Icon);
     const names = filePaths.map((filePath) =>
       path.basename(filePath, path.extname(filePath))
     );
-    return names
+
+    const exports = names
       .map((name) => `export { default as ${name} } from './${name}';`)
       .join('\n');
+
+    return `
+import { BoxProps } from '../Box/Box';
+
+export type Props = BoxProps & {
+  size?: string;
+};
+
+      ${exports}
+    `
   },
 };
