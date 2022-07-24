@@ -171,6 +171,8 @@ const Modal: RefForwardingComponent<
     onCloseAnimationComplete?.();
   };
 
+  const actuallyVisible = ignoreModalManager ? visible : visibleManaged;
+
   if (!render) {
     return null;
   }
@@ -186,6 +188,7 @@ const Modal: RefForwardingComponent<
         flex="vertical"
         padding={isGreaterThanMaxWidth ? margin : undefined}
         ref={ref}
+        style={{ pointerEvents: actuallyVisible ? undefined : 'none' }}
       >
         <Appear
           absolute="edge-to-edge"
@@ -193,7 +196,7 @@ const Modal: RefForwardingComponent<
           backgroundColor={overlayBackgroundColor}
           onAnimationComplete={handleOnAnimateComplete}
           onPointerUp={onClose}
-          visible={ignoreModalManager ? visible : visibleManaged}
+          visible={actuallyVisible}
         />
 
         <Appear
@@ -213,7 +216,7 @@ const Modal: RefForwardingComponent<
           overflow="auto"
           ref={refModal}
           shrink
-          visible={ignoreModalManager ? visible : visibleManaged}
+          visible={actuallyVisible}
         >
           {children}
         </Appear>
