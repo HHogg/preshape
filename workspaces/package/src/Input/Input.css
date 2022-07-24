@@ -40,7 +40,7 @@
   appearance: none;
 
   &::placeholder {
-    color: var(--color-text-shade-3);
+    color: var(--color-text-shade-4);
   }
 
   &:focus::placeholder {
