@@ -1,3 +1,24 @@
+## [13.0.0](https://github.com/HHogg/preshape/compare/v12.0.2...v13.0.0) (2022-07-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* **useEventListener:** Handler and options must now be memoized.
+
+### Style Changes
+
+* **Input:** Change the color of the Input placeholder ([e44f9b8](https://github.com/HHogg/preshape/commit/e44f9b87e5b0872f24fce74753f84893fcfbcb0f))
+
+
+### Fixes
+
+* **Button:** Allow font weight to be cofigureable ([f9b3a0a](https://github.com/HHogg/preshape/commit/f9b3a0aa5a3d0c9384d6d05b8f8044f8893f2221))
+* **Button:** Ensure button is always full opacity on hover ([fe4c148](https://github.com/HHogg/preshape/commit/fe4c1489a25836a359ec28763766002efef4ba07))
+* **Icon:** Provide Icons.Props to be extended from ([ea266e3](https://github.com/HHogg/preshape/commit/ea266e3038c4a052d70a9a98b738e969232af2fa))
+* **Input:** Allow background color to be configurable ([313910d](https://github.com/HHogg/preshape/commit/313910d4ff1d7dbcdf22ff27d9359190b859f09e))
+* **Modal:** Remove pointer events from modal when rendered but not visible ([c5f7a65](https://github.com/HHogg/preshape/commit/c5f7a654cca419aac859f3564034ff8e880f158d))
+* **useEventListener:** Remove watch param and use internal depedencies. ([ff8fc8f](https://github.com/HHogg/preshape/commit/ff8fc8ffd6ebab1f88653dd366dd0a95ace63739))
+
 ### [12.0.2](https://github.com/HHogg/preshape/compare/v12.0.1...v12.0.2) (2022-07-19)
 
 
