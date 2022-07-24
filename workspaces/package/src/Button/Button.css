@@ -35,6 +35,7 @@
     border-color: var(--Button-borderColorHover, var(--Button-borderColor));
     background-color: var(--Button-backgroundColorHover, var(--Button-backgroundColor));
     color: var(--Button-textColorHover, var(--Button-textColor));
+    opacity: 1;
   }
 
   &.Button--active:not([disabled]),
