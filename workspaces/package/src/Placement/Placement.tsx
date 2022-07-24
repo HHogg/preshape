@@ -1,6 +1,7 @@
 import React, {
   createContext,
   FC,
+  useCallback,
   useContext,
   useEffect,
   useRef,
@@ -154,17 +155,19 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
   useEventListener(
     document,
     'pointerup',
-    (event) => {
-      if (
-        visible &&
-        ref.current &&
-        !ref.current.contains(event.target as Node)
-      ) {
-        onCloseControlled?.();
-        onCloseUncontrolled?.();
-      }
-    },
-    [onCloseControlled, onCloseUncontrolled, visible]
+    useCallback(
+      (event) => {
+        if (
+          visible &&
+          ref.current &&
+          !ref.current.contains(event.target as Node)
+        ) {
+          onCloseControlled?.();
+          onCloseUncontrolled?.();
+        }
+      },
+      [visible]
+    )
   );
 
   if (!render) {
