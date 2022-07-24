@@ -102,6 +102,7 @@ const Button: RefForwardingComponent<
     size = 'x2',
     paddingHorizontal = sizePaddingMap[size].paddingHorizontal,
     paddingVertical = sizePaddingMap[size].paddingVertical,
+    strong = true,
     tag = 'button',
     textColor,
     textColorActive,
@@ -164,6 +165,7 @@ const Button: RefForwardingComponent<
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
       ref={ref}
+      strong={strong}
       style={style}
       tag={to ? 'a' : tag}
       uppercase={uppercase}

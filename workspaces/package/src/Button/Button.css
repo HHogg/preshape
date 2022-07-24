@@ -12,7 +12,6 @@
   border-color: var(--Button-borderColor, var(--Button-textColor));
   background-color: var(--Button-backgroundColor);
   color: var(--Button-textColor);
-  font-weight: var(--text-weight--strong);
   text-decoration: none;
   transition-property: border-color, background-color, color, opacity;
   transition-duration: var(--transition-duration--fast);
