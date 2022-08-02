@@ -44,6 +44,7 @@ const Tooltip: RefForwardingComponent<
     backgroundColor = 'text-shade-1',
     children,
     content,
+    maxWidth,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
     size = 'x3',
@@ -61,6 +62,7 @@ const Tooltip: RefForwardingComponent<
         <PlacementContent
           backgroundColor={backgroundColor}
           borderRadius="x1"
+          maxWidth={maxWidth}
           paddingHorizontal={paddingHorizontal}
           paddingVertical={paddingVertical}
           ref={ref}
