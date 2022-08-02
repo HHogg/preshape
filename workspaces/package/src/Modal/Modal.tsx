@@ -75,6 +75,10 @@ export interface ModalProps extends BoxProps {
    */
   overlayBackgroundColor?: TypeColor;
   /**
+   * Flag to enable/disable clicking on the overlay to close the modal.
+   */
+  overlayBackgroundCloseOnClick?: boolean;
+  /**
    * The maximum width of the dialog box.
    */
   maxWidth?: string;
@@ -123,6 +127,7 @@ const Modal: RefForwardingComponent<
     onCloseAnimationComplete,
     margin,
     overlayBackgroundColor = 'overlay',
+    overlayBackgroundCloseOnClick = true,
     size = 'x2',
     unrender = true,
     visible,
@@ -195,7 +200,7 @@ const Modal: RefForwardingComponent<
           animation="Fade"
           backgroundColor={overlayBackgroundColor}
           onAnimationComplete={handleOnAnimateComplete}
-          onPointerUp={onClose}
+          onPointerUp={overlayBackgroundCloseOnClick ? onClose : undefined}
           visible={actuallyVisible}
         />
 
