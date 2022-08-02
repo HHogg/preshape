@@ -1,3 +1,16 @@
+## [13.1.0](https://github.com/HHogg/preshape/compare/v13.0.0...v13.1.0) (2022-08-02)
+
+
+### Features
+
+* **Modal:** Add a prop 'overlayBackgroundCloseOnClick' to disable clicking on the overlay to close it ([21328d2](https://github.com/HHogg/preshape/commit/21328d2d20215d952e37c1aed8f1ced1817db2ea))
+
+
+### Fixes
+
+* **ModalManager:** Logging setting state in the render flow error ([f653dd7](https://github.com/HHogg/preshape/commit/f653dd7b84dd844dcdaca70c9f9636db110b0f2a))
+* **Tooltip:** Forward on maxWidth to the content element ([93168d1](https://github.com/HHogg/preshape/commit/93168d160ad56a71ec00e24bf067e0ba498c7e00))
+
 ## [13.0.0](https://github.com/HHogg/preshape/compare/v12.0.2...v13.0.0) (2022-07-24)
 
 
