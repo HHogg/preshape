@@ -1,6 +1,6 @@
-import React, { forwardRef, RefForwardingComponent, useContext } from 'react';
+import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
-import { ModalContext } from './Modal';
+import { useModalContext } from './Modal';
 
 /**
  * A component to offset the horizontal paddings of a Modal.
@@ -11,7 +11,7 @@ const ModalPaddingOffset: RefForwardingComponent<
   HTMLDivElement,
   Attributes<HTMLDivElement, ModalPaddingOffsetProps>
 > = (props, ref) => {
-  const { paddingHorizontal } = useContext(ModalContext);
+  const { paddingHorizontal } = useModalContext();
 
   return (
     <Box paddingOffsetHorizontal={paddingHorizontal} {...props} ref={ref} />

@@ -3,6 +3,7 @@ import React, {
   forwardRef,
   PointerEvent,
   RefForwardingComponent,
+  useContext,
   useEffect,
   useRef,
   useState,
@@ -46,6 +47,8 @@ export const ModalContext = createContext<{
   paddingHorizontal: ModalPaddings.x2.horizontal,
   paddingVertical: ModalPaddings.x2.vertical,
 });
+
+export const useModalContext = () => useContext(ModalContext);
 
 /**
  * The containing component for all the other Modal components.
