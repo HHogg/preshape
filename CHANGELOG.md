@@ -1,3 +1,12 @@
+## [13.2.0](https://github.com/HHogg/preshape/compare/v13.1.0...v13.2.0) (2022-08-07)
+
+
+### Features
+
+* **Box:** Added vertical padding offset props ([9bc4739](https://github.com/HHogg/preshape/commit/9bc47397e2fc504a8cb2a7b4d6cbcb4b19225fa9))
+* **Form:** Added props to control when validation is shown ([3dedc7e](https://github.com/HHogg/preshape/commit/3dedc7e909f39ab7d1ca1ae60f40affecc0e4d52))
+* **Modal:** Added ModalFooterInsert component ([c0f7b6e](https://github.com/HHogg/preshape/commit/c0f7b6ef0e5c50c88dd693c305fb4d5bc9c40531))
+
 ## [13.1.0](https://github.com/HHogg/preshape/compare/v13.0.0...v13.1.0) (2022-08-02)
 
 
