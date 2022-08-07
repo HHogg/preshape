@@ -33,17 +33,11 @@ const FormError: RefForwardingComponent<
 
   return (
     <Box {...rest} flex="vertical" grow ref={ref}>
-      <Box>{children}</Box>
+      {children && <Box>{children}</Box>}
 
       <Appear animation="Expand" visible={!!error}>
-        <Text
-          align="end"
-          paddingVertical="x1"
-          size="x2"
-          textColor="negative-shade-4"
-          strong
-        >
-          {errorState}
+        <Text align="end" size="x2" textColor="negative-shade-4" strong>
+          {errorState?.toString()}
         </Text>
       </Appear>
     </Box>

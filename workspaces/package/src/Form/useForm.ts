@@ -1,26 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import { FormState, FormError } from "./FormContext";
 
-export type FormOptions<T> = {
+export type FormValidateFn<T, E> = (value: T, setError: (error: FormError<E> | null) => void) => void;
+
+export type UseFormProps<T, E> = {
   initial: T;
-  validate?: (value: T, setError: (error: FormError<T>) => void) => void;
+  validate?: FormValidateFn<T, E>;
 };
 
-const useForm = <T>({
+const getDiffStateProps = <T extends Record<string, any>>(a: T, b: T) => {
+  const keys = Object.keys(a);
+  const diff: Record<string, any> = {};
+
+  for (const key of keys) {
+    if (a[key] !== b[key]) {
+      diff[key] = true;
+    }
+  }
+
+  return diff;
+};
+
+const useForm = <T extends Record<string, any>, E = string>({
   initial,
   validate,
-}: FormOptions<T>): FormState<T> => {
+}: UseFormProps<T, E>): FormState<T, E> => {
   const [isDirty, setIsDirty] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [dirtyFields, setDirtyFields] = useState<Partial<Record<keyof T, true>>>({});
   const [state, setState] = useState<T>(initial);
-  const [error, setError] = useState<FormError<T>>({});
+  const [error, setError] = useState<FormError<E>>({});
 
   const getIsDirty = (field?: keyof T) => {
-    if (!hasSubmitted) {
-      return false;
-    }
-
     if (!field) {
       return Object.values(dirtyFields).some(Boolean);
     }
@@ -33,7 +44,31 @@ const useForm = <T>({
     setIsDirty(false);
     setHasSubmitted(false);
     setDirtyFields({});
-    setError({});
+  };
+
+  const handleSetState = (setStateAction: SetStateAction<T>) => {
+    setState((prevState) => {
+      const nextState = typeof setStateAction === 'function'
+        ? (setStateAction as any)(prevState)
+        : setStateAction;
+
+      const dirtyFields = getDiffStateProps(nextState, prevState);
+
+      setDirtyFields((prevDirtyFields) => ({
+        ...prevDirtyFields,
+        ...dirtyFields,
+      }));
+
+      return nextState;
+    });
+  };
+
+  const handleSetError = (error: FormError<E> | null) => {
+    if (error) {
+      setError(error);
+    } else {
+      setError({});
+    }
   };
 
   const setDirty = (field: keyof T) => {
@@ -42,7 +77,7 @@ const useForm = <T>({
 
   const setSubmitted = () => {
     if (validate) {
-      validate(state, setError);
+      validate(state, handleSetError);
     }
 
     setIsDirty(true);
@@ -57,7 +92,7 @@ const useForm = <T>({
 
   useEffect(() => {
     if (validate) {
-      validate(state, setError);
+      validate(state, handleSetError);
     } else {
       setError({});
     }
@@ -67,10 +102,11 @@ const useForm = <T>({
     error,
     getIsDirty,
     hasError: Object.keys(error).length > 0,
+    hasSubmitted,
     state,
     setDirty,
-    setError,
-    setState,
+    setError: handleSetError,
+    setState: handleSetState,
     setSubmitted,
     reset,
   };
