@@ -2,8 +2,8 @@
   flex: 0 0 auto;
   margin: 0;
 
-  &:first-child { margin-top: 0; }
-  &:last-child { margin-bottom: 0; }
+  &:first-child:not([class*="Box--padding-offset-top"]) { margin-top: 0; }
+  &:last-child:not([class*="Box--padding-offset-bottom"]) { margin-bottom: 0; }
 }
 
 .Box--clickable { cursor: pointer; }
@@ -67,6 +67,26 @@
 .Box--padding-left-x10 { padding-left: var(--size--x10); }
 .Box--padding-left-x12 { padding-left: var(--size--x12); }
 .Box--padding-left-x16 { padding-left: var(--size--x16); }
+
+.Box--padding-offset-bottom-x1 { margin-bottom: calc(var(--size--x1) * -1); }
+.Box--padding-offset-bottom-x2 { margin-bottom: calc(var(--size--x2) * -1); }
+.Box--padding-offset-bottom-x3 { margin-bottom: calc(var(--size--x3) * -1); }
+.Box--padding-offset-bottom-x4 { margin-bottom: calc(var(--size--x4) * -1); }
+.Box--padding-offset-bottom-x6 { margin-bottom: calc(var(--size--x6) * -1); }
+.Box--padding-offset-bottom-x8 { margin-bottom: calc(var(--size--x8) * -1); }
+.Box--padding-offset-bottom-x10 { margin-bottom: calc(var(--size--x10) * -1); }
+.Box--padding-offset-bottom-x12 { margin-bottom: calc(var(--size--x12) * -1); }
+.Box--padding-offset-bottom-x16 { margin-bottom: calc(var(--size--x16) * -1); }
+
+.Box--padding-offset-top-x1 { margin-top: calc(var(--size--x1) * -1); }
+.Box--padding-offset-top-x2 { margin-top: calc(var(--size--x2) * -1); }
+.Box--padding-offset-top-x3 { margin-top: calc(var(--size--x3) * -1); }
+.Box--padding-offset-top-x4 { margin-top: calc(var(--size--x4) * -1); }
+.Box--padding-offset-top-x6 { margin-top: calc(var(--size--x6) * -1); }
+.Box--padding-offset-top-x8 { margin-top: calc(var(--size--x8) * -1); }
+.Box--padding-offset-top-x10 { margin-top: calc(var(--size--x10) * -1); }
+.Box--padding-offset-top-x12 { margin-top: calc(var(--size--x12) * -1); }
+.Box--padding-offset-top-x16 { margin-top: calc(var(--size--x16) * -1); }
 
 .Box--padding-offset-right-x1 { margin-right: calc(var(--size--x1) * -1); }
 .Box--padding-offset-right-x2 { margin-right: calc(var(--size--x2) * -1); }
