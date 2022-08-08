@@ -1,3 +1,15 @@
+### [13.2.1](https://github.com/HHogg/preshape/compare/v13.2.0...v13.2.1) (2022-08-08)
+
+
+### Fixes
+
+* **Form:** Added generics to useFormContext ([f27ef29](https://github.com/HHogg/preshape/commit/f27ef2987518b9fb8e7f010e78039b4d7d959714))
+
+
+### Style Changes
+
+* **Input:** Increased font size of input labels ([ebd43ec](https://github.com/HHogg/preshape/commit/ebd43ec2d03ee463182fd2ace720dd484bc81afe))
+
 ## [13.2.0](https://github.com/HHogg/preshape/compare/v13.1.0...v13.2.0) (2022-08-07)
 
 
