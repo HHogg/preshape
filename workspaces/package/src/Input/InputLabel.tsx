@@ -39,7 +39,7 @@ const InputLabel: RefForwardingComponent<
       tag="label"
     >
       {label && (
-        <Text ellipsis paddingHorizontal={paddingHorizontal} size="x2" strong>
+        <Text ellipsis paddingHorizontal={paddingHorizontal} size="x3" strong>
           {label}
         </Text>
       )}
