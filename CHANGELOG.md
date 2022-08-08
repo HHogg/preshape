@@ -1,3 +1,10 @@
+### [13.2.2](https://github.com/HHogg/preshape/compare/v13.2.1...v13.2.2) (2022-08-08)
+
+
+### Fixes
+
+* **Form:** form prop should be optional ([5cbc1cf](https://github.com/HHogg/preshape/commit/5cbc1cf8aae35dcfe7a8abf4b2fb4a46068cb2fe))
+
 ### [13.2.1](https://github.com/HHogg/preshape/compare/v13.2.0...v13.2.1) (2022-08-08)
 
 
