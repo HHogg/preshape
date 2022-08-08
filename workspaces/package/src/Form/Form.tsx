@@ -1,6 +1,6 @@
 import React, { forwardRef, RefForwardingComponent } from 'react';
 import Box, { Attributes, BoxProps } from '../Box/Box';
-import FormContextProvider, { FormProviderProps } from './FormContext';
+import FormContextProvider, { FormProviderProps } from './FormProvider';
 
 /**
  * Form component with added abilities to communicate field-by-field

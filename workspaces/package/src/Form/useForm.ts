@@ -1,5 +1,5 @@
 import { useState, useEffect, SetStateAction } from "react";
-import { FormState, FormError } from "./FormContext";
+import { FormState, FormError } from "./FormProvider";
 
 export type FormValidateFn<T, E> = (value: T, setError: (error: FormError<E> | null) => void) => void;
 

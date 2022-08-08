@@ -24,11 +24,13 @@ export type FormState<T, E> = {
   reset: () => void;
 };
 
-export const FormContext = createContext<{
-  form: FormState<any, any>;
+export type FormContextProps<T, E> = {
+  form: FormState<T, E>;
   getError: (field: string) => string | undefined;
   registerField: (field: string, element: HTMLElement) => () => void;
-}>({
+};
+
+const FormContext = createContext<FormContextProps<any, any>>({
   form: {
     error: {},
     hasError: false,
@@ -45,7 +47,8 @@ export const FormContext = createContext<{
   registerField: () => () => {},
 });
 
-export const useFormContext = () => useContext(FormContext);
+export const useFormContext = <T, E>() =>
+  useContext<FormContextProps<T, E>>(FormContext);
 
 /**
  * A hook to register a field with the form context.

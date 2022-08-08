@@ -7,7 +7,7 @@ import React, {
 import Appear from '../Appear/Appear';
 import Box, { Attributes, BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
-import { useFormContext } from './FormContext';
+import { useFormContext } from './FormProvider';
 
 /**
  * Form error component that is to be used with a parent Form

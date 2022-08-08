@@ -50,7 +50,7 @@ export {
 } from './Editor/Editor';
 export { default as Form, FormProps } from './Form/Form';
 export { default as FormError, FormErrorProps } from './Form/FormError';
-export { default as FormProvider, FormProviderProps, FormState, useFormContext, useFormRegisterField  } from './Form/FormContext';
+export { default as FormProvider, FormProviderProps, FormState, useFormContext, useFormRegisterField  } from './Form/FormProvider';
 export { default as useForm, UseFormProps, FormValidateFn } from './Form/useForm';
 export { default as Grid, GridProps } from './Grid/Grid';
 export { default as GridItem, GridItemProps } from './Grid/GridItem';

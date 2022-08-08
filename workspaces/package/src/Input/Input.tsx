@@ -4,7 +4,7 @@ import InputWrapper from './InputWrapper';
 import Text, { TextProps } from '../Text/Text';
 import useMatchingProps from '../hooks/useMatchingProps';
 import './Input.css';
-import { useFormContext, useFormRegisterField } from '../Form/FormContext';
+import { useFormContext, useFormRegisterField } from '../Form/FormProvider';
 
 export interface InputProps extends TextProps {
   /**
