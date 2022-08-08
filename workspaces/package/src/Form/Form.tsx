@@ -6,7 +6,9 @@ import FormContextProvider, { FormProviderProps } from './FormProvider';
  * Form component with added abilities to communicate field-by-field
  * error pattern through context.
  */
-export interface FormProps extends BoxProps, FormProviderProps {}
+export interface FormProps extends BoxProps, Omit<FormProviderProps, 'form'> {
+  form?: FormProviderProps['form'];
+}
 
 const Form: RefForwardingComponent<
   HTMLFormElement,
