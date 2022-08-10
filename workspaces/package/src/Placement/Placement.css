@@ -2,25 +2,18 @@
   --Placement-arrow-size: var(--size--x3);
 }
 
-.Placement,
-.Placement:first-child,
-.Placement:last-child {
+.Placement {
   position: absolute;
   margin: var(--Placement-arrow-size);
 }
 
 .Placement__arrow {
   position: absolute;
+  margin: var(--Placement-arrow-size);
   width: var(--Placement-arrow-size);
   height: var(--Placement-arrow-size);
   pointer-events: none;
   clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
-}
-
-.Placement__arrow,
-.Placement__arrow:first-child,
-.Placement__arrow:last-child {
-  margin: var(--Placement-arrow-size);
 }
 
 .Placement--top .Placement__arrow {

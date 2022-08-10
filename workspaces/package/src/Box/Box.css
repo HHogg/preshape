@@ -1,9 +1,6 @@
 .Box {
   flex: 0 0 auto;
   margin: 0;
-
-  &:first-child:not([class*="Box--padding-offset-top"]) { margin-top: 0; }
-  &:last-child:not([class*="Box--padding-offset-bottom"]) { margin-bottom: 0; }
 }
 
 .Box--clickable { cursor: pointer; }
@@ -13,6 +10,11 @@
 
 .Box--overflow-hidden { overflow: hidden; }
 .Box--overflow-scroll { overflow: auto; }
+
+.Box[class*="Box--margin"] {
+  &:first-child:not([class*="Box--padding-offset-top"]) { margin-top: 0; }
+  &:last-child:not([class*="Box--padding-offset-bottom"]) { margin-bottom: 0; }
+}
 
 .Box--margin-x1 { margin: var(--size--x1) 0; }
 .Box--margin-x2 { margin: var(--size--x2) 0; }
