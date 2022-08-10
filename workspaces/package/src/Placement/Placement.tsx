@@ -160,7 +160,8 @@ const Placement: FC<Attributes<HTMLDivElement, PlacementProps>> = (props) => {
         if (
           visible &&
           ref.current &&
-          !ref.current.contains(event.target as Node)
+          !ref.current.contains(event.target as Node) &&
+          !referenceNode?.contains(event.target as Node)
         ) {
           onCloseControlled?.();
           onCloseUncontrolled?.();
