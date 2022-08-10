@@ -1,3 +1,11 @@
+### [13.2.3](https://github.com/HHogg/preshape/compare/v13.2.2...v13.2.3) (2022-08-10)
+
+
+### Fixes
+
+* **Placement:** Don't trigger onClose when clicking on the reference element ([41b9ca2](https://github.com/HHogg/preshape/commit/41b9ca2c78f275bb850c1b9584709d7f55c61eb8))
+* **Placement:** Tooltip not showing in the correct place ([cdb7b52](https://github.com/HHogg/preshape/commit/cdb7b52b3e293c0d4fd563be98fa69f08818dca4))
+
 ### [13.2.2](https://github.com/HHogg/preshape/compare/v13.2.1...v13.2.2) (2022-08-08)
 
 
