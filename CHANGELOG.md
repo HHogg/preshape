@@ -1,3 +1,10 @@
+### [13.2.4](https://github.com/HHogg/preshape/compare/v13.2.3...v13.2.4) (2022-09-05)
+
+
+### Fixes
+
+* **FormProvider:** Support returning errors for nested keys ([f9f04f8](https://github.com/HHogg/preshape/commit/f9f04f8422d60f24e6ee495923cfffba1c48bafe))
+
 ### [13.2.3](https://github.com/HHogg/preshape/compare/v13.2.2...v13.2.3) (2022-08-10)
 
 
