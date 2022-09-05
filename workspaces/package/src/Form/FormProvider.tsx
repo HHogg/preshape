@@ -116,7 +116,15 @@ const FormProvider = ({
     if (validateOnlyDirty && !form.getIsDirty(field)) return;
     if (validateOnlyOneAtATime && field !== fieldsOrdered[0]?.[0]) return;
 
-    return form.error[field];
+    if (form.error[field]) {
+      return form.error[field];
+    }
+
+    for (const [key, value] of Object.entries(form.error)) {
+      if (key.startsWith(`${field}.`)) {
+        return value;
+      }
+    }
   };
 
   const registerField = (field: string, element: HTMLElement) => {
