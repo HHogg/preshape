@@ -1,58 +1,36 @@
-import React, {
-  MouseEvent,
-  PointerEvent,
-  FC,
-  ReactNode,
-  Ref,
-  useContext,
-} from 'react';
-import { Reference } from 'react-popper';
-import { PlacementManagerContext } from './PlacementManager';
+import React, { PropsWithChildren, forwardRef } from 'react';
+import { usePlacementContext } from './Placement';
+import { useMergeRefs } from '@floating-ui/react';
 
-export type PlacementReferenceChildren = (
-  props: {
-    onPointerEnter?: (event: PointerEvent) => void;
-    onPointerLeave?: (event: PointerEvent) => void;
-    onClick?: (event: MouseEvent) => void;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ref: Ref<any>;
-  },
-  state: {
-    visible?: boolean;
+/**
+ * The reference element for the placement.
+ */
+export interface PlacementReferenceProps {}
+
+const PlacementReference: React.ForwardRefRenderFunction<
+  HTMLDivElement,
+  PropsWithChildren<PlacementReferenceProps>
+> = ({ children }, propRef) => {
+  const child = React.Children.only(children);
+  const { context, getReferenceProps } = usePlacementContext();
+  const childrenRef = (children as any).ref;
+  const ref = useMergeRefs([context.refs.setReference, propRef, childrenRef]);
+
+  if (!React.isValidElement(child)) {
+    console.error(
+      'PlacementReference only accepts a single valid React element'
+    );
+    return null;
   }
-) => ReactNode;
 
-export interface PlacementReferenceProps {
-  /**
-   * A render callback function that passes on the ref
-   * property, and event handlers to be added to the
-   * React element that is the target.
-   */
-  children: PlacementReferenceChildren;
-}
-
-const PlacementReference: FC<PlacementReferenceProps> = (props) => {
-  const { children, ...rest } = props;
-  const { onClick, onPointerEnter, onPointerLeave, setReferenceNode, visible } =
-    useContext(PlacementManagerContext);
-
-  return (
-    <Reference {...rest} innerRef={setReferenceNode}>
-      {(props) =>
-        children(
-          {
-            ...props,
-            onPointerEnter,
-            onPointerLeave,
-            onClick,
-          },
-          {
-            visible,
-          }
-        )
-      }
-    </Reference>
+  return React.cloneElement(
+    child,
+    getReferenceProps({
+      ...child.props,
+      ref,
+      'data-state': context.open ? 'open' : 'closed',
+    })
   );
 };
 
-export default PlacementReference;
+export default forwardRef(PlacementReference);
