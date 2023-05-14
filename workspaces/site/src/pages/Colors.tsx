@@ -124,19 +124,19 @@ const palette: ColorProps[] = [
   },
   {
     name: 'Shade 3',
-    css: '--color-accent-t--shade-3',
+    css: '--color-accent-1--shade-3',
     js: 'colorAccent1Shade3',
     value: colorAccent1Shade3,
   },
   {
     name: 'Shade 4',
-    css: '--color-accent-t--shade-4',
+    css: '--color-accent-1--shade-4',
     js: 'colorAccent1Shade4',
     value: colorAccent1Shade4,
   },
   {
     name: 'Shade 5',
-    css: '--color-accent-t--shade-5',
+    css: '--color-accent-1--shade-5',
     js: 'colorAccent1Shade5',
     value: colorAccent1Shade5,
   },
