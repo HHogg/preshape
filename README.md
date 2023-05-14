@@ -1,64 +1,60 @@
-<p align="center">
-  <img src="./workspaces/site/src/assets/preshape.svg" alt="Preshape" />
-</p>
 
-<h1 align="center">
-  Preshape
-</h1>
+![](./workspaces/site/src/assets/preshape.svg)
 
-<h3 align="center">
-  A minimal design system and library of React components to facilitate my own projects, you probably don't want to use it.<br/>
-  <a>https://preshape.hogg.io</a>
-</h3>
+# Preshape
 
-<hr />
+A design system and component library for my own personal projects. Take a look around. However, you probably shouldn't use this in your project as there's no guarantee of stability or support.
 
-### Getting Started
+## Using the library
 
-##### Install with your favourite package manager
+Install with your favourite package manager
 
 ```
 yarn add preshape
 ```
 
-### Documentation
+Add the CSS to your project, e.g.
+
+```ts
+import 'preshape/dist/style.css';
+```
+
+then import and start using components.
+
+```tsx
+import { Box } from 'preshape';
+
+<Box>...</Box>
+```
+## Documentation
 
 Description of the design system and component documentation can be found on the [Preshape site](https://preshape.hogg.io).
 
-### Technology
+## Development
 
-- [Typescript](https://www.typescriptlang.org/)
-- [Parcel](https://parceljs.org/) (bundler and dev servers)
-- [React](https://reactjs.org/)
-- [PostCSS](https://postcss.org/) (with postcss-preset-env for a little power)
-- [Firebase](https://firebase.google.com/) (hosting)
-
-### Setup
-
-##### Prerequisites
+### Prerequisites
 
 • [Node](https://nodejs.org/en/) - Either use [nvm use](https://github.com/nvm-sh/nvm) or checkout the tested version inside the [.nvmrc](./nmvrc) file
+• [Yarn](https://yarnpkg.com) - `npm i yarn -g`
 
-##### Setup
+### Setup
 
 Clone the repository
 
 ```
-git clone git@github.com:HHogg/circles.git
+git clone git@github.com:HHogg/preshape.git
 ```
 
 Install the dependencies with your favourite package manager
 
 ```
-yarn install
+yarn
 ```
 
-##### Development
-
-Spin up the Parcel development server
+Spin up the dev server
 
 ```
-yarn start
+yarn dev
 ```
 
 ### Contribution
