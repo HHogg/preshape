@@ -18,6 +18,8 @@ export const sizeX8Px = sizeX1Px * 8;
 export const sizeX10Px = sizeX1Px * 10;
 export const sizeX12Px = sizeX1Px * 12;
 export const sizeX16Px = sizeX1Px * 16;
+export const sizeX24Px = sizeX1Px * 24;
+export const sizeX32Px = sizeX1Px * 32;
 
 export const sizeX1Rem = 0.25;
 export const sizeX2Rem = sizeX1Rem * 2;
@@ -29,6 +31,8 @@ export const sizeX8Rem = sizeX1Rem * 8;
 export const sizeX10Rem = sizeX1Rem * 10;
 export const sizeX12Rem = sizeX1Rem * 12;
 export const sizeX16Rem = sizeX1Rem * 16;
+export const sizeX24Rem = sizeX1Rem * 24;
+export const sizeX32Rem = sizeX1Rem * 32;
 
 export const borderSizeX1Px = 1;
 export const borderSizeX2Px = 2;
