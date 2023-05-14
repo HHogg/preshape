@@ -3,10 +3,13 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import {
   Appear,
   Box,
+  Button,
   Icons,
   Modal,
   ModalManager,
+  Text,
   ThemeProvider,
+  useLocalStorage,
   useMatchMedia,
 } from 'preshape';
 import { Menu } from './components/Menu/Menu';
@@ -20,6 +23,11 @@ import 'preshape/dist/style.css';
 
 const App = () => {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [dontUseMessageVisible, setDontUseMessageVisible] = useLocalStorage(
+    'preshape.dontUseMessage',
+    true
+  );
+
   const match = useMatchMedia(['800px']);
   const isDesktop = match('800px');
 
@@ -31,6 +39,46 @@ const App = () => {
     <ThemeProvider>
       <ModalManager>
         <Box flex="vertical" grow>
+          {dontUseMessageVisible && (
+            <Box
+              fixed="bottom-right"
+              padding="x6"
+              maxWidth="400px"
+              zIndex={100}
+            >
+              <Appear
+                animation="Pop"
+                backgroundColor="text-shade-1"
+                borderRadius="x3"
+                elevate="x1"
+                delay={1000}
+                padding="x6"
+                textColor="background-shade-1"
+              >
+                <Text margin="x6">
+                  Welcome! Take a look around. However, you probably{' '}
+                  <Text tag="strong" strong>
+                    shouldn't use this in your project
+                  </Text>
+                  . It's a component library for my own projects, so{' '}
+                  <Text tag="strong" strong>
+                    there's no guarantee of stability or support
+                  </Text>
+                  .
+                </Text>
+
+                <Button
+                  color="accent"
+                  onClick={() => setDontUseMessageVisible(false)}
+                  variant="primary"
+                  width="100%"
+                >
+                  Ok
+                </Button>
+              </Appear>
+            </Box>
+          )}
+
           {!isDesktop && (
             <Box
               alignChildren="middle"
