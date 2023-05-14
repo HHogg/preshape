@@ -1,3 +1,10 @@
+### [14.0.1](https://github.com/HHogg/preshape/compare/v14.0.0...v14.0.1) (2023-05-14)
+
+
+### Fixes
+
+* **Theme:** Use system theme. Removed useTheme hook ([8a64ce1](https://github.com/HHogg/preshape/commit/8a64ce1c1817a86bc049ce316e298b7b3d71bbf7))
+
 ## [14.0.0](https://github.com/HHogg/preshape/compare/v13.2.4...v14.0.0) (2023-05-14)
 
 
