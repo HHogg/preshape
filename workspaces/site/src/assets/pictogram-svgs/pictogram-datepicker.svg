@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram-datepicker</title>
+    <g id="pictogram-datepicker" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-12" fill="#000000" x="28" y="8" width="24" height="24" rx="4"></rect>
+        <path d="M28,0 L52,0 C52,2.209139 50.209139,4 48,4 L32,4 C29.790861,4 28,2.209139 28,0 L28,0 L28,0 Z" id="Rectangle-Copy-19" fill="#000000"></path>
+        <path d="M84,0 L108,0 C108,2.209139 106.209139,4 104,4 L88,4 C85.790861,4 84,2.209139 84,0 L84,0 L84,0 Z" id="Rectangle-Copy-33" fill="#000000"></path>
+        <path d="M168,0 L192,0 C192,2.209139 190.209139,4 188,4 L172,4 C169.790861,4 168,2.209139 168,0 L168,0 L168,0 Z" id="Rectangle-Copy-35" fill="#000000"></path>
+        <path d="M56,0 L80,0 C80,2.209139 78.209139,4 76,4 L60,4 C57.790861,4 56,2.209139 56,0 L56,0 L56,0 Z" id="Rectangle-Copy-21" fill="#000000"></path>
+        <path d="M140,0 L164,0 C164,2.209139 162.209139,4 160,4 L144,4 C141.790861,4 140,2.209139 140,0 L140,0 L140,0 Z" id="Rectangle-Copy-36" fill="#000000"></path>
+        <path d="M112,0 L136,0 C136,2.209139 134.209139,4 132,4 L116,4 C113.790861,4 112,2.209139 112,0 L112,0 L112,0 Z" id="Rectangle-Copy-34" fill="#000000"></path>
+        <path d="M196,0 L220,0 C220,2.209139 218.209139,4 216,4 L200,4 C197.790861,4 196,2.209139 196,0 L196,0 L196,0 Z" id="Rectangle-Copy-37" fill="#000000"></path>
+        <rect id="Rectangle-Copy-26" fill="#000000" x="28" y="64" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-13" fill="#000000" x="56" y="8" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-20" fill-opacity="0.3" fill="#4C6EF5" x="28" y="36" width="108" height="24" rx="12"></rect>
+        <rect id="Rectangle-Copy-27" fill="#000000" x="56" y="64" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-14" fill="#000000" x="84" y="8" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-28" fill="#000000" x="84" y="64" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-15" fill="#000000" x="112" y="8" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-22" fill="#4C6EF5" x="112" y="36" width="24" height="24" rx="12"></rect>
+        <rect id="Rectangle-Copy-29" fill="#000000" x="112" y="64" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-16" fill="#000000" x="140" y="8" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-23" fill="#000000" x="140" y="36" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-30" fill="#000000" x="140" y="64" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-17" fill="#4C6EF5" x="168" y="8" width="24" height="24" rx="12"></rect>
+        <rect id="Rectangle-Copy-24" fill="#000000" x="168" y="36" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-31" fill="#000000" x="168" y="64" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-18" fill-opacity="0.3" fill="#4C6EF5" x="168" y="8" width="52" height="24" rx="12"></rect>
+        <rect id="Rectangle-Copy-25" fill="#000000" x="196" y="36" width="24" height="24" rx="4"></rect>
+        <rect id="Rectangle-Copy-32" fill="#000000" x="196" y="64" width="24" height="24" rx="4"></rect>
+        <path d="M32,92 L48,92 C50.209139,92 52,93.790861 52,96 L52,96 L52,96 L28,96 C28,93.790861 29.790861,92 32,92 Z" id="Rectangle-Copy-38" fill="#000000"></path>
+        <path d="M88,92 L104,92 C106.209139,92 108,93.790861 108,96 L108,96 L108,96 L84,96 C84,93.790861 85.790861,92 88,92 Z" id="Rectangle-Copy-40" fill="#000000"></path>
+        <path d="M172,92 L188,92 C190.209139,92 192,93.790861 192,96 L192,96 L192,96 L168,96 C168,93.790861 169.790861,92 172,92 Z" id="Rectangle-Copy-42" fill="#000000"></path>
+        <path d="M60,92 L76,92 C78.209139,92 80,93.790861 80,96 L80,96 L80,96 L56,96 C56,93.790861 57.790861,92 60,92 Z" id="Rectangle-Copy-39" fill="#000000"></path>
+        <path d="M144,92 L160,92 C162.209139,92 164,93.790861 164,96 L164,96 L164,96 L140,96 C140,93.790861 141.790861,92 144,92 Z" id="Rectangle-Copy-43" fill="#000000"></path>
+        <path d="M116,92 L132,92 C134.209139,92 136,93.790861 136,96 L136,96 L136,96 L112,96 C112,93.790861 113.790861,92 116,92 Z" id="Rectangle-Copy-41" fill="#000000"></path>
+        <path d="M200,92 L216,92 C218.209139,92 220,93.790861 220,96 L220,96 L220,96 L196,96 C196,93.790861 197.790861,92 200,92 Z" id="Rectangle-Copy-44" fill="#000000"></path>
+    </g>
+</svg>

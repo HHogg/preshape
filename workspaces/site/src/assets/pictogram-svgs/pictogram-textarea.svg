@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram-textarea</title>
+    <g id="pictogram-textarea" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-8" fill="#000000" x="4" y="16" width="240" height="64" rx="8"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="20" y="32" width="208" height="4" rx="1"></rect>
+        <rect id="Rectangle-Copy-11" fill="#FFFFFF" x="20" y="60" width="208" height="4" rx="1"></rect>
+    </g>
+</svg>

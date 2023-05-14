@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram-modal</title>
+    <g id="pictogram-modal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="text-copy" fill="#000000" x="4" y="4" width="240" height="88" rx="8"></rect>
+        <polygon id="Rectangle-Copy-6" fill="#FFFFFF" points="4 28 244 28 244 30 4 30"></polygon>
+        <g id="Group" transform="translate(231.000000, 16.000000) rotate(45.000000) translate(-231.000000, -16.000000) translate(225.000000, 10.000000)" fill="#4C6EF5">
+            <rect id="Rectangle-Copy-24" x="4.8" y="0" width="2.4" height="12" rx="0.5"></rect>
+            <rect id="Rectangle-Copy-25" x="0" y="4.8" width="12" height="2.4" rx="0.5"></rect>
+        </g>
+        <path d="M14,14 L74,14 C75.1045695,14 76,14.8954305 76,16 C76,17.1045695 75.1045695,18 74,18 L14,18 C12.8954305,18 12,17.1045695 12,16 C12,14.8954305 12.8954305,14 14,14 Z" id="Rectangle-Copy-6" fill="#FFFFFF"></path>
+        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="12" y="48" width="167" height="4" rx="2"></rect>
+        <rect id="Rectangle-Copy-4" fill="#FFFFFF" x="12" y="64" width="140" height="4" rx="2"></rect>
+        <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="12" y="56" width="123" height="4" rx="2"></rect>
+        <rect id="Rectangle-Copy-5" fill="#FFFFFF" x="12" y="72" width="123" height="4" rx="2"></rect>
+    </g>
+</svg>
