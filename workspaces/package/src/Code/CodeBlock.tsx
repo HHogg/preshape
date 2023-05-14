@@ -1,63 +1,53 @@
-import React, {
-  forwardRef,
-  useLayoutEffect,
-  useRef,
-  RefForwardingComponent,
-} from 'react';
-import classnames from 'classnames';
-import * as ace from 'brace';
-import { Attributes } from '../Box/Box';
-import { TypeEditorLanguage } from '../Editor/Editor';
-import Code from './Code';
+import React, { forwardRef } from 'react';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
+import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
+import typescript from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
+import style from 'react-syntax-highlighter/dist/esm/styles/prism/synthwave84';
 import Text, { TextProps } from '../Text/Text';
-import 'brace/ext/static_highlight';
 import './CodeBlock.css';
 
-const highlighter = ace.acequire('ace/ext/static_highlight');
+SyntaxHighlighter.registerLanguage('css', css);
+SyntaxHighlighter.registerLanguage('json', json);
+SyntaxHighlighter.registerLanguage('tsx', tsx);
+SyntaxHighlighter.registerLanguage('typescript', typescript);
+
+export type TypeCodeBlockLanguage = 'css' | 'json' | 'tsx' | 'typescript';
 
 /**
  * Provides some syntax highlighting, courtesy of PrismJS.
  */
 export interface CodeBlockProps extends TextProps {
   /**
-   * Language of the content to be highlighted. What ever language is
-   * set here the matching Ace mode needs to be imported. For example.
-   *
-   * import 'ace/mode/javascript';
+   * Code content
    **/
   children?: string;
-  /** Language of the content to be highlighted */
-  language: TypeEditorLanguage;
   /**
-   * Allows for the code contents to be wrapped when it falls outside of the
-   * containing element.
-   */
-  wrap?: boolean;
+   * Language of the content to be highlighted. What ever language is
+   * set here the matching Ace mode needs to be imported. For example.
+   **/
+  language: TypeCodeBlockLanguage;
 }
 
-const CodeBlock: RefForwardingComponent<
-  HTMLPreElement,
-  Attributes<HTMLPreElement, CodeBlockProps>
-> = (props, ref) => {
-  const { children, language, wrap, ...rest } = props;
-  const refContainer = useRef<HTMLElement>(null);
-  const classes = classnames('CodeBlock', {
-    'CodeBlock--wrap': wrap,
-    [`language-${language}`]: language,
-  });
-
-  useLayoutEffect(() => {
-    if (refContainer.current) {
-      highlighter(refContainer.current, {
-        mode: `ace/mode/${language}`,
-        theme: 'ace/theme/preshape',
-      });
-    }
-  }, [children]);
+const CodeBlock: React.ForwardRefRenderFunction<any, CodeBlockProps> = (
+  props,
+  ref
+) => {
+  const { children, language, ...rest } = props;
 
   return (
-    <Text {...rest} className={classes} ref={ref} tag="pre">
-      <Code ref={refContainer}>{children}</Code>
+    <Text {...rest} ref={ref}>
+      <SyntaxHighlighter
+        className="CodeBlock"
+        language={language}
+        style={style}
+        customStyle={{
+          backgroundColor: 'transparent',
+        }}
+      >
+        {children?.trim() ?? ''}
+      </SyntaxHighlighter>
     </Text>
   );
 };
