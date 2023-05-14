@@ -1,12 +1,8 @@
-import React, {
-  forwardRef,
-  InputHTMLAttributes,
-  RefForwardingComponent,
-} from 'react';
+import React, { forwardRef } from 'react';
 
-const CheckboxIndicator: RefForwardingComponent<
+const CheckboxIndicator: React.ForwardRefRenderFunction<
   HTMLInputElement,
-  InputHTMLAttributes<HTMLInputElement>
+  JSX.IntrinsicElements['input']
 > = (props, ref) => {
   return (
     <div className="CheckBox">

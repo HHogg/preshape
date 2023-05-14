@@ -1,7 +1,12 @@
-import { useState, useEffect, SetStateAction } from "react";
-import { FormState, FormError } from "./FormProvider";
+import { useState, useEffect, SetStateAction } from 'react';
+import { FormState } from './FormProvider';
 
-export type FormValidateFn<T, E> = (value: T, setError: (error: FormError<E> | null) => void) => void;
+export type FormValidateError<T, E> = Partial<Record<keyof T, E>>;
+
+export type FormValidateFn<T, E> = (
+  value: T,
+  setError: (error: FormValidateError<T, E> | null) => void
+) => void;
 
 export type UseFormProps<T, E> = {
   initial: T;
@@ -27,9 +32,11 @@ const useForm = <T extends Record<string, any>, E = string>({
 }: UseFormProps<T, E>): FormState<T, E> => {
   const [isDirty, setIsDirty] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
-  const [dirtyFields, setDirtyFields] = useState<Partial<Record<keyof T, true>>>({});
+  const [dirtyFields, setDirtyFields] = useState<
+    Partial<Record<keyof T, true>>
+  >({});
   const [state, setState] = useState<T>(initial);
-  const [error, setError] = useState<FormError<E>>({});
+  const [error, setError] = useState<FormValidateError<T, E>>({});
 
   const getIsDirty = (field?: keyof T) => {
     if (!field) {
@@ -48,9 +55,10 @@ const useForm = <T extends Record<string, any>, E = string>({
 
   const handleSetState = (setStateAction: SetStateAction<T>) => {
     setState((prevState) => {
-      const nextState = typeof setStateAction === 'function'
-        ? (setStateAction as any)(prevState)
-        : setStateAction;
+      const nextState =
+        typeof setStateAction === 'function'
+          ? (setStateAction as any)(prevState)
+          : setStateAction;
 
       const dirtyFields = getDiffStateProps(nextState, prevState);
 
@@ -63,7 +71,7 @@ const useForm = <T extends Record<string, any>, E = string>({
     });
   };
 
-  const handleSetError = (error: FormError<E> | null) => {
+  const handleSetError = (error: FormValidateError<T, E> | null) => {
     if (error) {
       setError(error);
     } else {

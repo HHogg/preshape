@@ -20,7 +20,9 @@ export type TypeAnimation =
  * Using framer-motion, the Appear component provides a variety of
  * ways to make parts of the UI appear in style.
  */
-export interface AppearProps extends BoxProps, MotionProps {
+export interface AppearProps
+  extends Omit<BoxProps, 'onDrag' | 'onDragEnd' | 'onDragStart'>,
+    Omit<MotionsProps, 'style'> {
   /**
    * Name of the animation to play when the visibility state changes.
    *
@@ -67,10 +69,10 @@ export interface AppearProps extends BoxProps, MotionProps {
   visibleInitially?: boolean;
 }
 
-const Appear: RefForwardingComponent<
-  HTMLElement,
-  Attributes<HTMLElement, AppearProps>
-> = (props, ref) => {
+const Appear: React.ForwardRefRenderFunction<any, AppearProps> = (
+  props,
+  ref
+) => {
   const {
     animation = 'FadeSlideUp',
     delay = 0,

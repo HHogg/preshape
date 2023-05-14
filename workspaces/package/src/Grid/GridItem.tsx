@@ -1,6 +1,10 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 
+/**
+ * A grid item is a child of the Grid component. It can be
+ * placed in a specific column and row.
+ */
 export interface GridItemProps extends BoxProps {
   /** Specifies a specific column this item should be in. */
   column?: number;
@@ -8,10 +12,10 @@ export interface GridItemProps extends BoxProps {
   row?: number;
 }
 
-const GridItem: RefForwardingComponent<
-  HTMLElement,
-  Attributes<HTMLElement, GridItemProps>
-> = (props, ref) => {
+const GridItem: React.ForwardRefRenderFunction<any, GridItemProps> = (
+  props,
+  ref
+) => {
   const { column, row, ...rest } = props;
 
   const style = {

@@ -8,17 +8,16 @@ import React, {
   useMemo,
 } from 'react';
 import { useResizeObserver } from '../hooks';
-
-export type FormError<E> = Record<string, E>;
+import { FormValidateError } from './useForm';
 
 export type FormState<T, E> = {
-  error: FormError<E>;
+  error: FormValidateError<T, E>;
   hasError: boolean;
   hasSubmitted: boolean;
   getIsDirty: (field?: keyof T) => boolean;
   state: T;
   setDirty: (field: keyof T) => void;
-  setError: (error: FormError<E> | null) => void;
+  setError: (error: FormValidateError<T, E> | null) => void;
   setState: (cb: SetStateAction<T>) => void;
   setSubmitted: () => void;
   reset: () => void;

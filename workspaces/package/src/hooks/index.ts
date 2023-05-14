@@ -8,12 +8,12 @@ export { default as useWindowScrollTo } from './useWindowScrollTo';
 
 export {
   default as useUrlState,
-  URLStateDefault,
-  URLStateDefaults,
-  URLStateDecoder,
-  URLStateDecoders,
-  URLStateEncoder,
-  URLStateEncoders,
-  URLStateValidator,
-  URLStateValidators,
+  type URLStateDefault,
+  type URLStateDefaults,
+  type URLStateDecoder,
+  type URLStateDecoders,
+  type URLStateEncoder,
+  type URLStateEncoders,
+  type URLStateValidator,
+  type URLStateValidators,
 } from './useUrlState';

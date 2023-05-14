@@ -1,11 +1,12 @@
-import React, { forwardRef, RefForwardingComponent, PointerEvent } from 'react';
+import React, { forwardRef, PointerEvent } from 'react';
 import { useModalContext } from './Modal';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import * as Icons from '../Icon';
 import Link from '../Link/Link';
+import classNames from 'classnames';
 
 /**
- * THe header element of the Modal. Any children content
+ * The header element of the Modal. Any children content
  * will be placed in the title area. If an onClose
  * callback is provided to the Modal component, then
  * the cross icon will appear in this element.
@@ -18,11 +19,11 @@ export interface ModalHeaderProps extends BoxProps {
   closeIconSize?: string;
 }
 
-const ModalHeader: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, ModalHeaderProps>
-> = (props, ref) => {
-  const { children, closeIconSize = '24px', ...rest } = props;
+const ModalHeader: React.ForwardRefRenderFunction<any, ModalHeaderProps> = (
+  props,
+  ref
+) => {
+  const { children, closeIconSize = '24px', sticky, ...rest } = props;
   const { onClose, paddingHorizontal, paddingVertical } = useModalContext();
 
   const handleCloseClick = (event: PointerEvent<HTMLAnchorElement>) => {

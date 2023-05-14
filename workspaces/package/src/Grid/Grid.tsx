@@ -1,8 +1,12 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { Attributes, BoxProps, TypeSize } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
+import { TypeSize } from '../types';
 import './Grid.css';
 
+/**
+ * An abstracted grid component for my common grid layouts.
+ */
 export interface GridProps extends BoxProps {
   /** Controls the horizontal alignment of the items */
   alignChildren?: 'start' | 'middle' | 'end';
@@ -24,10 +28,7 @@ export interface GridProps extends BoxProps {
   rowSize?: string | 'max-content' | 'min-content';
 }
 
-const Grid: RefForwardingComponent<
-  HTMLElement,
-  Attributes<HTMLElement, GridProps>
-> = (props, ref) => {
+const Grid: React.ForwardRefRenderFunction<any, GridProps> = (props, ref) => {
   const {
     alignChildren,
     className,

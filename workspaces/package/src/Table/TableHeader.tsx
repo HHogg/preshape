@@ -1,11 +1,15 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 
+/**
+ * The header element of the table. This should be placed
+ * directly under the Table component.
+ */
 export interface TableHeaderProps extends BoxProps {}
 
-const TableHeader: RefForwardingComponent<
+const TableHeader: React.ForwardRefRenderFunction<
   HTMLTableSectionElement,
-  Attributes<HTMLTableSectionElement, TableHeaderProps>
+  TableHeaderProps
 > = (props, ref) => {
   return <Box {...props} className="Table__header" ref={ref} tag="thead" />;
 };

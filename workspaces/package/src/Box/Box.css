@@ -5,8 +5,6 @@
 
 .Box--clickable { cursor: pointer; }
 .Box--container { position: relative; }
-.Box--display-block { display: block; }
-.Box--display-inline-block { display: inline-block; }
 
 .Box--overflow-hidden { overflow: hidden; }
 .Box--overflow-scroll { overflow: auto; }

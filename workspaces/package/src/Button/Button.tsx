@@ -1,12 +1,12 @@
 import React, {
+  AnchorHTMLAttributes,
   CSSProperties,
   forwardRef,
   MouseEvent,
-  RefForwardingComponent,
 } from 'react';
 import classnames from 'classnames';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
-import { Attributes, TypeColor, TypeSize } from '../Box/Box';
+import { TypeColor, TypeSize } from '../types';
 import Text, { TextProps } from '../Text/Text';
 import './Button.css';
 
@@ -80,10 +80,10 @@ const sizePaddingMap: Record<
   },
 };
 
-const Button: RefForwardingComponent<
-  HTMLButtonElement,
-  Attributes<HTMLButtonElement, ButtonProps>
-> = (props, ref) => {
+const Button: React.ForwardRefRenderFunction<any, ButtonProps> = (
+  props,
+  ref
+) => {
   const {
     active,
     alignChildren = 'middle',
@@ -103,7 +103,7 @@ const Button: RefForwardingComponent<
     paddingHorizontal = sizePaddingMap[size].paddingHorizontal,
     paddingVertical = sizePaddingMap[size].paddingVertical,
     strong = true,
-    tag = 'button',
+    tag,
     textColor,
     textColorActive,
     textColorHover,
@@ -161,13 +161,13 @@ const Button: RefForwardingComponent<
       borderSize={borderSize}
       className={classes}
       flex={flex}
-      href={to ? href : rest.href}
+      href={to ? href : (rest as AnchorHTMLAttributes<'a'>).href}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
       ref={ref}
       strong={strong}
       style={style}
-      tag={to ? 'a' : tag}
+      tag={to ? 'a' : tag ?? 'button'}
       uppercase={uppercase}
     />
   );

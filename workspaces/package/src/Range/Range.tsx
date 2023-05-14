@@ -1,27 +1,17 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
-import InputWrapper from '../Input/InputWrapper';
+import React, { forwardRef } from 'react';
+import Box from '../Box/Box';
+import InputWrapper, { InputWrapperProps } from '../Input/InputWrapper';
 import './Range.css';
 
-export interface RangeProps extends BoxProps {
-  /**
-   * Addon that appears before the Input
-   */
-  addonEnd?: JSX.Element;
-   /**
-   * Addon that appears after the Input
-   */
-  addonStart?: JSX.Element;
-  /**
-   * Sets styling to indicate the input is invalid.
-   */
-  invalid?: boolean
-}
+/**
+ * A range component that can be used to select a value from a range.
+ */
+export interface RangeProps extends InputWrapperProps {}
 
-const Range: RefForwardingComponent<
-  HTMLInputElement,
-  Attributes<HTMLInputElement, RangeProps>
-> = (props, ref) => {
+const Range: React.ForwardRefRenderFunction<HTMLInputElement, RangeProps> = (
+  props,
+  ref
+) => {
   const {
     addonEnd,
     addonStart,
@@ -30,36 +20,46 @@ const Range: RefForwardingComponent<
     disabled,
     gap = 'x3',
     invalid,
+    name,
+    onChange,
     padding,
     paddingHorizontal = 'x6',
     paddingVertical = 'x2',
+    readOnly,
+    value,
     ...rest
   } = props;
 
   return (
     <InputWrapper
-        addonEnd={ addonEnd }
-        addonStart={ addonStart }
-        alignChildrenVertical="middle"
-        backgroundColor="background-shade-1"
-        borderRadius={ borderRadius }
-        borderSize={ borderSize }
-        disabled={ disabled }
-        invalid={ invalid }
-        flex="horizontal"
-        gap={ gap }
-        paddingHorizontal={ paddingHorizontal }
-        paddingVertical={ paddingVertical }>
+      {...rest}
+      addonEnd={addonEnd}
+      addonStart={addonStart}
+      alignChildrenVertical="middle"
+      backgroundColor="background-shade-1"
+      borderRadius={borderRadius}
+      borderSize={borderSize}
+      disabled={disabled}
+      invalid={invalid}
+      flex="horizontal"
+      gap={gap}
+      paddingHorizontal={paddingHorizontal}
+      paddingVertical={paddingVertical}
+    >
       <Box
-        {...rest}
         basis="0"
         className="Range"
+        disabled={disabled}
         grow
+        onChange={onChange}
+        name={name}
         paddingHorizontal={padding || paddingHorizontal}
         paddingVertical={padding || paddingVertical}
+        readOnly={readOnly}
         ref={ref}
         tag="input"
         type="range"
+        value={value}
       />
     </InputWrapper>
   );

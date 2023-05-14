@@ -1,11 +1,11 @@
 
 import { BoxProps } from '../Box/Box';
 
-export type Props = BoxProps & {
-  size?: string;
+export interface Props extends Omit<BoxProps, 'height' | 'size' | 'width'> {
+  size?: BoxProps['width'];
 };
 
-      export { default as Activity } from './Activity';
+export { default as Activity } from './Activity';
 export { default as Airplay } from './Airplay';
 export { default as AlertCircle } from './AlertCircle';
 export { default as AlertOctagon } from './AlertOctagon';

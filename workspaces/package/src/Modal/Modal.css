@@ -1,7 +1,10 @@
 .Modal__header {
+  background-color: inherit;
+}
+
+.Modal__header--sticky {
   position: sticky;
   top: 0;
-  background-color: inherit;
 }
 
 .Modal__body-open {
@@ -9,7 +12,10 @@
 }
 
 .Modal__footer {
+  background-color: inherit;
+}
+
+.Modal__footer--sticky {
   position: sticky;
   bottom: 0;
-  background-color: inherit;
 }

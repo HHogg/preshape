@@ -1,9 +1,11 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes } from '../Box/Box';
-import CheckBox from '../CheckBox/CheckBox';
-import RadioButton from '../RadioButton/RadioButton';
+import React, { forwardRef } from 'react';
+import CheckBox, { CheckBoxProps } from '../CheckBox/CheckBox';
+import RadioButton, { RadioButtonProps } from '../RadioButton/RadioButton';
 
-export interface OptionProps {
+/**
+ * A component that can be used to display a list of options.
+ */
+export interface OptionProps extends CheckBoxProps, RadioButtonProps {
   /**
    * Switches the selection style from singular to multiple
    * by following the same pattern as CheckBoxes and RadioButtons.
@@ -11,10 +13,10 @@ export interface OptionProps {
   multiselect?: boolean;
 }
 
-const Option: RefForwardingComponent<
-  HTMLInputElement,
-  Attributes<HTMLInputElement, OptionProps>
-> = (props, ref) => {
+const Option: React.ForwardRefRenderFunction<HTMLInputElement, OptionProps> = (
+  props,
+  ref
+) => {
   const { multiselect, ...rest } = props;
 
   return multiselect ? (

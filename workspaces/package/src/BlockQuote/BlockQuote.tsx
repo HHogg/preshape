@@ -1,5 +1,4 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes } from '../Box/Box';
+import React, { forwardRef } from 'react';
 import Text, { TextProps } from '../Text/Text';
 import './BlockQuote.css';
 
@@ -9,9 +8,9 @@ import './BlockQuote.css';
  */
 export interface BlockQuoteProps extends TextProps {}
 
-const BlockQuote: RefForwardingComponent<
+const BlockQuote: React.ForwardRefRenderFunction<
   HTMLQuoteElement,
-  Attributes<HTMLQuoteElement, BlockQuoteProps>
+  BlockQuoteProps
 > = (props, ref) => {
   return (
     <Text

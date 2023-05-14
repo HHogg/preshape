@@ -1,15 +1,15 @@
 import classNames from 'classnames';
-import React, { forwardRef, ReactNode, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef, ReactNode } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
 
-export interface SelectInputLabelProps extends BoxProps {
+export interface SelectInputLabelProps extends Omit<BoxProps, 'label'> {
   label: ReactNode;
 }
 
-const SelectInputLabel: RefForwardingComponent<
+const SelectInputLabel: React.ForwardRefRenderFunction<
   HTMLLabelElement,
-  Attributes<HTMLLabelElement, SelectInputLabelProps>
+  SelectInputLabelProps
 > = (props, ref) => {
   const {
     borderRadius = 'x2',

@@ -1,17 +1,18 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import Link from '../Link/Link';
 
+/**
+ * A tab component that can be used to display a tab. It should
+ * be placed directly under the Tabs component.
+ */
 export interface TabProps extends BoxProps {
   /** Applies the active styling to the Tab */
   active?: boolean;
 }
 
-const Tab: RefForwardingComponent<
-  HTMLElement,
-  Attributes<HTMLElement, TabProps>
-> = (props, ref) => {
+const Tab: React.ForwardRefRenderFunction<any, TabProps> = (props, ref) => {
   const {
     active,
     backgroundColor = 'background-shade-1',

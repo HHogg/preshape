@@ -8,10 +8,11 @@ module.exports = {
   template: ({ template }, _, { componentName, props, jsx }) => {
     const typeScriptTpl = template.smart({ plugins: ['jsx', 'typescript'] });
     return typeScriptTpl.ast`/** AUTO GENERATED **/
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box from '../Box/Box';
+import { Props as IconProps } from './index';
 
-const Icon: RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGElement, 'display'>, BoxProps & { size?: string | number }>> = (props, ref) => {
+const Icon: React.ForwardRefRenderFunction<SVGSVGElement, IconProps> = (props, ref) => {
   const { size = '1rem', ...rest } = props;
 
   return (
@@ -43,11 +44,11 @@ export default forwardRef(Icon);
     return `
 import { BoxProps } from '../Box/Box';
 
-export type Props = BoxProps & {
-  size?: string;
+export interface Props extends Omit<BoxProps, 'height' | 'size' | 'width'> {
+  size?: BoxProps['width'];
 };
 
-      ${exports}
-    `
+${exports}
+    `;
   },
 };

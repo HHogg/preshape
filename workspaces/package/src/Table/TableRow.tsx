@@ -1,15 +1,19 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 
+/**
+ * A row element of the table. This should be placed
+ * directly under the TableBody component or TableHeader component.
+ */
 export interface TableRowProps extends BoxProps {
   /** Retains the row in its active state */
   active?: boolean;
 }
 
-const TableRow: RefForwardingComponent<
+const TableRow: React.ForwardRefRenderFunction<
   HTMLTableRowElement,
-  Attributes<HTMLTableRowElement, TableRowProps>
+  TableRowProps
 > = (props, ref) => {
   const { active, clickable, ...rest } = props;
   const classes = classnames('Table__row', {

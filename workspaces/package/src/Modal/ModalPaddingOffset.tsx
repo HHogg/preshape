@@ -1,5 +1,5 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 import { useModalContext } from './Modal';
 
 /**
@@ -7,9 +7,9 @@ import { useModalContext } from './Modal';
  */
 export interface ModalPaddingOffsetProps extends BoxProps {}
 
-const ModalPaddingOffset: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, ModalPaddingOffsetProps>
+const ModalPaddingOffset: React.ForwardRefRenderFunction<
+  any,
+  ModalPaddingOffsetProps
 > = (props, ref) => {
   const { paddingHorizontal } = useModalContext();
 

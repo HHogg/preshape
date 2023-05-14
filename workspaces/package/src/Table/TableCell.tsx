@@ -1,15 +1,18 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes } from '../Box/Box';
+import React, { forwardRef } from 'react';
 import Text, { TextProps } from '../Text/Text';
 
+/**
+ * A table cell is a child of the Table component. It should be
+ * placed in a TableRow component.
+ */
 export interface TableCellProps extends TextProps {
   /** Applies styling indication that this column is currently being sorted */
   sorted?: boolean;
 }
 
-const TableCell: RefForwardingComponent<
-  HTMLTableDataCellElement,
-  Attributes<HTMLTableDataCellElement, TableCellProps>
+const TableCell: React.ForwardRefRenderFunction<
+  HTMLTableCellElement,
+  TableCellProps
 > = (props, ref) => {
   const {
     paddingHorizontal = 'x3',

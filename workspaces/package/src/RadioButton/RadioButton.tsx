@@ -1,53 +1,49 @@
-import React, { forwardRef, ReactNode, RefForwardingComponent } from 'react';
-import { Attributes, TypeBorderSize, TypeSize } from '../Box/Box';
+import React, { forwardRef } from 'react';
 import RadioButtonIndicator from './RadioButtonIndicator';
-import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
+import SelectInputLabel, {
+  SelectInputLabelProps,
+} from '../SelectInputLabel/SelectInputLabel';
 import './RadioButton.css';
 
-export interface RadioButtonProps {
-  /** Controls the border size */
-  borderSize?: TypeBorderSize;
-  /** Contents that is rendered next to the indicator */
-  children?: ReactNode;
-  /** A styled disabled state that disables all interactions */
-  disabled?: boolean;
-  /** @Ignore */
-  margin?: TypeSize;
-  /** @Ignore */
-  padding?: TypeSize;
-  /** @Ignore */
-  paddingHorizontal?: TypeSize;
-  /** @Ignore */
-  paddingVertical?: TypeSize;
-}
+/**
+ * Standard toggling radio input for selecting a single choice.
+ */
+export interface RadioButtonProps
+  extends Omit<SelectInputLabelProps, 'label'> {}
 
-const RadioButton: RefForwardingComponent<
+const RadioButton: React.ForwardRefRenderFunction<
   HTMLInputElement,
-  Attributes<HTMLInputElement, RadioButtonProps>
+  RadioButtonProps
 > = (props, ref) => {
   const {
-    borderSize,
     children,
+    checked,
+    onChange,
+    name,
     disabled,
-    margin,
-    padding,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
+    readOnly,
     ...rest
   } = props;
 
   return (
     <SelectInputLabel
-      borderSize={borderSize}
+      {...rest}
       className="RadioButton__label"
       disabled={disabled}
       label={children}
-      margin={margin}
-      padding={padding}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
     >
-      <RadioButtonIndicator {...rest} disabled={disabled} ref={ref} />
+      <RadioButtonIndicator
+        checked={checked}
+        disabled={disabled}
+        name={name}
+        onChange={onChange}
+        readOnly={readOnly}
+        ref={ref}
+      />
     </SelectInputLabel>
   );
 };

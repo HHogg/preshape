@@ -1,8 +1,12 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
 
-export interface InputLabelProps extends BoxProps {
+/**
+ * The label element of the input. This should be placed
+ * directly above the Input component.
+ */
+export interface InputLabelProps extends Omit<BoxProps, 'label'> {
   /**
    * A helpful description that can be displayed under the input.
    */
@@ -13,10 +17,10 @@ export interface InputLabelProps extends BoxProps {
   label?: string | JSX.Element;
 }
 
-const InputLabel: RefForwardingComponent<
-  HTMLLabelElement,
-  Attributes<HTMLLabelElement, InputLabelProps>
-> = (props, ref) => {
+const InputLabel: React.ForwardRefRenderFunction<any, InputLabelProps> = (
+  props,
+  ref
+) => {
   const {
     children,
     description,

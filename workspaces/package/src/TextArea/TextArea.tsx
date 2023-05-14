@@ -1,12 +1,11 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes } from '../Box/Box';
+import React, { forwardRef } from 'react';
 import Input, { InputProps } from '../Input/Input';
 
 export interface TextAreaProps extends InputProps {}
 
-const TextArea: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLTextAreaElement, TextAreaProps>
+const TextArea: React.ForwardRefRenderFunction<
+  HTMLTextAreaElement,
+  TextAreaProps
 > = (props, ref) => {
   return <Input {...props} ref={ref} tag="textarea" />;
 };

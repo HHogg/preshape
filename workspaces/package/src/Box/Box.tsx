@@ -1,90 +1,28 @@
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import {
+  AllHTMLAttributes,
+  CSSProperties,
+  SVGAttributes,
   createElement,
   forwardRef,
-  AllHTMLAttributes,
-  RefForwardingComponent,
-  SVGAttributes,
 } from 'react';
 import classnames from 'classnames';
 import './Box.css';
+import {
+  TypeBorderSize,
+  TypeColor,
+  TypePosition,
+  TypeSize,
+  TypeTheme,
+} from '../types';
 
-export type Attributes<E, P = {}> = P &
-  Omit<E extends SVGElement ? SVGAttributes<E> : AllHTMLAttributes<E>, keyof P>;
-
-export type TypeBorderSize = 'x0' | 'x1' | 'x2' | 'x3';
-
-export type TypeColor =
-  | 'black'
-  | 'white'
-  | 'highlight'
-  | 'accent-shade-1'
-  | 'accent-shade-2'
-  | 'accent-shade-3'
-  | 'accent-shade-4'
-  | 'accent-shade-5'
-  | 'background-shade-1'
-  | 'background-shade-2'
-  | 'background-shade-3'
-  | 'dark-shade-1'
-  | 'dark-shade-2'
-  | 'dark-shade-3'
-  | 'light-shade-1'
-  | 'light-shade-2'
-  | 'light-shade-3'
-  | 'negative-shade-1'
-  | 'negative-shade-2'
-  | 'negative-shade-3'
-  | 'negative-shade-4'
-  | 'negative-shade-5'
-  | 'positive-shade-1'
-  | 'positive-shade-2'
-  | 'positive-shade-3'
-  | 'positive-shade-4'
-  | 'positive-shade-5'
-  | 'text-shade-1'
-  | 'text-shade-2'
-  | 'text-shade-3'
-  | 'text-shade-4'
-  | 'transparent';
-
-export type TypePosition =
-  | 'center'
-  | 'edge-to-edge'
-  | 'top-left'
-  | 'top'
-  | 'top-right'
-  | 'right'
-  | 'bottom-right'
-  | 'bottom'
-  | 'bottom-left'
-  | 'left';
-
-export type TypeSize =
-  | 'x0'
-  | 'x1'
-  | 'x2'
-  | 'x3'
-  | 'x4'
-  | 'x6'
-  | 'x8'
-  | 'x10'
-  | 'x12'
-  | 'x16';
-
-export type TypeHTMLTags = keyof HTMLElementTagNameMap;
-export type TypeSVGTags = keyof Omit<SVGElementTagNameMap, TypeHTMLTags>;
-export type TypeAllElementTags = TypeHTMLTags | TypeSVGTags;
-
-export type TypeTheme = 'day' | 'night';
+type IntrinsicAttributes = {} & Omit<AllHTMLAttributes<any>, 'wrap'> &
+  SVGAttributes<any>;
 
 /**
  * The core component that is the end of the chain for all other components.
  * It provides general utility behaviour and styling.
  */
-export interface BoxProps {
+export interface BoxProps extends IntrinsicAttributes {
   /** Quick way of absolutely position to common places */
   absolute?: TypePosition;
   /**
@@ -101,7 +39,7 @@ export interface BoxProps {
   /** Background color, shades are taken from the current theme.*/
   backgroundColor?: TypeColor | 'overlay';
   /** Flex basis */
-  basis?: string;
+  basis?: CSSProperties['flexBasis'];
   /** Border color, shades are taken from the current theme. */
   borderColor?: TypeColor;
   /** Applies just the bottom border. To apply all border, just pass borderSize */
@@ -123,7 +61,7 @@ export interface BoxProps {
   /** Applies relative positioning to contain child elements. */
   container?: boolean;
   /** Applies display styling */
-  display?: 'block' | 'inline-block';
+  display?: CSSProperties['display'];
   /** Applies a box shadow that gives the appearance of elevation */
   elevate?: 'x1' | 'x2' | 'x3' | boolean;
   /** Quick way of fixed position to common places */
@@ -137,7 +75,7 @@ export interface BoxProps {
   /** Sets the horizontal distance between items to a multiple value. E.g. 'x1'. */
   gapVertical?: TypeSize;
   /** Flex item property if it should grow with available space. */
-  grow?: boolean | string;
+  grow?: boolean | CSSProperties['flexGrow'];
   /** Fixed height applied through inline styling */
   height?: number | string;
   /** Margins applied for the global spacing variables */
@@ -151,7 +89,7 @@ export interface BoxProps {
   /** Min width applied through inline style */
   minWidth?: number | string;
   /** Sets how overflown content is handled */
-  overflow?: 'auto' | 'hidden';
+  overflow?: CSSProperties['overflow'];
   /** Padding applied for the global spacing variables */
   padding?: TypeSize;
   /** Horizontal padding applied for the global spacing variables */
@@ -179,13 +117,9 @@ export interface BoxProps {
   /** Reverses the flex direction */
   reverse?: boolean;
   /** Flex item property if it should shrink. */
-  shrink?: boolean | string;
-  /**
-   * Any valid HTML or SVG element tag.
-   *
-   * @reference false
-   */
-  tag?: TypeAllElementTags;
+  shrink?: boolean | CSSProperties['flexShrink'];
+  /** HTML Element tag that will be rendered into the DOM */
+  tag?: keyof JSX.IntrinsicElements;
   /** Text color, shades are taken from the current theme. */
   textColor?: TypeColor;
   /**
@@ -203,18 +137,10 @@ export interface BoxProps {
   /** Flag to allow flex items to wrap over to new lines */
   wrap?: boolean;
   /** z-index number for layering elements.  */
-  zIndex?: number;
+  zIndex?: CSSProperties['zIndex'];
 }
 
-type ReactElementProps = Omit<
-  AllHTMLAttributes<Element> & SVGAttributes<Element>,
-  'crossOrigin' | 'wrap'
->;
-
-const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
-  props,
-  ref
-) => {
+const Box: React.ForwardRefRenderFunction<any, BoxProps> = (props, ref) => {
   const {
     absolute,
     alignChildren,
@@ -303,7 +229,6 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
       [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
       [`Box--border-size-${borderSize}`]: borderSize,
       [`Box--border-style-${borderStyle}`]: borderStyle,
-      [`Box--display-${display}`]: display,
       [`Box--elevate-${elevate}`]: typeof elevate === 'string',
       [`Box--position-absolute`]: absolute,
       [`Box--position-fixed`]: fixed,
@@ -333,25 +258,26 @@ const Box: RefForwardingComponent<Element, BoxProps & ReactElementProps> = (
   );
 
   return createElement(
-    tag || 'div',
+    tag ?? 'div',
     {
       ...rest,
       className: classes,
       ref: ref,
       style: {
         borderRadius: isPredefinedBorderRadius ? undefined : borderRadius,
+        display,
         flexBasis: basis,
         flexGrow: grow === true ? '1' : grow,
         flexShrink: shrink === true ? '1' : shrink,
-        height: height,
-        maxHeight: maxHeight,
-        minHeight: minHeight,
-        maxWidth: maxWidth,
-        minWidth: minWidth,
-        overflow: overflow,
-        transitionProperty: transitionProperty,
-        width: width,
-        zIndex: zIndex,
+        height,
+        maxHeight,
+        minHeight,
+        maxWidth,
+        minWidth,
+        overflow,
+        transitionProperty,
+        width,
+        zIndex,
         ...style,
       },
     },
