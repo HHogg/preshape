@@ -1,19 +1,28 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import { Icons } from '..';
-import { Attributes, TypeTheme } from '../Box/Box';
 import Toggle, { ToggleProps } from '../Toggle/Toggle';
+import { TypeTheme } from '../types';
+import { useThemeContext } from './ThemeProvider';
 
 export type ThemeSwitcherProps = Omit<ToggleProps, 'onChange' | 'value'> & {
   size?: number;
-  onChange: (theme: TypeTheme) => void;
-  theme: TypeTheme;
+  onChange?: (theme: TypeTheme) => void;
+  theme?: TypeTheme;
 };
 
-const ThemeControls: RefForwardingComponent<
+const ThemeControls: React.ForwardRefRenderFunction<
   HTMLLabelElement,
-  Attributes<HTMLLabelElement, ThemeSwitcherProps>
+  ThemeSwitcherProps
 > = (props, ref) => {
-  const { onChange, size = 28, theme, ...rest } = props;
+  const {
+    onChange: onChangeProps,
+    size = 28,
+    theme: themeProps,
+    ...rest
+  } = props;
+  const { theme: themeContext, onChange: onChangeContext } = useThemeContext();
+  const theme = themeProps || themeContext;
+  const onChange = onChangeProps || onChangeContext;
 
   return (
     <Toggle
