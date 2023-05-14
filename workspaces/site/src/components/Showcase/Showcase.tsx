@@ -66,7 +66,7 @@ const Showcase = ({ basis, children, file }: Props) => {
 
         <Box absolute="top-right" paddingTop="x2" paddingRight="x2">
           <GithubLink
-            href={`https://github.com/HHogg/preshape/blob/master/workspaces/site/src/components/Documentation/docs/${file}.tsx`}
+            href={`https://github.com/HHogg/preshape/blob/master/workspaces/site/src/docs/catalog/${file}.tsx`}
             target="PreshapeCodeExample"
           />
         </Box>
