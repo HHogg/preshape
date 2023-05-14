@@ -27,8 +27,6 @@ export interface TextProps extends Omit<BoxProps, 'size'> {
   emphasis?: boolean;
   /** Applies a heading font family style */
   heading?: boolean;
-  /** Text default to block display, this will apply inline display. */
-  inline?: boolean;
   /** Applies a monospace font family style */
   monospace?: boolean;
   /** Size of the text */
