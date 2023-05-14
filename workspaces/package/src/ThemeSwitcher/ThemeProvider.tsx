@@ -1,12 +1,20 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useEffect, useRef } from 'react';
 import { TypeTheme } from '../types';
 import useLocalStorage from '../hooks/useLocalStorage';
-import { useTheme } from '../hooks';
 import { themes, themesOpposite } from '../variables';
 import { ThemeContext } from './useThemeContext';
+import { useSystemTheme } from './useSystemTheme';
 
 type ThemeProviderProps = {
   initialTheme?: TypeTheme;
+};
+
+const updateThemeClassName = (theme: TypeTheme) => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.classList.remove('Theme--day');
+    document.documentElement.classList.remove('Theme--night');
+    document.documentElement.classList.add(`Theme--${theme}`);
+  }
 };
 
 export function ThemeProvider({
@@ -18,17 +26,28 @@ export function ThemeProvider({
     initialTheme
   );
 
-  function onChange(theme: TypeTheme) {
-    setTheme(theme);
-  }
+  const refPreviousSystemTheme = useRef<TypeTheme | null>(null);
+  const systemTheme = useSystemTheme();
 
-  useTheme(theme);
+  useEffect(() => {
+    if (
+      !refPreviousSystemTheme.current ||
+      refPreviousSystemTheme.current !== systemTheme
+    ) {
+      refPreviousSystemTheme.current = systemTheme;
+      setTheme(systemTheme);
+    }
+  }, [setTheme, systemTheme]);
+
+  useEffect(() => {
+    updateThemeClassName(theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider
       value={{
         colors: themes[theme],
-        onChange,
+        onChange: setTheme,
         theme,
         themeOpposite: themesOpposite[theme],
       }}
