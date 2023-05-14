@@ -15,6 +15,7 @@ html {
   box-sizing: border-box;
 }
 
+/* stylelint-disable-next-line selector-id-pattern */
 html,
 body,
 #Root {

@@ -7,11 +7,11 @@ import {
   Icons,
   Text,
 } from 'preshape';
-import Page from '../components/Page/Page';
-import PageSection from '../components/Page/PageSection';
-import PageSubtitle from '../components/Page/PageSubtitle';
+import { Page } from '../components/Page/Page';
+import { PageSection } from '../components/Page/PageSection';
+import { PageSubtitle } from '../components/Page/PageSubtitle';
 
-const IconsPage = () => {
+export const IconsPage = () => {
   return (
     <Page
       description="Icons from the Feather icon set"
@@ -53,5 +53,3 @@ const IconsPage = () => {
     </Page>
   );
 };
-
-export default IconsPage;

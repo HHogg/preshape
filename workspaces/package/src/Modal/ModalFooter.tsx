@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
-import { useModalContext } from './Modal';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
+import { useModalContext } from './useModalContext';
 import classNames from 'classnames';
 
 /**
@@ -16,27 +16,24 @@ export interface ModalFooterProps extends BoxProps {
   sticky?: boolean;
 }
 
-const ModalFooter: React.ForwardRefRenderFunction<any, ModalFooterProps> = (
-  { sticky, ...props },
-  ref
-) => {
-  const { paddingHorizontal, paddingVertical } = useModalContext();
-  const classes = classNames('Modal__footer', {
-    'Modal__footer--sticky': sticky,
-  });
+export const ModalFooter = forwardRef<any, ModalFooterProps>(
+  ({ sticky, ...props }, ref) => {
+    const { paddingHorizontal, paddingVertical } = useModalContext();
+    const classes = classNames('Modal__footer', {
+      'Modal__footer--sticky': sticky,
+    });
 
-  return (
-    <Box
-      paddingHorizontal={paddingHorizontal}
-      paddingVertical={paddingVertical}
-      {...props}
-      borderColor="background-shade-3"
-      borderSize="x2"
-      borderTop
-      className={classes}
-      ref={ref}
-    />
-  );
-};
-
-export default forwardRef(ModalFooter);
+    return (
+      <Box
+        paddingHorizontal={paddingHorizontal}
+        paddingVertical={paddingVertical}
+        {...props}
+        borderColor="background-shade-3"
+        borderSize="x2"
+        borderTop
+        className={classes}
+        ref={ref}
+      />
+    );
+  }
+);

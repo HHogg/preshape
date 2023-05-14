@@ -1,54 +1,13 @@
-import React, {
-  createContext,
-  forwardRef,
-  PointerEvent,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { forwardRef, PointerEvent, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import { useMatchMedia } from '../hooks';
-import { TypeColor, TypeSize } from '../types';
-import Box, { BoxProps } from '../Box/Box';
-import Appear, { TypeAnimation } from '../Appear/Appear';
+import { TypeColor } from '../types';
+import { Box, BoxProps } from '../Box/Box';
+import { Appear, TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
 import useIsModalVisible from './useIsModalVisible';
-
-type ModalSize = 'x1' | 'x2' | 'x3';
-
-const ModalPaddings: Record<
-  ModalSize,
-  {
-    horizontal: TypeSize;
-    vertical: TypeSize;
-  }
-> = {
-  x1: {
-    horizontal: 'x8',
-    vertical: 'x4',
-  },
-  x2: {
-    horizontal: 'x8',
-    vertical: 'x6',
-  },
-  x3: {
-    horizontal: 'x12',
-    vertical: 'x10',
-  },
-};
-
-export const ModalContext = createContext<{
-  onClose?: (event: PointerEvent<HTMLElement>) => void;
-  paddingHorizontal: TypeSize;
-  paddingVertical: TypeSize;
-}>({
-  paddingHorizontal: ModalPaddings.x2.horizontal,
-  paddingVertical: ModalPaddings.x2.vertical,
-});
-
-export const useModalContext = () => useContext(ModalContext);
+import { ModalContext, ModalPaddings, ModalSize } from './useModalContext';
 
 /**
  * The containing component for all the other Modal components.
@@ -124,7 +83,7 @@ export interface ModalProps extends Omit<BoxProps, 'size'> {
   visible: boolean;
 }
 
-const Modal: React.ForwardRefRenderFunction<any, ModalProps> = (props, ref) => {
+export const Modal = forwardRef<any, ModalProps>((props, ref) => {
   const {
     animation = 'Fade',
     backgroundColor = 'background-shade-1',
@@ -243,6 +202,4 @@ const Modal: React.ForwardRefRenderFunction<any, ModalProps> = (props, ref) => {
       )}
     </>
   );
-};
-
-export default forwardRef(Modal);
+});

@@ -1,5 +1,11 @@
-import React, { PropsWithChildren, forwardRef } from 'react';
-import { usePlacementContext } from './Placement';
+import {
+  Children,
+  PropsWithChildren,
+  cloneElement,
+  forwardRef,
+  isValidElement,
+} from 'react';
+import { usePlacementContext } from './usePlacementContext';
 import { useMergeRefs } from '@floating-ui/react';
 
 /**
@@ -7,23 +13,23 @@ import { useMergeRefs } from '@floating-ui/react';
  */
 export interface PlacementReferenceProps {}
 
-const PlacementReference: React.ForwardRefRenderFunction<
+export const PlacementReference = forwardRef<
   HTMLDivElement,
   PropsWithChildren<PlacementReferenceProps>
-> = ({ children }, propRef) => {
-  const child = React.Children.only(children);
+>(({ children }, propRef) => {
+  const child = Children.only(children);
   const { context, getReferenceProps } = usePlacementContext();
   const childrenRef = (children as any).ref;
   const ref = useMergeRefs([context.refs.setReference, propRef, childrenRef]);
 
-  if (!React.isValidElement(child)) {
+  if (!isValidElement(child)) {
     console.error(
       'PlacementReference only accepts a single valid React element'
     );
     return null;
   }
 
-  return React.cloneElement(
+  return cloneElement(
     child,
     getReferenceProps({
       ...child.props,
@@ -31,6 +37,4 @@ const PlacementReference: React.ForwardRefRenderFunction<
       'data-state': context.open ? 'open' : 'closed',
     })
   );
-};
-
-export default forwardRef(PlacementReference);
+});

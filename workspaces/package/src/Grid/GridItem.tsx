@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
 
 /**
  * A grid item is a child of the Grid component. It can be
@@ -12,10 +12,7 @@ export interface GridItemProps extends BoxProps {
   row?: number;
 }
 
-const GridItem: React.ForwardRefRenderFunction<any, GridItemProps> = (
-  props,
-  ref
-) => {
+export const GridItem = forwardRef<any, GridItemProps>((props, ref) => {
   const { column, row, ...rest } = props;
 
   const style = {
@@ -25,6 +22,4 @@ const GridItem: React.ForwardRefRenderFunction<any, GridItemProps> = (
   };
 
   return <Box {...rest} className="GridItem" ref={ref} style={style} />;
-};
-
-export default forwardRef(GridItem);
+});

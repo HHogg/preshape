@@ -7,7 +7,7 @@ import {
   Icons,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramButton';
+import { Pictogram } from './pictograms/PictogramButton';
 
 interface Props {
   Button: ButtonProps;

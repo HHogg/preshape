@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { sizeX3Px } from '../variables';
-import Text, { TextProps } from '../Text/Text';
+import { Text, TextProps } from '../Text/Text';
 import './Label.css';
 
 /**
@@ -9,10 +9,7 @@ import './Label.css';
  */
 export interface LabelProps extends TextProps {}
 
-const Label: React.ForwardRefRenderFunction<HTMLDivElement, LabelProps> = (
-  props,
-  ref
-) => {
+export const Label = forwardRef<HTMLDivElement, LabelProps>((props, ref) => {
   const {
     backgroundColor = 'text-shade-1',
     borderRadius = sizeX3Px,
@@ -38,6 +35,4 @@ const Label: React.ForwardRefRenderFunction<HTMLDivElement, LabelProps> = (
       textColor={textColor}
     />
   );
-};
-
-export default forwardRef(Label);
+});

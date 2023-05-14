@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from 'react';
 
 interface MatchPatternConfig {
@@ -12,8 +14,11 @@ interface Listener {
 
 type Handler = (e: MediaQueryListEvent) => void;
 
-const getListeners = (queries: string[], handler: Handler) =>
-  queries.map((query) => {
+const getListeners = (queries: string[], handler: Handler) => {
+  // SSG
+  if (typeof window === 'undefined') return [];
+
+  return queries.map((query) => {
     const media = `(min-width: ${query})`;
     const listener = window.matchMedia(media);
 
@@ -21,6 +26,7 @@ const getListeners = (queries: string[], handler: Handler) =>
 
     return { listener, media, query };
   });
+};
 
 const getMatchQueryIndex = (queries: string[], listeners: Listener[]) => {
   for (let i = queries.length; i--; ) {
@@ -50,10 +56,9 @@ export default (queries: string[]) => {
   };
 
   const listeners = useRef<Listener[]>(
-    typeof window === 'undefined'
-      ? []
-      : getListeners(queries, handleQueryChange)
+    getListeners(queries, handleQueryChange)
   );
+
   const [hitIndex, setHitIndex] = useState(
     getMatchQueryIndex(queries, listeners.current)
   );
@@ -66,6 +71,7 @@ export default (queries: string[]) => {
     return () => {
       removeListeners(listeners.current, handleQueryChange);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [...queries]);
 
   function match(pattern: string, fallback?: never): boolean;

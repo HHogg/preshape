@@ -27,6 +27,7 @@ function useLocalStorage<T = undefined>(key: string, initialValue = undefined) {
 
   useEffect(() => {
     setValue(storedValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return [storedValue, setValue];

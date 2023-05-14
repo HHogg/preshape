@@ -1,12 +1,12 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import {
   FloatingArrow,
   FloatingPortal,
   useMergeRefs,
 } from '@floating-ui/react';
-import Appear, { AppearProps } from '../Appear/Appear';
-import Box, { BoxProps } from '../Box/Box';
-import { usePlacementContext } from './Placement';
+import { Appear, AppearProps } from '../Appear/Appear';
+import { Box, BoxProps } from '../Box/Box';
+import { usePlacementContext } from './usePlacementContext';
 import { ARROW_HEIGHT, ARROW_WIDTH } from './usePlacement';
 
 /**
@@ -25,10 +25,10 @@ export interface PlacementContentProps extends BoxProps {
   withArrow?: boolean;
 }
 
-const PlacementContent: React.ForwardRefRenderFunction<
+export const PlacementContent = forwardRef<
   HTMLDivElement,
   PlacementContentProps
-> = (props, propRef) => {
+>((props, propRef) => {
   const {
     animation = 'Pop',
     backgroundColor,
@@ -86,6 +86,4 @@ const PlacementContent: React.ForwardRefRenderFunction<
       </Box>
     </FloatingPortal>
   );
-};
-
-export default forwardRef(PlacementContent);
+});

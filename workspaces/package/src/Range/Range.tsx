@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
-import Box from '../Box/Box';
-import InputWrapper, { InputWrapperProps } from '../Input/InputWrapper';
+import { forwardRef } from 'react';
+import { Box } from '../Box/Box';
+import { InputWrapper, InputWrapperProps } from '../Input/InputWrapper';
 import './Range.css';
 
 /**
@@ -8,10 +8,7 @@ import './Range.css';
  */
 export interface RangeProps extends InputWrapperProps {}
 
-const Range: React.ForwardRefRenderFunction<HTMLInputElement, RangeProps> = (
-  props,
-  ref
-) => {
+export const Range = forwardRef<HTMLInputElement, RangeProps>((props, ref) => {
   const {
     addonEnd,
     addonStart,
@@ -63,6 +60,4 @@ const Range: React.ForwardRefRenderFunction<HTMLInputElement, RangeProps> = (
       />
     </InputWrapper>
   );
-};
-
-export default forwardRef(Range);
+});

@@ -9,33 +9,29 @@ import {
   ThemeProvider,
   useMatchMedia,
 } from 'preshape';
-import Menu from './components/Menu/Menu';
-import ComponentPage from './pages/Component';
-import ComponentsPage from './pages/Components';
-import IconsPage from './pages/Icons';
-import ColorsPage from './pages/Colors';
-import SizingsPage from './pages/Sizings';
-import ThemesPage from './pages/Themes';
+import { Menu } from './components/Menu/Menu';
+import { ComponentPage } from './pages/Component';
+import { ComponentsPage } from './pages/Components';
+import { IconsPage } from './pages/Icons';
+import { ColorsPage } from './pages/Colors';
+import { SizingsPage } from './pages/Sizings';
+import { ThemesPage } from './pages/Themes';
 import 'preshape/dist/style.css';
-
-export const widthContainer = '1152px';
-export const widthLarge = '1024px';
-export const widthMedium = '900px';
-export const widthSmall = '480px';
 
 const App = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const match = useMatchMedia(['800px']);
+  const isDesktop = match('800px');
 
   useEffect(() => {
     setMenuVisible(false);
-  }, [match('800px')]);
+  }, [isDesktop]);
 
   return (
     <ThemeProvider>
       <ModalManager>
         <Box flex="vertical" grow>
-          {!match('800px') && (
+          {!isDesktop && (
             <Box
               alignChildren="middle"
               backgroundColor="black"
@@ -55,7 +51,7 @@ const App = () => {
           </Modal>
 
           <Box flex="horizontal" grow>
-            {match('800px') && (
+            {isDesktop && (
               <Appear
                 animation="FadeSlideRight"
                 backgroundColor="background-shade-1"

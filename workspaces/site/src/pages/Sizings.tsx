@@ -37,13 +37,13 @@ import {
   sizeX8Px,
   sizeX8Rem,
 } from 'preshape';
-import Page from '../components/Page/Page';
-import PageSection from '../components/Page/PageSection';
-import PageSubtitle from '../components/Page/PageSubtitle';
-import SizingList from '../components/Sizing/SizingList';
+import { Page } from '../components/Page/Page';
+import { PageSection } from '../components/Page/PageSection';
+import { PageSubtitle } from '../components/Page/PageSubtitle';
+import { SizingList } from '../components/Sizing/SizingList';
 import { SizingProps } from '../components/Sizing/Sizing';
 
-export const variables: SizingProps[] = (
+const variables: SizingProps[] = (
   [
     ['x1', sizeX1Px, sizeX1Rem],
     ['x2', sizeX2Px, sizeX2Rem],
@@ -64,7 +64,7 @@ export const variables: SizingProps[] = (
   value: `${px}px / ${rem}rem`,
 }));
 
-export const borderVariables: SizingProps[] = (
+const borderVariables: SizingProps[] = (
   [
     ['x1', borderSizeX1Px, borderSizeX1Rem],
     ['x2', borderSizeX2Px, borderSizeX2Rem],
@@ -77,7 +77,7 @@ export const borderVariables: SizingProps[] = (
   value: `${px}px / ${rem}rem`,
 }));
 
-export const borderRadiusVariables: SizingProps[] = (
+const borderRadiusVariables: SizingProps[] = (
   [
     ['x1', borderRadiusSizeX1Px, borderRadiusSizeX1Rem],
     ['x2', borderRadiusSizeX2Px, borderRadiusSizeX2Rem],
@@ -109,7 +109,7 @@ const variableGroups = [
   },
 ];
 
-const SizingsPage = () => {
+export const SizingsPage = () => {
   return (
     <Page
       title="Sizings"
@@ -157,5 +157,3 @@ import { sizeX1Px, sizeX1Rem, borderRadiusSizeX1Px } from 'preshape';
     </Page>
   );
 };
-
-export default SizingsPage;

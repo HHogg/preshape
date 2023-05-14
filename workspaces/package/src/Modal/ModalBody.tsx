@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
-import { useModalContext } from './Modal';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
+import { useModalContext } from './useModalContext';
 
 /**
  * The body element of the Modal. This can be used as
@@ -9,10 +9,7 @@ import { useModalContext } from './Modal';
  */
 export interface ModalBodyProps extends BoxProps {}
 
-const ModalBody: React.ForwardRefRenderFunction<any, ModalBodyProps> = (
-  props,
-  ref
-) => {
+export const ModalBody = forwardRef<any, ModalBodyProps>((props, ref) => {
   const { paddingHorizontal, paddingVertical } = useModalContext();
 
   return (
@@ -27,6 +24,4 @@ const ModalBody: React.ForwardRefRenderFunction<any, ModalBodyProps> = (
       shrink
     />
   );
-};
-
-export default forwardRef(ModalBody);
+});

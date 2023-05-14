@@ -1,6 +1,6 @@
 import { Button, Buttons, Icons, Tooltip, TooltipProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramPlacement';
+import { Pictogram } from './pictograms/PictogramPlacement';
 
 const Item: CatalogueItem<{
   Tooltip: TooltipProps;

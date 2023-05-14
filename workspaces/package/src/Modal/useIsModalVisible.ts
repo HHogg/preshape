@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useModalManagerContext } from './ModalManager';
+import { useModalManagerContext } from './useModalManagerContext';
 
 const useIsModalVisible = (visible: boolean) => {
   const {
@@ -22,7 +22,12 @@ const useIsModalVisible = (visible: boolean) => {
         unregisterVisibleModal(uid);
       }
     };
-  }, [enableManagedModals, visible]);
+  }, [
+    registerVisibleModal,
+    unregisterVisibleModal,
+    enableManagedModals,
+    visible,
+  ]);
 
   return visible && (!uid || isModalVisible(uid));
 };

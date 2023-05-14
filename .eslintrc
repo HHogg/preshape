@@ -4,16 +4,21 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["plugin:react/recommended", "google", "eslint-config-prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "google",
+    "eslint-config-prettier",
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "react-refresh", "@typescript-eslint"],
   "settings": {
     "react": {
       "version": "detect"
@@ -23,6 +28,9 @@
     "guard-for-in": "off",
     "react/prop-types": "off",
     "react/no-unescaped-entities": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-refresh/only-export-components": "warn",
+    "react/display-name": "off",
     "require-jsdoc": "off",
     "valid-jsdoc": "off"
   }

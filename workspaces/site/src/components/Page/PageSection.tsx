@@ -1,9 +1,7 @@
 import { Box, BoxProps } from 'preshape';
 
-interface Props extends BoxProps {}
+type Props = BoxProps;
 
-const PageSection = (props: Props) => {
+export const PageSection = (props: Props) => {
   return <Box {...props} margin="x16" />;
 };
-
-export default PageSection;

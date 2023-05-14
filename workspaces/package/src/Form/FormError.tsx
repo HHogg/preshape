@@ -1,8 +1,8 @@
-import React, { forwardRef, useEffect, useState } from 'react';
-import Appear from '../Appear/Appear';
-import Box, { BoxProps } from '../Box/Box';
-import Text from '../Text/Text';
-import { useFormContext } from './FormProvider';
+import { forwardRef, useEffect, useState } from 'react';
+import { Appear } from '../Appear/Appear';
+import { Box, BoxProps } from '../Box/Box';
+import { Text } from '../Text/Text';
+import { useFormContext } from './useFormContext';
 
 /**
  * Form error component that is to be used with a parent Form
@@ -11,10 +11,7 @@ import { useFormContext } from './FormProvider';
  */
 export interface FormErrorProps extends BoxProps {}
 
-const FormError: React.ForwardRefRenderFunction<any, FormErrorProps> = (
-  props,
-  ref
-) => {
+export const FormError = forwardRef<any, FormErrorProps>((props, ref) => {
   const { children, name, ...rest } = props;
   const { getError } = useFormContext();
   const error = name && getError(name);
@@ -37,6 +34,4 @@ const FormError: React.ForwardRefRenderFunction<any, FormErrorProps> = (
       </Appear>
     </Box>
   );
-};
-
-export default forwardRef(FormError);
+});

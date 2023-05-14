@@ -1,8 +1,8 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { Variants } from 'framer-motion';
 import { transitionTimeFast, transitionTimingFunction } from '../variables';
-import Box, { BoxProps } from '../Box/Box';
-import Motion from '../Motion/Motion';
+import { Box, BoxProps } from '../Box/Box';
+import { Motion } from '../Motion/Motion';
 import './Toggle.css';
 
 const transition = {
@@ -55,80 +55,77 @@ export interface ToggleProps
   value: boolean;
 }
 
-const Toggle: React.ForwardRefRenderFunction<HTMLLabelElement, ToggleProps> = (
-  props,
-  ref
-) => {
-  const {
-    backgroundColor = 'accent-shade-4',
-    borderSize = 'x2',
-    iconOff,
-    iconOn,
-    onChange,
-    size = 16,
-    value,
-    ...rest
-  } = props;
+export const Toggle = forwardRef<HTMLLabelElement, ToggleProps>(
+  (props, ref) => {
+    const {
+      backgroundColor = 'accent-shade-4',
+      borderSize = 'x2',
+      iconOff,
+      iconOn,
+      onChange,
+      size = 16,
+      value,
+      ...rest
+    } = props;
 
-  const paddingAndBorder = 8; // TODO(hhogg): Do this better.
-  const knobSize = size - paddingAndBorder;
+    const paddingAndBorder = 8; // TODO(hhogg): Do this better.
+    const knobSize = size - paddingAndBorder;
 
-  return (
-    <Box {...rest} container flex="horizontal" ref={ref} tag="label">
-      <input
-        checked={value}
-        className="Toggle__input"
-        onChange={onChange && (() => onChange(!value))}
-        type="checkbox"
-      />
+    return (
+      <Box {...rest} container flex="horizontal" ref={ref} tag="label">
+        <input
+          checked={value}
+          className="Toggle__input"
+          onChange={onChange && (() => onChange(!value))}
+          type="checkbox"
+        />
 
-      <Motion
-        animate={(!!value).toString()}
-        backgroundColor={value ? backgroundColor : 'background-shade-3'}
-        borderSize={borderSize}
-        className="Toggle"
-        clickable
-        flex="vertical"
-        grow
-        height={size}
-        initial="false"
-        overflow="hidden"
-        transition={transition}
-        transitionProperty="background-color"
-        width={size * 2 - paddingAndBorder}
-      >
-        <Box container flex="vertical" grow>
-          <Motion
-            absolute="top-left"
-            backgroundColor="text-shade-1"
-            borderRadius="full"
-            className="Toggle__toggle"
-            height={knobSize}
-            textColor="background-shade-1"
-            transition={transition}
-            variants={variants}
-            width={knobSize}
-          >
+        <Motion
+          animate={(!!value).toString()}
+          backgroundColor={value ? backgroundColor : 'background-shade-3'}
+          borderSize={borderSize}
+          className="Toggle"
+          clickable
+          flex="vertical"
+          grow
+          height={size}
+          initial="false"
+          overflow="hidden"
+          transition={transition}
+          transitionProperty="background-color"
+          width={size * 2 - paddingAndBorder}
+        >
+          <Box container flex="vertical" grow>
             <Motion
-              absolute="center"
+              absolute="top-left"
+              backgroundColor="text-shade-1"
+              borderRadius="full"
+              className="Toggle__toggle"
+              height={knobSize}
+              textColor="background-shade-1"
               transition={transition}
-              variants={variantOff}
+              variants={variants}
+              width={knobSize}
             >
-              {iconOff}
-            </Motion>
+              <Motion
+                absolute="center"
+                transition={transition}
+                variants={variantOff}
+              >
+                {iconOff}
+              </Motion>
 
-            <Motion
-              absolute="center"
-              transition={transition}
-              variants={variantOn}
-            >
-              {iconOn}
+              <Motion
+                absolute="center"
+                transition={transition}
+                variants={variantOn}
+              >
+                {iconOn}
+              </Motion>
             </Motion>
-          </Motion>
-        </Box>
-      </Motion>
-    </Box>
-  );
-};
-
-export default forwardRef(Toggle);
+          </Box>
+        </Motion>
+      </Box>
+    );
+  }
+);

@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { RadioButton, RadioButtonProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramRadiobutton';
+import { Pictogram } from './pictograms/PictogramRadiobutton';
 
 const Item: CatalogueItem<{
   RadioButton: RadioButtonProps;

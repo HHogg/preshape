@@ -146,7 +146,7 @@ export interface BoxProps extends IntrinsicAttributes {
   zIndex?: CSSProperties['zIndex'];
 }
 
-const Box: React.ForwardRefRenderFunction<any, BoxProps> = (props, ref) => {
+export const Box = forwardRef<any, BoxProps>((props, ref) => {
   const {
     absolute,
     alignChildren,
@@ -289,6 +289,4 @@ const Box: React.ForwardRefRenderFunction<any, BoxProps> = (props, ref) => {
     },
     children
   );
-};
-
-export default forwardRef(Box);
+});

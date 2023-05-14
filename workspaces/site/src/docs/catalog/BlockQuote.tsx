@@ -1,6 +1,6 @@
 import { BlockQuote, BlockQuoteProps, Link, Text } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramBlockquote';
+import { Pictogram } from './pictograms/PictogramBlockquote';
 
 const Item: CatalogueItem<{
   BlockQuote: BlockQuoteProps;

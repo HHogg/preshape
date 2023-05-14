@@ -1,35 +1,12 @@
 import {
   CodeBlock,
   CodeBlockProps,
-  TypeCodeBlockLanguage,
   CodeWindowProps,
   CodeWindow,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramCode';
-import SnippetCss from './snippets/css.txt?raw';
-import SnippetGlsl from './snippets/glsl.txt?raw';
-import SnippetHtml from './snippets/html.txt?raw';
-import SnippetJavascript from './snippets/javascript.txt?raw';
-import SnippetJson from './snippets/json.txt?raw';
-import SnippetJsx from './snippets/jsx.txt?raw';
-import SnippetMarkdown from './snippets/markdown.txt?raw';
-import SnippetSvg from './snippets/svg.txt?raw';
-import SnippetTsx from './snippets/tsx.txt?raw';
-import SnippetTypescript from './snippets/ts.txt?raw';
-
-export const snippets: Record<TypeCodeBlockLanguage, string> = {
-  css: SnippetCss,
-  glsl: SnippetGlsl,
-  html: SnippetHtml,
-  javascript: SnippetJavascript,
-  json: SnippetJson,
-  jsx: SnippetJsx,
-  markdown: SnippetMarkdown,
-  svg: SnippetSvg,
-  tsx: SnippetTsx,
-  typescript: SnippetTypescript,
-};
+import { Pictogram } from './pictograms/PictogramCode';
+import { snippets } from './snippets';
 
 const Item: CatalogueItem<{
   CodeBlock: CodeBlockProps;
@@ -53,7 +30,7 @@ const Item: CatalogueItem<{
   showcase: {
     state: {
       CodeBlock: {
-        language: 'javascript',
+        language: 'typescript',
         wrap: true,
       },
       CodeWindow: {},

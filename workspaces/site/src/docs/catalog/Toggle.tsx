@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Icons, Toggle, ToggleProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramToggle';
+import { Pictogram } from './pictograms/PictogramToggle';
 
 const Item: CatalogueItem<{
   Toggle: ToggleProps;

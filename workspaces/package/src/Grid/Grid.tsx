@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { BoxProps } from '../Box/Box';
+import { Box, BoxProps } from '../Box/Box';
 import { TypeSize } from '../types';
 import './Grid.css';
 
@@ -28,7 +28,7 @@ export interface GridProps extends BoxProps {
   rowSize?: string | 'max-content' | 'min-content';
 }
 
-const Grid: React.ForwardRefRenderFunction<any, GridProps> = (props, ref) => {
+export const Grid = forwardRef<any, GridProps>((props, ref) => {
   const {
     alignChildren,
     className,
@@ -64,6 +64,4 @@ const Grid: React.ForwardRefRenderFunction<any, GridProps> = (props, ref) => {
   };
 
   return <Box {...rest} className={classes} ref={ref} style={style} />;
-};
-
-export default forwardRef(Grid);
+});

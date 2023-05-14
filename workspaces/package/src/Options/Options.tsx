@@ -1,5 +1,6 @@
-import React, { forwardRef } from 'react';
-import SelectInputLabels, {
+import { forwardRef } from 'react';
+import {
+  SelectInputLabels,
   SelectInputLabelsProps,
 } from '../SelectInputLabel/SelectInputLabels';
 
@@ -8,11 +9,6 @@ import SelectInputLabels, {
  */
 export interface OptionsProps extends SelectInputLabelsProps {}
 
-const Options: React.ForwardRefRenderFunction<any, OptionsProps> = (
-  props,
-  ref
-) => {
+export const Options = forwardRef<any, OptionsProps>((props, ref) => {
   return <SelectInputLabels {...props} ref={ref} />;
-};
-
-export default forwardRef(Options);
+});

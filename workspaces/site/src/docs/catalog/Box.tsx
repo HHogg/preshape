@@ -2,7 +2,7 @@ import omit from 'lodash.omit';
 import { Box, BoxProps } from 'preshape';
 import { CatalogueItem } from '..';
 import ThemeIcon from '../../components/ThemeIcon/ThemeIcon';
-import Pictogram from './pictograms/PictogramBase';
+import { Pictogram } from './pictograms/PictogramBase';
 
 const parentProps: (keyof BoxProps)[] = [
   'absolute',

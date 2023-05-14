@@ -1,8 +1,8 @@
-import React, { forwardRef, PointerEvent } from 'react';
-import { useModalContext } from './Modal';
-import Box, { BoxProps } from '../Box/Box';
+import { forwardRef, PointerEvent } from 'react';
+import { useModalContext } from './useModalContext';
+import { Box, BoxProps } from '../Box/Box';
 import * as Icons from '../Icon';
-import Link from '../Link/Link';
+import { Link } from '../Link/Link';
 import classNames from 'classnames';
 
 /**
@@ -24,10 +24,7 @@ export interface ModalHeaderProps extends BoxProps {
   sticky?: boolean;
 }
 
-const ModalHeader: React.ForwardRefRenderFunction<any, ModalHeaderProps> = (
-  props,
-  ref
-) => {
+export const ModalHeader = forwardRef<any, ModalHeaderProps>((props, ref) => {
   const { children, closeIconSize = '24px', sticky, ...rest } = props;
   const { onClose, paddingHorizontal, paddingVertical } = useModalContext();
   const classes = classNames('Modal__header', {
@@ -66,6 +63,4 @@ const ModalHeader: React.ForwardRefRenderFunction<any, ModalHeaderProps> = (
       )}
     </Box>
   );
-};
-
-export default forwardRef(ModalHeader);
+});

@@ -1,15 +1,13 @@
-import React, { forwardRef } from 'react';
-import Text, { TextProps } from '../Text/Text';
+import { forwardRef } from 'react';
+import { Text, TextProps } from '../Text/Text';
 
 /**
- *
+ * A styled component to be rendered around
+ * CodeBlocks to give them a window-like appearance.
  */
 export interface CodeWindowProps extends TextProps {}
 
-const CodeWindow: React.ForwardRefRenderFunction<any, CodeWindowProps> = (
-  props,
-  ref
-) => {
+export const CodeWindow = forwardRef<any, CodeWindowProps>((props, ref) => {
   const { children, borderRadius = 'x3', padding = 'x6', ...rest } = props;
 
   return (
@@ -32,6 +30,4 @@ const CodeWindow: React.ForwardRefRenderFunction<any, CodeWindowProps> = (
       </Text>
     </Text>
   );
-};
-
-export default forwardRef(CodeWindow);
+});

@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { BoxProps } from '../Box/Box';
+import { Box, BoxProps } from '../Box/Box';
 import './Text.css';
 
 export type TypeTextSize =
@@ -45,7 +45,7 @@ export interface TextProps extends Omit<BoxProps, 'size'> {
   weak?: boolean;
 }
 
-const Text: React.ForwardRefRenderFunction<any, TextProps> = (props, ref) => {
+export const Text = forwardRef<any, TextProps>((props, ref) => {
   const {
     align,
     breakOn,
@@ -81,6 +81,4 @@ const Text: React.ForwardRefRenderFunction<any, TextProps> = (props, ref) => {
   });
 
   return <Box {...rest} className={classes} ref={ref} />;
-};
-
-export default forwardRef(Text);
+});

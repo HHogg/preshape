@@ -1,6 +1,6 @@
 import { Link, LinkProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramLink';
+import { Pictogram } from './pictograms/PictogramLink';
 
 const Item: CatalogueItem<{
   Link: LinkProps;

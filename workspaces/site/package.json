@@ -8,6 +8,9 @@
     "dev": "vite --host localhost --port 4001",
     "build": "yarn run clean && yarn run build:client && yarn run build:server && yarn run ssg",
     "build:client": "vite build --outDir dist/client",
+    "build:svgs": "yarn build:svgs:pictograms && yarn build:svgs:logo",
+    "build:svgs:logo": "yarn svgr ./src/assets/preshape-icon.svg --out-dir ./src/components/Logo --ext tsx --config-file .svgrrc.logo.cjs",
+    "build:svgs:pictograms": "yarn svgr -d ./src/docs/catalog/pictograms ./src/assets/pictogram-svgs --ext tsx --config-file .svgrrc.pictograms.cjs",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "ssg": "node prerender"
   },
@@ -21,6 +24,7 @@
     "typedoc": "^0.24.6"
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.17",
     "@types/lodash.omit": "^4.5.6",

@@ -1,6 +1,6 @@
 import { Icons, InputLabel, Range, RangeProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramRange';
+import { Pictogram } from './pictograms/PictogramRange';
 
 const Item: CatalogueItem<{
   Range: RangeProps;

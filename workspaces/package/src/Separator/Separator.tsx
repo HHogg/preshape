@@ -1,13 +1,10 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
 import './Separator.css';
 
 export interface SeparatorProps extends BoxProps {}
 
-const Separator: React.ForwardRefRenderFunction<any, SeparatorProps> = (
-  props,
-  ref
-) => {
+export const Separator = forwardRef<any, SeparatorProps>((props, ref) => {
   const { borderColor = 'text-shade-1', borderSize = 'x1', ...rest } = props;
 
   return (
@@ -19,6 +16,4 @@ const Separator: React.ForwardRefRenderFunction<any, SeparatorProps> = (
       ref={ref}
     />
   );
-};
-
-export default forwardRef(Separator);
+});

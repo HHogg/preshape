@@ -1,33 +1,15 @@
-// import { useLocalStorage, TypeTheme, useTheme } from 'preshape';
-import React, { PropsWithChildren, createContext, useContext } from 'react';
+import { PropsWithChildren } from 'react';
 import { TypeTheme } from '../types';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { useTheme } from '../hooks';
-import { ThemeColorMap, themeDay, themes, themesOpposite } from '../variables';
-
-type ThemeContextProps = {
-  colors: ThemeColorMap;
-  onChange: (theme: TypeTheme) => void;
-  theme: TypeTheme;
-  themeOpposite: TypeTheme;
-};
+import { themes, themesOpposite } from '../variables';
+import { ThemeContext } from './useThemeContext';
 
 type ThemeProviderProps = {
   initialTheme?: TypeTheme;
 };
 
-const ThemeContext = createContext<ThemeContextProps>({
-  colors: themeDay,
-  onChange: () => {},
-  theme: 'day',
-  themeOpposite: 'night',
-});
-
-export const useThemeContext = () => {
-  return useContext(ThemeContext);
-};
-
-function ThemeProvider({
+export function ThemeProvider({
   children,
   initialTheme = 'day',
 }: PropsWithChildren<ThemeProviderProps>) {
@@ -55,5 +37,3 @@ function ThemeProvider({
     </ThemeContext.Provider>
   );
 }
-
-export default ThemeProvider;

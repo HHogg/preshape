@@ -1,6 +1,6 @@
 import { Spinner, SpinnerProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramSpinner';
+import { Pictogram } from './pictograms/PictogramSpinner';
 
 const Item: CatalogueItem<{
   Spinner: SpinnerProps;

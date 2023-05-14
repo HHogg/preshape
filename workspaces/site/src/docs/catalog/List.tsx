@@ -1,6 +1,6 @@
 import { List, ListProps, ListItem, ListItemProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramList';
+import { Pictogram } from './pictograms/PictogramList';
 
 const Item: CatalogueItem<{
   List: ListProps;

@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
 
 /**
  * The content element of the tab. This should be placed
@@ -7,10 +7,7 @@ import Box, { BoxProps } from '../Box/Box';
  */
 export interface TabContentProps extends BoxProps {}
 
-const TabContent: React.ForwardRefRenderFunction<any, TabContentProps> = (
-  props,
-  ref
-) => {
+export const TabContent = forwardRef<any, TabContentProps>((props, ref) => {
   const { backgroundColor = 'background-shade-1', ...rest } = props;
 
   return (
@@ -21,6 +18,4 @@ const TabContent: React.ForwardRefRenderFunction<any, TabContentProps> = (
       ref={ref}
     />
   );
-};
-
-export default forwardRef(TabContent);
+});

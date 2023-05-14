@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import classnames from 'classnames';
-import Text, { TextProps } from '../Text/Text';
+import { Text, TextProps } from '../Text/Text';
 import './Link.css';
 
 /**
@@ -20,10 +20,7 @@ export interface LinkProps extends TextProps {
   to?: string;
 }
 
-const Link: React.ForwardRefRenderFunction<HTMLAnchorElement, LinkProps> = (
-  props,
-  ref
-) => {
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const { active, to = '', isTextLink, ...rest } = props;
   const classes = classnames('Link', {
     'Link--active': active,
@@ -50,6 +47,4 @@ const Link: React.ForwardRefRenderFunction<HTMLAnchorElement, LinkProps> = (
       tag="a"
     />
   );
-};
-
-export default forwardRef(Link);
+});

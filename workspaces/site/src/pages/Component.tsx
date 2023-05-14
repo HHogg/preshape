@@ -2,15 +2,15 @@ import { useParams } from 'react-router-dom';
 import { Box, CodeBlock, CodeWindow, useMatchMedia } from 'preshape';
 import { useState } from 'react';
 import { getCatalogItem } from '../docs';
-import Page from '../components/Page/Page';
-import PageSection from '../components/Page/PageSection';
-import PageSubtitle from '../components/Page/PageSubtitle';
+import { Page } from '../components/Page/Page';
+import { PageSection } from '../components/Page/PageSection';
+import { PageSubtitle } from '../components/Page/PageSubtitle';
 import Showcase from '../components/Showcase/Showcase';
 import ModuleDocumentation from '../components/Documentation/ModuleDocumentation';
 import PageChangeButton from '../components/Page/PageChangeButton';
 import { getModuleSummary } from '../components/Documentation/documentation';
 
-const ComponentPage = () => {
+export const ComponentPage = () => {
   const params = useParams<'id'>();
   const id = params.id?.toLocaleLowerCase();
   const item = getCatalogItem(id);
@@ -92,5 +92,3 @@ const ComponentPage = () => {
     </Page>
   );
 };
-
-export default ComponentPage;

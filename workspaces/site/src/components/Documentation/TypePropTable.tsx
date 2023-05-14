@@ -11,7 +11,7 @@ import { getTag } from './documentation';
 import TypePropTableRow from './TypePropTableRow';
 import { APIItemProps } from './ComponentDocumentation';
 
-interface Props extends APIItemProps {}
+type Props = APIItemProps
 
 const TypePropTable = (props: Props) => {
   const { reflection, onStateChange, state } = props;

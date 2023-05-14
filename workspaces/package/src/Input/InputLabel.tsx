@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
-import Text from '../Text/Text';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
+import { Text } from '../Text/Text';
 
 /**
  * The label element of the input. This should be placed
@@ -17,10 +17,7 @@ export interface InputLabelProps extends Omit<BoxProps, 'label'> {
   label?: string | JSX.Element;
 }
 
-const InputLabel: React.ForwardRefRenderFunction<any, InputLabelProps> = (
-  props,
-  ref
-) => {
+export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
   const {
     children,
     description,
@@ -66,6 +63,4 @@ const InputLabel: React.ForwardRefRenderFunction<any, InputLabelProps> = (
       )}
     </Box>
   );
-};
-
-export default forwardRef(InputLabel);
+});

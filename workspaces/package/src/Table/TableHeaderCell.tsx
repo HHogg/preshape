@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
-import Link from '../Link/Link';
-import Text, { TextProps } from '../Text/Text';
+import { forwardRef } from 'react';
+import { Link } from '../Link/Link';
+import { Text, TextProps } from '../Text/Text';
 
 /**
  * A table header cell is a child of the TableHeader component. It should be
@@ -13,10 +13,10 @@ export interface TableHeaderCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableHeaderCell: React.ForwardRefRenderFunction<
+export const TableHeaderCell = forwardRef<
   HTMLTableCellElement,
   TableHeaderCellProps
-> = (props, ref) => {
+>((props, ref) => {
   const {
     children,
     paddingHorizontal = 'x3',
@@ -40,6 +40,4 @@ const TableHeaderCell: React.ForwardRefRenderFunction<
       {sortable ? <Link active={sorted}>{children}</Link> : children}
     </Text>
   );
-};
-
-export default forwardRef(TableHeaderCell);
+});

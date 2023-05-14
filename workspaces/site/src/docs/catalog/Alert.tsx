@@ -1,6 +1,6 @@
 import { Alert, AlertProps, Text } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramAlert';
+import { Pictogram } from './pictograms/PictogramAlert';
 
 const Item: CatalogueItem<{
   Alert: AlertProps;

@@ -14,7 +14,7 @@ import {
   TableRowProps,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramTable';
+import { Pictogram } from './pictograms/PictogramTable';
 
 const headers = [
   'Burger',

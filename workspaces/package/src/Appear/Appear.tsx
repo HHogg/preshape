@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { Transition } from 'framer-motion';
 import animations from './animations';
 import { transitionTimeFast } from '../variables';
 import { BoxProps } from '../Box/Box';
-import Motion, { MotionsProps } from '../Motion/Motion';
+import { Motion, MotionsProps } from '../Motion/Motion';
 
 export type TypeAnimation =
   | 'Expand'
@@ -69,10 +69,7 @@ export interface AppearProps
   visibleInitially?: boolean;
 }
 
-const Appear: React.ForwardRefRenderFunction<any, AppearProps> = (
-  props,
-  ref
-) => {
+export const Appear = forwardRef<any, AppearProps>((props, ref) => {
   const {
     animation = 'FadeSlideUp',
     delay = 0,
@@ -109,6 +106,4 @@ const Appear: React.ForwardRefRenderFunction<any, AppearProps> = (
       variants={variants}
     />
   );
-};
-
-export default forwardRef(Appear);
+});

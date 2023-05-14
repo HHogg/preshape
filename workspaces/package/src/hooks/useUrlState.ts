@@ -163,6 +163,7 @@ function useUrlState<S>(props: Props<S>) {
 
   useEffect(() => {
     setSearch(getPartialUrlState());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return {

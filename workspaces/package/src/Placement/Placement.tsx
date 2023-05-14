@@ -1,21 +1,11 @@
-import React, { FC, PropsWithChildren, createContext, useContext } from 'react';
-import usePlacement, {
-  UsePlacementOptions,
-  UsePlacementResult,
-} from './usePlacement';
+import { FC, PropsWithChildren } from 'react';
+import usePlacement, { UsePlacementOptions } from './usePlacement';
+import { PlacementContext } from './usePlacementContext';
 
 /**
  * The placement context.
  */
 export interface PlacementProps extends UsePlacementOptions {}
-
-const PlacementContext = createContext<UsePlacementResult>(
-  {} as UsePlacementResult
-);
-
-export const usePlacementContext = () => {
-  return useContext(PlacementContext);
-};
 
 const Placement: FC<PropsWithChildren<PlacementProps>> = (props) => {
   const { children, ...rest } = props;

@@ -1,7 +1,8 @@
-import React, { forwardRef } from 'react';
-import InputWrapper, { InputWrapperProps } from './InputWrapper';
-import Text, { TextProps } from '../Text/Text';
-import { useFormContext, useFormRegisterField } from '../Form/FormProvider';
+import { forwardRef } from 'react';
+import { InputWrapper, InputWrapperProps } from './InputWrapper';
+import { Text, TextProps } from '../Text/Text';
+import { useFormContext } from '../Form/useFormContext';
+import { useFormRegisterField } from '../Form/useFormRegisterField';
 import './Input.css';
 
 /**
@@ -11,10 +12,10 @@ export interface InputProps
   extends Omit<InputWrapperProps, 'size'>,
     TextProps {}
 
-const Input: React.ForwardRefRenderFunction<
+export const Input = forwardRef<
   HTMLInputElement | HTMLTextAreaElement,
   InputProps
-> = (props, ref) => {
+>((props, ref) => {
   const {
     addonEnd,
     addonStart,
@@ -72,6 +73,4 @@ const Input: React.ForwardRefRenderFunction<
       />
     </InputWrapper>
   );
-};
-
-export default forwardRef(Input);
+});

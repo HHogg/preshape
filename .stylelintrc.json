@@ -1,7 +1,8 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "block-opening-brace-space-before": "always-multi-line",
-    "declaration-block-single-line-max-declarations": 2
+    "custom-property-pattern": null,
+    "declaration-block-single-line-max-declarations": 2,
+    "selector-class-pattern": null
   }
 }
