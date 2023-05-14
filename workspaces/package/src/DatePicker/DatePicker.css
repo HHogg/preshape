@@ -1,0 +1,46 @@
+.DatePicker__day {
+  cursor: pointer;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.DatePicker__day--week-start {
+  border-top-left-radius: var(--size--x8);
+  border-bottom-left-radius: var(--size--x8);
+}
+
+.DatePicker__day--week-end {
+  border-top-right-radius: var(--size--x8);
+  border-bottom-right-radius: var(--size--x8);
+}
+
+.DatePicker__day--disabled {
+  color: var(--color-text-shade-4);
+  cursor: default;
+}
+
+.DatePicker__day-number {
+  background-color: transparent;
+}
+
+.DatePicker__day--today .DatePicker__day-number {
+  background-color: var(--color-background-shade-3);
+}
+
+.DatePicker__day--selected-middle {
+  background-color: var(--color-accent-shade-1);
+}
+
+.DatePicker__day--selected-start:not(.DatePicker__day--selected-end) {
+  background: linear-gradient(to right, transparent 50%, var(--color-accent-shade-1) 50%, var(--color-accent-shade-1));
+}
+
+.DatePicker__day--selected-end:not(.DatePicker__day--selected-start) {
+  background: linear-gradient(to left, transparent 50%, var(--color-accent-shade-1) 50%, var(--color-accent-shade-1));
+}
+
+.DatePicker__day--selected-start .DatePicker__day-number,
+.DatePicker__day--selected-end .DatePicker__day-number {
+  background-color: var(--color-accent-shade-3);
+  color: var(--color-white);
+}
