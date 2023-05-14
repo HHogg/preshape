@@ -31,7 +31,13 @@ export interface BoxProps extends IntrinsicAttributes {
    */
   alignChildren?: 'start' | 'middle' | 'end';
   /** Horizontal alignment of children flex items. */
-  alignChildrenHorizontal?: 'start' | 'middle' | 'end' | 'around' | 'between';
+  alignChildrenHorizontal?:
+    | 'stretch'
+    | 'start'
+    | 'middle'
+    | 'end'
+    | 'around'
+    | 'between';
   /** Vertical alignment of children flex items. */
   alignChildrenVertical?: 'start' | 'middle' | 'end' | 'around' | 'between';
   /** Flex item alignment property (changes with parent direction). */
