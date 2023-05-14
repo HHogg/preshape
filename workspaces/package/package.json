@@ -28,7 +28,7 @@
     "@floating-ui/react": "^0.24.0",
     "classnames": "^2.2.5",
     "feather-icons": "^4.28.0",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^10.12.10",
     "lodash.omit": "^4.5.0",
     "normalize.css": "^8.0.0",
     "open-color": "^1.6.3",
