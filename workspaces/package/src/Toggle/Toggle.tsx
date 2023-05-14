@@ -1,7 +1,7 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import { Variants } from 'framer-motion';
 import { transitionTimeFast, transitionTimingFunction } from '../variables';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import Motion from '../Motion/Motion';
 import './Toggle.css';
 
@@ -38,7 +38,11 @@ const variantOn: Variants = {
   },
 };
 
-export interface ToggleProps extends BoxProps {
+/**
+ * A toggle component that can be used to indicate on/off states.
+ */
+export interface ToggleProps
+  extends Omit<BoxProps, 'onChange' | 'size' | 'value'> {
   /** Icon to show when the toggle is in an off state */
   iconOff?: JSX.Element;
   /** Icon to show when the toggle is in an on state */
@@ -51,10 +55,10 @@ export interface ToggleProps extends BoxProps {
   value: boolean;
 }
 
-const Toggle: RefForwardingComponent<
-  HTMLLabelElement,
-  Attributes<HTMLLabelElement, ToggleProps>
-> = (props, ref) => {
+const Toggle: React.ForwardRefRenderFunction<HTMLLabelElement, ToggleProps> = (
+  props,
+  ref
+) => {
   const {
     backgroundColor = 'accent-shade-4',
     borderSize = 'x2',

@@ -1,15 +1,18 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import { sizeX3Px } from '../variables';
-import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './Label.css';
 
+/**
+ * Label component to be used for displaying text in a
+ * pill-like format.
+ */
 export interface LabelProps extends TextProps {}
 
-const Label: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, LabelProps>
-> = (props, ref) => {
+const Label: React.ForwardRefRenderFunction<HTMLDivElement, LabelProps> = (
+  props,
+  ref
+) => {
   const {
     backgroundColor = 'text-shade-1',
     borderRadius = sizeX3Px,

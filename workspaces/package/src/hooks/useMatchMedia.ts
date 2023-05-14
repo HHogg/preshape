@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from 'react';
 
 interface MatchPatternConfig {
@@ -26,7 +24,7 @@ const getListeners = (queries: string[], handler: Handler) =>
 
 const getMatchQueryIndex = (queries: string[], listeners: Listener[]) => {
   for (let i = queries.length; i--; ) {
-    if (listeners[i].listener.matches) {
+    if (listeners[i]?.listener.matches) {
       return queries.indexOf(listeners[i].query);
     }
   }
@@ -46,39 +44,29 @@ export default (queries: string[]) => {
       ({ media }) => media === event.media
     );
 
-    if (listener && hasMounted.current) {
+    if (listener) {
       setHitIndex(getMatchQueryIndex(queries, listeners.current));
     }
   };
 
-  const hasMounted = useRef(false);
   const listeners = useRef<Listener[]>(
-    getListeners(queries, handleQueryChange)
+    typeof window === 'undefined'
+      ? []
+      : getListeners(queries, handleQueryChange)
   );
   const [hitIndex, setHitIndex] = useState(
     getMatchQueryIndex(queries, listeners.current)
   );
 
   useEffect(() => {
-    if (!hasMounted.current) {
-      hasMounted.current = true;
-    } else {
-      removeListeners(listeners.current, handleQueryChange);
-      listeners.current = getListeners(queries, handleQueryChange);
-      setHitIndex(getMatchQueryIndex(queries, listeners.current));
-    }
+    removeListeners(listeners.current, handleQueryChange);
+    listeners.current = getListeners(queries, handleQueryChange);
+    setHitIndex(getMatchQueryIndex(queries, listeners.current));
 
     return () => {
       removeListeners(listeners.current, handleQueryChange);
     };
   }, [...queries]);
-
-  useEffect(
-    () => () => {
-      hasMounted.current = false;
-    },
-    []
-  );
 
   function match(pattern: string, fallback?: never): boolean;
   function match(pattern: MatchPatternConfig, fallback?: string): any;

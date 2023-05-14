@@ -1,11 +1,6 @@
-import React, {
-  forwardRef,
-  RefForwardingComponent,
-  useEffect,
-  useState,
-} from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import Appear from '../Appear/Appear';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
 import { useFormContext } from './FormProvider';
 
@@ -16,10 +11,10 @@ import { useFormContext } from './FormProvider';
  */
 export interface FormErrorProps extends BoxProps {}
 
-const FormError: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, FormErrorProps>
-> = (props, ref) => {
+const FormError: React.ForwardRefRenderFunction<any, FormErrorProps> = (
+  props,
+  ref
+) => {
   const { children, name, ...rest } = props;
   const { getError } = useFormContext();
   const error = name && getError(name);

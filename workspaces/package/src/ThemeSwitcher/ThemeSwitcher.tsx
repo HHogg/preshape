@@ -21,6 +21,7 @@ const ThemeControls: RefForwardingComponent<
       iconOff={<Icons.Sun size={size - 12} />}
       iconOn={<Icons.Moon size={size - 12} />}
       onChange={(value) => onChange(value ? 'night' : 'day')}
+      ref={ref}
       size={size}
       value={theme === 'night'}
     />

@@ -1,22 +1,19 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import './Alert.css';
 
 /**
  * An alerting component for bringing attention to a message.
  */
-export interface AlertProps extends BoxProps {
+export interface AlertProps extends Omit<BoxProps, 'fill'> {
   /** Color that is applied to the Alert to indicate the type of action */
   color: 'accent' | 'negative' | 'positive';
   /** Applies a filled in style to the alert. */
   fill?: boolean;
 }
 
-const Alert: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, AlertProps>
-> = (props, ref) => {
+const Alert: React.ForwardRefRenderFunction<any, AlertProps> = (props, ref) => {
   const {
     borderRadius = 'x2',
     borderSize = 'x2',

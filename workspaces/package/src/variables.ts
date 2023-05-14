@@ -1,5 +1,5 @@
 import color from 'open-color';
-import { TypeTheme } from './Box/Box';
+import { TypeTheme } from './types';
 
 const hexToRGBA = (hex: string, a: number): string => {
   const r = parseInt(hex.slice(1, 3), 16);
@@ -83,7 +83,23 @@ export const colorNegativeShade5 = color.pink[7];
 
 export const colorHighlight = color.yellow[2];
 
-export const themeDay = {
+export type ThemeColorMapKey =
+  | 'colorBackgroundShade1'
+  | 'colorBackgroundShade2'
+  | 'colorBackgroundShade3'
+  | 'colorTextShade1'
+  | 'colorTextShade2'
+  | 'colorTextShade3'
+  | 'colorTextShade4'
+  | 'colorAccentShade1'
+  | 'colorAccentShade2'
+  | 'colorAccentShade3'
+  | 'colorAccentShade4'
+  | 'colorAccentShade5';
+
+export type ThemeColorMap = Record<ThemeColorMapKey, string>;
+
+export const themeDay: ThemeColorMap = {
   colorBackgroundShade1: colorLightShade1,
   colorBackgroundShade2: colorLightShade2,
   colorBackgroundShade3: colorLightShade3,
@@ -98,7 +114,7 @@ export const themeDay = {
   colorAccentShade5: colorAccent1Shade5,
 };
 
-export const themeNight = {
+export const themeNight: ThemeColorMap = {
   colorBackgroundShade1: colorDarkShade1,
   colorBackgroundShade2: colorDarkShade2,
   colorBackgroundShade3: colorDarkShade3,
@@ -113,7 +129,7 @@ export const themeNight = {
   colorAccentShade5: colorAccent2Shade5,
 };
 
-export const themes: Record<TypeTheme, { [key: string]: string }> = {
+export const themes: Record<TypeTheme, ThemeColorMap> = {
   day: themeDay,
   night: themeNight,
 };
@@ -123,7 +139,7 @@ export const themesOpposite: Record<TypeTheme, TypeTheme> = {
   night: 'day',
 };
 
-export const themePropNameCSSMap = {
+export const themePropNameCSSMap: ThemeColorMap = {
   colorBackgroundShade1: 'color-background-shade-1',
   colorBackgroundShade2: 'color-background-shade-2',
   colorBackgroundShade3: 'color-background-shade-3',

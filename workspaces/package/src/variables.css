@@ -20,8 +20,8 @@
   --border-radius-size--x2: var(--size--x2);
   --border-radius-size--x3: var(--size--x3);
 
-  --color-white: #FFFEFC;
-  --color-black: #1E1B18;
+  --color-white: #fffefc;
+  --color-black: #1e1b18;
 
   --color-dark-shade-1: var(--oc-gray-9);
   --color-dark-shade-2: var(--oc-gray-8);

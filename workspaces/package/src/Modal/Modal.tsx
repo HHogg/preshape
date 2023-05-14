@@ -2,7 +2,6 @@ import React, {
   createContext,
   forwardRef,
   PointerEvent,
-  RefForwardingComponent,
   useContext,
   useEffect,
   useRef,
@@ -11,7 +10,8 @@ import React, {
 import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import { useMatchMedia } from '../hooks';
-import Box, { Attributes, BoxProps, TypeColor, TypeSize } from '../Box/Box';
+import { TypeColor, TypeSize } from '../types';
+import Box, { BoxProps } from '../Box/Box';
 import Appear, { TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
 import useIsModalVisible from './useIsModalVisible';
@@ -56,7 +56,7 @@ export const useModalContext = () => useContext(ModalContext);
  * an overlay, animations, behaviour to disable body scroll when
  * it is visible.
  */
-export interface ModalProps extends BoxProps {
+export interface ModalProps extends Omit<BoxProps, 'size'> {
   /**
    * Animation for the Modal window. See Appear component.
    *
@@ -75,14 +75,20 @@ export interface ModalProps extends BoxProps {
   /**
    * Sets the background color of the overlay that sits
    * under the modal and on top of the main UI.
+   *
+   * @default "overlay"
    */
   overlayBackgroundColor?: TypeColor;
   /**
    * Flag to enable/disable clicking on the overlay to close the modal.
+   *
+   * @default true
    */
   overlayBackgroundCloseOnClick?: boolean;
   /**
    * The maximum width of the dialog box.
+   *
+   * @default "auto"
    */
   maxWidth?: string;
   /**
@@ -100,10 +106,13 @@ export interface ModalProps extends BoxProps {
   /**
    * Set the size of the modal, increasing the space around
    * the content accordingly.
+   *
+   * @default "x2"
    */
   size?: ModalSize;
   /**
    * Unrenders the modal when not visible
+   *
    * @defaults true
    */
   unrender?: boolean;
@@ -115,13 +124,11 @@ export interface ModalProps extends BoxProps {
   visible: boolean;
 }
 
-const Modal: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, ModalProps>
-> = (props, ref) => {
+const Modal: React.ForwardRefRenderFunction<any, ModalProps> = (props, ref) => {
   const {
     animation = 'Fade',
     backgroundColor = 'background-shade-1',
+    borderRadius = 'x3',
     children,
     fullscreen,
     ignoreModalManager,
@@ -185,52 +192,56 @@ const Modal: RefForwardingComponent<
     return null;
   }
 
-  return createPortal(
-    <ModalContext.Provider
-      value={{ onClose, paddingHorizontal, paddingVertical }}
-    >
-      <Box
-        {...rest}
-        alignChildren="middle"
-        fixed="edge-to-edge"
-        flex="vertical"
-        padding={isGreaterThanMaxWidth ? margin : undefined}
-        ref={ref}
-        style={{ pointerEvents: actuallyVisible ? undefined : 'none' }}
-      >
-        <Appear
-          absolute="edge-to-edge"
-          animation="Fade"
-          backgroundColor={overlayBackgroundColor}
-          onAnimationComplete={handleOnAnimateComplete}
-          onPointerUp={overlayBackgroundCloseOnClick ? onClose : undefined}
-          visible={actuallyVisible}
-        />
-
-        <Appear
-          animation={animation}
-          backgroundColor={backgroundColor}
-          borderRadius={isGreaterThanMaxWidth ? 'x3' : undefined}
-          className={classes}
-          container
-          flex="vertical"
-          grow={fullscreen || (isMaxWidthEnabled && !match(maxWidth))}
-          maxHeight="100vh"
-          maxWidth={
-            (isMaxWidthEnabled && maxWidth) ||
-            (fullscreen && '100%') ||
-            undefined
-          }
-          overflow="auto"
-          ref={refModal}
-          shrink
-          visible={actuallyVisible}
+  return (
+    <>
+      {createPortal(
+        <ModalContext.Provider
+          value={{ onClose, paddingHorizontal, paddingVertical }}
         >
-          {children}
-        </Appear>
-      </Box>
-    </ModalContext.Provider>,
-    document.body
+          <Box
+            {...rest}
+            alignChildren="middle"
+            fixed="edge-to-edge"
+            flex="vertical"
+            padding={isGreaterThanMaxWidth ? margin : undefined}
+            ref={ref}
+            style={{ pointerEvents: actuallyVisible ? undefined : 'none' }}
+          >
+            <Appear
+              absolute="edge-to-edge"
+              animation="Fade"
+              backgroundColor={overlayBackgroundColor}
+              onAnimationComplete={handleOnAnimateComplete}
+              onPointerUp={overlayBackgroundCloseOnClick ? onClose : undefined}
+              visible={actuallyVisible}
+            />
+
+            <Appear
+              animation={animation}
+              backgroundColor={backgroundColor}
+              borderRadius={isGreaterThanMaxWidth ? borderRadius : undefined}
+              className={classes}
+              container
+              flex="vertical"
+              grow={fullscreen || (isMaxWidthEnabled && !match(maxWidth))}
+              maxHeight="100vh"
+              maxWidth={
+                (isMaxWidthEnabled && maxWidth) ||
+                (fullscreen && '100%') ||
+                undefined
+              }
+              overflow="auto"
+              ref={refModal}
+              shrink
+              visible={actuallyVisible}
+            >
+              {children}
+            </Appear>
+          </Box>
+        </ModalContext.Provider>,
+        document.body
+      )}
+    </>
   );
 };
 

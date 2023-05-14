@@ -14,8 +14,6 @@
 }
 
 .Alert--fill {
-  /* color: var(--color-white); */
-
   &.Alert--accent { background-color: var(--color-accent-shade-1); }
   &.Alert--negative { background-color: var(--color-negative-shade-1); }
   &.Alert--positive { background-color: var(--color-positive-shade-1); }

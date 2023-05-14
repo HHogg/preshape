@@ -1,14 +1,16 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes } from '../Box/Box';
+import React, { forwardRef } from 'react';
 import Text, { TextProps } from '../Text/Text';
 import './Table.css';
 
+/**
+ * The root element used for constructing a table.
+ */
 export interface TableProps extends TextProps {}
 
-const Table: RefForwardingComponent<
-  HTMLTableElement,
-  Attributes<HTMLTableElement, TableProps>
-> = (props, ref) => {
+const Table: React.ForwardRefRenderFunction<HTMLTableElement, TableProps> = (
+  props,
+  ref
+) => {
   return <Text {...props} className="Table" ref={ref} tag="table" />;
 };
 

@@ -1,12 +1,8 @@
-import React, {
-  forwardRef,
-  InputHTMLAttributes,
-  RefForwardingComponent,
-} from 'react';
+import React, { forwardRef } from 'react';
 
-const RadioButtonIndicator: RefForwardingComponent<
+const RadioButtonIndicator: React.ForwardRefRenderFunction<
   HTMLInputElement,
-  InputHTMLAttributes<HTMLInputElement>
+  JSX.IntrinsicElements['input']
 > = (props, ref) => {
   return (
     <div className="RadioButton">

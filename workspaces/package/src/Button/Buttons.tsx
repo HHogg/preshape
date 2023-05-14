@@ -1,6 +1,7 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { Attributes, BoxProps, TypeSize } from '../Box/Box';
+import { TypeSize } from '../types';
+import Box, { BoxProps } from '../Box/Box';
 
 /**
  * Button container component that joins or separates child components.
@@ -16,10 +17,10 @@ export interface ButtonsProps extends BoxProps {
   joined?: boolean;
 }
 
-const Buttons: RefForwardingComponent<
-  HTMLElement,
-  Attributes<HTMLElement, ButtonsProps>
-> = (props, ref) => {
+const Buttons: React.ForwardRefRenderFunction<any, ButtonsProps> = (
+  props,
+  ref
+) => {
   const { flex = 'horizontal', gap = 'x1', joined, ...rest } = props;
   const classes = classnames('Buttons', {
     'Buttons--joined-horizontal': joined && flex === 'horizontal',

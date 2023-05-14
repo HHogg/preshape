@@ -1,15 +1,20 @@
-import { useEffect, useState } from "react";
-import { useModalManagerContext } from "./ModalManager";
+import { useEffect, useState } from 'react';
+import { useModalManagerContext } from './ModalManager';
 
 const useIsModalVisible = (visible: boolean) => {
-  const { enableManagedModals, isModalVisible, registerVisibleModal, unregisterVisibleModal } = useModalManagerContext();
+  const {
+    enableManagedModals,
+    isModalVisible,
+    registerVisibleModal,
+    unregisterVisibleModal,
+  } = useModalManagerContext();
   const [uid, setUid] = useState<string>();
 
   useEffect(() => {
     let uid: string;
 
     if (enableManagedModals && visible) {
-      setUid(uid = registerVisibleModal());
+      setUid((uid = registerVisibleModal()));
     }
 
     return () => {

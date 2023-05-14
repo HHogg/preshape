@@ -1,10 +1,13 @@
 import React, { forwardRef } from 'react';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import classnames from 'classnames';
-import { Attributes } from '../Box/Box';
 import Text, { TextProps } from '../Text/Text';
 import './Link.css';
 
+/**
+ * A link component that can be used to navigate to other pages
+ * or sections of the page.
+ */
 export interface LinkProps extends TextProps {
   /** Retained active state, indicated with styling */
   active?: boolean;
@@ -17,36 +20,36 @@ export interface LinkProps extends TextProps {
   to?: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Link = forwardRef<any, Attributes<HTMLAnchorElement, LinkProps>>(
-  (props, ref) => {
-    const { active, to = '', isTextLink, ...rest } = props;
-    const classes = classnames('Link', {
-      'Link--active': active,
-      'Link--text-link': isTextLink,
-    });
+const Link: React.ForwardRefRenderFunction<HTMLAnchorElement, LinkProps> = (
+  props,
+  ref
+) => {
+  const { active, to = '', isTextLink, ...rest } = props;
+  const classes = classnames('Link', {
+    'Link--active': active,
+    'Link--text-link': isTextLink,
+  });
 
-    const href = useHref(to);
-    const internalOnClick = useLinkClickHandler(to);
-    const originalOnClick = rest.onClick;
+  const href = useHref(to);
+  const internalOnClick = useLinkClickHandler(to);
+  const originalOnClick = rest.onClick;
 
-    if (to) {
-      rest.onClick = (event) => {
-        if (originalOnClick) originalOnClick(event);
-        internalOnClick(event);
-      };
-    }
-
-    return (
-      <Text
-        {...rest}
-        className={classes}
-        href={to ? href : rest.href}
-        ref={ref}
-        tag="a"
-      />
-    );
+  if (to) {
+    rest.onClick = (event) => {
+      if (originalOnClick) originalOnClick(event);
+      internalOnClick(event);
+    };
   }
-);
 
-export default Link;
+  return (
+    <Text
+      {...rest}
+      className={classes}
+      href={to ? href : rest.href}
+      ref={ref}
+      tag="a"
+    />
+  );
+};
+
+export default forwardRef(Link);

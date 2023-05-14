@@ -1,19 +1,18 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 import FormContextProvider, { FormProviderProps } from './FormProvider';
 
 /**
  * Form component with added abilities to communicate field-by-field
  * error pattern through context.
  */
-export interface FormProps extends BoxProps, Omit<FormProviderProps, 'form'> {
+export interface FormProps
+  extends Omit<BoxProps, 'form'>,
+    Omit<FormProviderProps, 'form'> {
   form?: FormProviderProps['form'];
 }
 
-const Form: RefForwardingComponent<
-  HTMLFormElement,
-  Attributes<HTMLFormElement, FormProps>
-> = (
+const Form: React.ForwardRefRenderFunction<HTMLFormElement, FormProps> = (
   {
     form,
     validateOnlyDirty,

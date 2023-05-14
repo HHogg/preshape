@@ -1,51 +1,48 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes, TypeBorderSize, TypeSize } from '../Box/Box';
+import React, { forwardRef } from 'react';
 import CheckBoxIndicator from './CheckBoxIndicator';
-import SelectInputLabel from '../SelectInputLabel/SelectInputLabel';
+import SelectInputLabel, {
+  SelectInputLabelProps,
+} from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';
 
-export interface CheckBoxProps {
-  /** Controls the border size */
-  borderSize?: TypeBorderSize;
-  /** A styled disabled state that disables all interactions */
-  disabled?: boolean;
-  /** @Ignore */
-  margin?: TypeSize;
-  /** @Ignore */
-  padding?: TypeSize;
-  /** @Ignore */
-  paddingHorizontal?: TypeSize;
-  /** @Ignore */
-  paddingVertical?: TypeSize;
-}
+/**
+ * Standard toggling checkbox input for selecting multiple choices.
+ */
+export interface CheckBoxProps extends Omit<SelectInputLabelProps, 'label'> {}
 
-const CheckBox: RefForwardingComponent<
+const CheckBox: React.ForwardRefRenderFunction<
   HTMLInputElement,
-  Attributes<HTMLInputElement, CheckBoxProps>
+  CheckBoxProps
 > = (props, ref) => {
   const {
-    borderSize,
     children,
+    checked,
+    onChange,
+    name,
     disabled,
-    margin,
-    padding,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
+    readOnly,
     ...rest
   } = props;
 
   return (
     <SelectInputLabel
-      borderSize={borderSize}
+      {...rest}
       className="CheckBox__label"
       disabled={disabled}
       label={children}
-      margin={margin}
-      padding={padding}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
     >
-      <CheckBoxIndicator {...rest} disabled={disabled} ref={ref} />
+      <CheckBoxIndicator
+        checked={checked}
+        disabled={disabled}
+        name={name}
+        onChange={onChange}
+        readOnly={readOnly}
+        ref={ref}
+      />
     </SelectInputLabel>
   );
 };

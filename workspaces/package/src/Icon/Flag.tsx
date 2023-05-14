@@ -1,9 +1,8 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box from '../Box/Box';
+import { Props as IconProps } from './index';
 
-const Icon: RefForwardingComponent<SVGSVGElement, Attributes<Omit<SVGSVGElement, 'display'>, BoxProps & {
-  size?: string | number;
-}>> = (props, ref) => {
+const Icon: React.ForwardRefRenderFunction<SVGSVGElement, IconProps> = (props, ref) => {
   const {
     size = '1rem',
     ...rest

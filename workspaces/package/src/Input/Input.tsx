@@ -1,48 +1,19 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes, BoxProps } from '../Box/Box';
-import InputWrapper from './InputWrapper';
+import React, { forwardRef } from 'react';
+import InputWrapper, { InputWrapperProps } from './InputWrapper';
 import Text, { TextProps } from '../Text/Text';
-import useMatchingProps from '../hooks/useMatchingProps';
-import './Input.css';
 import { useFormContext, useFormRegisterField } from '../Form/FormProvider';
+import './Input.css';
 
-export interface InputProps extends TextProps {
-  /**
-   * Addon that appears before the Input
-   */
-  addonEnd?: JSX.Element;
-  /**
-   * Addon that appears after the Input
-   */
-  addonStart?: JSX.Element;
-  /**
-   * Sets styling to indicate the input is invalid.
-   */
-  invalid?: boolean;
-}
+/**
+ * Styled input component with addons and validation
+ */
+export interface InputProps
+  extends Omit<InputWrapperProps, 'size'>,
+    TextProps {}
 
-// TODO(hhogg): Find out how to just grab the keys of the BoxProps type.
-const forwardKeys: (keyof BoxProps)[] = [
-  'borderColor',
-  'borderBottom',
-  'borderLeft',
-  'borderRight',
-  'borderTop',
-  'elevate',
-  'height',
-  'margin',
-  'maxHeight',
-  'maxWidth',
-  'minHeight',
-  'minWidth',
-  'textColor',
-  'theme',
-  'width',
-];
-
-const Input: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLInputElement | HTMLTextAreaElement, InputProps>
+const Input: React.ForwardRefRenderFunction<
+  HTMLInputElement | HTMLTextAreaElement,
+  InputProps
 > = (props, ref) => {
   const {
     addonEnd,
@@ -54,23 +25,22 @@ const Input: RefForwardingComponent<
     gap = 'x3',
     invalid,
     name,
+    onChange,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
+    placeholder,
     size = 'x3',
+    readOnly,
     tag = 'input',
+    value,
     ...rest
   } = props;
   const { getError } = useFormContext();
   const refFormElement = useFormRegisterField(name);
 
-  const [propsMatching, propsUnmatching] = useMatchingProps<
-    InputProps,
-    BoxProps
-  >(rest, forwardKeys);
-
   return (
     <InputWrapper
-      {...propsMatching}
+      {...rest}
       addonEnd={addonEnd}
       addonStart={addonStart}
       alignChildrenVertical="middle"
@@ -86,16 +56,19 @@ const Input: RefForwardingComponent<
       ref={ref}
     >
       <Text
-        {...propsUnmatching}
         basis="0"
         className="Input__element"
         disabled={disabled}
         grow
+        onChange={onChange}
+        placeholder={placeholder}
         name={name}
+        readOnly={readOnly}
         ref={refFormElement}
         size={size}
         strong
         tag={tag}
+        value={value}
       />
     </InputWrapper>
   );

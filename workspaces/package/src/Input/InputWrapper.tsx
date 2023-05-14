@@ -1,7 +1,12 @@
 import classnames from 'classnames';
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 
+/**
+ * A wrapper component for the Input component, provided for
+ * custom input implementations but does not need to be used
+ * with Input components form this package.
+ */
 export interface InputWrapperProps extends BoxProps {
   /**
    * Addon that appears before the Input
@@ -17,10 +22,10 @@ export interface InputWrapperProps extends BoxProps {
   invalid?: boolean;
 }
 
-const InputWrapper: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, InputWrapperProps>
-> = (props, ref) => {
+const InputWrapper: React.ForwardRefRenderFunction<any, InputWrapperProps> = (
+  props,
+  ref
+) => {
   const {
     addonEnd,
     addonStart,

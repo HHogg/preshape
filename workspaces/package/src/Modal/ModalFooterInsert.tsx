@@ -1,18 +1,24 @@
 import React from 'react';
 import Appear from '../Appear/Appear';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import { useModalContext } from './Modal';
 import ModalPaddingOffset from './ModalPaddingOffset';
 
+/**
+ * A footer insert component that can be used inside a ModalFooter,
+ * and can be animated in and out.
+ */
 export interface ModalFooterInsertProps extends BoxProps {
+  /**
+   * Flag to toggle the visibility of the footer section.
+   */
   visible?: boolean;
 }
 
-const ModalFooterInsert = ({
-  children,
-  visible,
-  ...rest
-}: Attributes<HTMLDivElement, ModalFooterInsertProps>) => {
+const ModalFooterInsert: React.ForwardRefRenderFunction<
+  any,
+  ModalFooterInsertProps
+> = ({ children, visible, ...rest }, ref) => {
   const { paddingHorizontal, paddingVertical } = useModalContext();
 
   return (

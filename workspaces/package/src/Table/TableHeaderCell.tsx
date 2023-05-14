@@ -1,8 +1,11 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes } from '../Box/Box';
+import React, { forwardRef } from 'react';
 import Link from '../Link/Link';
 import Text, { TextProps } from '../Text/Text';
 
+/**
+ * A table header cell is a child of the TableHeader component. It should be
+ * placed in a TableRow component.
+ */
 export interface TableHeaderCellProps extends TextProps {
   /** Applies styling indication that this column is sortable */
   sortable?: boolean;
@@ -10,9 +13,9 @@ export interface TableHeaderCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableHeaderCell: RefForwardingComponent<
-  HTMLTableHeaderCellElement,
-  Attributes<HTMLTableHeaderCellElement, TableHeaderCellProps>
+const TableHeaderCell: React.ForwardRefRenderFunction<
+  HTMLTableCellElement,
+  TableHeaderCellProps
 > = (props, ref) => {
   const {
     children,

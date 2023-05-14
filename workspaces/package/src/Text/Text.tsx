@@ -1,6 +1,6 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { Attributes, BoxProps, TypeAllElementTags } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import './Text.css';
 
 export type TypeTextSize =
@@ -13,14 +13,10 @@ export type TypeTextSize =
   | 'x7'
   | 'x8';
 
-const getInlineTag = (props: TextProps): TypeAllElementTags =>
-  (props.strong && 'strong') ||
-  (props.emphasis && 'em') ||
-  (props.subscript && 'sub') ||
-  (props.superscript && 'sup') ||
-  'span';
-
-export interface TextProps extends BoxProps {
+/**
+ * A text component that can be used to display text.
+ */
+export interface TextProps extends Omit<BoxProps, 'size'> {
   /** Text alignment */
   align?: 'start' | 'middle' | 'end';
   /** How the block of text should break onto new lines. */
@@ -51,10 +47,7 @@ export interface TextProps extends BoxProps {
   weak?: boolean;
 }
 
-const Text: RefForwardingComponent<
-  HTMLElement,
-  Attributes<HTMLElement, TextProps>
-> = (props, ref) => {
+const Text: React.ForwardRefRenderFunction<any, TextProps> = (props, ref) => {
   const {
     align,
     breakOn,
@@ -62,13 +55,11 @@ const Text: RefForwardingComponent<
     ellipsis,
     emphasis,
     heading,
-    inline,
     monospace,
     size,
     strong,
     subscript,
     superscript,
-    tag,
     titlecase,
     uppercase,
     weak,
@@ -91,9 +82,7 @@ const Text: RefForwardingComponent<
     [`Text--size-${size}`]: size,
   });
 
-  const finalTag = tag || (inline && getInlineTag(props)) || 'div';
-
-  return <Box {...rest} className={classes} ref={ref} tag={finalTag} />;
+  return <Box {...rest} className={classes} ref={ref} />;
 };
 
 export default forwardRef(Text);

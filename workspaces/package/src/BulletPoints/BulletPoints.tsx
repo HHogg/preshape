@@ -1,8 +1,12 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import './BulletPoints.css';
 
+/**
+ * A vertical list component for listing your todos,
+ * ordered and chaos modes included.
+ */
 export interface BulletPointsProps extends BoxProps {
   /**
    * Replaces the default unordered list styling with
@@ -11,9 +15,9 @@ export interface BulletPointsProps extends BoxProps {
   numbered?: boolean;
 }
 
-const BulletPoints: RefForwardingComponent<
-  HTMLUListElement,
-  Attributes<HTMLUListElement, BulletPointsProps>
+const BulletPoints: React.ForwardRefRenderFunction<
+  HTMLUListElement | HTMLOListElement,
+  BulletPointsProps
 > = (props, ref) => {
   const { numbered, ...rest } = props;
   const classes = classnames('BulletPoints', {

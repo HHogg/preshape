@@ -1,11 +1,14 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import Box, { Attributes, BoxProps } from '../Box/Box';
+import React, { forwardRef } from 'react';
+import Box, { BoxProps } from '../Box/Box';
 
+/**
+ * The child component of BulletPoints to be used for each point.
+ */
 export interface BulletPointProps extends BoxProps {}
 
-const BulletPoint: RefForwardingComponent<
+const BulletPoint: React.ForwardRefRenderFunction<
   HTMLLIElement,
-  Attributes<HTMLLIElement, BulletPointProps>
+  BulletPointProps
 > = (props, ref) => {
   const { children, ...rest } = props;
 
