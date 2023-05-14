@@ -1,4 +1,4 @@
-import { Appear, Box, Text, ThemeSwitcher, useMatchMedia } from 'preshape';
+import { Appear, Box, Text, useMatchMedia } from 'preshape';
 import { PropsWithChildren } from 'react';
 import PageSummary, { PageSummaryConfig } from './PageSummary';
 
