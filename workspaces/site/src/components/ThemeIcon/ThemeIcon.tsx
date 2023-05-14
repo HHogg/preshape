@@ -1,10 +1,8 @@
-import React, { FC, useContext } from 'react';
-import { Icons } from 'preshape';
-import { RootContext } from '../Root';
+import { FC } from 'react';
+import { Icons, useThemeContext } from 'preshape';
 
-const ThemeIcon: FC<{}> = (props) => {
-  const { theme } = useContext(RootContext);
-
+const ThemeIcon: FC<Icons.Props> = (props) => {
+  const { theme } = useThemeContext();
   return theme === 'day' ? <Icons.Sun {...props} /> : <Icons.Moon {...props} />;
 };
 

@@ -12,19 +12,17 @@
     "workspaces/**"
   ],
   "scripts": {
-    "build": "yarn workspaces run build",
+    "build": "yarn workspace preshape build && yarn workspace site build",
+    "dev": "yarn workspace preshape build && concurrently \"yarn workspace preshape run dev\" \"yarn workspace site run dev\"",
     "format": "prettier --write .",
     "lint": "yarn lint:js && yarn lint:css",
     "lint:css": "stylelint workspaces/site/src/**/*.css workspaces/package/src/**/*.css",
     "lint:js": "eslint \"workspaces/**/src/**/*.tsx\" \"workspaces/**/src/**/*.ts\" --fix",
     "deploy:lib": "semantic-release",
-    "deploy:site": "firebase deploy",
-    "start": "concurrently \"yarn workspace site run start\" \"yarn workspace preshape run start\""
+    "deploy:site": "firebase deploy"
   },
   "devDependencies": {
     "@parcel/optimizer-data-url": "^2.0.1",
-    "@parcel/transformer-glsl": "^2.0.1",
-    "@parcel/transformer-inline-string": "^2.0.1",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/commit-analyzer": "^9.0.1",
     "@semantic-release/git": "^10.0.0",
@@ -38,18 +36,12 @@
     "eslint-plugin-react": "^7.26.1",
     "firebase-tools": "^9.12.1",
     "prettier": "^2.4.1",
-    "semantic-release": "^19.0.3",
-    "semantic-release-cli": "^5.4.4",
+    "semantic-release": "^21.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-standard": "^22.0.0",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.4.4"
-  },
-  "resolutions": {
-    "fast-glob": "3.1.1",
-    "remark": "11.0.2"
-  },
-  "marked": null
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
 }

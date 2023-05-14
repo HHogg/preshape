@@ -1,0 +1,20 @@
+.Alert--accent {
+  border-color: var(--color-accent-shade-2);
+  color: var(--color-accent-shade-4);
+}
+
+.Alert--negative {
+  border-color: var(--color-negative-shade-2);
+  color: var(--color-negative-shade-4);
+}
+
+.Alert--positive {
+  border-color: var(--color-positive-shade-2);
+  color: var(--color-positive-shade-4);
+}
+
+.Alert--fill {
+  &.Alert--accent { background-color: var(--color-accent-shade-1); }
+  &.Alert--negative { background-color: var(--color-negative-shade-1); }
+  &.Alert--positive { background-color: var(--color-positive-shade-1); }
+}

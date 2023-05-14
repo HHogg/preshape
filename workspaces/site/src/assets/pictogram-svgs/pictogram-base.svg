@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram-base</title>
+    <g id="pictogram-base" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="4">
+        <path d="M40,24 L208,24 C212.418278,24 216,27.581722 216,32 L216,64 C216,68.418278 212.418278,72 208,72 L40,72 C35.581722,72 32,68.418278 32,64 L32,32 C32,27.581722 35.581722,24 40,24 Z" id="Rectangle-Copy-10" stroke="#000000" stroke-width="2"></path>
+    </g>
+</svg>
