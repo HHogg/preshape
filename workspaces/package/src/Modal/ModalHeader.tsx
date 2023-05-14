@@ -17,6 +17,11 @@ export interface ModalHeaderProps extends BoxProps {
    * the onClose callback.
    */
   closeIconSize?: string;
+  /**
+   * Flag to toggle the stickiness of the header so it
+   * remains visible when the ModalBody is scrolled.
+   */
+  sticky?: boolean;
 }
 
 const ModalHeader: React.ForwardRefRenderFunction<any, ModalHeaderProps> = (
@@ -25,6 +30,9 @@ const ModalHeader: React.ForwardRefRenderFunction<any, ModalHeaderProps> = (
 ) => {
   const { children, closeIconSize = '24px', sticky, ...rest } = props;
   const { onClose, paddingHorizontal, paddingVertical } = useModalContext();
+  const classes = classNames('Modal__header', {
+    'Modal__header--sticky': sticky,
+  });
 
   const handleCloseClick = (event: PointerEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
@@ -40,7 +48,7 @@ const ModalHeader: React.ForwardRefRenderFunction<any, ModalHeaderProps> = (
       borderBottom
       borderColor="background-shade-3"
       borderSize="x2"
-      className="Modal__header"
+      className={classes}
       flex="horizontal"
       gap="x6"
       ref={ref}

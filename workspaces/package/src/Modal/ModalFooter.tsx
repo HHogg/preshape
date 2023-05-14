@@ -1,19 +1,29 @@
 import React, { forwardRef } from 'react';
 import Box, { BoxProps } from '../Box/Box';
 import { useModalContext } from './Modal';
+import classNames from 'classnames';
 
 /**
  * The footer element of the Modal. This can be used as
  * for button and other action elements.
  * It should be placed directly under the ModalBody component.
  */
-export interface ModalFooterProps extends BoxProps {}
+export interface ModalFooterProps extends BoxProps {
+  /**
+   * Flag to toggle the stickiness of the header so it
+   * remains visible when the ModalBody is scrolled.
+   */
+  sticky?: boolean;
+}
 
 const ModalFooter: React.ForwardRefRenderFunction<any, ModalFooterProps> = (
   { sticky, ...props },
   ref
 ) => {
   const { paddingHorizontal, paddingVertical } = useModalContext();
+  const classes = classNames('Modal__footer', {
+    'Modal__footer--sticky': sticky,
+  });
 
   return (
     <Box
@@ -23,7 +33,7 @@ const ModalFooter: React.ForwardRefRenderFunction<any, ModalFooterProps> = (
       borderColor="background-shade-3"
       borderSize="x2"
       borderTop
-      className="Modal__footer"
+      className={classes}
       ref={ref}
     />
   );
