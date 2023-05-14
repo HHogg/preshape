@@ -4,6 +4,8 @@
 dist
 lib
 node_modules
+package-lock.json
 public
+tsconfig.tsbuildinfo
 yarn-error.log
 workspaces/site/src/assets/documentation.json
