@@ -12,6 +12,8 @@
 .Grid--gap-horizontal-x10 { grid-column-gap: var(--size--x10); }
 .Grid--gap-horizontal-x12 { grid-column-gap: var(--size--x12); }
 .Grid--gap-horizontal-x16 { grid-column-gap: var(--size--x16); }
+.Grid--gap-horizontal-x24 { grid-column-gap: var(--size--x24); }
+.Grid--gap-horizontal-x32 { grid-column-gap: var(--size--x32); }
 
 .Grid--gap-vertical-x1  { grid-row-gap: var(--size--x1); }
 .Grid--gap-vertical-x2  { grid-row-gap: var(--size--x2); }
@@ -22,6 +24,8 @@
 .Grid--gap-vertical-x10 { grid-row-gap: var(--size--x10); }
 .Grid--gap-vertical-x12 { grid-row-gap: var(--size--x12); }
 .Grid--gap-vertical-x16 { grid-row-gap: var(--size--x16); }
+.Grid--gap-vertical-x24 { grid-row-gap: var(--size--x24); }
+.Grid--gap-vertical-x32 { grid-row-gap: var(--size--x32); }
 
 .Grid--align-start  { justify-content: start; }
 .Grid--align-middle { justify-content: center; }
