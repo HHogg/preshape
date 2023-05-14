@@ -251,6 +251,7 @@
 .Box--flex-align-self-middle { align-self: center; }
 .Box--flex-align-self-end    { align-self: flex-end; }
 
+.Box--flex-horizontal.Box--flex-align-horz-stretch { justify-content: stretch; }
 .Box--flex-horizontal.Box--flex-align-horz-start   { justify-content: flex-start; }
 .Box--flex-horizontal.Box--flex-align-horz-middle  { justify-content: center; }
 .Box--flex-horizontal.Box--flex-align-horz-end     { justify-content: flex-end; }
