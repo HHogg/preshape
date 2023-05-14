@@ -12,7 +12,7 @@ import {
   Box,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramTabs';
+import { Pictogram } from './pictograms/PictogramTabs';
 
 const icons = [Icons.Star, Icons.Sun, Icons.Moon];
 

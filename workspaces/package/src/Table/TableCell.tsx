@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import Text, { TextProps } from '../Text/Text';
+import { forwardRef } from 'react';
+import { Text, TextProps } from '../Text/Text';
 
 /**
  * A table cell is a child of the Table component. It should be
@@ -10,28 +10,25 @@ export interface TableCellProps extends TextProps {
   sorted?: boolean;
 }
 
-const TableCell: React.ForwardRefRenderFunction<
-  HTMLTableCellElement,
-  TableCellProps
-> = (props, ref) => {
-  const {
-    paddingHorizontal = 'x3',
-    paddingVertical = 'x2',
-    sorted,
-    ...rest
-  } = props;
+export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(
+  (props, ref) => {
+    const {
+      paddingHorizontal = 'x3',
+      paddingVertical = 'x2',
+      sorted,
+      ...rest
+    } = props;
 
-  return (
-    <Text
-      {...rest}
-      className="Table__cell"
-      paddingHorizontal={paddingHorizontal}
-      paddingVertical={paddingVertical}
-      ref={ref}
-      strong={sorted}
-      tag="td"
-    />
-  );
-};
-
-export default forwardRef(TableCell);
+    return (
+      <Text
+        {...rest}
+        className="Table__cell"
+        paddingHorizontal={paddingHorizontal}
+        paddingVertical={paddingVertical}
+        ref={ref}
+        strong={sorted}
+        tag="td"
+      />
+    );
+  }
+);

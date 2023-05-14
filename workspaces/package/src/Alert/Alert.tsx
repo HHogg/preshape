@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { BoxProps } from '../Box/Box';
+import { Box, BoxProps } from '../Box/Box';
 import './Alert.css';
 
 /**
@@ -13,7 +13,7 @@ export interface AlertProps extends Omit<BoxProps, 'fill'> {
   fill?: boolean;
 }
 
-const Alert: React.ForwardRefRenderFunction<any, AlertProps> = (props, ref) => {
+export const Alert = forwardRef<any, AlertProps>((props, ref) => {
   const {
     borderRadius = 'x2',
     borderSize = 'x2',
@@ -35,6 +35,4 @@ const Alert: React.ForwardRefRenderFunction<any, AlertProps> = (props, ref) => {
       ref={ref}
     />
   );
-};
-
-export default forwardRef(Alert);
+});

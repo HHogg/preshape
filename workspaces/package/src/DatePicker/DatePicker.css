@@ -24,7 +24,7 @@
 }
 
 .DatePicker__day--today .DatePicker__day-number {
-  background-color: var(--color-background-shade-3);
+  background-color: var(--color-negative-shade-2);
 }
 
 .DatePicker__day--selected-middle {

@@ -1,8 +1,8 @@
 import { Box, Grid, Link, Text } from 'preshape';
 import { catalogueListing } from '../docs';
-import Page from '../components/Page/Page';
+import { Page } from '../components/Page/Page';
 
-const ComponentsPage = () => {
+export const ComponentsPage = () => {
   return (
     <Page
       description="A collection of React Components to provide the building blocks for UIs."
@@ -49,5 +49,3 @@ const ComponentsPage = () => {
     </Page>
   );
 };
-
-export default ComponentsPage;

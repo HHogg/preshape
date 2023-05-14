@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Box, Text, TextProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramText';
+import { Pictogram } from './pictograms/PictogramText';
 
 const Item: CatalogueItem<{
   Text: TextProps;

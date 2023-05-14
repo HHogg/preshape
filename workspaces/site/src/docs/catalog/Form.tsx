@@ -15,7 +15,7 @@ import {
   FormValidateError,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramForm';
+import { Pictogram } from './pictograms/PictogramForm';
 
 type FormState = {
   q1: string;

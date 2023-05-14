@@ -6,10 +6,10 @@ import {
   themes,
   useThemeContext,
 } from 'preshape';
-import Page from '../components/Page/Page';
-import PageSection from '../components/Page/PageSection';
-import PageSubtitle from '../components/Page/PageSubtitle';
-import ColorList from '../components/Color/ColorList';
+import { Page } from '../components/Page/Page';
+import { PageSection } from '../components/Page/PageSection';
+import { PageSubtitle } from '../components/Page/PageSubtitle';
+import { ColorList } from '../components/Color/ColorList';
 import { ColorProps } from '../components/Color/Color';
 
 const paletteTheme = (theme: TypeTheme): ColorProps[] => [
@@ -107,7 +107,7 @@ const paletteTheme = (theme: TypeTheme): ColorProps[] => [
   },
 ];
 
-export const themeGrouped = (theme: TypeTheme) => [
+const themeGrouped = (theme: TypeTheme) => [
   {
     name: 'Background',
     description: 'Colors used for backgrounds.',
@@ -129,7 +129,7 @@ export const themeGrouped = (theme: TypeTheme) => [
   },
 ];
 
-const ThemesPage = () => {
+export const ThemesPage = () => {
   const { theme, colors } = useThemeContext();
 
   return (
@@ -222,5 +222,3 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
     </Page>
   );
 };
-
-export default ThemesPage;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { usePlacementContext } from './Placement';
+import { FC, ReactElement } from 'react';
+import { usePlacementContext } from './usePlacementContext';
 
 /**
  * A component that renders one of two elements based on the open state of the
@@ -9,19 +9,17 @@ export interface PlacementOpenConditionProps {
   /**
    * The content to render when the placement is open
    */
-  opened: React.ReactElement;
+  opened: ReactElement;
   /**
    * The content to render when the placement is closed
    */
-  closed: React.ReactElement;
+  closed: ReactElement;
 }
 
-const PlacementOpenCondition: React.FC<PlacementOpenConditionProps> = ({
+export const PlacementOpenCondition: FC<PlacementOpenConditionProps> = ({
   opened,
   closed,
 }) => {
   const { context } = usePlacementContext();
   return context.open ? opened : closed;
 };
-
-export default PlacementOpenCondition;

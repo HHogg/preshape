@@ -5,7 +5,7 @@ import {
   BulletPointsProps,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramBulletpoints';
+import { Pictogram } from './pictograms/PictogramBulletpoints';
 
 const Item: CatalogueItem<{
   BulletPoint: BulletPointProps;

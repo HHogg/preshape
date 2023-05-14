@@ -6,9 +6,10 @@ type MenuItemProps = BoxProps & {
   to?: string;
 };
 
-const MenuItem = ({ children, nested, to, ...props }: MenuItemProps) => {
-  const pathName = to && `${to}`;
-  const active = !!(pathName && useMatch(pathName));
+export const MenuItem = ({ children, nested, to, ...props }: MenuItemProps) => {
+  const pathName = to ? `${to}` : '';
+  const matches = useMatch(pathName);
+  const active = !!(pathName && matches);
 
   return (
     <Box paddingLeft={nested ? 'x3' : 'x0'}>
@@ -38,5 +39,3 @@ const MenuItem = ({ children, nested, to, ...props }: MenuItemProps) => {
     </Box>
   );
 };
-
-export default MenuItem;

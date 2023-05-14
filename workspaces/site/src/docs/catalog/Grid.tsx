@@ -1,7 +1,7 @@
 import { Box, Grid, GridProps, GridItem, GridItemProps } from 'preshape';
 import { CatalogueItem } from '..';
 import ThemeIcon from '../../components/ThemeIcon/ThemeIcon';
-import Pictogram from './pictograms/PictogramGrid';
+import { Pictogram } from './pictograms/PictogramGrid';
 
 const Item: CatalogueItem<{
   Grid: GridProps;

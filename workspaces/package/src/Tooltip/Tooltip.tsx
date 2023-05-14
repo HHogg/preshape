@@ -1,12 +1,13 @@
-import React, { ReactNode, forwardRef } from 'react';
-import Text from '../Text/Text';
+import { ReactNode, forwardRef } from 'react';
+import { Text } from '../Text/Text';
 import Placement, { PlacementProps } from '../Placement/Placement';
-import PlacementReference from '../Placement/PlacementReference';
-import PlacementContent, {
+import { PlacementReference } from '../Placement/PlacementReference';
+import {
+  PlacementContent,
   PlacementContentProps,
 } from '../Placement/PlacementContent';
 import { UsePlacementTrigger } from '../Placement/usePlacement';
-import { useThemeContext } from '../ThemeSwitcher/ThemeProvider';
+import { useThemeContext } from '../ThemeSwitcher/useThemeContext';
 import { themesOpposite } from '../variables';
 
 export interface TooltipProps extends Omit<PlacementContentProps, 'content'> {
@@ -28,10 +29,7 @@ export interface TooltipProps extends Omit<PlacementContentProps, 'content'> {
   visible?: boolean;
 }
 
-const Tooltip: React.ForwardRefRenderFunction<any, TooltipProps> = (
-  props,
-  ref
-) => {
+export const Tooltip = forwardRef<any, TooltipProps>((props, ref) => {
   const {
     backgroundColor = 'background-shade-1',
     children,
@@ -69,6 +67,4 @@ const Tooltip: React.ForwardRefRenderFunction<any, TooltipProps> = (
       </PlacementContent>
     </Placement>
   );
-};
-
-export default forwardRef(Tooltip);
+});

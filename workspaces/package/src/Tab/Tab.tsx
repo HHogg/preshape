@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { BoxProps } from '../Box/Box';
-import Link from '../Link/Link';
+import { Box, BoxProps } from '../Box/Box';
+import { Link } from '../Link/Link';
 
 /**
  * A tab component that can be used to display a tab. It should
@@ -12,7 +12,7 @@ export interface TabProps extends BoxProps {
   active?: boolean;
 }
 
-const Tab: React.ForwardRefRenderFunction<any, TabProps> = (props, ref) => {
+export const Tab = forwardRef<any, TabProps>((props, ref) => {
   const {
     active,
     backgroundColor = 'background-shade-1',
@@ -37,6 +37,4 @@ const Tab: React.ForwardRefRenderFunction<any, TabProps> = (props, ref) => {
       </Box>
     </Box>
   );
-};
-
-export default forwardRef(Tab);
+});

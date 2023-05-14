@@ -7,7 +7,7 @@ interface SizingListProps extends BoxProps {
   sizings: SizingProps[];
 }
 
-const SizingList = ({
+export const SizingList = ({
   name,
   description,
   sizings,
@@ -31,5 +31,3 @@ const SizingList = ({
     </Box>
   );
 };
-
-export default SizingList;

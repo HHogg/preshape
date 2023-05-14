@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
 import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
 import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import typescript from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
 import style from 'react-syntax-highlighter/dist/esm/styles/prism/synthwave84';
-import Text, { TextProps } from '../Text/Text';
+import { Text, TextProps } from '../Text/Text';
 import './CodeBlock.css';
 
 SyntaxHighlighter.registerLanguage('css', css);
@@ -30,10 +30,7 @@ export interface CodeBlockProps extends TextProps {
   language: TypeCodeBlockLanguage;
 }
 
-const CodeBlock: React.ForwardRefRenderFunction<any, CodeBlockProps> = (
-  props,
-  ref
-) => {
+export const CodeBlock = forwardRef<any, CodeBlockProps>((props, ref) => {
   const { children, language, ...rest } = props;
 
   return (
@@ -50,6 +47,4 @@ const CodeBlock: React.ForwardRefRenderFunction<any, CodeBlockProps> = (
       </SyntaxHighlighter>
     </Text>
   );
-};
-
-export default forwardRef(CodeBlock);
+});

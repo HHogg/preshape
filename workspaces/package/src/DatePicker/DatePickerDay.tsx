@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import { DateTime, Interval } from 'luxon';
 import React from 'react';
-import Box, { BoxProps } from '../Box/Box';
+import { Box, BoxProps } from '../Box/Box';
 
 interface Props extends Omit<BoxProps, 'dateTime' | 'onSelect'> {
   dateTime: DateTime;

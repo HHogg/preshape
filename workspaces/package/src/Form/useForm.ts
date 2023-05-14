@@ -1,4 +1,4 @@
-import { useState, useEffect, SetStateAction } from 'react';
+import { useState, useEffect, SetStateAction, useCallback } from 'react';
 import { FormState } from './FormProvider';
 
 export type FormValidateError<T, E> = Partial<Record<keyof T, E>>;
@@ -46,14 +46,14 @@ const useForm = <T extends Record<string, any>, E = string>({
     return isDirty || !!dirtyFields[field];
   };
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setState(initial);
     setIsDirty(false);
     setHasSubmitted(false);
     setDirtyFields({});
-  };
+  }, [initial]);
 
-  const handleSetState = (setStateAction: SetStateAction<T>) => {
+  const handleSetState = useCallback((setStateAction: SetStateAction<T>) => {
     setState((prevState) => {
       const nextState =
         typeof setStateAction === 'function'
@@ -69,15 +69,18 @@ const useForm = <T extends Record<string, any>, E = string>({
 
       return nextState;
     });
-  };
+  }, []);
 
-  const handleSetError = (error: FormValidateError<T, E> | null) => {
-    if (error) {
-      setError(error);
-    } else {
-      setError({});
-    }
-  };
+  const handleSetError = useCallback(
+    (error: FormValidateError<T, E> | null) => {
+      if (error) {
+        setError(error);
+      } else {
+        setError({});
+      }
+    },
+    []
+  );
 
   const setDirty = (field: keyof T) => {
     setDirtyFields((f) => ({ ...f, [field]: true }));
@@ -96,7 +99,7 @@ const useForm = <T extends Record<string, any>, E = string>({
     if (initial) {
       reset();
     }
-  }, [initial]);
+  }, [initial, reset]);
 
   useEffect(() => {
     if (validate) {
@@ -104,7 +107,7 @@ const useForm = <T extends Record<string, any>, E = string>({
     } else {
       setError({});
     }
-  }, [validate, setError, state]);
+  }, [handleSetError, validate, setError, state]);
 
   return {
     error,

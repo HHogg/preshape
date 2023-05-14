@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { DatePicker, DatePickerProps } from 'preshape';
 import { CatalogueItem } from '..';
 import { DateTime } from 'luxon';
-import Pictogram from './pictograms/PictogramDatepicker';
+import { Pictogram } from './pictograms/PictogramDatepicker';
 
 const Item: CatalogueItem<{
   DatePicker: DatePickerProps;

@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import classnames from 'classnames';
-import Box, { BoxProps } from '../Box/Box';
+import { Box, BoxProps } from '../Box/Box';
 import './BulletPoints.css';
 
 /**
@@ -15,10 +15,10 @@ export interface BulletPointsProps extends BoxProps {
   numbered?: boolean;
 }
 
-const BulletPoints: React.ForwardRefRenderFunction<
+export const BulletPoints = forwardRef<
   HTMLUListElement | HTMLOListElement,
   BulletPointsProps
-> = (props, ref) => {
+>((props, ref) => {
   const { numbered, ...rest } = props;
   const classes = classnames('BulletPoints', {
     'BulletPoints--numbered': numbered,
@@ -27,6 +27,4 @@ const BulletPoints: React.ForwardRefRenderFunction<
   return (
     <Box {...rest} className={classes} ref={ref} tag={numbered ? 'ol' : 'ul'} />
   );
-};
-
-export default forwardRef(BulletPoints);
+});

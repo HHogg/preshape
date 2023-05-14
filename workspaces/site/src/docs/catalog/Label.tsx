@@ -1,6 +1,6 @@
 import { Label, LabelProps, Labels, LabelsProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramLabels';
+import { Pictogram } from './pictograms/PictogramLabels';
 
 const Item: CatalogueItem<{
   Label: LabelProps;

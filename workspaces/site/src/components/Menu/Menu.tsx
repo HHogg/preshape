@@ -21,7 +21,7 @@ export const Menu = ({ children, onSelect, ...props }: MenuProps) => {
   return (
     <Box {...props}>
       <Box alignChildren="middle" flex="vertical" gap="x4" padding="x8">
-        <PreshapeIcon height="4rem" width="4rem" />
+        <Logo height="4rem" width="4rem" />
 
         <Box>
           <Text align="middle" size="x5" strong>

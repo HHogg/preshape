@@ -7,7 +7,12 @@ interface ColorListProps extends BoxProps {
   colors: ColorProps[];
 }
 
-const ColorList = ({ name, description, colors, ...props }: ColorListProps) => {
+export const ColorList = ({
+  name,
+  description,
+  colors,
+  ...props
+}: ColorListProps) => {
   return (
     <Box {...props}>
       <Box margin="x8">
@@ -26,5 +31,3 @@ const ColorList = ({ name, description, colors, ...props }: ColorListProps) => {
     </Box>
   );
 };
-
-export default ColorList;

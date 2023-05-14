@@ -6,7 +6,7 @@ import {
   InputLabelProps,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramInput';
+import { Pictogram } from './pictograms/PictogramInput';
 
 const Item: CatalogueItem<{
   InputLabel: InputLabelProps;

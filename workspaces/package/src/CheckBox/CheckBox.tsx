@@ -1,6 +1,7 @@
-import React, { forwardRef } from 'react';
-import CheckBoxIndicator from './CheckBoxIndicator';
-import SelectInputLabel, {
+import { forwardRef } from 'react';
+import { CheckBoxIndicator } from './CheckBoxIndicator';
+import {
+  SelectInputLabel,
   SelectInputLabelProps,
 } from '../SelectInputLabel/SelectInputLabel';
 import './CheckBox.css';
@@ -10,41 +11,38 @@ import './CheckBox.css';
  */
 export interface CheckBoxProps extends Omit<SelectInputLabelProps, 'label'> {}
 
-const CheckBox: React.ForwardRefRenderFunction<
-  HTMLInputElement,
-  CheckBoxProps
-> = (props, ref) => {
-  const {
-    children,
-    checked,
-    onChange,
-    name,
-    disabled,
-    paddingHorizontal = 'x3',
-    paddingVertical = 'x2',
-    readOnly,
-    ...rest
-  } = props;
+export const CheckBox = forwardRef<HTMLInputElement, CheckBoxProps>(
+  (props, ref) => {
+    const {
+      children,
+      checked,
+      onChange,
+      name,
+      disabled,
+      paddingHorizontal = 'x3',
+      paddingVertical = 'x2',
+      readOnly,
+      ...rest
+    } = props;
 
-  return (
-    <SelectInputLabel
-      {...rest}
-      className="CheckBox__label"
-      disabled={disabled}
-      label={children}
-      paddingHorizontal={paddingHorizontal}
-      paddingVertical={paddingVertical}
-    >
-      <CheckBoxIndicator
-        checked={checked}
+    return (
+      <SelectInputLabel
+        {...rest}
+        className="CheckBox__label"
         disabled={disabled}
-        name={name}
-        onChange={onChange}
-        readOnly={readOnly}
-        ref={ref}
-      />
-    </SelectInputLabel>
-  );
-};
-
-export default forwardRef(CheckBox);
+        label={children}
+        paddingHorizontal={paddingHorizontal}
+        paddingVertical={paddingVertical}
+      >
+        <CheckBoxIndicator
+          checked={checked}
+          disabled={disabled}
+          name={name}
+          onChange={onChange}
+          readOnly={readOnly}
+          ref={ref}
+        />
+      </SelectInputLabel>
+    );
+  }
+);

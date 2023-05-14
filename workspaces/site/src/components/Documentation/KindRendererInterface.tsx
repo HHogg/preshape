@@ -1,7 +1,7 @@
 import TypePropTable from './TypePropTable';
 import { APIItemProps } from './ComponentDocumentation';
 
-interface Props extends APIItemProps {}
+type Props = APIItemProps
 
 const KindRendererInterface = (props: Props) => {
   return <TypePropTable {...props} />;

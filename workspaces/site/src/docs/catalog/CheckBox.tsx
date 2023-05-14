@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { CheckBox, CheckBoxProps } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramCheckbox';
+import { Pictogram } from './pictograms/PictogramCheckbox';
 
 const Item: CatalogueItem<{
   CheckBox: CheckBoxProps;

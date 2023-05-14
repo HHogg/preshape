@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
-import { useModalContext } from './Modal';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
+import { useModalContext } from './useModalContext';
 
 /**
  * A component apply paddings of a Modal.
@@ -32,10 +32,7 @@ export interface ModalPaddingProps extends BoxProps {
   right?: boolean;
 }
 
-const ModalPadding: React.ForwardRefRenderFunction<any, ModalPaddingProps> = (
-  props,
-  ref
-) => {
+export const ModalPadding = forwardRef<any, ModalPaddingProps>((props, ref) => {
   const {
     top = true,
     bottom = true,
@@ -54,6 +51,4 @@ const ModalPadding: React.ForwardRefRenderFunction<any, ModalPaddingProps> = (
       paddingBottom={bottom ? paddingVertical : undefined}
     />
   );
-};
-
-export default forwardRef(ModalPadding);
+});

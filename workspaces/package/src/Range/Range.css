@@ -48,7 +48,7 @@
   transform: translateY(calc(-50% + 1px));
   border: none;
   border-radius: 50%;
-  background-color: currentColor;
+  background-color: currentcolor;
   transition-property: background-color, color;
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
@@ -60,7 +60,7 @@
   height: var(--size--x4);
   border: none;
   border-radius: 50%;
-  background-color: currentColor;
+  background-color: currentcolor;
   transition-property: background-color, color;
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
@@ -73,7 +73,7 @@
   transform: translateY(calc(-50% + 1px));
   border: none;
   border-radius: 50%;
-  background-color: currentColor;
+  background-color: currentcolor;
   transition-property: background-color, color;
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);

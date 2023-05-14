@@ -33,10 +33,10 @@ import {
   CodeBlock,
   CodeWindow,
 } from 'preshape';
-import Page from '../components/Page/Page';
-import PageSection from '../components/Page/PageSection';
-import PageSubtitle from '../components/Page/PageSubtitle';
-import ColorList from '../components/Color/ColorList';
+import { Page } from '../components/Page/Page';
+import { PageSection } from '../components/Page/PageSection';
+import { PageSubtitle } from '../components/Page/PageSubtitle';
+import { ColorList } from '../components/Color/ColorList';
 import { ColorProps } from '../components/Color/Color';
 
 const palette: ColorProps[] = [
@@ -248,7 +248,7 @@ const palette: ColorProps[] = [
   },
 ];
 
-export const paletteGrouped = [
+const paletteGrouped = [
   {
     name: 'Core',
     description: 'The two colors that exists everywhere.',
@@ -295,7 +295,7 @@ export const paletteGrouped = [
   },
 ];
 
-const ColorsPage = () => {
+export const ColorsPage = () => {
   return (
     <Page
       title="Colors"
@@ -350,5 +350,3 @@ colorAccent1Shade3; // ${colorAccent1Shade3}
     </Page>
   );
 };
-
-export default ColorsPage;

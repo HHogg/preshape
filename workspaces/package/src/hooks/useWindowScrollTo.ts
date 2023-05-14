@@ -6,6 +6,9 @@ export default () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // SSG
+    if (typeof window === 'undefined') return;
+
     const element = location.hash && document.querySelector(location.hash);
 
     if (location.hash && element) {
@@ -16,5 +19,5 @@ export default () => {
     } else {
       window.scrollTo({ top: 0 });
     }
-  }, []);
+  }, [location.hash, location.pathname, navigate]);
 };

@@ -1,15 +1,12 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
 
 /**
  * A wrapper component for Label components.
  */
 export interface LabelsProps extends BoxProps {}
 
-const Labels: React.ForwardRefRenderFunction<any, LabelsProps> = (
-  props,
-  ref
-) => {
+export const Labels = forwardRef<any, LabelsProps>((props, ref) => {
   return (
     <Box
       {...props}
@@ -20,6 +17,4 @@ const Labels: React.ForwardRefRenderFunction<any, LabelsProps> = (
       wrap
     />
   );
-};
-
-export default forwardRef(Labels);
+});

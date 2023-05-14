@@ -1,8 +1,8 @@
-import React from 'react';
-import Appear from '../Appear/Appear';
-import Box, { BoxProps } from '../Box/Box';
-import { useModalContext } from './Modal';
-import ModalPaddingOffset from './ModalPaddingOffset';
+import { forwardRef } from 'react';
+import { Appear } from '../Appear/Appear';
+import { Box, BoxProps } from '../Box/Box';
+import { ModalPaddingOffset } from './ModalPaddingOffset';
+import { useModalContext } from './useModalContext';
 
 /**
  * A footer insert component that can be used inside a ModalFooter,
@@ -15,32 +15,30 @@ export interface ModalFooterInsertProps extends BoxProps {
   visible?: boolean;
 }
 
-const ModalFooterInsert: React.ForwardRefRenderFunction<
-  any,
-  ModalFooterInsertProps
-> = ({ children, visible, ...rest }, ref) => {
-  const { paddingHorizontal, paddingVertical } = useModalContext();
+export const ModalFooterInsert = forwardRef<any, ModalFooterInsertProps>(
+  ({ children, visible, ...rest }, ref) => {
+    const { paddingHorizontal, paddingVertical } = useModalContext();
 
-  return (
-    <Box
-      {...rest}
-      paddingOffsetTop={paddingVertical}
-      paddingBottom={paddingVertical}
-    >
-      <Appear animation="Expand" visible={visible}>
-        <ModalPaddingOffset
-          borderBottom
-          borderColor="background-shade-3"
-          borderSize="x2"
-          paddingBottom="x3" // TODO(hhogg): This should be half of `paddingVertical`
-          paddingTop="x3" // TODO(hhogg): This should be half of `paddingVertical`
-          paddingHorizontal={paddingHorizontal}
-        >
-          {children}
-        </ModalPaddingOffset>
-      </Appear>
-    </Box>
-  );
-};
-
-export default ModalFooterInsert;
+    return (
+      <Box
+        {...rest}
+        paddingOffsetTop={paddingVertical}
+        paddingBottom={paddingVertical}
+        ref={ref}
+      >
+        <Appear animation="Expand" visible={visible}>
+          <ModalPaddingOffset
+            borderBottom
+            borderColor="background-shade-3"
+            borderSize="x2"
+            paddingBottom="x3"
+            paddingTop="x3"
+            paddingHorizontal={paddingHorizontal}
+          >
+            {children}
+          </ModalPaddingOffset>
+        </Appear>
+      </Box>
+    );
+  }
+);

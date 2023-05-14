@@ -5,7 +5,7 @@ import {
   TextAreaLabelProps,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramTextarea';
+import { Pictogram } from './pictograms/PictogramTextarea';
 
 const Item: CatalogueItem<{
   TextArea: TextAreaProps;

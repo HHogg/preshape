@@ -14,7 +14,7 @@ import {
   Text,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramModal';
+import { Pictogram } from './pictograms/PictogramModal';
 
 const Item: CatalogueItem<{
   Modal: ModalProps;

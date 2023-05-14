@@ -1,4 +1,4 @@
-import React, {
+import {
   AnchorHTMLAttributes,
   CSSProperties,
   forwardRef,
@@ -7,7 +7,7 @@ import React, {
 import classnames from 'classnames';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import { TypeColor, TypeSize } from '../types';
-import Text, { TextProps } from '../Text/Text';
+import { Text, TextProps } from '../Text/Text';
 import './Button.css';
 
 export type TypeButtonSize = 'x1' | 'x2' | 'x3';
@@ -80,10 +80,7 @@ const sizePaddingMap: Record<
   },
 };
 
-const Button: React.ForwardRefRenderFunction<any, ButtonProps> = (
-  props,
-  ref
-) => {
+export const Button = forwardRef<any, ButtonProps>((props, ref) => {
   const {
     active,
     alignChildren = 'middle',
@@ -171,6 +168,4 @@ const Button: React.ForwardRefRenderFunction<any, ButtonProps> = (
       uppercase={uppercase}
     />
   );
-};
-
-export default forwardRef(Button);
+});

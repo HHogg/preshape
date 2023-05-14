@@ -8,7 +8,7 @@ type PageProps = {
   summary?: PageSummaryConfig[];
 };
 
-const Page = ({
+export const Page = ({
   title,
   description,
   summary,
@@ -50,5 +50,3 @@ const Page = ({
     </Appear>
   );
 };
-
-export default Page;

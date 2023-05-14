@@ -1,7 +1,7 @@
 import { MotionProps } from 'framer-motion';
 import * as Icons from '../Icon';
-import Motion from '../Motion/Motion';
-import React, { forwardRef } from 'react';
+import { Motion } from '../Motion/Motion';
+import { forwardRef } from 'react';
 
 /**
  * A spinner component that can be used to indicate loading.
@@ -11,24 +11,21 @@ export interface SpinnerProps extends MotionProps {
   size?: Icons.Props['size'];
 }
 
-const Spinner: React.ForwardRefRenderFunction<SVGSVGElement, SpinnerProps> = (
-  { size = '1.5rem', ...rest },
-  ref
-) => {
-  return (
-    <Motion
-      {...rest}
-      animate={{ rotate: 360 }}
-      display="block"
-      transition={{
-        ease: 'linear',
-        repeat: Infinity,
-        duration: 2,
-      }}
-    >
-      <Icons.Loader display="block" ref={ref} size={size} />
-    </Motion>
-  );
-};
-
-export default forwardRef(Spinner);
+export const Spinner = forwardRef<SVGSVGElement, SpinnerProps>(
+  ({ size = '1.5rem', ...rest }, ref) => {
+    return (
+      <Motion
+        {...rest}
+        animate={{ rotate: 360 }}
+        display="block"
+        transition={{
+          ease: 'linear',
+          repeat: Infinity,
+          duration: 2,
+        }}
+      >
+        <Icons.Loader display="block" ref={ref} size={size} />
+      </Motion>
+    );
+  }
+);

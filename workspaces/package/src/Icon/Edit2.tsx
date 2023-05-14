@@ -1,15 +1,12 @@
-import React, { forwardRef } from 'react';
-import Box from '../Box/Box';
+import { forwardRef } from 'react';
+import { Box as BoxC } from '../Box/Box';
 import { Props as IconProps } from './index';
-
-const Icon: React.ForwardRefRenderFunction<SVGSVGElement, IconProps> = (props, ref) => {
+export const Edit2 = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
   const {
     size = '1rem',
     ...rest
   } = props;
-  return <Box {...rest} className="Icon" height={size} ref={ref} tag="svg" viewBox="0 0 24 24" width={size}>
+  return <BoxC {...rest} className="Icon" height={size} ref={ref} tag="svg" viewBox="0 0 24 24" width={size}>
       {<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="edit-2_svg__feather edit-2_svg__feather-edit-2"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z" /></svg>}
-    </Box>;
-};
-
-export default forwardRef(Icon);
+    </BoxC>;
+});

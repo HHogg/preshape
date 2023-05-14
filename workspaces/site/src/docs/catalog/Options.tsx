@@ -14,7 +14,7 @@ import {
   PlacementContent,
 } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramOptions';
+import { Pictogram } from './pictograms/PictogramOptions';
 
 const Item: CatalogueItem<{
   Options: OptionsProps;

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Icons, ButtonAsync, ButtonAsyncProps, Buttons } from 'preshape';
 import { CatalogueItem } from '..';
-import Pictogram from './pictograms/PictogramButtonasync';
+import { Pictogram } from './pictograms/PictogramButtonasync';
 
 const Item: CatalogueItem<{
   ButtonAsync: ButtonAsyncProps;

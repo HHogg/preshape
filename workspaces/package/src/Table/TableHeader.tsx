@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
 
 /**
  * The header element of the table. This should be placed
@@ -7,11 +7,9 @@ import Box, { BoxProps } from '../Box/Box';
  */
 export interface TableHeaderProps extends BoxProps {}
 
-const TableHeader: React.ForwardRefRenderFunction<
+export const TableHeader = forwardRef<
   HTMLTableSectionElement,
   TableHeaderProps
-> = (props, ref) => {
+>((props, ref) => {
   return <Box {...props} className="Table__header" ref={ref} tag="thead" />;
-};
-
-export default forwardRef(TableHeader);
+});

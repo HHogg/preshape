@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
-import Grid from '../Grid/Grid';
-import Text, { TextProps } from '../Text/Text';
+import { Grid } from '../Grid/Grid';
+import { Text, TextProps } from '../Text/Text';
 import React from 'react';
 import DatePickerDay from './DatePickerDay';
 

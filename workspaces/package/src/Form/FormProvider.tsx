@@ -1,14 +1,12 @@
-import React, {
+import {
   SetStateAction,
-  createContext,
-  useContext,
   PropsWithChildren,
-  useEffect,
   useState,
   useMemo,
+  useCallback,
 } from 'react';
-import { useResizeObserver } from '../hooks';
 import { FormValidateError } from './useForm';
+import { FormContext } from './useFormContext';
 
 export type FormState<T, E> = {
   error: FormValidateError<T, E>;
@@ -27,43 +25,6 @@ export type FormContextProps<T, E> = {
   form: FormState<T, E>;
   getError: (field: string) => string | undefined;
   registerField: (field: string, element: HTMLElement) => () => void;
-};
-
-const FormContext = createContext<FormContextProps<any, any>>({
-  form: {
-    error: {},
-    hasError: false,
-    hasSubmitted: false,
-    getIsDirty: () => false,
-    state: {},
-    setDirty: () => {},
-    setError: () => {},
-    setState: () => {},
-    setSubmitted: () => {},
-    reset: () => {},
-  },
-  getError: () => undefined,
-  registerField: () => () => {},
-});
-
-export const useFormContext = <T, E>() =>
-  useContext<FormContextProps<T, E>>(FormContext);
-
-/**
- * A hook to register a field with the form context.
- */
-export const useFormRegisterField = (name?: string) => {
-  const [size, setResizeObserverElement, element] =
-    useResizeObserver<HTMLInputElement>();
-  const { registerField } = useFormContext();
-
-  useEffect(() => {
-    if (name && element) {
-      return registerField(name, element);
-    }
-  }, [name, element, size]);
-
-  return setResizeObserverElement;
 };
 
 /**
@@ -92,7 +53,7 @@ export interface FormProviderProps {
   validateOnlyOneAtATime?: boolean;
 }
 
-const FormProvider = ({
+export const FormProvider = ({
   form,
   validateOnlyDirty,
   validateOnlySubmitted,
@@ -126,26 +87,27 @@ const FormProvider = ({
     }
   };
 
-  const registerField = (field: string, element: HTMLElement) => {
-    const domRect = element.getBoundingClientRect();
-    const priority = domRect.top;
+  const registerField = useCallback(
+    (field: string, element: HTMLElement) => {
+      const domRect = element.getBoundingClientRect();
+      const priority = domRect.top;
 
-    setFields((fields) => ({
-      ...fields,
-      [field]: priority,
-    }));
-
-    return () => {
       setFields((fields) => ({
         ...fields,
-        [field]: null,
+        [field]: priority,
       }));
-    };
-  };
+
+      return () => {
+        setFields((fields) => ({
+          ...fields,
+          [field]: null,
+        }));
+      };
+    },
+    [setFields]
+  );
 
   return (
     <FormContext.Provider {...rest} value={{ form, getError, registerField }} />
   );
 };
-
-export default FormProvider;

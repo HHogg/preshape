@@ -1,6 +1,6 @@
 import classnames from 'classnames';
-import React, { forwardRef } from 'react';
-import Box, { BoxProps } from '../Box/Box';
+import { forwardRef } from 'react';
+import { Box, BoxProps } from '../Box/Box';
 
 /**
  * A wrapper component for the Input component, provided for
@@ -22,10 +22,7 @@ export interface InputWrapperProps extends BoxProps {
   invalid?: boolean;
 }
 
-const InputWrapper: React.ForwardRefRenderFunction<any, InputWrapperProps> = (
-  props,
-  ref
-) => {
+export const InputWrapper = forwardRef<any, InputWrapperProps>((props, ref) => {
   const {
     addonEnd,
     addonStart,
@@ -66,6 +63,4 @@ const InputWrapper: React.ForwardRefRenderFunction<any, InputWrapperProps> = (
       {addonEnd && addonEnd}
     </Box>
   );
-};
-
-export default forwardRef(InputWrapper);
+});

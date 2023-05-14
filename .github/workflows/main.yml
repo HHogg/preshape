@@ -7,30 +7,27 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     steps:
-      - uses: actions/checkout@v2
-      - name: 'Cache: node_modules'
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          path: ~/.yarn
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.locl') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-
+          node-version: ${{ matrix.node-version }}
       - name: 'Install Dependencies'
         run: yarn
-      - name: 'Test: Linting'
+      - name: 'Linting'
         run: yarn lint
-      - name: 'Build Library & Site'
-        run: yarn build
-      - name: 'Deploy: Library'
+      - name: 'Build package'
+        run: yarn workspace preshape build
+      - name: 'Build site'
+        run: yarn workspace site build
+      - name: 'Publish package'
         run: yarn deploy:lib
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: 'Deploy: Site'
+      - name: 'Deploy site'
         run: 'yarn deploy:site --token ${{ secrets.FIREBASE_TOKEN }}'

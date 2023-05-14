@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import classnames from 'classnames';
 import { TypeSize } from '../types';
-import Box, { BoxProps } from '../Box/Box';
+import { Box, BoxProps } from '../Box/Box';
 import './List.css';
 
 /**
@@ -16,10 +16,7 @@ export interface ListProps extends BoxProps {
   gap?: TypeSize;
 }
 
-const List: React.ForwardRefRenderFunction<HTMLUListElement, ListProps> = (
-  props,
-  ref
-) => {
+export const List = forwardRef<HTMLUListElement, ListProps>((props, ref) => {
   const { gap = 'x1', ...rest } = props;
   const classes = classnames('List', `List--${gap}`);
 
@@ -35,6 +32,4 @@ const List: React.ForwardRefRenderFunction<HTMLUListElement, ListProps> = (
       wrap
     />
   );
-};
-
-export default forwardRef(List);
+});
