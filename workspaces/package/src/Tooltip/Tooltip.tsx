@@ -1,79 +1,73 @@
-import React, { forwardRef, RefForwardingComponent } from 'react';
-import { Attributes } from '../Box/Box';
+import React, { ReactNode, forwardRef } from 'react';
+import Text from '../Text/Text';
 import Placement, { PlacementProps } from '../Placement/Placement';
-import PlacementArrow from '../Placement/PlacementArrow';
-import PlacementContent from '../Placement/PlacementContent';
-import PlacementManager, {
-  TypePlacementTrigger,
-} from '../Placement/PlacementManager';
-import PlacementReference, {
-  PlacementReferenceChildren,
-} from '../Placement/PlacementReference';
-import Text, { TextProps } from '../Text/Text';
+import PlacementReference from '../Placement/PlacementReference';
+import PlacementContent, {
+  PlacementContentProps,
+} from '../Placement/PlacementContent';
+import { UsePlacementTrigger } from '../Placement/usePlacement';
+import { useThemeContext } from '../ThemeSwitcher/ThemeProvider';
+import { themesOpposite } from '../variables';
 
-export interface TooltipProps extends PlacementProps {
-  /**
-   * A render callback function that passes on the ref
-   * property, and event handlers to be added to the
-   * React element that is the target.
-   */
-  children: PlacementReferenceChildren;
+export interface TooltipProps extends Omit<PlacementContentProps, 'content'> {
   /**
    * The content to be displayed in the tooltip.
    */
-  content: string;
+  content: ReactNode;
   /**
-   *
+   * @default "top"
    */
-  size?: TextProps['size'];
-  /**
-   *
-   */
-  strong?: TextProps['strong'];
+  placement?: PlacementProps['placement'];
   /**
    * The visibility trigger type.
+   *
+   * @default "hover"
    */
-  trigger?: TypePlacementTrigger;
+  trigger?: UsePlacementTrigger;
+  /** Flag that toggles the visible of the placed content. */
+  visible?: boolean;
 }
 
-const Tooltip: RefForwardingComponent<
-  HTMLDivElement,
-  Attributes<HTMLDivElement, TooltipProps>
-> = (props, ref) => {
+const Tooltip: React.ForwardRefRenderFunction<any, TooltipProps> = (
+  props,
+  ref
+) => {
   const {
-    backgroundColor = 'text-shade-1',
+    backgroundColor = 'background-shade-1',
     children,
     content,
-    maxWidth,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
-    size = 'x3',
-    textColor = 'background-shade-1',
+    placement = 'top',
+    textColor = 'text-shade-1',
+    theme: themeProp,
     trigger = 'hover',
+    visible,
     ...rest
   } = props;
 
-  return (
-    <PlacementManager trigger={trigger}>
-      <PlacementReference>{children}</PlacementReference>
+  const { theme: themeContext } = useThemeContext();
+  const theme = themeProp ?? themeContext;
+  const themeOpposite = themesOpposite[theme];
 
-      <Placement {...rest}>
-        <PlacementArrow backgroundColor={backgroundColor} />
-        <PlacementContent
-          backgroundColor={backgroundColor}
-          borderRadius="x1"
-          maxWidth={maxWidth}
-          paddingHorizontal={paddingHorizontal}
-          paddingVertical={paddingVertical}
-          ref={ref}
-          textColor={textColor}
-        >
-          <Text align="middle" size={size} strong>
-            {content}
-          </Text>
-        </PlacementContent>
-      </Placement>
-    </PlacementManager>
+  return (
+    <Placement open={visible} placement={placement} trigger={trigger}>
+      <PlacementReference>{children}</PlacementReference>
+      <PlacementContent
+        {...rest}
+        backgroundColor={backgroundColor}
+        paddingHorizontal={paddingHorizontal}
+        paddingVertical={paddingVertical}
+        ref={ref}
+        textColor={textColor}
+        theme={themeOpposite}
+        withArrow
+      >
+        <Text align="middle" size="x3" strong>
+          {content}
+        </Text>
+      </PlacementContent>
+    </Placement>
   );
 };
 
