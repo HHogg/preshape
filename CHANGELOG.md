@@ -1,3 +1,42 @@
+## [14.0.0](https://github.com/HHogg/preshape/compare/v13.2.4...v14.0.0) (2023-05-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **useEventListener:** Removed useEventListener
+* **useResizeObserver:** useResizeObserver now returns a xy object instead of a DOMRect
+* **Text:** Removed inline prop, use tags instead
+* **Code:** Removed Editor component and updated to use prismjs, removed some syntax languages.
+* **Placement:** Removed popper.js implementation and updated to @floating-ui. Placement API changed. See updated docs.
+* **React:** Updated React to v18. Removed the Attributes export that provided Intrinsic atributes and now they are just defaultly available via BoxProps
+
+### Features
+
+* **Box:** added 'stretch' option for 'alignChildrenHorizontal' prop ([900d113](https://github.com/HHogg/preshape/commit/900d1134d43e2dd8ab31704c57a7a96e7fa59bdc))
+* **Box:** Added 2 new sizes to all the sizeable things x24 and x32 ([d95eb30](https://github.com/HHogg/preshape/commit/d95eb30352cb87b745a8f105555bec0c940e3224))
+* **Button:** Added ButtonAsync component ([cf2def2](https://github.com/HHogg/preshape/commit/cf2def2960d1323703f247cae792fc9db4cdd31a))
+* **Code:** Updated from brace to react-syntax-highlighter, and removed Editor component. ([18c448f](https://github.com/HHogg/preshape/commit/18c448fda9d702b54e684148566270678e3539b7))
+* **DatePicker:** Added DatePicker component ([185dcab](https://github.com/HHogg/preshape/commit/185dcabee72bc8e70cc7e828ec2bac883c32d42b))
+* **ESM:** Updated Preshape to be built using vite and output ESM and UMD builds. CSS is no longer imported by default and provided as a style.css file in the dist folder to be imported separately. ([3986896](https://github.com/HHogg/preshape/commit/39868962696d12ec9cadea0c694e12f2c1adac8a))
+* **Modal:** Added ModalPadding component to access modal paddings ([7586ff7](https://github.com/HHogg/preshape/commit/7586ff71fabfcaf84f00411814f3fa47c6202adc))
+* **Modal:** ModalHeaders and ModalFooters no longer sticky by default, added sticky prop ([f43f383](https://github.com/HHogg/preshape/commit/f43f3838a6d9397384d5e34a15453c990328047a))
+* **Placement:** Updated from popper.js to [@floating-ui](https://github.com/floating-ui) ([a789eb7](https://github.com/HHogg/preshape/commit/a789eb7f7d233d5b920b37c91ad9f97742beaf48))
+* **Spinner:** Added Spinner component ([1724cd3](https://github.com/HHogg/preshape/commit/1724cd367fcc0d8fa77b0c40d050a0d47db74f80))
+* **ThemeProvider:** Added a ThemeProvider for storing and providing theme to an app. ThemeSwitcher now defaults to reading from ThemeProvider. ([fd69dc0](https://github.com/HHogg/preshape/commit/fd69dc0293766a365912500a52722029857c7128))
+* **useEventListener:** Removed useEventListener ([698b057](https://github.com/HHogg/preshape/commit/698b057f1bf6e247675f0fec0495c2936a56fbc8))
+
+
+### chore
+
+* **React:** Updated React to v18 ([088fd61](https://github.com/HHogg/preshape/commit/088fd61b0043a4eabf9eae8a92289847d75603c5))
+
+
+### Fixes
+
+* **Motion:** Updated to latest framer-motion ([b6b0a75](https://github.com/HHogg/preshape/commit/b6b0a75b1a16174d5b06adf9d88ad5760388c5da))
+* **Text:** Removed inline prop. ([768fa94](https://github.com/HHogg/preshape/commit/768fa945c97bd68f8b62b53a9c5a454636863f19))
+* **useResizeObserver:** Change size type ([352f5e7](https://github.com/HHogg/preshape/commit/352f5e73edfa3e65fc231b204c4312312c451682))
+
 ### [13.2.4](https://github.com/HHogg/preshape/compare/v13.2.3...v13.2.4) (2022-09-05)
 
 
