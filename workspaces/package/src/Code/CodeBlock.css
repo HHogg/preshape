@@ -1,9 +1,7 @@
-.CodeBlock .ace_static_highlight {
-  max-width: 100%;
-  text-overflow: ellipsis;
-  white-space: pre;
-}
-
-.CodeBlock--wrap .ace_static_highlight {
-  white-space: pre-wrap;
+.CodeBlock {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  overflow-wrap: unset !important;
 }
