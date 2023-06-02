@@ -1,14 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
-    <title>P-day</title>
-    <desc>Created with Sketch.</desc>
-    <g id="P-day" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(5.000000, 2.000000)">
-            <polygon id="Path-2" fill="#4C6EF5" stroke="#4C6EF5" stroke-width="0.1" stroke-linecap="round" points="6 20 6 13 0 0"></polygon>
-            <polygon id="Path" fill="#5C7CFA" stroke="#5C7CFA" stroke-width="0.1" stroke-linecap="round" points="6 20 0 0 0 20"></polygon>
-            <polygon id="Rectangle" fill="#4263EB" stroke="#4263EB" stroke-width="0.1" stroke-linecap="round" points="12 0 12 0.00724201339 12 13 6 13"></polygon>
-            <polygon id="Path-3" fill="#4C6EF5" stroke="#4C6EF5" stroke-width="0.1" stroke-linecap="round" points="6 13 12 0 0 0"></polygon>
-            <polygon id="Path-4" fill="#4263EB" stroke="#4263EB" stroke-width="0.1" stroke-linecap="round" points="12 13 15.9984063 6.5 12 0"></polygon>
-        </g>
+    <title>Artboard</title>
+    <defs>
+        <path d="M5.00015759,21.0003363 L5.00299388,3.00266452 C5.00346241,2.45052879 5.45101575,2.00294579 6.00315144,2.00244068 L16.3541195,2.0001236 C16.6977809,2.00004668 17.0174063,2.17644244 17.2005358,2.46724616 L20.8474563,8.25844036 C21.0560749,8.58972008 21.0521911,9.01226987 20.8375185,9.33965901 L17.2024518,14.8833631 C17.0176305,15.1652272 16.7032525,15.3350219 16.3661971,15.3350219 L12.6692236,15.3350219 C12.1169389,15.3350219 11.6692236,15.7827372 11.6692236,16.3350219 L11.6692236,21.0003362 C11.6692236,21.552621 11.2215084,22.0003362 10.6692236,22.0003362 L6,22.0003362 C5.44771525,22.0004938 5,21.5527786 5,21.0004938 C5,21.0004413 5,21.0003888 5.00015759,21.0003363 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.189908" height="20.0003362" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="5,1" stroke-linecap="square">
+        <use id="Path-40" stroke="#3B5BDB" mask="url(#mask-2)" stroke-width="2" fill="#3B5BDB" xlink:href="#path-1"></use>
     </g>
 </svg>
