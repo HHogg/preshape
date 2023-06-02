@@ -122,7 +122,7 @@ const App = () => {
               minWidth={0}
             >
               <Routes>
-                <Route element={<Navigate to="/colors" />} path="/" />
+                <Route element={<Navigate to="/components" />} path="/" />
                 <Route element={<ColorsPage />} path="/colors" />
                 <Route element={<ThemesPage />} path="/themes" />
                 <Route element={<SizingsPage />} path="/sizings" />
