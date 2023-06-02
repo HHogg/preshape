@@ -131,15 +131,15 @@ const Item: CatalogueItem<{
       );
     },
     code: `
-import { AsyncButton } from 'preshape';
+import { ButtonAsync } from 'preshape';
 
-<AsyncButton
+<ButtonAsync
   isError={false}
   isLoading={false}
   isSuccess={true}
   variant="secondary">
   ...
-</AsyncButton>
+</ButtonAsync>
 
     `,
   },
