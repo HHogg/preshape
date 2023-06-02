@@ -40,8 +40,8 @@ import {
 import { Page } from '../components/Page/Page';
 import { PageSection } from '../components/Page/PageSection';
 import { PageSubtitle } from '../components/Page/PageSubtitle';
-import { SizingList } from '../components/Sizing/SizingList';
 import { SizingProps } from '../components/Sizing/Sizing';
+import { SizingList } from '../components/Sizing/SizingList';
 
 const variables: SizingProps[] = (
   [

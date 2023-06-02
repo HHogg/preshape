@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
 import { RadioButton, RadioButtonProps } from 'preshape';
+import { Fragment } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramRadiobutton';
 

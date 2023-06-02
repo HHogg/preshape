@@ -1,10 +1,10 @@
-import { Fragment } from 'react';
 import { Box, Link, Text } from 'preshape';
+import { Fragment } from 'react';
 import { JSONOutput } from 'typedoc';
-import { getComment, getExtends, getSource } from './documentation';
-import { ApiStateController } from './Types';
 import GithubLink from '../GithubLink/GithubLink';
 import KindRenderer from './KindRenderer';
+import { ApiStateController } from './Types';
+import { getComment, getExtends, getSource } from './documentation';
 
 export interface APIItemProps extends ApiStateController {
   reflection: JSONOutput.DeclarationReflection;

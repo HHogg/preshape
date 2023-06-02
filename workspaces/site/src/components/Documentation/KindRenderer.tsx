@@ -1,5 +1,5 @@
-import KindRendererInterface from './KindRendererInterface';
 import { APIItemProps } from './ComponentDocumentation';
+import KindRendererInterface from './KindRendererInterface';
 
 const KindMap: {
   [key: number]: (props: APIItemProps) => JSX.Element;

@@ -1,3 +1,4 @@
+import { useMergeRefs } from '@floating-ui/react';
 import {
   Children,
   PropsWithChildren,
@@ -6,7 +7,6 @@ import {
   isValidElement,
 } from 'react';
 import { usePlacementContext } from './usePlacementContext';
-import { useMergeRefs } from '@floating-ui/react';
 
 /**
  * The reference element for the placement.

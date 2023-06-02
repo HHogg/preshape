@@ -1,6 +1,6 @@
+import classnames from 'classnames';
 import { forwardRef } from 'react';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
-import classnames from 'classnames';
 import { Text, TextProps } from '../Text/Text';
 import './Link.css';
 

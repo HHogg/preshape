@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
 import { CheckBox, CheckBoxProps } from 'preshape';
+import { Fragment } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramCheckbox';
 

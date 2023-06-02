@@ -1,6 +1,6 @@
-import { forwardRef } from 'react';
 import { motion, MotionProps } from 'framer-motion';
 import omit from 'lodash.omit';
+import { forwardRef } from 'react';
 import { Box, BoxProps } from '../Box/Box';
 
 export interface MotionsProps

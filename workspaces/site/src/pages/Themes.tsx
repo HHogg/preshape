@@ -6,11 +6,11 @@ import {
   themes,
   useThemeContext,
 } from 'preshape';
+import { ColorProps } from '../components/Color/Color';
+import { ColorList } from '../components/Color/ColorList';
 import { Page } from '../components/Page/Page';
 import { PageSection } from '../components/Page/PageSection';
 import { PageSubtitle } from '../components/Page/PageSubtitle';
-import { ColorList } from '../components/Color/ColorList';
-import { ColorProps } from '../components/Color/Color';
 
 const paletteTheme = (theme: TypeTheme): ColorProps[] => [
   {
@@ -130,7 +130,7 @@ const themeGrouped = (theme: TypeTheme) => [
 ];
 
 export const ThemesPage = () => {
-  const { theme, colors } = useThemeContext();
+  const { theme, themeOpposite, colors } = useThemeContext();
 
   return (
     <Page
@@ -144,7 +144,7 @@ export const ThemesPage = () => {
           <CodeBlock language="tsx">{`
 import { ThemeProvider } from 'preshape';
 
-<ThemeProvider initialTheme="Day">
+<ThemeProvider initialTheme="${theme}">
     ...
 </ThemeProvider>
 `}</CodeBlock>
@@ -176,8 +176,8 @@ import { useThemeContext, ThemeSwitcher } from 'preshape';
 
 const { theme, themeOpposite, colors } = useThemeContext();
 
-console.log(theme); // "Day" | "Night"
-console.log(themeOpposite); // "Day" | "Night"
+console.log(theme); // "${theme}"
+console.log(themeOpposite); // "${themeOpposite}"
 console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
 
 `}</CodeBlock>

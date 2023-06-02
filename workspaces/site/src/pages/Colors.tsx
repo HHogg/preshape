@@ -33,11 +33,11 @@ import {
   CodeBlock,
   CodeWindow,
 } from 'preshape';
+import { ColorProps } from '../components/Color/Color';
+import { ColorList } from '../components/Color/ColorList';
 import { Page } from '../components/Page/Page';
 import { PageSection } from '../components/Page/PageSection';
 import { PageSubtitle } from '../components/Page/PageSubtitle';
-import { ColorList } from '../components/Color/ColorList';
-import { ColorProps } from '../components/Color/Color';
 
 const palette: ColorProps[] = [
   {

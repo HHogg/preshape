@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Table,
   TableProps,
@@ -13,6 +12,7 @@ import {
   TableRow,
   TableRowProps,
 } from 'preshape';
+import { useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramTable';
 

@@ -1,10 +1,10 @@
 import { JSONOutput } from 'typedoc';
 import TypeLabel from './TypeLabel';
+import { TypeRendererProps } from './TypeRenderer';
+import TypeRendererUnion from './TypeRendererUnion';
 import { Props as TypeTooltipIntrinsicProps } from './TypeTooltipIntrinsic';
 import TypeTooltipIntrinsicNumber from './TypeTooltipIntrinsicNumber';
 import TypeTooltipIntrinsicString from './TypeTooltipIntrinsicString';
-import TypeRendererUnion from './TypeRendererUnion';
-import { TypeRendererProps } from './TypeRenderer';
 
 const TypeTooltipIntrinsicMap: {
   [key: string]: (props: TypeTooltipIntrinsicProps) => JSX.Element | null;

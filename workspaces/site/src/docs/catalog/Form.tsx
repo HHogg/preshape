@@ -1,4 +1,3 @@
-import { FormEvent, useCallback, useMemo, useState } from 'react';
 import {
   useForm,
   Form,
@@ -14,6 +13,7 @@ import {
   FormValidateFn,
   FormValidateError,
 } from 'preshape';
+import { FormEvent, useCallback, useMemo, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramForm';
 

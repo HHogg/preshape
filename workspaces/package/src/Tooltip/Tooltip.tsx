@@ -1,12 +1,12 @@
 import { ReactNode, forwardRef } from 'react';
-import { Text } from '../Text/Text';
 import Placement, { PlacementProps } from '../Placement/Placement';
-import { PlacementReference } from '../Placement/PlacementReference';
 import {
   PlacementContent,
   PlacementContentProps,
 } from '../Placement/PlacementContent';
+import { PlacementReference } from '../Placement/PlacementReference';
 import { UsePlacementTrigger } from '../Placement/usePlacement';
+import { Text } from '../Text/Text';
 import { useThemeContext } from '../ThemeSwitcher/useThemeContext';
 import { themesOpposite } from '../variables';
 

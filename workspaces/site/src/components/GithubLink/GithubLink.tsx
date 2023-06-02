@@ -2,7 +2,7 @@ import { Button, ButtonProps, Icons, Tooltip } from 'preshape';
 
 const GithubLink = (props: ButtonProps) => {
   return (
-    <Tooltip content="Link to code up on Github">
+    <Tooltip content="View code on Github">
       <Button
         {...props}
         borderRadius="full"

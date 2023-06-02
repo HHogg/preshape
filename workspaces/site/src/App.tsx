@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
 import {
   Appear,
   Box,
@@ -12,11 +10,13 @@ import {
   useLocalStorage,
   useMatchMedia,
 } from 'preshape';
+import { useEffect, useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { Menu } from './components/Menu/Menu';
+import { ColorsPage } from './pages/Colors';
 import { ComponentPage } from './pages/Component';
 import { ComponentsPage } from './pages/Components';
 import { IconsPage } from './pages/Icons';
-import { ColorsPage } from './pages/Colors';
 import { SizingsPage } from './pages/Sizings';
 import { ThemesPage } from './pages/Themes';
 import 'preshape/dist/style.css';

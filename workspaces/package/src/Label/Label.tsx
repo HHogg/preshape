@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { sizeX3Px } from '../variables';
 import { Text, TextProps } from '../Text/Text';
+import { sizeX3Px } from '../variables';
 import './Label.css';
 
 /**

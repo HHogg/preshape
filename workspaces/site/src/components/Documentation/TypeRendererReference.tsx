@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 import { JSONOutput } from 'typedoc';
-import { getById, isDeclarationReflection } from './documentation';
 import TypeLabel from './TypeLabel';
 import TypeRenderer, { TypeRendererProps } from './TypeRenderer';
+import { getById, isDeclarationReflection } from './documentation';
 
 interface Props extends TypeRendererProps {
   type: JSONOutput.ReferenceType;

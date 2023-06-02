@@ -1,7 +1,7 @@
-import { JSONOutput } from 'typedoc';
 import { Buttons, Label, TableCell, TableRow, Text } from 'preshape';
-import { ApiValueController } from './Types';
+import { JSONOutput } from 'typedoc';
 import TypeRenderer from './TypeRenderer';
+import { ApiValueController } from './Types';
 import { getComment, getIsOptional, getTag } from './documentation';
 
 interface Props extends ApiValueController {

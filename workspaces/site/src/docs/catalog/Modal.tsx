@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Button,
   Buttons,
@@ -13,6 +12,7 @@ import {
   ModalTitleProps,
   Text,
 } from 'preshape';
+import { useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramModal';
 

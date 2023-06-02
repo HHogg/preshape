@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { Icons, Toggle, ToggleProps } from 'preshape';
+import { useEffect, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramToggle';
 

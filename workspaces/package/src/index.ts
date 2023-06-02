@@ -11,24 +11,14 @@ import * as Icons from './Icon';
 
 export { Alert, type AlertProps } from './Alert/Alert';
 export { Appear, type AppearProps, type TypeAnimation } from './Appear/Appear';
-export {
-  BlockQuote,
-  type BlockQuoteProps,
-} from './BlockQuote/BlockQuote';
+export { BlockQuote, type BlockQuoteProps } from './BlockQuote/BlockQuote';
 export { Box, type BoxProps } from './Box/Box';
-export {
-  BulletPoint,
-  type BulletPointProps,
-} from './BulletPoints/BulletPoint';
+export { BulletPoint, type BulletPointProps } from './BulletPoints/BulletPoint';
 export {
   BulletPoints,
   type BulletPointsProps,
 } from './BulletPoints/BulletPoints';
-export {
-  Button,
-  type ButtonProps,
-  type TypeButtonSize,
-} from './Button/Button';
+export { Button, type ButtonProps, type TypeButtonSize } from './Button/Button';
 export { ButtonAsync, type ButtonAsyncProps } from './Button/ButtonAsync';
 export { Buttons, type ButtonsProps } from './Button/Buttons';
 export { CheckBox, type CheckBoxProps } from './CheckBox/CheckBox';
@@ -40,10 +30,7 @@ export {
   type TypeCodeBlockLanguage,
 } from './Code/CodeBlock';
 export { CodeWindow, type CodeWindowProps } from './Code/CodeWindow';
-export {
-  DatePicker,
-  type DatePickerProps,
-} from './DatePicker/DatePicker';
+export { DatePicker, type DatePickerProps } from './DatePicker/DatePicker';
 export { Form, type FormProps } from './Form/Form';
 export { FormError, type FormErrorProps } from './Form/FormError';
 export {
@@ -80,10 +67,7 @@ export {
 } from './Modal/ModalFooterInsert';
 export { ModalHeader, type ModalHeaderProps } from './Modal/ModalHeader';
 export { ModalManager } from './Modal/ModalManager';
-export {
-  ModalPadding,
-  type ModalPaddingProps,
-} from './Modal/ModalPadding';
+export { ModalPadding, type ModalPaddingProps } from './Modal/ModalPadding';
 export {
   ModalPaddingOffset,
   type ModalPaddingOffsetProps,
@@ -92,7 +76,10 @@ export { ModalTitle, type ModalTitleProps } from './Modal/ModalTitle';
 export { Motion } from './Motion/Motion';
 export { Option, type OptionProps } from './Options/Option';
 export { Options, type OptionsProps } from './Options/Options';
-export { default as Placement, type PlacementProps } from './Placement/Placement';
+export {
+  default as Placement,
+  type PlacementProps,
+} from './Placement/Placement';
 export {
   PlacementContent,
   type PlacementContentProps,
@@ -105,10 +92,7 @@ export {
   PlacementReference,
   type PlacementReferenceProps,
 } from './Placement/PlacementReference';
-export {
-  RadioButton,
-  type RadioButtonProps,
-} from './RadioButton/RadioButton';
+export { RadioButton, type RadioButtonProps } from './RadioButton/RadioButton';
 export { RadioButtonIndicator } from './RadioButton/RadioButtonIndicator';
 export { Range, type RangeProps } from './Range/Range';
 export { Separator, type SeparatorProps } from './Separator/Separator';
@@ -131,9 +115,7 @@ export {
   TextAreaLabel,
   type TextAreaLabelProps,
 } from './TextArea/TextAreaLabel';
-export {
-  ThemeProvider,
-} from './ThemeSwitcher/ThemeProvider';
+export { ThemeProvider } from './ThemeSwitcher/ThemeProvider';
 export { useThemeContext } from './ThemeSwitcher/useThemeContext';
 export {
   ThemeSwitcher,

@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import { Box, BoxProps } from 'preshape';
+import { ReactNode } from 'react';
 import GithubLink from '../GithubLink/GithubLink';
 
 interface Props extends BoxProps {

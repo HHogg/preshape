@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
-import { CheckBoxIndicator } from './CheckBoxIndicator';
 import {
   SelectInputLabel,
   SelectInputLabelProps,
 } from '../SelectInputLabel/SelectInputLabel';
+import { CheckBoxIndicator } from './CheckBoxIndicator';
 import './CheckBox.css';
 
 /**

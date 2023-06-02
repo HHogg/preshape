@@ -1,4 +1,3 @@
-import { Fragment, useState } from 'react';
 import {
   Icons,
   Link,
@@ -11,6 +10,7 @@ import {
   Text,
   Box,
 } from 'preshape';
+import { Fragment, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramTabs';
 

@@ -1,9 +1,9 @@
 import { Box, BoxProps } from 'preshape';
-import { getByModuleAndName } from './documentation';
 import { JSONOutput } from 'typedoc';
-import { ApiStatesController } from './Types';
-import ComponentDocumentation from './ComponentDocumentation';
 import { CatalogueApi } from '../../docs';
+import ComponentDocumentation from './ComponentDocumentation';
+import { ApiStatesController } from './Types';
+import { getByModuleAndName } from './documentation';
 
 interface Props extends ApiStatesController, BoxProps {
   apis: CatalogueApi[];

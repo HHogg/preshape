@@ -10,8 +10,8 @@ import { Appear } from '../Appear/Appear';
 import { Box } from '../Box/Box';
 import { Button, ButtonProps } from '../Button/Button';
 import * as Icons from '../Icon';
-import { Tooltip } from '../Tooltip/Tooltip';
 import { Spinner } from '../Spinner/Spinner';
+import { Tooltip } from '../Tooltip/Tooltip';
 
 /**
  * A button that can be used to show loading, success, and error states.

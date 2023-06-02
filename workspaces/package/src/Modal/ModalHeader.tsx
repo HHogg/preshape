@@ -1,9 +1,9 @@
+import classNames from 'classnames';
 import { forwardRef, PointerEvent } from 'react';
-import { useModalContext } from './useModalContext';
 import { Box, BoxProps } from '../Box/Box';
 import * as Icons from '../Icon';
 import { Link } from '../Link/Link';
-import classNames from 'classnames';
+import { useModalContext } from './useModalContext';
 
 /**
  * The header element of the Modal. Any children content

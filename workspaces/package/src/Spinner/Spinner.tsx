@@ -1,7 +1,7 @@
 import { MotionProps } from 'framer-motion';
+import { forwardRef } from 'react';
 import * as Icons from '../Icon';
 import { Motion } from '../Motion/Motion';
-import { forwardRef } from 'react';
 
 /**
  * A spinner component that can be used to indicate loading.

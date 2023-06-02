@@ -1,8 +1,8 @@
-import { forwardRef } from 'react';
 import { Variants } from 'framer-motion';
-import { transitionTimeFast, transitionTimingFunction } from '../variables';
+import { forwardRef } from 'react';
 import { Box, BoxProps } from '../Box/Box';
 import { Motion } from '../Motion/Motion';
+import { transitionTimeFast, transitionTimingFunction } from '../variables';
 import './Toggle.css';
 
 const transition = {

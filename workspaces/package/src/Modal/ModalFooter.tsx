@@ -1,7 +1,7 @@
+import classNames from 'classnames';
 import { forwardRef } from 'react';
 import { Box, BoxProps } from '../Box/Box';
 import { useModalContext } from './useModalContext';
-import classNames from 'classnames';
 
 /**
  * The footer element of the Modal. This can be used as

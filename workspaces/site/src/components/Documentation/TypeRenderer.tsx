@@ -1,11 +1,11 @@
 import { JSONOutput } from 'typedoc';
-import { ApiValueController } from './Types';
 import TypeRendererIntrinsic from './TypeRendererIntrinsic';
+import TypeRendererLiteral from './TypeRendererLiteral';
 import TypeRendererReference from './TypeRendererReference';
 import TypeRendererReflection from './TypeRendererReflection';
-import TypeRendererLiteral from './TypeRendererLiteral';
-import TypeRendererUnion from './TypeRendererUnion';
 import TypeRendererTypeOperator from './TypeRendererTypeOperator';
+import TypeRendererUnion from './TypeRendererUnion';
+import { ApiValueController } from './Types';
 
 export interface TypeRendererProps extends ApiValueController {
   reflection: JSONOutput.DeclarationReflection;

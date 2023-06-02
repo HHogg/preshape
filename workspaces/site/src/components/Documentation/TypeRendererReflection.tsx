@@ -1,7 +1,7 @@
 import { JSONOutput } from 'typedoc';
+import TypeLabel from './TypeLabel';
 import { TypeRendererProps } from './TypeRenderer';
 import { getSource } from './documentation';
-import TypeLabel from './TypeLabel';
 
 interface Props extends TypeRendererProps {
   type: JSONOutput.ReflectionType;

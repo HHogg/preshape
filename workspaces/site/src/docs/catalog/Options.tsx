@@ -1,4 +1,3 @@
-import { useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Icons,
@@ -13,6 +12,7 @@ import {
   PlacementOpenCondition,
   PlacementContent,
 } from 'preshape';
+import { useEffect, useMemo, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramOptions';
 

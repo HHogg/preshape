@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
-import { InputWrapper, InputWrapperProps } from './InputWrapper';
-import { Text, TextProps } from '../Text/Text';
 import { useFormContext } from '../Form/useFormContext';
 import { useFormRegisterField } from '../Form/useFormRegisterField';
+import { Text, TextProps } from '../Text/Text';
+import { InputWrapper, InputWrapperProps } from './InputWrapper';
 import './Input.css';
 
 /**

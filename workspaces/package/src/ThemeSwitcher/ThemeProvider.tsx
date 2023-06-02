@@ -1,9 +1,9 @@
 import { PropsWithChildren, useEffect, useRef } from 'react';
-import { TypeTheme } from '../types';
 import useLocalStorage from '../hooks/useLocalStorage';
+import { TypeTheme } from '../types';
 import { themes, themesOpposite } from '../variables';
-import { ThemeContext } from './useThemeContext';
 import { useSystemTheme } from './useSystemTheme';
+import { ThemeContext } from './useThemeContext';
 
 type ThemeProviderProps = {
   initialTheme?: TypeTheme;

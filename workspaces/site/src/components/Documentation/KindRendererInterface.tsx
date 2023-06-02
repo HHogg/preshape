@@ -1,5 +1,5 @@
-import TypePropTable from './TypePropTable';
 import { APIItemProps } from './ComponentDocumentation';
+import TypePropTable from './TypePropTable';
 
 type Props = APIItemProps
 

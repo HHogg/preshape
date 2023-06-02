@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
-import { RadioButtonIndicator } from './RadioButtonIndicator';
 import {
   SelectInputLabel,
   SelectInputLabelProps,
 } from '../SelectInputLabel/SelectInputLabel';
+import { RadioButtonIndicator } from './RadioButtonIndicator';
 import './RadioButton.css';
 
 /**

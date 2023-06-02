@@ -1,14 +1,14 @@
-import { useParams } from 'react-router-dom';
 import { Box, CodeBlock, CodeWindow, useMatchMedia } from 'preshape';
 import { useState } from 'react';
-import { getCatalogItem } from '../docs';
+import { useParams } from 'react-router-dom';
+import ModuleDocumentation from '../components/Documentation/ModuleDocumentation';
+import { getModuleSummary } from '../components/Documentation/documentation';
 import { Page } from '../components/Page/Page';
+import PageChangeButton from '../components/Page/PageChangeButton';
 import { PageSection } from '../components/Page/PageSection';
 import { PageSubtitle } from '../components/Page/PageSubtitle';
 import Showcase from '../components/Showcase/Showcase';
-import ModuleDocumentation from '../components/Documentation/ModuleDocumentation';
-import PageChangeButton from '../components/Page/PageChangeButton';
-import { getModuleSummary } from '../components/Documentation/documentation';
+import { getCatalogItem } from '../docs';
 
 export const ComponentPage = () => {
   const params = useParams<'id'>();

@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
 import { Appear, AppearProps, Box } from 'preshape';
-import ThemeIcon from '../../components/ThemeIcon/ThemeIcon';
+import { useEffect, useRef, useState } from 'react';
 import { CatalogueItem } from '..';
+import ThemeIcon from '../../components/ThemeIcon/ThemeIcon';
 import { Pictogram } from './pictograms/PictogramAppear';
 
 const Item: CatalogueItem<{

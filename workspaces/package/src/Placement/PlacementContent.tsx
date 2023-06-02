@@ -1,13 +1,13 @@
-import { forwardRef } from 'react';
 import {
   FloatingArrow,
   FloatingPortal,
   useMergeRefs,
 } from '@floating-ui/react';
+import { forwardRef } from 'react';
 import { Appear, AppearProps } from '../Appear/Appear';
 import { Box, BoxProps } from '../Box/Box';
-import { usePlacementContext } from './usePlacementContext';
 import { ARROW_HEIGHT, ARROW_WIDTH } from './usePlacement';
+import { usePlacementContext } from './usePlacementContext';
 
 /**
  * The content to be displayed in the placement.

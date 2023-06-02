@@ -22,7 +22,6 @@
     "deploy:site": "firebase deploy"
   },
   "devDependencies": {
-    "@parcel/optimizer-data-url": "^2.0.1",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/commit-analyzer": "^9.0.1",
     "@semantic-release/git": "^10.0.0",
@@ -33,6 +32,7 @@
     "eslint": "^8.40.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
@@ -40,6 +40,7 @@
     "prettier": "^2.8.8",
     "semantic-release": "^21.0.2",
     "stylelint": "^15.6.1",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^12.0.0",
     "stylelint-config-standard": "^33.0.0",
     "ts-node": "^10.9.1",

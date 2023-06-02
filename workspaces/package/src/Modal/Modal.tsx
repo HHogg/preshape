@@ -1,10 +1,10 @@
+import classNames from 'classnames';
 import { forwardRef, PointerEvent, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import classNames from 'classnames';
+import { Appear, TypeAnimation } from '../Appear/Appear';
+import { Box, BoxProps } from '../Box/Box';
 import { useMatchMedia } from '../hooks';
 import { TypeColor } from '../types';
-import { Box, BoxProps } from '../Box/Box';
-import { Appear, TypeAnimation } from '../Appear/Appear';
 import './Modal.css';
 import useIsModalVisible from './useIsModalVisible';
 import { ModalContext, ModalPaddings, ModalSize } from './useModalContext';

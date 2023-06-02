@@ -1,5 +1,5 @@
-import { forwardRef, HTMLAttributes } from 'react';
 import { Box, Button, ButtonProps, Icons } from 'preshape';
+import { forwardRef, HTMLAttributes } from 'react';
 import TypeText from './TypeText';
 
 interface Props extends ButtonProps {

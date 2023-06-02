@@ -1,6 +1,6 @@
 import { Box, Grid, Link, Text } from 'preshape';
-import { catalogueListing } from '../docs';
 import { Page } from '../components/Page/Page';
+import { catalogueListing } from '../docs';
 
 export const ComponentsPage = () => {
   return (

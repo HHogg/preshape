@@ -7,9 +7,9 @@ import {
   ThemeSwitcher,
   useThemeContext,
 } from 'preshape';
+import { catalogueListing } from '../../docs';
 import { Logo } from '../Logo/PreshapeIcon';
 import { MenuItem } from './MenuItem';
-import { catalogueListing } from '../../docs';
 
 type MenuProps = BoxProps & {
   onSelect?: () => void;

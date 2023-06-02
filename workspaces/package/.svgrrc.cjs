@@ -5,6 +5,9 @@ module.exports = {
   expandProps: false,
   prettier: false,
   typescript: true,
+  replaceAttrValues: {
+    '#000': 'currentColor',
+  },
   template: ({ template }, _, { componentName, props, jsx }) => {
     const typeScriptTpl = template.smart({ plugins: ['jsx', 'typescript'] });
     return typeScriptTpl.ast`/** AUTO GENERATED **/

@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import {
   AllHTMLAttributes,
   CSSProperties,
@@ -5,7 +6,6 @@ import {
   createElement,
   forwardRef,
 } from 'react';
-import classnames from 'classnames';
 import './Box.css';
 import {
   TypeBorderSize,

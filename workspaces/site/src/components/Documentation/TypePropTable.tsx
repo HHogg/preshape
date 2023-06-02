@@ -7,9 +7,9 @@ import {
   TableRow,
   Text,
 } from 'preshape';
-import { getTag } from './documentation';
-import TypePropTableRow from './TypePropTableRow';
 import { APIItemProps } from './ComponentDocumentation';
+import TypePropTableRow from './TypePropTableRow';
+import { getTag } from './documentation';
 
 type Props = APIItemProps
 

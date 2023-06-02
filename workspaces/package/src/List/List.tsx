@@ -1,7 +1,7 @@
-import { forwardRef } from 'react';
 import classnames from 'classnames';
-import { TypeSize } from '../types';
+import { forwardRef } from 'react';
 import { Box, BoxProps } from '../Box/Box';
+import { TypeSize } from '../types';
 import './List.css';
 
 /**
