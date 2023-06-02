@@ -1,3 +1,15 @@
+## [14.1.0](https://github.com/HHogg/preshape/compare/v14.0.1...v14.1.0) (2023-06-02)
+
+
+### Features
+
+* **DatePicker:** Changed prop withRangeDate to range. Removed prop withSelectablePast, and added earliestSelectableDate and latestSelectableDate ([5d01a81](https://github.com/HHogg/preshape/commit/5d01a818a1f16534ff3c54e39bdf3cda025ace34))
+
+
+### Fixes
+
+* **Input:** Pass 'type' prop through to input element ([446c510](https://github.com/HHogg/preshape/commit/446c510c00629bec0bf75b220b3bb02560e6f00f))
+
 ### [14.0.1](https://github.com/HHogg/preshape/compare/v14.0.0...v14.0.1) (2023-05-14)
 
 
