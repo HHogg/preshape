@@ -33,6 +33,7 @@ export const Input = forwardRef<
     size = 'x3',
     readOnly,
     tag = 'input',
+    type,
     value,
     ...rest
   } = props;
@@ -69,6 +70,7 @@ export const Input = forwardRef<
         size={size}
         strong
         tag={tag}
+        type={type}
         value={value}
       />
     </InputWrapper>
