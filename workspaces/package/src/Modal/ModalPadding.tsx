@@ -49,6 +49,7 @@ export const ModalPadding = forwardRef<any, ModalPaddingProps>((props, ref) => {
       paddingRight={right ? paddingHorizontal : undefined}
       paddingTop={top ? paddingVertical : undefined}
       paddingBottom={bottom ? paddingVertical : undefined}
+      ref={ref}
     />
   );
 });

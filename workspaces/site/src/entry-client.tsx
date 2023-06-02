@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 if (process.env.NODE_ENV === 'development') {
-  ReactDOM.createRoot(document.getElementById('Root') as HTMLElement).render(
-    <React.StrictMode>
+  createRoot(document.getElementById('Root') as HTMLElement).render(
+    <StrictMode>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </React.StrictMode>
+    </StrictMode>
   );
 } else {
-  ReactDOM.hydrateRoot(
+  hydrateRoot(
     document.getElementById('Root')!,
     <BrowserRouter>
       <App />

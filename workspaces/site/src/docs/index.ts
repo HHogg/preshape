@@ -76,7 +76,7 @@ export const catalogue: Record<string, CatalogueItem<any>> = {
 
 export const catalogueListing = Object.entries(catalogue)
   .sort(([a], [b]) => a.localeCompare(b))
-  .map(([_, value]) => value);
+  .map(([, value]) => value);
 
 export const getCatalogItem = (id?: string, indexShift = 0) => {
   if (id) {

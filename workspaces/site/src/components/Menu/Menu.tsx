@@ -15,7 +15,7 @@ type MenuProps = BoxProps & {
   onSelect?: () => void;
 };
 
-export const Menu = ({ children, onSelect, ...props }: MenuProps) => {
+export const Menu = ({ onSelect, ...props }: MenuProps) => {
   const { colors } = useThemeContext();
 
   return (

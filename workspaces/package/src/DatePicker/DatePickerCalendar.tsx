@@ -1,5 +1,4 @@
 import { DateTime } from 'luxon';
-import React from 'react';
 import { Grid } from '../Grid/Grid';
 import { Text, TextProps } from '../Text/Text';
 import DatePickerDay from './DatePickerDay';

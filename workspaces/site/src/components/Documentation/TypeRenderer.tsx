@@ -32,8 +32,8 @@ const TypeRenderer = (props: TypeRendererProps) => {
   const TypeRenderer = props.type?.type && typeMap[props.type?.type];
 
   if (!TypeRenderer) {
+    // eslint-disable-next-line no-console
     console.log(`No TypeRenderer for '${props.type?.type}'`);
-    console.log(props.reflection);
     return null;
   }
 

@@ -18,10 +18,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: 'Install Dependencies'
         run: yarn
-      - name: 'Linting'
-        run: yarn lint
       - name: 'Build package'
         run: yarn workspace preshape build
+      - name: 'Linting'
+        run: yarn lint
       - name: 'Build site'
         run: yarn workspace site build
       - name: 'Publish package'

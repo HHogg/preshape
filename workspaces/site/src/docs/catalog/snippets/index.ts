@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { TypeCodeBlockLanguage } from 'preshape';
 import SnippetCss from './css.txt?raw';
 import SnippetJson from './json.txt?raw';
