@@ -9,8 +9,9 @@ interface Props extends Omit<TextProps, 'dateTime' | 'onChange'> {
   onChange: (startDate: string, endDate: string) => void;
   selectedStartDateTime: DateTime;
   selectedEndDateTime: DateTime;
-  withRangeDate?: boolean;
-  withSelectablePast?: boolean;
+  range?: boolean;
+  latestSelectableDate?: DateTime;
+  earliestSelectableDate?: DateTime;
 }
 
 const DatePickerCalendar: React.FC<Props> = ({
@@ -18,8 +19,9 @@ const DatePickerCalendar: React.FC<Props> = ({
   onChange,
   selectedStartDateTime,
   selectedEndDateTime,
-  withRangeDate,
-  withSelectablePast,
+  range,
+  latestSelectableDate,
+  earliestSelectableDate,
   ...rest
 }) => {
   const prependDays = (dateTime.weekday - 1) % 7;
@@ -30,7 +32,7 @@ const DatePickerCalendar: React.FC<Props> = ({
   );
 
   const handleSelectDate = (dateTime: DateTime) => {
-    if (!withRangeDate || !selectedStartDateTime.equals(selectedEndDateTime)) {
+    if (!range || !selectedStartDateTime.equals(selectedEndDateTime)) {
       return onChange(
         dateTime.toFormat('yyyy-MM-dd'),
         dateTime.toFormat('yyyy-MM-dd')
@@ -69,7 +71,8 @@ const DatePickerCalendar: React.FC<Props> = ({
             key={dateTime.month + (prependDays - index) * -1}
             selectedStartDateTime={selectedStartDateTime}
             selectedEndDateTime={selectedEndDateTime}
-            withSelectablePast={withSelectablePast}
+            earliestSelectableDate={earliestSelectableDate}
+            latestSelectableDate={latestSelectableDate}
           />
         ))}
 
@@ -80,7 +83,8 @@ const DatePickerCalendar: React.FC<Props> = ({
             onSelect={handleSelectDate}
             selectedStartDateTime={selectedStartDateTime}
             selectedEndDateTime={selectedEndDateTime}
-            withSelectablePast={withSelectablePast}
+            earliestSelectableDate={earliestSelectableDate}
+            latestSelectableDate={latestSelectableDate}
           />
         ))}
 
@@ -90,7 +94,8 @@ const DatePickerCalendar: React.FC<Props> = ({
             key={dateTime.month + daysInMonth + index}
             selectedStartDateTime={selectedStartDateTime}
             selectedEndDateTime={selectedEndDateTime}
-            withSelectablePast={withSelectablePast}
+            earliestSelectableDate={earliestSelectableDate}
+            latestSelectableDate={latestSelectableDate}
           />
         ))}
       </Grid>

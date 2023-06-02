@@ -28,13 +28,15 @@ export interface DatePickerProps extends Omit<BoxProps, 'onChange'> {
    * Flag to change the behaviour from a single
    * selectable date to a range
    */
-  withRangeDate?: boolean;
-
+  range?: boolean;
   /**
-   * Flag to change if dates in the past can be
-   * selected
+   * The latest selectable date
    */
-  withSelectablePast?: boolean;
+  latestSelectableDate?: string;
+  /**
+   * The earliest selectable date
+   */
+  earliestSelectableDate?: string;
 }
 
 export const DatePicker = forwardRef<any, DatePickerProps>(
@@ -43,8 +45,9 @@ export const DatePicker = forwardRef<any, DatePickerProps>(
       onChange,
       endDate: dirtyEndDate,
       startDate: dirtyStartDate,
-      withRangeDate,
-      withSelectablePast,
+      range,
+      earliestSelectableDate: earliestSelectableDateString,
+      latestSelectableDate: latestSelectableDateString,
       ...rest
     },
     ref
@@ -53,6 +56,13 @@ export const DatePicker = forwardRef<any, DatePickerProps>(
       dirtyStartDate,
       dirtyEndDate
     );
+
+    const earliestSelectableDate = earliestSelectableDateString
+      ? DateTime.fromJSDate(new Date(earliestSelectableDateString))
+      : undefined;
+    const latestSelectableDate = latestSelectableDateString
+      ? DateTime.fromJSDate(new Date(latestSelectableDateString))
+      : undefined;
 
     const [activeDateTime, setActiveDateTime] = useState(
       DateTime.now().startOf('month')
@@ -106,8 +116,9 @@ export const DatePicker = forwardRef<any, DatePickerProps>(
             onChange={onChange}
             selectedEndDateTime={endDate}
             selectedStartDateTime={startDate}
-            withRangeDate={withRangeDate}
-            withSelectablePast={withSelectablePast}
+            range={range}
+            latestSelectableDate={latestSelectableDate}
+            earliestSelectableDate={earliestSelectableDate}
           />
         </Box>
       </Box>

@@ -21,8 +21,15 @@ const Item: CatalogueItem<{
     state: {
       DatePicker: {
         onChange: () => null,
-        withRangeDate: true,
-        withSelectablePast: true,
+        range: true,
+        earliestSelectableDate: DateTime.now()
+          .startOf('year')
+          .toJSDate()
+          .toDateString(),
+        latestSelectableDate: DateTime.now()
+          .endOf('year')
+          .toJSDate()
+          .toDateString(),
       },
     },
     Component: (props) => {
@@ -50,8 +57,9 @@ import { DatePicker } from 'preshape';
   endDate="04/04/2023"
   startDate"05/04/2023"
   onChange={() => {}}
-  withRangeDate
-  withSelectablePast
+  range
+  earliestSelectableDate="01/01/2023"
+  latestSelectableDate="31/12/2023"
 />
     `,
   },

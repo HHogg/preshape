@@ -8,7 +8,8 @@ interface Props extends Omit<BoxProps, 'dateTime' | 'onSelect'> {
   onSelect?: (dateTime: DateTime) => void;
   selectedStartDateTime: DateTime | null;
   selectedEndDateTime: DateTime | null;
-  withSelectablePast?: boolean;
+  earliestSelectableDate?: DateTime;
+  latestSelectableDate?: DateTime;
 }
 
 const DatePickerDay: React.FC<Props> = ({
@@ -16,7 +17,8 @@ const DatePickerDay: React.FC<Props> = ({
   onSelect,
   selectedStartDateTime,
   selectedEndDateTime,
-  withSelectablePast,
+  earliestSelectableDate,
+  latestSelectableDate,
   ...rest
 }) => {
   const isToday = dateTime.hasSame(DateTime.now(), 'day');
@@ -35,7 +37,8 @@ const DatePickerDay: React.FC<Props> = ({
 
   const disabled =
     !onSelect ||
-    (!withSelectablePast && dateTime < DateTime.now().startOf('day'));
+    (earliestSelectableDate && dateTime < earliestSelectableDate) ||
+    (latestSelectableDate && dateTime > latestSelectableDate);
 
   const classes = classnames('DatePicker__day', {
     'DatePicker__day--disabled': disabled,
