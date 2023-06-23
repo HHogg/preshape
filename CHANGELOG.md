@@ -1,3 +1,10 @@
+### [14.1.1](https://github.com/HHogg/preshape/compare/v14.1.0...v14.1.1) (2023-06-23)
+
+
+### Fixes
+
+* **Placement:** Exported usePlacementContext ([0d7b883](https://github.com/HHogg/preshape/commit/0d7b8833edd01caa0f251f199aa21812fd1567f7))
+
 ## [14.1.0](https://github.com/HHogg/preshape/compare/v14.0.1...v14.1.0) (2023-06-02)
 
 
