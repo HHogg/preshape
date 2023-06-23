@@ -1,6 +1,7 @@
 .cache
 .firebase
 .parcel-cache
+.yarn/install-state.gz
 dist
 lib
 node_modules
