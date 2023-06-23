@@ -10,7 +10,7 @@
     "plugin:import/recommended",
     "plugin:import/typescript",
     "google",
-    "eslint-config-prettier",
+    "eslint-config-prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
