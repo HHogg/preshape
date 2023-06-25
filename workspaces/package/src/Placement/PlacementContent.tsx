@@ -37,6 +37,7 @@ export const PlacementContent = forwardRef<
     padding,
     paddingHorizontal,
     paddingVertical,
+    style,
     withArrow,
     ...rest
   } = props;
@@ -53,7 +54,7 @@ export const PlacementContent = forwardRef<
         {...rest}
         {...getFloatingProps({})}
         ref={ref}
-        style={context.floatingStyles}
+        style={{ ...context.floatingStyles, ...style }}
       >
         <Appear
           animation={animation}
