@@ -1,3 +1,11 @@
+### [14.1.2](https://github.com/HHogg/preshape/compare/v14.1.1...v14.1.2) (2023-06-25)
+
+
+### Fixes
+
+* **Tooltip:** Support passing through style prop ([1c18b2c](https://github.com/HHogg/preshape/commit/1c18b2c5a98abbaa76b05a80fc73ca00b48768a0))
+* **variables:** Corrected background variables for themes ([d0c4ad9](https://github.com/HHogg/preshape/commit/d0c4ad9abddfc1e92f47846c0ffcdc49bc4f2a16))
+
 ### [14.1.1](https://github.com/HHogg/preshape/compare/v14.1.0...v14.1.1) (2023-06-23)
 
 
