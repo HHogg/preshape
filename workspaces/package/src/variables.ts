@@ -104,9 +104,9 @@ export type ThemeColorMapKey =
 export type ThemeColorMap = Record<ThemeColorMapKey, string>;
 
 export const themeDay: ThemeColorMap = {
-  colorBackgroundShade1: colorLightShade1,
-  colorBackgroundShade2: colorLightShade2,
-  colorBackgroundShade3: colorLightShade3,
+  colorBackgroundShade1: colorWhite,
+  colorBackgroundShade2: colorLightShade1,
+  colorBackgroundShade3: colorLightShade2,
   colorTextShade1: colorDarkShade1,
   colorTextShade2: colorDarkShade2,
   colorTextShade3: colorDarkShade3,
@@ -119,9 +119,9 @@ export const themeDay: ThemeColorMap = {
 };
 
 export const themeNight: ThemeColorMap = {
-  colorBackgroundShade1: colorDarkShade1,
-  colorBackgroundShade2: colorDarkShade2,
-  colorBackgroundShade3: colorDarkShade3,
+  colorBackgroundShade1: colorBlack,
+  colorBackgroundShade2: colorDarkShade1,
+  colorBackgroundShade3: colorDarkShade2,
   colorTextShade1: colorLightShade1,
   colorTextShade2: colorLightShade2,
   colorTextShade3: colorLightShade3,
