@@ -1,3 +1,10 @@
+### [14.1.3](https://github.com/HHogg/preshape/compare/v14.1.2...v14.1.3) (2023-06-26)
+
+
+### Fixes
+
+* **Motion:** Exported MotionProps ([d048279](https://github.com/HHogg/preshape/commit/d0482797945c52729905a82f061e208f8dac0745))
+
 ### [14.1.2](https://github.com/HHogg/preshape/compare/v14.1.1...v14.1.2) (2023-06-25)
 
 
