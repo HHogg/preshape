@@ -73,7 +73,7 @@ export {
   type ModalPaddingOffsetProps,
 } from './Modal/ModalPaddingOffset';
 export { ModalTitle, type ModalTitleProps } from './Modal/ModalTitle';
-export { Motion } from './Motion/Motion';
+export { Motion, type MotionsProps } from './Motion/Motion';
 export { Option, type OptionProps } from './Options/Option';
 export { Options, type OptionsProps } from './Options/Options';
 export {
