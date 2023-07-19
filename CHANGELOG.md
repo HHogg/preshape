@@ -1,3 +1,10 @@
+### [14.1.4](https://github.com/HHogg/preshape/compare/v14.1.3...v14.1.4) (2023-07-19)
+
+
+### Fixes
+
+* **Box:** Apply border-width for x0 border prop value ([d00f1d9](https://github.com/HHogg/preshape/commit/d00f1d93d6068c12b97e1505eeb2a52bd48daf9e))
+
 ### [14.1.3](https://github.com/HHogg/preshape/compare/v14.1.2...v14.1.3) (2023-06-26)
 
 
