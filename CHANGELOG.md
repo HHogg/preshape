@@ -1,3 +1,16 @@
+## [15.0.0](https://github.com/HHogg/preshape/compare/v14.1.4...v15.0.0) (2023-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Link:** Removed the isTextLink prop and replaced with an underline prop with
+additional props for configuring the color and size of the underline
+
+### Features
+
+* **Link:** Added props to customise the link hover and active text color ([0422d40](https://github.com/HHogg/preshape/commit/0422d40af8d87d53216e0a300f1e53ac16408c6d))
+* **Link:** Removed the isTextLink prop and replaced with an underline prop ([ec80551](https://github.com/HHogg/preshape/commit/ec805514501392cfc100051ced5413063efbdfbc))
+
 ### [14.1.4](https://github.com/HHogg/preshape/compare/v14.1.3...v14.1.4) (2023-07-19)
 
 
