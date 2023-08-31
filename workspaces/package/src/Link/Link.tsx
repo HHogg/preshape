@@ -2,8 +2,8 @@ import classnames from 'classnames';
 import { forwardRef } from 'react';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import { Text, TextProps } from '../Text/Text';
-import './Link.css';
 import { TypeBorderSize, TypeColor } from '../types';
+import './Link.css';
 
 /**
  * A link component that can be used to navigate to other pages
@@ -18,6 +18,10 @@ export interface LinkProps extends TextProps {
   underlineColor?: TypeColor;
   /** The size of the underline color */
   underlineSize?: TypeBorderSize;
+  /** The color of the active state */
+  textColorActive?: TypeColor;
+  /** The color of the hover state */
+  textColorHover?: TypeColor;
   /**
    * React Router "to" prop, when applied the Link will behave like a
    * React Router Link component.
@@ -28,6 +32,8 @@ export interface LinkProps extends TextProps {
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const {
     active,
+    textColorActive = 'accent-shade-4',
+    textColorHover = 'accent-shade-3',
     to = '',
     underline,
     underlineColor = underline ? 'accent-shade-3' : undefined,
@@ -39,6 +45,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
     'Link--underline': underline,
     [`Link--underline-color-${underlineColor}`]: underlineColor,
     [`Link--underline-size-${underlineSize}`]: underlineSize,
+    [`Link--text-color-active-${textColorActive}`]: textColorActive,
+    [`Link--text-color-hover-${textColorHover}`]: textColorHover,
   });
 
   const href = useHref(to);

@@ -6,18 +6,6 @@
   transition-duration: var(--transition-duration--fast);
   transition-timing-function: var(--transition-timing-function);
   text-decoration-color: var(--color-accent-shade-4);
-
-  &:hover {
-    color: var(--color-accent-shade-3);
-  }
-
-  &.Link--active {
-    color: var(--color-accent-shade-4);
-  }
-
-  &:active {
-    color: var(--color-accent-shade-5);
-  }
 }
 
 .Link--underline {
@@ -67,3 +55,105 @@
 .Link--underline-color-positive-shade-3 { text-decoration-color: var(--color-positive-shade-3); }
 .Link--underline-color-positive-shade-4 { text-decoration-color: var(--color-positive-shade-4); }
 .Link--underline-color-positive-shade-5 { text-decoration-color: var(--color-positive-shade-5); }
+
+.Link--active.Link--text-color-active-black { color: var(--color-black); }
+.Link--active.Link--text-color-active-white { color: var(--color-white); }
+.Link--active.Link--text-color-active-highlight { color: var(--color-highlight); }
+.Link--active.Link--text-color-active-overlay { color: var(--color-overlay); }
+.Link--active.Link--text-color-active-transparent { color: transparent; }
+.Link--active.Link--text-color-active-accent-shade-1 { color: var(--color-accent-shade-1); }
+.Link--active.Link--text-color-active-accent-shade-2 { color: var(--color-accent-shade-2); }
+.Link--active.Link--text-color-active-accent-shade-3 { color: var(--color-accent-shade-3); }
+.Link--active.Link--text-color-active-accent-shade-4 { color: var(--color-accent-shade-4); }
+.Link--active.Link--text-color-active-accent-shade-5 { color: var(--color-accent-shade-5); }
+.Link--active.Link--text-color-active-background-shade-1 { color: var(--color-background-shade-1); }
+.Link--active.Link--text-color-active-background-shade-2 { color: var(--color-background-shade-2); }
+.Link--active.Link--text-color-active-background-shade-3 { color: var(--color-background-shade-3); }
+.Link--active.Link--text-color-active-dark-shade-1 { color: var(--color-dark-shade-1); }
+.Link--active.Link--text-color-active-dark-shade-2 { color: var(--color-dark-shade-2); }
+.Link--active.Link--text-color-active-dark-shade-3 { color: var(--color-dark-shade-3); }
+.Link--active.Link--text-color-active-light-shade-1 { color: var(--color-light-shade-1); }
+.Link--active.Link--text-color-active-light-shade-2 { color: var(--color-light-shade-2); }
+.Link--active.Link--text-color-active-light-shade-3 { color: var(--color-light-shade-3); }
+.Link--active.Link--text-color-active-text-shade-1 { color: var(--color-text-shade-1); }
+.Link--active.Link--text-color-active-text-shade-2 { color: var(--color-text-shade-2); }
+.Link--active.Link--text-color-active-text-shade-3 { color: var(--color-text-shade-3); }
+.Link--active.Link--text-color-active-text-shade-4 { color: var(--color-text-shade-4); }
+.Link--active.Link--text-color-active-negative-shade-1 { color: var(--color-negative-shade-1); }
+.Link--active.Link--text-color-active-negative-shade-2 { color: var(--color-negative-shade-2); }
+.Link--active.Link--text-color-active-negative-shade-3 { color: var(--color-negative-shade-3); }
+.Link--active.Link--text-color-active-negative-shade-4 { color: var(--color-negative-shade-4); }
+.Link--active.Link--text-color-active-negative-shade-5 { color: var(--color-negative-shade-5); }
+.Link--active.Link--text-color-active-positive-shade-1 { color: var(--color-positive-shade-1); }
+.Link--active.Link--text-color-active-positive-shade-2 { color: var(--color-positive-shade-2); }
+.Link--active.Link--text-color-active-positive-shade-3 { color: var(--color-positive-shade-3); }
+.Link--active.Link--text-color-active-positive-shade-4 { color: var(--color-positive-shade-4); }
+.Link--active.Link--text-color-active-positive-shade-5 { color: var(--color-positive-shade-5); }
+
+.Link--text-color-hover-black:hover { color: var(--color-black); }
+.Link--text-color-hover-white:hover { color: var(--color-white); }
+.Link--text-color-hover-highlight:hover { color: var(--color-highlight); }
+.Link--text-color-hover-overlay:hover { color: var(--color-overlay); }
+.Link--text-color-hover-transparent:hover { color: transparent; }
+.Link--text-color-hover-accent-shade-1:hover { color: var(--color-accent-shade-1); }
+.Link--text-color-hover-accent-shade-2:hover { color: var(--color-accent-shade-2); }
+.Link--text-color-hover-accent-shade-3:hover { color: var(--color-accent-shade-3); }
+.Link--text-color-hover-accent-shade-4:hover { color: var(--color-accent-shade-4); }
+.Link--text-color-hover-accent-shade-5:hover { color: var(--color-accent-shade-5); }
+.Link--text-color-hover-background-shade-1:hover { color: var(--color-background-shade-1); }
+.Link--text-color-hover-background-shade-2:hover { color: var(--color-background-shade-2); }
+.Link--text-color-hover-background-shade-3:hover { color: var(--color-background-shade-3); }
+.Link--text-color-hover-dark-shade-1:hover { color: var(--color-dark-shade-1); }
+.Link--text-color-hover-dark-shade-2:hover { color: var(--color-dark-shade-2); }
+.Link--text-color-hover-dark-shade-3:hover { color: var(--color-dark-shade-3); }
+.Link--text-color-hover-light-shade-1:hover { color: var(--color-light-shade-1); }
+.Link--text-color-hover-light-shade-2:hover { color: var(--color-light-shade-2); }
+.Link--text-color-hover-light-shade-3:hover { color: var(--color-light-shade-3); }
+.Link--text-color-hover-text-shade-1:hover { color: var(--color-text-shade-1); }
+.Link--text-color-hover-text-shade-2:hover { color: var(--color-text-shade-2); }
+.Link--text-color-hover-text-shade-3:hover { color: var(--color-text-shade-3); }
+.Link--text-color-hover-text-shade-4:hover { color: var(--color-text-shade-4); }
+.Link--text-color-hover-negative-shade-1:hover { color: var(--color-negative-shade-1); }
+.Link--text-color-hover-negative-shade-2:hover { color: var(--color-negative-shade-2); }
+.Link--text-color-hover-negative-shade-3:hover { color: var(--color-negative-shade-3); }
+.Link--text-color-hover-negative-shade-4:hover { color: var(--color-negative-shade-4); }
+.Link--text-color-hover-negative-shade-5:hover { color: var(--color-negative-shade-5); }
+.Link--text-color-hover-positive-shade-1:hover { color: var(--color-positive-shade-1); }
+.Link--text-color-hover-positive-shade-2:hover { color: var(--color-positive-shade-2); }
+.Link--text-color-hover-positive-shade-3:hover { color: var(--color-positive-shade-3); }
+.Link--text-color-hover-positive-shade-4:hover { color: var(--color-positive-shade-4); }
+.Link--text-color-hover-positive-shade-5:hover { color: var(--color-positive-shade-5); }
+
+.Link--text-color-active-black:active { color: var(--color-black); }
+.Link--text-color-active-white:active { color: var(--color-white); }
+.Link--text-color-active-highlight:active { color: var(--color-highlight); }
+.Link--text-color-active-overlay:active { color: var(--color-overlay); }
+.Link--text-color-active-transparent:active { color: transparent; }
+.Link--text-color-active-accent-shade-1:active { color: var(--color-accent-shade-1); }
+.Link--text-color-active-accent-shade-2:active { color: var(--color-accent-shade-2); }
+.Link--text-color-active-accent-shade-3:active { color: var(--color-accent-shade-3); }
+.Link--text-color-active-accent-shade-4:active { color: var(--color-accent-shade-4); }
+.Link--text-color-active-accent-shade-5:active { color: var(--color-accent-shade-5); }
+.Link--text-color-active-background-shade-1:active { color: var(--color-background-shade-1); }
+.Link--text-color-active-background-shade-2:active { color: var(--color-background-shade-2); }
+.Link--text-color-active-background-shade-3:active { color: var(--color-background-shade-3); }
+.Link--text-color-active-dark-shade-1:active { color: var(--color-dark-shade-1); }
+.Link--text-color-active-dark-shade-2:active { color: var(--color-dark-shade-2); }
+.Link--text-color-active-dark-shade-3:active { color: var(--color-dark-shade-3); }
+.Link--text-color-active-light-shade-1:active { color: var(--color-light-shade-1); }
+.Link--text-color-active-light-shade-2:active { color: var(--color-light-shade-2); }
+.Link--text-color-active-light-shade-3:active { color: var(--color-light-shade-3); }
+.Link--text-color-active-text-shade-1:active { color: var(--color-text-shade-1); }
+.Link--text-color-active-text-shade-2:active { color: var(--color-text-shade-2); }
+.Link--text-color-active-text-shade-3:active { color: var(--color-text-shade-3); }
+.Link--text-color-active-text-shade-4:active { color: var(--color-text-shade-4); }
+.Link--text-color-active-negative-shade-1:active { color: var(--color-negative-shade-1); }
+.Link--text-color-active-negative-shade-2:active { color: var(--color-negative-shade-2); }
+.Link--text-color-active-negative-shade-3:active { color: var(--color-negative-shade-3); }
+.Link--text-color-active-negative-shade-4:active { color: var(--color-negative-shade-4); }
+.Link--text-color-active-negative-shade-5:active { color: var(--color-negative-shade-5); }
+.Link--text-color-active-positive-shade-1:active { color: var(--color-positive-shade-1); }
+.Link--text-color-active-positive-shade-2:active { color: var(--color-positive-shade-2); }
+.Link--text-color-active-positive-shade-3:active { color: var(--color-positive-shade-3); }
+.Link--text-color-active-positive-shade-4:active { color: var(--color-positive-shade-4); }
+.Link--text-color-active-positive-shade-5:active { color: var(--color-positive-shade-5); }
