@@ -307,7 +307,7 @@ export const ColorsPage = () => {
         <Text>
           A minimal set of colors to provide clear contrast across the Day and
           Night themes. All colors are from the optimised open source{' '}
-          <Link href="https://yeun.github.io/open-color/" isTextLink>
+          <Link href="https://yeun.github.io/open-color/" underline>
             Open Color
           </Link>{' '}
           scheme.

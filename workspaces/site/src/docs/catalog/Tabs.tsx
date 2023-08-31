@@ -88,7 +88,7 @@ const Item: CatalogueItem<{
                 <Text margin="x2" size="x3">
                   <Link
                     href="https://en.wikipedia.org/wiki/Star"
-                    isTextLink
+                    underline
                     strong
                   >
                     Star, Wikipedia
@@ -116,7 +116,7 @@ const Item: CatalogueItem<{
                 <Text margin="x2" size="x3">
                   <Link
                     href="https://en.wikipedia.org/wiki/Sun"
-                    isTextLink
+                    underline
                     strong
                   >
                     Sun, Wikipedia
@@ -146,7 +146,7 @@ const Item: CatalogueItem<{
                 <Text margin="x2" size="x3">
                   <Link
                     href="https://en.wikipedia.org/wiki/Moon"
-                    isTextLink
+                    underline
                     strong
                   >
                     Moon, Wikipedia

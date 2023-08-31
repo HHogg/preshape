@@ -35,7 +35,7 @@ const ComponentDocumentation = (props: APIItemProps) => {
               {extendss.map(({ link, name }) => (
                 <Fragment key={name}>
                   {' / '}
-                  <Link to={link} isTextLink>
+                  <Link to={link} underline>
                     {name}
                   </Link>
                 </Fragment>

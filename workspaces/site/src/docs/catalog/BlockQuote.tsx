@@ -32,7 +32,7 @@ const Item: CatalogueItem<{
         </Text>
 
         <Text margin="x1">
-          <Link href="https://www.lipsum.com/feed/html" isTextLink strong>
+          <Link href="https://www.lipsum.com/feed/html" underline strong>
             Lorem Ipsum
           </Link>
         </Text>

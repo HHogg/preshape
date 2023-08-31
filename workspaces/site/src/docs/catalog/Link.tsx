@@ -19,7 +19,7 @@ const Item: CatalogueItem<{
   showcase: {
     state: {
       Link: {
-        isTextLink: true,
+        underline: true,
       },
     },
     Component: (props) => <Link {...props.Link}>Lorem ipsum</Link>,
@@ -30,7 +30,7 @@ import { Link } from 'preshape';
   Lorem ipsum
 </Link>
 
-<Link isTextLink href="http://preshape.hogg.io" target="SomeTarget">
+<Link underline href="http://preshape.hogg.io" target="SomeTarget">
   Lorem ipsum
 </Link>`,
   },
