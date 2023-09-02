@@ -1,16 +1,18 @@
+import classNames from 'classnames';
 import { forwardRef } from 'react';
 import { useFormContext } from '../Form/useFormContext';
 import { useFormRegisterField } from '../Form/useFormRegisterField';
 import { Text, TextProps } from '../Text/Text';
+import { TypeColor } from '../types';
 import { InputWrapper, InputWrapperProps } from './InputWrapper';
 import './Input.css';
 
 /**
  * Styled input component with addons and validation
  */
-export interface InputProps
-  extends Omit<InputWrapperProps, 'size'>,
-    TextProps {}
+export interface InputProps extends Omit<InputWrapperProps, 'size'>, TextProps {
+  placeholderTextColor?: TypeColor;
+}
 
 export const Input = forwardRef<
   HTMLInputElement | HTMLTextAreaElement,
@@ -19,6 +21,7 @@ export const Input = forwardRef<
   const {
     addonEnd,
     addonStart,
+    align,
     backgroundColor = 'background-shade-1',
     borderRadius = 'x2',
     borderSize = 'x2',
@@ -30,15 +33,22 @@ export const Input = forwardRef<
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
     placeholder,
+    placeholderTextColor = 'text-shade-4',
     size = 'x3',
     readOnly,
     tag = 'input',
+    textColor = 'text-shade-1',
     type,
     value,
     ...rest
   } = props;
   const { getError } = useFormContext();
   const refFormElement = useFormRegisterField(name);
+
+  const inputClassName = classNames('Input__element', {
+    [`Input__element--text-color-placeholder-${placeholderTextColor}`]:
+      placeholderTextColor,
+  });
 
   return (
     <InputWrapper
@@ -58,8 +68,9 @@ export const Input = forwardRef<
       ref={ref}
     >
       <Text
+        align={align}
         basis="0"
-        className="Input__element"
+        className={inputClassName}
         disabled={disabled}
         grow
         onChange={onChange}
@@ -70,6 +81,7 @@ export const Input = forwardRef<
         size={size}
         strong
         tag={tag}
+        textColor={textColor}
         type={type}
         value={value}
       />

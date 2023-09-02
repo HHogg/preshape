@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import { forwardRef } from 'react';
 import { Box, BoxProps } from '../Box/Box';
+import { TypeColor } from '../types';
 
 /**
  * A wrapper component for the Input component, provided for
@@ -20,6 +21,18 @@ export interface InputWrapperProps extends BoxProps {
    * Sets styling to indicate the input is invalid.
    */
   invalid?: boolean;
+  /**
+   * Sets the text color when the input is in focus
+   *
+   * @default 'accent-shade-4'
+   */
+  textColorActive?: TypeColor;
+  /**
+   * Sets the text color when the input is hovered
+   *
+   * @default 'accent-shade-3'
+   */
+  textColorHover?: TypeColor;
 }
 
 export const InputWrapper = forwardRef<any, InputWrapperProps>((props, ref) => {
@@ -35,11 +48,15 @@ export const InputWrapper = forwardRef<any, InputWrapperProps>((props, ref) => {
     invalid,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
+    textColorActive = 'accent-shade-4',
+    textColorHover = 'accent-shade-3',
     ...rest
   } = props;
 
   const classes = classnames('Input', {
     'Input--invalid': invalid,
+    [`Input--text-color-active-${textColorActive}`]: textColorActive,
+    [`Input--text-color-hover-${textColorHover}`]: textColorHover,
   });
 
   return (

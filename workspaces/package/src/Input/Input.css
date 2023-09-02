@@ -4,17 +4,9 @@
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
 
-  &:focus-within {
-    color: var(--color-accent-shade-4);
-  }
-
   &[disabled] {
     opacity: 0.5;
     cursor: default;
-  }
-
-  &:hover:not([disabled]) {
-    color: var(--color-accent-shade-3);
   }
 }
 
@@ -34,14 +26,9 @@
   border: 0;
   border-radius: 0;
   background-color: transparent;
-  color: var(--color-text-shade-1);
   padding: 0;
   text-overflow: ellipsis;
   appearance: none;
-
-  &::placeholder {
-    color: var(--color-text-shade-4);
-  }
 
   &:focus::placeholder {
     color: transparent;
@@ -56,3 +43,106 @@
     cursor: default;
   }
 }
+
+
+.Input--text-color-active-black:focus-within { color: var(--color-black); }
+.Input--text-color-active-white:focus-within { color: var(--color-white); }
+.Input--text-color-active-highlight:focus-within { color: var(--color-highlight); }
+.Input--text-color-active-overlay:focus-within { color: var(--color-overlay); }
+.Input--text-color-active-transparent:focus-within { color: transparent; }
+.Input--text-color-active-accent-shade-1:focus-within { color: var(--color-accent-shade-1); }
+.Input--text-color-active-accent-shade-2:focus-within { color: var(--color-accent-shade-2); }
+.Input--text-color-active-accent-shade-3:focus-within { color: var(--color-accent-shade-3); }
+.Input--text-color-active-accent-shade-4:focus-within { color: var(--color-accent-shade-4); }
+.Input--text-color-active-accent-shade-5:focus-within { color: var(--color-accent-shade-5); }
+.Input--text-color-active-background-shade-1:focus-within { color: var(--color-background-shade-1); }
+.Input--text-color-active-background-shade-2:focus-within { color: var(--color-background-shade-2); }
+.Input--text-color-active-background-shade-3:focus-within { color: var(--color-background-shade-3); }
+.Input--text-color-active-dark-shade-1:focus-within { color: var(--color-dark-shade-1); }
+.Input--text-color-active-dark-shade-2:focus-within { color: var(--color-dark-shade-2); }
+.Input--text-color-active-dark-shade-3:focus-within { color: var(--color-dark-shade-3); }
+.Input--text-color-active-light-shade-1:focus-within { color: var(--color-light-shade-1); }
+.Input--text-color-active-light-shade-2:focus-within { color: var(--color-light-shade-2); }
+.Input--text-color-active-light-shade-3:focus-within { color: var(--color-light-shade-3); }
+.Input--text-color-active-text-shade-1:focus-within { color: var(--color-text-shade-1); }
+.Input--text-color-active-text-shade-2:focus-within { color: var(--color-text-shade-2); }
+.Input--text-color-active-text-shade-3:focus-within { color: var(--color-text-shade-3); }
+.Input--text-color-active-text-shade-4:focus-within { color: var(--color-text-shade-4); }
+.Input--text-color-active-negative-shade-1:focus-within { color: var(--color-negative-shade-1); }
+.Input--text-color-active-negative-shade-2:focus-within { color: var(--color-negative-shade-2); }
+.Input--text-color-active-negative-shade-3:focus-within { color: var(--color-negative-shade-3); }
+.Input--text-color-active-negative-shade-4:focus-within { color: var(--color-negative-shade-4); }
+.Input--text-color-active-negative-shade-5:focus-within { color: var(--color-negative-shade-5); }
+.Input--text-color-active-positive-shade-1:focus-within { color: var(--color-positive-shade-1); }
+.Input--text-color-active-positive-shade-2:focus-within { color: var(--color-positive-shade-2); }
+.Input--text-color-active-positive-shade-3:focus-within { color: var(--color-positive-shade-3); }
+.Input--text-color-active-positive-shade-4:focus-within { color: var(--color-positive-shade-4); }
+.Input--text-color-active-positive-shade-5:focus-within { color: var(--color-positive-shade-5); }
+
+.Input--text-color-hover-black:hover:not([disabled]) { color: var(--color-black); }
+.Input--text-color-hover-white:hover:not([disabled]) { color: var(--color-white); }
+.Input--text-color-hover-highlight:hover:not([disabled]) { color: var(--color-highlight); }
+.Input--text-color-hover-overlay:hover:not([disabled]) { color: var(--color-overlay); }
+.Input--text-color-hover-transparent:hover:not([disabled]) { color: transparent; }
+.Input--text-color-hover-accent-shade-1:hover:not([disabled]) { color: var(--color-accent-shade-1); }
+.Input--text-color-hover-accent-shade-2:hover:not([disabled]) { color: var(--color-accent-shade-2); }
+.Input--text-color-hover-accent-shade-3:hover:not([disabled]) { color: var(--color-accent-shade-3); }
+.Input--text-color-hover-accent-shade-4:hover:not([disabled]) { color: var(--color-accent-shade-4); }
+.Input--text-color-hover-accent-shade-5:hover:not([disabled]) { color: var(--color-accent-shade-5); }
+.Input--text-color-hover-background-shade-1:hover:not([disabled]) { color: var(--color-background-shade-1); }
+.Input--text-color-hover-background-shade-2:hover:not([disabled]) { color: var(--color-background-shade-2); }
+.Input--text-color-hover-background-shade-3:hover:not([disabled]) { color: var(--color-background-shade-3); }
+.Input--text-color-hover-dark-shade-1:hover:not([disabled]) { color: var(--color-dark-shade-1); }
+.Input--text-color-hover-dark-shade-2:hover:not([disabled]) { color: var(--color-dark-shade-2); }
+.Input--text-color-hover-dark-shade-3:hover:not([disabled]) { color: var(--color-dark-shade-3); }
+.Input--text-color-hover-light-shade-1:hover:not([disabled]) { color: var(--color-light-shade-1); }
+.Input--text-color-hover-light-shade-2:hover:not([disabled]) { color: var(--color-light-shade-2); }
+.Input--text-color-hover-light-shade-3:hover:not([disabled]) { color: var(--color-light-shade-3); }
+.Input--text-color-hover-text-shade-1:hover:not([disabled]) { color: var(--color-text-shade-1); }
+.Input--text-color-hover-text-shade-2:hover:not([disabled]) { color: var(--color-text-shade-2); }
+.Input--text-color-hover-text-shade-3:hover:not([disabled]) { color: var(--color-text-shade-3); }
+.Input--text-color-hover-text-shade-4:hover:not([disabled]) { color: var(--color-text-shade-4); }
+.Input--text-color-hover-negative-shade-1:hover:not([disabled]) { color: var(--color-negative-shade-1); }
+.Input--text-color-hover-negative-shade-2:hover:not([disabled]) { color: var(--color-negative-shade-2); }
+.Input--text-color-hover-negative-shade-3:hover:not([disabled]) { color: var(--color-negative-shade-3); }
+.Input--text-color-hover-negative-shade-4:hover:not([disabled]) { color: var(--color-negative-shade-4); }
+.Input--text-color-hover-negative-shade-5:hover:not([disabled]) { color: var(--color-negative-shade-5); }
+.Input--text-color-hover-positive-shade-1:hover:not([disabled]) { color: var(--color-positive-shade-1); }
+.Input--text-color-hover-positive-shade-2:hover:not([disabled]) { color: var(--color-positive-shade-2); }
+.Input--text-color-hover-positive-shade-3:hover:not([disabled]) { color: var(--color-positive-shade-3); }
+.Input--text-color-hover-positive-shade-4:hover:not([disabled]) { color: var(--color-positive-shade-4); }
+.Input--text-color-hover-positive-shade-5:hover:not([disabled]) { color: var(--color-positive-shade-5); }
+
+.Input__element--text-color-placeholder-black::placeholder { color: var(--color-black); }
+.Input__element--text-color-placeholder-white::placeholder { color: var(--color-white); }
+.Input__element--text-color-placeholder-highlight::placeholder { color: var(--color-highlight); }
+.Input__element--text-color-placeholder-overlay::placeholder { color: var(--color-overlay); }
+.Input__element--text-color-placeholder-transparent::placeholder { color: transparent; }
+.Input__element--text-color-placeholder-accent-shade-1::placeholder { color: var(--color-accent-shade-1); }
+.Input__element--text-color-placeholder-accent-shade-2::placeholder { color: var(--color-accent-shade-2); }
+.Input__element--text-color-placeholder-accent-shade-3::placeholder { color: var(--color-accent-shade-3); }
+.Input__element--text-color-placeholder-accent-shade-4::placeholder { color: var(--color-accent-shade-4); }
+.Input__element--text-color-placeholder-accent-shade-5::placeholder { color: var(--color-accent-shade-5); }
+.Input__element--text-color-placeholder-background-shade-1::placeholder { color: var(--color-background-shade-1); }
+.Input__element--text-color-placeholder-background-shade-2::placeholder { color: var(--color-background-shade-2); }
+.Input__element--text-color-placeholder-background-shade-3::placeholder { color: var(--color-background-shade-3); }
+.Input__element--text-color-placeholder-dark-shade-1::placeholder { color: var(--color-dark-shade-1); }
+.Input__element--text-color-placeholder-dark-shade-2::placeholder { color: var(--color-dark-shade-2); }
+.Input__element--text-color-placeholder-dark-shade-3::placeholder { color: var(--color-dark-shade-3); }
+.Input__element--text-color-placeholder-light-shade-1::placeholder { color: var(--color-light-shade-1); }
+.Input__element--text-color-placeholder-light-shade-2::placeholder { color: var(--color-light-shade-2); }
+.Input__element--text-color-placeholder-light-shade-3::placeholder { color: var(--color-light-shade-3); }
+.Input__element--text-color-placeholder-text-shade-1::placeholder { color: var(--color-text-shade-1); }
+.Input__element--text-color-placeholder-text-shade-2::placeholder { color: var(--color-text-shade-2); }
+.Input__element--text-color-placeholder-text-shade-3::placeholder { color: var(--color-text-shade-3); }
+.Input__element--text-color-placeholder-text-shade-4::placeholder { color: var(--color-text-shade-4); }
+.Input__element--text-color-placeholder-negative-shade-1::placeholder { color: var(--color-negative-shade-1); }
+.Input__element--text-color-placeholder-negative-shade-2::placeholder { color: var(--color-negative-shade-2); }
+.Input__element--text-color-placeholder-negative-shade-3::placeholder { color: var(--color-negative-shade-3); }
+.Input__element--text-color-placeholder-negative-shade-4::placeholder { color: var(--color-negative-shade-4); }
+.Input__element--text-color-placeholder-negative-shade-5::placeholder { color: var(--color-negative-shade-5); }
+.Input__element--text-color-placeholder-positive-shade-1::placeholder { color: var(--color-positive-shade-1); }
+.Input__element--text-color-placeholder-positive-shade-2::placeholder { color: var(--color-positive-shade-2); }
+.Input__element--text-color-placeholder-positive-shade-3::placeholder { color: var(--color-positive-shade-3); }
+.Input__element--text-color-placeholder-positive-shade-4::placeholder { color: var(--color-positive-shade-4); }
+.Input__element--text-color-placeholder-positive-shade-5::placeholder { color: var(--color-positive-shade-5); }

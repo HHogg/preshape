@@ -52,6 +52,7 @@ export { Icons };
 export { Image, type ImageProps } from './Image/Image';
 export { Input, type InputProps } from './Input/Input';
 export { InputLabel, type InputLabelProps } from './Input/InputLabel';
+export { InputWrapper, type InputWrapperProps } from './Input/InputWrapper';
 export { Label, type LabelProps } from './Label/Label';
 export { Labels, type LabelsProps } from './Label/Labels';
 export { Link, type LinkProps } from './Link/Link';
