@@ -1,3 +1,10 @@
+## [15.1.0](https://github.com/HHogg/preshape/compare/v15.0.0...v15.1.0) (2023-09-02)
+
+
+### Features
+
+* **Input:** Added props to configure active, hover and placeholder text color ([e85a382](https://github.com/HHogg/preshape/commit/e85a382d11aa1fddfbcea43267a2e166dedf16e3))
+
 ## [15.0.0](https://github.com/HHogg/preshape/compare/v14.1.4...v15.0.0) (2023-08-31)
 
 
