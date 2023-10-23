@@ -7,7 +7,7 @@
   "license": "MIT",
   "source": "src",
   "type": "module",
-  "main": "./dist/preshape.umd.js",
+  "main": "./dist/preshape.es.js",
   "module": "./dist/preshape.es.js",
   "types": "./dist/index.d.ts",
   "browserslist": "> 0.5%, last 2 versions, not dead",
