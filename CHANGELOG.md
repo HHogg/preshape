@@ -1,3 +1,15 @@
+### [15.1.1](https://github.com/HHogg/preshape/compare/v15.1.0...v15.1.1) (2023-10-30)
+
+
+### Fixes
+
+* **package:** Use esm as default entry point ([db69cfb](https://github.com/HHogg/preshape/commit/db69cfb79210fc56c7acc3ef3ce54992ea464393))
+
+
+### Style Changes
+
+* **Colors:** Updated colors ([fbb88f7](https://github.com/HHogg/preshape/commit/fbb88f781f4b615791737c66bb0d90bb8a3633f6))
+
 ## [15.1.0](https://github.com/HHogg/preshape/compare/v15.0.0...v15.1.0) (2023-09-02)
 
 
