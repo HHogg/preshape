@@ -22,7 +22,7 @@ const Color = ({
       <Box
         alignChildren="middle"
         borderRadius="x2"
-        borderColor="text-shade-1"
+        borderColor="background-shade-4"
         borderSize="x1"
         flex="horizontal"
         width="4rem"

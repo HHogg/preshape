@@ -11,6 +11,7 @@ const Showcase = ({ basis, children, file }: Props) => {
   return (
     <Box
       backgroundColor="background-shade-3"
+      borderColor="background-shade-4"
       borderRadius="x3"
       borderSize="x2"
       flex="vertical"
@@ -23,26 +24,26 @@ const Showcase = ({ basis, children, file }: Props) => {
         <Box flex="horizontal" gap="x1" grow>
           <Box
             backgroundColor="negative-shade-3"
+            borderColor="background-shade-4"
             borderRadius="full"
-            borderSize="x2"
-            height="0.75rem"
-            width="0.75rem"
+            height="0.5rem"
+            width="0.5rem"
           />
 
           <Box
             backgroundColor="highlight"
+            borderColor="background-shade-4"
             borderRadius="full"
-            borderSize="x2"
-            height="0.75rem"
-            width="0.75rem"
+            height="0.5rem"
+            width="0.5rem"
           />
 
           <Box
             backgroundColor="positive-shade-3"
+            borderColor="background-shade-4"
             borderRadius="full"
-            borderSize="x2"
-            height="0.75rem"
-            width="0.75rem"
+            height="0.5rem"
+            width="0.5rem"
           />
         </Box>
       </Box>
@@ -50,6 +51,7 @@ const Showcase = ({ basis, children, file }: Props) => {
       <Box
         backgroundColor="background-shade-1"
         basis={basis}
+        borderColor="background-shade-4"
         borderRadius="x2"
         borderSize="x2"
         container

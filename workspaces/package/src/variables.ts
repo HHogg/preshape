@@ -50,16 +50,16 @@ export const borderRadiusSizeX1Rem = sizeX1Rem;
 export const borderRadiusSizeX2Rem = sizeX2Rem;
 export const borderRadiusSizeX3Rem = sizeX3Rem;
 
-export const colorWhite = '#FFFEFC';
-export const colorBlack = '#1E1B18';
+export const colorWhite = 'rgb(250, 250, 255)';
+export const colorBlack = 'rgb(20, 20, 25)';
 
-export const colorDarkShade1 = color.gray[9];
-export const colorDarkShade2 = color.gray[8];
-export const colorDarkShade3 = color.gray[7];
+export const colorDarkShade1 = 'rgb(25, 25, 30)';
+export const colorDarkShade2 = 'rgb(30, 30, 35)';
+export const colorDarkShade3 = 'rgb(35, 35, 40)';
 
-export const colorLightShade1 = color.gray[0];
-export const colorLightShade2 = color.gray[1];
-export const colorLightShade3 = color.gray[2];
+export const colorLightShade1 = 'rgb(245, 245, 250)';
+export const colorLightShade2 = 'rgb(240, 240, 245)';
+export const colorLightShade3 = 'rgb(235, 235, 240)';
 
 export const colorAccent1Shade1 = hexToRGBA(color.indigo[7], 0.1);
 export const colorAccent1Shade2 = hexToRGBA(color.indigo[7], 0.2);
@@ -91,6 +91,7 @@ export type ThemeColorMapKey =
   | 'colorBackgroundShade1'
   | 'colorBackgroundShade2'
   | 'colorBackgroundShade3'
+  | 'colorBackgroundShade4'
   | 'colorTextShade1'
   | 'colorTextShade2'
   | 'colorTextShade3'
@@ -107,6 +108,7 @@ export const themeDay: ThemeColorMap = {
   colorBackgroundShade1: colorWhite,
   colorBackgroundShade2: colorLightShade1,
   colorBackgroundShade3: colorLightShade2,
+  colorBackgroundShade4: colorLightShade3,
   colorTextShade1: colorDarkShade1,
   colorTextShade2: colorDarkShade2,
   colorTextShade3: colorDarkShade3,
@@ -122,6 +124,7 @@ export const themeNight: ThemeColorMap = {
   colorBackgroundShade1: colorBlack,
   colorBackgroundShade2: colorDarkShade1,
   colorBackgroundShade3: colorDarkShade2,
+  colorBackgroundShade4: colorDarkShade3,
   colorTextShade1: colorLightShade1,
   colorTextShade2: colorLightShade2,
   colorTextShade3: colorLightShade3,
@@ -147,6 +150,7 @@ export const themePropNameCSSMap: ThemeColorMap = {
   colorBackgroundShade1: 'color-background-shade-1',
   colorBackgroundShade2: 'color-background-shade-2',
   colorBackgroundShade3: 'color-background-shade-3',
+  colorBackgroundShade4: 'color-background-shade-4',
   colorTextShade1: 'color-text-shade-1',
   colorTextShade2: 'color-text-shade-2',
   colorTextShade3: 'color-text-shade-3',

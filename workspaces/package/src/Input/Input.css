@@ -58,6 +58,7 @@
 .Input--text-color-active-background-shade-1:focus-within { color: var(--color-background-shade-1); }
 .Input--text-color-active-background-shade-2:focus-within { color: var(--color-background-shade-2); }
 .Input--text-color-active-background-shade-3:focus-within { color: var(--color-background-shade-3); }
+.Input--text-color-active-background-shade-4:focus-within { color: var(--color-background-shade-4); }
 .Input--text-color-active-dark-shade-1:focus-within { color: var(--color-dark-shade-1); }
 .Input--text-color-active-dark-shade-2:focus-within { color: var(--color-dark-shade-2); }
 .Input--text-color-active-dark-shade-3:focus-within { color: var(--color-dark-shade-3); }
@@ -92,6 +93,7 @@
 .Input--text-color-hover-background-shade-1:hover:not([disabled]) { color: var(--color-background-shade-1); }
 .Input--text-color-hover-background-shade-2:hover:not([disabled]) { color: var(--color-background-shade-2); }
 .Input--text-color-hover-background-shade-3:hover:not([disabled]) { color: var(--color-background-shade-3); }
+.Input--text-color-hover-background-shade-4:hover:not([disabled]) { color: var(--color-background-shade-4); }
 .Input--text-color-hover-dark-shade-1:hover:not([disabled]) { color: var(--color-dark-shade-1); }
 .Input--text-color-hover-dark-shade-2:hover:not([disabled]) { color: var(--color-dark-shade-2); }
 .Input--text-color-hover-dark-shade-3:hover:not([disabled]) { color: var(--color-dark-shade-3); }
@@ -126,6 +128,7 @@
 .Input__element--text-color-placeholder-background-shade-1::placeholder { color: var(--color-background-shade-1); }
 .Input__element--text-color-placeholder-background-shade-2::placeholder { color: var(--color-background-shade-2); }
 .Input__element--text-color-placeholder-background-shade-3::placeholder { color: var(--color-background-shade-3); }
+.Input__element--text-color-placeholder-background-shade-4::placeholder { color: var(--color-background-shade-4); }
 .Input__element--text-color-placeholder-dark-shade-1::placeholder { color: var(--color-dark-shade-1); }
 .Input__element--text-color-placeholder-dark-shade-2::placeholder { color: var(--color-dark-shade-2); }
 .Input__element--text-color-placeholder-dark-shade-3::placeholder { color: var(--color-dark-shade-3); }

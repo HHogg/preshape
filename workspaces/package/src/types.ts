@@ -29,6 +29,7 @@ export type TypeColor =
   | 'background-shade-1'
   | 'background-shade-2'
   | 'background-shade-3'
+  | 'background-shade-4'
   | 'dark-shade-1'
   | 'dark-shade-2'
   | 'dark-shade-3'

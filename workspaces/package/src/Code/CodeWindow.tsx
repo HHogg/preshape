@@ -13,16 +13,13 @@ export const CodeWindow = forwardRef<any, CodeWindowProps>((props, ref) => {
   return (
     <Text
       {...rest}
-      borderColor="text-shade-1"
+      backgroundColor="background-shade-3"
+      borderColor="background-shade-4"
       borderSize="x1"
       borderRadius={borderRadius}
       margin="x8"
       ref={ref}
       overflow="auto"
-      style={{
-        background:
-          'linear-gradient(rgb(42, 33, 57) 75%, rgb(52, 41, 79)) transparent',
-      }}
       theme="night"
     >
       <Text flex="vertical" gap="x6" padding={padding} width="max-content">

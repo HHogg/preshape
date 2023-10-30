@@ -38,6 +38,14 @@ const paletteTheme = (theme: TypeTheme): ColorProps[] => [
     textColor: 'text-shade-1',
   },
   {
+    name: 'Background Shade 4',
+    css: '--color-background--shade-4',
+    js: 'colorBackgroundShade4',
+    prop: 'background-shade-4',
+    value: themes[theme].colorBackgroundShade4,
+    textColor: 'text-shade-1',
+  },
+  {
     name: 'Text Shade 1',
     css: '--color-text--shade-1',
     js: 'colorTextShade1',

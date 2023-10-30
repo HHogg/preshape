@@ -315,6 +315,7 @@
 .Box--background-color-background-shade-1 { background-color: var(--color-background-shade-1); }
 .Box--background-color-background-shade-2 { background-color: var(--color-background-shade-2); }
 .Box--background-color-background-shade-3 { background-color: var(--color-background-shade-3); }
+.Box--background-color-background-shade-4 { background-color: var(--color-background-shade-4); }
 .Box--background-color-dark-shade-1 { background-color: var(--color-dark-shade-1); }
 .Box--background-color-dark-shade-2 { background-color: var(--color-dark-shade-2); }
 .Box--background-color-dark-shade-3 { background-color: var(--color-dark-shade-3); }
@@ -348,6 +349,7 @@
 .Box--border-color-background-shade-1 { border-color: var(--color-background-shade-1); }
 .Box--border-color-background-shade-2 { border-color: var(--color-background-shade-2); }
 .Box--border-color-background-shade-3 { border-color: var(--color-background-shade-3); }
+.Box--border-color-background-shade-4 { border-color: var(--color-background-shade-4); }
 .Box--border-color-dark-shade-1 { border-color: var(--color-dark-shade-1); }
 .Box--border-color-dark-shade-2 { border-color: var(--color-dark-shade-2); }
 .Box--border-color-dark-shade-3 { border-color: var(--color-dark-shade-3); }
@@ -381,6 +383,7 @@
 .Box--text-color-background-shade-1 { color: var(--color-background-shade-1); }
 .Box--text-color-background-shade-2 { color: var(--color-background-shade-2); }
 .Box--text-color-background-shade-3 { color: var(--color-background-shade-3); }
+.Box--text-color-background-shade-4 { color: var(--color-background-shade-4); }
 .Box--text-color-dark-shade-1 { color: var(--color-dark-shade-1); }
 .Box--text-color-dark-shade-2 { color: var(--color-dark-shade-2); }
 .Box--text-color-dark-shade-3 { color: var(--color-dark-shade-3); }
