@@ -161,15 +161,15 @@ import { ThemeProvider } from 'preshape';
         <Text>
           Wrapping the entire application with the theme provider will allow
           components to react to the theme. The theme provider accepts an{' '}
-          <Text tag="span" strong>
+          <Text tag="span" weight="x2">
             initialTheme
           </Text>{' '}
           prop, which can be either{' '}
-          <Text tag="span" strong>
+          <Text tag="span" weight="x2">
             "Day"
           </Text>{' '}
           or{' '}
-          <Text tag="span" strong>
+          <Text tag="span" weight="x2">
             "Night"
           </Text>
           . The provider also stored the theme in local storage, so that the
@@ -193,12 +193,12 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
 
         <Text>
           Provided is also a{' '}
-          <Text tag="span" strong>
+          <Text tag="span" weight="x2">
             useThemeContext
           </Text>{' '}
           hook, which returns the current theme, the opposite theme, and the
           current theme colors. As well as a{' '}
-          <Text tag="span" strong>
+          <Text tag="span" weight="x2">
             ThemeSwitcher
           </Text>{' '}
           component which can be used to toggle the theme.
@@ -211,7 +211,7 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
           All of the colors, whether used as CSS variables or through the
           component props react to the chosen theme (Day or Night). The
           following colors use the semantic theme prop values, for example{' '}
-          <Text tag="span" strong>
+          <Text tag="span" weight="x2">
             "background-shade-1"
           </Text>
           . Try using the theme toggle above, to see them change.

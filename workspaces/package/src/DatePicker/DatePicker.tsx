@@ -87,12 +87,12 @@ export const DatePicker = forwardRef<any, DatePickerProps>(
               type="button"
               variant="tertiary"
             >
-              <ChevronLeftIcon size="1rem" />
+              <ChevronLeftIcon size="20px" />
             </Button>
           </Box>
 
           <Box grow minWidth="200px">
-            <Text align="middle" size="x6" strong>
+            <Text align="middle" size="x6" weight="x3">
               {activeDateTime.toFormat('MMMM yyyy')}
             </Text>
           </Box>
@@ -105,7 +105,7 @@ export const DatePicker = forwardRef<any, DatePickerProps>(
               type="button"
               variant="tertiary"
             >
-              <ChevronRightIcon size="1rem" />
+              <ChevronRightIcon size="20px" />
             </Button>
           </Box>
         </Box>

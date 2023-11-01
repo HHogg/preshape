@@ -27,7 +27,7 @@ const PageSummary = ({ summary }: PropsWithChildren<PageSummaryProps>) => {
 
       {summary.map(({ name, children }) => (
         <Box key={name} margin="x3">
-          <Text size="x2" strong>
+          <Text size="x2" weight="x2">
             <Button
               alignChildren="start"
               paddingLeft="x3"
@@ -59,7 +59,7 @@ const PageSummary = ({ summary }: PropsWithChildren<PageSummaryProps>) => {
                       paddingVertical="x1"
                       tag="a"
                       variant="tertiary"
-                      weak
+                      weight="x1"
                       width="100%"
                       uppercase={false}
                     >

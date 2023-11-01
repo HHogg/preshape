@@ -5,6 +5,7 @@ import TypeText from './TypeText';
 
 interface Props extends ButtonProps {
   hasInfo?: boolean;
+  href?: string;
   isArray?: boolean;
 }
 
@@ -20,8 +21,9 @@ const TypeLabel = forwardRef<
       {...rest}
       borderRadius="x3"
       href={href}
+      paddingHorizontal="x2"
+      paddingVertical="x1"
       ref={ref}
-      size="x1"
       tag={isExternalLink ? 'a' : undefined}
       target={isExternalLink ? '_blank' : undefined}
     >

@@ -79,11 +79,11 @@ export const Input = forwardRef<
         readOnly={readOnly}
         ref={refFormElement}
         size={size}
-        strong
         tag={tag}
         textColor={textColor}
         type={type}
         value={value}
+        weight="x2"
       />
     </InputWrapper>
   );

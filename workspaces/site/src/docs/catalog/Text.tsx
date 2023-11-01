@@ -30,15 +30,15 @@ const Item: CatalogueItem<{
           theme="night"
         >
           <Box maxWidth="500px">
-            <Text heading margin="x4" size="x8" strong>
+            <Text margin="x4" size="x8" weight="x2">
               An Animal of No Significance.
             </Text>
 
-            <Text heading margin="x4" size="x7" strong>
+            <Text margin="x4" size="x7" weight="x2">
               About 13.5 billion years ago.
             </Text>
 
-            <Text heading margin="x4" size="x6">
+            <Text margin="x4" size="x6">
               Matter, energy, time and space came into being in what is known as
               the Big Bang. The story of these fundamental features of our
               universe is called physics..
@@ -47,7 +47,7 @@ const Item: CatalogueItem<{
         </Box>
 
         <Box margin="x6" maxWidth="500px">
-          <Text margin="x3" size="x5" strong>
+          <Text margin="x3" size="x5" weight="x2">
             The spectacle before us was indeed sublime. Apparently we had
             reached a great height in the atmosphere.
           </Text>
@@ -81,7 +81,7 @@ const Item: CatalogueItem<{
     code: `
 import { Text } from 'preshape';
 
-<Text heading margin="x4" size="x8" strong>
+<Text margin="x4" size="x8" weight="x2>
   ...
 </Text>
 `,

@@ -47,6 +47,7 @@ const Item: CatalogueItem<{
             {...omit(props.Box, parentProps)}
             alignChildren="middle"
             backgroundColor="text-shade-1"
+            borderRadius="x2"
             flex="vertical"
             key={n}
             padding="x3"

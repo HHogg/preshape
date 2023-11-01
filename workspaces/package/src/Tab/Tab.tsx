@@ -31,7 +31,7 @@ export const Tab = forwardRef<any, TabProps>((props, ref) => {
       ref={ref}
     >
       <Box className="Tab__background">
-        <Link display="block" padding="x3" size="x2" strong>
+        <Link display="block" padding="x3" size="x2" weight="x2">
           {children}
         </Link>
       </Box>

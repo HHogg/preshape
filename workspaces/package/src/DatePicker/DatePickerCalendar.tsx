@@ -52,7 +52,7 @@ const DatePickerCalendar: React.FC<Props> = ({
   };
 
   return (
-    <Text {...rest} flex="vertical" grow size="x3" strong uppercase>
+    <Text {...rest} flex="vertical" grow size="x3" uppercase weight="x2">
       <Grid margin="x2" repeat="7" repeatWidth="1fr">
         <Text align="middle">Mon</Text>
         <Text align="middle">Tue</Text>

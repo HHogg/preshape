@@ -24,7 +24,7 @@ const PageChangeButton = ({
     >
       {direction === 'previous' && <ChevronLeftIcon size="1.5rem" />}
 
-      <Text basis="0" grow weak size="x4">
+      <Text basis="0" grow  size="x4">
         <Text size="x5" strong>
           {title}
         </Text>

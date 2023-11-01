@@ -61,7 +61,7 @@ export const Tooltip = forwardRef<any, TooltipProps>((props, ref) => {
         theme={themeOpposite}
         withArrow
       >
-        <Text align="middle" size="x3" strong>
+        <Text align="middle" size="x3" weight="x2">
           {content}
         </Text>
       </PlacementContent>

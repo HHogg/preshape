@@ -73,13 +73,13 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
     padding,
     paddingHorizontal = padding || 'x3',
     paddingVertical = padding || 'x2',
-    strong = true,
     tag,
     textColor,
     textColorActive,
     textColorHover,
     to = '',
     variant = 'secondary',
+    weight = 'x2',
     ...rest
   } = props;
 
@@ -135,9 +135,9 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
       paddingVertical={paddingVertical}
       ref={ref}
       size={size}
-      strong={strong}
       style={style}
       tag={to ? 'a' : tag ?? 'button'}
+      weight={weight}
     />
   );
 });

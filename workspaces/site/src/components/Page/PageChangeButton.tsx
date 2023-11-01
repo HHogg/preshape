@@ -25,11 +25,16 @@ const PageChangeButton = ({
     >
       {direction === 'previous' && <ChevronLeftIcon size="1.5rem" />}
 
-      <Text basis="0" grow weak size="x4">
-        <Text size="x5" strong>
+      <Text basis="0" grow size="x4">
+        <Text margin="x1" size="x6" weight="x2">
           {title}
         </Text>
-        {description && <Text size="x3">{description}</Text>}
+
+        {description && (
+          <Text size="x3" weight="x1">
+            {description}
+          </Text>
+        )}
       </Text>
 
       {direction === 'next' && <ChevronRightIcon size="1.5rem" />}

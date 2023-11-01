@@ -30,9 +30,9 @@ export const Label = forwardRef<HTMLDivElement, LabelProps>((props, ref) => {
       paddingVertical={paddingVertical}
       ref={ref}
       size={size}
-      strong
       tag="div"
       textColor={textColor}
+      weight="x2"
     />
   );
 });

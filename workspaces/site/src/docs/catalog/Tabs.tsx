@@ -89,7 +89,7 @@ const Item: CatalogueItem<{
                   <Link
                     href="https://en.wikipedia.org/wiki/Star"
                     underline
-                    strong
+                    weight="x2"
                   >
                     Star, Wikipedia
                   </Link>
@@ -117,7 +117,7 @@ const Item: CatalogueItem<{
                   <Link
                     href="https://en.wikipedia.org/wiki/Sun"
                     underline
-                    strong
+                    weight="x2"
                   >
                     Sun, Wikipedia
                   </Link>
@@ -147,7 +147,7 @@ const Item: CatalogueItem<{
                   <Link
                     href="https://en.wikipedia.org/wiki/Moon"
                     underline
-                    strong
+                    weight="x2"
                   >
                     Moon, Wikipedia
                   </Link>

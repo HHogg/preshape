@@ -24,11 +24,11 @@ export const FormError = forwardRef<any, FormErrorProps>((props, ref) => {
   }, [error]);
 
   return (
-    <Box {...rest} flex="vertical" grow ref={ref}>
+    <Box {...rest} flex="vertical" gap="x1" grow ref={ref}>
       {children && <Box>{children}</Box>}
 
       <Appear animation="Expand" visible={!!error}>
-        <Text align="end" size="x2" textColor="negative-shade-4" strong>
+        <Text align="end" size="x2" textColor="negative-shade-4" weight="x2">
           {errorState?.toString()}
         </Text>
       </Appear>

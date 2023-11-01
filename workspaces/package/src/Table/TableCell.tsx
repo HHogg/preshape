@@ -26,8 +26,8 @@ export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(
         paddingHorizontal={paddingHorizontal}
         paddingVertical={paddingVertical}
         ref={ref}
-        strong={sorted}
         tag="td"
+        weight={sorted ? 'x2' : 'x1'}
       />
     );
   }

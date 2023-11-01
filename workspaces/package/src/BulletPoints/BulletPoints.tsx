@@ -1,13 +1,13 @@
 import classnames from 'classnames';
 import { forwardRef } from 'react';
-import { Box, BoxProps } from '../Box/Box';
+import { Text, TextProps } from '../Text/Text';
 import './BulletPoints.css';
 
 /**
  * A vertical list component for listing your todos,
  * ordered and chaos modes included.
  */
-export interface BulletPointsProps extends BoxProps {
+export interface BulletPointsProps extends TextProps {
   /**
    * Replaces the default unordered list styling with
    * numbers... everyone likes a bit of order.
@@ -25,6 +25,11 @@ export const BulletPoints = forwardRef<
   });
 
   return (
-    <Box {...rest} className={classes} ref={ref} tag={numbered ? 'ol' : 'ul'} />
+    <Text
+      {...rest}
+      className={classes}
+      ref={ref}
+      tag={numbered ? 'ol' : 'ul'}
+    />
   );
 });

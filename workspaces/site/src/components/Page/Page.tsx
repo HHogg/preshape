@@ -28,7 +28,7 @@ export const Page = ({
         <Box flex="vertical" gap="x16" grow maxWidth="800px">
           <Box flex="horizontal">
             <Box basis="0" grow>
-              <Text margin="x4" size="x8" strong>
+              <Text margin="x4" size="x8" weight="x3">
                 {title}
               </Text>
 

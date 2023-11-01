@@ -24,7 +24,7 @@ const Item: CatalogueItem<{
     },
     Component: (props) => (
       <Alert {...props.Alert} padding="x4">
-        <Text size="x3" strong>
+        <Text size="x3" weight="x2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet
           faucibus quam et fringilla. Maecenas vitae pulvinar augue. Suspendisse
           mollis bibendum leo, ac porta nisi convallis eget.

@@ -35,7 +35,7 @@ export const ComponentsPage = () => {
             </Box>
 
             <Box paddingHorizontal="x3" paddingBottom="x3">
-              <Text margin="x1" strong>
+              <Text margin="x1" weight="x2">
                 {name}
               </Text>
 

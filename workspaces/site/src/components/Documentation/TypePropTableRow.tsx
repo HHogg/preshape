@@ -17,10 +17,12 @@ const TypePropTableRow = (props: Props) => {
 
   return (
     <TableRow id={reflection.name}>
-      <TableCell paddingVertical="x4">
+      <TableCell paddingVertical="x6">
         <Text margin="x3">
-          <Text margin="x1" strong>
-            {reflection.name}{' '}
+          <Text margin="x2" weight="x2">
+            <Text size="x5" tag="span">
+              {reflection.name}{' '}
+            </Text>
             {!isOptional && (
               <Text tag="span" textColor="negative-shade-4">
                 [Required]
@@ -28,7 +30,7 @@ const TypePropTableRow = (props: Props) => {
             )}
           </Text>
 
-          {comment && <Text margin="x1">{comment} </Text>}
+          {comment && <Text margin="x2">{comment} </Text>}
         </Text>
 
         <Buttons wrap>

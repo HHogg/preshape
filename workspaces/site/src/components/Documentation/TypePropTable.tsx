@@ -11,7 +11,7 @@ import { APIItemProps } from './ComponentDocumentation';
 import TypePropTableRow from './TypePropTableRow';
 import { getTag } from './documentation';
 
-type Props = APIItemProps
+type Props = APIItemProps;
 
 const TypePropTable = (props: Props) => {
   const { reflection, onStateChange, state } = props;
@@ -47,7 +47,7 @@ const TypePropTable = (props: Props) => {
         {!nonhereditaryProps.length && (
           <TableRow>
             <TableCell colSpan={2}>
-              <Text align="middle" strong>
+              <Text align="middle" weight="x2">
                 There are no properties.
               </Text>
             </TableCell>

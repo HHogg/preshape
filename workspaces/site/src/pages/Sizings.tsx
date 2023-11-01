@@ -129,7 +129,7 @@ export const SizingsPage = () => {
       summary={[{ name: 'Variables', children: variableGroups }]}
     >
       <PageSection>
-        <Text id="Example usage" margin="x4" size="x6" strong>
+        <Text id="Example usage" margin="x4" size="x6" weight="x2">
           Example usage
         </Text>
 

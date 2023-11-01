@@ -49,6 +49,7 @@ const Item: CatalogueItem<{
               alignChildren="middle"
               animation={animation}
               backgroundColor="text-shade-1"
+              borderRadius="x2"
               basis="0"
               delay={(n + 1) * (props.Appear.delay || 0)}
               flex="vertical"

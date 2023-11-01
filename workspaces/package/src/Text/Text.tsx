@@ -13,6 +13,8 @@ export type TypeTextSize =
   | 'x7'
   | 'x8';
 
+export type TypeTextWeight = 'x1' | 'x2' | 'x3' | 'x4' | 'x5';
+
 /**
  * A text component that can be used to display text.
  */
@@ -31,8 +33,6 @@ export interface TextProps extends Omit<BoxProps, 'size'> {
   monospace?: boolean;
   /** Size of the text */
   size?: TypeTextSize;
-  /** Applies strong weight styling */
-  strong?: boolean;
   /** Applies subscript baseline styling */
   subscript?: boolean;
   /** Applies superscript baseline styling */
@@ -41,8 +41,8 @@ export interface TextProps extends Omit<BoxProps, 'size'> {
   titlecase?: boolean;
   /** Applies uppercasing styling */
   uppercase?: boolean;
-  /** Applies weak weight styling */
-  weak?: boolean;
+  /** Applies weight styling */
+  weight?: TypeTextWeight;
 }
 
 export const Text = forwardRef<any, TextProps>((props, ref) => {
@@ -55,12 +55,11 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
     heading,
     monospace,
     size,
-    strong,
     subscript,
     superscript,
     titlecase,
     uppercase,
-    weak,
+    weight,
     ...rest
   } = props;
 
@@ -71,13 +70,12 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
     'Text--monospace': monospace,
     'Text--subscript': subscript,
     'Text--superscript': superscript,
-    'Text--strong': strong,
     'Text--titlecase': titlecase,
     'Text--uppercase': uppercase,
-    'Text--weak': weak,
     [`Text--align-${align}`]: align,
     [`Text--break-${breakOn}`]: breakOn,
     [`Text--size-${size}`]: size,
+    [`Text--weight-${weight}`]: weight,
   });
 
   return <Box {...rest} className={classes} ref={ref} />;

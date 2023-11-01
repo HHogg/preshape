@@ -33,9 +33,9 @@ export const TableHeaderCell = forwardRef<
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
       ref={ref}
-      strong
       tag="th"
       uppercase
+      weight="x2"
     >
       {sortable ? <Link active={sorted}>{children}</Link> : children}
     </Text>

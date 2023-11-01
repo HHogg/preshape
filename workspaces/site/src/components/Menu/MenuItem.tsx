@@ -26,7 +26,7 @@ export const MenuItem = ({ children, nested, to, ...props }: MenuItemProps) => {
           borderRadius="x2"
           variant="tertiary"
           uppercase={false}
-          weak={nested && !active}
+          weight={nested && !active ? 'x1' : undefined}
           style={
             nested ? { borderTopLeftRadius: 0, borderBottomLeftRadius: 0 } : {}
           }

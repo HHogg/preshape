@@ -142,8 +142,11 @@
   --text-height--body: var(--text-height--x3);
   --text-letter-spacing--body: var(--text-letter-spacing--x3);
 
-  --text-weight--weak: 400;
-  --text-weight--strong: 700;
+  --text-weight--x1: 400;
+  --text-weight--x2: 600;
+  --text-weight--x3: 700;
+  --text-weight--x4: 800;
+  --text-weight--x5: 900;
 
   --shadow-color: 240deg 27% 62%;
 

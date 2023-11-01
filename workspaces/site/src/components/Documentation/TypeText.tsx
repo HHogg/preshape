@@ -14,7 +14,7 @@ const TypeText = (props: Props) => {
 
       {isArray && (
         <Box>
-          <Text strong tag="span">
+          <Text weight="x2" tag="strong">
             []
           </Text>
         </Box>

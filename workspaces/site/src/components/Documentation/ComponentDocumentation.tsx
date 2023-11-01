@@ -20,7 +20,7 @@ const ComponentDocumentation = (props: APIItemProps) => {
     <Box margin="x16">
       <Box alignChildrenVertical="start" flex="horizontal" gap="x4" margin="x4">
         <Box basis="0" grow>
-          <Text id={reflection.name} size="x6" strong>
+          <Text id={reflection.name} size="x6" weight="x2">
             {reflection.name}
           </Text>
 
@@ -28,7 +28,7 @@ const ComponentDocumentation = (props: APIItemProps) => {
 
           {!!extendss.length && (
             <Text margin="x2">
-              <Text strong tag="span">
+              <Text weight="x2" tag="span">
                 Extends
               </Text>
 

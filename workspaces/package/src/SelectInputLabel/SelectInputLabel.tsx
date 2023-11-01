@@ -38,7 +38,7 @@ export const SelectInputLabel = forwardRef<
       <Box>{children}</Box>
 
       <Box grow minWidth="0" shrink>
-        <Text className="SelectInputLabels__label-text" size="x3" strong>
+        <Text className="SelectInputLabels__label-text" size="x3" weight="x2">
           {label}
         </Text>
       </Box>

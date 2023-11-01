@@ -28,16 +28,16 @@ const Color = ({
         width="4rem"
         style={{ backgroundColor: value }}
       >
-        <Text size="x5" strong textColor={textColor}>
+        <Text size="x5" weight="x2" textColor={textColor}>
           Aa
         </Text>
       </Box>
 
       <Box basis="0" grow paddingVertical="x2">
-        <Text size="x5" strong>
+        <Text margin="x1" size="x5" weight="x2">
           {name} / {value}
         </Text>
-        <Text>
+        <Text size="x3">
           {prop ? `"${prop}" /` : ''} var({css}) / {js}
         </Text>
       </Box>

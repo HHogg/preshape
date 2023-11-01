@@ -69,8 +69,11 @@ body {
   line-height: var(--text-height--x8);
 }
 
-.Text--strong { font-weight: var(--text-weight--strong); }
-.Text--weak   { font-weight: var(--text-weight--weak); }
+.Text--weight-x1 { font-weight: var(--text-weight--x1); }
+.Text--weight-x2 { font-weight: var(--text-weight--x2); }
+.Text--weight-x3 { font-weight: var(--text-weight--x3); }
+.Text--weight-x4 { font-weight: var(--text-weight--x4); }
+.Text--weight-x5 { font-weight: var(--text-weight--x5); }
 
 .Text--ellipsis {
   max-width: 100%;

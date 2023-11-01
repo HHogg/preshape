@@ -40,7 +40,12 @@ export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
       tag="label"
     >
       {label && (
-        <Text ellipsis paddingHorizontal={paddingHorizontal} size="x3" strong>
+        <Text
+          ellipsis
+          paddingHorizontal={paddingHorizontal}
+          size="x3"
+          weight="x2"
+        >
           {label}
         </Text>
       )}
@@ -55,8 +60,8 @@ export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
         <Text
           paddingHorizontal={paddingHorizontal}
           size="x2"
-          strong
           textColor="text-shade-4"
+          weight="x2"
         >
           {description}
         </Text>

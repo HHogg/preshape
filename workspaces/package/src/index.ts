@@ -108,7 +108,12 @@ export {
   type TableHeaderCellProps,
 } from './Table/TableHeaderCell';
 export { TableRow, type TableRowProps } from './Table/TableRow';
-export { Text, type TextProps, type TypeTextSize } from './Text/Text';
+export {
+  Text,
+  type TextProps,
+  type TypeTextSize,
+  type TypeTextWeight,
+} from './Text/Text';
 export { TextArea, type TextAreaProps } from './TextArea/TextArea';
 export {
   TextAreaLabel,

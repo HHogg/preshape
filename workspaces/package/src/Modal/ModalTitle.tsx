@@ -7,5 +7,5 @@ import { Text, TextProps } from '../Text/Text';
 export interface ModalTitleProps extends TextProps {}
 
 export const ModalTitle = forwardRef<any, ModalTitleProps>((props, ref) => {
-  return <Text {...props} size="x4" strong ref={ref} />;
+  return <Text {...props} size="x5" ref={ref} weight="x3" />;
 });
