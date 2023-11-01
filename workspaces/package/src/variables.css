@@ -107,8 +107,7 @@
   --transition-duration--slow: 800ms;
   --transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-  --text-family--heading: 'Merriweather', serif;
-  --text-family--content: 'Open Sans', sans-serif;
+  --text-family--content: 'Noto Sans', sans-serif;
   --text-family--monospace: 'Courier New', 'Ubuntu Mono', monospace;
 
   --text-size--x1: 0.625rem;
@@ -120,23 +119,14 @@
   --text-size--x7: 2.125rem;
   --text-size--x8: 3rem;
 
-  --text-height--x1: 1.3333;
+  --text-height--x1: 1.4;
   --text-height--x2: 1.3333;
   --text-height--x3: 1.4286;
-  --text-height--x4: 1.3125;
-  --text-height--x5: 1.2222;
-  --text-height--x6: 1.3333;
+  --text-height--x4: 1.5;
+  --text-height--x5: 1.3333;
+  --text-height--x6: 1.25;
   --text-height--x7: 1.2353;
-  --text-height--x8: 1.0833;
-
-  --text-letter-spacing--x1: 0.0179rem;
-  --text-letter-spacing--x2: 0.0179rem;
-  --text-letter-spacing--x3: 0.0179rem;
-  --text-letter-spacing--x4: 0.0312rem;
-  --text-letter-spacing--x5: 0.0075rem;
-  --text-letter-spacing--x6: 0;
-  --text-letter-spacing--x7: 0.0074rem;
-  --text-letter-spacing--x8: 0;
+  --text-height--x8: 1.125;
 
   --text-size--body: var(--text-size--x4);
   --text-height--body: var(--text-height--x3);

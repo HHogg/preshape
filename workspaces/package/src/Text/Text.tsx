@@ -27,8 +27,6 @@ export interface TextProps extends Omit<BoxProps, 'size'> {
   ellipsis?: boolean;
   /** Applies emphasis styling */
   emphasis?: boolean;
-  /** Applies a heading font family style */
-  heading?: boolean;
   /** Applies a monospace font family style */
   monospace?: boolean;
   /** Size of the text */
@@ -52,7 +50,6 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
     className,
     ellipsis,
     emphasis,
-    heading,
     monospace,
     size,
     subscript,
@@ -66,7 +63,6 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
   const classes = classnames(className, 'Text', {
     'Text--ellipsis': ellipsis,
     'Text--emphasis': emphasis,
-    'Text--heading': heading,
     'Text--monospace': monospace,
     'Text--subscript': subscript,
     'Text--superscript': superscript,
