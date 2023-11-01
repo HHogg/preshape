@@ -167,47 +167,49 @@
 }
 
 .Theme--day {
-  --color-background-shade-1: var(--color-white);
-  --color-background-shade-2: var(--color-light-shade-1);
-  --color-background-shade-3: var(--color-light-shade-2);
-  --color-background-shade-4: var(--color-light-shade-3);
-
-  --color-text-shade-1: var(--color-dark-shade-1);
-  --color-text-shade-2: var(--color-dark-shade-2);
-  --color-text-shade-3: var(--color-dark-shade-3);
-  --color-text-shade-4: var(--oc-gray-6);
-
   --rgb-background-shade-1: var(--rgb-white);
   --rgb-background-shade-2: var(--rgb-light-shade-1);
   --rgb-background-shade-3: var(--rgb-light-shade-2);
   --rgb-background-shade-4: var(--rgb-light-shade-3);
 
-  --rgb-text-shade-1: var(--rgb-dark-shade-1);
-  --rgb-text-shade-2: var(--rgb-dark-shade-2);
-  --rgb-text-shade-3: var(--rgb-dark-shade-3);
+  --rgb-text-shade-1: var(--rgb-black);
+  --rgb-text-shade-2: var(--rgb-dark-shade-1);
+  --rgb-text-shade-3: var(--rgb-dark-shade-2);
+  --rgb-text-shade-4: var(--rgb-dark-shade-3);
+
+  --color-background-shade-1: rgb(var(--rgb-background-shade-1));
+  --color-background-shade-2: rgb(var(--rgb-background-shade-2));
+  --color-background-shade-3: rgb(var(--rgb-background-shade-3));
+  --color-background-shade-4: rgb(var(--rgb-background-shade-4));
+
+  --color-text-shade-1: rgb(var(--rgb-text-shade-1));
+  --color-text-shade-2: rgb(var(--rgb-text-shade-2));
+  --color-text-shade-3: rgb(var(--rgb-text-shade-3));
+  --color-text-shade-4: rgb(var(--rgb-text-shade-4));
 
   --shadow-color: 240deg 27% 62%;
 }
 
 .Theme--night {
-  --color-background-shade-1: var(--color-black);
-  --color-background-shade-2: var(--color-dark-shade-1);
-  --color-background-shade-3: var(--color-dark-shade-2);
-  --color-background-shade-4: var(--color-dark-shade-3);
-
-  --color-text-shade-1: var(--color-light-shade-1);
-  --color-text-shade-2: var(--color-light-shade-2);
-  --color-text-shade-3: var(--color-light-shade-3);
-  --color-text-shade-4: var(--oc-gray-5);
-
   --rgb-background-shade-1: var(--rgb-black);
   --rgb-background-shade-2: var(--rgb-dark-shade-1);
   --rgb-background-shade-3: var(--rgb-dark-shade-2);
   --rgb-background-shade-4: var(--rgb-dark-shade-3);
 
   --rgb-text-shade-1: var(--rgb-light-shade-1);
-  --rgb-text-shade-2: var(--rgb-light-shade-2);
-  --rgb-text-shade-3: var(--rgb-light-shade-3);
+  --rgb-text-shade-2: var(--rgb-light-shade-1);
+  --rgb-text-shade-3: var(--rgb-light-shade-2);
+  --rgb-text-shade-4: var(--rgb-light-shade-3);
+
+  --color-background-shade-1: rgb(var(--rgb-background-shade-1));
+  --color-background-shade-2: rgb(var(--rgb-background-shade-2));
+  --color-background-shade-3: rgb(var(--rgb-background-shade-3));
+  --color-background-shade-4: rgb(var(--rgb-background-shade-4));
+
+  --color-text-shade-1: rgb(var(--rgb-text-shade-1));
+  --color-text-shade-2: rgb(var(--rgb-text-shade-2));
+  --color-text-shade-3: rgb(var(--rgb-text-shade-3));
+  --color-text-shade-4: rgb(var(--rgb-text-shade-4));
 
   --shadow-color: 0deg 0% 0%;
 }
