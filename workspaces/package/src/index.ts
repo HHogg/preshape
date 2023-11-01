@@ -7,8 +7,6 @@ export * from './types';
 export * from './hooks';
 export * from './variables';
 
-import * as Icons from './Icon';
-
 export { Alert, type AlertProps } from './Alert/Alert';
 export { Appear, type AppearProps, type TypeAnimation } from './Appear/Appear';
 export { BlockQuote, type BlockQuoteProps } from './BlockQuote/BlockQuote';
@@ -48,7 +46,6 @@ export {
 } from './Form/useForm';
 export { Grid, type GridProps } from './Grid/Grid';
 export { GridItem, type GridItemProps } from './Grid/GridItem';
-export { Icons };
 export { Image, type ImageProps } from './Image/Image';
 export { Input, type InputProps } from './Input/Input';
 export { InputLabel, type InputLabelProps } from './Input/InputLabel';

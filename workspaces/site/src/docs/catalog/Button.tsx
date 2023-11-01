@@ -1,11 +1,10 @@
 import {
-  Box,
-  Button,
-  ButtonProps,
-  Buttons,
-  ButtonsProps,
-  Icons,
-} from 'preshape';
+  PauseIcon,
+  PlayIcon,
+  SkipBackIcon,
+  SkipForwardIcon,
+} from 'lucide-react';
+import { Box, Button, ButtonProps, Buttons, ButtonsProps } from 'preshape';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramButton';
 
@@ -46,16 +45,16 @@ const Item: CatalogueItem<{
         <Box grow>
           <Buttons {...props.Buttons} grow>
             <Button {...props.Button} grow>
-              <Icons.SkipBack size="16px" />
+              <SkipBackIcon size="16px" />
             </Button>
             <Button {...props.Button} grow>
-              <Icons.Play name="Play" size="16px" />
+              <PlayIcon name="Play" size="16px" />
             </Button>
             <Button {...props.Button} grow>
-              <Icons.Pause name="Pause" size="16px" />
+              <PauseIcon name="Pause" size="16px" />
             </Button>
             <Button {...props.Button} grow>
-              <Icons.SkipForward name="End" size="16px" />
+              <SkipForwardIcon name="End" size="16px" />
             </Button>
           </Buttons>
         </Box>

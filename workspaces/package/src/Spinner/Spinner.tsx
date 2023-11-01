@@ -1,6 +1,6 @@
 import { MotionProps } from 'framer-motion';
+import { LoaderIcon, LucideProps } from 'lucide-react';
 import { forwardRef } from 'react';
-import * as Icons from '../Icon';
 import { Motion } from '../Motion/Motion';
 
 /**
@@ -8,7 +8,7 @@ import { Motion } from '../Motion/Motion';
  */
 export interface SpinnerProps extends MotionProps {
   /** Size of the spinner */
-  size?: Icons.Props['size'];
+  size?: LucideProps['size'];
 }
 
 export const Spinner = forwardRef<SVGSVGElement, SpinnerProps>(
@@ -24,7 +24,7 @@ export const Spinner = forwardRef<SVGSVGElement, SpinnerProps>(
           duration: 2,
         }}
       >
-        <Icons.Loader display="block" ref={ref} size={size} />
+        <LoaderIcon display="block" ref={ref} size={size} />
       </Motion>
     );
   }

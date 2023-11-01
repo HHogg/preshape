@@ -1,4 +1,5 @@
-import { Button, Buttons, Icons, Tooltip, TooltipProps } from 'preshape';
+import { CopyIcon, DropletIcon, Edit2Icon, StarIcon } from 'lucide-react';
+import { Button, Buttons, Tooltip, TooltipProps } from 'preshape';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramPlacement';
 
@@ -32,22 +33,22 @@ const Item: CatalogueItem<{
         content={
           <Buttons joined>
             <Button variant="tertiary">
-              <Icons.Edit2 name="Pencil" size="16px" />
+              <Edit2Icon name="Pencil" size="16px" />
             </Button>
 
             <Button variant="tertiary">
-              <Icons.Copy name="Copy" size="16px" />
+              <CopyIcon name="Copy" size="16px" />
             </Button>
 
             <Button variant="tertiary">
-              <Icons.Droplet name="Water" size="16px" />
+              <DropletIcon name="Water" size="16px" />
             </Button>
           </Buttons>
         }
         paddingHorizontal="x1"
         paddingVertical="x1"
       >
-        <Icons.Star name="Star" size="2rem" />
+        <StarIcon name="Star" size="2rem" />
       </Tooltip>
     ),
     code: `

@@ -1,4 +1,5 @@
-import { Button, Icons, Text } from 'preshape';
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
+import { Button, Text } from 'preshape';
 
 type PageChangeButtonProps = {
   description?: string;
@@ -22,7 +23,7 @@ const PageChangeButton = ({
       maxWidth="100%"
       size="x3"
     >
-      {direction === 'previous' && <Icons.ChevronLeft size="1.5rem" />}
+      {direction === 'previous' && <ChevronLeftIcon size="1.5rem" />}
 
       <Text basis="0" grow weak size="x4">
         <Text size="x5" strong>
@@ -31,7 +32,7 @@ const PageChangeButton = ({
         {description && <Text size="x3">{description}</Text>}
       </Text>
 
-      {direction === 'next' && <Icons.ChevronRight size="1.5rem" />}
+      {direction === 'next' && <ChevronRightIcon size="1.5rem" />}
     </Button>
   );
 };

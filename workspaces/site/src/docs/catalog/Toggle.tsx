@@ -1,4 +1,5 @@
-import { Icons, Toggle, ToggleProps } from 'preshape';
+import { CircleIcon, TriangleIcon } from 'lucide-react';
+import { Toggle, ToggleProps } from 'preshape';
 import { useEffect, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramToggle';
@@ -32,8 +33,8 @@ const Item: CatalogueItem<{
       return (
         <Toggle
           {...props.Toggle}
-          iconOff={<Icons.Triangle size={12} />}
-          iconOn={<Icons.Circle size={12} />}
+          iconOff={<TriangleIcon size={12} />}
+          iconOn={<CircleIcon size={12} />}
           onChange={onChange}
           size={32}
           value={value}
@@ -44,8 +45,8 @@ const Item: CatalogueItem<{
 import { Icons, Toggle } from 'preshape';
 
 <Toggle
-  iconOff={<Icons.Triangle size={12} />}
-  iconOn={<Icons.Circle size={12} />}
+  iconOff={<TriangleIcon size={12} />}
+  iconOn={<CircleIcon size={12} />}
   onChange={onChange}
   size={32}
   value={value}

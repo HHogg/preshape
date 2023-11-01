@@ -13,7 +13,6 @@ const routesToPrerender = [
   '/colors',
   '/themes',
   '/sizings',
-  '/icons',
   '/components',
   '/components/Alert',
   '/components/Appear',

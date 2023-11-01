@@ -1,5 +1,5 @@
+import { MailIcon } from 'lucide-react';
 import {
-  Icons,
   Input,
   InputProps,
   InputLabel,
@@ -47,7 +47,7 @@ const Item: CatalogueItem<{
         <Input
           {...props.Input}
           {...props.InputWrapper}
-          addonStart={<Icons.Mail name="Letter" size="20px" />}
+          addonStart={<MailIcon name="Letter" size="20px" />}
           placeholder="Email address"
         />
       </InputLabel>
@@ -57,8 +57,8 @@ import { InputLabel, Input } from 'preshape';
 
 <InputLabel label="Input label">
   <Input
-    addonStart={<Icons.Mail name="Letter" size="20px" />}
-    addonEnd={<Icons.Check name="Check" size="20px" />}
+    addonStart={<MailIcon size="20px" />}
+    addonEnd={<CheckIcon size="20px" />}
     placeholder="Email address"
     onChange={handleChange}
     value={someValue} />

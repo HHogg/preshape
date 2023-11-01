@@ -1,6 +1,6 @@
+import { ChevronDownIcon, ChevronUpIcon } from 'lucide-react';
 import {
   Box,
-  Icons,
   Input,
   InputLabel,
   Options,
@@ -80,8 +80,8 @@ const Item: CatalogueItem<{
                 <Input
                   addonEnd={
                     <PlacementOpenCondition
-                      opened={<Icons.ChevronUp size="24px" />}
-                      closed={<Icons.ChevronDown size="24px" />}
+                      opened={<ChevronUpIcon size="24px" />}
+                      closed={<ChevronDownIcon size="24px" />}
                     />
                   }
                   readOnly

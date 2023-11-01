@@ -1,7 +1,7 @@
 import classNames from 'classnames';
+import { XIcon } from 'lucide-react';
 import { forwardRef, PointerEvent } from 'react';
 import { Box, BoxProps } from '../Box/Box';
-import * as Icons from '../Icon';
 import { Link } from '../Link/Link';
 import { useModalContext } from './useModalContext';
 
@@ -57,7 +57,7 @@ export const ModalHeader = forwardRef<any, ModalHeaderProps>((props, ref) => {
       {onClose && (
         <Box>
           <Link onClick={handleCloseClick}>
-            <Icons.X size={closeIconSize} />
+            <XIcon size={closeIconSize} />
           </Link>
         </Box>
       )}

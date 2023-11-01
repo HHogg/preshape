@@ -1,9 +1,10 @@
-import { Icons, useThemeContext } from 'preshape';
+import { LucideProps, MoonIcon, SunIcon } from 'lucide-react';
+import { useThemeContext } from 'preshape';
 import { FC } from 'react';
 
-const ThemeIcon: FC<Icons.Props> = (props) => {
+const ThemeIcon: FC<LucideProps> = (props) => {
   const { theme } = useThemeContext();
-  return theme === 'day' ? <Icons.Sun {...props} /> : <Icons.Moon {...props} />;
+  return theme === 'day' ? <SunIcon {...props} /> : <MoonIcon {...props} />;
 };
 
 export default ThemeIcon;

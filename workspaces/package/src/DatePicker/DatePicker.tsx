@@ -1,8 +1,8 @@
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { DateTime } from 'luxon';
 import { forwardRef, useEffect, useState } from 'react';
 import { Box, BoxProps } from '../Box/Box';
 import { Button } from '../Button/Button';
-import * as Icons from '../Icon';
 import { Text } from '../Text/Text';
 import DatePickerCalendar from './DatePickerCalendar';
 import useValidDateInputs from './useValidDateInputs';
@@ -87,7 +87,7 @@ export const DatePicker = forwardRef<any, DatePickerProps>(
               type="button"
               variant="tertiary"
             >
-              <Icons.ChevronLeft />
+              <ChevronLeftIcon size="1rem" />
             </Button>
           </Box>
 
@@ -105,7 +105,7 @@ export const DatePicker = forwardRef<any, DatePickerProps>(
               type="button"
               variant="tertiary"
             >
-              <Icons.ChevronRight />
+              <ChevronRightIcon size="1rem" />
             </Button>
           </Box>
         </Box>

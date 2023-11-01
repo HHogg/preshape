@@ -1,5 +1,5 @@
+import { MoonIcon, StarIcon, SunIcon } from 'lucide-react';
 import {
-  Icons,
   Link,
   Tabs,
   TabsProps,
@@ -14,7 +14,7 @@ import { Fragment, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramTabs';
 
-const icons = [Icons.Star, Icons.Sun, Icons.Moon];
+const icons = [StarIcon, SunIcon, MoonIcon];
 
 const Item: CatalogueItem<{
   Tabs: TabsProps;

@@ -16,10 +16,10 @@ import { Menu } from './components/Menu/Menu';
 import { ColorsPage } from './pages/Colors';
 import { ComponentPage } from './pages/Component';
 import { ComponentsPage } from './pages/Components';
-import { IconsPage } from './pages/Icons';
 import { SizingsPage } from './pages/Sizings';
 import { ThemesPage } from './pages/Themes';
 import 'preshape/dist/style.css';
+import { MenuIcon } from 'lucide-react';
 
 const App = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -90,7 +90,7 @@ const App = () => {
               zIndex={10}
               textColor="light-shade-1"
             >
-              <Icons.Menu size="2rem" />
+              <MenuIcon size="2rem" />
             </Box>
           )}
 
@@ -126,7 +126,6 @@ const App = () => {
                 <Route element={<ColorsPage />} path="/colors" />
                 <Route element={<ThemesPage />} path="/themes" />
                 <Route element={<SizingsPage />} path="/sizings" />
-                <Route element={<IconsPage />} path="/icons" />
                 <Route element={<ComponentsPage />} path="/components" />
                 <Route element={<ComponentPage />} path="/components/:id" />
               </Routes>

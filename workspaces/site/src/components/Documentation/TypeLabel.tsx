@@ -1,4 +1,5 @@
-import { Box, Button, ButtonProps, Icons } from 'preshape';
+import { ExternalLinkIcon, InfoIcon } from 'lucide-react';
+import { Box, Button, ButtonProps } from 'preshape';
 import { forwardRef, HTMLAttributes } from 'react';
 import TypeText from './TypeText';
 
@@ -30,13 +31,13 @@ const TypeLabel = forwardRef<
 
           {hasInfo && (
             <Box>
-              <Icons.Info size="14px" />
+              <InfoIcon size="14px" />
             </Box>
           )}
 
           {isExternalLink && (
             <Box>
-              <Icons.ExternalLink size="14px" />
+              <ExternalLinkIcon size="14px" />
             </Box>
           )}
         </Box>

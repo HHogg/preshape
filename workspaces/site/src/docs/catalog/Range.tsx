@@ -1,4 +1,5 @@
-import { Icons, InputLabel, Range, RangeProps } from 'preshape';
+import { MoonIcon, SunIcon } from 'lucide-react';
+import { InputLabel, Range, RangeProps } from 'preshape';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramRange';
 
@@ -27,8 +28,8 @@ const Item: CatalogueItem<{
       >
         <Range
           {...props.Range}
-          addonEnd={<Icons.Sun name="Sun" size="20px" />}
-          addonStart={<Icons.Moon name="Moon" size="20px" />}
+          addonEnd={<SunIcon name="Sun" size="20px" />}
+          addonStart={<MoonIcon name="Moon" size="20px" />}
         />
       </InputLabel>
     ),
@@ -36,8 +37,8 @@ const Item: CatalogueItem<{
 import { Range } from 'preshape';
 
 <Range
-  addonEnd={<Icons.Sun name="Sun" size="20px" />}
-  addonStart={<Icons.Moon name="Moon" size="20px" />}
+  addonEnd={<SunIcon name="Sun" size="20px" />}
+  addonStart={<MoonIcon name="Moon" size="20px" />}
   value={50}
   min={0}
   max={100}

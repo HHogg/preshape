@@ -1,4 +1,5 @@
-import { Icons, ButtonAsync, ButtonAsyncProps, Buttons } from 'preshape';
+import { CheckIcon, XIcon } from 'lucide-react';
+import { ButtonAsync, ButtonAsyncProps, Buttons } from 'preshape';
 import { useEffect, useRef, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramButtonasync';
@@ -110,7 +111,7 @@ const Item: CatalogueItem<{
             {...successState}
             onClick={handleButtonSuccessClick}
           >
-            <Icons.Check size="1rem" />
+            <CheckIcon size="1rem" />
             Async Success
           </ButtonAsync>
 
@@ -124,7 +125,7 @@ const Item: CatalogueItem<{
             }
             onClick={handleButtonFailureClick}
           >
-            <Icons.X size="1rem" />
+            <XIcon size="1rem" />
             Async Failure
           </ButtonAsync>
         </Buttons>

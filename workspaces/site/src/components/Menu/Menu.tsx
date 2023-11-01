@@ -67,9 +67,6 @@ export const Menu = ({ onSelect, ...props }: MenuProps) => {
         <MenuItem onClick={onSelect} to="/sizings">
           Sizings
         </MenuItem>
-        <MenuItem onClick={onSelect} to="/icons">
-          Icons
-        </MenuItem>
         <MenuItem onClick={onSelect} to="/components">
           Components
         </MenuItem>

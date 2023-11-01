@@ -1,4 +1,5 @@
-import { Button, ButtonProps, Icons, Tooltip } from 'preshape';
+import { GithubIcon } from 'lucide-react';
+import { Button, ButtonProps, Tooltip } from 'preshape';
 
 const GithubLink = (props: ButtonProps) => {
   return (
@@ -12,7 +13,7 @@ const GithubLink = (props: ButtonProps) => {
         tag="a"
         variant="tertiary"
       >
-        <Icons.Github size="1.25rem" />
+        <GithubIcon size="1.25rem" />
       </Button>
     </Tooltip>
   );

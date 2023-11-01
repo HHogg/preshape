@@ -1,5 +1,5 @@
+import { MoonIcon, SunIcon } from 'lucide-react';
 import { forwardRef } from 'react';
-import { Icons } from '..';
 import { Toggle, ToggleProps } from '../Toggle/Toggle';
 import { TypeTheme } from '../types';
 import { useThemeContext } from './useThemeContext';
@@ -26,8 +26,8 @@ export const ThemeSwitcher = forwardRef<HTMLLabelElement, ThemeSwitcherProps>(
     return (
       <Toggle
         {...rest}
-        iconOff={<Icons.Sun size={size - 12} />}
-        iconOn={<Icons.Moon size={size - 12} />}
+        iconOff={<SunIcon size={size - 12} />}
+        iconOn={<MoonIcon size={size - 12} />}
         onChange={(value) => onChange(value ? 'night' : 'day')}
         ref={ref}
         size={size}

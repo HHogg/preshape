@@ -1,3 +1,4 @@
+import { AlertCircleIcon, FrownIcon, SmileIcon } from 'lucide-react';
 import {
   Dispatch,
   forwardRef,
@@ -9,7 +10,6 @@ import {
 import { Appear } from '../Appear/Appear';
 import { Box } from '../Box/Box';
 import { Button, ButtonProps } from '../Button/Button';
-import * as Icons from '../Icon';
 import { Spinner } from '../Spinner/Spinner';
 import { Tooltip } from '../Tooltip/Tooltip';
 
@@ -106,8 +106,8 @@ export const ButtonAsync = forwardRef<any, ButtonAsyncProps>(
         >
           <Box absolute="center">
             {isLoading && <Spinner />}
-            {showHappyFace && <Icons.Smile size="1.5rem" />}
-            {showSadFace && <Icons.Frown size="1.5rem" />}
+            {showHappyFace && <SmileIcon size="1.5rem" />}
+            {showSadFace && <FrownIcon size="1.5rem" />}
           </Box>
         </Appear>
 
@@ -124,13 +124,14 @@ export const ButtonAsync = forwardRef<any, ButtonAsyncProps>(
         {error && (
           <Appear absolute="top-right">
             <Tooltip content={error}>
-              <Icons.AlertCircle
+              <Box
                 backgroundColor="negative-shade-5"
                 borderRadius="full"
-                size="1.5rem"
                 style={{ transform: 'translate(50%, -50%)' }}
                 textColor="white"
-              />
+              >
+                <AlertCircleIcon size="1.5rem" />
+              </Box>
             </Tooltip>
           </Appear>
         )}
