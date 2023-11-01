@@ -1,3 +1,4 @@
+import omit from 'lodash/omit';
 import { MailIcon } from 'lucide-react';
 import {
   Input,
@@ -46,7 +47,7 @@ const Item: CatalogueItem<{
       <InputLabel {...props.InputLabel}>
         <Input
           {...props.Input}
-          {...props.InputWrapper}
+          {...omit(props.InputWrapper, ['size'])}
           addonStart={<MailIcon name="Letter" size="20px" />}
           placeholder="Email address"
         />

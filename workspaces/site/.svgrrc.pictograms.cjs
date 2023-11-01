@@ -2,6 +2,7 @@ module.exports = {
   dimensions: false,
   prettier: false,
   typescript: true,
+  indexTemplate: () => '',
   replaceAttrValues: {
     '#000': 'var(--color-text-shade-1)',
     '#000001': 'var(--color-text-shade-2)',

@@ -45,16 +45,16 @@ const Item: CatalogueItem<{
         <Box grow>
           <Buttons {...props.Buttons} grow>
             <Button {...props.Button} grow>
-              <SkipBackIcon size="16px" />
+              <SkipBackIcon size="20px" />
             </Button>
             <Button {...props.Button} grow>
-              <PlayIcon name="Play" size="16px" />
+              <PlayIcon name="Play" size="20px" />
             </Button>
             <Button {...props.Button} grow>
-              <PauseIcon name="Pause" size="16px" />
+              <PauseIcon name="Pause" size="20px" />
             </Button>
             <Button {...props.Button} grow>
-              <SkipForwardIcon name="End" size="16px" />
+              <SkipForwardIcon name="End" size="20px" />
             </Button>
           </Buttons>
         </Box>

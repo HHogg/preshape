@@ -1,6 +1,6 @@
 {
 
-  "include": ["src"],
+  "include": ["src", "src/assets/documentation.json"],
   "references": [
     { "path": "./tsconfig.node.json" }
   ],

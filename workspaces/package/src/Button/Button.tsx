@@ -7,7 +7,7 @@ import {
 } from 'react';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import { Text, TextProps } from '../Text/Text';
-import { TypeColor, TypeSize } from '../types';
+import { TypeColor } from '../types';
 import './Button.css';
 
 export type TypeButtonSize = 'x1' | 'x2' | 'x3';
@@ -35,12 +35,6 @@ export interface ButtonProps extends TextProps {
   color?: 'accent' | 'negative' | 'positive';
   /** A styled disabled state that disables all interactions */
   disabled?: boolean;
-  /**
-   * Sets the size of the button
-   *
-   * @default "x2"
-   */
-  size?: TypeButtonSize;
   /** text color when active */
   textColorActive?: TypeColor;
   /** border color when hover */
@@ -59,27 +53,6 @@ export interface ButtonProps extends TextProps {
   variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const sizePaddingMap: Record<
-  TypeButtonSize,
-  {
-    paddingHorizontal: TypeSize;
-    paddingVertical: TypeSize;
-  }
-> = {
-  x1: {
-    paddingHorizontal: 'x2',
-    paddingVertical: 'x1',
-  },
-  x2: {
-    paddingHorizontal: 'x3',
-    paddingVertical: 'x2',
-  },
-  x3: {
-    paddingHorizontal: 'x4',
-    paddingVertical: 'x3',
-  },
-};
-
 export const Button = forwardRef<any, ButtonProps>((props, ref) => {
   const {
     active,
@@ -96,10 +69,10 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
     borderSize = 'x2',
     color,
     flex = 'horizontal',
-    size = 'x2',
+    size = 'x3',
     padding,
-    paddingHorizontal = padding || sizePaddingMap[size].paddingHorizontal,
-    paddingVertical = padding || sizePaddingMap[size].paddingVertical,
+    paddingHorizontal = padding || 'x3',
+    paddingVertical = padding || 'x2',
     strong = true,
     tag,
     textColor,
@@ -113,7 +86,6 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
   const classes = classnames('Button', {
     'Button--active': active,
     [`Button--${color}`]: color,
-    [`Button--${size}`]: size,
     [`Button--${variant}`]: variant,
   });
 
@@ -162,6 +134,7 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
       ref={ref}
+      size={size}
       strong={strong}
       style={style}
       tag={to ? 'a' : tag ?? 'button'}

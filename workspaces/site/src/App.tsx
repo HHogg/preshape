@@ -1,8 +1,8 @@
+import { MenuIcon } from 'lucide-react';
 import {
   Appear,
   Box,
   Button,
-  Icons,
   Modal,
   ModalManager,
   Text,
@@ -19,7 +19,6 @@ import { ComponentsPage } from './pages/Components';
 import { SizingsPage } from './pages/Sizings';
 import { ThemesPage } from './pages/Themes';
 import 'preshape/dist/style.css';
-import { MenuIcon } from 'lucide-react';
 
 const App = () => {
   const [menuVisible, setMenuVisible] = useState(false);

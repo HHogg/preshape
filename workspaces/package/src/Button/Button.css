@@ -46,21 +46,6 @@
   }
 }
 
-.Button--x1 {
-  font-size: var(--text-size--x2);
-  line-height: var(--text-height--x1);
-}
-
-.Button--x2 {
-  font-size: var(--text-size--x2);
-  line-height: var(--text-height--x1);
-}
-
-.Button--x3 {
-  font-size: var(--text-size--x3);
-  line-height: var(--text-height--x2);
-}
-
 .Button--primary {
   --Button-backgroundColor: var(--color-text-shade-1);
   --Button-backgroundColorActive: var(--color-accent-shade-5);

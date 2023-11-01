@@ -134,7 +134,7 @@ var(--border-radius-size--x1);
 <Box margin="x2" padding="x4" borderSize="x1" borderRadius="x2" />
           `}</CodeBlock>
 
-          <CodeBlock language="javascript">{`
+          <CodeBlock language="tsx">{`
 /* JS Variables */
 import { sizeX1Px, sizeX1Rem, borderRadiusSizeX1Px } from 'preshape';
 `}</CodeBlock>
