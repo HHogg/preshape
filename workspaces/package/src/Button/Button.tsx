@@ -105,7 +105,6 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
     textColorActive,
     textColorHover,
     to = '',
-    uppercase = true,
     variant = 'secondary',
     ...rest
   } = props;
@@ -165,7 +164,6 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
       strong={strong}
       style={style}
       tag={to ? 'a' : tag ?? 'button'}
-      uppercase={uppercase}
     />
   );
 });
