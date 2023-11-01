@@ -129,6 +129,9 @@
 .Box--border-radius-x1 { border-radius: var(--border-radius-size--x1); }
 .Box--border-radius-x2 { border-radius: var(--border-radius-size--x2); }
 .Box--border-radius-x3 { border-radius: var(--border-radius-size--x3); }
+.Box--border-radius-x4 { border-radius: var(--border-radius-size--x4); }
+.Box--border-radius-x5 { border-radius: var(--border-radius-size--x5); }
+.Box--border-radius-x6 { border-radius: var(--border-radius-size--x6); }
 .Box--border-radius-full { border-radius: 50%; }
 
 .Box--border-size-x1,

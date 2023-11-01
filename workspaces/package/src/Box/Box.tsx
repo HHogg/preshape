@@ -214,7 +214,10 @@ export const Box = forwardRef<any, BoxProps>((props, ref) => {
     borderRadius === 'full' ||
     borderRadius === 'x1' ||
     borderRadius === 'x2' ||
-    borderRadius === 'x3';
+    borderRadius === 'x3' ||
+    borderRadius === 'x4' ||
+    borderRadius === 'x5' ||
+    borderRadius === 'x6';
 
   const classes = classnames(
     'Box',

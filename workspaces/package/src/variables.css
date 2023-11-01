@@ -6,8 +6,8 @@
   --size--x2: 0.5rem;
   --size--x3: 0.75rem;
   --size--x4: 1rem;
-  --size--x5: 1.75rem;
-  --size--x6: 1.5rem;
+  --size--x5: 1.5rem;
+  --size--x6: 1.75rem;
   --size--x8: 2rem;
   --size--x10: 2.5rem;
   --size--x12: 3rem;
@@ -22,6 +22,9 @@
   --border-radius-size--x1: var(--size--x1);
   --border-radius-size--x2: var(--size--x2);
   --border-radius-size--x3: var(--size--x3);
+  --border-radius-size--x4: var(--size--x4);
+  --border-radius-size--x5: var(--size--x5);
+  --border-radius-size--x6: var(--size--x6);
 
   --rgb-white: 245, 250, 255;
   --rgb-black: 15, 20, 25;
