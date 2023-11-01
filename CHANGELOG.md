@@ -1,3 +1,36 @@
+## [16.0.0](https://github.com/HHogg/preshape/compare/v15.1.1...v16.0.0) (2023-11-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **font:** Changed the font. Include the following link tag.
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+* **Text:** Removed the `strong` and `weak` props and replaced with `weight`. `weight="x1" === weak && weight="x2" === strong`
+* **Button:** Removed 'size' prop. Size is now the text size prop. Use this and paddings to size
+
+### Features
+
+* **Box:** Added some more border radius values ([1360321](https://github.com/HHogg/preshape/commit/13603213466880b6259aba50ea415b3c97c1f673))
+* **Button:** removed 'size' prop ([df34291](https://github.com/HHogg/preshape/commit/df342912c47fc7d7d38fe244a3db7543c7d1eb03))
+* **font:** Replaced Open Sans (400/600) font with Noto Sans (400/600/700/800/900) ([5f53015](https://github.com/HHogg/preshape/commit/5f53015b69f07f2a0c429b0467b3d71fc65c7c76))
+* **Icon:** Removed Icons component, use icons from lucide-react ([3bd5891](https://github.com/HHogg/preshape/commit/3bd589196052a81ef9d9ffbc5439993fb0211c0c))
+* **Text:** Replaced 'strong' and 'weak' props with 'weight' prop ([7ddadfe](https://github.com/HHogg/preshape/commit/7ddadfeb4ad69801fbdecebf68967da9ce49ca01))
+
+
+### Style Changes
+
+* **Button:** Removed default uppercasing ([ec01578](https://github.com/HHogg/preshape/commit/ec015786fa7fa7b9f3cde5693b8aa5462a075fb9))
+
+
+### Fixes
+
+* **Box:** Added missing x5 from paddings/margins ([d8b477b](https://github.com/HHogg/preshape/commit/d8b477b969f9a1ecd7bf1465ee8460bee7fbe8ec))
+* **Button:** Fixed component so 'padding' prop can be used ([4f12caa](https://github.com/HHogg/preshape/commit/4f12caab5e1fd8b0d8a7826725f041429aa015ad))
+* **colors:** Theme text colours ([9ecae81](https://github.com/HHogg/preshape/commit/9ecae81da8e47c9a84f9167279d49380f8f6d5a1))
+
 ### [15.1.1](https://github.com/HHogg/preshape/compare/v15.1.0...v15.1.1) (2023-10-30)
 
 
