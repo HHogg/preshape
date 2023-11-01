@@ -18,6 +18,7 @@
 .Box--margin-x2 { margin: var(--size--x2) 0; }
 .Box--margin-x3 { margin: var(--size--x3) 0; }
 .Box--margin-x4 { margin: var(--size--x4) 0; }
+.Box--margin-x5 { margin: var(--size--x5) 0; }
 .Box--margin-x6 { margin: var(--size--x6) 0; }
 .Box--margin-x8 { margin: var(--size--x8) 0; }
 .Box--margin-x10 { margin: var(--size--x10) 0; }
@@ -31,6 +32,7 @@
 .Box--padding-top-x2 { padding-top: var(--size--x2); }
 .Box--padding-top-x3 { padding-top: var(--size--x3); }
 .Box--padding-top-x4 { padding-top: var(--size--x4); }
+.Box--padding-top-x5 { padding-top: var(--size--x5); }
 .Box--padding-top-x6 { padding-top: var(--size--x6); }
 .Box--padding-top-x8 { padding-top: var(--size--x8); }
 .Box--padding-top-x10 { padding-top: var(--size--x10); }
@@ -44,6 +46,7 @@
 .Box--padding-right-x2 { padding-right: var(--size--x2); }
 .Box--padding-right-x3 { padding-right: var(--size--x3); }
 .Box--padding-right-x4 { padding-right: var(--size--x4); }
+.Box--padding-right-x5 { padding-right: var(--size--x5); }
 .Box--padding-right-x6 { padding-right: var(--size--x6); }
 .Box--padding-right-x8 { padding-right: var(--size--x8); }
 .Box--padding-right-x10 { padding-right: var(--size--x10); }
@@ -57,6 +60,7 @@
 .Box--padding-bottom-x2 { padding-bottom: var(--size--x2); }
 .Box--padding-bottom-x3 { padding-bottom: var(--size--x3); }
 .Box--padding-bottom-x4 { padding-bottom: var(--size--x4); }
+.Box--padding-bottom-x5 { padding-bottom: var(--size--x5); }
 .Box--padding-bottom-x6 { padding-bottom: var(--size--x6); }
 .Box--padding-bottom-x8 { padding-bottom: var(--size--x8); }
 .Box--padding-bottom-x10 { padding-bottom: var(--size--x10); }
@@ -70,6 +74,7 @@
 .Box--padding-left-x2 { padding-left: var(--size--x2); }
 .Box--padding-left-x3 { padding-left: var(--size--x3); }
 .Box--padding-left-x4 { padding-left: var(--size--x4); }
+.Box--padding-left-x5 { padding-left: var(--size--x5); }
 .Box--padding-left-x6 { padding-left: var(--size--x6); }
 .Box--padding-left-x8 { padding-left: var(--size--x8); }
 .Box--padding-left-x10 { padding-left: var(--size--x10); }
@@ -82,6 +87,7 @@
 .Box--padding-offset-bottom-x2 { margin-bottom: calc(var(--size--x2) * -1); }
 .Box--padding-offset-bottom-x3 { margin-bottom: calc(var(--size--x3) * -1); }
 .Box--padding-offset-bottom-x4 { margin-bottom: calc(var(--size--x4) * -1); }
+.Box--padding-offset-bottom-x5 { margin-bottom: calc(var(--size--x5) * -1); }
 .Box--padding-offset-bottom-x6 { margin-bottom: calc(var(--size--x6) * -1); }
 .Box--padding-offset-bottom-x8 { margin-bottom: calc(var(--size--x8) * -1); }
 .Box--padding-offset-bottom-x10 { margin-bottom: calc(var(--size--x10) * -1); }
@@ -94,6 +100,7 @@
 .Box--padding-offset-top-x2 { margin-top: calc(var(--size--x2) * -1); }
 .Box--padding-offset-top-x3 { margin-top: calc(var(--size--x3) * -1); }
 .Box--padding-offset-top-x4 { margin-top: calc(var(--size--x4) * -1); }
+.Box--padding-offset-top-x5 { margin-top: calc(var(--size--x5) * -1); }
 .Box--padding-offset-top-x6 { margin-top: calc(var(--size--x6) * -1); }
 .Box--padding-offset-top-x8 { margin-top: calc(var(--size--x8) * -1); }
 .Box--padding-offset-top-x10 { margin-top: calc(var(--size--x10) * -1); }
@@ -106,6 +113,7 @@
 .Box--padding-offset-right-x2 { margin-right: calc(var(--size--x2) * -1); }
 .Box--padding-offset-right-x3 { margin-right: calc(var(--size--x3) * -1); }
 .Box--padding-offset-right-x4 { margin-right: calc(var(--size--x4) * -1); }
+.Box--padding-offset-right-x5 { margin-right: calc(var(--size--x5) * -1); }
 .Box--padding-offset-right-x6 { margin-right: calc(var(--size--x6) * -1); }
 .Box--padding-offset-right-x8 { margin-right: calc(var(--size--x8) * -1); }
 .Box--padding-offset-right-x10 { margin-right: calc(var(--size--x10) * -1); }
@@ -118,6 +126,7 @@
 .Box--padding-offset-left-x2 { margin-left: calc(var(--size--x2) * -1); }
 .Box--padding-offset-left-x3 { margin-left: calc(var(--size--x3) * -1); }
 .Box--padding-offset-left-x4 { margin-left: calc(var(--size--x4) * -1); }
+.Box--padding-offset-left-x5 { margin-left: calc(var(--size--x5) * -1); }
 .Box--padding-offset-left-x6 { margin-left: calc(var(--size--x6) * -1); }
 .Box--padding-offset-left-x8 { margin-left: calc(var(--size--x8) * -1); }
 .Box--padding-offset-left-x10 { margin-left: calc(var(--size--x10) * -1); }
