@@ -1,3 +1,10 @@
+## [16.1.0](https://github.com/HHogg/preshape/compare/v16.0.0...v16.1.0) (2023-11-03)
+
+
+### Features
+
+* **Theme:** Added a disableSystemTheme prop ([b63ebad](https://github.com/HHogg/preshape/commit/b63ebadc00e8e61c9683046aaacdf790e87cffb1))
+
 ## [16.0.0](https://github.com/HHogg/preshape/compare/v15.1.1...v16.0.0) (2023-11-01)
 
 
