@@ -6,6 +6,7 @@ import { useSystemTheme } from './useSystemTheme';
 import { ThemeContext } from './useThemeContext';
 
 type ThemeProviderProps = {
+  disableSystemTheme?: boolean;
   initialTheme?: TypeTheme;
 };
 
@@ -19,6 +20,7 @@ const updateThemeClassName = (theme: TypeTheme) => {
 
 export function ThemeProvider({
   children,
+  disableSystemTheme = false,
   initialTheme = 'day',
 }: PropsWithChildren<ThemeProviderProps>) {
   const [theme, setTheme] = useLocalStorage<TypeTheme>(
@@ -35,9 +37,12 @@ export function ThemeProvider({
       refPreviousSystemTheme.current !== systemTheme
     ) {
       refPreviousSystemTheme.current = systemTheme;
-      setTheme(systemTheme);
+
+      if (!disableSystemTheme) {
+        setTheme(systemTheme);
+      }
     }
-  }, [setTheme, systemTheme]);
+  }, [setTheme, systemTheme, disableSystemTheme]);
 
   useEffect(() => {
     updateThemeClassName(theme);
