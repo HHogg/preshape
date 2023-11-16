@@ -1,6 +1,6 @@
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
-import App from './App';
+import App from './components/App/App';
 
 export function SSRRender(url: string | Partial<Location>) {
   return renderToString(
