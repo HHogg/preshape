@@ -264,7 +264,9 @@ const paletteGrouped = [
     name: 'Light',
     description:
       'Light colors which should be used most of the time for light things.',
-    children: palette.filter(({ css }) => css.includes('light')),
+    children: palette.filter(
+      ({ css }) => !css.includes('highlight') && css.includes('light')
+    ),
   },
   {
     name: 'Accent Day',

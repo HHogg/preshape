@@ -63,9 +63,9 @@ export const colorDarkShade1 = 'rgb(25, 25, 30)';
 export const colorDarkShade2 = 'rgb(30, 30, 35)';
 export const colorDarkShade3 = 'rgb(35, 35, 40)';
 
-export const colorLightShade1 = 'rgb(245, 245, 250)';
-export const colorLightShade2 = 'rgb(240, 240, 245)';
-export const colorLightShade3 = 'rgb(235, 235, 240)';
+export const colorLightShade1 = 'rgb(240, 245, 250)';
+export const colorLightShade2 = 'rgb(235, 240, 245)';
+export const colorLightShade3 = 'rgb(230, 235, 240';
 
 export const colorAccent1Shade1 = hexToRGBA(color.indigo[7], 0.1);
 export const colorAccent1Shade2 = hexToRGBA(color.indigo[7], 0.2);
