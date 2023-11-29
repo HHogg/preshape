@@ -1,3 +1,10 @@
+### [16.1.2](https://github.com/HHogg/preshape/compare/v16.1.1...v16.1.2) (2023-11-29)
+
+
+### Fixes
+
+* **Colors:** Fixed incorrect dark shade colors ([f4919bf](https://github.com/HHogg/preshape/commit/f4919bf2fcab0de33e0d56e72a94b2242404f066))
+
 ### [16.1.1](https://github.com/HHogg/preshape/compare/v16.1.0...v16.1.1) (2023-11-29)
 
 
