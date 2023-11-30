@@ -26,16 +26,16 @@
   --border-radius-size--x5: var(--size--x5);
   --border-radius-size--x6: var(--size--x6);
 
-  --rgb-white: 245, 250, 255;
-  --rgb-black: 15, 20, 25;
+  --rgb-white: 255, 255, 255;
+  --rgb-black: 10, 10, 10;
 
-  --rgb-dark-shade-1: 20, 25, 30;
-  --rgb-dark-shade-2: 25, 30, 40;
-  --rgb-dark-shade-3: 30, 35, 50;
+  --rgb-dark-shade-1: 15, 20, 25;
+  --rgb-dark-shade-2: 20, 25, 30;
+  --rgb-dark-shade-3: 25, 30, 40;
 
-  --rgb-light-shade-1: 240, 245, 250;
-  --rgb-light-shade-2: 235, 240, 245;
-  --rgb-light-shade-3: 230, 235, 240;
+  --rgb-light-shade-1: 245, 250, 255;
+  --rgb-light-shade-2: 240, 245, 250;
+  --rgb-light-shade-3: 235, 240, 245;
 
   --rgb-accent-1-shade-1: var(--oc-indigo-7-rgb);
   --rgb-accent-1-shade-2: var(--oc-indigo-7-rgb);

@@ -56,16 +56,16 @@ export const borderRadiusSizeX4Rem = sizeX4Rem;
 export const borderRadiusSizeX5Rem = sizeX5Rem;
 export const borderRadiusSizeX6Rem = sizeX6Rem;
 
-export const colorWhite = 'rgb(245, 250, 255)';
-export const colorBlack = 'rgb(15, 20, 25)';
+export const colorWhite = 'rgb(255, 255, 255)';
+export const colorBlack = 'rgb(10, 10, 10)';
 
-export const colorDarkShade1 = 'rgb(20, 25, 30)';
-export const colorDarkShade2 = 'rgb(25, 30, 40)';
-export const colorDarkShade3 = 'rgb(30, 35, 50)';
+export const colorDarkShade1 = 'rgb(15, 20, 25)';
+export const colorDarkShade2 = 'rgb(20, 25, 30)';
+export const colorDarkShade3 = 'rgb(25, 30, 40)';
 
-export const colorLightShade1 = 'rgb(240, 245, 250)';
-export const colorLightShade2 = 'rgb(235, 240, 245)';
-export const colorLightShade3 = 'rgb(230, 235, 240';
+export const colorLightShade1 = 'rgb(245, 250, 255)';
+export const colorLightShade2 = 'rgb(240, 245, 250)';
+export const colorLightShade3 = 'rgb(235, 240, 245)';
 
 export const colorAccent1Shade1 = hexToRGBA(color.indigo[7], 0.1);
 export const colorAccent1Shade2 = hexToRGBA(color.indigo[7], 0.2);
