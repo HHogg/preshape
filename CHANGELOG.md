@@ -1,3 +1,11 @@
+### [16.1.3](https://github.com/HHogg/preshape/compare/v16.1.2...v16.1.3) (2023-11-30)
+
+
+### Fixes
+
+* **Colors:** Tweaked the base colors ([538fa1d](https://github.com/HHogg/preshape/commit/538fa1d8c78170d2fb9ba7d45634ded2d41726c2))
+* **Placement:** Export UsePlacementResult type ([e128e0c](https://github.com/HHogg/preshape/commit/e128e0c806f15812665d7e2b24245bf995c20dce))
+
 ### [16.1.2](https://github.com/HHogg/preshape/compare/v16.1.1...v16.1.2) (2023-11-29)
 
 
