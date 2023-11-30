@@ -14,6 +14,8 @@ import {
   size,
   Placement,
   UseRoleProps,
+  UseFloatingReturn,
+  ReferenceType,
 } from '@floating-ui/react';
 import { useState } from 'react';
 import { sizeX1Px } from '../variables';
@@ -55,7 +57,7 @@ export interface UsePlacementOptions {
 }
 
 export interface UsePlacementResult
-  extends ReturnType<typeof useFloating>,
+  extends UseFloatingReturn<ReferenceType>,
     ReturnType<typeof useInteractions> {
   /**
    *

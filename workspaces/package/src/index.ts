@@ -90,6 +90,7 @@ export {
   PlacementReference,
   type PlacementReferenceProps,
 } from './Placement/PlacementReference';
+export type { UsePlacementResult } from './Placement/usePlacement';
 export { usePlacementContext } from './Placement/usePlacementContext';
 export { RadioButton, type RadioButtonProps } from './RadioButton/RadioButton';
 export { RadioButtonIndicator } from './RadioButton/RadioButtonIndicator';
