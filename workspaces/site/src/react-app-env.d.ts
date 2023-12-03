@@ -1,2 +1,3 @@
-declare module '*.txt?raw';
 declare module '*.json';
+declare module '*.png';
+declare module '*.txt?raw';
