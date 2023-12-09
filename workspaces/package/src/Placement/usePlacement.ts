@@ -18,12 +18,12 @@ import {
   ReferenceType,
 } from '@floating-ui/react';
 import { useState } from 'react';
-import { sizeX1Px } from '../variables';
+import { sizeX1Px, sizeX2Px } from '../variables';
 
 export type UsePlacementTrigger = 'hover' | 'click';
 
-export const ARROW_HEIGHT = 8;
-export const ARROW_WIDTH = 16;
+export const ARROW_HEIGHT = 12;
+export const ARROW_WIDTH = 24;
 
 export interface UsePlacementOptions {
   /**
@@ -94,11 +94,10 @@ export default function usePlacement({
     onOpenChange: setOpen,
     whileElementsMounted: autoUpdate,
     middleware: [
-      arrow({
-        element: arrowElement,
-      }),
       offset(arrowElement ? ARROW_HEIGHT + sizeX1Px : sizeX1Px),
-      shift({ padding: 5 }),
+      shift({
+        padding: sizeX2Px,
+      }),
       size({
         apply({ rects, elements }) {
           if (setContentWidthAsReferenceWidth) {
@@ -108,7 +107,11 @@ export default function usePlacement({
       }),
       flip({
         fallbackAxisSideDirection: 'start',
-        padding: 5,
+        padding: sizeX2Px,
+      }),
+      arrow({
+        element: arrowElement,
+        padding: sizeX2Px,
       }),
     ],
   });

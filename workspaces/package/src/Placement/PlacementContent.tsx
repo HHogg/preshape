@@ -79,6 +79,7 @@ export const PlacementContent = forwardRef<
                 ref={arrowRef}
                 height={ARROW_HEIGHT}
                 width={ARROW_WIDTH}
+                tipRadius={1}
               />
             )}
           </Box>

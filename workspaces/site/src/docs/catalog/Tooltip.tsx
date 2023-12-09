@@ -21,7 +21,7 @@ const Item: CatalogueItem<{
     state: {
       Tooltip: {
         content: null,
-        placement: 'top',
+        placement: 'top-start',
         trigger: 'hover',
         visible: true,
       },
@@ -30,6 +30,8 @@ const Item: CatalogueItem<{
       <Tooltip
         {...props.Tooltip}
         borderRadius="x1"
+        paddingHorizontal="x1"
+        paddingVertical="x1"
         content={
           <Buttons joined>
             <Button variant="tertiary">
@@ -45,8 +47,6 @@ const Item: CatalogueItem<{
             </Button>
           </Buttons>
         }
-        paddingHorizontal="x1"
-        paddingVertical="x1"
       >
         <StarIcon name="Star" size="2rem" />
       </Tooltip>
