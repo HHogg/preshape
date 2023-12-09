@@ -1,3 +1,10 @@
+### [16.1.4](https://github.com/HHogg/preshape/compare/v16.1.3...v16.1.4) (2023-12-09)
+
+
+### Fixes
+
+* **Tooltip:** Padding to the tip ([15c9d38](https://github.com/HHogg/preshape/commit/15c9d38cad9e40ed24a976d16fa4408ebb584570))
+
 ### [16.1.3](https://github.com/HHogg/preshape/compare/v16.1.2...v16.1.3) (2023-11-30)
 
 
