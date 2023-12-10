@@ -1,5 +1,5 @@
 import { LucideIcon } from 'lucide-react';
-import { PropsWithChildren, useState } from 'react';
+import { Fragment, PropsWithChildren, useState } from 'react';
 import {
   TransitionBox,
   TransitionBoxProps,
@@ -12,22 +12,22 @@ import MenuItemNavigate from './MenuItemNavigate';
 export interface ConfigMenuProps extends TransitionBoxProps {
   config: MenuConfig;
 }
-export type MenuConfig = Record<string, ConfigEntry>;
+export type MenuConfig = MenuConfigEntry[];
 
-export type ConfigEntry = {
+export type MenuConfigEntry<T = MenuConfigEntryValue> = {
   label: string;
   icon: LucideIcon;
-  config: ConfigEntryValue;
+  config: T;
 };
 
-export type ConfigEntryValue =
-  | ConfigBoolean
-  | ConfigNumber
-  | ConfigOneOf
-  | ConfigManyOf
-  | ConfigAction;
+export type MenuConfigEntryValue =
+  | MenuConfigBoolean
+  | MenuConfigNumber
+  | MenuConfigOneOf
+  | MenuConfigManyOf
+  | MenuConfigAction;
 
-export type ConfigBoolean = {
+export type MenuConfigBoolean = {
   type: 'boolean';
   value: boolean;
   labelTrue: string;
@@ -35,60 +35,63 @@ export type ConfigBoolean = {
   onChange: (value: boolean) => void;
 };
 
-export type ConfigNumber = {
+export type MenuConfigNumber = {
   type: 'number';
   value: number;
   min: number;
   max: number;
   step: number;
-  formatter: (value: number) => string;
+  formatter?: (value: number) => string;
   onChange: (value: number) => void;
 };
 
-export type ConfigOneOf = {
+export type MenuConfigOneOf<T = string> = {
   type: 'oneOf';
-  value: string;
-  options: string[];
-  onChange: (value: string) => void;
+  value: T;
+  options: T[];
+  formatter?: (value: T) => string;
+  onChange: (value: T) => void;
 };
 
-export type ConfigManyOf = {
+export type MenuConfigManyOf<T = string> = {
   type: 'manyOf';
-  value: string[];
-  options: string[];
-  onChange: (value: string[]) => void;
+  value: T[];
+  options: T[];
+  formatter?: (value: T) => string;
+  onChange: (value: T[]) => void;
 };
 
-export type ConfigAction = {
+export type MenuConfigAction = {
   type: 'action';
-  label: string;
-  action: () => void;
+  onAction: () => void;
 };
 
-const isBoolean = (value: ConfigEntryValue): value is ConfigBoolean =>
+const isBoolean = (value: MenuConfigEntryValue): value is MenuConfigBoolean =>
   value.type === 'boolean';
 
-const isNumber = (value: ConfigEntryValue): value is ConfigNumber =>
+const isNumber = (value: MenuConfigEntryValue): value is MenuConfigNumber =>
   value.type === 'number';
 
-const isOneOf = (value: ConfigEntryValue): value is ConfigOneOf =>
+const isOneOf = (value: MenuConfigEntryValue): value is MenuConfigOneOf<any> =>
   value.type === 'oneOf';
 
-const isManyOf = (value: ConfigEntryValue): value is ConfigManyOf =>
-  value.type === 'manyOf';
+const isManyOf = (
+  value: MenuConfigEntryValue
+): value is MenuConfigManyOf<any> => value.type === 'manyOf';
 
-const isAction = (value: ConfigEntryValue): value is ConfigAction =>
+const isAction = (value: MenuConfigEntryValue): value is MenuConfigAction =>
   value.type === 'action';
 
-const getLabel = (entry: ConfigEntry) => {
+const getLabel = (entry: MenuConfigEntry) => {
   switch (entry.config.type) {
     case 'boolean':
       return entry.config.value
         ? entry.config.labelTrue
         : entry.config.labelFalse;
     case 'number':
+      return entry.config.formatter?.(entry.config.value) ?? entry.config.value;
     case 'oneOf':
-      return entry.config.value;
+      return entry.config.formatter?.(entry.config.value) ?? entry.config.value;
     case 'manyOf':
       if (entry.config.value.length === 0) {
         return 'None';
@@ -98,7 +101,7 @@ const getLabel = (entry: ConfigEntry) => {
         return 'All';
       }
     case 'action':
-      return entry.config.label;
+      return entry.label;
   }
 };
 
@@ -117,19 +120,20 @@ export const ConfigMenu = ({
   ...rest
 }: PropsWithChildren<ConfigMenuProps>) => {
   const [activeKey, setActiveKey] = useState(__root);
-  const activeEntry = activeKey === __root ? undefined : config[activeKey];
+  const activeIndex = config.findIndex((entry) => entry.label === activeKey);
+  const activeEntry = activeKey === __root ? undefined : config[activeIndex];
 
   const createUpdateHandler =
     (
-      entry: ConfigEntry,
-      value: Exclude<ConfigEntryValue, ConfigAction>['value']
+      entry: MenuConfigEntry,
+      value: Exclude<MenuConfigEntryValue, MenuConfigAction>['value']
     ) =>
     () => {
       if (!isAction(entry.config)) {
         // Todo: Why as needed here?
         (
           entry.config.onChange as (
-            v: Exclude<ConfigEntryValue, ConfigAction>['value']
+            v: Exclude<MenuConfigEntryValue, MenuConfigAction>['value']
           ) => void
         )(value);
       }
@@ -152,14 +156,29 @@ export const ConfigMenu = ({
     >
       {activeKey === __root && (
         <Menu title="Settings">
-          {Object.keys(config).map((key) => (
-            <MenuItemNavigate
-              Icon={config[key].icon}
-              key={key}
-              onClick={() => setActiveKey(key)}
-              title={config[key].label}
-              value={getLabel(config[key])}
-            />
+          {config.map((entry) => (
+            <Fragment key={entry.label}>
+              {isAction(entry.config) ? (
+                <MenuItemAction
+                  Icon={entry.icon}
+                  title={entry.label}
+                  onClick={(event) => {
+                    event.stopPropagation();
+
+                    if (isAction(entry.config)) {
+                      entry.config.onAction();
+                    }
+                  }}
+                />
+              ) : (
+                <MenuItemNavigate
+                  Icon={entry.icon}
+                  onClick={() => setActiveKey(entry.label)}
+                  title={entry.label}
+                  value={getLabel(entry)}
+                />
+              )}
+            </Fragment>
           ))}
         </Menu>
       )}
@@ -198,7 +217,7 @@ export const ConfigMenu = ({
                     key={i}
                     onClick={createUpdateHandler(activeEntry, i)}
                   >
-                    {activeEntry.config.formatter(i)}
+                    {activeEntry.config.formatter?.(i) ?? i}
                   </MenuItemCheckBox>
                 )
             )}
@@ -212,7 +231,7 @@ export const ConfigMenu = ({
                     key={option}
                     onClick={createUpdateHandler(activeEntry, option)}
                   >
-                    {option}
+                    {activeEntry.config.formatter?.(option) ?? option}
                   </MenuItemCheckBox>
                 )
             )}
@@ -229,23 +248,10 @@ export const ConfigMenu = ({
                       toggleValueInArray(activeEntry.config.value, option)
                     )}
                   >
-                    {option}
+                    {activeEntry.config.formatter?.(option) ?? option}
                   </MenuItemCheckBox>
                 )
             )}
-
-          {isAction(activeEntry.config) && (
-            <MenuItemAction
-              Icon={activeEntry.icon}
-              title={activeEntry.config.label}
-              onClick={() => {
-                if (isAction(activeEntry.config)) {
-                  activeEntry.config.action();
-                  setActiveKey(__root);
-                }
-              }}
-            />
-          )}
         </Menu>
       )}
     </TransitionBox>

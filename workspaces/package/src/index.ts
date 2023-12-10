@@ -32,6 +32,12 @@ export {
   ConfigMenu,
   type ConfigMenuProps,
   type MenuConfig,
+  type MenuConfigEntry,
+  type MenuConfigBoolean,
+  type MenuConfigNumber,
+  type MenuConfigOneOf,
+  type MenuConfigManyOf,
+  type MenuConfigAction,
 } from './ConfigMenu/ConfigMenu';
 export { DatePicker, type DatePickerProps } from './DatePicker/DatePicker';
 export { Form, type FormProps } from './Form/Form';

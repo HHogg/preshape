@@ -22,8 +22,6 @@ export default function MenuItemAction({
       <Box grow minWidth="120px">
         <Text weight="x2">{title}</Text>
       </Box>
-
-      <Box>{/* <ChevronRightIcon size="1rem" /> */}</Box>
     </MenuItem>
   );
 }

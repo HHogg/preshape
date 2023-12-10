@@ -1,4 +1,10 @@
-import { BugIcon, GaugeIcon, HighlighterIcon, PaletteIcon } from 'lucide-react';
+import {
+  BugIcon,
+  GaugeIcon,
+  HighlighterIcon,
+  PaletteIcon,
+  SaveIcon,
+} from 'lucide-react';
 import { ConfigMenu, ConfigMenuProps, MenuConfig } from 'preshape';
 import { Fragment, useState } from 'react';
 import { CatalogueItem } from '..';
@@ -20,7 +26,7 @@ const Item: CatalogueItem<{
   showcase: {
     state: {
       ConfigMenu: {
-        config: {},
+        config: [],
       },
     },
     Component: (props) => {
@@ -32,8 +38,8 @@ const Item: CatalogueItem<{
       ]);
       const [mode, setMode] = useState('Fill');
 
-      const config: MenuConfig = {
-        speed: {
+      const config: MenuConfig = [
+        {
           label: 'Speed',
           icon: GaugeIcon,
           config: {
@@ -46,7 +52,7 @@ const Item: CatalogueItem<{
             onChange: setSpeed,
           },
         },
-        debug: {
+        {
           label: 'Debug',
           icon: BugIcon,
           config: {
@@ -57,17 +63,18 @@ const Item: CatalogueItem<{
             onChange: setDebug,
           },
         },
-        annotations: {
+        {
           label: 'Annotations',
           icon: HighlighterIcon,
           config: {
             type: 'manyOf',
             value: annotations,
-            options: ['Axis origin', 'Transform', 'Vertex type'],
+            options: ['Axis_origin', 'Transform', 'Vertex_type'],
             onChange: setAnnotations,
+            formatter: (value) => value.replace('_', ' '),
           },
         },
-        mode: {
+        {
           label: 'Mode',
           icon: PaletteIcon,
           config: {
@@ -75,9 +82,18 @@ const Item: CatalogueItem<{
             value: mode,
             options: ['Draw', 'Fill', 'View'],
             onChange: setMode,
+            formatter: (value) => value.replace('_', ' '),
           },
         },
-      };
+        {
+          label: 'Save',
+          icon: SaveIcon,
+          config: {
+            type: 'action',
+            onAction: () => {},
+          },
+        },
+      ];
 
       return (
         <Fragment>
@@ -89,8 +105,8 @@ const Item: CatalogueItem<{
 import { ConfigMenu } from 'preshape';
 
 <ConfigMenu
-  config={{
-    speed: {
+  config={[
+    {
       label: 'Speed',
       icon: GaugeIcon,
       config: {
@@ -103,7 +119,7 @@ import { ConfigMenu } from 'preshape';
         onChange: setSpeed,
       },
     },
-    debug: {
+    {
       label: 'Debug',
       icon: BugIcon,
       config: {
@@ -114,17 +130,18 @@ import { ConfigMenu } from 'preshape';
         onChange: setDebug,
       },
     },
-    annotations: {
+    {
       label: 'Annotations',
       icon: HighlighterIcon,
       config: {
         type: 'manyOf',
         value: annotations,
-        options: ['Axis origin', 'Transform', 'Vertex type'],
+        options: ['Axis_origin', 'Transform', 'Vertex_type'],
         onChange: setAnnotations,
+        formatter: (value) => value.replace('_', ' '),
       },
     },
-    mode: {
+    {
       label: 'Mode',
       icon: PaletteIcon,
       config: {
@@ -132,9 +149,18 @@ import { ConfigMenu } from 'preshape';
         value: mode,
         options: ['Draw', 'Fill', 'View'],
         onChange: setMode,
+        formatter: (value) => value.replace('_', ' '),
       },
     },
-  }}
+    {
+      label: 'Save',
+      icon: SaveIcon,
+      config: {
+        type: 'action',
+        onAction: () => {},
+      },
+    },
+  ]}
 />
     `,
   },
