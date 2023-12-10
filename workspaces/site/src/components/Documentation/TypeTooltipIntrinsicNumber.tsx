@@ -3,7 +3,7 @@ import TypeTooltipIntrinsic, {
 } from './TypeTooltipIntrinsic';
 import { ApiStateValue } from './Types';
 
-type Props = TypeTooltipIntrinsicProps
+type Props = TypeTooltipIntrinsicProps;
 
 const TypeTooltipNumber = (props: Props) => {
   const { onStateChange, ...rest } = props;

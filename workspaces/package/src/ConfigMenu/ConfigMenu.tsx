@@ -10,10 +10,9 @@ import MenuItemCheckBox from './MenuItemCheckBox';
 import MenuItemNavigate from './MenuItemNavigate';
 
 export interface ConfigMenuProps extends TransitionBoxProps {
-  config: Config;
-  onValueChange: (value: Config) => void;
+  config: MenuConfig;
 }
-export type Config = Record<string, ConfigEntry>;
+export type MenuConfig = Record<string, ConfigEntry>;
 
 export type ConfigEntry = {
   label: string;
@@ -33,6 +32,7 @@ export type ConfigBoolean = {
   value: boolean;
   labelTrue: string;
   labelFalse: string;
+  onChange: (value: boolean) => void;
 };
 
 export type ConfigNumber = {
@@ -42,18 +42,21 @@ export type ConfigNumber = {
   max: number;
   step: number;
   formatter: (value: number) => string;
+  onChange: (value: number) => void;
 };
 
 export type ConfigOneOf = {
   type: 'oneOf';
   value: string;
   options: string[];
+  onChange: (value: string) => void;
 };
 
 export type ConfigManyOf = {
   type: 'manyOf';
-  values: string[];
+  value: string[];
   options: string[];
+  onChange: (value: string[]) => void;
 };
 
 export type ConfigAction = {
@@ -87,9 +90,9 @@ const getLabel = (entry: ConfigEntry) => {
     case 'oneOf':
       return entry.config.value;
     case 'manyOf':
-      if (entry.config.values.length === 0) {
+      if (entry.config.value.length === 0) {
         return 'None';
-      } else if (entry.config.values.length < entry.config.options.length) {
+      } else if (entry.config.value.length < entry.config.options.length) {
         return 'Some';
       } else {
         return 'All';
@@ -98,21 +101,6 @@ const getLabel = (entry: ConfigEntry) => {
       return entry.config.label;
   }
 };
-
-const updateConfig = (
-  config: Config,
-  key: string,
-  updates: object
-): Config => ({
-  ...config,
-  [key]: {
-    ...config[key],
-    config: {
-      ...config[key].config,
-      ...updates,
-    },
-  },
-});
 
 const toggleValueInArray = (array: string[], value: string) => {
   if (array.includes(value)) {
@@ -126,19 +114,30 @@ const __root = '__root';
 
 export const ConfigMenu = ({
   config,
-  onValueChange,
   ...rest
 }: PropsWithChildren<ConfigMenuProps>) => {
   const [activeKey, setActiveKey] = useState(__root);
   const activeEntry = activeKey === __root ? undefined : config[activeKey];
 
-  const createUpdateHandler = (key: string, updates: object) => () => {
-    onValueChange(updateConfig(config, key, updates));
+  const createUpdateHandler =
+    (
+      entry: ConfigEntry,
+      value: Exclude<ConfigEntryValue, ConfigAction>['value']
+    ) =>
+    () => {
+      if (!isAction(entry.config)) {
+        // Todo: Why as needed here?
+        (
+          entry.config.onChange as (
+            v: Exclude<ConfigEntryValue, ConfigAction>['value']
+          ) => void
+        )(value);
+      }
 
-    if (!isManyOf(config[key].config)) {
-      setActiveKey(__root);
-    }
-  };
+      if (!isManyOf(entry.config)) {
+        setActiveKey(__root);
+      }
+    };
 
   return (
     <TransitionBox
@@ -171,14 +170,14 @@ export const ConfigMenu = ({
             <>
               <MenuItemCheckBox
                 checked={activeEntry.config.value === true}
-                onClick={createUpdateHandler(activeKey, { value: true })}
+                onClick={createUpdateHandler(activeEntry, true)}
               >
                 {activeEntry.config.labelTrue}
               </MenuItemCheckBox>
 
               <MenuItemCheckBox
                 checked={activeEntry.config.value === false}
-                onClick={createUpdateHandler(activeKey, { value: false })}
+                onClick={createUpdateHandler(activeEntry, false)}
               >
                 {activeEntry.config.labelFalse}
               </MenuItemCheckBox>
@@ -197,7 +196,7 @@ export const ConfigMenu = ({
                   <MenuItemCheckBox
                     checked={activeEntry.config.value === i}
                     key={i}
-                    onClick={createUpdateHandler(activeKey, { value: i })}
+                    onClick={createUpdateHandler(activeEntry, i)}
                   >
                     {activeEntry.config.formatter(i)}
                   </MenuItemCheckBox>
@@ -211,7 +210,7 @@ export const ConfigMenu = ({
                   <MenuItemCheckBox
                     checked={activeEntry.config.value === option}
                     key={option}
-                    onClick={createUpdateHandler(activeKey, { value: option })}
+                    onClick={createUpdateHandler(activeEntry, option)}
                   >
                     {option}
                   </MenuItemCheckBox>
@@ -223,14 +222,12 @@ export const ConfigMenu = ({
               (option) =>
                 isManyOf(activeEntry.config) && (
                   <MenuItemCheckBox
-                    checked={activeEntry.config.values.includes(option)}
+                    checked={activeEntry.config.value.includes(option)}
                     key={option}
-                    onClick={createUpdateHandler(activeKey, {
-                      values: toggleValueInArray(
-                        activeEntry.config.values,
-                        option
-                      ),
-                    })}
+                    onClick={createUpdateHandler(
+                      activeEntry,
+                      toggleValueInArray(activeEntry.config.value, option)
+                    )}
                   >
                     {option}
                   </MenuItemCheckBox>

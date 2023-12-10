@@ -1,5 +1,5 @@
 import { BugIcon, GaugeIcon, HighlighterIcon, PaletteIcon } from 'lucide-react';
-import { ConfigMenu, ConfigMenuProps } from 'preshape';
+import { ConfigMenu, ConfigMenuProps, MenuConfig } from 'preshape';
 import { Fragment, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramConfigMenu';
@@ -20,61 +20,68 @@ const Item: CatalogueItem<{
   showcase: {
     state: {
       ConfigMenu: {
-        onValueChange: () => {},
-        config: {
-          speed: {
-            label: 'Speed',
-            icon: GaugeIcon,
-            config: {
-              type: 'number',
-              value: 1,
-              min: 1,
-              max: 10,
-              step: 1,
-              formatter: (value) => `${value}x`,
-            },
-          },
-          debug: {
-            label: 'Debug',
-            icon: BugIcon,
-            config: {
-              type: 'boolean',
-              value: false,
-              labelTrue: 'On',
-              labelFalse: 'Off',
-            },
-          },
-          annotations: {
-            label: 'Annotations',
-            icon: HighlighterIcon,
-            config: {
-              type: 'manyOf',
-              values: ['Axis origin', 'Transform'],
-              options: ['Axis origin', 'Transform', 'Vertex type'],
-            },
-          },
-          mode: {
-            label: 'Mode',
-            icon: PaletteIcon,
-            config: {
-              type: 'oneOf',
-              value: 'Fill',
-              options: ['Draw', 'Fill', 'View'],
-            },
-          },
-        },
+        config: {},
       },
     },
     Component: (props) => {
-      const [config, setConfig] = useState(props.ConfigMenu.config);
+      const [speed, setSpeed] = useState(1);
+      const [debug, setDebug] = useState(false);
+      const [annotations, setAnnotations] = useState([
+        'Axis origin',
+        'Transform',
+      ]);
+      const [mode, setMode] = useState('Fill');
+
+      const config: MenuConfig = {
+        speed: {
+          label: 'Speed',
+          icon: GaugeIcon,
+          config: {
+            type: 'number',
+            value: speed,
+            min: 1,
+            max: 10,
+            step: 1,
+            formatter: (value) => `${value}x`,
+            onChange: setSpeed,
+          },
+        },
+        debug: {
+          label: 'Debug',
+          icon: BugIcon,
+          config: {
+            type: 'boolean',
+            value: debug,
+            labelTrue: 'On',
+            labelFalse: 'Off',
+            onChange: setDebug,
+          },
+        },
+        annotations: {
+          label: 'Annotations',
+          icon: HighlighterIcon,
+          config: {
+            type: 'manyOf',
+            value: annotations,
+            options: ['Axis origin', 'Transform', 'Vertex type'],
+            onChange: setAnnotations,
+          },
+        },
+        mode: {
+          label: 'Mode',
+          icon: PaletteIcon,
+          config: {
+            type: 'oneOf',
+            value: mode,
+            options: ['Draw', 'Fill', 'View'],
+            onChange: setMode,
+          },
+        },
+      };
 
       return (
         <Fragment>
-          <ConfigMenu
-            {...props.ConfigMenu}
-            config={config}
-            onValueChange={setConfig}
-          ></ConfigMenu>
+          <ConfigMenu {...props.ConfigMenu} config={config}></ConfigMenu>
         </Fragment>
       );
     },
@@ -82,18 +89,18 @@ const Item: CatalogueItem<{
 import { ConfigMenu } from 'preshape';
 
 <ConfigMenu
-  onValueChange={setConfig}
   config={{
     speed: {
       label: 'Speed',
       icon: GaugeIcon,
       config: {
         type: 'number',
-        value: 1,
+        value: speed,
         min: 1,
         max: 10,
         step: 1,
         formatter: (value) => value,
+        onChange: setSpeed,
       },
     },
     debug: {
@@ -101,9 +108,10 @@ import { ConfigMenu } from 'preshape';
       icon: BugIcon,
       config: {
         type: 'boolean',
-        value: false,
+        value: debug,
         labelTrue: 'On',
         labelFalse: 'Off',
+        onChange: setDebug,
       },
     },
     annotations: {
@@ -111,8 +119,9 @@ import { ConfigMenu } from 'preshape';
       icon: HighlighterIcon,
       config: {
         type: 'manyOf',
-        values: ['Axis origin', 'Transform'],
+        value: annotations,
         options: ['Axis origin', 'Transform', 'Vertex type'],
+        onChange: setAnnotations,
       },
     },
     mode: {
@@ -120,12 +129,13 @@ import { ConfigMenu } from 'preshape';
       icon: PaletteIcon,
       config: {
         type: 'oneOf',
-        value: 'Fill',
+        value: mode,
         options: ['Draw', 'Fill', 'View'],
+        onChange: setMode,
       },
     },
   }}
-  />
+/>
     `,
   },
 };
