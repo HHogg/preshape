@@ -1,3 +1,11 @@
+## [16.2.0](https://github.com/HHogg/preshape/compare/v16.1.4...v16.2.0) (2023-12-10)
+
+
+### Features
+
+* **ConfigMenu:** Added ConfigMenu component ([51b432b](https://github.com/HHogg/preshape/commit/51b432bb5505b5c983a2da0586fe50638a327194))
+* **TransitionBox:** Added TransitionBox component ([f689439](https://github.com/HHogg/preshape/commit/f6894391257c37c2b8692de1398a8e592416d8e8))
+
 ### [16.1.4](https://github.com/HHogg/preshape/compare/v16.1.3...v16.1.4) (2023-12-09)
 
 
