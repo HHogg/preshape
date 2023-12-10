@@ -121,6 +121,10 @@ export {
   type TextAreaLabelProps,
 } from './TextArea/TextAreaLabel';
 export { ThemeProvider } from './ThemeSwitcher/ThemeProvider';
+export {
+  TransitionBox,
+  type TransitionBoxProps,
+} from './TransitionBox/TransitionBox';
 export { useThemeContext } from './ThemeSwitcher/useThemeContext';
 export {
   ThemeSwitcher,
