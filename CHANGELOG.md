@@ -1,3 +1,10 @@
+### [16.2.1](https://github.com/HHogg/preshape/compare/v16.2.0...v16.2.1) (2023-12-10)
+
+
+### Fixes
+
+* **ConfigMenu:** Change API so each entry contains it's update operation ([0abede5](https://github.com/HHogg/preshape/commit/0abede569df3a52ee35d3cda600e4797a6352a85))
+
 ## [16.2.0](https://github.com/HHogg/preshape/compare/v16.1.4...v16.2.0) (2023-12-10)
 
 
