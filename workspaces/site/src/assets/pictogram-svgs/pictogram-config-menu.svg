@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="96px" viewBox="0 0 248 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram-config-menu</title>
+    <g id="pictogram-config-menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M42,20 L206,20 C211.522847,20 216,24.4771525 216,30 L216,96 L216,96 L32,96 L32,30 C32,24.4771525 36.4771525,20 42,20 Z" id="Rectangle-Copy-6" fill="#000000"></path>
+        <rect id="Rectangle-Copy-8" fill="#FFFFFF" x="63" y="44" width="72" height="8" rx="1"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FFFFFF" x="63" y="74" width="49" height="8" rx="1"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="171" y="44" width="35" height="8" rx="1"></rect>
+        <rect id="Rectangle-Copy-11" fill="#FFFFFF" x="152" y="74" width="54" height="8" rx="1"></rect>
+        <rect id="Rectangle-Copy-16" fill="#4C6EF5" x="42" y="44" width="8" height="8" rx="4"></rect>
+        <rect id="Rectangle-Copy-17" fill="#4C6EF5" x="42" y="74" width="8" height="8" rx="4"></rect>
+    </g>
+</svg>

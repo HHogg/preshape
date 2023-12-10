@@ -1,0 +1,7 @@
+import { Box, BoxProps } from 'preshape';
+import { forwardRef } from 'react';
+export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
+  return <Box {...props} className="Pictogram" ref={ref} tag="svg" viewBox="0 0 248 96">
+      {<svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}><g id="pictogram-config-menu_svg__pictogram-config-menu" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd"><path d="M42 20h164c5.523 0 10 4.477 10 10v66H32V30c0-5.523 4.477-10 10-10z" id="pictogram-config-menu_svg__Rectangle-Copy-6" fill="var(--color-text-shade-1)" /><rect id="pictogram-config-menu_svg__Rectangle-Copy-8" fill="var(--color-background-shade-1)" x={63} y={44} width={72} height={8} rx={1} /><rect id="pictogram-config-menu_svg__Rectangle-Copy-10" fill="var(--color-background-shade-1)" x={63} y={74} width={49} height={8} rx={1} /><rect id="pictogram-config-menu_svg__Rectangle-Copy-9" fill="var(--color-background-shade-1)" x={171} y={44} width={35} height={8} rx={1} /><rect id="pictogram-config-menu_svg__Rectangle-Copy-11" fill="var(--color-background-shade-1)" x={152} y={74} width={54} height={8} rx={1} /><rect id="pictogram-config-menu_svg__Rectangle-Copy-16" fill="var(--color-accent-shade-4)" x={42} y={44} width={8} height={8} rx={4} /><rect id="pictogram-config-menu_svg__Rectangle-Copy-17" fill="var(--color-accent-shade-4)" x={42} y={74} width={8} height={8} rx={4} /></g></svg>}
+    </Box>;
+});

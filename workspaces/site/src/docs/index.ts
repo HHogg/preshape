@@ -7,6 +7,7 @@ import Button from './catalog/Button';
 import ButtonAsync from './catalog/ButtonAsync';
 import Checkbox from './catalog/CheckBox';
 import Code from './catalog/Code';
+import ConfigMenu from './catalog/ConfigMenu';
 import DatePicker from './catalog/DatePicker';
 import Form from './catalog/Form';
 import Grid from './catalog/Grid';
@@ -54,6 +55,7 @@ export const catalogue: Record<string, CatalogueItem<any>> = {
   ButtonAsync,
   Checkbox,
   Code,
+  ConfigMenu,
   DatePicker,
   Form,
   Grid,

@@ -28,6 +28,7 @@ export {
   type TypeCodeBlockLanguage,
 } from './Code/CodeBlock';
 export { CodeWindow, type CodeWindowProps } from './Code/CodeWindow';
+export { ConfigMenu, type ConfigMenuProps } from './ConfigMenu/ConfigMenu';
 export { DatePicker, type DatePickerProps } from './DatePicker/DatePicker';
 export { Form, type FormProps } from './Form/Form';
 export { FormError, type FormErrorProps } from './Form/FormError';

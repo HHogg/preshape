@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "dev": "vite --host localhost --port 4001",
+    "dev": "yarn build:svgs && vite --host localhost --port 4001",
     "build": "yarn run clean && yarn run build:client && yarn run build:server && yarn run ssg",
     "build:client": "vite build --outDir dist/client",
-    "build:svgs": "yarn build:svgs:pictograms && yarn build:svgs:logo",
-    "build:svgs:logo": "yarn svgr ./src/assets/preshape-icon.svg --out-dir ./src/components/Logo --ext tsx --config-file .svgrrc.logo.cjs",
+    "build:svgs": "yarn build:svgs:pictograms",
     "build:svgs:pictograms": "yarn svgr -d ./src/docs/catalog/pictograms ./src/assets/pictogram-svgs --ext tsx --config-file .svgrrc.pictograms.cjs",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "serve": "superstatic dist/client --port 8080 --host 127.0.0.1",
