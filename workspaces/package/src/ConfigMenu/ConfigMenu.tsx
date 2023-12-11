@@ -1,5 +1,6 @@
 import { LucideIcon } from 'lucide-react';
 import { Fragment, PropsWithChildren, useState } from 'react';
+import { useThemeContext } from '../ThemeSwitcher/useThemeContext';
 import {
   TransitionBox,
   TransitionBoxProps,
@@ -137,6 +138,7 @@ export const ConfigMenu = ({
   config,
   ...rest
 }: PropsWithChildren<ConfigMenuProps>) => {
+  const { themeOpposite } = useThemeContext();
   const [activeKey, setActiveKey] = useState(__root);
   const activeIndex = config.findIndex((entry) => entry.label === activeKey);
   const activeEntry = activeKey === __root ? undefined : config[activeIndex];
@@ -163,12 +165,12 @@ export const ConfigMenu = ({
   return (
     <TransitionBox
       animation="Pop"
-      backgroundColor="black"
       borderRadius="x2"
       minWidth="200px"
       paddingVertical="x2"
+      backgroundColor="background-shade-1"
       textColor="text-shade-1"
-      theme="night"
+      theme={themeOpposite}
       {...rest}
     >
       {activeKey === __root && (
