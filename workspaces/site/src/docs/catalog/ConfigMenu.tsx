@@ -5,10 +5,30 @@ import {
   PaletteIcon,
   SaveIcon,
 } from 'lucide-react';
-import { ConfigMenu, ConfigMenuProps, MenuConfig } from 'preshape';
-import { Fragment, useState } from 'react';
+import {
+  ConfigMenu,
+  ConfigMenuProps,
+  MenuConfig,
+  MenuConfigEntryAction,
+  MenuConfigEntryBoolean,
+  MenuConfigEntryManyOf,
+  MenuConfigEntryNumber,
+  MenuConfigEntryOneOf,
+} from 'preshape';
+import { MenuConfigEntryActions } from 'preshape/src/ConfigMenu/ConfigMenu';
+import { useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramConfigMenu';
+
+type Mode = 'Draw' | 'Fill' | 'View';
+type Annotation = 'Axis_origin' | 'Transform' | 'Vertex_type';
+
+const modeOptions: Mode[] = ['Draw', 'Fill', 'View'];
+const annotationOptions: Annotation[] = [
+  'Axis_origin',
+  'Transform',
+  'Vertex_type',
+];
 
 const Item: CatalogueItem<{
   ConfigMenu: ConfigMenuProps;
@@ -32,153 +52,182 @@ const Item: CatalogueItem<{
     Component: (props) => {
       const [speed, setSpeed] = useState(1);
       const [debug, setDebug] = useState(false);
-      const [annotations, setAnnotations] = useState([
-        'Axis origin',
+      const [annotations, setAnnotations] = useState<Annotation[]>([
+        'Axis_origin',
         'Transform',
       ]);
-      const [mode, setMode] = useState('Fill');
+      const [mode, setMode] = useState<Mode>('Fill');
 
-      const config: MenuConfig = [
-        {
-          label: 'Speed',
-          icon: GaugeIcon,
-          config: {
-            type: 'number',
-            value: speed,
-            min: 1,
-            max: 10,
-            step: 1,
-            formatter: (value) => `${value}x`,
-            onChange: setSpeed,
-          },
-        },
-        {
-          label: 'Debug',
-          icon: BugIcon,
-          config: {
-            type: 'boolean',
-            value: debug,
-            labelTrue: 'On',
-            labelFalse: 'Off',
-            onChange: setDebug,
-          },
-        },
-        {
-          label: 'Annotations',
-          icon: HighlighterIcon,
-          config: {
-            type: 'manyOf',
-            value: annotations,
-            options: ['Axis_origin', 'Transform', 'Vertex_type'],
-            onChange: setAnnotations,
-            formatter: (value) => value.replace('_', ' '),
-          },
-        },
-        {
-          label: 'Mode',
-          icon: PaletteIcon,
-          config: {
-            type: 'oneOf',
-            value: mode,
-            options: ['Draw', 'Fill', 'View'],
-            onChange: setMode,
-            formatter: (value) => value.replace('_', ' '),
-          },
-        },
-        {
-          label: 'Save',
-          icon: SaveIcon,
-          config: {
-            type: 'action',
-            onAction: () => {},
-          },
-        },
-        {
-          label: 'Save As',
-          icon: SaveIcon,
-          config: {
-            type: 'actions',
-            actions: [
-              {
-                label: 'PNG',
-                onAction: () => {},
-              },
-              {
-                label: 'SVG',
-                onAction: () => {},
-              },
-            ],
-          },
-        },
-      ];
-
-      return (
-        <Fragment>
-          <ConfigMenu {...props.ConfigMenu} config={config}></ConfigMenu>
-        </Fragment>
-      );
-    },
-    code: `
-import { ConfigMenu } from 'preshape';
-
-<ConfigMenu
-  config={[
-    {
-      label: 'Speed',
-      icon: GaugeIcon,
-      config: {
+      const speedConfig: MenuConfigEntryNumber = {
+        label: 'Speed',
+        icon: GaugeIcon,
         type: 'number',
         value: speed,
         min: 1,
         max: 10,
         step: 1,
-        formatter: (value) => value,
+        formatter: (value) => `${value}x`,
         onChange: setSpeed,
-      },
-    },
-    {
-      label: 'Debug',
-      icon: BugIcon,
-      config: {
+      };
+
+      const debugConfig: MenuConfigEntryBoolean = {
+        label: 'Debug',
+        icon: BugIcon,
         type: 'boolean',
         value: debug,
         labelTrue: 'On',
         labelFalse: 'Off',
         onChange: setDebug,
-      },
-    },
-    {
-      label: 'Annotations',
-      icon: HighlighterIcon,
-      config: {
+      };
+
+      const annotationsConfig: MenuConfigEntryManyOf<Annotation> = {
+        label: 'Annotations',
+        icon: HighlighterIcon,
         type: 'manyOf',
         value: annotations,
-        options: ['Axis_origin', 'Transform', 'Vertex_type'],
+        options: annotationOptions,
         onChange: setAnnotations,
         formatter: (value) => value.replace('_', ' '),
-      },
-    },
-    {
-      label: 'Mode',
-      icon: PaletteIcon,
-      config: {
+      };
+
+      const modeConfig: MenuConfigEntryOneOf<Mode> = {
+        label: 'Mode',
+        icon: PaletteIcon,
         type: 'oneOf',
         value: mode,
-        options: ['Draw', 'Fill', 'View'],
+        options: modeOptions,
         onChange: setMode,
-        formatter: (value) => value.replace('_', ' '),
-      },
-    },
-    {
-      label: 'Save',
-      icon: SaveIcon,
-      config: {
+      };
+
+      const saveConfig: MenuConfigEntryAction = {
+        label: 'Save',
+        icon: SaveIcon,
         type: 'action',
         onAction: () => {},
-      },
+      };
+
+      const saveAsConfig: MenuConfigEntryActions = {
+        label: 'Save As',
+        icon: SaveIcon,
+        type: 'actions',
+        actions: [
+          {
+            label: 'PNG',
+            onAction: () => {},
+          },
+          {
+            label: 'SVG',
+            onAction: () => {},
+          },
+        ],
+      };
+
+      const config: MenuConfig = [
+        speedConfig,
+        debugConfig,
+        annotationsConfig,
+        modeConfig,
+        saveConfig,
+        saveAsConfig,
+      ];
+
+      return <ConfigMenu {...props.ConfigMenu} config={config}></ConfigMenu>;
     },
-  ]}
-/>
+    code: `
+import {
+  ConfigMenu,
+  MenuConfig,
+  MenuConfigEntryAction,
+  MenuConfigEntryBoolean,
+  MenuConfigEntryManyOf,
+  MenuConfigEntryNumber,
+  MenuConfigEntryOneOf,
+} from 'preshape';
+
+const [speed, setSpeed] = useState(1);
+const [debug, setDebug] = useState(false);
+const [annotations, setAnnotations] = useState<Annotation[]>([
+  'Axis_origin',
+  'Transform',
+]);
+const [mode, setMode] = useState<Mode>('Fill');
+
+const speedConfig: MenuConfigEntryNumber = {
+  label: 'Speed',
+  icon: GaugeIcon,
+  type: 'number',
+  value: speed,
+  min: 1,
+  max: 10,
+  step: 1,
+  formatter: (value) => value,
+  onChange: setSpeed,
+};
+
+const debugConfig: MenuConfigEntryBoolean = {
+  label: 'Debug',
+  icon: BugIcon,
+  type: 'boolean',
+  value: debug,
+  labelTrue: 'On',
+  labelFalse: 'Off',
+  onChange: setDebug,
+};
+
+const annotationsConfig: MenuConfigEntryManyOf<Annotation> = {
+  label: 'Annotations',
+  icon: HighlighterIcon,
+  type: 'manyOf',
+  value: annotations,
+  options: annotationOptions,
+  onChange: setAnnotations,
+  formatter: (value) => value.replace('_', ' '),
+};
+
+const modeConfig: MenuConfigEntryOneOf<Mode> = {
+  label: 'Mode',
+  icon: PaletteIcon,
+  type: 'oneOf',
+  value: mode,
+  options: modeOptions,
+  onChange: setMode,
+};
+
+const saveConfig: MenuConfigEntryAction = {
+  label: 'Save',
+  icon: SaveIcon,
+  type: 'action',
+  onAction: () => {},
+};
+
+const saveAsConfig: MenuConfigEntryActions = {
+  label: 'Save As',
+  icon: SaveIcon,
+  type: 'actions',
+  actions: [
+    {
+      label: 'PNG',
+      onAction: () => {},
+    },
+    {
+      label: 'SVG',
+      onAction: () => {},
+    },
+  ],
+};
+
+const config: MenuConfig = [
+  speedConfig,
+  debugConfig,
+  annotationsConfig,
+  modeConfig,
+  saveConfig,
+  saveAsConfig,
+];
+
+return (
+  <ConfigMenu {...props.ConfigMenu} config={config}></ConfigMenu>
+);
     `,
   },
 };

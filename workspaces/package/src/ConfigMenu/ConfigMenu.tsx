@@ -12,24 +12,30 @@ import MenuItemNavigate from './MenuItemNavigate';
 export interface ConfigMenuProps extends TransitionBoxProps {
   config: MenuConfig;
 }
+
 export type MenuConfig = MenuConfigEntry[];
 
-export type MenuConfigEntry<T = MenuConfigEntryValue> = {
+export type MenuConfigEntry =
+  | MenuConfigEntryBoolean
+  | MenuConfigEntryNumber
+  | MenuConfigEntryOneOf<any>
+  | MenuConfigEntryManyOf<any>
+  | MenuConfigEntryAction
+  | MenuConfigEntryActions;
+
+export type MenuConfigEntryWithValue =
+  | MenuConfigEntryBoolean
+  | MenuConfigEntryNumber
+  | MenuConfigEntryOneOf<any>
+  | MenuConfigEntryManyOf<any>;
+
+export type MenuConfigEntryBase = {
   label: string;
   icon: LucideIcon;
   disabled?: boolean;
-  config: T;
 };
 
-export type MenuConfigEntryValue =
-  | MenuConfigBoolean
-  | MenuConfigNumber
-  | MenuConfigOneOf
-  | MenuConfigManyOf
-  | MenuConfigAction
-  | MenuConfigActions;
-
-export type MenuConfigBoolean = {
+export type MenuConfigEntryBoolean = MenuConfigEntryBase & {
   type: 'boolean';
   value: boolean;
   labelTrue: string;
@@ -37,7 +43,7 @@ export type MenuConfigBoolean = {
   onChange: (value: boolean) => void;
 };
 
-export type MenuConfigNumber = {
+export type MenuConfigEntryNumber = MenuConfigEntryBase & {
   type: 'number';
   value: number;
   min: number;
@@ -47,7 +53,7 @@ export type MenuConfigNumber = {
   onChange: (value: number) => void;
 };
 
-export type MenuConfigOneOf<T = string> = {
+export type MenuConfigEntryOneOf<T> = MenuConfigEntryBase & {
   type: 'oneOf';
   value: T;
   options: T[];
@@ -55,7 +61,7 @@ export type MenuConfigOneOf<T = string> = {
   onChange: (value: T) => void;
 };
 
-export type MenuConfigManyOf<T = string> = {
+export type MenuConfigEntryManyOf<T> = MenuConfigEntryBase & {
   type: 'manyOf';
   value: T[];
   options: T[];
@@ -63,12 +69,12 @@ export type MenuConfigManyOf<T = string> = {
   onChange: (value: T[]) => void;
 };
 
-export type MenuConfigAction = {
+export type MenuConfigEntryAction = MenuConfigEntryBase & {
   type: 'action';
   onAction: () => void;
 };
 
-export type MenuConfigActions = {
+export type MenuConfigEntryActions = MenuConfigEntryBase & {
   type: 'actions';
   actions: {
     label: string;
@@ -76,39 +82,37 @@ export type MenuConfigActions = {
   }[];
 };
 
-const isBoolean = (value: MenuConfigEntryValue): value is MenuConfigBoolean =>
+const isBoolean = (value: MenuConfigEntry): value is MenuConfigEntryBoolean =>
   value.type === 'boolean';
 
-const isNumber = (value: MenuConfigEntryValue): value is MenuConfigNumber =>
+const isNumber = (value: MenuConfigEntry): value is MenuConfigEntryNumber =>
   value.type === 'number';
 
-const isOneOf = (value: MenuConfigEntryValue): value is MenuConfigOneOf<any> =>
+const isOneOf = (value: MenuConfigEntry): value is MenuConfigEntryOneOf<any> =>
   value.type === 'oneOf';
 
 const isManyOf = (
-  value: MenuConfigEntryValue
-): value is MenuConfigManyOf<any> => value.type === 'manyOf';
+  value: MenuConfigEntry
+): value is MenuConfigEntryManyOf<any> => value.type === 'manyOf';
 
-const isAction = (value: MenuConfigEntryValue): value is MenuConfigAction =>
+const isAction = (value: MenuConfigEntry): value is MenuConfigEntryAction =>
   value.type === 'action';
 
-const isActions = (value: MenuConfigEntryValue): value is MenuConfigActions =>
+const isActions = (value: MenuConfigEntry): value is MenuConfigEntryActions =>
   value.type === 'actions';
 
 const getLabel = (entry: MenuConfigEntry) => {
-  switch (entry.config.type) {
+  switch (entry.type) {
     case 'boolean':
-      return entry.config.value
-        ? entry.config.labelTrue
-        : entry.config.labelFalse;
+      return entry.value ? entry.labelTrue : entry.labelFalse;
     case 'number':
-      return entry.config.formatter?.(entry.config.value) ?? entry.config.value;
+      return entry.formatter?.(entry.value) ?? entry.value;
     case 'oneOf':
-      return entry.config.formatter?.(entry.config.value) ?? entry.config.value;
+      return entry.formatter?.(entry.value) ?? entry.value;
     case 'manyOf':
-      if (entry.config.value.length === 0) {
+      if (entry.value.length === 0) {
         return 'None';
-      } else if (entry.config.value.length < entry.config.options.length) {
+      } else if (entry.value.length < entry.options.length) {
         return 'Some';
       } else {
         return 'All';
@@ -137,20 +141,24 @@ export const ConfigMenu = ({
   const activeIndex = config.findIndex((entry) => entry.label === activeKey);
   const activeEntry = activeKey === __root ? undefined : config[activeIndex];
 
-  const createUpdateHandler = (entry: MenuConfigEntry, value: any) => () => {
-    if (
-      isBoolean(entry.config) ||
-      isNumber(entry.config) ||
-      isOneOf(entry.config) ||
-      isManyOf(entry.config)
-    ) {
-      (entry.config.onChange as any)(value);
-    }
+  const createUpdateHandler =
+    <T extends MenuConfigEntryWithValue>(entry: T, value: T['value']) =>
+    () => {
+      // This is block is just to make TS happy
+      if (isBoolean(entry) && typeof value === 'boolean') {
+        entry.onChange(value);
+      } else if (isNumber(entry) && typeof value === 'number') {
+        entry.onChange(value);
+      } else if (isOneOf(entry) && !Array.isArray(value)) {
+        entry.onChange(value);
+      } else if (isManyOf(entry) && Array.isArray(value)) {
+        entry.onChange(value);
+      }
 
-    if (!isManyOf(entry.config)) {
-      setActiveKey(__root);
-    }
-  };
+      if (!isManyOf(entry)) {
+        setActiveKey(__root);
+      }
+    };
 
   return (
     <TransitionBox
@@ -167,7 +175,7 @@ export const ConfigMenu = ({
         <Menu title="Settings">
           {config.map((entry) => (
             <Fragment key={entry.label}>
-              {isAction(entry.config) ? (
+              {isAction(entry) ? (
                 <MenuItemAction
                   Icon={entry.icon}
                   title={entry.label}
@@ -175,8 +183,8 @@ export const ConfigMenu = ({
                   onClick={(event) => {
                     event.stopPropagation();
 
-                    if (isAction(entry.config)) {
-                      entry.config.onAction();
+                    if (isAction(entry)) {
+                      entry.onAction();
                     }
                   }}
                 />
@@ -196,76 +204,75 @@ export const ConfigMenu = ({
 
       {activeEntry && activeKey !== __root && (
         <Menu onBack={() => setActiveKey(__root)} title={activeEntry.label}>
-          {isBoolean(activeEntry.config) && (
+          {isBoolean(activeEntry) && (
             <>
               <MenuItemCheckBox
-                checked={activeEntry.config.value === true}
+                checked={activeEntry.value === true}
                 onClick={createUpdateHandler(activeEntry, true)}
               >
-                {activeEntry.config.labelTrue}
+                {activeEntry.labelTrue}
               </MenuItemCheckBox>
 
               <MenuItemCheckBox
-                checked={activeEntry.config.value === false}
+                checked={activeEntry.value === false}
                 onClick={createUpdateHandler(activeEntry, false)}
               >
-                {activeEntry.config.labelFalse}
+                {activeEntry.labelFalse}
               </MenuItemCheckBox>
             </>
           )}
 
-          {isNumber(activeEntry.config) &&
+          {isNumber(activeEntry) &&
             Array.from({
               length: Math.floor(
-                (activeEntry.config.max - activeEntry.config.min) /
-                  activeEntry.config.step
+                (activeEntry.max - activeEntry.min) / activeEntry.step
               ),
             }).map(
               (_, i) =>
-                isNumber(activeEntry.config) && (
+                isNumber(activeEntry) && (
                   <MenuItemCheckBox
-                    checked={activeEntry.config.value === i}
+                    checked={activeEntry.value === i}
                     key={i}
                     onClick={createUpdateHandler(activeEntry, i)}
                   >
-                    {activeEntry.config.formatter?.(i) ?? i}
+                    {activeEntry.formatter?.(i) ?? i}
                   </MenuItemCheckBox>
                 )
             )}
 
-          {isOneOf(activeEntry.config) &&
-            activeEntry.config.options.map(
+          {isOneOf(activeEntry) &&
+            activeEntry.options.map(
               (option) =>
-                isOneOf(activeEntry.config) && (
+                isOneOf(activeEntry) && (
                   <MenuItemCheckBox
-                    checked={activeEntry.config.value === option}
+                    checked={activeEntry.value === option}
                     key={option}
                     onClick={createUpdateHandler(activeEntry, option)}
                   >
-                    {activeEntry.config.formatter?.(option) ?? option}
+                    {activeEntry.formatter?.(option) ?? option}
                   </MenuItemCheckBox>
                 )
             )}
 
-          {isManyOf(activeEntry.config) &&
-            activeEntry.config.options.map(
+          {isManyOf(activeEntry) &&
+            activeEntry.options.map(
               (option) =>
-                isManyOf(activeEntry.config) && (
+                isManyOf(activeEntry) && (
                   <MenuItemCheckBox
-                    checked={activeEntry.config.value.includes(option)}
+                    checked={activeEntry.value.includes(option)}
                     key={option}
                     onClick={createUpdateHandler(
                       activeEntry,
-                      toggleValueInArray(activeEntry.config.value, option)
+                      toggleValueInArray(activeEntry.value, option)
                     )}
                   >
-                    {activeEntry.config.formatter?.(option) ?? option}
+                    {activeEntry.formatter?.(option) ?? option}
                   </MenuItemCheckBox>
                 )
             )}
 
-          {isActions(activeEntry.config) &&
-            activeEntry.config.actions.map((action) => (
+          {isActions(activeEntry) &&
+            activeEntry.actions.map((action) => (
               <MenuItemAction
                 key={action.label}
                 onClick={() => {
