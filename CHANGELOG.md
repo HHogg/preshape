@@ -1,3 +1,15 @@
+## [16.3.0](https://github.com/HHogg/preshape/compare/v16.2.1...v16.3.0) (2023-12-11)
+
+
+### Features
+
+* **ConfigMenu:** Added actions entry value ([f31ace8](https://github.com/HHogg/preshape/commit/f31ace8e1caa90bfe97363a030124649f184e83f))
+
+
+### Fixes
+
+* **ConfigMenu:** Change prop to array value, fixed generics, action menu and added foramtter to oneOf and manyOf entries ([1ea0819](https://github.com/HHogg/preshape/commit/1ea0819170db32996c7f44a2ffd46ab79c112cb0))
+
 ### [16.2.1](https://github.com/HHogg/preshape/compare/v16.2.0...v16.2.1) (2023-12-10)
 
 
