@@ -20,7 +20,7 @@ export default function Menu({
       <Box
         alignChildrenVertical="middle"
         borderBottom
-        borderColor="background-shade-3"
+        borderColor="background-shade-4"
         flex="horizontal"
         gap="x3"
         paddingBottom="x2"

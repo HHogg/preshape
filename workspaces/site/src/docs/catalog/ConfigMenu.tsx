@@ -124,11 +124,13 @@ const Item: CatalogueItem<{
 
       const config: MenuConfig = [
         speedConfig,
-        debugConfig,
         annotationsConfig,
         modeConfig,
+        { type: 'divider' },
         saveConfig,
         saveAsConfig,
+        { type: 'divider' },
+        debugConfig,
       ];
 
       return <ConfigMenu {...props.ConfigMenu} config={config}></ConfigMenu>;

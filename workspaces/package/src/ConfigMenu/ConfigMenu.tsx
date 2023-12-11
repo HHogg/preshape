@@ -8,6 +8,7 @@ import {
 import Menu from './Menu';
 import MenuItemAction from './MenuItemAction';
 import MenuItemCheckBox from './MenuItemCheckBox';
+import MenuItemDivider from './MenuItemDivider';
 import MenuItemNavigate from './MenuItemNavigate';
 
 export interface ConfigMenuProps extends TransitionBoxProps {
@@ -17,6 +18,7 @@ export interface ConfigMenuProps extends TransitionBoxProps {
 export type MenuConfig = MenuConfigEntry[];
 
 export type MenuConfigEntry =
+  | MenuConfigEntryDivider
   | MenuConfigEntryBoolean
   | MenuConfigEntryNumber
   | MenuConfigEntryOneOf<any>
@@ -29,6 +31,10 @@ export type MenuConfigEntryWithValue =
   | MenuConfigEntryNumber
   | MenuConfigEntryOneOf<any>
   | MenuConfigEntryManyOf<any>;
+
+export type MenuConfigEntryDivider = {
+  type: 'divider';
+};
 
 export type MenuConfigEntryBase = {
   label: string;
@@ -82,6 +88,9 @@ export type MenuConfigEntryActions = MenuConfigEntryBase & {
     onAction: () => void;
   }[];
 };
+
+const isDivider = (value: MenuConfigEntry): value is MenuConfigEntryDivider =>
+  value.type === 'divider';
 
 const isBoolean = (value: MenuConfigEntry): value is MenuConfigEntryBoolean =>
   value.type === 'boolean';
@@ -140,7 +149,10 @@ export const ConfigMenu = ({
 }: PropsWithChildren<ConfigMenuProps>) => {
   const { themeOpposite } = useThemeContext();
   const [activeKey, setActiveKey] = useState(__root);
-  const activeIndex = config.findIndex((entry) => entry.label === activeKey);
+  const activeIndex = config.findIndex(
+    (entry) => !isDivider(entry) && entry.label === activeKey
+  );
+
   const activeEntry = activeKey === __root ? undefined : config[activeIndex];
 
   const createUpdateHandler =
@@ -175,10 +187,15 @@ export const ConfigMenu = ({
     >
       {activeKey === __root && (
         <Menu title="Settings">
-          {config.map((entry) => (
-            <Fragment key={entry.label}>
-              {isAction(entry) ? (
+          {config.map((entry, index) => {
+            if (isDivider(entry)) {
+              return <MenuItemDivider key={index} />;
+            }
+
+            if (isAction(entry)) {
+              return (
                 <MenuItemAction
+                  key={entry.label}
                   Icon={entry.icon}
                   title={entry.label}
                   disabled={entry.disabled}
@@ -190,21 +207,24 @@ export const ConfigMenu = ({
                     }
                   }}
                 />
-              ) : (
-                <MenuItemNavigate
-                  Icon={entry.icon}
-                  disabled={entry.disabled}
-                  onClick={() => setActiveKey(entry.label)}
-                  title={entry.label}
-                  value={getLabel(entry)}
-                />
-              )}
-            </Fragment>
-          ))}
+              );
+            }
+
+            return (
+              <MenuItemNavigate
+                key={entry.label}
+                Icon={entry.icon}
+                disabled={entry.disabled}
+                onClick={() => setActiveKey(entry.label)}
+                title={entry.label}
+                value={getLabel(entry)}
+              />
+            );
+          })}
         </Menu>
       )}
 
-      {activeEntry && activeKey !== __root && (
+      {activeEntry && activeKey !== __root && !isDivider(activeEntry) && (
         <Menu onBack={() => setActiveKey(__root)} title={activeEntry.label}>
           {isBoolean(activeEntry) && (
             <>
