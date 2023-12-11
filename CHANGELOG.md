@@ -1,3 +1,10 @@
+### [16.3.1](https://github.com/HHogg/preshape/compare/v16.3.0...v16.3.1) (2023-12-11)
+
+
+### Fixes
+
+* **ConfigMenu:** Added support for disabling menu entries ([aa1bfce](https://github.com/HHogg/preshape/commit/aa1bfcea0ff58fd0a47f38e75b235a21ceb32aa3))
+
 ## [16.3.0](https://github.com/HHogg/preshape/compare/v16.2.1...v16.3.0) (2023-12-11)
 
 
