@@ -17,6 +17,7 @@ export type MenuConfig = MenuConfigEntry[];
 export type MenuConfigEntry<T = MenuConfigEntryValue> = {
   label: string;
   icon: LucideIcon;
+  disabled?: boolean;
   config: T;
 };
 
@@ -170,6 +171,7 @@ export const ConfigMenu = ({
                 <MenuItemAction
                   Icon={entry.icon}
                   title={entry.label}
+                  disabled={entry.disabled}
                   onClick={(event) => {
                     event.stopPropagation();
 
@@ -181,6 +183,7 @@ export const ConfigMenu = ({
               ) : (
                 <MenuItemNavigate
                   Icon={entry.icon}
+                  disabled={entry.disabled}
                   onClick={() => setActiveKey(entry.label)}
                   title={entry.label}
                   value={getLabel(entry)}
