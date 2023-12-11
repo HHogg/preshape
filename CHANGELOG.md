@@ -1,3 +1,11 @@
+### [16.3.2](https://github.com/HHogg/preshape/compare/v16.3.1...v16.3.2) (2023-12-11)
+
+
+### Fixes
+
+* **ConfigMenu:** Flatten config structure ([8f8644b](https://github.com/HHogg/preshape/commit/8f8644bfa4a60ad3cc71b46136173aa5c0ac2b0f))
+* **ConfigMenu:** Use opposite theme as default ([62beed3](https://github.com/HHogg/preshape/commit/62beed3ea9b88e743596557fb5bde5dc4250a75f))
+
 ### [16.3.1](https://github.com/HHogg/preshape/compare/v16.3.0...v16.3.1) (2023-12-11)
 
 
