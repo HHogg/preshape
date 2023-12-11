@@ -25,7 +25,8 @@ export type MenuConfigEntryValue =
   | MenuConfigNumber
   | MenuConfigOneOf
   | MenuConfigManyOf
-  | MenuConfigAction;
+  | MenuConfigAction
+  | MenuConfigActions;
 
 export type MenuConfigBoolean = {
   type: 'boolean';
@@ -66,6 +67,14 @@ export type MenuConfigAction = {
   onAction: () => void;
 };
 
+export type MenuConfigActions = {
+  type: 'actions';
+  actions: {
+    label: string;
+    onAction: () => void;
+  }[];
+};
+
 const isBoolean = (value: MenuConfigEntryValue): value is MenuConfigBoolean =>
   value.type === 'boolean';
 
@@ -81,6 +90,9 @@ const isManyOf = (
 
 const isAction = (value: MenuConfigEntryValue): value is MenuConfigAction =>
   value.type === 'action';
+
+const isActions = (value: MenuConfigEntryValue): value is MenuConfigActions =>
+  value.type === 'actions';
 
 const getLabel = (entry: MenuConfigEntry) => {
   switch (entry.config.type) {
@@ -101,7 +113,8 @@ const getLabel = (entry: MenuConfigEntry) => {
         return 'All';
       }
     case 'action':
-      return entry.label;
+    case 'actions':
+      return '';
   }
 };
 
@@ -123,25 +136,20 @@ export const ConfigMenu = ({
   const activeIndex = config.findIndex((entry) => entry.label === activeKey);
   const activeEntry = activeKey === __root ? undefined : config[activeIndex];
 
-  const createUpdateHandler =
-    (
-      entry: MenuConfigEntry,
-      value: Exclude<MenuConfigEntryValue, MenuConfigAction>['value']
-    ) =>
-    () => {
-      if (!isAction(entry.config)) {
-        // Todo: Why as needed here?
-        (
-          entry.config.onChange as (
-            v: Exclude<MenuConfigEntryValue, MenuConfigAction>['value']
-          ) => void
-        )(value);
-      }
+  const createUpdateHandler = (entry: MenuConfigEntry, value: any) => () => {
+    if (
+      isBoolean(entry.config) ||
+      isNumber(entry.config) ||
+      isOneOf(entry.config) ||
+      isManyOf(entry.config)
+    ) {
+      (entry.config.onChange as any)(value);
+    }
 
-      if (!isManyOf(entry.config)) {
-        setActiveKey(__root);
-      }
-    };
+    if (!isManyOf(entry.config)) {
+      setActiveKey(__root);
+    }
+  };
 
   return (
     <TransitionBox
@@ -252,6 +260,18 @@ export const ConfigMenu = ({
                   </MenuItemCheckBox>
                 )
             )}
+
+          {isActions(activeEntry.config) &&
+            activeEntry.config.actions.map((action) => (
+              <MenuItemAction
+                key={action.label}
+                onClick={() => {
+                  action.onAction();
+                  setActiveKey(__root);
+                }}
+                title={action.label}
+              />
+            ))}
         </Menu>
       )}
     </TransitionBox>

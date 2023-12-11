@@ -93,6 +93,23 @@ const Item: CatalogueItem<{
             onAction: () => {},
           },
         },
+        {
+          label: 'Save As',
+          icon: SaveIcon,
+          config: {
+            type: 'actions',
+            actions: [
+              {
+                label: 'PNG',
+                onAction: () => {},
+              },
+              {
+                label: 'SVG',
+                onAction: () => {},
+              },
+            ],
+          },
+        },
       ];
 
       return (
