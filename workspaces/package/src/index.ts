@@ -38,6 +38,7 @@ export {
   type MenuConfigEntryOneOf,
   type MenuConfigEntryManyOf,
   type MenuConfigEntryAction,
+  type MenuConfigEntryActions,
 } from './ConfigMenu/ConfigMenu';
 export { DatePicker, type DatePickerProps } from './DatePicker/DatePicker';
 export { Form, type FormProps } from './Form/Form';
