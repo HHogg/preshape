@@ -1,3 +1,10 @@
+## [16.4.0](https://github.com/HHogg/preshape/compare/v16.3.3...v16.4.0) (2023-12-11)
+
+
+### Features
+
+* **ConfigMenu:** Added divider entry option ([194a363](https://github.com/HHogg/preshape/commit/194a363c35b15d09838460072a228153b1eb9e4e))
+
 ### [16.3.3](https://github.com/HHogg/preshape/compare/v16.3.2...v16.3.3) (2023-12-11)
 
 
