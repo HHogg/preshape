@@ -1,3 +1,10 @@
+### [16.3.3](https://github.com/HHogg/preshape/compare/v16.3.2...v16.3.3) (2023-12-11)
+
+
+### Fixes
+
+* **ConfigMenu:** Added missing MenuConfigEntryActions type ([39e1292](https://github.com/HHogg/preshape/commit/39e12926f8f67771069a13e8893ef6bb8cc84b71))
+
 ### [16.3.2](https://github.com/HHogg/preshape/compare/v16.3.1...v16.3.2) (2023-12-11)
 
 
