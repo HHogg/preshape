@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, memo } from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
 import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
@@ -30,21 +30,23 @@ export interface CodeBlockProps extends TextProps {
   language: TypeCodeBlockLanguage;
 }
 
-export const CodeBlock = forwardRef<any, CodeBlockProps>((props, ref) => {
-  const { children, language, ...rest } = props;
+export const CodeBlock = memo(
+  forwardRef<any, CodeBlockProps>((props, ref) => {
+    const { children, language, ...rest } = props;
 
-  return (
-    <Text {...rest} ref={ref}>
-      <SyntaxHighlighter
-        className="CodeBlock"
-        language={language}
-        style={style}
-        customStyle={{
-          backgroundColor: 'transparent',
-        }}
-      >
-        {children?.trim() ?? ''}
-      </SyntaxHighlighter>
-    </Text>
-  );
-});
+    return (
+      <Text {...rest} ref={ref}>
+        <SyntaxHighlighter
+          className="CodeBlock"
+          language={language}
+          style={style}
+          customStyle={{
+            backgroundColor: 'transparent',
+          }}
+        >
+          {children?.trim() ?? ''}
+        </SyntaxHighlighter>
+      </Text>
+    );
+  })
+);
