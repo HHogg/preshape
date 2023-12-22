@@ -1,3 +1,10 @@
+### [17.0.3](https://github.com/HHogg/preshape/compare/v17.0.2...v17.0.3) (2023-12-22)
+
+
+### Fixes
+
+* **TransitionBox:** Pass through alignment props ([3c4c400](https://github.com/HHogg/preshape/commit/3c4c4005ef68adcabcba4caa33caac741ccf8b13))
+
 ### [17.0.2](https://github.com/HHogg/preshape/compare/v17.0.1...v17.0.2) (2023-12-22)
 
 
