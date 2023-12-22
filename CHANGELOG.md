@@ -1,3 +1,14 @@
+## [17.0.0](https://github.com/HHogg/preshape/compare/v16.4.0...v17.0.0) (2023-12-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ThemeProvider:** Reanmed ThemeProvider initialTheme prop to defaultTheme
+
+### Features
+
+* **ThemeProvider:** Added ability for ThemeProvider to be nestable, and renamed initialTheme prop to defaultTheme ([26f820a](https://github.com/HHogg/preshape/commit/26f820abff84bc3334f709df8f9158100befce51))
+
 ## [16.4.0](https://github.com/HHogg/preshape/compare/v16.3.3...v16.4.0) (2023-12-11)
 
 
