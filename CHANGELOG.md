@@ -1,3 +1,10 @@
+### [17.0.1](https://github.com/HHogg/preshape/compare/v17.0.0...v17.0.1) (2023-12-22)
+
+
+### Fixes
+
+* **TransitionBox:** Passed through the direcction padding props ([fee0dde](https://github.com/HHogg/preshape/commit/fee0ddeaf5e10ba011fd569b5bfc9f4ab0fe82a2))
+
 ## [17.0.0](https://github.com/HHogg/preshape/compare/v16.4.0...v17.0.0) (2023-12-22)
 
 
