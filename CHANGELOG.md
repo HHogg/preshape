@@ -1,3 +1,10 @@
+### [17.0.2](https://github.com/HHogg/preshape/compare/v17.0.1...v17.0.2) (2023-12-22)
+
+
+### Fixes
+
+* **CodeBlock:** memo component ([2529de1](https://github.com/HHogg/preshape/commit/2529de13ba19d5bf6f51b5dd5a9c8e2a31215269))
+
 ### [17.0.1](https://github.com/HHogg/preshape/compare/v17.0.0...v17.0.1) (2023-12-22)
 
 
