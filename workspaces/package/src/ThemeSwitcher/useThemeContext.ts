@@ -7,6 +7,7 @@ type ThemeContextProps = {
   onChange: (theme: TypeTheme) => void;
   theme: TypeTheme;
   themeOpposite: TypeTheme;
+  themeRoot: TypeTheme | null;
 };
 
 export const ThemeContext = createContext<ThemeContextProps>({
@@ -14,6 +15,7 @@ export const ThemeContext = createContext<ThemeContextProps>({
   onChange: () => {},
   theme: 'day',
   themeOpposite: 'night',
+  themeRoot: null,
 });
 
 export const useThemeContext = () => {

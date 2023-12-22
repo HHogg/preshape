@@ -1,13 +1,20 @@
-import { PropsWithChildren, useEffect, useRef } from 'react';
+import {
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { TypeTheme } from '../types';
 import { themes, themesOpposite } from '../variables';
 import { useSystemTheme } from './useSystemTheme';
-import { ThemeContext } from './useThemeContext';
+import { ThemeContext, useThemeContext } from './useThemeContext';
 
 type ThemeProviderProps = {
   disableSystemTheme?: boolean;
-  initialTheme?: TypeTheme;
+  defaultTheme?: TypeTheme;
+  theme?: TypeTheme;
 };
 
 const updateThemeClassName = (theme: TypeTheme) => {
@@ -21,40 +28,67 @@ const updateThemeClassName = (theme: TypeTheme) => {
 export function ThemeProvider({
   children,
   disableSystemTheme = false,
-  initialTheme = 'day',
+  defaultTheme = 'day',
+  theme: propsTheme,
 }: PropsWithChildren<ThemeProviderProps>) {
-  const [theme, setTheme] = useLocalStorage<TypeTheme>(
+  const { themeRoot } = useThemeContext();
+  const [localStateTheme, setLocalStateTheme] = useState<TypeTheme>(
+    propsTheme || defaultTheme
+  );
+
+  const [localStorageTheme, setLocalStorageTheme] = useLocalStorage<TypeTheme>(
     'preshape.theme',
-    initialTheme
+    defaultTheme
   );
 
   const refPreviousSystemTheme = useRef<TypeTheme | null>(null);
   const systemTheme = useSystemTheme();
 
+  // When a ThemeProvider has a parent ThemeProvider, it should not
+  // update the theme based on the system theme, nor update the body
+  // class.
+  const isRootTheme = themeRoot === null;
+  const theme = isRootTheme ? localStorageTheme : localStateTheme;
+
+  const handleSetTheme = useCallback(
+    (theme: TypeTheme) => {
+      if (isRootTheme) {
+        setLocalStorageTheme(theme);
+      } else {
+        setLocalStateTheme(theme);
+      }
+    },
+    [isRootTheme, setLocalStateTheme, setLocalStorageTheme]
+  );
+
   useEffect(() => {
+    if (!isRootTheme || disableSystemTheme) {
+      return;
+    }
+
     if (
       !refPreviousSystemTheme.current ||
       refPreviousSystemTheme.current !== systemTheme
     ) {
       refPreviousSystemTheme.current = systemTheme;
-
-      if (!disableSystemTheme) {
-        setTheme(systemTheme);
-      }
+      setLocalStorageTheme(systemTheme);
     }
-  }, [setTheme, systemTheme, disableSystemTheme]);
+  }, [setLocalStorageTheme, isRootTheme, systemTheme, disableSystemTheme]);
 
   useEffect(() => {
-    updateThemeClassName(theme);
-  }, [theme]);
+    if (isRootTheme) {
+      updateThemeClassName(localStorageTheme);
+    }
+  }, [isRootTheme, localStorageTheme]);
 
   return (
     <ThemeContext.Provider
       value={{
         colors: themes[theme],
-        onChange: setTheme,
+        onChange: handleSetTheme,
         theme,
         themeOpposite: themesOpposite[theme],
+        themeRoot: isRootTheme ? theme : themeRoot,
       }}
     >
       {children}

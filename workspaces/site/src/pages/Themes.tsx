@@ -152,7 +152,7 @@ export const ThemesPage = () => {
           <CodeBlock language="tsx">{`
 import { ThemeProvider } from 'preshape';
 
-<ThemeProvider initialTheme="${theme}">
+<ThemeProvider defaultTheme="day">
     ...
 </ThemeProvider>
 `}</CodeBlock>
@@ -160,19 +160,19 @@ import { ThemeProvider } from 'preshape';
 
         <Text>
           Wrapping the entire application with the theme provider will allow
-          components to react to the theme. The theme provider accepts an{' '}
+          components to react to the theme. The theme provider accepts a{' '}
           <Text tag="span" weight="x2">
-            initialTheme
+            defaultTheme
           </Text>{' '}
           prop, which can be either{' '}
           <Text tag="span" weight="x2">
-            "Day"
+            "day"
           </Text>{' '}
           or{' '}
           <Text tag="span" weight="x2">
-            "Night"
+            "night"
           </Text>
-          . The provider also stored the theme in local storage, so that the
+          . The provider also stores the theme in local storage, so that the
           theme can be persisted between page loads.
         </Text>
 
@@ -202,6 +202,34 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
             ThemeSwitcher
           </Text>{' '}
           component which can be used to toggle the theme.
+        </Text>
+
+        <CodeWindow>
+          <CodeBlock language="tsx">{`
+<ThemeProvider theme="day">
+  <LogTheme /> // "day"
+
+  <ThemeProvider theme="night">
+    <LogTheme /> // "night"
+  </ThemeProvider>
+</ThemeProvider>
+`}</CodeBlock>
+        </CodeWindow>
+
+        <Text>
+          <Text tag="span" weight="x2">
+            ThemeProvider
+          </Text>{' '}
+          can be nested, and the closest{' '}
+          <Text tag="span" weight="x2">
+            ThemeProvider
+          </Text>{' '}
+          will be used by descendants, however the top most{' '}
+          <Text tag="span" weight="x2">
+            ThemeProvider
+          </Text>{' '}
+          theme will be used to control the overall application theme and listen
+          for system theme changes.
         </Text>
       </PageSection>
 
