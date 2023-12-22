@@ -24,6 +24,9 @@ export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
       children,
       delay = 0,
       flex,
+      gap,
+      gapHorizontal,
+      gapVertical,
       padding,
       paddingHorizontal,
       paddingTop,
@@ -32,6 +35,7 @@ export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
       paddingLeft,
       paddingVertical,
       visible,
+      style,
       ...rest
     },
     ref
@@ -54,6 +58,7 @@ export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
               borderTop={borderTop}
               height={size.height}
               style={{
+                ...style,
                 originX: 0.5,
                 originY: 0,
               }}
@@ -77,6 +82,9 @@ export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
               alignChildrenHorizontal={alignChildrenHorizontal}
               alignChildrenVertical={alignChildrenVertical}
               flex={flex}
+              gap={gap}
+              gapHorizontal={gapHorizontal}
+              gapVertical={gapVertical}
               padding={padding}
               paddingTop={paddingTop}
               paddingRight={paddingRight}
