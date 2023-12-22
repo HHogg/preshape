@@ -23,6 +23,10 @@ export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
       flex,
       padding,
       paddingHorizontal,
+      paddingTop,
+      paddingRight,
+      paddingBottom,
+      paddingLeft,
       paddingVertical,
       visible,
       ...rest
@@ -68,6 +72,10 @@ export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
             <Box
               flex={flex}
               padding={padding}
+              paddingTop={paddingTop}
+              paddingRight={paddingRight}
+              paddingBottom={paddingBottom}
+              paddingLeft={paddingLeft}
               paddingHorizontal={paddingHorizontal}
               paddingVertical={paddingVertical}
             >
