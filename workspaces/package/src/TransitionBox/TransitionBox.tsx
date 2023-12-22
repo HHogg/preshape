@@ -9,6 +9,9 @@ export interface TransitionBoxProps extends AppearProps {}
 export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
   (
     {
+      alignChildren,
+      alignChildrenHorizontal,
+      alignChildrenVertical,
       backgroundColor,
       borderBottom,
       borderColor,
@@ -70,6 +73,9 @@ export const TransitionBox = forwardRef<HTMLDivElement, TransitionBoxProps>(
             ref={refResize}
           >
             <Box
+              alignChildren={alignChildren}
+              alignChildrenHorizontal={alignChildrenHorizontal}
+              alignChildrenVertical={alignChildrenVertical}
               flex={flex}
               padding={padding}
               paddingTop={paddingTop}
