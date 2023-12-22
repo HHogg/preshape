@@ -1,3 +1,10 @@
+### [17.0.4](https://github.com/HHogg/preshape/compare/v17.0.3...v17.0.4) (2023-12-22)
+
+
+### Fixes
+
+* **TransitionBox:** Pass through gap and style props ([60cabd9](https://github.com/HHogg/preshape/commit/60cabd9790658b7162d2fcc078bb5cc75cae456e))
+
 ### [17.0.3](https://github.com/HHogg/preshape/compare/v17.0.2...v17.0.3) (2023-12-22)
 
 
