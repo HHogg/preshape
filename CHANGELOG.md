@@ -1,3 +1,10 @@
+### [17.0.6](https://github.com/HHogg/preshape/compare/v17.0.5...v17.0.6) (2023-12-23)
+
+
+### Fixes
+
+* **ThemeProvider:** Nested providers should inherit from the parent provider ([d703136](https://github.com/HHogg/preshape/commit/d703136a98151168698191b5f78ed5a0ea4a267d))
+
 ### [17.0.5](https://github.com/HHogg/preshape/compare/v17.0.4...v17.0.5) (2023-12-23)
 
 
