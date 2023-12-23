@@ -4,4 +4,5 @@
   padding: 0 !important;
   background: none !important;
   overflow-wrap: unset !important;
+  overflow: visible !important;
 }
