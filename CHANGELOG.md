@@ -1,3 +1,10 @@
+### [17.0.5](https://github.com/HHogg/preshape/compare/v17.0.4...v17.0.5) (2023-12-23)
+
+
+### Fixes
+
+* **CodeBlock:** Delegate overflow handling to caller ([58de200](https://github.com/HHogg/preshape/commit/58de2003a4ff92f3dd277a093add25d540a1c221))
+
 ### [17.0.4](https://github.com/HHogg/preshape/compare/v17.0.3...v17.0.4) (2023-12-22)
 
 
