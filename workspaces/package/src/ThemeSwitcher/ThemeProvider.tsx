@@ -33,7 +33,7 @@ export function ThemeProvider({
 }: PropsWithChildren<ThemeProviderProps>) {
   const { themeRoot } = useThemeContext();
   const [localStateTheme, setLocalStateTheme] = useState<TypeTheme>(
-    propsTheme || defaultTheme
+    propsTheme || themeRoot || defaultTheme
   );
 
   const [localStorageTheme, setLocalStorageTheme] = useLocalStorage<TypeTheme>(
@@ -80,6 +80,12 @@ export function ThemeProvider({
       updateThemeClassName(localStorageTheme);
     }
   }, [isRootTheme, localStorageTheme]);
+
+  useEffect(() => {
+    if (!isRootTheme && !propsTheme) {
+      setLocalStateTheme(themeRoot);
+    }
+  }, [themeRoot, propsTheme, isRootTheme]);
 
   return (
     <ThemeContext.Provider
