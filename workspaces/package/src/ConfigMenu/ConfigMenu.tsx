@@ -141,6 +141,16 @@ const toggleValueInArray = (array: string[], value: string) => {
   }
 };
 
+const getSteps = (min: number, max: number, step: number) => {
+  const steps = [];
+
+  for (let i = min; i <= max; i += step) {
+    steps.push(i);
+  }
+
+  return steps;
+};
+
 const __root = '__root';
 
 export const ConfigMenu = ({
@@ -245,19 +255,15 @@ export const ConfigMenu = ({
           )}
 
           {isNumber(activeEntry) &&
-            Array.from({
-              length: Math.floor(
-                (activeEntry.max - activeEntry.min) / activeEntry.step
-              ),
-            }).map(
-              (_, i) =>
+            getSteps(activeEntry.min, activeEntry.max, activeEntry.step).map(
+              (v) =>
                 isNumber(activeEntry) && (
                   <MenuItemCheckBox
-                    checked={activeEntry.value === i}
-                    key={i}
-                    onClick={createUpdateHandler(activeEntry, i)}
+                    checked={activeEntry.value === v}
+                    key={v}
+                    onClick={createUpdateHandler(activeEntry, v)}
                   >
-                    {activeEntry.formatter?.(i) ?? i}
+                    {activeEntry.formatter?.(v) ?? v}
                   </MenuItemCheckBox>
                 )
             )}
