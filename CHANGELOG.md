@@ -1,3 +1,10 @@
+### [17.0.7](https://github.com/HHogg/preshape/compare/v17.0.6...v17.0.7) (2023-12-26)
+
+
+### Fixes
+
+* **ConfigMenu:** For numer type, use the step not the index ([7593263](https://github.com/HHogg/preshape/commit/7593263c13c4b73e8c8ec6c618cc1193b3b52bdf))
+
 ### [17.0.6](https://github.com/HHogg/preshape/compare/v17.0.5...v17.0.6) (2023-12-23)
 
 
