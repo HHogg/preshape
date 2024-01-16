@@ -155,6 +155,7 @@ const __root = '__root';
 
 export const ConfigMenu = ({
   config,
+  title = 'Settings',
   ...rest
 }: PropsWithChildren<ConfigMenuProps>) => {
   const { themeOpposite } = useThemeContext();
@@ -196,7 +197,7 @@ export const ConfigMenu = ({
       {...rest}
     >
       {activeKey === __root && (
-        <Menu title="Settings">
+        <Menu title={title}>
           {config.map((entry, index) => {
             if (isDivider(entry)) {
               return <MenuItemDivider key={index} />;
