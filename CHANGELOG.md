@@ -1,3 +1,10 @@
+### [17.0.8](https://github.com/HHogg/preshape/compare/v17.0.7...v17.0.8) (2024-01-16)
+
+
+### Fixes
+
+* **ConfigMenu:** Added ability to customise the title of the menu ([173839a](https://github.com/HHogg/preshape/commit/173839a6409c849fc9c72008f2e11c8f6f4b237c))
+
 ### [17.0.7](https://github.com/HHogg/preshape/compare/v17.0.6...v17.0.7) (2023-12-26)
 
 
