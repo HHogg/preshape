@@ -1,10 +1,5 @@
 import classnames from 'classnames';
-import {
-  AnchorHTMLAttributes,
-  CSSProperties,
-  forwardRef,
-  MouseEvent,
-} from 'react';
+import { CSSProperties, forwardRef, MouseEvent } from 'react';
 import { useHref, useLinkClickHandler } from 'react-router-dom';
 import { Text, TextProps } from '../Text/Text';
 import { TypeColor } from '../types';
@@ -69,6 +64,7 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
     borderSize = 'x2',
     color,
     flex = 'horizontal',
+    href: hrefProp,
     size = 'x3',
     padding,
     paddingHorizontal = padding || 'x3',
@@ -130,13 +126,13 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
       borderSize={borderSize}
       className={classes}
       flex={flex}
-      href={to ? href : (rest as AnchorHTMLAttributes<'a'>).href}
+      href={to ? href : hrefProp}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
       ref={ref}
       size={size}
       style={style}
-      tag={to ? 'a' : tag ?? 'button'}
+      tag={to || hrefProp ? 'a' : tag ?? 'button'}
       weight={weight}
     />
   );
