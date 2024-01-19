@@ -1,3 +1,10 @@
+### [17.0.9](https://github.com/HHogg/preshape/compare/v17.0.8...v17.0.9) (2024-01-19)
+
+
+### Fixes
+
+* **Button:** Use anchor tag when given a standard href ([936ef8c](https://github.com/HHogg/preshape/commit/936ef8cec98bf517b6a90d7ffa13bcda002e4bd9))
+
 ### [17.0.8](https://github.com/HHogg/preshape/compare/v17.0.7...v17.0.8) (2024-01-16)
 
 
