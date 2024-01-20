@@ -1,12 +1,14 @@
 import { useState, useEffect, Ref } from 'react';
 
-export default <T extends Element = Element>(): [boolean, Ref<T>, T | null] => {
+export default <T extends Element = Element>(
+  ratio = 0
+): [boolean, Ref<T>, T | null] => {
   const [node, setNode] = useState<T | null>(null);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      setIsInView(entries[0] && entries[0].intersectionRatio > 0);
+      setIsInView(entries[0] && entries[0].intersectionRatio > ratio);
     });
 
     if (node) {
@@ -20,7 +22,7 @@ export default <T extends Element = Element>(): [boolean, Ref<T>, T | null] => {
 
       observer.disconnect();
     };
-  }, [node]);
+  }, [ratio, node]);
 
   return [isInView, setNode, node];
 };
