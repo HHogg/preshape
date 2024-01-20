@@ -1,3 +1,10 @@
+## [17.1.0](https://github.com/HHogg/preshape/compare/v17.0.10...v17.1.0) (2024-01-20)
+
+
+### Features
+
+* **useIntersectionObserver:** Added prop to be able to customise the intersectionRatio that triggers it ([a506d7f](https://github.com/HHogg/preshape/commit/a506d7ff9c3d752076aebc81bdd95860ec64deea))
+
 ### [17.0.10](https://github.com/HHogg/preshape/compare/v17.0.9...v17.0.10) (2024-01-20)
 
 
