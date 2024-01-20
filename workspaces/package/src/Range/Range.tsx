@@ -12,6 +12,7 @@ export const Range = forwardRef<HTMLInputElement, RangeProps>((props, ref) => {
   const {
     addonEnd,
     addonStart,
+    backgroundColor = 'background-shade-1',
     borderRadius = 'x2',
     borderSize = 'x2',
     disabled,
@@ -36,7 +37,7 @@ export const Range = forwardRef<HTMLInputElement, RangeProps>((props, ref) => {
       addonEnd={addonEnd}
       addonStart={addonStart}
       alignChildrenVertical="middle"
-      backgroundColor="background-shade-1"
+      backgroundColor={backgroundColor}
       borderRadius={borderRadius}
       borderSize={borderSize}
       disabled={disabled}
