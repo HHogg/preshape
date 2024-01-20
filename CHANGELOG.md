@@ -1,3 +1,10 @@
+### [17.0.10](https://github.com/HHogg/preshape/compare/v17.0.9...v17.0.10) (2024-01-20)
+
+
+### Fixes
+
+* **Range:** Pass through min, max and step to input element ([09f3d10](https://github.com/HHogg/preshape/commit/09f3d108cc8fd83661ca374c3e77a33959cd6925))
+
 ### [17.0.9](https://github.com/HHogg/preshape/compare/v17.0.8...v17.0.9) (2024-01-19)
 
 
