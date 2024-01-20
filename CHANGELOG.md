@@ -1,3 +1,10 @@
+### [17.1.1](https://github.com/HHogg/preshape/compare/v17.1.0...v17.1.1) (2024-01-20)
+
+
+### Fixes
+
+* **Range:** Allow backgroundColor to be configurable ([18b6c4e](https://github.com/HHogg/preshape/commit/18b6c4ee69d15f23265926d5dbf4fe9e873a65d9))
+
 ## [17.1.0](https://github.com/HHogg/preshape/compare/v17.0.10...v17.1.0) (2024-01-20)
 
 
