@@ -1,3 +1,10 @@
+### [17.1.2](https://github.com/HHogg/preshape/compare/v17.1.1...v17.1.2) (2024-02-25)
+
+
+### Fixes
+
+* **Link:** Removed inline-block display ([2c9990d](https://github.com/HHogg/preshape/commit/2c9990d648c94e2acabbde6209b6582c6d3041cb))
+
 ### [17.1.1](https://github.com/HHogg/preshape/compare/v17.1.0...v17.1.1) (2024-01-20)
 
 
