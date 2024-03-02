@@ -1,3 +1,10 @@
+## [17.2.0](https://github.com/HHogg/preshape/compare/v17.1.2...v17.2.0) (2024-03-02)
+
+
+### Features
+
+* **CodeBlock:** Added 'rust' to supported languages ([557b3e6](https://github.com/HHogg/preshape/commit/557b3e6254ca21e96f966c5329ded3e418ef1ca3))
+
 ### [17.1.2](https://github.com/HHogg/preshape/compare/v17.1.1...v17.1.2) (2024-02-25)
 
 
