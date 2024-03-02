@@ -1,0 +1,42 @@
+pub type Sequence = [u8; 12];
+
+/// Returns the length of a sequence, given by 0 as an empty indicator
+pub fn length(sequence: &Sequence) -> usize {
+  sequence.iter().position(|&x| x == 0).unwrap_or(12)
+}
+
+/// Rotates a sequence from the start index in the given direction.
+fn rotate(sequence: &Sequence, start_index: usize, forwards: bool) -> Sequence {
+  let mut reordered = Sequence::default();
+  let sequence_length = length(sequence);
+  let mut index: usize = start_index;
+  let mut count: usize = 0;
+
+  while count < sequence_length {
+    reordered[count] = sequence[index];
+
+    if forwards {
+      index = (index + 1) % sequence_length;
+    } else {
+      index = (index + sequence_length - 1) % sequence_length;
+    }
+
+    count += 1;
+  }
+
+  reordered
+}
+
+/// A symmetrical sequence is one that starting
+/// at any index and going in one direction.
+/// Whatever path has been taken, can be taken
+/// in the opposite direction.
+pub fn is_symmetrical(sequence: &Sequence) -> bool {
+  for i in 0..length(sequence) {
+    if &rotate(sequence, i, false) == sequence {
+      return true;
+    }
+  }
+
+  false
+}

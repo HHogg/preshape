@@ -2,6 +2,7 @@ import { forwardRef, memo } from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
 import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
+import rust from 'react-syntax-highlighter/dist/esm/languages/prism/rust';
 import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import typescript from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
 import style from 'react-syntax-highlighter/dist/esm/styles/prism/synthwave84';
@@ -10,10 +11,16 @@ import './CodeBlock.css';
 
 SyntaxHighlighter.registerLanguage('css', css);
 SyntaxHighlighter.registerLanguage('json', json);
+SyntaxHighlighter.registerLanguage('rust', rust);
 SyntaxHighlighter.registerLanguage('tsx', tsx);
 SyntaxHighlighter.registerLanguage('typescript', typescript);
 
-export type TypeCodeBlockLanguage = 'css' | 'json' | 'tsx' | 'typescript';
+export type TypeCodeBlockLanguage =
+  | 'css'
+  | 'json'
+  | 'rust'
+  | 'tsx'
+  | 'typescript';
 
 /**
  * Provides some syntax highlighting, courtesy of PrismJS.
