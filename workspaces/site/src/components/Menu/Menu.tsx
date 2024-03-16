@@ -23,12 +23,12 @@ export const Menu = ({ onSelect, ...props }: MenuProps) => {
       <Box alignChildren="middle" flex="vertical" gap="x4" padding="x8">
         <Logo height="4rem" width="4rem" />
 
-        <Box>
+        <Box textColor="text-shade-1">
           <Text align="middle" margin="x2" size="x6" weight="x5">
             Preshape
           </Text>
 
-          <Text align="middle" size="x3" textColor="text-shade-4">
+          <Text align="middle" size="x3">
             A design system and library of composable React component, hooks,
             and utilities for my personal projects .
           </Text>

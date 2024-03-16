@@ -39,7 +39,7 @@ export const ComponentsPage = () => {
                 {name}
               </Text>
 
-              <Text margin="x1" size="x3" tag="div" textColor="text-shade-4">
+              <Text margin="x1" size="x3" tag="div" textColor="text-shade-2">
                 {description}
               </Text>
             </Box>

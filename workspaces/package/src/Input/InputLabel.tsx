@@ -60,7 +60,7 @@ export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
         <Text
           paddingHorizontal={paddingHorizontal}
           size="x2"
-          textColor="text-shade-4"
+          textColor="text-shade-3"
           weight="x2"
         >
           {description}

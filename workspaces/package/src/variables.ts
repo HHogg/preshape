@@ -61,7 +61,7 @@ export const colorBlack = 'rgb(10, 10, 10)';
 
 export const colorDarkShade1 = 'rgb(15, 20, 25)';
 export const colorDarkShade2 = 'rgb(20, 25, 30)';
-export const colorDarkShade3 = 'rgb(25, 30, 40)';
+export const colorDarkShade3 = 'rgb(25, 30, 35)';
 
 export const colorLightShade1 = 'rgb(245, 250, 255)';
 export const colorLightShade2 = 'rgb(240, 245, 250)';
@@ -101,7 +101,6 @@ export type ThemeColorMapKey =
   | 'colorTextShade1'
   | 'colorTextShade2'
   | 'colorTextShade3'
-  | 'colorTextShade4'
   | 'colorAccentShade1'
   | 'colorAccentShade2'
   | 'colorAccentShade3'
@@ -116,9 +115,8 @@ export const themeDay: ThemeColorMap = {
   colorBackgroundShade3: colorLightShade2,
   colorBackgroundShade4: colorLightShade3,
   colorTextShade1: colorBlack,
-  colorTextShade2: colorDarkShade1,
-  colorTextShade3: colorDarkShade2,
-  colorTextShade4: colorDarkShade3,
+  colorTextShade2: 'rgb(70, 75, 80)',
+  colorTextShade3: 'rgb(100, 105, 110)',
   colorAccentShade1: colorAccent1Shade1,
   colorAccentShade2: colorAccent1Shade2,
   colorAccentShade3: colorAccent1Shade3,
@@ -132,9 +130,8 @@ export const themeNight: ThemeColorMap = {
   colorBackgroundShade3: colorDarkShade2,
   colorBackgroundShade4: colorDarkShade3,
   colorTextShade1: colorWhite,
-  colorTextShade2: colorLightShade1,
-  colorTextShade3: colorLightShade2,
-  colorTextShade4: colorLightShade3,
+  colorTextShade2: 'rgb(195, 200, 205)',
+  colorTextShade3: 'rgb(155, 160, 165)',
   colorAccentShade1: colorAccent2Shade1,
   colorAccentShade2: colorAccent2Shade2,
   colorAccentShade3: colorAccent2Shade3,
@@ -160,7 +157,6 @@ export const themePropNameCSSMap: ThemeColorMap = {
   colorTextShade1: 'color-text-shade-1',
   colorTextShade2: 'color-text-shade-2',
   colorTextShade3: 'color-text-shade-3',
-  colorTextShade4: 'color-text-shade-4',
   colorAccentShade1: 'color-accent-shade-1',
   colorAccentShade2: 'color-accent-shade-3',
   colorAccentShade3: 'color-accent-shade-3',

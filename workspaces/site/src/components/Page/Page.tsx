@@ -49,7 +49,7 @@ export const Page = ({
                 {title}
               </Text>
 
-              <Text textColor="text-shade-4" margin="x4" size="x5">
+              <Text textColor="text-shade-3" margin="x4" size="x5">
                 {description}
               </Text>
             </Box>

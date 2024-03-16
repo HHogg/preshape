@@ -18,7 +18,6 @@ export const BlockQuote = forwardRef<HTMLQuoteElement, BlockQuoteProps>(
         className="BlockQuote"
         ref={ref}
         tag="blockquote"
-        textColor="text-shade-3"
       />
     );
   }

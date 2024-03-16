@@ -337,7 +337,6 @@
 .Box--background-color-text-shade-1 { background-color: var(--color-text-shade-1); }
 .Box--background-color-text-shade-2 { background-color: var(--color-text-shade-2); }
 .Box--background-color-text-shade-3 { background-color: var(--color-text-shade-3); }
-.Box--background-color-text-shade-4 { background-color: var(--color-text-shade-4); }
 .Box--background-color-negative-shade-1 { background-color: var(--color-negative-shade-1); }
 .Box--background-color-negative-shade-2 { background-color: var(--color-negative-shade-2); }
 .Box--background-color-negative-shade-3 { background-color: var(--color-negative-shade-3); }
@@ -405,7 +404,6 @@
 .Box--text-color-text-shade-1 { color: var(--color-text-shade-1); }
 .Box--text-color-text-shade-2 { color: var(--color-text-shade-2); }
 .Box--text-color-text-shade-3 { color: var(--color-text-shade-3); }
-.Box--text-color-text-shade-4 { color: var(--color-text-shade-4); }
 .Box--text-color-negative-shade-1 { color: var(--color-negative-shade-1); }
 .Box--text-color-negative-shade-2 { color: var(--color-negative-shade-2); }
 .Box--text-color-negative-shade-3 { color: var(--color-negative-shade-3); }

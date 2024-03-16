@@ -31,7 +31,7 @@
 
   --rgb-dark-shade-1: 15, 20, 25;
   --rgb-dark-shade-2: 20, 25, 30;
-  --rgb-dark-shade-3: 25, 30, 40;
+  --rgb-dark-shade-3: 25, 30, 35;
 
   --rgb-light-shade-1: 245, 250, 255;
   --rgb-light-shade-2: 240, 245, 250;
@@ -169,9 +169,8 @@
   --rgb-background-shade-4: var(--rgb-light-shade-3);
 
   --rgb-text-shade-1: var(--rgb-black);
-  --rgb-text-shade-2: var(--rgb-dark-shade-1);
-  --rgb-text-shade-3: var(--rgb-dark-shade-2);
-  --rgb-text-shade-4: var(--rgb-dark-shade-3);
+  --rgb-text-shade-2: 70, 75, 80;
+  --rgb-text-shade-3: 100, 105, 110;
 
   --color-background-shade-1: rgb(var(--rgb-background-shade-1));
   --color-background-shade-2: rgb(var(--rgb-background-shade-2));
@@ -192,10 +191,9 @@
   --rgb-background-shade-3: var(--rgb-dark-shade-2);
   --rgb-background-shade-4: var(--rgb-dark-shade-3);
 
-  --rgb-text-shade-1: var(--rgb-light-shade-1);
-  --rgb-text-shade-2: var(--rgb-light-shade-1);
-  --rgb-text-shade-3: var(--rgb-light-shade-2);
-  --rgb-text-shade-4: var(--rgb-light-shade-3);
+  --rgb-text-shade-1: var(--rgb-white);
+  --rgb-text-shade-2: 195, 200, 205;
+  --rgb-text-shade-3: 155, 160, 165;
 
   --color-background-shade-1: rgb(var(--rgb-background-shade-1));
   --color-background-shade-2: rgb(var(--rgb-background-shade-2));

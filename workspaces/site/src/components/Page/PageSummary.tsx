@@ -21,7 +21,7 @@ const PageSummary = ({ summary }: PropsWithChildren<PageSummaryProps>) => {
       style={{ position: 'sticky', top: 0 }}
       paddingRight="x8"
     >
-      <Text textColor="text-shade-4" margin="x4" size="x5">
+      <Text textColor="text-shade-1" margin="x4" size="x5">
         On this page
       </Text>
 

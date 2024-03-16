@@ -62,7 +62,6 @@ const Showcase = ({ basis, children, file }: Props) => {
         paddingHorizontal="x6"
         paddingVertical="x12"
         shrink
-        textColor="text-shade-1"
       >
         <Box style={{ margin: 'auto', maxWidth: '100%' }}>{children}</Box>
 
