@@ -153,19 +153,10 @@ import { ThemeProvider } from 'preshape';
         <Text>
           Wrapping the entire application with the theme provider will allow
           components to react to the theme. The theme provider accepts a{' '}
-          <Text tag="span" weight="x2">
-            defaultTheme
-          </Text>{' '}
-          prop, which can be either{' '}
-          <Text tag="span" weight="x2">
-            "day"
-          </Text>{' '}
-          or{' '}
-          <Text tag="span" weight="x2">
-            "night"
-          </Text>
-          . The provider also stores the theme in local storage, so that the
-          theme can be persisted between page loads.
+          <Text strong>defaultTheme</Text> prop, which can be either{' '}
+          <Text strong>"day"</Text> or <Text strong>"night"</Text>. The provider
+          also stores the theme in local storage, so that the theme can be
+          persisted between page loads.
         </Text>
 
         <CodeWindow>

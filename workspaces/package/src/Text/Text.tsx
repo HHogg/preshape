@@ -35,6 +35,8 @@ export interface TextProps extends Omit<BoxProps, 'size'> {
   subscript?: boolean;
   /** Applies superscript baseline styling */
   superscript?: boolean;
+  /** Applies stronger weight and a strong tag */
+  strong?: boolean;
   /** Applies title casing styling */
   titlecase?: boolean;
   /** Applies uppercasing styling */
@@ -54,11 +56,36 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
     size,
     subscript,
     superscript,
+    strong,
+    tag: tagProps,
+    textColor: textColorProps,
     titlecase,
     uppercase,
-    weight,
+    weight: weightProps,
     ...rest
   } = props;
+
+  const weight = (strong && 'x2') || weightProps;
+
+  const tag =
+    (strong && 'strong') ||
+    (emphasis && 'em') ||
+    (subscript && 'sub') ||
+    (superscript && 'sup') ||
+    tagProps;
+
+  const textColor =
+    textColorProps ||
+    (size === 'x5' ||
+    size === 'x6' ||
+    size === 'x7' ||
+    size === 'x8' ||
+    weight === 'x2' ||
+    weight === 'x3' ||
+    weight === 'x4' ||
+    weight === 'x5'
+      ? 'text-shade-1'
+      : undefined);
 
   const classes = classnames(className, 'Text', {
     'Text--ellipsis': ellipsis,
@@ -74,5 +101,13 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
     [`Text--weight-${weight}`]: weight,
   });
 
-  return <Box {...rest} className={classes} ref={ref} />;
+  return (
+    <Box
+      {...rest}
+      className={classes}
+      ref={ref}
+      tag={tag}
+      textColor={textColor}
+    />
+  );
 });
