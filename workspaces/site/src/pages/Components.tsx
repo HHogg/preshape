@@ -23,6 +23,8 @@ export const ComponentsPage = () => {
             key={name}
             rel="nofollow"
             to={`/components/${name}`}
+            underline={false}
+            weight="x1"
           >
             <Box>
               <Box

@@ -32,12 +32,14 @@ export interface LinkProps extends TextProps {
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const {
     active,
+    textColor = 'text-shade-1',
     textColorActive = 'accent-shade-4',
     textColorHover = 'accent-shade-3',
     to = '',
-    underline,
+    underline = true,
     underlineColor = underline ? 'accent-shade-3' : undefined,
     underlineSize = underline ? 'x2' : undefined,
+    weight = 'x2',
     ...rest
   } = props;
   const classes = classnames('Link', {
@@ -67,6 +69,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
       href={to ? href : rest.href}
       ref={ref}
       tag="a"
+      textColor={textColor}
+      weight={weight}
     />
   );
 });
