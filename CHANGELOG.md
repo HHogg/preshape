@@ -1,3 +1,21 @@
+## [18.0.0](https://github.com/HHogg/preshape/compare/v17.2.0...v18.0.0) (2024-03-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Link:** Restyled the defaul link styling
+* **Text:** Dropped text-shade-4 from the colors
+
+### Features
+
+* **Text:** Added strong property ([c2bd2f0](https://github.com/HHogg/preshape/commit/c2bd2f00c316665b0693215e3514c14ec98fffba))
+
+
+### Fixes
+
+* **Link:** Defaulted link styling to underlined and strong weight ([4f273b8](https://github.com/HHogg/preshape/commit/4f273b89cf76d8f5c72f603cc6df925ac9cd503a))
+* **Text:** Adjusted the text colors and dropped text-shade-4 ([659cbab](https://github.com/HHogg/preshape/commit/659cbabec16e82edb60506a47fced150cb3aa057))
+
 ## [17.2.0](https://github.com/HHogg/preshape/compare/v17.1.2...v17.2.0) (2024-03-02)
 
 
