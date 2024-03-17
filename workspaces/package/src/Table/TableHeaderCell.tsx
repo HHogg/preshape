@@ -37,7 +37,13 @@ export const TableHeaderCell = forwardRef<
       uppercase
       weight="x2"
     >
-      {sortable ? <Link active={sorted}>{children}</Link> : children}
+      {sortable ? (
+        <Link active={sorted} underline={false}>
+          {children}
+        </Link>
+      ) : (
+        children
+      )}
     </Text>
   );
 });
