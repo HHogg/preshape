@@ -21,20 +21,20 @@ const PageChangeButton = ({
       variant="tertiary"
       uppercase={false}
       maxWidth="100%"
+      weight="x1"
       size="x3"
+      textColor="text-shade-1"
+      textColorHover="text-shade-1"
+      textColorActive="text-shade-1"
     >
       {direction === 'previous' && <ChevronLeftIcon size="1.5rem" />}
 
       <Text basis="0" grow size="x4">
-        <Text margin="x1" size="x6" weight="x2">
+        <Text margin="x1" strong>
           {title}
         </Text>
 
-        {description && (
-          <Text size="x3" weight="x1">
-            {description}
-          </Text>
-        )}
+        {description && <Text size="x3">{description}</Text>}
       </Text>
 
       {direction === 'next' && <ChevronRightIcon size="1.5rem" />}

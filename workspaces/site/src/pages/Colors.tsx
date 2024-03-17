@@ -29,15 +29,16 @@ import {
   colorNegativeShade4,
   colorNegativeShade5,
   Link,
-  Text,
   CodeBlock,
   CodeWindow,
+  ArticleSection,
+  ArticleHeading,
+  ArticleParagraph,
+  Article,
 } from 'preshape';
 import { ColorProps } from '../components/Color/Color';
 import { ColorList } from '../components/Color/ColorList';
 import { Page } from '../components/Page/Page';
-import { PageSection } from '../components/Page/PageSection';
-import { PageSubtitle } from '../components/Page/PageSubtitle';
 
 const palette: ColorProps[] = [
   {
@@ -304,51 +305,53 @@ export const ColorsPage = () => {
       description="A minimal set of semantic and themeable colors."
       summary={[{ name: 'Palette', children: paletteGrouped }]}
     >
-      <PageSection>
-        <PageSubtitle>Palette</PageSubtitle>
-        <Text>
-          A minimal set of colors to provide clear contrast across the Day and
-          Night themes. All colors are from the optimised open source{' '}
-          <Link href="https://yeun.github.io/open-color/" underline>
-            Open Color
-          </Link>{' '}
-          scheme.
-        </Text>
-      </PageSection>
+      <Article>
+        <ArticleSection>
+          <ArticleHeading>Palette</ArticleHeading>
+          <ArticleParagraph>
+            A minimal set of colors to provide clear contrast across the Day and
+            Night themes. All colors are from the optimised open source{' '}
+            <Link href="https://yeun.github.io/open-color/" underline>
+              Open Color
+            </Link>{' '}
+            scheme.
+          </ArticleParagraph>
+        </ArticleSection>
 
-      <PageSection>
-        <Text id="Example usage" margin="x4" size="x6" weight="x2">
-          Example usage
-        </Text>
-
-        <CodeWindow>
-          <CodeBlock language="css">{`
+        <ArticleSection>
+          <CodeWindow description="Examples of using colors in CSS, JS variables and React components">
+            <CodeBlock language="css">{`
 /* CSS */
 .CustomClass {
   background-color: var(--color-accent-shade-1);
 }
           `}</CodeBlock>
 
-          <CodeBlock language="tsx">{`
+            <CodeBlock>{`
 /* React */
 <Box backgroundColor="accent-shade-1" />
           `}</CodeBlock>
 
-          <CodeBlock language="typescript">{`
+            <CodeBlock>{`
 /* JS Variables */
 import { colorAccent1Shade1, colorAccent1Shade3 } from 'preshape';
 
 colorAccent1Shade1; // ${colorAccent1Shade1}
 colorAccent1Shade3; // ${colorAccent1Shade3}
           `}</CodeBlock>
-        </CodeWindow>
-      </PageSection>
+          </CodeWindow>
+        </ArticleSection>
 
-      {paletteGrouped.map(({ name, description, children }) => (
-        <PageSection key={name}>
-          <ColorList name={name} description={description} colors={children} />
-        </PageSection>
-      ))}
+        {paletteGrouped.map(({ name, description, children }) => (
+          <ArticleSection key={name}>
+            <ColorList
+              name={name}
+              description={description}
+              colors={children}
+            />
+          </ArticleSection>
+        ))}
+      </Article>
     </Page>
   );
 };

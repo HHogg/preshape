@@ -9,6 +9,19 @@ export * from './variables';
 
 export { Alert, type AlertProps } from './Alert/Alert';
 export { Appear, type AppearProps, type TypeAnimation } from './Appear/Appear';
+export { Article, type ArticleProps } from './Article/Article';
+export {
+  ArticleHeading,
+  type ArticleHeadingProps,
+} from './Article/ArticleHeading';
+export {
+  ArticleParagraph,
+  type ArticleParagraphProps,
+} from './Article/ArticleParagraph';
+export {
+  ArticleSection,
+  type ArticleSectionProps,
+} from './Article/ArticleSection';
 export { BlockQuote, type BlockQuoteProps } from './BlockQuote/BlockQuote';
 export { Box, type BoxProps } from './Box/Box';
 export { BulletPoint, type BulletPointProps } from './BulletPoints/BulletPoint';

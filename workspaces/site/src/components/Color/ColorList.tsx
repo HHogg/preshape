@@ -16,7 +16,7 @@ export const ColorList = ({
   return (
     <Box {...props}>
       <Box margin="x8">
-        <Text id={name} size="x6" weight="x2">
+        <Text id={name} strong>
           {name}
         </Text>
 

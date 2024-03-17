@@ -1,12 +1,18 @@
-import { Box, CodeBlock, CodeWindow, useMatchMedia } from 'preshape';
+import {
+  Article,
+  ArticleHeading,
+  ArticleSection,
+  Box,
+  CodeBlock,
+  CodeWindow,
+  useMatchMedia,
+} from 'preshape';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ModuleDocumentation from '../components/Documentation/ModuleDocumentation';
 import { getModuleSummary } from '../components/Documentation/documentation';
 import { Page } from '../components/Page/Page';
 import PageChangeButton from '../components/Page/PageChangeButton';
-import { PageSection } from '../components/Page/PageSection';
-import { PageSubtitle } from '../components/Page/PageSubtitle';
 import Showcase from '../components/Showcase/Showcase';
 import { getCatalogItem } from '../docs';
 
@@ -33,62 +39,61 @@ export const ComponentPage = () => {
       summary={[{ name: 'Demo' }, { name: 'Example usage' }, ...summary]}
       title={name}
     >
-      <PageSection>
-        <PageSubtitle>Demo</PageSubtitle>
-        <Showcase file={name}>
-          {showcase && <showcase.Component {...showcase.state} {...state} />}
-        </Showcase>
-      </PageSection>
+      <Article>
+        <ArticleSection>
+          <ArticleHeading>Demo</ArticleHeading>
+          <Showcase file={name}>
+            {showcase && <showcase.Component {...showcase.state} {...state} />}
+          </Showcase>
+        </ArticleSection>
 
-      {showcase?.code && (
-        <PageSection>
-          <PageSubtitle>Example usage</PageSubtitle>
-          <CodeWindow>
-            <CodeBlock language="tsx" size="x3">
-              {showcase.code}
-            </CodeBlock>
-          </CodeWindow>
-        </PageSection>
-      )}
+        {showcase?.code && (
+          <ArticleSection>
+            <CodeWindow>
+              <CodeBlock>{showcase.code}</CodeBlock>
+            </CodeWindow>
+          </ArticleSection>
+        )}
 
-      {apis && (
-        <PageSection>
-          <PageSubtitle>API</PageSubtitle>
-          <ModuleDocumentation
-            apis={apis}
-            onStateChange={setState}
-            state={state}
-          />
-        </PageSection>
-      )}
-
-      <PageSection
-        alignChildrenHorizontal="between"
-        flex={match('1000px') ? 'horizontal' : 'vertical'}
-        gap="x16"
-      >
-        <Box basis="0" grow flex="horizontal" maxWidth="500px">
-          {previousItem && (
-            <PageChangeButton
-              direction="previous"
-              description={previousItem.description}
-              title={previousItem.name}
-              to={`/components/${previousItem.name}`}
+        {apis && (
+          <ArticleSection>
+            <ArticleHeading>API</ArticleHeading>
+            <ModuleDocumentation
+              apis={apis}
+              onStateChange={setState}
+              state={state}
             />
-          )}
-        </Box>
+          </ArticleSection>
+        )}
 
-        <Box basis="0" grow flex="horizontal" maxWidth="500px">
-          {nextItem && (
-            <PageChangeButton
-              direction="next"
-              description={nextItem.description}
-              title={nextItem.name}
-              to={`/components/${nextItem.name}`}
-            />
-          )}
-        </Box>
-      </PageSection>
+        <ArticleSection
+          alignChildrenHorizontal="between"
+          flex={match('1000px') ? 'horizontal' : 'vertical'}
+          gap="x16"
+        >
+          <Box basis="0" grow flex="horizontal" maxWidth="500px">
+            {previousItem && (
+              <PageChangeButton
+                direction="previous"
+                description={previousItem.description}
+                title={previousItem.name}
+                to={`/components/${previousItem.name}`}
+              />
+            )}
+          </Box>
+
+          <Box basis="0" grow flex="horizontal" maxWidth="500px">
+            {nextItem && (
+              <PageChangeButton
+                direction="next"
+                description={nextItem.description}
+                title={nextItem.name}
+                to={`/components/${nextItem.name}`}
+              />
+            )}
+          </Box>
+        </ArticleSection>
+      </Article>
     </Page>
   );
 };

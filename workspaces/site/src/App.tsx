@@ -108,7 +108,7 @@ const App = () => {
               {isDesktop && (
                 <Appear
                   animation="FadeSlideRight"
-                  backgroundColor="background-shade-1"
+                  backgroundColor="background-shade-2"
                   maxWidth="300px"
                   borderColor="background-shade-3"
                   borderSize="x2"
@@ -121,12 +121,7 @@ const App = () => {
                 </Appear>
               )}
 
-              <Box
-                basis="0"
-                backgroundColor="background-shade-2"
-                grow
-                minWidth={0}
-              >
+              <Box basis="0" grow minWidth={0}>
                 <Routes>
                   <Route element={<Navigate to="/components" />} path="/" />
                   <Route element={<ColorsPage />} path="/colors" />

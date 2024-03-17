@@ -19,13 +19,12 @@ const TypePropTableRow = (props: Props) => {
     <TableRow id={reflection.name}>
       <TableCell paddingVertical="x6">
         <Text margin="x3">
-          <Text margin="x2" weight="x2">
-            <Text size="x5" tag="span">
-              {reflection.name}{' '}
-            </Text>
+          <Text margin="x2">
+            <Text strong>{reflection.name} </Text>
+
             {!isOptional && (
-              <Text tag="span" textColor="negative-shade-4">
-                [Required]
+              <Text strong textColor="negative-shade-4">
+                [required]
               </Text>
             )}
           </Text>

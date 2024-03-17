@@ -20,7 +20,7 @@ const ComponentDocumentation = (props: APIItemProps) => {
     <Box margin="x16">
       <Box alignChildrenVertical="start" flex="horizontal" gap="x4" margin="x4">
         <Box basis="0" grow>
-          <Text id={reflection.name} size="x6" weight="x2">
+          <Text id={reflection.name} strong>
             {reflection.name}
           </Text>
 

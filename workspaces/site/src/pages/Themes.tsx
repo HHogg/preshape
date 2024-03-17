@@ -1,17 +1,18 @@
 import {
-  Text,
   CodeBlock,
   CodeWindow,
   TypeTheme,
   themes,
   useThemeContext,
   Code,
+  Article,
+  ArticleSection,
+  ArticleHeading,
+  ArticleParagraph,
 } from 'preshape';
 import { ColorProps } from '../components/Color/Color';
 import { ColorList } from '../components/Color/ColorList';
 import { Page } from '../components/Page/Page';
-import { PageSection } from '../components/Page/PageSection';
-import { PageSubtitle } from '../components/Page/PageSubtitle';
 
 const paletteTheme = (theme: TypeTheme): ColorProps[] => [
   {
@@ -139,28 +140,31 @@ export const ThemesPage = () => {
       description="Themes are a collection of colors that can be used to style components."
       summary={[{ name: 'Palette', children: themeGrouped(theme) }]}
     >
-      <PageSection>
-        <PageSubtitle>Provider</PageSubtitle>
-        <CodeWindow>
-          <CodeBlock language="tsx">{`
+      <Article>
+        <ArticleSection>
+          <ArticleHeading>Provider</ArticleHeading>
+
+          <CodeWindow>
+            <CodeBlock>{`
 import { ThemeProvider } from 'preshape';
 
 <ThemeProvider defaultTheme="day">
     ...
 </ThemeProvider>
 `}</CodeBlock>
-        </CodeWindow>
+          </CodeWindow>
 
-        <Text>
-          Wrapping the entire application with the theme provider will allow
-          components to react to the theme. The theme provider accepts a{' '}
-          <Code>defaultTheme</Code> prop, which can be either <Code>"day"</Code>{' '}
-          or <Code>"night"</Code>. The provider also stores the theme in local
-          storage, so that the theme can be persisted between page loads.
-        </Text>
+          <ArticleParagraph>
+            Wrapping the entire application with the theme provider will allow
+            components to react to the theme. The theme provider accepts a{' '}
+            <Code>defaultTheme</Code> prop, which can be either{' '}
+            <Code>"day"</Code> or <Code>"night"</Code>. The provider also stores
+            the theme in local storage, so that the theme can be persisted
+            between page loads.
+          </ArticleParagraph>
 
-        <CodeWindow>
-          <CodeBlock language="tsx">{`
+          <CodeWindow>
+            <CodeBlock>{`
 import { useThemeContext, ThemeSwitcher } from 'preshape';
 
 <ThemeSwitcher />
@@ -172,17 +176,17 @@ console.log(themeOpposite); // "${themeOpposite}"
 console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
 
 `}</CodeBlock>
-        </CodeWindow>
+          </CodeWindow>
 
-        <Text>
-          Provided is also a <Code>useThemeContext()</Code> hook, which returns
-          the current theme, the opposite theme, and the current theme colors.
-          As well as a <Code>{`<ThemeSwitcher />`}</Code> component which can be
-          used to toggle the theme.
-        </Text>
+          <ArticleParagraph>
+            Provided is also a <Code>useThemeContext()</Code> hook, which
+            returns the current theme, the opposite theme, and the current theme
+            colors. As well as a <Code>{`<ThemeSwitcher />`}</Code> component
+            which can be used to toggle the theme.
+          </ArticleParagraph>
 
-        <CodeWindow>
-          <CodeBlock language="tsx">{`
+          <CodeWindow>
+            <CodeBlock>{`
 <ThemeProvider theme="day">
   <LogTheme /> // "day"
 
@@ -191,37 +195,39 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
   </ThemeProvider>
 </ThemeProvider>
 `}</CodeBlock>
-        </CodeWindow>
+          </CodeWindow>
 
-        <Text>
-          <Code>{`<ThemeProvider />`}</Code> can be nested, and the closest{' '}
-          <Code>{`<ThemeProvider />`}</Code> will be used by descendants,
-          however the top most <Code>{`<ThemeProvider />`}</Code> theme will be
-          used to control the overall application theme and listen for system
-          theme changes.
-        </Text>
-      </PageSection>
+          <ArticleParagraph>
+            <Code>{`<ThemeProvider />`}</Code> can be nested, and the closest{' '}
+            <Code>{`<ThemeProvider />`}</Code> will be used by descendants,
+            however the top most <Code>{`<ThemeProvider />`}</Code> theme will
+            be used to control the overall application theme and listen for
+            system theme changes.
+          </ArticleParagraph>
+        </ArticleSection>
 
-      <PageSection>
-        <PageSubtitle>Palette</PageSubtitle>
-        <Text>
-          All of the colors, whether used as CSS variables or through the
-          component props react to the chosen theme (Day or Night). The
-          following colors use the semantic theme prop values, for example{' '}
-          <Code>"background-shade-1"</Code>. Try using the theme toggle above,
-          to see them change.
-        </Text>
+        <ArticleSection>
+          <ArticleHeading>Palette</ArticleHeading>
 
-        {themeGrouped(theme).map(({ name, description, children }) => (
-          <ColorList
-            key={name}
-            margin="x10"
-            name={name}
-            description={description}
-            colors={children}
-          />
-        ))}
-      </PageSection>
+          <ArticleParagraph>
+            All of the colors, whether used as CSS variables or through the
+            component props react to the chosen theme (Day or Night). The
+            following colors use the semantic theme prop values, for example{' '}
+            <Code>"background-shade-1"</Code>. Try using the theme toggle above,
+            to see them change.
+          </ArticleParagraph>
+
+          {themeGrouped(theme).map(({ name, description, children }) => (
+            <ColorList
+              key={name}
+              margin="x10"
+              name={name}
+              description={description}
+              colors={children}
+            />
+          ))}
+        </ArticleSection>
+      </Article>
     </Page>
   );
 };

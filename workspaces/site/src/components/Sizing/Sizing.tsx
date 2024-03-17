@@ -19,10 +19,11 @@ const Sizing = ({ name, css, js, value, prop }: SizingProps) => {
       key={name}
     >
       <Box basis="0" grow paddingVertical="x2">
-        <Text size="x5" weight="x2">
+        <Text strong>
           {name} / {value}
         </Text>
-        <Text>
+
+        <Text size="x3">
           {prop ? `"${prop}" /` : ''} var({css}) / {js}
         </Text>
       </Box>

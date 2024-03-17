@@ -1,7 +1,9 @@
 import {
+  Article,
+  ArticleHeading,
+  ArticleSection,
   CodeBlock,
   CodeWindow,
-  Text,
   borderRadiusSizeX1Px,
   borderRadiusSizeX1Rem,
   borderRadiusSizeX2Px,
@@ -46,8 +48,6 @@ import {
   sizeX8Rem,
 } from 'preshape';
 import { Page } from '../components/Page/Page';
-import { PageSection } from '../components/Page/PageSection';
-import { PageSubtitle } from '../components/Page/PageSubtitle';
 import { SizingProps } from '../components/Sizing/Sizing';
 import { SizingList } from '../components/Sizing/SizingList';
 
@@ -128,44 +128,42 @@ export const SizingsPage = () => {
       description="The all important sizing variables for spacing, border, and border radius."
       summary={[{ name: 'Variables', children: variableGroups }]}
     >
-      <PageSection>
-        <Text id="Example usage" margin="x4" size="x6" weight="x2">
-          Example usage
-        </Text>
-
-        <CodeWindow>
-          <CodeBlock language="css">{`
+      <Article>
+        <ArticleSection>
+          <CodeWindow description="Examples of using sizings in CSS, JS variables and React components">
+            <CodeBlock language="css">{`
 /* CSS */
 var(--size--x1);
 var(--border-size--x1);
 var(--border-radius-size--x1);
           `}</CodeBlock>
 
-          <CodeBlock language="tsx">{`
+            <CodeBlock>{`
 /* React */
 <Box margin="x2" padding="x4" borderSize="x1" borderRadius="x2" />
           `}</CodeBlock>
 
-          <CodeBlock language="tsx">{`
+            <CodeBlock>{`
 /* JS Variables */
 import { sizeX1Px, sizeX1Rem, borderRadiusSizeX1Px } from 'preshape';
 `}</CodeBlock>
-        </CodeWindow>
-      </PageSection>
+          </CodeWindow>
+        </ArticleSection>
 
-      <PageSection>
-        <PageSubtitle>Variables</PageSubtitle>
-      </PageSection>
+        <ArticleSection>
+          <ArticleHeading>Variables</ArticleHeading>
+        </ArticleSection>
 
-      {variableGroups.map(({ name, description, children }) => (
-        <PageSection key={name}>
-          <SizingList
-            name={name}
-            description={description}
-            sizings={children}
-          />
-        </PageSection>
-      ))}
+        {variableGroups.map(({ name, description, children }) => (
+          <ArticleSection key={name}>
+            <SizingList
+              name={name}
+              description={description}
+              sizings={children}
+            />
+          </ArticleSection>
+        ))}
+      </Article>
     </Page>
   );
 };
