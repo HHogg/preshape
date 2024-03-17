@@ -1,3 +1,10 @@
+### [18.0.1](https://github.com/HHogg/preshape/compare/v18.0.0...v18.0.1) (2024-03-17)
+
+
+### Fixes
+
+* **Link:** Removed color: inherit ([3689565](https://github.com/HHogg/preshape/commit/3689565392f7d9a22001eea50dd2e5490d74082c))
+
 ## [18.0.0](https://github.com/HHogg/preshape/compare/v17.2.0...v18.0.0) (2024-03-17)
 
 
