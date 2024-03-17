@@ -16,12 +16,12 @@ export interface CodeProps extends TextProps {
 }
 
 export const Code = forwardRef<any, CodeProps>(
-  ({ children, language = 'typescript', ...rest }, ref) => {
+  ({ children, language = 'tsx', ...rest }, ref) => {
     return (
       <Text
         {...rest}
         ref={ref}
-        tag="code"
+        tag="span"
         display="inline-block"
         monospace
         borderRadius="x2"
@@ -31,9 +31,8 @@ export const Code = forwardRef<any, CodeProps>(
         size="x3"
         style={{
           padding: `${sizeX1Px * 0.25}px ${sizeX1Px * 1.5}px`,
-          margin: sizeX1Px * 0.5,
+          margin: `0 ${sizeX1Px * 0.5}`,
         }}
-        theme="night"
       >
         <SyntaxHighlight className="Code" language={language}>
           {children}

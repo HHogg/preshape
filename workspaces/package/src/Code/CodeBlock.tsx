@@ -12,7 +12,7 @@ import './CodeBlock.css';
  */
 export interface CodeBlockProps
   extends TextProps,
-    Pick<SyntaxHighlightProps, 'wrapLongLines'> {
+    Partial<Pick<SyntaxHighlightProps, 'wrapLines' | 'wrapLongLines'>> {
   /**
    * Code content
    **/
@@ -28,9 +28,9 @@ export const CodeBlock = memo(
   forwardRef<any, CodeBlockProps>((props, ref) => {
     const {
       children,
-      language = 'typescript',
-      wrap,
-      wrapLongLines,
+      language = 'tsx',
+      wrapLines = true,
+      wrapLongLines = true,
       ...rest
     } = props;
 
@@ -39,7 +39,7 @@ export const CodeBlock = memo(
         <SyntaxHighlight
           className="CodeBlock"
           language={language}
-          wrap={wrap}
+          wrapLines={wrapLines}
           wrapLongLines={wrapLongLines}
         >
           {children?.trim() ?? ''}

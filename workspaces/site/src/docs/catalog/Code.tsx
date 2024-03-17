@@ -51,7 +51,7 @@ const Item: CatalogueItem<{
 import { CodeBlock, CodeWindow } from 'preshape';
 
 <CodeWindow>
-  <CodeBlock language="tsx">
+  <CodeBlock>
       ...
   </CodeBlock>
 </CodeWindow>

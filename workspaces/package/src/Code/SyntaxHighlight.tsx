@@ -7,7 +7,9 @@ import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
 import rust from 'react-syntax-highlighter/dist/esm/languages/prism/rust';
 import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import typescript from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
-import style from 'react-syntax-highlighter/dist/esm/styles/prism/synthwave84';
+import styleLight from 'react-syntax-highlighter/dist/esm/styles/prism/one-light';
+import styleDark from 'react-syntax-highlighter/dist/esm/styles/prism/synthwave84';
+import { useThemeContext } from '../ThemeSwitcher/useThemeContext';
 
 export type Language = 'css' | 'json' | 'rust' | 'tsx' | 'typescript';
 
@@ -33,17 +35,31 @@ export interface SyntaxHighlightProps
   language: Language;
 }
 
-export const SyntaxHighlight = (props: SyntaxHighlightProps) => {
-  const { children, language, ...rest } = props;
+styleLight['code[class*="language-"]'].backgroundColor = 'transparent';
+
+export const SyntaxHighlight = ({
+  children,
+  language,
+  ...rest
+}: SyntaxHighlightProps) => {
+  const { theme } = useThemeContext();
 
   return (
     <SyntaxHighlighter
       {...rest}
       language={language}
-      style={style}
+      PreTag={'code' as any}
+      style={theme === 'night' ? styleDark : styleLight}
       customStyle={{
         ...rest.style,
+        background: 'transparent',
         backgroundColor: 'transparent',
+      }}
+      lineProps={{
+        style: {
+          background: 'transparent',
+          backgroundColor: 'transparent',
+        },
       }}
     >
       {children?.trim() ?? ''}
