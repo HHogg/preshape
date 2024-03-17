@@ -27,6 +27,8 @@ export interface TextProps extends Omit<BoxProps, 'size'> {
   ellipsis?: boolean;
   /** Applies emphasis styling */
   emphasis?: boolean;
+  /** Applies a custom line height */
+  lineHeight?: number;
   /** Applies a monospace font family style */
   monospace?: boolean;
   /** Size of the text */
@@ -52,6 +54,7 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
     className,
     ellipsis,
     emphasis,
+    lineHeight,
     monospace,
     size,
     subscript,
@@ -106,6 +109,7 @@ export const Text = forwardRef<any, TextProps>((props, ref) => {
       {...rest}
       className={classes}
       ref={ref}
+      style={{ ...rest.style, lineHeight }}
       tag={tag}
       textColor={textColor}
     />
