@@ -1,3 +1,18 @@
+## [18.1.0](https://github.com/HHogg/preshape/compare/v18.0.1...v18.1.0) (2024-03-17)
+
+
+### Features
+
+* **Article:** Added article related components ([e86cd12](https://github.com/HHogg/preshape/commit/e86cd12ed1da5c6e7a79da6de67638883619c9ed))
+* **Code:** Added light theme syntax highlighting ([7dc40fc](https://github.com/HHogg/preshape/commit/7dc40fcdf4b040cd586c61071990bc00f9c28b9b))
+* **Code:** Added syntax highlighting to inline code component ([3ce9448](https://github.com/HHogg/preshape/commit/3ce944801a0ca4f5fd5703397dec884dc5ff592a))
+* **Text:** Added custom lineHeight prop ([87698d4](https://github.com/HHogg/preshape/commit/87698d43c885d44c57645cdfa0867c62da1e5c3f))
+
+
+### Fixes
+
+* **Table:** Header cell link styling ([6b4a08e](https://github.com/HHogg/preshape/commit/6b4a08e3ce0ca9002623d3b31f0c9376b459bf6c))
+
 ### [18.0.1](https://github.com/HHogg/preshape/compare/v18.0.0...v18.0.1) (2024-03-17)
 
 
