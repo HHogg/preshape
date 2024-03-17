@@ -21,12 +21,9 @@ export { ButtonAsync, type ButtonAsyncProps } from './Button/ButtonAsync';
 export { Buttons, type ButtonsProps } from './Button/Buttons';
 export { CheckBox, type CheckBoxProps } from './CheckBox/CheckBox';
 export { CheckBoxIndicator } from './CheckBox/CheckBoxIndicator';
+export { type Language } from './Code/SyntaxHighlight';
 export { Code, type CodeProps } from './Code/Code';
-export {
-  CodeBlock,
-  type CodeBlockProps,
-  type TypeCodeBlockLanguage,
-} from './Code/CodeBlock';
+export { CodeBlock, type CodeBlockProps } from './Code/CodeBlock';
 export { CodeWindow, type CodeWindowProps } from './Code/CodeWindow';
 export {
   ConfigMenu,

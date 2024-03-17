@@ -5,6 +5,7 @@ import {
   TypeTheme,
   themes,
   useThemeContext,
+  Code,
 } from 'preshape';
 import { ColorProps } from '../components/Color/Color';
 import { ColorList } from '../components/Color/ColorList';
@@ -153,10 +154,9 @@ import { ThemeProvider } from 'preshape';
         <Text>
           Wrapping the entire application with the theme provider will allow
           components to react to the theme. The theme provider accepts a{' '}
-          <Text strong>defaultTheme</Text> prop, which can be either{' '}
-          <Text strong>"day"</Text> or <Text strong>"night"</Text>. The provider
-          also stores the theme in local storage, so that the theme can be
-          persisted between page loads.
+          <Code>defaultTheme</Code> prop, which can be either <Code>"day"</Code>{' '}
+          or <Code>"night"</Code>. The provider also stores the theme in local
+          storage, so that the theme can be persisted between page loads.
         </Text>
 
         <CodeWindow>
@@ -175,16 +175,10 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
         </CodeWindow>
 
         <Text>
-          Provided is also a{' '}
-          <Text tag="span" weight="x2">
-            useThemeContext
-          </Text>{' '}
-          hook, which returns the current theme, the opposite theme, and the
-          current theme colors. As well as a{' '}
-          <Text tag="span" weight="x2">
-            ThemeSwitcher
-          </Text>{' '}
-          component which can be used to toggle the theme.
+          Provided is also a <Code>useThemeContext()</Code> hook, which returns
+          the current theme, the opposite theme, and the current theme colors.
+          As well as a <Code>{`<ThemeSwitcher />`}</Code> component which can be
+          used to toggle the theme.
         </Text>
 
         <CodeWindow>
@@ -200,19 +194,11 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
         </CodeWindow>
 
         <Text>
-          <Text tag="span" weight="x2">
-            ThemeProvider
-          </Text>{' '}
-          can be nested, and the closest{' '}
-          <Text tag="span" weight="x2">
-            ThemeProvider
-          </Text>{' '}
-          will be used by descendants, however the top most{' '}
-          <Text tag="span" weight="x2">
-            ThemeProvider
-          </Text>{' '}
-          theme will be used to control the overall application theme and listen
-          for system theme changes.
+          <Code>{`<ThemeProvider />`}</Code> can be nested, and the closest{' '}
+          <Code>{`<ThemeProvider />`}</Code> will be used by descendants,
+          however the top most <Code>{`<ThemeProvider />`}</Code> theme will be
+          used to control the overall application theme and listen for system
+          theme changes.
         </Text>
       </PageSection>
 
@@ -222,10 +208,8 @@ console.log(colors); // { colorAccentShade1: ${colors.colorAccentShade1}, ... }
           All of the colors, whether used as CSS variables or through the
           component props react to the chosen theme (Day or Night). The
           following colors use the semantic theme prop values, for example{' '}
-          <Text tag="span" weight="x2">
-            "background-shade-1"
-          </Text>
-          . Try using the theme toggle above, to see them change.
+          <Code>"background-shade-1"</Code>. Try using the theme toggle above,
+          to see them change.
         </Text>
 
         {themeGrouped(theme).map(({ name, description, children }) => (

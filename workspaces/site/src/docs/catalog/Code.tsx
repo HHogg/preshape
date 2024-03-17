@@ -26,11 +26,16 @@ const Item: CatalogueItem<{
       name: 'CodeBlockProps',
       rename: 'CodeBlock',
     },
+    {
+      module: '"Code/Code"',
+      name: 'CodeProps',
+      rename: 'Code',
+    },
   ],
   showcase: {
     state: {
       CodeBlock: {
-        language: 'typescript',
+        language: 'rust',
         wrap: true,
       },
       CodeWindow: {},
