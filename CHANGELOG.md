@@ -1,3 +1,10 @@
+### [18.1.1](https://github.com/HHogg/preshape/compare/v18.1.0...v18.1.1) (2024-03-29)
+
+
+### Fixes
+
+* **Code:** Allow custom text size ([bfdc53e](https://github.com/HHogg/preshape/commit/bfdc53e46c0d4dddc5ed09cfd94c2886e6948beb))
+
 ## [18.1.0](https://github.com/HHogg/preshape/compare/v18.0.1...v18.1.0) (2024-03-17)
 
 
