@@ -58,11 +58,11 @@ const App = () => {
                 >
                   <Text margin="x6">
                     Welcome! Take a look around. However, you probably{' '}
-                    <Text tag="strong" weight="x2">
+                    <Text textColor="background-shade-1" strong>
                       shouldn't use this in your project
                     </Text>
                     . It's a component library for my own projects, so{' '}
-                    <Text tag="strong" weight="x2">
+                    <Text textColor="background-shade-1" strong>
                       there's no guarantee of stability or support
                     </Text>
                     .

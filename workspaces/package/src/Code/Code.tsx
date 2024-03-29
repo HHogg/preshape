@@ -16,7 +16,7 @@ export interface CodeProps extends TextProps {
 }
 
 export const Code = forwardRef<any, CodeProps>(
-  ({ children, language = 'tsx', ...rest }, ref) => {
+  ({ children, language = 'tsx', size = 'x3', ...rest }, ref) => {
     return (
       <Text
         {...rest}
@@ -28,7 +28,7 @@ export const Code = forwardRef<any, CodeProps>(
         borderSize="x1"
         backgroundColor="background-shade-3"
         borderColor="background-shade-4"
-        size="x3"
+        size={size}
         style={{
           padding: `${sizeX1Px * 0.25}px ${sizeX1Px * 1.5}px`,
           margin: `0 ${sizeX1Px * 0.5}`,
