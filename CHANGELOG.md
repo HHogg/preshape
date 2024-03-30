@@ -1,3 +1,10 @@
+### [18.1.2](https://github.com/HHogg/preshape/compare/v18.1.1...v18.1.2) (2024-03-30)
+
+
+### Fixes
+
+* **Button:** Allow border style to be customised ([e4d4b55](https://github.com/HHogg/preshape/commit/e4d4b556c15e3fb130c72245bdafc238c7d9f453))
+
 ### [18.1.1](https://github.com/HHogg/preshape/compare/v18.1.0...v18.1.1) (2024-03-29)
 
 
