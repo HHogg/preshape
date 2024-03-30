@@ -8,7 +8,6 @@
   --Button-textColorActive: var(--color-accent-shade-5);
   --Button-textColorHover: var(--color-accent-shade-3);
 
-  border-style: solid;
   border-color: var(--Button-borderColor, var(--Button-textColor));
   background-color: var(--Button-backgroundColor);
   color: var(--Button-textColor);
