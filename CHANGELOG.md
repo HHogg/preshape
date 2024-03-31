@@ -1,3 +1,10 @@
+### [18.1.3](https://github.com/HHogg/preshape/compare/v18.1.2...v18.1.3) (2024-03-31)
+
+
+### Fixes
+
+* **Article:** Allow paragraph tag to be customised ([2b2f8b6](https://github.com/HHogg/preshape/commit/2b2f8b667c4411ec52494999648c208259df348b))
+
 ### [18.1.2](https://github.com/HHogg/preshape/compare/v18.1.1...v18.1.2) (2024-03-30)
 
 
