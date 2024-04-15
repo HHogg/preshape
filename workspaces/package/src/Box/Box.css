@@ -10,8 +10,12 @@
 .Box--overflow-scroll { overflow: auto; }
 
 .Box[class*="Box--margin"] {
-  &:first-child:not([class*="Box--padding-offset-top"]) { margin-top: 0; }
-  &:last-child:not([class*="Box--padding-offset-bottom"]) { margin-bottom: 0; }
+  /**
+   * To support non-Box elements as siblings, this can't use first-child, last-child, etc.
+   * Instead, it uses the nth-child selector to target the first and last Box element.
+   */
+  &:nth-child(1 of .Box):not([class*="Box--padding-offset-top"]) { margin-top: 0; }
+  &:nth-last-child(1 of .Box):not([class*="Box--padding-offset-bottom"]) { margin-bottom: 0; }
 }
 
 .Box--margin-x1 { margin: var(--size--x1) 0; }
