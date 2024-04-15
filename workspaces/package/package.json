@@ -46,6 +46,7 @@
     "@types/feather-icons": "*",
     "@types/lodash.omit": "^4.5.6",
     "@types/luxon": "^3.3.0",
+    "@types/node": "^20.12.7",
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.3",
     "@types/react-syntax-highlighter": "^15.5.6",

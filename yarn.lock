@@ -2096,6 +2096,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^20.12.7":
+  version: 20.12.7
+  resolution: "@types/node@npm:20.12.7"
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: 7cc979f7e2ca9a339ec71318c3901b9978555257929ef3666987f3e447123bc6dc92afcc89f6347e09e07d602fde7d51bcddea626c23aa2bb74aeaacfd1e1686
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0, @types/normalize-package-data@npm:^2.4.1":
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
@@ -12514,6 +12523,7 @@ __metadata:
     "@types/feather-icons": "*"
     "@types/lodash.omit": ^4.5.6
     "@types/luxon": ^3.3.0
+    "@types/node": ^20.12.7
     "@types/react": ^18.2.5
     "@types/react-dom": ^18.2.3
     "@types/react-syntax-highlighter": ^15.5.6
@@ -13649,6 +13659,7 @@ __metadata:
     "@semantic-release/changelog": ^6.0.0
     "@semantic-release/commit-analyzer": ^9.0.1
     "@semantic-release/git": ^10.0.0
+    "@types/node": ^20.12.7
     "@typescript-eslint/eslint-plugin": ^5.59.5
     "@typescript-eslint/parser": ^5.59.5
     concurrently: ^6.2.0
@@ -15597,6 +15608,13 @@ __metadata:
   version: 1.13.6
   resolution: "underscore@npm:1.13.6"
   checksum: d5cedd14a9d0d91dd38c1ce6169e4455bb931f0aaf354108e47bd46d3f2da7464d49b2171a5cf786d61963204a42d01ea1332a903b7342ad428deaafaf70ec36
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
   languageName: node
   linkType: hard
 
