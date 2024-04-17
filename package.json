@@ -19,7 +19,8 @@
     "lint:css": "stylelint workspaces/**/src/**/*.css",
     "lint:js": "eslint \"workspaces/**/src/**/*.tsx\" \"workspaces/**/src/**/*.ts\" --fix",
     "deploy:lib": "semantic-release",
-    "deploy:site": "firebase deploy"
+    "deploy:site": "firebase deploy",
+    "preview": "yarn workspace site run preview"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.0",
