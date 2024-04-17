@@ -18,18 +18,19 @@ export interface ModalFooterProps extends BoxProps {
 
 export const ModalFooter = forwardRef<any, ModalFooterProps>(
   ({ sticky, ...props }, ref) => {
-    const { paddingHorizontal, paddingVertical } = useModalContext();
+    const { borderColor, borderSize, paddingHorizontal, paddingVertical } =
+      useModalContext();
     const classes = classNames('Modal__footer', {
       'Modal__footer--sticky': sticky,
     });
 
     return (
       <Box
+        borderColor={borderColor}
+        borderSize={borderSize}
         paddingHorizontal={paddingHorizontal}
         paddingVertical={paddingVertical}
         {...props}
-        borderColor="background-shade-3"
-        borderSize="x2"
         borderTop
         className={classes}
         ref={ref}

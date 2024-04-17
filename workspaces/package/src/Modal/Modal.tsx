@@ -1,18 +1,16 @@
-import classNames from 'classnames';
 import { forwardRef, PointerEvent, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Appear, TypeAnimation } from '../Appear/Appear';
 import { Box, BoxProps } from '../Box/Box';
-import { useMatchMedia } from '../hooks';
 import { TypeColor } from '../types';
-import './Modal.css';
 import useIsModalVisible from './useIsModalVisible';
-import { ModalContext, ModalPaddings, ModalSize } from './useModalContext';
+import { ModalContext } from './useModalContext';
+import './Modal.css';
 
 /**
  * The containing component for all the other Modal components.
  * This component contains the unpadded dialog box as well as
- * an overlay, animations, behaviour to disable body scroll when
+ * an overlay, animations and behaviour to disable body scroll when
  * it is visible.
  */
 export interface ModalProps extends Omit<BoxProps, 'size'> {
@@ -45,12 +43,6 @@ export interface ModalProps extends Omit<BoxProps, 'size'> {
    */
   overlayBackgroundCloseOnClick?: boolean;
   /**
-   * The maximum width of the dialog box.
-   *
-   * @default "auto"
-   */
-  maxWidth?: string;
-  /**
    * An optional callback that when provided will be
    * called when clicking on the visible overlay area
    * and when clicking on the cross icon inside the
@@ -62,13 +54,6 @@ export interface ModalProps extends Omit<BoxProps, 'size'> {
    * has been removed from the DOM.
    */
   onCloseAnimationComplete?: () => void;
-  /**
-   * Set the size of the modal, increasing the space around
-   * the content accordingly.
-   *
-   * @default "x2"
-   */
-  size?: ModalSize;
   /**
    * Unrenders the modal when not visible
    *
@@ -87,17 +72,20 @@ export const Modal = forwardRef<any, ModalProps>((props, ref) => {
   const {
     animation = 'Fade',
     backgroundColor = 'background-shade-1',
+    borderColor = 'background-shade-3',
     borderRadius = 'x3',
+    borderSize = 'x1',
     children,
     fullscreen,
     ignoreModalManager,
-    maxWidth = 'auto',
+    maxWidth,
     onClose,
     onCloseAnimationComplete,
     margin,
     overlayBackgroundColor = 'overlay',
     overlayBackgroundCloseOnClick = true,
-    size = 'x2',
+    paddingHorizontal = 'x8',
+    paddingVertical = 'x6',
     unrender = true,
     visible,
     ...rest
@@ -106,15 +94,6 @@ export const Modal = forwardRef<any, ModalProps>((props, ref) => {
   const visibleManaged = useIsModalVisible(visible);
   const [render, setRender] = useState(visible);
   const refModal = useRef<HTMLDivElement>(null);
-  const match = useMatchMedia([maxWidth]);
-  const isMaxWidthEnabled = maxWidth !== 'auto';
-  const isGreaterThanMaxWidth = !isMaxWidthEnabled || match(maxWidth);
-  const classes = classNames('Modal', {
-    [`Modal--size-${size}`]: size,
-  });
-
-  const { horizontal: paddingHorizontal, vertical: paddingVertical } =
-    ModalPaddings[size];
 
   useEffect(() => {
     if (visible) {
@@ -155,14 +134,20 @@ export const Modal = forwardRef<any, ModalProps>((props, ref) => {
     <>
       {createPortal(
         <ModalContext.Provider
-          value={{ onClose, paddingHorizontal, paddingVertical }}
+          value={{
+            onClose,
+            borderColor,
+            borderSize,
+            paddingHorizontal,
+            paddingVertical,
+          }}
         >
           <Box
             {...rest}
             alignChildren="middle"
             fixed="edge-to-edge"
             flex="vertical"
-            padding={isGreaterThanMaxWidth ? margin : undefined}
+            padding={margin}
             ref={ref}
             style={{ pointerEvents: actuallyVisible ? undefined : 'none' }}
           >
@@ -178,17 +163,15 @@ export const Modal = forwardRef<any, ModalProps>((props, ref) => {
             <Appear
               animation={animation}
               backgroundColor={backgroundColor}
-              borderRadius={isGreaterThanMaxWidth ? borderRadius : undefined}
-              className={classes}
+              borderColor={borderColor}
+              borderRadius={borderRadius}
+              borderSize={borderSize}
+              className="Modal"
               container
               flex="vertical"
-              grow={fullscreen || (isMaxWidthEnabled && !match(maxWidth))}
+              grow={fullscreen}
               maxHeight="100vh"
-              maxWidth={
-                (isMaxWidthEnabled && maxWidth) ||
-                (fullscreen && '100%') ||
-                undefined
-              }
+              maxWidth={(fullscreen && '100%') || maxWidth}
               overflow="auto"
               ref={refModal}
               shrink

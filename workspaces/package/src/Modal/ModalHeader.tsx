@@ -26,7 +26,13 @@ export interface ModalHeaderProps extends BoxProps {
 
 export const ModalHeader = forwardRef<any, ModalHeaderProps>((props, ref) => {
   const { children, closeIconSize = '24px', sticky, ...rest } = props;
-  const { onClose, paddingHorizontal, paddingVertical } = useModalContext();
+  const {
+    borderColor,
+    borderSize,
+    onClose,
+    paddingHorizontal,
+    paddingVertical,
+  } = useModalContext();
   const classes = classNames('Modal__header', {
     'Modal__header--sticky': sticky,
   });
@@ -38,13 +44,13 @@ export const ModalHeader = forwardRef<any, ModalHeaderProps>((props, ref) => {
 
   return (
     <Box
+      borderColor={borderColor}
+      borderSize={borderSize}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
       {...rest}
       alignChildrenVertical="start"
       borderBottom
-      borderColor="background-shade-3"
-      borderSize="x2"
       className={classes}
       flex="horizontal"
       gap="x6"
