@@ -1,3 +1,17 @@
+## [19.0.0](https://github.com/HHogg/preshape/compare/v18.1.3...v19.0.0) (2024-04-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Modal:** - Removed the `size` prop, just use the padding props.
+- Removed the fullscreen responsive behavior, it now needs to be controlled by the user with the fullscreen prop.
+- Apply border styles to the Modal component rather than ModalHeader and ModalFooter.
+
+### Features
+
+* **Box:** Support non-Box elements from interfering with margin pattern ([b26aed0](https://github.com/HHogg/preshape/commit/b26aed0cdfe463a165e4d8ac46a930e0f1737ad1))
+* **Modal:** Removed size prop, border styling, removed fullscreen responsive behavior. ([88e067e](https://github.com/HHogg/preshape/commit/88e067ebfa6d5289f8bce03f0b2c87a1fb31cc76))
+
 ### [18.1.3](https://github.com/HHogg/preshape/compare/v18.1.2...v18.1.3) (2024-03-31)
 
 
