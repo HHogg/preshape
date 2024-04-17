@@ -20,6 +20,7 @@ import { ComponentsPage } from './pages/Components';
 import { SizingsPage } from './pages/Sizings';
 import { ThemesPage } from './pages/Themes';
 import 'preshape/dist/style.css';
+import './App.css';
 
 const App = () => {
   const [menuVisible, setMenuVisible] = useState(false);

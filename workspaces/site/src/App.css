@@ -1,0 +1,12 @@
+/**
+ * https://github.com/artsy/fresnel
+ * Fresnel is a React library that uses media queries to
+ * conditionally render components based on the current device.
+ *
+ * One drawback is that it renders an empty div which interferes
+ * with the layout. When it's empty we hide it, so it's removed
+ * from things like flexbox calculations.
+ */
+.fresnel-container:empty {
+  display: none;
+}
