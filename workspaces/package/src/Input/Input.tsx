@@ -25,6 +25,7 @@ export const Input = forwardRef<
     backgroundColor = 'background-shade-1',
     borderRadius = 'x2',
     borderSize = 'x2',
+    defaultValue,
     disabled,
     gap = 'x3',
     invalid,
@@ -71,6 +72,7 @@ export const Input = forwardRef<
         align={align}
         basis="0"
         className={inputClassName}
+        defaultValue={defaultValue}
         disabled={disabled}
         grow
         onChange={onChange}
