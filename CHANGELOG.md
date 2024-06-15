@@ -1,3 +1,10 @@
+### [19.0.1](https://github.com/HHogg/preshape/compare/v19.0.0...v19.0.1) (2024-06-15)
+
+
+### Fixes
+
+* **Input:** Pass defaultValue to input ([ab63e37](https://github.com/HHogg/preshape/commit/ab63e3761050bc82516357709a5f5b5e513b137e))
+
 ## [19.0.0](https://github.com/HHogg/preshape/compare/v18.1.3...v19.0.0) (2024-04-17)
 
 
