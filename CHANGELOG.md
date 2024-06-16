@@ -1,3 +1,10 @@
+### [19.0.2](https://github.com/HHogg/preshape/compare/v19.0.1...v19.0.2) (2024-06-16)
+
+
+### Fixes
+
+* **InputLabel:** Allow tag to be configurable ([5603e4e](https://github.com/HHogg/preshape/commit/5603e4ebefabeb1b9af8729b333b32aaf3b81d67))
+
 ### [19.0.1](https://github.com/HHogg/preshape/compare/v19.0.0...v19.0.1) (2024-06-15)
 
 
