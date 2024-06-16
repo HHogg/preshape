@@ -23,6 +23,7 @@ export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
     description,
     label,
     paddingHorizontal = 'x3',
+    tag = 'label',
     ...rest
   } = props;
 
@@ -37,7 +38,7 @@ export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
       flex="vertical"
       gap="x2"
       ref={ref}
-      tag="label"
+      tag={tag}
     >
       {label && (
         <Text
