@@ -1,3 +1,11 @@
+### [19.0.3](https://github.com/HHogg/preshape/compare/v19.0.2...v19.0.3) (2024-06-18)
+
+
+### Fixes
+
+* **InputLabel:** Added prop to control label text alignment ([9fc1623](https://github.com/HHogg/preshape/commit/9fc1623f8826d2e4fb653aa0325b3e3742514f43))
+* **TextArea:** Remove resize control ([47b8193](https://github.com/HHogg/preshape/commit/47b8193cf13f4f15c9fec675036a41f60b901fcb))
+
 ### [19.0.2](https://github.com/HHogg/preshape/compare/v19.0.1...v19.0.2) (2024-06-16)
 
 
