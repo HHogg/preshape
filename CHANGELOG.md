@@ -1,3 +1,11 @@
+### [19.0.4](https://github.com/HHogg/preshape/compare/v19.0.3...v19.0.4) (2024-06-18)
+
+
+### Fixes
+
+* **Input:** Forwarded rows prop to input element ([2198fb0](https://github.com/HHogg/preshape/commit/2198fb0f0d7ce124bb9f025325dfc183b3b6331c))
+* **InputWrapper:** Added alignment props for the addons ([3954c01](https://github.com/HHogg/preshape/commit/3954c010a7bd229392b03c855c567f55a39aaac3))
+
 ### [19.0.3](https://github.com/HHogg/preshape/compare/v19.0.2...v19.0.3) (2024-06-18)
 
 
