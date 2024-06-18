@@ -14,9 +14,17 @@ export interface InputWrapperProps extends BoxProps {
    */
   addonEnd?: JSX.Element;
   /**
+   * Vertical alignment of the end addon
+   */
+  addonEndAlignment?: BoxProps['alignSelf'];
+  /**
    * Addon that appears after the Input
    */
   addonStart?: JSX.Element;
+  /**
+   * Vertical alignment of the start addon
+   */
+  addonStartAlignment?: BoxProps['alignSelf'];
   /**
    * Sets styling to indicate the input is invalid.
    */
@@ -38,7 +46,9 @@ export interface InputWrapperProps extends BoxProps {
 export const InputWrapper = forwardRef<any, InputWrapperProps>((props, ref) => {
   const {
     addonEnd,
+    addonEndAlignment,
     addonStart,
+    addonStartAlignment,
     backgroundColor,
     borderRadius = 'x2',
     borderSize = 'x2',
@@ -75,9 +85,9 @@ export const InputWrapper = forwardRef<any, InputWrapperProps>((props, ref) => {
       paddingVertical={paddingVertical}
       ref={ref}
     >
-      {addonStart && addonStart}
+      {addonStart && <Box alignSelf={addonStartAlignment}>{addonStart}</Box>}
       {children}
-      {addonEnd && addonEnd}
+      {addonEnd && <Box alignSelf={addonEndAlignment}>{addonEnd}</Box>}
     </Box>
   );
 });
