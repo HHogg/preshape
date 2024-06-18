@@ -35,6 +35,7 @@ export const Input = forwardRef<
     paddingVertical = 'x2',
     placeholder,
     placeholderTextColor = 'text-shade-4',
+    rows,
     size = 'x3',
     readOnly,
     tag = 'input',
@@ -80,6 +81,7 @@ export const Input = forwardRef<
         name={name}
         readOnly={readOnly}
         ref={refFormElement}
+        rows={rows}
         size={size}
         tag={tag}
         textColor={textColor}
