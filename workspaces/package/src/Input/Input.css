@@ -29,6 +29,7 @@
   padding: 0;
   text-overflow: ellipsis;
   appearance: none;
+  resize: none;
 
   &:focus::placeholder {
     color: transparent;
