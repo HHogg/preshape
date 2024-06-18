@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import { Box, BoxProps } from '../Box/Box';
-import { Text } from '../Text/Text';
+import { Text, TextProps } from '../Text/Text';
 
 /**
  * The label element of the input. This should be placed
@@ -12,6 +12,10 @@ export interface InputLabelProps extends Omit<BoxProps, 'label'> {
    */
   description?: string | JSX.Element;
   /**
+   * Alignment of the description text.
+   */
+  descriptionAlign?: TextProps['align'];
+  /**
    * The label string that is rendered above the Input.
    */
   label?: string | JSX.Element;
@@ -21,6 +25,7 @@ export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
   const {
     children,
     description,
+    descriptionAlign,
     label,
     paddingHorizontal = 'x3',
     tag = 'label',
@@ -59,6 +64,7 @@ export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
 
       {description && (
         <Text
+          align={descriptionAlign}
           paddingHorizontal={paddingHorizontal}
           size="x2"
           textColor="text-shade-3"
