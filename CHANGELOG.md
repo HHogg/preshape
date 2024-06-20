@@ -1,3 +1,10 @@
+### [19.0.5](https://github.com/HHogg/preshape/compare/v19.0.4...v19.0.5) (2024-06-20)
+
+
+### Fixes
+
+* **framer:** Bumped framer version ([ef49683](https://github.com/HHogg/preshape/commit/ef49683803709c206f7c2e63cef1b857e05092d0))
+
 ### [19.0.4](https://github.com/HHogg/preshape/compare/v19.0.3...v19.0.4) (2024-06-18)
 
 
