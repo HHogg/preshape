@@ -15,6 +15,7 @@
     "ssg": "node prerender"
   },
   "dependencies": {
+    "@artsy/fresnel": "^7.1.4",
     "lodash.omit": "^4.5.0",
     "lucide-react": "^0.291.0",
     "luxon": "^3.3.0",
