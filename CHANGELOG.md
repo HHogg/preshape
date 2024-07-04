@@ -1,3 +1,10 @@
+### [19.0.6](https://github.com/HHogg/preshape/compare/v19.0.5...v19.0.6) (2024-07-04)
+
+
+### Fixes
+
+* **useLocalStorage:** Fixed type of setter ([ba4637a](https://github.com/HHogg/preshape/commit/ba4637a203784471b979248d90d19456e8436c1e))
+
 ### [19.0.5](https://github.com/HHogg/preshape/compare/v19.0.4...v19.0.5) (2024-06-20)
 
 
