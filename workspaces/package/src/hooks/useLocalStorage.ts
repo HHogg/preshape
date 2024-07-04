@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 function useLocalStorage<T>(
   key: string,
   initialValue: T
-): [T, (state: T) => void];
+): [T, (state: T | ((state: T) => void)) => void];
 function useLocalStorage<T = undefined>(key: string, initialValue = undefined) {
   const [storedValue, setStoredValue] = useState<T | undefined>(() => {
     try {
