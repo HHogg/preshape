@@ -88,13 +88,9 @@ export const ButtonAsync = forwardRef<any, ButtonAsyncProps>(
     return (
       <Button
         {...rest}
-        variant={
-          isLoading || showHappyFace || showSadFace ? 'secondary' : variant
-        }
+        variant={isError && variant === 'tertiary' ? 'secondary' : variant}
         color={
-          (showSadFace && 'negative') ||
-          (showHappyFace && 'positive') ||
-          rest.color
+          (isError && 'negative') || (showHappyFace && 'positive') || rest.color
         }
         container
         ref={ref}
