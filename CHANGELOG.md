@@ -1,3 +1,10 @@
+## [19.1.0](https://github.com/HHogg/preshape/compare/v19.0.7...v19.1.0) (2024-08-12)
+
+
+### Features
+
+* **ButtonAsync:** Allow isSuccess to be optional ([600ee41](https://github.com/HHogg/preshape/commit/600ee41ab7ae15af5b1a288decdbc67eacad095a))
+
 ### [19.0.7](https://github.com/HHogg/preshape/compare/v19.0.6...v19.0.7) (2024-08-12)
 
 
