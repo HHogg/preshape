@@ -23,8 +23,10 @@ export interface ButtonAsyncProps extends ButtonProps {
   isError: boolean;
   /** Whether the button is in a loading state */
   isLoading: boolean;
-  /** Whether the button is in a success state */
-  isSuccess: boolean;
+  /** Whether the button is in a success state.
+   * If omitted it will just return to the default state
+   */
+  isSuccess?: boolean;
 }
 
 export const ButtonAsync = forwardRef<any, ButtonAsyncProps>(
@@ -34,7 +36,7 @@ export const ButtonAsync = forwardRef<any, ButtonAsyncProps>(
       error,
       isError,
       isLoading,
-      isSuccess,
+      isSuccess = false,
       variant = 'secondary',
       ...rest
     },
