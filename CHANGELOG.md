@@ -1,3 +1,10 @@
+### [19.0.7](https://github.com/HHogg/preshape/compare/v19.0.6...v19.0.7) (2024-08-12)
+
+
+### Fixes
+
+* **ButtonAsync:** Add support for all variants ([93ef392](https://github.com/HHogg/preshape/commit/93ef39209baf87338df49de53a987e2fff288321))
+
 ### [19.0.6](https://github.com/HHogg/preshape/compare/v19.0.5...v19.0.6) (2024-07-04)
 
 
