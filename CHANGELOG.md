@@ -1,3 +1,9 @@
+## [19.1.1](https://github.com/HHogg/preshape/compare/v19.1.0...v19.1.1) (2024-09-22)
+
+### Fixes
+
+* **dependencies:** Updated some dependencies to latest ([a68c0d8](https://github.com/HHogg/preshape/commit/a68c0d82ad2d18e4280e058a5a52367907bec0e4))
+
 ## [19.1.0](https://github.com/HHogg/preshape/compare/v19.0.7...v19.1.0) (2024-08-12)
 
 
