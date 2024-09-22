@@ -1,5 +1,9 @@
 {
-  "include": ["src", "src/assets/documentation.json"],
+  "include": [
+    "src",
+    "src/assets/documentation.json",
+    "../package/src"
+  ],
   "references": [
     { "path": "./tsconfig.node.json" }
   ],
@@ -23,6 +27,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "preshape": ["../package/src"]
+    }
   }
 }

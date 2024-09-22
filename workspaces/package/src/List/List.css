@@ -1,21 +1,21 @@
 .ListItem:not(:last-child)::after {
   content: attr(data-separator);
 
-  @nest .List--x1 > & { margin-left: var(--size--x1); }
+  .List--x1 > & { margin-left: var(--size--x1); }
 
-  @nest .List--x2 > & { margin-left: var(--size--x2); }
+  .List--x2 > & { margin-left: var(--size--x2); }
 
-  @nest .List--x3 > & { margin-left: var(--size--x3); }
+  .List--x3 > & { margin-left: var(--size--x3); }
 
-  @nest .List--x4 > & { margin-left: var(--size--x4); }
+  .List--x4 > & { margin-left: var(--size--x4); }
 
-  @nest .List--x6 > & { margin-left: var(--size--x6); }
+  .List--x6 > & { margin-left: var(--size--x6); }
 
-  @nest .List--x8 > & { margin-left: var(--size--x8); }
+  .List--x8 > & { margin-left: var(--size--x8); }
 
-  @nest .List--x10 > & { margin-left: var(--size--x10); }
+  .List--x10 > & { margin-left: var(--size--x10); }
 
-  @nest .List--x12 > & { margin-left: var(--size--x12); }
+  .List--x12 > & { margin-left: var(--size--x12); }
 
-  @nest .List--x16 > & { margin-left: var(--size--x16); }
+  .List--x16 > & { margin-left: var(--size--x16); }
 }

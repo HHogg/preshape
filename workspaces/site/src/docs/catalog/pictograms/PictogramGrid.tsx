@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,16 +11,15 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-grid_svg__pictogram-grid"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-grid'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-22"
               fill="var(--color-text-shade-1)"
               x={4}
               y={8}
@@ -28,7 +28,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-25"
               fill="var(--color-text-shade-1)"
               x={4}
               y={36}
@@ -37,7 +36,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-28"
               fill="var(--color-text-shade-1)"
               x={4}
               y={64}
@@ -46,7 +44,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-24"
               fill="var(--color-text-shade-1)"
               x={169}
               y={8}
@@ -55,7 +52,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-26"
               fill="var(--color-text-shade-1)"
               x={169}
               y={36}
@@ -64,7 +60,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-23"
               fill="var(--color-text-shade-1)"
               x={84}
               y={8}
@@ -73,7 +68,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-27"
               fill="var(--color-text-shade-1)"
               x={84}
               y={36}
@@ -82,7 +76,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-grid_svg__Rectangle-Copy-29"
               fill="var(--color-text-shade-1)"
               x={84}
               y={64}
@@ -90,27 +83,9 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               height={24}
               rx={6}
             />
-            <circle
-              id="pictogram-grid_svg__Oval"
-              fill="var(--color-accent-shade-4)"
-              cx={16}
-              cy={20}
-              r={4}
-            />
-            <circle
-              id="pictogram-grid_svg__Oval-Copy"
-              fill="var(--color-accent-shade-4)"
-              cx={180}
-              cy={48}
-              r={4}
-            />
-            <circle
-              id="pictogram-grid_svg__Oval-Copy-2"
-              fill="var(--color-accent-shade-4)"
-              cx={96}
-              cy={76}
-              r={4}
-            />
+            <circle fill="var(--color-accent-shade-4)" cx={16} cy={20} r={4} />
+            <circle fill="var(--color-accent-shade-4)" cx={180} cy={48} r={4} />
+            <circle fill="var(--color-accent-shade-4)" cx={96} cy={76} r={4} />
           </g>
         </svg>
       }

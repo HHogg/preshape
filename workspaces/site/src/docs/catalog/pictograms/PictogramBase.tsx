@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,9 +11,14 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-base'}</title>
           <g
-            id="pictogram-base_svg__pictogram-base"
             stroke="none"
             strokeWidth={1}
             fill="none"
@@ -20,8 +26,7 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
             strokeDasharray={4}
           >
             <path
-              d="M40 24h168a8 8 0 018 8v32a8 8 0 01-8 8H40a8 8 0 01-8-8V32a8 8 0 018-8z"
-              id="pictogram-base_svg__Rectangle-Copy-10"
+              d="M40,24 L208,24 C212.418278,24 216,27.581722 216,32 L216,64 C216,68.418278 212.418278,72 208,72 L40,72 C35.581722,72 32,68.418278 32,64 L32,32 C32,27.581722 35.581722,24 40,24 Z"
               stroke="var(--color-text-shade-1)"
               strokeWidth={2}
             />

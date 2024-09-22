@@ -132,7 +132,7 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
       ref={ref}
       size={size}
       style={style}
-      tag={to || hrefProp ? 'a' : tag ?? 'button'}
+      tag={to || hrefProp ? 'a' : (tag ?? 'button')}
       weight={weight}
     />
   );

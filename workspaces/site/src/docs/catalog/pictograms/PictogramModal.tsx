@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,16 +11,15 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-modal_svg__pictogram-modal"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-modal'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
             <rect
-              id="pictogram-modal_svg__text-copy"
               fill="var(--color-text-shade-1)"
               x={4}
               y={4}
@@ -27,40 +27,22 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               height={88}
               rx={8}
             />
-            <path
-              id="pictogram-modal_svg__Rectangle-Copy-6"
+            <polygon
               fill="var(--color-background-shade-1)"
-              d="M4 28h240v2H4z"
+              points="4 28 244 28 244 30 4 30"
             />
             <g
-              id="pictogram-modal_svg__Group"
-              transform="rotate(45 106.429 282.599)"
+              transform="translate(231.000000, 16.000000) rotate(45.000000) translate(-231.000000, -16.000000) translate(225.000000, 10.000000)"
               fill="var(--color-accent-shade-4)"
             >
-              <rect
-                id="pictogram-modal_svg__Rectangle-Copy-24"
-                x={4.8}
-                y={0}
-                width={2.4}
-                height={12}
-                rx={0.5}
-              />
-              <rect
-                id="pictogram-modal_svg__Rectangle-Copy-25"
-                x={0}
-                y={4.8}
-                width={12}
-                height={2.4}
-                rx={0.5}
-              />
+              <rect x={4.8} y={0} width={2.4} height={12} rx={0.5} />
+              <rect x={0} y={4.8} width={12} height={2.4} rx={0.5} />
             </g>
             <path
-              d="M14 14h60a2 2 0 110 4H14a2 2 0 110-4z"
-              id="pictogram-modal_svg__Rectangle-Copy-6"
+              d="M14,14 L74,14 C75.1045695,14 76,14.8954305 76,16 C76,17.1045695 75.1045695,18 74,18 L14,18 C12.8954305,18 12,17.1045695 12,16 C12,14.8954305 12.8954305,14 14,14 Z"
               fill="var(--color-background-shade-1)"
             />
             <rect
-              id="pictogram-modal_svg__Rectangle-Copy-2"
               fill="var(--color-background-shade-1)"
               x={12}
               y={48}
@@ -69,7 +51,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={2}
             />
             <rect
-              id="pictogram-modal_svg__Rectangle-Copy-4"
               fill="var(--color-background-shade-1)"
               x={12}
               y={64}
@@ -78,7 +59,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={2}
             />
             <rect
-              id="pictogram-modal_svg__Rectangle-Copy-3"
               fill="var(--color-background-shade-1)"
               x={12}
               y={56}
@@ -87,7 +67,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={2}
             />
             <rect
-              id="pictogram-modal_svg__Rectangle-Copy-5"
               fill="var(--color-background-shade-1)"
               x={12}
               y={72}

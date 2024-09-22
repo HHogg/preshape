@@ -1,9 +1,8 @@
 import { Box, ModalManager, ThemeProvider } from 'preshape';
-import 'preshape/dist/style.css';
 import { type PropsWithChildren } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import './App.css';
 import Message from './Message';
+import './App.css';
 
 const AppShell = ({ children }: PropsWithChildren) => {
   return (

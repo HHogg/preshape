@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+      "composite": true,
       "target": "ESNext",
       "useDefineForClassFields": true,
       "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -13,8 +14,8 @@
       "moduleResolution": "Node",
       "resolveJsonModule": true,
       "isolatedModules": true,
+      "jsx": "react-jsx",
       "noEmit": true,
-      "jsx": "react-jsx"
   },
   "include": ["./src"]
 }

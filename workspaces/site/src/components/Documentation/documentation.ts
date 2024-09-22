@@ -104,7 +104,7 @@ export const getModuleSummary = (apis: CatalogueApi[]): PageSummaryConfig[] => {
     (api) =>
       [api, getByModuleAndName(api.name)] as [
         CatalogueApi,
-        JSONOutput.DeclarationReflection
+        JSONOutput.DeclarationReflection,
       ]
   );
 

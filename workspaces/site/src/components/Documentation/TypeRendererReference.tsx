@@ -27,7 +27,6 @@ const TypeRendererReference = (props: PropsWithChildren<Props>) => {
     return <TypeRenderer {...props} reflection={api} type={api.type} />;
   }
 
-  // eslint-disable-next-line no-console
   console.log(`TypeRendererReference: unhandled API: ${type.name}`);
 
   return <TypeLabel>{type.name}</TypeLabel>;

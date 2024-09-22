@@ -19,7 +19,7 @@ const ModuleDocumentation = ({
     (api) =>
       [api, getByModuleAndName(api.name)] as [
         CatalogueApi,
-        JSONOutput.DeclarationReflection
+        JSONOutput.DeclarationReflection,
       ]
   );
 

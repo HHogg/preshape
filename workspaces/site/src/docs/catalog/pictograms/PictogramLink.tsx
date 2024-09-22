@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,16 +11,15 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-link_svg__pictogram-link"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-link'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
             <rect
-              id="pictogram-link_svg__Rectangle-Copy-4"
               fill="var(--color-text-shade-1)"
               x={24}
               y={28}
@@ -28,7 +28,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-link_svg__Rectangle-Copy-5"
               fill="var(--color-accent-shade-4)"
               x={24}
               y={56}

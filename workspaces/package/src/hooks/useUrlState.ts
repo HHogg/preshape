@@ -77,7 +77,6 @@ function useUrlState<S>(props: Props<S>) {
         try {
           urlState[key] = decoder(encodedValue, urlSearchParams);
         } catch (e) {
-          // eslint-disable-next-line no-console
           console.error(e);
         }
       }
@@ -123,7 +122,6 @@ function useUrlState<S>(props: Props<S>) {
         try {
           urlSearchParams.set(key, encoder(decodedValue));
         } catch (e) {
-          // eslint-disable-next-line no-console
           console.error(e);
         }
       }

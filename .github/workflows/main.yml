@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -18,10 +18,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: 'Install Dependencies'
         run: yarn
-      - name: 'Build package'
-        run: yarn workspace preshape build
       - name: 'Linting'
         run: yarn lint
+      - name: 'Build package'
+        run: yarn workspace preshape build
+      - name: 'Prepare PackageJSON for publishing'
+        run: yarn workspace preshape prepare:packageJson
       - name: 'Build site'
         run: yarn workspace site build
       - name: 'Publish package'

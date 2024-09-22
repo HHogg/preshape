@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,17 +11,16 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-code_svg__pictogram-code"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
-            <g id="pictogram-code_svg__Group" transform="translate(48 12)">
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-code'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+            <g transform="translate(48.000000, 12.000000)">
               <rect
-                id="pictogram-code_svg__Rectangle"
                 fill="var(--color-text-shade-1)"
                 x={0}
                 y={0}
@@ -29,7 +29,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={2}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-5"
                 fill="var(--color-text-shade-1)"
                 x={16}
                 y={0}
@@ -38,7 +37,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-6"
                 fill="var(--color-accent-shade-4)"
                 x={24}
                 y={16}
@@ -47,7 +45,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-20"
                 fill="var(--color-accent-shade-4)"
                 x={68}
                 y={0}
@@ -56,7 +53,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-21"
                 fill="var(--color-accent-shade-4)"
                 x={120}
                 y={32}
@@ -65,7 +61,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-8"
                 fill="var(--color-text-shade-1)"
                 x={24}
                 y={48}
@@ -74,7 +69,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-13"
                 fill="var(--color-text-shade-1)"
                 x={52}
                 y={0}
@@ -83,7 +77,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-11"
                 fill="var(--color-text-shade-1)"
                 x={60}
                 y={32}
@@ -92,7 +85,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-18"
                 fill="var(--color-text-shade-1)"
                 x={96}
                 y={16}
@@ -101,7 +93,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-19"
                 fill="var(--color-text-shade-1)"
                 x={112}
                 y={16}
@@ -110,7 +101,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-15"
                 fill="var(--color-text-shade-1)"
                 x={76}
                 y={32}
@@ -119,7 +109,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-25"
                 fill="var(--color-text-shade-1)"
                 x={140}
                 y={32}
@@ -128,7 +117,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-10"
                 fill="var(--color-text-shade-1)"
                 x={40}
                 y={48}
@@ -137,7 +125,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-22"
                 fill="var(--color-text-shade-1)"
                 x={88}
                 y={0}
@@ -146,7 +133,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-9"
                 fill="var(--color-text-shade-1)"
                 x={16}
                 y={64}
@@ -155,7 +141,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-12"
                 fill="var(--color-text-shade-1)"
                 x={44}
                 y={16}
@@ -164,7 +149,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-14"
                 fill="var(--color-text-shade-1)"
                 x={64}
                 y={48}
@@ -173,7 +157,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-24"
                 fill="var(--color-accent-shade-4)"
                 x={68}
                 y={64}
@@ -182,7 +165,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-23"
                 fill="var(--color-text-shade-1)"
                 x={76}
                 y={48}
@@ -191,7 +173,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-7"
                 fill="var(--color-text-shade-1)"
                 x={32}
                 y={32}
@@ -200,7 +181,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-16"
                 fill="var(--color-text-shade-1)"
                 x={92}
                 y={32}
@@ -209,7 +189,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-code_svg__Rectangle-Copy-17"
                 fill="var(--color-text-shade-1)"
                 x={116}
                 y={48}

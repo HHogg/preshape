@@ -32,6 +32,24 @@
       }
     ],
     "@semantic-release/changelog",
+    ["semantic-release-replace-plugin", {
+      "replacements": [
+        {
+          "files": ["workspaces/site/package.json"],
+          "from": "workspace\\:\\^",
+          "to": "${nextRelease.version}",
+          "countMatches": true,
+          "results": [
+            {
+              "file": "workspaces/site/package.json",
+              "hasChanged": true,
+              "numMatches": 1,
+              "numReplacements": 1
+            }
+          ]
+        }
+      ]
+    }],
     [
       "@semantic-release/npm",
       {

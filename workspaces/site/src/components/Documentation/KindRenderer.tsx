@@ -13,7 +13,6 @@ const KindRenderer = (props: APIItemProps) => {
   const KindRenderer = KindMap[reflection.kind];
 
   if (!KindRenderer) {
-    // eslint-disable-next-line no-console
     console.log(`No kind renderer for '${reflection.kind}'`);
     return null;
   }

@@ -120,7 +120,7 @@ const Item: CatalogueItem<{
             {...errorState}
             error={
               errorState.isError
-                ? props.ButtonAsync.error ?? 'Something went wrong'
+                ? (props.ButtonAsync.error ?? 'Something went wrong')
                 : undefined
             }
             onClick={handleButtonFailureClick}

@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,16 +11,15 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-tabs_svg__pictogram-tabs"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-tabs'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
             <rect
-              id="pictogram-tabs_svg__Rectangle"
               fill="var(--color-text-shade-1)"
               x={8}
               y={34}
@@ -28,12 +28,10 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <path
-              d="M90 24h60a6 6 0 016 6v42H84V30a6 6 0 016-6z"
-              id="pictogram-tabs_svg__Rectangle-Copy"
+              d="M90,24 L150,24 C153.313708,24 156,26.6862915 156,30 L156,72 L156,72 L84,72 L84,30 C84,26.6862915 86.6862915,24 90,24 Z"
               fill="var(--color-text-shade-1)"
             />
             <rect
-              id="pictogram-tabs_svg__Rectangle-Copy-5"
               fill="var(--color-text-shade-1)"
               x={160}
               y={35}
@@ -42,7 +40,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={6}
             />
             <rect
-              id="pictogram-tabs_svg__Rectangle-Copy-2"
               fill="var(--color-background-shade-1)"
               x={22}
               y={56}
@@ -51,7 +48,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={1}
             />
             <rect
-              id="pictogram-tabs_svg__Rectangle-Copy-3"
               fill="var(--color-accent-shade-4)"
               x={98}
               y={44}
@@ -60,7 +56,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={1}
             />
             <rect
-              id="pictogram-tabs_svg__Rectangle-Copy-4"
               fill="var(--color-background-shade-1)"
               x={174}
               y={56}
@@ -69,7 +64,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={1}
             />
             <rect
-              id="pictogram-tabs_svg__Rectangle"
               fill="var(--color-text-shade-1)"
               x={8}
               y={72}

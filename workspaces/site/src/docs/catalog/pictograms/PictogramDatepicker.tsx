@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,16 +11,15 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-datepicker_svg__pictogram-datepicker"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-datepicker'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-12"
               fill="var(--color-text-shade-1)"
               x={28}
               y={8}
@@ -28,42 +28,34 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <path
-              d="M28 0h24a4 4 0 01-4 4H32a4 4 0 01-4-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-19"
+              d="M28,0 L52,0 C52,2.209139 50.209139,4 48,4 L32,4 C29.790861,4 28,2.209139 28,0 L28,0 L28,0 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M84 0h24a4 4 0 01-4 4H88a4 4 0 01-4-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-33"
+              d="M84,0 L108,0 C108,2.209139 106.209139,4 104,4 L88,4 C85.790861,4 84,2.209139 84,0 L84,0 L84,0 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M168 0h24a4 4 0 01-4 4h-16a4 4 0 01-4-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-35"
+              d="M168,0 L192,0 C192,2.209139 190.209139,4 188,4 L172,4 C169.790861,4 168,2.209139 168,0 L168,0 L168,0 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M56 0h24a4 4 0 01-4 4H60a4 4 0 01-4-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-21"
+              d="M56,0 L80,0 C80,2.209139 78.209139,4 76,4 L60,4 C57.790861,4 56,2.209139 56,0 L56,0 L56,0 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M140 0h24a4 4 0 01-4 4h-16a4 4 0 01-4-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-36"
+              d="M140,0 L164,0 C164,2.209139 162.209139,4 160,4 L144,4 C141.790861,4 140,2.209139 140,0 L140,0 L140,0 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M112 0h24a4 4 0 01-4 4h-16a4 4 0 01-4-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-34"
+              d="M112,0 L136,0 C136,2.209139 134.209139,4 132,4 L116,4 C113.790861,4 112,2.209139 112,0 L112,0 L112,0 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M196 0h24a4 4 0 01-4 4h-16a4 4 0 01-4-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-37"
+              d="M196,0 L220,0 C220,2.209139 218.209139,4 216,4 L200,4 C197.790861,4 196,2.209139 196,0 L196,0 L196,0 Z"
               fill="var(--color-text-shade-1)"
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-26"
               fill="var(--color-text-shade-1)"
               x={28}
               y={64}
@@ -72,7 +64,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-13"
               fill="var(--color-text-shade-1)"
               x={56}
               y={8}
@@ -81,7 +72,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-20"
               fillOpacity={0.3}
               fill="var(--color-accent-shade-4)"
               x={28}
@@ -91,7 +81,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={12}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-27"
               fill="var(--color-text-shade-1)"
               x={56}
               y={64}
@@ -100,7 +89,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-14"
               fill="var(--color-text-shade-1)"
               x={84}
               y={8}
@@ -109,7 +97,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-28"
               fill="var(--color-text-shade-1)"
               x={84}
               y={64}
@@ -118,7 +105,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-15"
               fill="var(--color-text-shade-1)"
               x={112}
               y={8}
@@ -127,7 +113,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-22"
               fill="var(--color-accent-shade-4)"
               x={112}
               y={36}
@@ -136,7 +121,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={12}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-29"
               fill="var(--color-text-shade-1)"
               x={112}
               y={64}
@@ -145,7 +129,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-16"
               fill="var(--color-text-shade-1)"
               x={140}
               y={8}
@@ -154,7 +137,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-23"
               fill="var(--color-text-shade-1)"
               x={140}
               y={36}
@@ -163,7 +145,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-30"
               fill="var(--color-text-shade-1)"
               x={140}
               y={64}
@@ -172,7 +153,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-17"
               fill="var(--color-accent-shade-4)"
               x={168}
               y={8}
@@ -181,7 +161,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={12}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-24"
               fill="var(--color-text-shade-1)"
               x={168}
               y={36}
@@ -190,7 +169,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-31"
               fill="var(--color-text-shade-1)"
               x={168}
               y={64}
@@ -199,7 +177,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-18"
               fillOpacity={0.3}
               fill="var(--color-accent-shade-4)"
               x={168}
@@ -209,7 +186,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={12}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-25"
               fill="var(--color-text-shade-1)"
               x={196}
               y={36}
@@ -218,7 +194,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-datepicker_svg__Rectangle-Copy-32"
               fill="var(--color-text-shade-1)"
               x={196}
               y={64}
@@ -227,38 +202,31 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <path
-              d="M32 92h16a4 4 0 014 4H28a4 4 0 014-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-38"
+              d="M32,92 L48,92 C50.209139,92 52,93.790861 52,96 L52,96 L52,96 L28,96 C28,93.790861 29.790861,92 32,92 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M88 92h16a4 4 0 014 4H84a4 4 0 014-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-40"
+              d="M88,92 L104,92 C106.209139,92 108,93.790861 108,96 L108,96 L108,96 L84,96 C84,93.790861 85.790861,92 88,92 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M172 92h16a4 4 0 014 4h-24a4 4 0 014-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-42"
+              d="M172,92 L188,92 C190.209139,92 192,93.790861 192,96 L192,96 L192,96 L168,96 C168,93.790861 169.790861,92 172,92 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M60 92h16a4 4 0 014 4H56a4 4 0 014-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-39"
+              d="M60,92 L76,92 C78.209139,92 80,93.790861 80,96 L80,96 L80,96 L56,96 C56,93.790861 57.790861,92 60,92 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M144 92h16a4 4 0 014 4h-24a4 4 0 014-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-43"
+              d="M144,92 L160,92 C162.209139,92 164,93.790861 164,96 L164,96 L164,96 L140,96 C140,93.790861 141.790861,92 144,92 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M116 92h16a4 4 0 014 4h-24a4 4 0 014-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-41"
+              d="M116,92 L132,92 C134.209139,92 136,93.790861 136,96 L136,96 L136,96 L112,96 C112,93.790861 113.790861,92 116,92 Z"
               fill="var(--color-text-shade-1)"
             />
             <path
-              d="M200 92h16a4 4 0 014 4h-24a4 4 0 014-4z"
-              id="pictogram-datepicker_svg__Rectangle-Copy-44"
+              d="M200,92 L216,92 C218.209139,92 220,93.790861 220,96 L220,96 L220,96 L196,96 C196,93.790861 197.790861,92 200,92 Z"
               fill="var(--color-text-shade-1)"
             />
           </g>

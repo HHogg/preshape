@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,17 +11,16 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-checkbox_svg__pictogram-checkbox"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
-            <g id="pictogram-checkbox_svg__Group" transform="translate(4 30)">
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-checkbox'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+            <g transform="translate(4.000000, 30.000000)">
               <rect
-                id="pictogram-checkbox_svg__Rectangle-Copy-2"
                 fill="var(--color-text-shade-1)"
                 x={0}
                 y={0}
@@ -29,7 +29,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={8}
               />
               <rect
-                id="pictogram-checkbox_svg__Rectangle-Copy-2"
                 fill="var(--color-background-shade-1)"
                 x={12}
                 y={10}
@@ -38,7 +37,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={4}
               />
               <rect
-                id="pictogram-checkbox_svg__Rectangle-Copy-2"
                 fill="var(--color-accent-shade-4)"
                 x={18}
                 y={16}
@@ -47,7 +45,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={2}
               />
               <rect
-                id="pictogram-checkbox_svg__Rectangle"
                 fill="var(--color-background-shade-1)"
                 x={44}
                 y={16}

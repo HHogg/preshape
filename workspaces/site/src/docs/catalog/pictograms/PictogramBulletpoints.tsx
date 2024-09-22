@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,16 +11,15 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-bulletpoints_svg__pictogram-bulletpoints"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-bulletpoints'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
             <rect
-              id="pictogram-bulletpoints_svg__Rectangle-Copy-16"
               fill="var(--color-text-shade-1)"
               x={82}
               y={30}
@@ -28,7 +28,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-bulletpoints_svg__Rectangle-Copy-18"
               fill="var(--color-text-shade-1)"
               x={82}
               y={44}
@@ -37,7 +36,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-bulletpoints_svg__Rectangle-Copy-20"
               fill="var(--color-text-shade-1)"
               x={82}
               y={58}
@@ -46,7 +44,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-bulletpoints_svg__Rectangle-Copy-17"
               fill="var(--color-accent-shade-4)"
               x={70}
               y={30}
@@ -55,7 +52,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-bulletpoints_svg__Rectangle-Copy-19"
               fill="var(--color-accent-shade-4)"
               x={70}
               y={44}
@@ -64,7 +60,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               rx={4}
             />
             <rect
-              id="pictogram-bulletpoints_svg__Rectangle-Copy-21"
               fill="var(--color-accent-shade-4)"
               x={70}
               y={58}

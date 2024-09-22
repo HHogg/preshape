@@ -1,3 +1,4 @@
+/** AUTO GENERATED **/
 import { Box, BoxProps } from 'preshape';
 import { forwardRef } from 'react';
 export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
@@ -10,16 +11,15 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
       viewBox="0 0 248 96"
     >
       {
-        <svg viewBox="0 0 248 96" xmlns="http://www.w3.org/2000/svg" {...props}>
-          <g
-            id="pictogram-editor_svg__pictogram-editor"
-            stroke="none"
-            strokeWidth={1}
-            fill="none"
-            fillRule="evenodd"
-          >
+        <svg
+          viewBox="0 0 248 96"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          {...props}
+        >
+          <title>{'pictogram-editor'}</title>
+          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
             <rect
-              id="pictogram-editor_svg__text-copy-2"
               fill="var(--color-text-shade-1)"
               x={4}
               y={4}
@@ -27,9 +27,8 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               height={88}
               rx={8}
             />
-            <g id="pictogram-editor_svg__Group" transform="translate(16 12)">
+            <g transform="translate(16.000000, 12.000000)">
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-5"
                 fill="var(--color-background-shade-1)"
                 x={16}
                 y={0}
@@ -38,7 +37,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-8"
                 fill="var(--color-background-shade-1)"
                 x={24}
                 y={24}
@@ -47,7 +45,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-13"
                 fill="var(--color-background-shade-1)"
                 x={52}
                 y={0}
@@ -56,7 +53,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-11"
                 fill="var(--color-accent-shade-4)"
                 x={60}
                 y={16}
@@ -65,7 +61,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-15"
                 fill="var(--color-accent-shade-4)"
                 x={76}
                 y={16}
@@ -74,7 +69,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-10"
                 fill="var(--color-background-shade-1)"
                 x={40}
                 y={24}
@@ -83,7 +77,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-9"
                 fill="var(--color-background-shade-1)"
                 x={16}
                 y={32}
@@ -92,7 +85,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-12"
                 fill="var(--color-background-shade-1)"
                 x={44}
                 y={8}
@@ -101,7 +93,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-14"
                 fill="var(--color-background-shade-1)"
                 x={64}
                 y={24}
@@ -110,7 +101,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-7"
                 fill="var(--color-accent-shade-4)"
                 x={32}
                 y={16}
@@ -119,7 +109,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-6"
                 fill="var(--color-background-shade-1)"
                 x={24}
                 y={8}
@@ -128,7 +117,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={0}
@@ -137,7 +125,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={8}
@@ -146,7 +133,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-2"
                 fill="var(--color-accent-shade-4)"
                 x={0}
                 y={16}
@@ -155,7 +141,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-3"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={24}
@@ -164,7 +149,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-27"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={40}
@@ -173,7 +157,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-29"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={56}
@@ -182,7 +165,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-4"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={32}
@@ -191,7 +173,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-28"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={48}
@@ -200,7 +181,6 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
                 rx={1}
               />
               <rect
-                id="pictogram-editor_svg__Rectangle-Copy-30"
                 fill="var(--color-background-shade-1)"
                 x={0}
                 y={64}
@@ -210,223 +190,42 @@ export const Pictogram = forwardRef<SVGSVGElement, BoxProps>((props, ref) => {
               />
             </g>
             <g
-              id="pictogram-editor_svg__Group-Copy"
-              transform="translate(140 12)"
+              transform="translate(140.000000, 12.000000)"
               fill="var(--color-background-shade-1)"
             >
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-8"
-                x={24}
-                y={32}
-                width={12}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-11"
-                x={44}
-                y={8}
-                width={12}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-10"
-                x={40}
-                y={32}
-                width={20}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-17"
-                x={16}
-                y={24}
-                width={12}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-23"
-                x={28}
-                y={64}
-                width={12}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-9"
-                x={28}
-                y={40}
-                width={15}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-20"
-                x={32}
-                y={48}
-                width={28}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-19"
-                x={47}
-                y={40}
-                width={15}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-22"
-                x={28}
-                y={56}
-                width={15}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-12"
-                x={44}
-                y={0}
-                width={20}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-14"
-                x={64}
-                y={48}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-21"
-                x={64}
-                y={48}
-                width={12}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-18"
-                x={32}
-                y={24}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-24"
-                x={44}
-                y={64}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-7"
-                x={16}
-                y={8}
-                width={24}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-6"
-                x={24}
-                y={0}
-                width={16}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-16"
-                x={68}
-                y={0}
-                width={7}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle"
-                x={0}
-                y={0}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy"
-                x={0}
-                y={8}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-2"
-                x={0}
-                y={16}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-3"
-                x={0}
-                y={24}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-27"
-                x={0}
-                y={40}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-29"
-                x={0}
-                y={56}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-4"
-                x={0}
-                y={32}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-28"
-                x={0}
-                y={48}
-                width={8}
-                height={4}
-                rx={1}
-              />
-              <rect
-                id="pictogram-editor_svg__Rectangle-Copy-30"
-                x={0}
-                y={64}
-                width={8}
-                height={4}
-                rx={1}
-              />
+              <rect x={24} y={32} width={12} height={4} rx={1} />
+              <rect x={44} y={8} width={12} height={4} rx={1} />
+              <rect x={40} y={32} width={20} height={4} rx={1} />
+              <rect x={16} y={24} width={12} height={4} rx={1} />
+              <rect x={28} y={64} width={12} height={4} rx={1} />
+              <rect x={28} y={40} width={15} height={4} rx={1} />
+              <rect x={32} y={48} width={28} height={4} rx={1} />
+              <rect x={47} y={40} width={15} height={4} rx={1} />
+              <rect x={28} y={56} width={15} height={4} rx={1} />
+              <rect x={44} y={0} width={20} height={4} rx={1} />
+              <rect x={64} y={48} width={8} height={4} rx={1} />
+              <rect x={64} y={48} width={12} height={4} rx={1} />
+              <rect x={32} y={24} width={8} height={4} rx={1} />
+              <rect x={44} y={64} width={8} height={4} rx={1} />
+              <rect x={16} y={8} width={24} height={4} rx={1} />
+              <rect x={24} y={0} width={16} height={4} rx={1} />
+              <rect x={68} y={0} width={7} height={4} rx={1} />
+              <rect x={0} y={0} width={8} height={4} rx={1} />
+              <rect x={0} y={8} width={8} height={4} rx={1} />
+              <rect x={0} y={16} width={8} height={4} rx={1} />
+              <rect x={0} y={24} width={8} height={4} rx={1} />
+              <rect x={0} y={40} width={8} height={4} rx={1} />
+              <rect x={0} y={56} width={8} height={4} rx={1} />
+              <rect x={0} y={32} width={8} height={4} rx={1} />
+              <rect x={0} y={48} width={8} height={4} rx={1} />
+              <rect x={0} y={64} width={8} height={4} rx={1} />
             </g>
-            <path
-              id="pictogram-editor_svg__Rectangle"
+            <rect
               fill="var(--color-background-shade-1)"
-              d="M123 4h2v88h-2z"
+              x={123}
+              y={4}
+              width={2}
+              height={88}
             />
           </g>
         </svg>
