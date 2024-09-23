@@ -1,3 +1,9 @@
+## [19.1.3](https://github.com/HHogg/preshape/compare/v19.1.2...v19.1.3) (2024-09-23)
+
+### Fixes
+
+* **publishing:** Fixed type definiton file not being generated ([a424290](https://github.com/HHogg/preshape/commit/a42429080367087b5f737f760af376475f2e85a1))
+
 ## [19.1.2](https://github.com/HHogg/preshape/compare/v19.1.1...v19.1.2) (2024-09-22)
 
 ### Fixes
