@@ -7,17 +7,15 @@ import dts from 'vite-plugin-dts';
 export default defineConfig(() => ({
   plugins: [
     react(),
-    dts({
-      insertTypesEntry: true,
-    }),
+    dts(),
   ],
   build: {
     sourcemap: true,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'preshape',
-      formats: ['es', 'umd'],
-      fileName: (format) => `preshape.${format}.js`,
+      formats: ['es'],
+      fileName: (_) => 'preshape.js',
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react-router-dom'],

@@ -8,7 +8,7 @@
   "private": true,
   "type": "module",
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "yarn@4.5.0",
   "workspaces": [
     "workspaces/**"
   ],

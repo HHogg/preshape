@@ -8,8 +8,8 @@ const __dirname = dirname(__filename);
 const packageJsonPath = resolve(__dirname, '../package.json');
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
-packageJson.main = 'dist/preshape.es.js';
-packageJson.module = 'dist/preshape.es.js';
-packageJson.types = 'dist/preshape.es.d.ts';
+packageJson.main = 'dist/preshape.js';
+packageJson.module = 'dist/preshape.js';
+packageJson.types = 'dist/src/index.d.ts';
 
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));

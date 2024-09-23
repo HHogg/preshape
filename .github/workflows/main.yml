@@ -20,6 +20,8 @@ jobs:
         run: yarn
       - name: 'Linting'
         run: yarn lint
+      - name: 'Clean workspace'
+        run: yarn clean
       - name: 'Build workspace'
         run: yarn build
       - name: 'Prepare PackageJSON for publishing'
