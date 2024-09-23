@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "build": "yarn workspaces foreach -ptvR --from site run build",
+    "clean": "yarn workspaces foreach -ptvR --from site run clean",
     "dev": "yarn workspaces foreach -pviR --from site -j unlimited run dev",
     "format": "prettier --write .",
     "lint": "yarn lint:js && yarn lint:css",

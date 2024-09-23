@@ -1,2 +1,4 @@
-.svgrrc.js
-postcss.config.js
+scripts
+tsconfig.json
+tsconfig.tsbuildinfo
+vite.config.ts

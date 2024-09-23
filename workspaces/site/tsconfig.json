@@ -28,9 +28,5 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    "paths": {
-      "preshape": ["../package/src"]
-    }
   }
 }
