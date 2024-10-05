@@ -1,22 +1,24 @@
 import { ChevronLeftIcon } from 'lucide-react';
 import { PropsWithChildren } from 'react';
-import { Appear } from '../Appear/Appear';
+import { Appear, AppearProps } from '../Appear/Appear';
 import { Box } from '../Box/Box';
 import { Button } from '../Button/Button';
 import { Text } from '../Text/Text';
 
 type ContextMenuProps = {
+  animation?: AppearProps['animation'];
   onBack?: () => void;
   title: string;
 };
 
 export default function Menu({
+  animation = 'FadeSlideLeft',
   children,
   onBack,
   title,
 }: PropsWithChildren<ContextMenuProps>) {
   return (
-    <Appear animation="FadeSlideRight" delay={100} visible>
+    <Appear animation={animation} delay={100} visible>
       <Box
         alignChildrenVertical="middle"
         borderBottom

@@ -197,7 +197,7 @@ export const ConfigMenu = ({
       {...rest}
     >
       {activeKey === __root && (
-        <Menu title={title}>
+        <Menu animation="FadeSlideRight" title={title}>
           {config.map((entry, index) => {
             if (isDivider(entry)) {
               return <MenuItemDivider key={index} />;
