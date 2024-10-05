@@ -1,3 +1,10 @@
+## [19.1.5](https://github.com/HHogg/preshape/compare/v19.1.4...v19.1.5) (2024-10-05)
+
+### Fixes
+
+* **ConfigMenu:** Fixed animation direction for going back to the main menu ([aab10a5](https://github.com/HHogg/preshape/commit/aab10a597e74561a8658827349b8e2e5075e11a9))
+* **Motion:** Prop errors logging for forwarded props ([f6c8dde](https://github.com/HHogg/preshape/commit/f6c8dde12c6d43d8f9be3bec826955dc1ebca0de))
+
 ## [19.1.4](https://github.com/HHogg/preshape/compare/v19.1.3...v19.1.4) (2024-09-23)
 
 ### Fixes
