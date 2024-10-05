@@ -1,17 +1,25 @@
+import { HelmetProvider } from 'react-helmet-async';
 import DesktopApp from './components/App/AppDesktop';
 import MobileApp from './components/App/AppMobile';
 import { Media, MediaContextProvider } from './components/App/Media';
+import 'preshape/dist/style.css';
 
-const App = () => {
+type Props = {
+  helmetContext?: any;
+};
+
+const App = ({ helmetContext = {} }: Props) => {
   return (
-    <MediaContextProvider>
-      <Media greaterThanOrEqual="sm">
-        <DesktopApp />
-      </Media>
-      <Media lessThan="sm">
-        <MobileApp />
-      </Media>
-    </MediaContextProvider>
+    <HelmetProvider context={helmetContext}>
+      <MediaContextProvider>
+        <Media greaterThanOrEqual="sm">
+          <DesktopApp />
+        </Media>
+        <Media lessThan="sm">
+          <MobileApp />
+        </Media>
+      </MediaContextProvider>
+    </HelmetProvider>
   );
 };
 

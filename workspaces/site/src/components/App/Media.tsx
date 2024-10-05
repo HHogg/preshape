@@ -7,6 +7,4 @@ const PreshapeMedia = createMedia({
   },
 });
 
-export const mediaStyles = PreshapeMedia.createMediaStyle();
-
-export const { Media, MediaContextProvider } = PreshapeMedia;
+export const { Media, MediaContextProvider, createMediaStyle } = PreshapeMedia;

@@ -8,6 +8,7 @@ const toAbsolute = (p) => path.resolve(__dirname, p);
 const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8');
 
 const routesToPrerender = [
+  '/',
   '/colors',
   '/themes',
   '/sizings',
@@ -21,11 +22,12 @@ const routesToPrerender = [
   '/components/ButtonAsync',
   '/components/Checkbox',
   '/components/Code',
+  '/components/ConfigMenu',
   '/components/DatePicker',
   '/components/Form',
   '/components/Grid',
   '/components/Input',
-  '/components/Label',
+  '/components/Labels',
   '/components/Link',
   '/components/List',
   '/components/Modal',
@@ -36,20 +38,26 @@ const routesToPrerender = [
   '/components/Table',
   '/components/Tabs',
   '/components/Text',
-  '/components/Textarea',
+  '/components/TextArea',
   '/components/Toggle',
   '/components/Tooltip',
 ];
 
 // pre-render each route...
 for (const url of routesToPrerender) {
-  const appHtml = render(url);
-  const html = template.replace(`<!--app-html-->`, appHtml);
+  const { html: htmlContent, helmetContext, mediaStyle } = render(url);
+  const metaContent = helmetContext.helmet.priority.toString();
+
+  const contents = template
+    .replace(`<!--media-style-->`, `<style>${mediaStyle}</style>`)
+    .replace(`<!--meta-tags-->`, metaContent)
+    .replace(`<!--app-html-->`, htmlContent);
+
   const filePath = toAbsolute(
     `dist/client${url === '/' ? '/index' : url}.html`
   );
   const fileDir = path.dirname(filePath);
 
   fs.mkdirSync(fileDir, { recursive: true });
-  fs.writeFileSync(filePath, html);
+  fs.writeFileSync(filePath, contents);
 }
