@@ -8,4 +8,4 @@ export interface MotionsProps
       'onAnimationStart' | 'onDrag' | 'onDragEnd' | 'onDragStart' | 'style'
     > {}
 
-export const Motion = motion.create(Box, { forwardMotionProps: true });
+export const Motion = motion.create(Box, { forwardMotionProps: false });
