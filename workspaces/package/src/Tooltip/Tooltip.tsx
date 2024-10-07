@@ -57,11 +57,10 @@ export const Tooltip = forwardRef<any, TooltipProps>((props, ref) => {
         paddingHorizontal={paddingHorizontal}
         paddingVertical={paddingVertical}
         ref={ref}
-        textColor={textColor}
         theme={themeOpposite}
         withArrow
       >
-        <Text align="middle" size="x3" weight="x2">
+        <Text align="middle" size="x3" textColor={textColor} weight="x2">
           {content}
         </Text>
       </PlacementContent>
