@@ -1,3 +1,9 @@
+## [19.1.6](https://github.com/HHogg/preshape/compare/v19.1.5...v19.1.6) (2024-10-07)
+
+### Fixes
+
+* **Tooltip:** Custom textColor ([fc68e21](https://github.com/HHogg/preshape/commit/fc68e2131d9e0411cbe375318dc6740d194cfb1e))
+
 ## [19.1.5](https://github.com/HHogg/preshape/compare/v19.1.4...v19.1.5) (2024-10-05)
 
 ### Fixes
