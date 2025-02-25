@@ -1,3 +1,9 @@
+## [19.1.7](https://github.com/HHogg/preshape/compare/v19.1.6...v19.1.7) (2025-02-25)
+
+### Fixes
+
+* **useLocalStorage:** memoize the setter ([d577523](https://github.com/HHogg/preshape/commit/d577523670a91e5aa20f34627ffbf93f05541d2c))
+
 ## [19.1.6](https://github.com/HHogg/preshape/compare/v19.1.5...v19.1.6) (2024-10-07)
 
 ### Fixes
