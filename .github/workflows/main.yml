@@ -24,6 +24,12 @@ jobs:
         run: yarn clean
       - name: 'Build workspace'
         run: yarn build
+      - name: Prepare Google Application Credentials for Firebase deploy
+        run: |
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" | base64 --decode > "$RUNNER_TEMP/gcp-key.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/gcp-key.json" >> "$GITHUB_ENV"
+      - name: 'Deploy site'
+        run: yarn deploy:site
       - name: 'Prepare PackageJSON for publishing'
         run: yarn workspace preshape prepare:packageJson
       - name: 'Publish package'
@@ -31,9 +37,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Prepare Google Application Credentials for Firebase deploy
-        run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" | base64 --decode > "$RUNNER_TEMP/gcp-key.json"
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/gcp-key.json" >> "$GITHUB_ENV"
-      - name: 'Deploy site'
-        run: yarn deploy:site
