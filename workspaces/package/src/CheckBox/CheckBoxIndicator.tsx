@@ -1,8 +1,8 @@
-import { forwardRef } from 'react';
+import { forwardRef, InputHTMLAttributes } from 'react';
 
 export const CheckBoxIndicator = forwardRef<
   HTMLInputElement,
-  JSX.IntrinsicElements['input']
+  InputHTMLAttributes<HTMLInputElement>
 >((props, ref) => {
   return (
     <div className="CheckBox">

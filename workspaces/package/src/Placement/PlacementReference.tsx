@@ -32,9 +32,9 @@ export const PlacementReference = forwardRef<
   return cloneElement(
     child,
     getReferenceProps({
-      ...child.props,
+      ...(child.props as Record<string, any>),
       ref,
       'data-state': context.open ? 'open' : 'closed',
-    })
+    } as any)
   );
 });

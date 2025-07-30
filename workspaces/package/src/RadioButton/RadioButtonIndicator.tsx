@@ -1,8 +1,8 @@
-import { forwardRef } from 'react';
+import { forwardRef, InputHTMLAttributes } from 'react';
 
 export const RadioButtonIndicator = forwardRef<
   HTMLInputElement,
-  JSX.IntrinsicElements['input']
+  InputHTMLAttributes<HTMLInputElement>
 >((props, ref) => {
   return (
     <div className="RadioButton">
@@ -11,3 +11,5 @@ export const RadioButtonIndicator = forwardRef<
     </div>
   );
 });
+
+RadioButtonIndicator.displayName = 'RadioButtonIndicator';
