@@ -1,3 +1,9 @@
+## [19.2.0](https://github.com/HHogg/preshape/compare/v19.1.7...v19.2.0) (2025-07-30)
+
+### Features
+
+* **React:** Updated to React19 ([dd5314c](https://github.com/HHogg/preshape/commit/dd5314ce8e0a547b9393815251f9e70ba99b2dd3))
+
 ## [19.1.7](https://github.com/HHogg/preshape/compare/v19.1.6...v19.1.7) (2025-02-25)
 
 ### Fixes
