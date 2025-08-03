@@ -64,6 +64,7 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
     borderSize = 'x2',
     color,
     flex = 'horizontal',
+    gap = 'x2',
     href: hrefProp,
     size = 'x3',
     padding,
