@@ -1,3 +1,9 @@
+## [19.2.3](https://github.com/HHogg/preshape/compare/v19.2.2...v19.2.3) (2025-08-03)
+
+### Fixes
+
+* **Theme:** Applying correct theme to body class ([854a1d2](https://github.com/HHogg/preshape/commit/854a1d2a3b200d1d263567266cee2a8e48d366ee))
+
 ## [19.2.2](https://github.com/HHogg/preshape/compare/v19.2.1...v19.2.2) (2025-08-03)
 
 ### Fixes
