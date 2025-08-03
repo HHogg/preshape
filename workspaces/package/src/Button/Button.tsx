@@ -127,6 +127,7 @@ export const Button = forwardRef<any, ButtonProps>((props, ref) => {
       borderSize={borderSize}
       className={classes}
       flex={flex}
+      gap={gap}
       href={to ? href : hrefProp}
       paddingHorizontal={paddingHorizontal}
       paddingVertical={paddingVertical}
