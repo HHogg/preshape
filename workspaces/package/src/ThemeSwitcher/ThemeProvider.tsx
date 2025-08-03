@@ -78,9 +78,9 @@ export function ThemeProvider({
 
   useEffect(() => {
     if (isRootTheme) {
-      updateThemeClassName(localStorageTheme);
+      updateThemeClassName(theme);
     }
-  }, [isRootTheme, localStorageTheme]);
+  }, [isRootTheme, theme]);
 
   useEffect(() => {
     if (!isRootTheme && !propsTheme) {
