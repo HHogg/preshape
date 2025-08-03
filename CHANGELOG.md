@@ -1,3 +1,9 @@
+## [19.2.2](https://github.com/HHogg/preshape/compare/v19.2.1...v19.2.2) (2025-08-03)
+
+### Fixes
+
+* **Theme:** Always use prop theme if provided ([2a05b08](https://github.com/HHogg/preshape/commit/2a05b0806a0a437d530e5634a93e762e73c9e113))
+
 ## [19.2.1](https://github.com/HHogg/preshape/compare/v19.2.0...v19.2.1) (2025-08-03)
 
 ### Fixes
