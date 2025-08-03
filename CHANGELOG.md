@@ -1,3 +1,9 @@
+## [19.2.1](https://github.com/HHogg/preshape/compare/v19.2.0...v19.2.1) (2025-08-03)
+
+### Fixes
+
+* **Button:** Added default gap prop value ([7a8e5f0](https://github.com/HHogg/preshape/commit/7a8e5f0cb6985f39786e031ea60e3b146e5b1679))
+
 ## [19.2.0](https://github.com/HHogg/preshape/compare/v19.1.7...v19.2.0) (2025-07-30)
 
 ### Features
