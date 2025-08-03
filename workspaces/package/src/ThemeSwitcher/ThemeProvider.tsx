@@ -48,7 +48,8 @@ export function ThemeProvider({
   // update the theme based on the system theme, nor update the body
   // class.
   const isRootTheme = themeRoot === null;
-  const theme = isRootTheme ? localStorageTheme : localStateTheme;
+  const theme =
+    propsTheme ?? (isRootTheme ? localStorageTheme : localStateTheme);
 
   const handleSetTheme = useCallback(
     (theme: TypeTheme) => {
