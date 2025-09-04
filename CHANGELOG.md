@@ -1,3 +1,9 @@
+## [19.2.5](https://github.com/HHogg/preshape/compare/v19.2.4...v19.2.5) (2025-09-04)
+
+### Fixes
+
+* **SelectInputLabel:** Allow backgroundColor and text size to be customised ([1f41246](https://github.com/HHogg/preshape/commit/1f4124655554212fed75140545cf06c94a24f332))
+
 ## [19.2.4](https://github.com/HHogg/preshape/compare/v19.2.3...v19.2.4) (2025-08-03)
 
 ### Fixes
