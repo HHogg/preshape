@@ -1,10 +1,12 @@
 import classNames from 'classnames';
 import { forwardRef, ReactNode } from 'react';
 import { Box, BoxProps } from '../Box/Box';
-import { Text } from '../Text/Text';
+import { Text, TextProps } from '../Text/Text';
 
-export interface SelectInputLabelProps extends Omit<BoxProps, 'label'> {
+export interface SelectInputLabelProps
+  extends Omit<BoxProps, 'label' | 'size'> {
   label: ReactNode;
+  size?: TextProps['size'];
 }
 
 export const SelectInputLabel = forwardRef<
@@ -12,11 +14,13 @@ export const SelectInputLabel = forwardRef<
   SelectInputLabelProps
 >((props, ref) => {
   const {
+    backgroundColor = 'background-shade-1',
     borderRadius = 'x2',
     borderSize = 'x2',
     children,
     className,
     label,
+    size = 'x3',
     ...rest
   } = props;
 
@@ -26,7 +30,7 @@ export const SelectInputLabel = forwardRef<
     <Box
       {...rest}
       alignChildrenVertical="middle"
-      backgroundColor="background-shade-1"
+      backgroundColor={backgroundColor}
       borderSize={borderSize}
       borderRadius={borderRadius}
       className={classes}
@@ -38,7 +42,7 @@ export const SelectInputLabel = forwardRef<
       <Box>{children}</Box>
 
       <Box grow minWidth="0" shrink>
-        <Text className="SelectInputLabels__label-text" size="x3" weight="x2">
+        <Text className="SelectInputLabels__label-text" size={size} weight="x2">
           {label}
         </Text>
       </Box>
