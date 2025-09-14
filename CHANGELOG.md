@@ -1,3 +1,9 @@
+## [19.3.1](https://github.com/HHogg/preshape/compare/v19.3.0...v19.3.1) (2025-09-14)
+
+### Fixes
+
+* **CheckBox:** color styling fixes ([2ae1b2a](https://github.com/HHogg/preshape/commit/2ae1b2aea008f1ea3b08a45c2773b98ca4dc811b))
+
 ## [19.3.0](https://github.com/HHogg/preshape/compare/v19.2.5...v19.3.0) (2025-09-14)
 
 ### Features
