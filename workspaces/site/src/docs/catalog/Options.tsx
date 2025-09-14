@@ -39,7 +39,12 @@ const Item: CatalogueItem<{
   showcase: {
     state: {
       Options: {},
-      Option: {},
+      Option: {
+        borderColorHover: 'accent-shade-3',
+        borderColorActive: 'accent-shade-5',
+        textColorHover: 'accent-shade-3',
+        textColorActive: 'accent-shade-4',
+      },
     },
     Component: (props) => {
       const [values, setValues] = useState<{ [key: string]: boolean }>({});

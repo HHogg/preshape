@@ -78,3 +78,5 @@ export type TypeSize =
   | 'x32';
 
 export type TypeTheme = 'day' | 'night';
+
+export type TypeBorderRadius = 'full' | 'x1' | 'x2' | 'x3' | string | number;

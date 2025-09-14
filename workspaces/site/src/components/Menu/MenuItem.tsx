@@ -15,7 +15,7 @@ export const MenuItem = ({ children, nested, to, ...props }: MenuItemProps) => {
     <Box paddingLeft={nested ? 'x3' : 'x0'}>
       <Box
         {...props}
-        borderColor="background-shade-4"
+        borderColor="text-shade-1"
         borderSize={nested ? 'x1' : 'x0'}
         borderLeft={nested}
       >

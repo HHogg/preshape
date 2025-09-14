@@ -19,7 +19,17 @@ const Item: CatalogueItem<{
   ],
   showcase: {
     state: {
-      CheckBox: {},
+      CheckBox: {
+        borderColorHover: 'accent-shade-3',
+        borderColorActive: 'accent-shade-5',
+        textColorHover: 'accent-shade-3',
+        textColorActive: 'accent-shade-4',
+        indicatorBorderColor: 'text-shade-1',
+        indicatorBorderColorHover: 'text-shade-1',
+        indicatorBorderColorActive: 'accent-shade-3',
+        indicatorColorHover: 'text-shade-1',
+        indicatorColorActive: 'accent-shade-4',
+      },
     },
     Component: (props) => (
       <Fragment>

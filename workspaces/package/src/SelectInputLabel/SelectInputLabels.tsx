@@ -8,8 +8,10 @@ export const SelectInputLabels = forwardRef<any, SelectInputLabelsProps>(
   (props, ref) => {
     return (
       <Box
-        {...props}
+        backgroundColor="background-shade-1"
+        borderSize="x2"
         borderRadius="x2"
+        {...props}
         className="SelectInputLabels"
         ref={ref}
       />

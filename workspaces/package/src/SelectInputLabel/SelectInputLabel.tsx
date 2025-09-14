@@ -2,11 +2,36 @@ import classNames from 'classnames';
 import { forwardRef, ReactNode } from 'react';
 import { Box, BoxProps } from '../Box/Box';
 import { Text, TextProps } from '../Text/Text';
+import { TypeColor } from '../types';
 
 export interface SelectInputLabelProps
   extends Omit<BoxProps, 'label' | 'size'> {
   label: ReactNode;
   size?: TextProps['size'];
+  /**
+   * Sets the border color when hovered
+   *
+   * @default 'accent-shade-3'
+   */
+  borderColorHover?: TypeColor;
+  /**
+   * Sets the border color when active (focused)
+   *
+   * @default 'accent-shade-5'
+   */
+  borderColorActive?: TypeColor;
+  /**
+   * Sets the text color when hovered
+   *
+   * @default 'accent-shade-3'
+   */
+  textColorHover?: TypeColor;
+  /**
+   * Sets the text color when active (focused)
+   *
+   * @default 'accent-shade-4'
+   */
+  textColorActive?: TypeColor;
 }
 
 export const SelectInputLabel = forwardRef<
@@ -14,9 +39,13 @@ export const SelectInputLabel = forwardRef<
   SelectInputLabelProps
 >((props, ref) => {
   const {
-    backgroundColor = 'background-shade-1',
+    backgroundColor,
     borderRadius = 'x2',
     borderSize = 'x2',
+    borderColorHover,
+    borderColorActive,
+    textColorHover,
+    textColorActive,
     children,
     className,
     label,
@@ -24,7 +53,14 @@ export const SelectInputLabel = forwardRef<
     ...rest
   } = props;
 
-  const classes = classNames('SelectInputLabels__label', className);
+  const classes = classNames(
+    className,
+    'SelectInputLabel',
+    `SelectInputLabel--border-color-hover-${borderColorHover}`,
+    `SelectInputLabel--border-color-active-${borderColorActive}`,
+    `SelectInputLabel--text-color-hover-${textColorHover}`,
+    `SelectInputLabel--text-color-active-${textColorActive}`
+  );
 
   return (
     <Box
@@ -42,7 +78,7 @@ export const SelectInputLabel = forwardRef<
       <Box>{children}</Box>
 
       <Box grow minWidth="0" shrink>
-        <Text className="SelectInputLabels__label-text" size={size} weight="x2">
+        <Text size={size} weight="x2">
           {label}
         </Text>
       </Box>

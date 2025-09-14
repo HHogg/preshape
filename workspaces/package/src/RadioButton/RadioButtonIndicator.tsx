@@ -1,15 +1,19 @@
-import { forwardRef, InputHTMLAttributes } from 'react';
+import { forwardRef } from 'react';
+import { TypeBorderRadius } from '../types';
+import {
+  CheckBoxIndicator,
+  CheckBoxIndicatorProps,
+} from '../CheckBox/CheckBoxIndicator';
+
+export interface RadioButtonIndicatorProps extends CheckBoxIndicatorProps {
+  borderRadius?: TypeBorderRadius;
+}
 
 export const RadioButtonIndicator = forwardRef<
   HTMLInputElement,
-  InputHTMLAttributes<HTMLInputElement>
+  RadioButtonIndicatorProps
 >((props, ref) => {
   return (
-    <div className="RadioButton">
-      <input {...props} className="RadioButton__input" ref={ref} type="radio" />
-      <div className="RadioButton__indicator" />
-    </div>
+    <CheckBoxIndicator borderRadius="50%" {...props} ref={ref} type="radio" />
   );
 });
-
-RadioButtonIndicator.displayName = 'RadioButtonIndicator';

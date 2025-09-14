@@ -1,26 +1,8 @@
-.SelectInputLabels {
-  border: var(--border-size--x2) solid var(--color-text-shade-1);
-  background-color: var(--color-background-shade-1);
-}
-
-.SelectInputLabels__label {
+.SelectInputLabel {
   cursor: pointer;
-  transition-property: border-color;
+  transition-property: border-color, color;
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
-
-  &:hover {
-    border-color: var(--color-accent-shade-3);
-    color: var(--color-accent-shade-3);
-  }
-
-  &:focus-within {
-    border-color: var(--color-accent-shade-5);
-  }
-
-  &[checked] {
-    color: var(--color-text-accent-shade-4);
-  }
 
   &[disabled] {
     border-color: var(--color-text-shade-3);
@@ -30,17 +12,159 @@
   }
 }
 
-.SelectInputLabels .SelectInputLabels__label {
+.SelectInputLabels .SelectInputLabel {
   border: 0;
   border-radius: 0;
 
   &:not(:last-child) {
-    border-bottom: var(--border-size--x2) solid var(--color-text-shade-1);
+    border-bottom-width: var(--border-size--x2);
+    border-bottom-style: solid;
   }
 }
 
-.SelectInputLabels__label-text {
+.SelectInputLabel-text {
   transition-property: color;
   transition-duration: var(--transition-duration--base);
   transition-timing-function: var(--transition-timing-function);
 }
+
+
+/* Individual label border color active states */
+.SelectInputLabel--border-color-active-black:focus-within { border-color: var(--color-black); }
+.SelectInputLabel--border-color-active-white:focus-within { border-color: var(--color-white); }
+.SelectInputLabel--border-color-active-highlight:focus-within { border-color: var(--color-highlight); }
+.SelectInputLabel--border-color-active-accent-shade-1:focus-within { border-color: var(--color-accent-shade-1); }
+.SelectInputLabel--border-color-active-accent-shade-2:focus-within { border-color: var(--color-accent-shade-2); }
+.SelectInputLabel--border-color-active-accent-shade-3:focus-within { border-color: var(--color-accent-shade-3); }
+.SelectInputLabel--border-color-active-accent-shade-4:focus-within { border-color: var(--color-accent-shade-4); }
+.SelectInputLabel--border-color-active-accent-shade-5:focus-within { border-color: var(--color-accent-shade-5); }
+.SelectInputLabel--border-color-active-background-shade-1:focus-within { border-color: var(--color-background-shade-1); }
+.SelectInputLabel--border-color-active-background-shade-2:focus-within { border-color: var(--color-background-shade-2); }
+.SelectInputLabel--border-color-active-background-shade-3:focus-within { border-color: var(--color-background-shade-3); }
+.SelectInputLabel--border-color-active-background-shade-4:focus-within { border-color: var(--color-background-shade-4); }
+.SelectInputLabel--border-color-active-dark-shade-1:focus-within { border-color: var(--color-dark-shade-1); }
+.SelectInputLabel--border-color-active-dark-shade-2:focus-within { border-color: var(--color-dark-shade-2); }
+.SelectInputLabel--border-color-active-dark-shade-3:focus-within { border-color: var(--color-dark-shade-3); }
+.SelectInputLabel--border-color-active-light-shade-1:focus-within { border-color: var(--color-light-shade-1); }
+.SelectInputLabel--border-color-active-light-shade-2:focus-within { border-color: var(--color-light-shade-2); }
+.SelectInputLabel--border-color-active-light-shade-3:focus-within { border-color: var(--color-light-shade-3); }
+.SelectInputLabel--border-color-active-text-shade-1:focus-within { border-color: var(--color-text-shade-1); }
+.SelectInputLabel--border-color-active-text-shade-2:focus-within { border-color: var(--color-text-shade-2); }
+.SelectInputLabel--border-color-active-text-shade-3:focus-within { border-color: var(--color-text-shade-3); }
+.SelectInputLabel--border-color-active-text-shade-4:focus-within { border-color: var(--color-text-shade-4); }
+.SelectInputLabel--border-color-active-negative-shade-1:focus-within { border-color: var(--color-negative-shade-1); }
+.SelectInputLabel--border-color-active-negative-shade-2:focus-within { border-color: var(--color-negative-shade-2); }
+.SelectInputLabel--border-color-active-negative-shade-3:focus-within { border-color: var(--color-negative-shade-3); }
+.SelectInputLabel--border-color-active-negative-shade-4:focus-within { border-color: var(--color-negative-shade-4); }
+.SelectInputLabel--border-color-active-negative-shade-5:focus-within { border-color: var(--color-negative-shade-5); }
+.SelectInputLabel--border-color-active-positive-shade-1:focus-within { border-color: var(--color-positive-shade-1); }
+.SelectInputLabel--border-color-active-positive-shade-2:focus-within { border-color: var(--color-positive-shade-2); }
+.SelectInputLabel--border-color-active-positive-shade-3:focus-within { border-color: var(--color-positive-shade-3); }
+.SelectInputLabel--border-color-active-positive-shade-4:focus-within { border-color: var(--color-positive-shade-4); }
+.SelectInputLabel--border-color-active-positive-shade-5:focus-within { border-color: var(--color-positive-shade-5); }
+.SelectInputLabel--border-color-active-transparent:focus-within { border-color: transparent; }
+
+/* Individual label border color hover states */
+.SelectInputLabel--border-color-hover-black:hover:not([disabled]) { border-color: var(--color-black); }
+.SelectInputLabel--border-color-hover-white:hover:not([disabled]) { border-color: var(--color-white); }
+.SelectInputLabel--border-color-hover-highlight:hover:not([disabled]) { border-color: var(--color-highlight); }
+.SelectInputLabel--border-color-hover-accent-shade-1:hover:not([disabled]) { border-color: var(--color-accent-shade-1); }
+.SelectInputLabel--border-color-hover-accent-shade-2:hover:not([disabled]) { border-color: var(--color-accent-shade-2); }
+.SelectInputLabel--border-color-hover-accent-shade-3:hover:not([disabled]) { border-color: var(--color-accent-shade-3); }
+.SelectInputLabel--border-color-hover-accent-shade-4:hover:not([disabled]) { border-color: var(--color-accent-shade-4); }
+.SelectInputLabel--border-color-hover-accent-shade-5:hover:not([disabled]) { border-color: var(--color-accent-shade-5); }
+.SelectInputLabel--border-color-hover-background-shade-1:hover:not([disabled]) { border-color: var(--color-background-shade-1); }
+.SelectInputLabel--border-color-hover-background-shade-2:hover:not([disabled]) { border-color: var(--color-background-shade-2); }
+.SelectInputLabel--border-color-hover-background-shade-3:hover:not([disabled]) { border-color: var(--color-background-shade-3); }
+.SelectInputLabel--border-color-hover-background-shade-4:hover:not([disabled]) { border-color: var(--color-background-shade-4); }
+.SelectInputLabel--border-color-hover-dark-shade-1:hover:not([disabled]) { border-color: var(--color-dark-shade-1); }
+.SelectInputLabel--border-color-hover-dark-shade-2:hover:not([disabled]) { border-color: var(--color-dark-shade-2); }
+.SelectInputLabel--border-color-hover-dark-shade-3:hover:not([disabled]) { border-color: var(--color-dark-shade-3); }
+.SelectInputLabel--border-color-hover-light-shade-1:hover:not([disabled]) { border-color: var(--color-light-shade-1); }
+.SelectInputLabel--border-color-hover-light-shade-2:hover:not([disabled]) { border-color: var(--color-light-shade-2); }
+.SelectInputLabel--border-color-hover-light-shade-3:hover:not([disabled]) { border-color: var(--color-light-shade-3); }
+.SelectInputLabel--border-color-hover-text-shade-1:hover:not([disabled]) { border-color: var(--color-text-shade-1); }
+.SelectInputLabel--border-color-hover-text-shade-2:hover:not([disabled]) { border-color: var(--color-text-shade-2); }
+.SelectInputLabel--border-color-hover-text-shade-3:hover:not([disabled]) { border-color: var(--color-text-shade-3); }
+.SelectInputLabel--border-color-hover-text-shade-4:hover:not([disabled]) { border-color: var(--color-text-shade-4); }
+.SelectInputLabel--border-color-hover-negative-shade-1:hover:not([disabled]) { border-color: var(--color-negative-shade-1); }
+.SelectInputLabel--border-color-hover-negative-shade-2:hover:not([disabled]) { border-color: var(--color-negative-shade-2); }
+.SelectInputLabel--border-color-hover-negative-shade-3:hover:not([disabled]) { border-color: var(--color-negative-shade-3); }
+.SelectInputLabel--border-color-hover-negative-shade-4:hover:not([disabled]) { border-color: var(--color-negative-shade-4); }
+.SelectInputLabel--border-color-hover-negative-shade-5:hover:not([disabled]) { border-color: var(--color-negative-shade-5); }
+.SelectInputLabel--border-color-hover-positive-shade-1:hover:not([disabled]) { border-color: var(--color-positive-shade-1); }
+.SelectInputLabel--border-color-hover-positive-shade-2:hover:not([disabled]) { border-color: var(--color-positive-shade-2); }
+.SelectInputLabel--border-color-hover-positive-shade-3:hover:not([disabled]) { border-color: var(--color-positive-shade-3); }
+.SelectInputLabel--border-color-hover-positive-shade-4:hover:not([disabled]) { border-color: var(--color-positive-shade-4); }
+.SelectInputLabel--border-color-hover-positive-shade-5:hover:not([disabled]) { border-color: var(--color-positive-shade-5); }
+.SelectInputLabel--border-color-hover-transparent:hover:not([disabled]) { border-color: transparent; }
+
+/* Individual label text color hover states */
+.SelectInputLabel--text-color-hover-black:hover:not([disabled]) { color: var(--color-black); }
+.SelectInputLabel--text-color-hover-white:hover:not([disabled]) { color: var(--color-white); }
+.SelectInputLabel--text-color-hover-highlight:hover:not([disabled]) { color: var(--color-highlight); }
+.SelectInputLabel--text-color-hover-accent-shade-1:hover:not([disabled]) { color: var(--color-accent-shade-1); }
+.SelectInputLabel--text-color-hover-accent-shade-2:hover:not([disabled]) { color: var(--color-accent-shade-2); }
+.SelectInputLabel--text-color-hover-accent-shade-3:hover:not([disabled]) { color: var(--color-accent-shade-3); }
+.SelectInputLabel--text-color-hover-accent-shade-4:hover:not([disabled]) { color: var(--color-accent-shade-4); }
+.SelectInputLabel--text-color-hover-accent-shade-5:hover:not([disabled]) { color: var(--color-accent-shade-5); }
+.SelectInputLabel--text-color-hover-background-shade-1:hover:not([disabled]) { color: var(--color-background-shade-1); }
+.SelectInputLabel--text-color-hover-background-shade-2:hover:not([disabled]) { color: var(--color-background-shade-2); }
+.SelectInputLabel--text-color-hover-background-shade-3:hover:not([disabled]) { color: var(--color-background-shade-3); }
+.SelectInputLabel--text-color-hover-background-shade-4:hover:not([disabled]) { color: var(--color-background-shade-4); }
+.SelectInputLabel--text-color-hover-dark-shade-1:hover:not([disabled]) { color: var(--color-dark-shade-1); }
+.SelectInputLabel--text-color-hover-dark-shade-2:hover:not([disabled]) { color: var(--color-dark-shade-2); }
+.SelectInputLabel--text-color-hover-dark-shade-3:hover:not([disabled]) { color: var(--color-dark-shade-3); }
+.SelectInputLabel--text-color-hover-light-shade-1:hover:not([disabled]) { color: var(--color-light-shade-1); }
+.SelectInputLabel--text-color-hover-light-shade-2:hover:not([disabled]) { color: var(--color-light-shade-2); }
+.SelectInputLabel--text-color-hover-light-shade-3:hover:not([disabled]) { color: var(--color-light-shade-3); }
+.SelectInputLabel--text-color-hover-text-shade-1:hover:not([disabled]) { color: var(--color-text-shade-1); }
+.SelectInputLabel--text-color-hover-text-shade-2:hover:not([disabled]) { color: var(--color-text-shade-2); }
+.SelectInputLabel--text-color-hover-text-shade-3:hover:not([disabled]) { color: var(--color-text-shade-3); }
+.SelectInputLabel--text-color-hover-text-shade-4:hover:not([disabled]) { color: var(--color-text-shade-4); }
+.SelectInputLabel--text-color-hover-negative-shade-1:hover:not([disabled]) { color: var(--color-negative-shade-1); }
+.SelectInputLabel--text-color-hover-negative-shade-2:hover:not([disabled]) { color: var(--color-negative-shade-2); }
+.SelectInputLabel--text-color-hover-negative-shade-3:hover:not([disabled]) { color: var(--color-negative-shade-3); }
+.SelectInputLabel--text-color-hover-negative-shade-4:hover:not([disabled]) { color: var(--color-negative-shade-4); }
+.SelectInputLabel--text-color-hover-negative-shade-5:hover:not([disabled]) { color: var(--color-negative-shade-5); }
+.SelectInputLabel--text-color-hover-positive-shade-1:hover:not([disabled]) { color: var(--color-positive-shade-1); }
+.SelectInputLabel--text-color-hover-positive-shade-2:hover:not([disabled]) { color: var(--color-positive-shade-2); }
+.SelectInputLabel--text-color-hover-positive-shade-3:hover:not([disabled]) { color: var(--color-positive-shade-3); }
+.SelectInputLabel--text-color-hover-positive-shade-4:hover:not([disabled]) { color: var(--color-positive-shade-4); }
+.SelectInputLabel--text-color-hover-positive-shade-5:hover:not([disabled]) { color: var(--color-positive-shade-5); }
+.SelectInputLabel--text-color-hover-transparent:hover:not([disabled]) { color: transparent; }
+
+/* Individual label text color active states */
+.SelectInputLabel--text-color-active-black:focus-within { color: var(--color-black); }
+.SelectInputLabel--text-color-active-white:focus-within { color: var(--color-white); }
+.SelectInputLabel--text-color-active-highlight:focus-within { color: var(--color-highlight); }
+.SelectInputLabel--text-color-active-accent-shade-1:focus-within { color: var(--color-accent-shade-1); }
+.SelectInputLabel--text-color-active-accent-shade-2:focus-within { color: var(--color-accent-shade-2); }
+.SelectInputLabel--text-color-active-accent-shade-3:focus-within { color: var(--color-accent-shade-3); }
+.SelectInputLabel--text-color-active-accent-shade-4:focus-within { color: var(--color-accent-shade-4); }
+.SelectInputLabel--text-color-active-accent-shade-5:focus-within { color: var(--color-accent-shade-5); }
+.SelectInputLabel--text-color-active-background-shade-1:focus-within { color: var(--color-background-shade-1); }
+.SelectInputLabel--text-color-active-background-shade-2:focus-within { color: var(--color-background-shade-2); }
+.SelectInputLabel--text-color-active-background-shade-3:focus-within { color: var(--color-background-shade-3); }
+.SelectInputLabel--text-color-active-background-shade-4:focus-within { color: var(--color-background-shade-4); }
+.SelectInputLabel--text-color-active-dark-shade-1:focus-within { color: var(--color-dark-shade-1); }
+.SelectInputLabel--text-color-active-dark-shade-2:focus-within { color: var(--color-dark-shade-2); }
+.SelectInputLabel--text-color-active-dark-shade-3:focus-within { color: var(--color-dark-shade-3); }
+.SelectInputLabel--text-color-active-light-shade-1:focus-within { color: var(--color-light-shade-1); }
+.SelectInputLabel--text-color-active-light-shade-2:focus-within { color: var(--color-light-shade-2); }
+.SelectInputLabel--text-color-active-light-shade-3:focus-within { color: var(--color-light-shade-3); }
+.SelectInputLabel--text-color-active-text-shade-1:focus-within { color: var(--color-text-shade-1); }
+.SelectInputLabel--text-color-active-text-shade-2:focus-within { color: var(--color-text-shade-2); }
+.SelectInputLabel--text-color-active-text-shade-3:focus-within { color: var(--color-text-shade-3); }
+.SelectInputLabel--text-color-active-text-shade-4:focus-within { color: var(--color-text-shade-4); }
+.SelectInputLabel--text-color-active-negative-shade-1:focus-within { color: var(--color-negative-shade-1); }
+.SelectInputLabel--text-color-active-negative-shade-2:focus-within { color: var(--color-negative-shade-2); }
+.SelectInputLabel--text-color-active-negative-shade-3:focus-within { color: var(--color-negative-shade-3); }
+.SelectInputLabel--text-color-active-negative-shade-4:focus-within { color: var(--color-negative-shade-4); }
+.SelectInputLabel--text-color-active-negative-shade-5:focus-within { color: var(--color-negative-shade-5); }
+.SelectInputLabel--text-color-active-positive-shade-1:focus-within { color: var(--color-positive-shade-1); }
+.SelectInputLabel--text-color-active-positive-shade-2:focus-within { color: var(--color-positive-shade-2); }
+.SelectInputLabel--text-color-active-positive-shade-3:focus-within { color: var(--color-positive-shade-3); }
+.SelectInputLabel--text-color-active-positive-shade-4:focus-within { color: var(--color-positive-shade-4); }
+.SelectInputLabel--text-color-active-positive-shade-5:focus-within { color: var(--color-positive-shade-5); }
+.SelectInputLabel--text-color-active-transparent:focus-within { color: transparent; }

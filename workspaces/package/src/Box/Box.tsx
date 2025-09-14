@@ -10,10 +10,12 @@ import './Box.css';
 import {
   TypeBorderSize,
   TypeColor,
+  TypeBorderRadius,
   TypePosition,
   TypeSize,
   TypeTheme,
 } from '../types';
+import { getBorderRadius } from './getBorderRadius';
 
 type IntrinsicAttributes = {} & Omit<AllHTMLAttributes<any>, 'wrap'> &
   SVGAttributes<any>;
@@ -57,7 +59,7 @@ export interface BoxProps extends IntrinsicAttributes {
   /** Applies just the top border. To apply all border, just pass borderSize */
   borderTop?: boolean;
   /** Adds styling of a border radius to one of the size multiples */
-  borderRadius?: 'full' | 'x1' | 'x2' | 'x3' | string | number;
+  borderRadius?: TypeBorderRadius;
   /** Thickness of the border to be applied */
   borderSize?: TypeBorderSize;
   /** Applies border style  */
@@ -210,14 +212,8 @@ export const Box = forwardRef<any, BoxProps>((props, ref) => {
 
   const border = borderTop || borderRight || borderBottom || borderLeft;
 
-  const isPredefinedBorderRadius =
-    borderRadius === 'full' ||
-    borderRadius === 'x1' ||
-    borderRadius === 'x2' ||
-    borderRadius === 'x3' ||
-    borderRadius === 'x4' ||
-    borderRadius === 'x5' ||
-    borderRadius === 'x6';
+  const { predefinedBorderRadius, computedBorderRadius } =
+    getBorderRadius(borderRadius);
 
   const classes = classnames(
     'Box',
@@ -235,7 +231,7 @@ export const Box = forwardRef<any, BoxProps>((props, ref) => {
       'Box--max-width': maxWidth,
       [`Box--background-color-${backgroundColor}`]: backgroundColor,
       [`Box--border-color-${borderColor}`]: borderColor,
-      [`Box--border-radius-${borderRadius}`]: isPredefinedBorderRadius,
+      [`Box--border-radius-${predefinedBorderRadius}`]: predefinedBorderRadius,
       [`Box--border-size-${borderSize}`]: borderSize,
       [`Box--border-style-${borderStyle}`]: borderStyle,
       [`Box--elevate-${elevate}`]: typeof elevate === 'string',
@@ -273,7 +269,7 @@ export const Box = forwardRef<any, BoxProps>((props, ref) => {
       className: classes,
       ref: ref,
       style: {
-        borderRadius: isPredefinedBorderRadius ? undefined : borderRadius,
+        borderRadius: computedBorderRadius,
         display,
         flexBasis: basis,
         flexGrow: grow === true ? '1' : grow,
