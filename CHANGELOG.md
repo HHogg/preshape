@@ -1,3 +1,9 @@
+## [19.3.0](https://github.com/HHogg/preshape/compare/v19.2.5...v19.3.0) (2025-09-14)
+
+### Features
+
+* **CheckBox:** Added props for customising colours ([fffe9db](https://github.com/HHogg/preshape/commit/fffe9dbd88eac8fb19d6ba03e5c4ca59f54777a9))
+
 ## [19.2.5](https://github.com/HHogg/preshape/compare/v19.2.4...v19.2.5) (2025-09-04)
 
 ### Fixes
