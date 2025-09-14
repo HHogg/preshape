@@ -16,7 +16,7 @@ export const MenuItem = ({ children, nested, to, ...props }: MenuItemProps) => {
       <Box
         {...props}
         borderColor="text-shade-1"
-        borderSize={nested ? 'x1' : 'x0'}
+        borderSize={nested ? 'x2' : 'x0'}
         borderLeft={nested}
       >
         <Button

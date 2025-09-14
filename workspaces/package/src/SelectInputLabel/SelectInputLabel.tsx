@@ -6,6 +6,7 @@ import { TypeColor } from '../types';
 
 export interface SelectInputLabelProps
   extends Omit<BoxProps, 'label' | 'size'> {
+  active?: boolean;
   label: ReactNode;
   size?: TextProps['size'];
   /**
@@ -39,6 +40,7 @@ export const SelectInputLabel = forwardRef<
   SelectInputLabelProps
 >((props, ref) => {
   const {
+    active,
     backgroundColor,
     borderRadius = 'x2',
     borderSize = 'x2',
@@ -55,11 +57,13 @@ export const SelectInputLabel = forwardRef<
 
   const classes = classNames(
     className,
+    {
+      [`SelectInputLabel--border-color-active-${borderColorActive}`]: active,
+      [`SelectInputLabel--text-color-active-${textColorActive}`]: active,
+    },
     'SelectInputLabel',
     `SelectInputLabel--border-color-hover-${borderColorHover}`,
-    `SelectInputLabel--border-color-active-${borderColorActive}`,
-    `SelectInputLabel--text-color-hover-${textColorHover}`,
-    `SelectInputLabel--text-color-active-${textColorActive}`
+    `SelectInputLabel--text-color-hover-${textColorHover}`
   );
 
   return (

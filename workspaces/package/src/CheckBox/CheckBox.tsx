@@ -100,22 +100,24 @@ export const CheckBox = forwardRef<HTMLInputElement, CheckBoxProps>(
     } = props;
 
     const classes = classNames('CheckBox', {
+      ['CheckBox--checked']: checked,
       [`CheckBox--border-color-${indicatorBorderColor}`]: indicatorBorderColor,
       [`CheckBox--border-color-hover-${indicatorBorderColorHover}`]:
-        indicatorBorderColorHover,
-      [`CheckBox--border-color-active-${indicatorBorderColorActive}`]:
-        indicatorBorderColorActive,
-      [`CheckBox--color-hover-${indicatorColorHover}`]: indicatorColorHover,
-      [`CheckBox--color-active-${indicatorColorActive}`]: indicatorColorActive,
+        !disabled && indicatorBorderColorHover,
+      [`CheckBox--border-color-active-${indicatorBorderColorActive}`]: checked,
+      [`CheckBox--color-hover-${indicatorColorHover}`]:
+        !disabled && indicatorColorHover,
+      [`CheckBox--color-active-${indicatorColorActive}`]: checked,
     });
 
     return (
       <SelectInputLabel
         {...rest}
-        borderColorHover={borderColorHover}
+        active={checked}
         borderColorActive={borderColorActive}
-        textColorHover={textColorHover}
+        borderColorHover={borderColorHover}
         textColorActive={textColorActive}
+        textColorHover={textColorHover}
         className={classes}
         disabled={disabled}
         label={children}

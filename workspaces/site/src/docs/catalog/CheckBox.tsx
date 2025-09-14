@@ -1,5 +1,5 @@
 import { CheckBox, CheckBoxProps } from 'preshape';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramCheckbox';
 
@@ -31,26 +31,59 @@ const Item: CatalogueItem<{
         indicatorColorActive: 'accent-shade-4',
       },
     },
-    Component: (props) => (
-      <Fragment>
-        <CheckBox {...props.CheckBox} margin="x2">
-          Lorem Ipsum
-        </CheckBox>
-        <CheckBox {...props.CheckBox} margin="x2">
-          Lorem Ipsum
-        </CheckBox>
-        <CheckBox {...props.CheckBox} margin="x2">
-          Lorem Ipsum
-        </CheckBox>
-      </Fragment>
-    ),
+    Component: (props) => {
+      const [checked1, setChecked1] = useState(false);
+      const [checked2, setChecked2] = useState(true);
+      const [checked3, setChecked3] = useState(false);
+
+      return (
+        <Fragment>
+          <CheckBox
+            {...props.CheckBox}
+            margin="x2"
+            checked={checked1}
+            onChange={(e) =>
+              setChecked1((e.target as HTMLInputElement).checked)
+            }
+          >
+            First Option
+          </CheckBox>
+          <CheckBox
+            {...props.CheckBox}
+            margin="x2"
+            checked={checked2}
+            onChange={(e) =>
+              setChecked2((e.target as HTMLInputElement).checked)
+            }
+          >
+            Second Option (Pre-checked)
+          </CheckBox>
+          <CheckBox
+            {...props.CheckBox}
+            disabled
+            margin="x2"
+            checked={checked3}
+            onChange={(e) =>
+              setChecked3((e.target as HTMLInputElement).checked)
+            }
+          >
+            Third Option (Disabled)
+          </CheckBox>
+        </Fragment>
+      );
+    },
     code: `
-import { Checkbox } from 'preshape';
+import { CheckBox } from 'preshape';
+import { useState } from 'react';
 
-<Checkbox checked={false} onChange={() => {}}>
-  ...
-</Checkbox>
+const [checked, setChecked] = useState(false);
 
+<CheckBox
+  checked={checked}
+  onChange={(e) => setChecked((e.target as HTMLInputElement).checked)}
+>
+  Toggle me
+</CheckBox>
     `,
   },
 };

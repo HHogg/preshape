@@ -42,7 +42,7 @@
 .CheckBox--border-radius-x6::before { border-radius: var(--border-radius-size--x6); }
 .CheckBox--border-radius-full::before { border-radius: 50%; }
 
-/* CheckBox border color hover states */
+/* CheckBox border color states */
 .CheckBox--border-color-black .CheckBox__indicator { border-color: var(--color-black); }
 .CheckBox--border-color-white .CheckBox__indicator { border-color: var(--color-white); }
 .CheckBox--border-color-highlight .CheckBox__indicator { border-color: var(--color-highlight); }
@@ -112,40 +112,40 @@
 .CheckBox--border-color-hover-positive-shade-5:hover .CheckBox__indicator { border-color: var(--color-positive-shade-5); }
 .CheckBox--border-color-hover-transparent:hover .CheckBox__indicator { border-color: transparent; }
 
-/* CheckBox border color active (focused) states */
-.CheckBox--border-color-active-black:focus-within .CheckBox__indicator { border-color: var(--color-black); }
-.CheckBox--border-color-active-white:focus-within .CheckBox__indicator { border-color: var(--color-white); }
-.CheckBox--border-color-active-highlight:focus-within .CheckBox__indicator { border-color: var(--color-highlight); }
-.CheckBox--border-color-active-accent-shade-1:focus-within .CheckBox__indicator { border-color: var(--color-accent-shade-1); }
-.CheckBox--border-color-active-accent-shade-2:focus-within .CheckBox__indicator { border-color: var(--color-accent-shade-2); }
-.CheckBox--border-color-active-accent-shade-3:focus-within .CheckBox__indicator { border-color: var(--color-accent-shade-3); }
-.CheckBox--border-color-active-accent-shade-4:focus-within .CheckBox__indicator { border-color: var(--color-accent-shade-4); }
-.CheckBox--border-color-active-accent-shade-5:focus-within .CheckBox__indicator { border-color: var(--color-accent-shade-5); }
-.CheckBox--border-color-active-background-shade-1:focus-within .CheckBox__indicator { border-color: var(--color-background-shade-1); }
-.CheckBox--border-color-active-background-shade-2:focus-within .CheckBox__indicator { border-color: var(--color-background-shade-2); }
-.CheckBox--border-color-active-background-shade-3:focus-within .CheckBox__indicator { border-color: var(--color-background-shade-3); }
-.CheckBox--border-color-active-background-shade-4:focus-within .CheckBox__indicator { border-color: var(--color-background-shade-4); }
-.CheckBox--border-color-active-dark-shade-1:focus-within .CheckBox__indicator { border-color: var(--color-dark-shade-1); }
-.CheckBox--border-color-active-dark-shade-2:focus-within .CheckBox__indicator { border-color: var(--color-dark-shade-2); }
-.CheckBox--border-color-active-dark-shade-3:focus-within .CheckBox__indicator { border-color: var(--color-dark-shade-3); }
-.CheckBox--border-color-active-light-shade-1:focus-within .CheckBox__indicator { border-color: var(--color-light-shade-1); }
-.CheckBox--border-color-active-light-shade-2:focus-within .CheckBox__indicator { border-color: var(--color-light-shade-2); }
-.CheckBox--border-color-active-light-shade-3:focus-within .CheckBox__indicator { border-color: var(--color-light-shade-3); }
-.CheckBox--border-color-active-text-shade-1:focus-within .CheckBox__indicator { border-color: var(--color-text-shade-1); }
-.CheckBox--border-color-active-text-shade-2:focus-within .CheckBox__indicator { border-color: var(--color-text-shade-2); }
-.CheckBox--border-color-active-text-shade-3:focus-within .CheckBox__indicator { border-color: var(--color-text-shade-3); }
-.CheckBox--border-color-active-text-shade-4:focus-within .CheckBox__indicator { border-color: var(--color-text-shade-4); }
-.CheckBox--border-color-active-negative-shade-1:focus-within .CheckBox__indicator { border-color: var(--color-negative-shade-1); }
-.CheckBox--border-color-active-negative-shade-2:focus-within .CheckBox__indicator { border-color: var(--color-negative-shade-2); }
-.CheckBox--border-color-active-negative-shade-3:focus-within .CheckBox__indicator { border-color: var(--color-negative-shade-3); }
-.CheckBox--border-color-active-negative-shade-4:focus-within .CheckBox__indicator { border-color: var(--color-negative-shade-4); }
-.CheckBox--border-color-active-negative-shade-5:focus-within .CheckBox__indicator { border-color: var(--color-negative-shade-5); }
-.CheckBox--border-color-active-positive-shade-1:focus-within .CheckBox__indicator { border-color: var(--color-positive-shade-1); }
-.CheckBox--border-color-active-positive-shade-2:focus-within .CheckBox__indicator { border-color: var(--color-positive-shade-2); }
-.CheckBox--border-color-active-positive-shade-3:focus-within .CheckBox__indicator { border-color: var(--color-positive-shade-3); }
-.CheckBox--border-color-active-positive-shade-4:focus-within .CheckBox__indicator { border-color: var(--color-positive-shade-4); }
-.CheckBox--border-color-active-positive-shade-5:focus-within .CheckBox__indicator { border-color: var(--color-positive-shade-5); }
-.CheckBox--border-color-active-transparent:focus-within .CheckBox__indicator { border-color: transparent; }
+/* CheckBox border color active states */
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-black .CheckBox__indicator { border-color: var(--color-black); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-white .CheckBox__indicator { border-color: var(--color-white); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-highlight .CheckBox__indicator { border-color: var(--color-highlight); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-accent-shade-1 .CheckBox__indicator { border-color: var(--color-accent-shade-1); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-accent-shade-2 .CheckBox__indicator { border-color: var(--color-accent-shade-2); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-accent-shade-3 .CheckBox__indicator { border-color: var(--color-accent-shade-3); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-accent-shade-4 .CheckBox__indicator { border-color: var(--color-accent-shade-4); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-accent-shade-5 .CheckBox__indicator { border-color: var(--color-accent-shade-5); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-background-shade-1 .CheckBox__indicator { border-color: var(--color-background-shade-1); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-background-shade-2 .CheckBox__indicator { border-color: var(--color-background-shade-2); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-background-shade-3 .CheckBox__indicator { border-color: var(--color-background-shade-3); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-background-shade-4 .CheckBox__indicator { border-color: var(--color-background-shade-4); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-dark-shade-1 .CheckBox__indicator { border-color: var(--color-dark-shade-1); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-dark-shade-2 .CheckBox__indicator { border-color: var(--color-dark-shade-2); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-dark-shade-3 .CheckBox__indicator { border-color: var(--color-dark-shade-3); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-light-shade-1 .CheckBox__indicator { border-color: var(--color-light-shade-1); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-light-shade-2 .CheckBox__indicator { border-color: var(--color-light-shade-2); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-light-shade-3 .CheckBox__indicator { border-color: var(--color-light-shade-3); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-text-shade-1 .CheckBox__indicator { border-color: var(--color-text-shade-1); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-text-shade-2 .CheckBox__indicator { border-color: var(--color-text-shade-2); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-text-shade-3 .CheckBox__indicator { border-color: var(--color-text-shade-3); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-text-shade-4 .CheckBox__indicator { border-color: var(--color-text-shade-4); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-negative-shade-1 .CheckBox__indicator { border-color: var(--color-negative-shade-1); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-negative-shade-2 .CheckBox__indicator { border-color: var(--color-negative-shade-2); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-negative-shade-3 .CheckBox__indicator { border-color: var(--color-negative-shade-3); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-negative-shade-4 .CheckBox__indicator { border-color: var(--color-negative-shade-4); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-negative-shade-5 .CheckBox__indicator { border-color: var(--color-negative-shade-5); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-positive-shade-1 .CheckBox__indicator { border-color: var(--color-positive-shade-1); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-positive-shade-2 .CheckBox__indicator { border-color: var(--color-positive-shade-2); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-positive-shade-3 .CheckBox__indicator { border-color: var(--color-positive-shade-3); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-positive-shade-4 .CheckBox__indicator { border-color: var(--color-positive-shade-4); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-positive-shade-5 .CheckBox__indicator { border-color: var(--color-positive-shade-5); }
+.CheckBox--checked.CheckBox--checked.CheckBox--border-color-active-transparent .CheckBox__indicator { border-color: transparent; }
 
 /* CheckBox indicator color hover states */
 .CheckBox--color-hover-black:hover .CheckBox__indicator::before { background-color: var(--color-black); }
