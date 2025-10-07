@@ -34,6 +34,7 @@ export const Tooltip = forwardRef<any, TooltipProps>((props, ref) => {
     backgroundColor = 'background-shade-1',
     children,
     content,
+    delay,
     paddingHorizontal = 'x3',
     paddingVertical = 'x2',
     placement = 'top',
@@ -54,6 +55,7 @@ export const Tooltip = forwardRef<any, TooltipProps>((props, ref) => {
       <PlacementContent
         {...rest}
         backgroundColor={backgroundColor}
+        delay={delay}
         paddingHorizontal={paddingHorizontal}
         paddingVertical={paddingVertical}
         ref={ref}

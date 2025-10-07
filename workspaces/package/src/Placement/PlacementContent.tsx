@@ -18,6 +18,10 @@ export interface PlacementContentProps extends BoxProps {
    */
   animation?: AppearProps['animation'];
   /**
+   * The delay to use when the content appears
+   */
+  delay?: AppearProps['delay'];
+  /**
    * Whether or not to show the arrow
    *
    * @default false
@@ -34,6 +38,7 @@ export const PlacementContent = forwardRef<
     backgroundColor,
     borderRadius = 'x3',
     children,
+    delay = 0,
     padding,
     paddingHorizontal,
     paddingVertical,
@@ -58,6 +63,7 @@ export const PlacementContent = forwardRef<
       >
         <Appear
           animation={animation}
+          delay={delay}
           backgroundColor={backgroundColor}
           borderRadius={borderRadius}
           className="Placement__content"
