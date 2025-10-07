@@ -1,3 +1,9 @@
+## [19.3.2](https://github.com/HHogg/preshape/compare/v19.3.1...v19.3.2) (2025-10-07)
+
+### Fixes
+
+* **Tooltip:** Added delay prop ([a337c65](https://github.com/HHogg/preshape/commit/a337c65303ad9b8503f7fce1fb39c6f6a4a21f96))
+
 ## [19.3.1](https://github.com/HHogg/preshape/compare/v19.3.0...v19.3.1) (2025-09-14)
 
 ### Fixes
