@@ -1,3 +1,10 @@
+## [19.5.0](https://github.com/HHogg/preshape/compare/v19.4.1...v19.5.0) (2026-01-01)
+
+### Features
+
+* **ConfigMenu:** Added range config menu option ([c3f484e](https://github.com/HHogg/preshape/commit/c3f484edb19c9cb3dd20b01c7620c745b9842eb3))
+* **Range:** Added double sided range component variant ([912902e](https://github.com/HHogg/preshape/commit/912902e73578f4c1b4b1d07f6e89051bd810a773))
+
 ## [19.4.1](https://github.com/HHogg/preshape/compare/v19.4.0...v19.4.1) (2026-01-01)
 
 ### Fixes
