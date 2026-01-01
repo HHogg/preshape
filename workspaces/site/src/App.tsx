@@ -2,7 +2,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import DesktopApp from './components/App/AppDesktop';
 import MobileApp from './components/App/AppMobile';
 import { Media, MediaContextProvider } from './components/App/Media';
-import 'preshape/dist/style.css';
 
 type Props = {
   helmetContext?: any;
