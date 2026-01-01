@@ -22,7 +22,7 @@
     "lint:js": "eslint --fix",
     "deploy:lib": "semantic-release",
     "deploy:site": "firebase deploy",
-    "preview": "yarn workspace site run preview"
+    "preview": "yarn workspace site run serve"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.0",

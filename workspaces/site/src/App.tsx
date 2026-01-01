@@ -3,6 +3,11 @@ import DesktopApp from './components/App/AppDesktop';
 import MobileApp from './components/App/AppMobile';
 import { Media, MediaContextProvider } from './components/App/Media';
 
+if (process.env.NODE_ENV === 'production') {
+  // @ts-ignore
+  import('preshape/dist/style.css');
+}
+
 type Props = {
   helmetContext?: any;
 };
