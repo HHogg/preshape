@@ -1,10 +1,12 @@
 import {
+  AlertTriangleIcon,
   BugIcon,
   CodeIcon,
   GaugeIcon,
   HighlighterIcon,
   PaletteIcon,
   SaveIcon,
+  ScaleIcon,
   Settings2Icon,
 } from 'lucide-react';
 import {
@@ -18,11 +20,11 @@ import {
   MenuConfigEntryNumber,
   MenuConfigEntryOneOf,
   MenuConfigEntrySubmenu,
-  Text,
 } from 'preshape';
 import { useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramConfigMenu';
+import { MenuConfigEntryRange } from 'preshape/src/ConfigMenu/utils';
 
 type Mode = 'Draw' | 'Fill' | 'View';
 type Annotation = 'Axis_origin' | 'Transform' | 'Vertex_type';
@@ -62,6 +64,8 @@ const Item: CatalogueItem<{
         'Transform',
       ]);
       const [mode, setMode] = useState<Mode>('Fill');
+      const [alertRange, setAlertRange] = useState<[number, number]>([25, 75]);
+      const [weight, setWeight] = useState(0.5);
 
       const speedConfig: MenuConfigEntryNumber = {
         label: 'Speed',
@@ -137,26 +141,41 @@ const Item: CatalogueItem<{
         onChange: setDebug,
       };
 
+      const alertRangeConfig: MenuConfigEntryRange<[number, number]> = {
+        label: 'Alert Range',
+        description: 'The range of values that will trigger an alert',
+        icon: AlertTriangleIcon,
+        type: 'range',
+        value: alertRange,
+        min: 0,
+        max: 100,
+        step: 1,
+        onChange: setAlertRange,
+        formatter: (value) => `${value}%`,
+      };
+
+      const weightConfig: MenuConfigEntryRange<number> = {
+        label: 'Weight',
+        icon: ScaleIcon,
+        type: 'range',
+        value: weight,
+        min: 0,
+        max: 1,
+        step: 0.001,
+        onChange: setWeight,
+        formatter: (value) => `${value.toFixed(3)}`,
+      };
+
       const submenuConfig: MenuConfigEntrySubmenu = {
         label: 'Advanced',
+        description: 'Advanced settings that are hidden in a submenu',
         icon: Settings2Icon,
         type: 'submenu',
         config: [
-          {
-            type: 'text',
-            value: (
-              <>
-                Advanced settings that are{' '}
-                <Text display="inline" weight="x2">
-                  hidden
-                </Text>{' '}
-                in a submenu
-              </>
-            ),
-          },
-          { type: 'divider' },
+          alertRangeConfig,
           debugConfig,
           developerModeConfig,
+          weightConfig,
         ],
       };
 

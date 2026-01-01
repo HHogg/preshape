@@ -11,6 +11,7 @@ export type MenuConfigEntry =
   | MenuConfigEntryManyOf<any>
   | MenuConfigEntryAction
   | MenuConfigEntryActions
+  | MenuConfigEntryRange<any>
   | MenuConfigEntrySubmenu
   | MenuConfigEntryText;
 
@@ -18,7 +19,8 @@ export type MenuConfigEntryWithValue =
   | MenuConfigEntryBoolean
   | MenuConfigEntryNumber
   | MenuConfigEntryOneOf<any>
-  | MenuConfigEntryManyOf<any>;
+  | MenuConfigEntryManyOf<any>
+  | MenuConfigEntryRange<number | [number, number]>;
 
 export type MenuConfigEntryDivider = {
   type: 'divider';
@@ -31,6 +33,7 @@ export type MenuConfigEntryText = {
 
 export type MenuConfigEntryBase = {
   label: string;
+  description?: string;
   icon: LucideIcon;
   disabled?: boolean;
 };
@@ -82,6 +85,17 @@ export type MenuConfigEntryActions = MenuConfigEntryBase & {
   }[];
 };
 
+export type MenuConfigEntryRange<TValue extends [number, number] | number> =
+  MenuConfigEntryBase & {
+    type: 'range';
+    value: TValue;
+    min: number;
+    max: number;
+    step: number;
+    formatter?: (value: number) => string;
+    onChange: (value: TValue) => void;
+  };
+
 export type MenuConfigEntrySubmenu = MenuConfigEntryBase & {
   type: 'submenu';
   config: MenuConfig;
@@ -119,6 +133,10 @@ export const isActions = (
   value: MenuConfigEntry
 ): value is MenuConfigEntryActions => value.type === 'actions';
 
+export const isRange = (
+  value: MenuConfigEntry
+): value is MenuConfigEntryRange<any> => value.type === 'range';
+
 export const isSubmenu = (
   value: MenuConfigEntry
 ): value is MenuConfigEntrySubmenu => value.type === 'submenu';
@@ -126,14 +144,14 @@ export const isSubmenu = (
 export const isText = (value: MenuConfigEntry): value is MenuConfigEntryText =>
   value.type === 'text';
 
-export const getLabel = (entry: MenuConfigEntry) => {
+export const getLabel = (entry: MenuConfigEntry): string => {
   switch (entry.type) {
     case 'boolean':
       return entry.value ? entry.labelTrue : entry.labelFalse;
     case 'number':
-      return entry.formatter?.(entry.value) ?? entry.value;
+      return formatValue(entry.value, entry.formatter);
     case 'oneOf':
-      return entry.formatter?.(entry.value) ?? entry.value;
+      return formatValue(entry.value, entry.formatter);
     case 'manyOf':
       if (entry.value.length === 0) {
         return 'None';
@@ -142,12 +160,25 @@ export const getLabel = (entry: MenuConfigEntry) => {
       } else {
         return 'All';
       }
-    case 'action':
-    case 'actions':
-    case 'submenu':
-    case 'text':
+    case 'range':
+      if (Array.isArray(entry.value)) {
+        return entry.value
+          .map((v) => formatValue(v, entry.formatter))
+          .join(' - ');
+      }
+
+      return formatValue(entry.value, entry.formatter);
+    default:
       return '';
   }
+};
+
+export const formatValue = <T>(value: T, formatter?: (value: T) => string) => {
+  if (!formatter) {
+    return `${value}`;
+  }
+
+  return formatter(value);
 };
 
 export const findConfigEntry = (

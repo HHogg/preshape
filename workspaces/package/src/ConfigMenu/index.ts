@@ -9,4 +9,5 @@ export {
   type MenuConfigEntryAction,
   type MenuConfigEntryActions,
   type MenuConfigEntrySubmenu,
+  type MenuConfigEntryRange,
 } from './utils';

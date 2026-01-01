@@ -15,17 +15,26 @@ import MenuItemText from './MenuItemText';
 type MenuConfigBranchProps = MenuProps & {
   config: MenuConfigType;
   title: string;
+  description?: string;
   onNavigate: (label: string) => void;
 };
 
 export const MenuConfigBranch = ({
   config,
   title,
+  description,
   onNavigate,
   ...rest
 }: PropsWithChildren<MenuConfigBranchProps>) => {
   return (
     <Menu animation="FadeSlideRight" title={title} {...rest}>
+      {description && (
+        <>
+          <MenuItemText>{description}</MenuItemText>
+          <MenuItemDivider />
+        </>
+      )}
+
       {config.map((entry, index) => {
         if (isDivider(entry)) {
           return <MenuItemDivider key={index} />;

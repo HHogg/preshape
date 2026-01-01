@@ -10,6 +10,7 @@ import {
   isManyOf,
   isNumber,
   isOneOf,
+  isRange,
   isText,
   MenuConfigEntry,
   MenuConfigEntryWithValue,
@@ -17,6 +18,8 @@ import {
 } from './utils';
 import MenuItemCheckBox from './MenuItemCheckBox';
 import MenuItemText from './MenuItemText';
+import MenuItemRange from './MenuItemRange';
+import MenuItemDivider from './MenuItemDivider';
 
 type MenuConfigLeafProps = Omit<MenuProps, 'title'> & {
   entry: MenuConfigEntry;
@@ -44,15 +47,19 @@ export const MenuConfigLeaf = ({
         entry.onChange(value);
       } else if (isManyOf(entry) && Array.isArray(value)) {
         entry.onChange(value);
+      } else if (isRange(entry)) {
+        entry.onChange(value);
       }
 
-      if (!isManyOf(entry)) {
+      if (!isManyOf(entry) && !isRange(entry)) {
         onBack();
       }
     };
 
   return (
     <Menu onBack={onBack} title={entry.label} {...rest}>
+      {entry.description && <MenuItemText>{entry.description}</MenuItemText>}
+
       {isBoolean(entry) && (
         <>
           <MenuItemCheckBox
@@ -127,6 +134,17 @@ export const MenuConfigLeaf = ({
             title={action.label}
           />
         ))}
+
+      {isRange(entry) && (
+        <MenuItemRange
+          value={entry.value}
+          min={entry.min}
+          max={entry.max}
+          step={entry.step}
+          onChange={entry.onChange}
+          formatter={entry.formatter}
+        />
+      )}
     </Menu>
   );
 };

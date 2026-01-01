@@ -17,11 +17,13 @@ import { MenuConfigLeaf } from './MenuConfigLeaf';
 
 export interface ConfigMenuProps extends TransitionBoxProps {
   config: MenuConfig;
+  description?: string;
 }
 
 export const ConfigMenu = ({
   config,
   title = 'Settings',
+  description,
   ...rest
 }: PropsWithChildren<ConfigMenuProps>) => {
   const { themeOpposite } = useThemeContext();
@@ -75,6 +77,7 @@ export const ConfigMenu = ({
         <MenuConfigBranch
           config={activeItem}
           title={title}
+          description={description}
           onNavigate={handleNavigateForwards}
         />
       )}
@@ -83,6 +86,7 @@ export const ConfigMenu = ({
         <MenuConfigBranch
           config={activeItem.config}
           title={activeItem.label}
+          description={activeItem.description}
           onBack={handleNavigateBackwards}
           onNavigate={handleNavigateForwards}
         />
