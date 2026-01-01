@@ -1,3 +1,9 @@
+## [19.4.0](https://github.com/HHogg/preshape/compare/v19.3.2...v19.4.0) (2026-01-01)
+
+### Features
+
+* **ConfigMenu:** Added support for nested submenus ([2c215a2](https://github.com/HHogg/preshape/commit/2c215a2ea29ad02e6b53eebc7a21aff20175e31f))
+
 ## [19.3.2](https://github.com/HHogg/preshape/compare/v19.3.1...v19.3.2) (2025-10-07)
 
 ### Fixes
