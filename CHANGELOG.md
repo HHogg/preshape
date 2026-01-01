@@ -1,3 +1,9 @@
+## [19.4.1](https://github.com/HHogg/preshape/compare/v19.4.0...v19.4.1) (2026-01-01)
+
+### Fixes
+
+* **ConfigMenu:** memo issue when config changes ([4a7b923](https://github.com/HHogg/preshape/commit/4a7b92309118bb7badc2a922c3dcb2c1fe3e7e97))
+
 ## [19.4.0](https://github.com/HHogg/preshape/compare/v19.3.2...v19.4.0) (2026-01-01)
 
 ### Features
