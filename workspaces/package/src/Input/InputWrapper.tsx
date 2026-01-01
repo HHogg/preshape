@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { forwardRef } from 'react';
+import { forwardRef, ReactNode } from 'react';
 import { Box, BoxProps } from '../Box/Box';
 import { TypeColor } from '../types';
 
@@ -12,7 +12,7 @@ export interface InputWrapperProps extends BoxProps {
   /**
    * Addon that appears before the Input
    */
-  addonEnd?: JSX.Element;
+  addonEnd?: ReactNode;
   /**
    * Vertical alignment of the end addon
    */
@@ -20,7 +20,7 @@ export interface InputWrapperProps extends BoxProps {
   /**
    * Addon that appears after the Input
    */
-  addonStart?: JSX.Element;
+  addonStart?: ReactNode;
   /**
    * Vertical alignment of the start addon
    */

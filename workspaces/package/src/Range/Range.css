@@ -6,7 +6,6 @@
   border: 0;
   border-radius: 0;
   background: none;
-  color: var(--color-text-shade-1);
   cursor: pointer;
   appearance: none;
 
@@ -17,7 +16,6 @@
   &:hover,
   &:focus {
     outline: 0;
-    color: var(--color-accent-shade-4);
   }
 }
 
@@ -25,21 +23,18 @@
   width: 100%;
   height: var(--size--x1);
   margin: var(--size--x2) 0;
-  background-color: var(--color-text-shade-1);
 }
 
 .Range::-moz-range-track {
   width: 100%;
   height: var(--size--x1);
   margin: var(--size--x2) 0;
-  background-color: var(--color-text-shade-1);
 }
 
 .Range::-ms-track {
   width: 100%;
   height: var(--size--x1);
   margin: var(--size--x2) 0;
-  background-color: var(--color-text-shade-1);
 }
 
 .Range::-webkit-slider-thumb {
@@ -79,3 +74,307 @@
   transition-timing-function: var(--transition-timing-function);
   appearance: none;
 }
+
+/* Thumb color classes */
+.Range--thumb-color-black { color: var(--color-black); }
+.Range--thumb-color-white { color: var(--color-white); }
+.Range--thumb-color-highlight { color: var(--color-highlight); }
+.Range--thumb-color-transparent { color: transparent; }
+.Range--thumb-color-accent-shade-1 { color: var(--color-accent-shade-1); }
+.Range--thumb-color-accent-shade-2 { color: var(--color-accent-shade-2); }
+.Range--thumb-color-accent-shade-3 { color: var(--color-accent-shade-3); }
+.Range--thumb-color-accent-shade-4 { color: var(--color-accent-shade-4); }
+.Range--thumb-color-accent-shade-5 { color: var(--color-accent-shade-5); }
+.Range--thumb-color-background-shade-1 { color: var(--color-background-shade-1); }
+.Range--thumb-color-background-shade-2 { color: var(--color-background-shade-2); }
+.Range--thumb-color-background-shade-3 { color: var(--color-background-shade-3); }
+.Range--thumb-color-background-shade-4 { color: var(--color-background-shade-4); }
+.Range--thumb-color-dark-shade-1 { color: var(--color-dark-shade-1); }
+.Range--thumb-color-dark-shade-2 { color: var(--color-dark-shade-2); }
+.Range--thumb-color-dark-shade-3 { color: var(--color-dark-shade-3); }
+.Range--thumb-color-light-shade-1 { color: var(--color-light-shade-1); }
+.Range--thumb-color-light-shade-2 { color: var(--color-light-shade-2); }
+.Range--thumb-color-light-shade-3 { color: var(--color-light-shade-3); }
+.Range--thumb-color-text-shade-1 { color: var(--color-text-shade-1); }
+.Range--thumb-color-text-shade-2 { color: var(--color-text-shade-2); }
+.Range--thumb-color-text-shade-3 { color: var(--color-text-shade-3); }
+.Range--thumb-color-negative-shade-1 { color: var(--color-negative-shade-1); }
+.Range--thumb-color-negative-shade-2 { color: var(--color-negative-shade-2); }
+.Range--thumb-color-negative-shade-3 { color: var(--color-negative-shade-3); }
+.Range--thumb-color-negative-shade-4 { color: var(--color-negative-shade-4); }
+.Range--thumb-color-negative-shade-5 { color: var(--color-negative-shade-5); }
+.Range--thumb-color-positive-shade-1 { color: var(--color-positive-shade-1); }
+.Range--thumb-color-positive-shade-2 { color: var(--color-positive-shade-2); }
+.Range--thumb-color-positive-shade-3 { color: var(--color-positive-shade-3); }
+.Range--thumb-color-positive-shade-4 { color: var(--color-positive-shade-4); }
+.Range--thumb-color-positive-shade-5 { color: var(--color-positive-shade-5); }
+
+
+
+/* Track color classes - for ranges without fill, use solid background */
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-black::-webkit-slider-runnable-track { background-color: var(--color-black); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-white::-webkit-slider-runnable-track { background-color: var(--color-white); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-highlight::-webkit-slider-runnable-track { background-color: var(--color-highlight); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-transparent::-webkit-slider-runnable-track { background-color: transparent; }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-accent-shade-1::-webkit-slider-runnable-track { background-color: var(--color-accent-shade-1); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-accent-shade-2::-webkit-slider-runnable-track { background-color: var(--color-accent-shade-2); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-accent-shade-3::-webkit-slider-runnable-track { background-color: var(--color-accent-shade-3); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-accent-shade-4::-webkit-slider-runnable-track { background-color: var(--color-accent-shade-4); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-accent-shade-5::-webkit-slider-runnable-track { background-color: var(--color-accent-shade-5); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-background-shade-1::-webkit-slider-runnable-track { background-color: var(--color-background-shade-1); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-background-shade-2::-webkit-slider-runnable-track { background-color: var(--color-background-shade-2); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-background-shade-3::-webkit-slider-runnable-track { background-color: var(--color-background-shade-3); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-background-shade-4::-webkit-slider-runnable-track { background-color: var(--color-background-shade-4); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-dark-shade-1::-webkit-slider-runnable-track { background-color: var(--color-dark-shade-1); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-dark-shade-2::-webkit-slider-runnable-track { background-color: var(--color-dark-shade-2); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-dark-shade-3::-webkit-slider-runnable-track { background-color: var(--color-dark-shade-3); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-light-shade-1::-webkit-slider-runnable-track { background-color: var(--color-light-shade-1); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-light-shade-2::-webkit-slider-runnable-track { background-color: var(--color-light-shade-2); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-light-shade-3::-webkit-slider-runnable-track { background-color: var(--color-light-shade-3); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-text-shade-1::-webkit-slider-runnable-track { background-color: var(--color-text-shade-1); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-text-shade-2::-webkit-slider-runnable-track { background-color: var(--color-text-shade-2); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-text-shade-3::-webkit-slider-runnable-track { background-color: var(--color-text-shade-3); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-negative-shade-1::-webkit-slider-runnable-track { background-color: var(--color-negative-shade-1); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-negative-shade-2::-webkit-slider-runnable-track { background-color: var(--color-negative-shade-2); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-negative-shade-3::-webkit-slider-runnable-track { background-color: var(--color-negative-shade-3); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-negative-shade-4::-webkit-slider-runnable-track { background-color: var(--color-negative-shade-4); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-negative-shade-5::-webkit-slider-runnable-track { background-color: var(--color-negative-shade-5); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-positive-shade-1::-webkit-slider-runnable-track { background-color: var(--color-positive-shade-1); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-positive-shade-2::-webkit-slider-runnable-track { background-color: var(--color-positive-shade-2); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-positive-shade-3::-webkit-slider-runnable-track { background-color: var(--color-positive-shade-3); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-positive-shade-4::-webkit-slider-runnable-track { background-color: var(--color-positive-shade-4); }
+.Range:not([class*="Range--track-fill-color"]).Range--track-color-positive-shade-5::-webkit-slider-runnable-track { background-color: var(--color-positive-shade-5); }
+
+/* Track background color custom properties - these work with track fill */
+
+.Range--track-color-black::-moz-range-track { background-color: var(--color-black); }
+.Range--track-color-white::-moz-range-track { background-color: var(--color-white); }
+.Range--track-color-highlight::-moz-range-track { background-color: var(--color-highlight); }
+.Range--track-color-transparent::-moz-range-track { background-color: transparent; }
+.Range--track-color-accent-shade-1::-moz-range-track { background-color: var(--color-accent-shade-1); }
+.Range--track-color-accent-shade-2::-moz-range-track { background-color: var(--color-accent-shade-2); }
+.Range--track-color-accent-shade-3::-moz-range-track { background-color: var(--color-accent-shade-3); }
+.Range--track-color-accent-shade-4::-moz-range-track { background-color: var(--color-accent-shade-4); }
+.Range--track-color-accent-shade-5::-moz-range-track { background-color: var(--color-accent-shade-5); }
+.Range--track-color-background-shade-1::-moz-range-track { background-color: var(--color-background-shade-1); }
+.Range--track-color-background-shade-2::-moz-range-track { background-color: var(--color-background-shade-2); }
+.Range--track-color-background-shade-3::-moz-range-track { background-color: var(--color-background-shade-3); }
+.Range--track-color-background-shade-4::-moz-range-track { background-color: var(--color-background-shade-4); }
+.Range--track-color-dark-shade-1::-moz-range-track { background-color: var(--color-dark-shade-1); }
+.Range--track-color-dark-shade-2::-moz-range-track { background-color: var(--color-dark-shade-2); }
+.Range--track-color-dark-shade-3::-moz-range-track { background-color: var(--color-dark-shade-3); }
+.Range--track-color-light-shade-1::-moz-range-track { background-color: var(--color-light-shade-1); }
+.Range--track-color-light-shade-2::-moz-range-track { background-color: var(--color-light-shade-2); }
+.Range--track-color-light-shade-3::-moz-range-track { background-color: var(--color-light-shade-3); }
+.Range--track-color-text-shade-1::-moz-range-track { background-color: var(--color-text-shade-1); }
+.Range--track-color-text-shade-2::-moz-range-track { background-color: var(--color-text-shade-2); }
+.Range--track-color-text-shade-3::-moz-range-track { background-color: var(--color-text-shade-3); }
+.Range--track-color-negative-shade-1::-moz-range-track { background-color: var(--color-negative-shade-1); }
+.Range--track-color-negative-shade-2::-moz-range-track { background-color: var(--color-negative-shade-2); }
+.Range--track-color-negative-shade-3::-moz-range-track { background-color: var(--color-negative-shade-3); }
+.Range--track-color-negative-shade-4::-moz-range-track { background-color: var(--color-negative-shade-4); }
+.Range--track-color-negative-shade-5::-moz-range-track { background-color: var(--color-negative-shade-5); }
+.Range--track-color-positive-shade-1::-moz-range-track { background-color: var(--color-positive-shade-1); }
+.Range--track-color-positive-shade-2::-moz-range-track { background-color: var(--color-positive-shade-2); }
+.Range--track-color-positive-shade-3::-moz-range-track { background-color: var(--color-positive-shade-3); }
+.Range--track-color-positive-shade-4::-moz-range-track { background-color: var(--color-positive-shade-4); }
+.Range--track-color-positive-shade-5::-moz-range-track { background-color: var(--color-positive-shade-5); }
+
+.Range--track-color-black::-ms-track { background-color: var(--color-black); }
+.Range--track-color-white::-ms-track { background-color: var(--color-white); }
+.Range--track-color-highlight::-ms-track { background-color: var(--color-highlight); }
+.Range--track-color-transparent::-ms-track { background-color: transparent; }
+.Range--track-color-accent-shade-1::-ms-track { background-color: var(--color-accent-shade-1); }
+.Range--track-color-accent-shade-2::-ms-track { background-color: var(--color-accent-shade-2); }
+.Range--track-color-accent-shade-3::-ms-track { background-color: var(--color-accent-shade-3); }
+.Range--track-color-accent-shade-4::-ms-track { background-color: var(--color-accent-shade-4); }
+.Range--track-color-accent-shade-5::-ms-track { background-color: var(--color-accent-shade-5); }
+.Range--track-color-background-shade-1::-ms-track { background-color: var(--color-background-shade-1); }
+.Range--track-color-background-shade-2::-ms-track { background-color: var(--color-background-shade-2); }
+.Range--track-color-background-shade-3::-ms-track { background-color: var(--color-background-shade-3); }
+.Range--track-color-background-shade-4::-ms-track { background-color: var(--color-background-shade-4); }
+.Range--track-color-dark-shade-1::-ms-track { background-color: var(--color-dark-shade-1); }
+.Range--track-color-dark-shade-2::-ms-track { background-color: var(--color-dark-shade-2); }
+.Range--track-color-dark-shade-3::-ms-track { background-color: var(--color-dark-shade-3); }
+.Range--track-color-light-shade-1::-ms-track { background-color: var(--color-light-shade-1); }
+.Range--track-color-light-shade-2::-ms-track { background-color: var(--color-light-shade-2); }
+.Range--track-color-light-shade-3::-ms-track { background-color: var(--color-light-shade-3); }
+.Range--track-color-text-shade-1::-ms-track { background-color: var(--color-text-shade-1); }
+.Range--track-color-text-shade-2::-ms-track { background-color: var(--color-text-shade-2); }
+.Range--track-color-text-shade-3::-ms-track { background-color: var(--color-text-shade-3); }
+.Range--track-color-negative-shade-1::-ms-track { background-color: var(--color-negative-shade-1); }
+.Range--track-color-negative-shade-2::-ms-track { background-color: var(--color-negative-shade-2); }
+.Range--track-color-negative-shade-3::-ms-track { background-color: var(--color-negative-shade-3); }
+.Range--track-color-negative-shade-4::-ms-track { background-color: var(--color-negative-shade-4); }
+.Range--track-color-negative-shade-5::-ms-track { background-color: var(--color-negative-shade-5); }
+.Range--track-color-positive-shade-1::-ms-track { background-color: var(--color-positive-shade-1); }
+.Range--track-color-positive-shade-2::-ms-track { background-color: var(--color-positive-shade-2); }
+.Range--track-color-positive-shade-3::-ms-track { background-color: var(--color-positive-shade-3); }
+.Range--track-color-positive-shade-4::-ms-track { background-color: var(--color-positive-shade-4); }
+.Range--track-color-positive-shade-5::-ms-track { background-color: var(--color-positive-shade-5); }
+
+
+/* Track fill color classes - uses CSS custom properties for dynamic layering */
+.Range[class*="Range--track-fill-color"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right,
+    var(--track-fill-color) 0%,
+    var(--track-fill-color) var(--fill-percent, 0%),
+    var(--track-bg-color, var(--color-text-shade-1)) var(--fill-percent, 0%)
+  );
+}
+
+.Range--track-fill-color-black { --track-fill-color: var(--color-black); }
+.Range--track-fill-color-white { --track-fill-color: var(--color-white); }
+.Range--track-fill-color-highlight { --track-fill-color: var(--color-highlight); }
+.Range--track-fill-color-transparent { --track-fill-color: transparent; }
+.Range--track-fill-color-accent-shade-1 { --track-fill-color: var(--color-accent-shade-1); }
+.Range--track-fill-color-accent-shade-2 { --track-fill-color: var(--color-accent-shade-2); }
+.Range--track-fill-color-accent-shade-3 { --track-fill-color: var(--color-accent-shade-3); }
+.Range--track-fill-color-accent-shade-4 { --track-fill-color: var(--color-accent-shade-4); }
+.Range--track-fill-color-accent-shade-5 { --track-fill-color: var(--color-accent-shade-5); }
+.Range--track-fill-color-background-shade-1 { --track-fill-color: var(--color-background-shade-1); }
+.Range--track-fill-color-background-shade-2 { --track-fill-color: var(--color-background-shade-2); }
+.Range--track-fill-color-background-shade-3 { --track-fill-color: var(--color-background-shade-3); }
+.Range--track-fill-color-background-shade-4 { --track-fill-color: var(--color-background-shade-4); }
+.Range--track-fill-color-dark-shade-1 { --track-fill-color: var(--color-dark-shade-1); }
+.Range--track-fill-color-dark-shade-2 { --track-fill-color: var(--color-dark-shade-2); }
+.Range--track-fill-color-dark-shade-3 { --track-fill-color: var(--color-dark-shade-3); }
+.Range--track-fill-color-light-shade-1 { --track-fill-color: var(--color-light-shade-1); }
+.Range--track-fill-color-light-shade-2 { --track-fill-color: var(--color-light-shade-2); }
+.Range--track-fill-color-light-shade-3 { --track-fill-color: var(--color-light-shade-3); }
+.Range--track-fill-color-text-shade-1 { --track-fill-color: var(--color-text-shade-1); }
+.Range--track-fill-color-text-shade-2 { --track-fill-color: var(--color-text-shade-2); }
+.Range--track-fill-color-text-shade-3 { --track-fill-color: var(--color-text-shade-3); }
+.Range--track-fill-color-negative-shade-1 { --track-fill-color: var(--color-negative-shade-1); }
+.Range--track-fill-color-negative-shade-2 { --track-fill-color: var(--color-negative-shade-2); }
+.Range--track-fill-color-negative-shade-3 { --track-fill-color: var(--color-negative-shade-3); }
+.Range--track-fill-color-negative-shade-4 { --track-fill-color: var(--color-negative-shade-4); }
+.Range--track-fill-color-negative-shade-5 { --track-fill-color: var(--color-negative-shade-5); }
+.Range--track-fill-color-positive-shade-1 { --track-fill-color: var(--color-positive-shade-1); }
+.Range--track-fill-color-positive-shade-2 { --track-fill-color: var(--color-positive-shade-2); }
+.Range--track-fill-color-positive-shade-3 { --track-fill-color: var(--color-positive-shade-3); }
+.Range--track-fill-color-positive-shade-4 { --track-fill-color: var(--color-positive-shade-4); }
+.Range--track-fill-color-positive-shade-5 { --track-fill-color: var(--color-positive-shade-5); }
+
+/* Track color classes now set the background color for the unfilled portion */
+.Range--track-color-black { --track-bg-color: var(--color-black); }
+.Range--track-color-white { --track-bg-color: var(--color-white); }
+.Range--track-color-highlight { --track-bg-color: var(--color-highlight); }
+.Range--track-color-transparent { --track-bg-color: transparent; }
+.Range--track-color-accent-shade-1 { --track-bg-color: var(--color-accent-shade-1); }
+.Range--track-color-accent-shade-2 { --track-bg-color: var(--color-accent-shade-2); }
+.Range--track-color-accent-shade-3 { --track-bg-color: var(--color-accent-shade-3); }
+.Range--track-color-accent-shade-4 { --track-bg-color: var(--color-accent-shade-4); }
+.Range--track-color-accent-shade-5 { --track-bg-color: var(--color-accent-shade-5); }
+.Range--track-color-background-shade-1 { --track-bg-color: var(--color-background-shade-1); }
+.Range--track-color-background-shade-2 { --track-bg-color: var(--color-background-shade-2); }
+.Range--track-color-background-shade-3 { --track-bg-color: var(--color-background-shade-3); }
+.Range--track-color-background-shade-4 { --track-bg-color: var(--color-background-shade-4); }
+.Range--track-color-dark-shade-1 { --track-bg-color: var(--color-dark-shade-1); }
+.Range--track-color-dark-shade-2 { --track-bg-color: var(--color-dark-shade-2); }
+.Range--track-color-dark-shade-3 { --track-bg-color: var(--color-dark-shade-3); }
+.Range--track-color-light-shade-1 { --track-bg-color: var(--color-light-shade-1); }
+.Range--track-color-light-shade-2 { --track-bg-color: var(--color-light-shade-2); }
+.Range--track-color-light-shade-3 { --track-bg-color: var(--color-light-shade-3); }
+.Range--track-color-text-shade-1 { --track-bg-color: var(--color-text-shade-1); }
+.Range--track-color-text-shade-2 { --track-bg-color: var(--color-text-shade-2); }
+.Range--track-color-text-shade-3 { --track-bg-color: var(--color-text-shade-3); }
+.Range--track-color-negative-shade-1 { --track-bg-color: var(--color-negative-shade-1); }
+.Range--track-color-negative-shade-2 { --track-bg-color: var(--color-negative-shade-2); }
+.Range--track-color-negative-shade-3 { --track-bg-color: var(--color-negative-shade-3); }
+.Range--track-color-negative-shade-4 { --track-bg-color: var(--color-negative-shade-4); }
+.Range--track-color-negative-shade-5 { --track-bg-color: var(--color-negative-shade-5); }
+.Range--track-color-positive-shade-1 { --track-bg-color: var(--color-positive-shade-1); }
+.Range--track-color-positive-shade-2 { --track-bg-color: var(--color-positive-shade-2); }
+.Range--track-color-positive-shade-3 { --track-bg-color: var(--color-positive-shade-3); }
+.Range--track-color-positive-shade-4 { --track-bg-color: var(--color-positive-shade-4); }
+.Range--track-color-positive-shade-5 { --track-bg-color: var(--color-positive-shade-5); }
+
+/* Double range slider styles */
+.Range--double-lower::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.Range--double-lower::-moz-range-track {
+  background: transparent;
+}
+
+.Range--double-lower::-ms-track {
+  background: transparent;
+}
+
+/* Double range upper slider - shows the track and fill */
+.Range--double-upper[class*="Range--track-fill-color"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right,
+    var(--track-bg-color, var(--color-text-shade-1)) 0%,
+    var(--track-bg-color, var(--color-text-shade-1)) var(--fill-start, 0%),
+    var(--track-fill-color) var(--fill-start, 0%),
+    var(--track-fill-color) var(--fill-end, 100%),
+    var(--track-bg-color, var(--color-text-shade-1)) var(--fill-end, 100%)
+  );
+}
+
+.Range--double-upper[class*="Range--track-fill-color"]::-moz-range-track {
+  background: linear-gradient(to right,
+    var(--track-bg-color, var(--color-text-shade-1)) 0%,
+    var(--track-bg-color, var(--color-text-shade-1)) var(--fill-start, 0%),
+    var(--track-fill-color) var(--fill-start, 0%),
+    var(--track-fill-color) var(--fill-end, 100%),
+    var(--track-bg-color, var(--color-text-shade-1)) var(--fill-end, 100%)
+  );
+}
+
+.Range--double-upper[class*="Range--track-fill-color"]::-ms-track {
+  background: linear-gradient(to right,
+    var(--track-bg-color, var(--color-text-shade-1)) 0%,
+    var(--track-bg-color, var(--color-text-shade-1)) var(--fill-start, 0%),
+    var(--track-fill-color) var(--fill-start, 0%),
+    var(--track-fill-color) var(--fill-end, 100%),
+    var(--track-bg-color, var(--color-text-shade-1)) var(--fill-end, 100%)
+  );
+}
+
+/* Double range without fill - just show track color */
+.Range--double-upper:not([class*="Range--track-fill-color"])::-webkit-slider-runnable-track {
+  background-color: var(--track-bg-color, var(--color-text-shade-1));
+}
+
+.Range--double-upper:not([class*="Range--track-fill-color"])::-moz-range-track {
+  background-color: var(--track-bg-color, var(--color-text-shade-1));
+}
+
+.Range--double-upper:not([class*="Range--track-fill-color"])::-ms-track {
+  background-color: var(--track-bg-color, var(--color-text-shade-1));
+}
+
+/* Ensure both thumbs are visible and interactive */
+.Range--double-lower::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+}
+
+.Range--double-upper::-webkit-slider-thumb {
+  z-index: 1;
+  position: relative;
+}
+
+.Range--double-lower::-moz-range-thumb {
+  z-index: 2;
+  position: relative;
+}
+
+.Range--double-upper::-moz-range-thumb {
+  z-index: 1;
+  position: relative;
+}
+
+.Range--double-lower::-ms-thumb {
+  z-index: 2;
+  position: relative;
+}
+
+.Range--double-upper::-ms-thumb {
+  z-index: 1;
+  position: relative;
+}
+
