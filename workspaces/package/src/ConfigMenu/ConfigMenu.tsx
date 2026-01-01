@@ -41,7 +41,7 @@ export const ConfigMenu = ({
     }
 
     return activeItem;
-  }, [history]);
+  }, [config, history]);
 
   const handleNavigateBackwards = () => {
     setHistory(history.slice(0, -1));
