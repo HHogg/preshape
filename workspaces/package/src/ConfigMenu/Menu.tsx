@@ -5,8 +5,7 @@ import { Box } from '../Box/Box';
 import { Button } from '../Button/Button';
 import { Text } from '../Text/Text';
 
-type ContextMenuProps = {
-  animation?: AppearProps['animation'];
+export type MenuProps = AppearProps & {
   onBack?: () => void;
   title: string;
 };
@@ -16,9 +15,10 @@ export default function Menu({
   children,
   onBack,
   title,
-}: PropsWithChildren<ContextMenuProps>) {
+  ...rest
+}: PropsWithChildren<MenuProps>) {
   return (
-    <Appear animation={animation} delay={100} visible>
+    <Appear animation={animation} delay={100} visible {...rest}>
       <Box
         alignChildrenVertical="middle"
         borderBottom

@@ -38,18 +38,7 @@ export { type Language } from './Code/SyntaxHighlight';
 export { Code, type CodeProps } from './Code/Code';
 export { CodeBlock, type CodeBlockProps } from './Code/CodeBlock';
 export { CodeWindow, type CodeWindowProps } from './Code/CodeWindow';
-export {
-  ConfigMenu,
-  type ConfigMenuProps,
-  type MenuConfig,
-  type MenuConfigEntry,
-  type MenuConfigEntryBoolean,
-  type MenuConfigEntryNumber,
-  type MenuConfigEntryOneOf,
-  type MenuConfigEntryManyOf,
-  type MenuConfigEntryAction,
-  type MenuConfigEntryActions,
-} from './ConfigMenu/ConfigMenu';
+export * from './ConfigMenu';
 export { DatePicker, type DatePickerProps } from './DatePicker/DatePicker';
 export { Form, type FormProps } from './Form/Form';
 export { FormError, type FormErrorProps } from './Form/FormError';

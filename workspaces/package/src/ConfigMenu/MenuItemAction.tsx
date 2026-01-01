@@ -3,7 +3,7 @@ import { Box } from '../Box/Box';
 import { Text } from '../Text/Text';
 import MenuItem, { MenuItemProps } from './MenuItem';
 
-type MenuItemNavigateProps = MenuItemProps & {
+type MenuItemActionProps = MenuItemProps & {
   Icon?: LucideIcon;
   title: string;
 };
@@ -12,7 +12,7 @@ export default function MenuItemAction({
   Icon,
   title,
   ...rest
-}: MenuItemNavigateProps) {
+}: MenuItemActionProps) {
   return (
     <MenuItem {...rest}>
       {Icon && (

@@ -1,21 +1,25 @@
 import {
   BugIcon,
+  CodeIcon,
   GaugeIcon,
   HighlighterIcon,
   PaletteIcon,
   SaveIcon,
+  Settings2Icon,
 } from 'lucide-react';
 import {
   ConfigMenu,
   ConfigMenuProps,
   MenuConfig,
   MenuConfigEntryAction,
+  MenuConfigEntryActions,
   MenuConfigEntryBoolean,
   MenuConfigEntryManyOf,
   MenuConfigEntryNumber,
   MenuConfigEntryOneOf,
+  MenuConfigEntrySubmenu,
+  Text,
 } from 'preshape';
-import { MenuConfigEntryActions } from 'preshape/src/ConfigMenu/ConfigMenu';
 import { useState } from 'react';
 import { CatalogueItem } from '..';
 import { Pictogram } from './pictograms/PictogramConfigMenu';
@@ -52,6 +56,7 @@ const Item: CatalogueItem<{
     Component: (props) => {
       const [speed, setSpeed] = useState(1);
       const [debug, setDebug] = useState(false);
+      const [developerMode, setDeveloperMode] = useState(false);
       const [annotations, setAnnotations] = useState<Annotation[]>([
         'Axis_origin',
         'Transform',
@@ -68,16 +73,6 @@ const Item: CatalogueItem<{
         step: 1,
         formatter: (value) => `${value}x`,
         onChange: setSpeed,
-      };
-
-      const debugConfig: MenuConfigEntryBoolean = {
-        label: 'Debug',
-        icon: BugIcon,
-        type: 'boolean',
-        value: debug,
-        labelTrue: 'On',
-        labelFalse: 'Off',
-        onChange: setDebug,
       };
 
       const annotationsConfig: MenuConfigEntryManyOf<Annotation> = {
@@ -122,6 +117,49 @@ const Item: CatalogueItem<{
         ],
       };
 
+      const developerModeConfig: MenuConfigEntryBoolean = {
+        label: 'Developer mode',
+        icon: CodeIcon,
+        type: 'boolean',
+        value: developerMode,
+        labelTrue: 'On',
+        labelFalse: 'Off',
+        onChange: setDeveloperMode,
+      };
+
+      const debugConfig: MenuConfigEntryBoolean = {
+        label: 'Debug',
+        icon: BugIcon,
+        type: 'boolean',
+        value: debug,
+        labelTrue: 'On',
+        labelFalse: 'Off',
+        onChange: setDebug,
+      };
+
+      const submenuConfig: MenuConfigEntrySubmenu = {
+        label: 'Advanced',
+        icon: Settings2Icon,
+        type: 'submenu',
+        config: [
+          {
+            type: 'text',
+            value: (
+              <>
+                Advanced settings that are{' '}
+                <Text display="inline" weight="x2">
+                  hidden
+                </Text>{' '}
+                in a submenu
+              </>
+            ),
+          },
+          { type: 'divider' },
+          debugConfig,
+          developerModeConfig,
+        ],
+      };
+
       const config: MenuConfig = [
         speedConfig,
         annotationsConfig,
@@ -130,7 +168,7 @@ const Item: CatalogueItem<{
         saveConfig,
         saveAsConfig,
         { type: 'divider' },
-        debugConfig,
+        submenuConfig,
       ];
 
       return <ConfigMenu {...props.ConfigMenu} config={config}></ConfigMenu>;
